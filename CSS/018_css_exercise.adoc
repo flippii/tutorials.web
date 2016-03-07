@@ -1,0 +1,29 @@
+
+<section id="css_firstexercise">
+	<title>Exercise: Style a HTML page with CSS</title>
+	<para>
+		In the following you create a local html page and style it with CSS.
+		Create a new directory and create the following
+		file called
+		<filename>styles.css</filename>
+		.
+	</para>
+	<programlisting>
+		<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+			parse="text" href="../examples/first/styles.css" />
+	</programlisting>
+	<para>
+		In the same directory define this HTML file. This file defines
+		that it
+		will use the
+		<filename>styles.css</filename>
+		style sheet file
+		which can be found in
+		the same directory.
+	</para>
+
+	<programlisting>
+		<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+			parse="text" href="../examples/first/exampletablecss.html" />
+	</programlisting>
+</section>

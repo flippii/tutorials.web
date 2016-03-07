@@ -1,0 +1,8 @@
+
+/* this is a comment */
+/* we style only the h1 element*/
+
+h1 {
+	border-style:solid none solid solid;
+	color:red;
+}

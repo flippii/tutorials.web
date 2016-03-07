@@ -1,0 +1,17 @@
+<section id="css_includes">
+	<title>CSS includes</title>
+	<para>
+		A CSS file can import other CSS files via the
+		<code>@import</code>
+		statement.
+		It must be the first rule in the style sheet using the
+		<code>@import</code>
+		statement.
+
+
+		<programlisting>
+			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+				parse="text" href="../examples/includes/include.css" />
+		</programlisting>
+	</para>
+</section>

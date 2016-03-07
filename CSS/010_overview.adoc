@@ -1,67 +1,40 @@
-== Introduction to docker
+== Cascading Style Sheets (CSS)
 
-Docker is a light weight container, allowing to run pre-configured system images on another operating system. 
-Compared to other virtualization technologies, Docker allows to run many containers per VM and uses less  memory/CPU resources. Docker does this,
-as does not require an hypervisor for each container. 
+(((CSS)))
+(((Cascading Style Sheets)))
+[[cssintro_introd]]
+=== What is CSS?
 
-Docker allows to package the full stack in a container:
+'Cascading Style Sheets' (CSS) allow you to define styles, layouts and spacing separate from the content which should be styled.
+The CSS information is typically contained in an external file.
+Other code, e.g., an HTML page, can reference to the CSS file for its layout information. 
+For example you define in an external file the fonts and colors used for certain elements.
 
-* OS,
-* JVM,
-* App server
-* Application with its configuration
+CSS is defined as a standard. Currently the versions _CSS 2.1_ and _CSS 3_ are most widely used.
 
-This makes the virtual machine portable  across environments. Developers can use the same setup as you can use in your production environment.
+[[cssintro_selectors]]
+=== CSS selectors and style rules
 
-== Use cases
+The CSS standard defines _selectors_ and _style rules_.
+The syntax is defined as follows:
 
-Docker allows to solve the following use cases
+include::examples/first/selector.txt[]
 
-* You can to use a specific version of a operating system for testing
-* You want to run your software tests in an controlled environment
-* You want to configure a system and share the configuration
+A selector can be one of a predefined identifier(, e.g., H1), a class name (e.g. .myclass) or an identifier (e.g. #myuniqueid).
 
+In CSS an identifier is supposed to be unique across all of the elements in a page (or window in our case) while a class can be assigned to several elements.
 
-== Docker components
+For example the following CSS file defines the size and color of the `h1` tag.
 
-Docker consists of the following components:
+include::examples/first/selectorexample.txt[]
 
-* Images
-* Containers
-* Daemon
-* Clients
-* Registries
+[[cssintro_pseudoclasses]]
+=== CSS pseudo classes
 
-=== Images
+_CSS pseudo classes_ are used to qualify attributes of selectors. 
+For example you can select an visited link in HTML and style is differently.
 
-Images are read-only templates which provide functionality for running an instance of this image (container). 
-An example for a image is the latest release of Ubuntu. Images are defined as layers, 
-for example, you can add Java to the Ubuntu image and get another image based on this.
+include::examples/first/pseudoclassexample.txt[]
 
-The Docker hub provides lot of pre-configured images. You can modify existing images and save these modifications as new image. 
-
-== Containers
-
-Container are the started components based on images. They contain the actual application and dependencies but share the same kernel.
-They can be started, stopped, paused, deleted. Containers are immutable and disposable.
-
-=== Docker Daemon
-
-Is used to manage the container. It runs natively on Linux and  inside a VM on Windows and Mac OS X. To start it use the `docker` command.
-
-== Docker Clients
-
-Clients (CLI, IDE) run on host VM. They provide the tools to interact with container, i.e., to start them.
-
-=== Registries
-
-Images are saved in a registry and have an ID with consists of a repository and a tag. 
-For example, _fedora:22_, is an image which contains the Fedora 22 OS from the fedora repository.
-
-To use an image you have to pull it from a registry, to share an image with others you have to push it to one. The default Docker registry is the Docker Hub. You can upload your personal images to Github, in this case you add your user name as prefix to the image, e.g.,  _vogella/fedore:22_
-
-=== Dockerfile
-
-A dockerfile allows to modify existing images. It contains the image that should be used and the adjustments to this image, e.g., which packages should be installed, system configuration etc. 
 
 
