@@ -1,0 +1,8 @@
+= Exercise - Spring DI
+
+== Target
+
+In this exercise a minimal example about Dependency Injection with Spring is shown.
+
+== Create a Spring Project
+
