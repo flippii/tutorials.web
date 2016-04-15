@@ -1,0 +1,36 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<meta name="description" content="Tutorials from www.vogella.com!"> 
+
+<script type="text/javascript">
+function getMetaDescription () {
+  var metaElements = document.all ?
+    document.all.tags('META') :
+    document.getElementsByTagName ?
+    document.getElementsByTagName ('META') : new Array();
+  var metaKeywords = new Array();
+  var i = 0;
+  for (var m = 0; m < metaElements.length; m++)
+    if (metaElements[m].name == 'description')
+      metaKeywords[i++] = metaElements[m].content;
+  return metaKeywords;
+}
+</script>
+</head>
+
+<h2>
+This will write the meta tag description to this page
+</h2>
+
+<body>
+
+<script type="text/javascript">
+	document.write(getMetaDescription());
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+/* This script will read the current URL and the title of the document
+and submit this webpage to the social bookmarking website. */
+
+<script type="text/javascript">
+function toDiggUrl(){
+	var result = "http://digg.com/submit?phase=2&url=";
+	result += encodeURIComponent(location.href);
+	result += "&title=";
+	result += encodeURIComponent(document.title);
+	result += "&topic=programming";
+	window.location = result;
+}
+</script>
+</head>
+
+<body>
+
+<b>Here we write some information to the HTML page.</b>
+<BR>
+Write the current URL to this HTML document
+<script type="text/javascript">
+document.writeln(location.href);
+</script>
+
+<BR>
+<BR>
+<b>Encodes the current URL so that special characters will get
+encoded</b>
+<BR>
+<script type="text/javascript">
+document.writeln(encodeURIComponent(location.href))
+</script>
+
+
+<BR>
+<BR>
+<b>More fancy stuff, evalute page information and send this to a
+social bookmarking website (digg)</b>
+<BR>
+
+
+<table border="0" cellpadding="10" cellspacing="0" width="100%">
+	<tr>
+		<td width="320">If you press the hyperlink below the JavaScript
+		will run <BR>
+		<a href="javascript: toDiggUrl()">Digg this site</a></td>
+	</tr>
+</table>
+
+
+
+</body>
+</html>

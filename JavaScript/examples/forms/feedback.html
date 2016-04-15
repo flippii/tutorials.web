@@ -1,0 +1,49 @@
+
+<html> 
+<head> </head>
+<body>
+<!-- Favorites -->
+<table border="0" cellpadding="10" cellspacing="0" width="100%">
+	<tr>
+		<td>
+
+		<div dojoType="dijit.TitlePane" title="Feedback Form">
+		So how did you like this webpage?  <BR>
+		<FORM id=myform " NAME="myform" ACTION="http://www.vogella.com/FeedbackForm/FeedbackSave" method="get"
+			onclick="return updateFormAction()"><input TYPE="hidden"
+			NAME="webpage" VALUE="test">
+
+		<table>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td align="right">User: (*)</td>
+				<td><input name="user" type="text" size="30" maxlength="30"></td>
+			</tr>
+			<tr>
+				<td align="right">Email:(*)</td>
+				<td><input name="email" type="text" size="30" maxlength="30">
+				(will not be visible)</td>
+			</tr>
+			<tr>
+				<td align="right" valign="top">Summary:(*)</td>
+				<td><input name="summary" type="text" size="30" maxlength="30"></td>
+			</tr>
+			<tr>
+				<td align="right" valign="top">Comment:(*)</td>
+				<td><textarea name="comment" rows="6" cols="40"></textarea></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Submit"></td>
+			</tr>
+			<tr> <td colspan="2"> <div id="replacefeedback"> (*) are required </div></div> </td></tr>
+		</table>
+		</FORM>
+		</div>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

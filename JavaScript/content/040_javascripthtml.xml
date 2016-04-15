@@ -1,0 +1,44 @@
+<section id="javascripthtml">
+	<title>JavaScript and HTML interaction</title>
+	<section id="javascripthtml_dom">
+
+		<title>HTML DOM</title>
+		<para>
+			A HTML webpage is represented via a HTML Document Object
+			Model
+			(DOM). The HTML DOM is defined via a W3C
+			standard
+			This HTML DOM
+			defines
+			a standard way to access and
+			manipulate HTML
+			documents. You can
+			use
+			JavaScript to modify the HTML DOM. 
+		</para>
+		
+		
+	</section>
+	<section id="javascripthtml_manipulation">
+
+		<title>Manipulation HTML with JavaScript</title>
+
+		<para> You can for example search via JavaScript for certain elements
+			and modify their properties.
+			The following example shows how to find HTML elements with a
+			certain div
+			class and set the display property to hide / show them.
+		</para>
+
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/modify/manipulateHTML.html" />
+			</programlisting>
+		</para>
+
+
+	</section>
+
+
+</section>

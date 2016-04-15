@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<header>
+<script type="text/javascript">
+/*Write the text twice to the document*/
+function writetext(text)
+{
+document.writeln(text);
+document.writeln(text+ "<p>");
+}
+</script>
+
+</header>
+<body>
+<script type="text/javascript">
+/*Declare a text variable and print it to the HTML page*/
+var mytext= "Example Text.";
+/*Call the function*/
+writetext(mytext)
+/*Call it via apply*/
+writetext(mytext + "apply").apply();
+</script>
+</body>
+</html>
