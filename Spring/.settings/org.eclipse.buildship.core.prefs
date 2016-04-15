@@ -1,5 +1,5 @@
 connection.arguments=
-connection.gradle.distribution=GRADLE_DISTRIBUTION(WRAPPER)
+connection.gradle.distribution=GRADLE_DISTRIBUTION(VERSION(2.13-rc-1))
 connection.gradle.user.home=null
 connection.java.home=null
 connection.jvm.arguments=
