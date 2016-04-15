@@ -61,10 +61,11 @@ include::examples/javascript/javascriptinclude.html[]
 ----
 
 Create the file 'myfirstjsfile.js' in the same directory as the HTML page.
-As the JavaScript is in a separate file you do not have to  use script tag. 
-Simple write the code directly into the file.
 			
 image::img/javascriptwizard6.png[]
+
+As the JavaScript is in a separate file you do not have to  use script tag. 
+Simple write the code directly into the file.
 
 [source,html]
 ----

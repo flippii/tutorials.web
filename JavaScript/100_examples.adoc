@@ -1,0 +1,39 @@
+[[javascriptexamples]]
+== JavaScript Examples
+
+[[examples_manipulation]]
+=== Create a dynamic link using the webpage information
+
+The following shows how a URL for an link can be dynamically created via JavaScript. 
+This examples uses JavaScript to create a link for the website "digg".
+[source,html]
+----
+include::examples/javascript/javascriptDOM.html[]
+----
+
+[[javascripthtml_meta]]
+=== Reading META Tags via JavaScript</title>
+
+You can use JavaScript to read existing meta tags from the webpage. 
+The following reads the content of the meta tag description from the webpage.
+
+[source,html]
+----
+include::examples/javascript/meta.html[]
+----
+
+[[javascripthtml_forms]]
+=== HTML forms and JavaScript
+
+The following is an example on checking input data of HTML forms and setting hidden parameters via Javascript. 
+In this case the URL is automatically determined and send to the service once submit is pressed.
+
+[source,html]
+----
+include::examples/forms/feedback.js[]
+----
+
+[source,html]
+----
+include::examples/forms/feedback.html[]
+----

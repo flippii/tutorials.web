@@ -1,2 +1,3 @@
-== JavaScript resources
+== JavaScript with Eclipse resources
 
+https://eclipse.org/webtools/jsdt/ Eclipse JSDT website

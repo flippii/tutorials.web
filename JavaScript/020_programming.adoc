@@ -1,0 +1,93 @@
+[[programminginjavascript]]
+== Appendix - Programming in JavaScript
+
+[[javascript_variables]]
+=== Variables and data types
+
+The following example demonstrates how to declare and use variables in JavaScript.
+
+[source, javascript]
+----
+include::examples/javascript/variables.html[]
+----
+
+You may notice that there are two ways of declaring variables.
+
+[source, javascript]
+----
+include::examples/javascript/var.txt[]
+----
+	
+Variables defined without the keyword "var" are global variables.
+Variables defined with "var" are scoped according to their declaration, e.g., if you define a "var" in a function this variable is only valid in this function.
+
+It is good JavaScript practice to always use the `var` keyword.
+
+JavaScript has four basic types, Object and the primitive types Number, String, and Boolean.
+
+[[javascript_arrays]]
+=== Arrays
+
+Arrays are Objects in JavaScript. 
+You can define them and use the method pop() to remove the first element and push(newValue) to add a new element at the end.
+You can also iterate over it.
+
+[source, javascript]
+----
+include::examples/javascript/array.txt[]
+----
+
+[[javascript_functions]]
+=== Functions
+
+A function in JavaScript encapsulates reusable code and are represented as Objects. 
+Functions can be directly called via other JavaScript code. 
+It is recommended that you put functions in the header of the HTML page. 
+Functions are declared via the function keyword. 
+You can call a function directly, or use the apply method on the function.
+
+[source, javascript]
+----
+include::examples/function/function1.html[]
+----
+
+[[javascript_prototype]]
+=== Prototype in JavaScripts
+
+JavaScript does not support classes and inheritance of classes like object orientated programming languages. 
+JavaScript is a prototype-based language, by this approach you can reuse functions by cloning existing objects.  
+
+[[javascript_buttons]]
+=== Assigning functions to HTML buttons
+
+The following gives an example how to assign a function to an HTML button.
+
+[source, javascript]
+----
+include::examples/function/function.html[]
+----
+
+[[javascript_events]]
+=== HTML Events
+
+JavaScript can react to certain event on the page and be registered with webpage elements, e.g. buttons. 
+You can register a function to a event in the HTML page. 
+
+
+.Table Events in Javascript
+|===
+|Event |Description
+
+|Onload
+|Triggered then the user loads the page. The onload even can for example be used to check the visitors browser type.
+
+|onChange
+|Called whenever a field is changed. Can for example be used to validate an input field of a form.
+
+|onSubmit
+|Called then a user clicks on the submit button of a form.
+
+|OnMouseOver and OnMouseOut
+|Called then the mouse enters a certain element on the page or leaves it.
+|===
+

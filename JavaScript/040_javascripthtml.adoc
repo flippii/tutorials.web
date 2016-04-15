@@ -1,0 +1,21 @@
+[[javascripthtml]]
+== Appendix - JavaScript and HTML interaction
+
+[[javascripthtml_dom]]
+=== HTML DOM
+
+A HTML webpage is represented via a HTML Document Object Model (DOM). 
+The HTML DOM is defined via a W3C standard. 
+This HTML DOM defines a standard way to access and manipulate HTML documents. 
+You can use JavaScript to modify the HTML DOM. 
+
+[[javascripthtml_manipulation]]
+=== Manipulation HTML with JavaScript
+
+You can for example search via JavaScript for certain elements and modify their properties.
+The following example shows how to find HTML elements with a certain div class and set the display property to hide / show them.
+
+[source, javascript]
+----
+include::examples/modify/manipulateHTML.html[]
+----
