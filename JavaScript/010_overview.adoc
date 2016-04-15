@@ -1,4 +1,3 @@
-
 == What is JavaScript?
 
 JavaScript is a scripting language which is primarily used within 
@@ -22,7 +21,9 @@ Unzip is and start the Eclipse IDE and select a directory to work in.
 [[firstjavascriptwitheclipse]]
 == Your first JavaScript project with Eclipse
 
-Select menu:View[File > New > JavaScript Project].
+Switch to the _Web_ perspective and create a new _Static Web Project_.
+
+Select menu:View[File > New > Static Web Project].
 
 image::img/javascriptwizard1.png[]
 

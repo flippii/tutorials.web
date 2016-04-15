@@ -8,7 +8,7 @@ Version 1.1, 15.04.2016
 The article contains a introduction to JavaScript development with the Eclipse IDE.
 				
 include::010_overview.adoc[]
-include::012_debugging.xml[]
+include::012_debugging.adoc[]
 include::020_programming.adoc[]
 include::040_javascripthtml.adoc[]
 include::100_examples.adoc[]
