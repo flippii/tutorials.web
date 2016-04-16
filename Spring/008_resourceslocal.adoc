@@ -1,6 +1,7 @@
 = Spring resources
 
-https://github.com/spring-projects
+Spring on Github - https://github.com/spring-projects
 
-https://spring.io/guides
+Spring Guide - https://spring.io/guides
 
+Spring  Modules - https://docs.spring.io/spring/docs/current/spring-framework-reference/html/overview.html

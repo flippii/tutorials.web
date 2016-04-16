@@ -1,2 +1,6 @@
 = Modules in Spring
 
+Spring consists of several modules for different use cases.
+
+A good overview about available modules in Spring can be found here: https://docs.spring.io/spring/docs/current/spring-framework-reference/html/overview.html#overview-modules[Spring Modules] 
+
