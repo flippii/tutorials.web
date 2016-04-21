@@ -1,0 +1,12 @@
+[[cssmediaquery]]
+== CSS media queries and responsive design
+
+Via CSS you can use media queries to define CSS settings based on certain criteria. 
+A common use case is to have different CSS based styling for devices with only limited pixels and other designs for larger screens.
+
+For example the following CSS defines a fixed position for a search box. 
+If the screen has a maximum width of 750 or less different styling is used.
+
+----
+include::examples/mediaquery/search.css[]
+----

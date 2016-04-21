@@ -1,0 +1,23 @@
+[[cssposition]]
+== Positioning HTML elements with CSS
+
+CSS allows to setup element with fixed, relate and absolute positions. 
+Relative is the standard and will change the distribution of the different text containers based on the available space. 
+
+Frequently you want to make sure that you boxes stay on a specific place. 
+You can use postion:absolute for this. 
+A block element with this style will be removed from the normal flow of the HTML page and will have a fixed space. 
+For example:
+
+----
+include::examples/positioning/absolute.html[]
+----
+
+If you want to have a element always on a certain position you can use the fixed position and
+will not move even if you scroll down the HTML page. 
+
+----
+include::examples/positioning/csspositioning.html[]
+----
+
+For more examples see http://www.w3schools.com/Css/css_positioning.asp[CSS positioning].

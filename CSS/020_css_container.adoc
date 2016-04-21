@@ -1,8 +1,8 @@
 [[cssusage_div]]
-==HTML container via id and class
+== HTML container via id and class
 
-HTML allows to define sections via ´div´ containers. 
-These ´div´ containers can be used to style parts of the HTML document differently.
+HTML allows to define sections via 'div' containers. 
+These 'div' containers can be used to style parts of the HTML document differently.
 For this purpose you can identify the div containers via id and class attributes.
 		
 An id must be unique in the HTML document while the class attribute can be defined for several HTML elements. 
@@ -24,14 +24,18 @@ The following rule applies:
 
 The following example demonstrate both usages. Create the file _stylesdiv.css_
 
+[source]
+----
 include::examples/div/stylesdiv.css[]
+----
 
 Create the following HTML file to use the style sheet.
 
+[source]
 include::examples/div/DivTest.html[]
 
 You can also select by position in the HTML document. 
-For example ´td a´ only selects links which are within a table row.
+For example 'td a' only selects links which are within a table row.
 
 You can also use other attributes for example the following will define certain styling for links which have been visited or over
 which the mouse hovers. 

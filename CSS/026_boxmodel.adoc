@@ -1,0 +1,37 @@
+[[boxmodel]]
+== Margins and padding
+
+[[boxmodel_margins]]
+=== Margins
+
+A block element can be thought of as a box which contains something.
+This box has a border to other elements and you can influence the distance to other elements via the 'margin' and 'padding' settings.
+
+Margin defines the outer distance of other elements. 
+You can set values for top, right, bottom and left.
+
+
+image::img/css-margins.png[Displaying the CSS margin settings] 
+
+You can define the margins for a box individually or combine them into one statement.
+
+----
+include::examples/box/margins1.css[]
+----
+----
+include::examples/box/margins2.css[]
+----
+
+[[boxmodel_padding]]
+=== Padding
+
+Padding defines the inner distance of elements to the end of the box.
+
+----
+include::examples/box/test.html[]
+----
+----
+include::examples/box/styles.css[]
+----
+
+The total size of the HTML box is defined by the initial size of the box, plus the margins and the padding and a border, if defined.

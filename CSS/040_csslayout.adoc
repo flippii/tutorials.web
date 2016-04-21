@@ -1,0 +1,18 @@
+[[csslayout]]
+== CSS based layout
+
+You can use HTML div container and CSS to layout your webpage.
+
+Your example the following webpage uses div container.
+
+----
+include::examples/layout/index.html[]
+----
+
+----
+include::examples/layout/styleslayout.css[]
+----
+
+This result in the following layout.
+
+image::img/layout10.gif[]

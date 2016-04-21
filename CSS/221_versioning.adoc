@@ -1,0 +1,22 @@
+[[css_version]]
+== Versioning of CSS 
+
+The versioning of css files is not mandatory, but it could be very useful to force the browser to load a changed css file instead of 
+using the CSS caching.
+
+To achieve this just add '?version=1.1' at the end of the css file name when referencing to the file.
+
+So instead of calling a css file like this:
+----
+http://www.vogella.com/css/companyfooter.css
+---- 
+
+you should replace it with
+
+----
+http://www.vogella.com/css/companyfooter.css?version=1.1
+---- 
+
+The wording after the '?' has no relevance and can be chosen freely. 
+With this solution your css changes are immediately visible and you do not need to refresh your browser with CTRL F5 until you see them.
+Additionally the name of the css file keeps the same which saves you a global search and replace.

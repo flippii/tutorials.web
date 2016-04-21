@@ -1,0 +1,7 @@
+[[css_includes]]
+== CSS includes
+
+A CSS file can import other CSS files via the '@import' statement.
+It must be the first rule in the style sheet using the '@import' statement.
+
+include::examples/includes/include.css[]

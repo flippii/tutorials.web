@@ -4,9 +4,15 @@
 In the following you create a local html page and style it with CSS.
 Create a new directory and create the following file called 'styles.css'.
 
+[source]
+----
 include::examples/first/styles.css[]
+----
 
 In the same directory define the following HTML file. 
 This file defines that it uses the 'styles.css' style sheet file from the same same directory.
 
+[source]
+----
 include::examples/first/exampletablecss.html[]
+----

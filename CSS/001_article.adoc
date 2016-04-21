@@ -1,14 +1,24 @@
 = Cascading Style Sheets (CSS) - Tutorial
-Lars Vogel - https://www.twitter.com[vogella]
+:sectnums:
+Lars Vogel and Jennifer Nerlich - https://www.twitter.com[vogella] https://www.twitter.com[jnerlich]
 :keywords: CSS, HTML
-:revdate: 16.05.2013
-:revnumber: 1.5
+:revdate: 20.05.2016
+:revnumber: 1.6
 
 This article explains how to use CSS for styling HTML pages.
 				
 include::010_overview.adoc[]
 include::018_css_exercise.adoc[]
 include::020_css_container.adoc[]
+include::024_css_includes.adoc[]
+include::026_boxmodel.adoc[]
+include::030_css_positioning.adoc[]
+include::040_csslayout.adoc[]
+include::060_css_mediaquery.adoc[]
+include::200_size.adoc[]
+include::220_text.adoc[]
+include::221_versioning.adoc[]
+include::230_eclipse_editor.adoc[]
 
 include::../copyright.adoc[]
 include::008_resourceslocal.adoc[]

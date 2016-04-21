@@ -18,15 +18,19 @@ CSS is defined as a standard. Currently the versions _CSS 2.1_ and _CSS 3_ are m
 The CSS standard defines _selectors_ and _style rules_.
 The syntax is defined as follows:
 
+----
 include::examples/first/selector.txt[]
+----
 
 A selector can be one of a predefined identifier(, e.g., H1), a class name (e.g. .myclass) or an identifier (e.g. #myuniqueid).
 
 In CSS an identifier is supposed to be unique across all of the elements in a page (or window in our case) while a class can be assigned to several elements.
 
-For example the following CSS file defines the size and color of the `h1` tag.
+For example the following CSS file defines the size and color of the 'h1' tag.
 
+----
 include::examples/first/selectorexample.txt[]
+----
 
 [[cssintro_pseudoclasses]]
 === CSS pseudo classes
@@ -34,7 +38,6 @@ include::examples/first/selectorexample.txt[]
 _CSS pseudo classes_ are used to qualify attributes of selectors. 
 For example you can select an visited link in HTML and style is differently.
 
+----
 include::examples/first/pseudoclassexample.txt[]
-
-
-
+----

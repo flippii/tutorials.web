@@ -1,0 +1,9 @@
+[[text]]
+== Alignment and Text transformations
+
+Via text-align you can define how your content (not only text) should be aligned.
+text-transform allows to transform the text to upper, lower case or to capitalize the first letter. 
+
+----
+include::examples/text/example.txt[]
+----
