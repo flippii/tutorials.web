@@ -1,0 +1,7 @@
+[appendix]
+
+= Spring Boot resources
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/index.html [Spring Boot reference docs]
+
+https://blog.openshift.com/using-spring-boot-on-openshift/[Using Spring Boot on OpenShift]

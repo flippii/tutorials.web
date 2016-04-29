@@ -1,0 +1,14 @@
+= OpenShift - Tutorial
+Lars Vogel - https://www.twitter.com[vogella]
+:keywords: Cloud, Docker, HTML
+:revdate: 01.04.2016
+:revnumber: 0.1
+
+This article describes the OpenShift hosting platform.
+				
+include::010_overview.adoc[]
+include::018_css_exercise.adoc[]
+
+include::../copyright.adoc[]
+include::008_resourceslocal.adoc[]
+
