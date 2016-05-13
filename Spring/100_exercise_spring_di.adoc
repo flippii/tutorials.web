@@ -2,21 +2,21 @@
 
 === Target
 
-In this exercise a minimal example about Dependency Injection with Spring is shown.
+In this exercise a minimal Spring example using dependency injection is created.
 
 === Create a Spring Project
 
-Create a spring starter project, which can be found in the menu:New[Spring Starter Menu]
+Create a spring starter project, via the menu:New[Spring Starter] menu entry.
 
 image::img/new-menu-spring-starter.png[] 
 
-Use the following input for the Spring Boot wizard:
+Use the following input for the wizard:
 
 image::img/new-spring-boot-project-wizard.png[] 
 
-Just press btn:[Next] and btn:[Finish] in order to create a plain Spring Boot project.
+Just press btn:[Next] and btn:[Finish] in order to create a simple project.
 
-The project will then look like this:
+The project looks like the following:
 
 image::img/first-di-spring-project.png[] 
 
@@ -36,9 +36,9 @@ include::res/Todo.java[]
 
 There are several ways to populate an`ITodo` implementation, but the easiest one is to use a Java configuration by using the `@Configuration` and `@ComponentScan` annotation.
 
-Create a new _com.vogella.config_ package in the icon:folder-open[]src/main/java source folder.
+Create a new _com.vogella.spring.first.di.config_ package in the icon:folder-open[]src/main/java source folder.
 
-Create a +Config.java+ class inside the _com.vogella.config_ package.
+Create a +Config.java+ class inside the new package.
 
 [source,java]
 ----

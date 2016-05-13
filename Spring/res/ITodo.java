@@ -1,4 +1,4 @@
-package com.vogella;
+package com.vogella.spring.first.di;
 
 import java.util.Date;
 

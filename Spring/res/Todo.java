@@ -1,4 +1,4 @@
-package com.vogella;
+package com.vogella.spring.first.di;
 
 import java.util.Date;
 
@@ -21,12 +21,9 @@ public class Todo implements ITodo {
 		this(i, "");
 	}
 
-	@Autowired
 	public Todo(long i, String summary) {
 		this.id = i;
 		this.summary = summary;
-		this.done = b;
-		this.dueDate = date;
 	}
 
 	@Override
@@ -93,6 +90,9 @@ public class Todo implements ITodo {
 
 	@Override
 	public Todo copy() {
-		return new Todo(id, summary, done, dueDate);
+		Todo todo = new Todo(id, summary);
+		todo.setDone(this.isDone());
+		todo.setDueDate(this.getDueDate());
+		return todo;
 	}
 }
