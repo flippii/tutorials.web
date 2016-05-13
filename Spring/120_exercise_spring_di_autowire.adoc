@@ -1,0 +1,26 @@
+== Exercise - Spring DI Autowire Beans
+
+=== Target
+
+Let the beans get their dependencies themselves. Until now only the no arg constructor and an explicitly created `Todo` where used.
+
+But Beans themselves can also get their dependencies from Spring's DI Container.
+
+=== Using the @Autowired Annotation
+
+The `Todo` 's constructor can also be annotated with the `@Autowired` annotation.
+
+By doing this and readding the `@Component` annotation to the `Todo` Spring will try to use the constructor with parameters, which are available in the Spring DI container.
+
+[source, Java]
+----
+include::res/TodoAutowired.java[]
+----
+
+Now all constructor parameters have to be available so that `@Autowired` can work properly.
+
+[source, Java]
+----
+include::res/ConfigAutowire.java[]
+----
+
