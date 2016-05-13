@@ -33,7 +33,12 @@ Exception in thread "main" org.springframework.beans.factory.NoUniqueBeanDefinit
 
 Due to the `@Component` annotation on the `Todo` and the new `@Bean` method two Components/Beans are provided and Spring cannot decide, which one to choose.
 
-Therefore the `@Component` annotation on the `Todo` has to be removed again.
+This ambiguity has to be handled. Therefore either the `@Component` annotation on the `Todo` has to be removed again or the `@Primary` can be added.
+
+[source,java]
+----
+include::res/ConfigExplicitPrimary.java[]
+----
 
 === Validate 2
 
