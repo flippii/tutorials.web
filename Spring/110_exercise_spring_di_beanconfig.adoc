@@ -1,0 +1,47 @@
+== Exercise - Spring DI Bean Config
+
+=== Target
+
+In the former exercise the Todo was created automatically by using the `@Component` annotation.
+
+But since the Spring DI Container does not contain any objects, which are expected as constructor parameter in the `Todo` implementation the no arg constructor is always used.
+
+=== Using a custom constructor for Components/Beans
+
+In order to explicitly create a `Todo` instance a method in the `Config` class annotated with the `@Bean` annotation can be used.
+
+[source,java]
+----
+include::res/ConfigExplicit.java[]
+----
+
+=== Validate 1
+
+Now run the `Application` class again and try to fix the error.
+
+[source, Java]
+----
+Exception in thread "main" org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type [com.vogella.ITodo] is defined: expected single matching bean but found 2: todo,getTodo
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:366)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:332)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1066)
+	at com.vogella.Application.main(Application.java:12)
+----
+
+
+=== Fixing the NoUniqueBeanDefinitionException
+
+Due to the `@Component` annotation on the `Todo` and the new `@Bean` method two Components/Beans are provided and Spring cannot decide, which one to choose.
+
+Therefore the `@Component` annotation on the `Todo` has to be removed again.
+
+=== Validate 2
+
+Run the `Application` class and see that an implementation of the `ITodo` interface is found and provided by the `AnnotationConfigApplicationContext`.
+
+Besides the console output of the Spring framework this should be printed to the console:
+
+[source, plain]
+----
+Todo [id=0, summary=Spring DI]
+----

@@ -1,4 +1,4 @@
-== Exercise - Spring DI
+== Exercise - Spring DI Java Config
 
 === Target
 
@@ -42,7 +42,7 @@ Create a +Config.java+ class inside the _com.vogella.config_ package.
 
 [source,java]
 ----
-include::res/Config.java[]
+include::res/ConfigScan.java[]
 ----
 
 This `Config` class let's spring automatically scan the whole _com.vogella_ package for classes, which should be available in Spring's DI container.
