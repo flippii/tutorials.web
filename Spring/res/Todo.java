@@ -18,11 +18,11 @@ public class Todo implements ITodo {
 	}
 
 	public Todo(long i) {
-		this(i, "", false, null);
+		this(i, "");
 	}
 
 	@Autowired
-	public Todo(long i, String summary, boolean b, Date date) {
+	public Todo(long i, String summary) {
 		this.id = i;
 		this.summary = summary;
 		this.done = b;

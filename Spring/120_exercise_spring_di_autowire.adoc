@@ -19,8 +19,19 @@ include::res/TodoAutowired.java[]
 
 Now all constructor parameters have to be available so that `@Autowired` can work properly.
 
+Optionally also the setter methods, e.g., dueDate and done, can be provided.
+
 [source, Java]
 ----
 include::res/ConfigAutowire.java[]
 ----
+
+=== Validate
+
+With this approach the `Todo` instance will be created by Spring again, but rather with the `@Autowired` constructor than the no arg constructor.
+
+The `@Autowired` is also used for some of the setter methods.
+
+NOTE: Setter injection should always be preferred, since classes that use field injection usually cannot be tested properly.
+
 
