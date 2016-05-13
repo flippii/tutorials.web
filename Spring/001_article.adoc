@@ -1,5 +1,7 @@
 = Spring - Tutorial
 :linkcss:
+:experimental:
+:sectnums:
 (c) 2015 vogella GmbH
 Version 0.1, 15.04.2016
 

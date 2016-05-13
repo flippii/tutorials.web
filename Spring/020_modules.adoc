@@ -1,4 +1,4 @@
-= Modules in Spring
+== Modules in Spring
 
 Spring consists of several modules for different use cases.
 

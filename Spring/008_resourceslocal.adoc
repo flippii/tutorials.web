@@ -1,4 +1,4 @@
-= Spring resources
+== Spring resources
 
 Spring on Github - https://github.com/spring-projects
 
