@@ -2,7 +2,7 @@
 
 === Target
 
-In the former exercise the Todo was created automatically by using the `@Component` annotation.
+In the <<exercise_springfirstdi>> exercise the Todo was created automatically by using the `@Component` annotation.
 
 But since the Spring DI Container does not contain any objects, which are expected as constructor parameter in the `Todo` implementation the no arg constructor is always used.
 

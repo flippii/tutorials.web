@@ -1,3 +1,4 @@
+[[exercise_springfirstdi]]
 == Exercise - Spring DI Java Config
 
 === Target
