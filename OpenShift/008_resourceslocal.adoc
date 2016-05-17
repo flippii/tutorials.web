@@ -1,6 +1,5 @@
 [appendix]
-
-= Spring Boot resources
+== Spring Boot resources
 
 https://docs.spring.io/spring-boot/docs/current/reference/html/index.html [Spring Boot reference docs]
 
