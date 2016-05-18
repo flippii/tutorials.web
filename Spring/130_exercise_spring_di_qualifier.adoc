@@ -1,0 +1,91 @@
+== Exercise - Spring DI Qualifier
+
+=== Target
+
+In the <<exercise_spring_di_bean>> exercise an ambiguous Bean declaration has been resolved by using `@Primary`. 
+
+But `@Primary` is very limited and can only be used once for a Bean.
+
+What if one would like to decide, which Bean of the same type should be used under certain conditions?
+
+=== Adding a description to the ITodo
+
+The `ITodo` interface now should also provide a description for additional information about the todo.
+
+[source, java]
+----
+include::res/ITodoWithDescription.java[]
+----
+
+The `Todo` implementation must implement the description getter and setter. 
+
+The description should also be autowired and therefore the setter is annotated with `@Autowired`.
+
+In order to see the description in the sample application it is added to the overridden `toString()` method.
+
+[source, java]
+----
+include::res/TodoWithDescription.java[]
+----
+
+=== Validate 1
+
+Run the application and see its output.
+
+[source, shell]
+----
+Todo [id=0, summary=Spring DI, description=Spring DI]
+----
+
+So the String bean has been used for both summary and description, since both methods expect a String.
+
+=== Adding an additional Bean for the description of a Todo
+
+To get a real description an additional Bean has to be added to the _Config.java_ class.
+
+[source, java]
+----
+include::res/ConfigAutowireDescription.java[]
+----
+
+When running the application this again would result in an `NoUniqueBeanDefinitionException`.
+
+[source, shell]
+----
+Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type [java.lang.String] is defined: expected single matching bean but found 2: getDescription,getSummary
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1126)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:813)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:741)
+	... 14 more
+----
+
+=== Using the @Qualifier Annotation
+
+The qualifier annotation can be used to qualify a Bean.
+
+So the summary Bean can be qualified with the word "summary" and the description can be qualified with the word "description".
+
+[source, java]
+----
+include::res/ConfigAutowireDescriptionQualified.java[]
+----
+
+To address a certain qualified Bean the `@Qualifier` annotation can either be used on class, parameter, method or field level.
+
+[source, java]
+----
+include::res/TodoWithDescriptionQualified.java[]
+----
+
+In this case the summary parameter in the constructor is annotated with `@Qualifier("summary")` and the `setDescription` method is annotated with `@Qualifier("description")`.
+
+=== Validate 2
+
+Running the application should result in the following output.
+
+[source, shell]
+----
+Todo [id=0, summary=Spring DI, description=Dependency injection in Spring is a powerful feauture for inversion of control.]
+----
+

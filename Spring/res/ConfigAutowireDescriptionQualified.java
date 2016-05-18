@@ -16,10 +16,17 @@ public class Config {
 	}
 
 	@Bean
+	@Qualifier("summary")
 	public String getSummary() {
 		return "Spring DI";
 	}
-	
+
+	@Bean
+	@Qualifier("description")
+	public String getDescription() {
+		return "Dependency injection in Spring is a powerful feauture for inversion of control.";
+	}
+
 	@Bean
 	public Boolean isDone() {
 		return Boolean.FALSE;
