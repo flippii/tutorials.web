@@ -1,3 +1,5 @@
 == JavaScript with Eclipse resources
 
 https://eclipse.org/webtools/jsdt/ Eclipse JSDT website
+
+https://www.eclipse.org/community/eclipse_newsletter/2016/may/ JavaScript Development Tools Rebooted newletter
