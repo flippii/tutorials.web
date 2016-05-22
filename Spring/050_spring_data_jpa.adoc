@@ -1,0 +1,25 @@
+== Spring Data JPA
+
+=== Common Spring Data JPA repository implementations
+
+=== Custom Spring Data JPA repository query methods
+
+.Table Possible return types for query methods
+[cols="1, 2"]
+|===
+|Type |Description
+
+|Plain Type
+|Returns the plain type or `null` in case nothing is found
+
+|`Optional<T>` (Guava or Java 8)
+|Returns an Optional<T> containing the actual object or an empty optional
+
+|`List<T>`
+|Returns a `List<T>` of found objects or an empty list in case nothing is found
+
+|`Stream<T>`
+|Returns a `Stream<T>` of found objects or an empty stream in case nothing is found
+|===
+
+

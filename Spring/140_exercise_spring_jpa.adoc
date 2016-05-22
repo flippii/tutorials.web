@@ -60,3 +60,7 @@ Running the application should result in the following output.
 Todo [id=1, summary=Test, description=null]
 Todo [id=2, summary=Detailed test, description=Detailed description]
 ----
+
+=== Adding custom methods
+
+
