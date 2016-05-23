@@ -97,3 +97,29 @@ public interface TodoRepository extends JpaRepository<Todo, Long> {
 }
 ----
 
+=== Using the EntityManager in Spring Data JPA
+
+Sometimes even the `@Query` annotation is not sufficient for enhanced queries.
+
+Therefore it is possible to provide a real implementation for a repository interface, even without implementing the repository interface.
+
+Because the naming convention is the only thing that really counts, e.g., the `TodoRepository` class implementation would be called `TodoRepositoryImpl`.
+
+TIP: `Impl` is the default postfix, which can also be changed by using 
+`@EnableJpaRepositories(repositoryImplementationPostfix="Helper")` in the `Config` class
+
+=== Creating async queries with @Async
+
+By using the `@org.springframework.scheduling.annotation.Async` annotation it is possible to return a  `Future<T>` or a Java 8 `CompletableFuture<T>`.
+
+[source, java]
+----
+public interface TodoRepository extends CrudRepository<Todo, Long> {
+
+	@Async
+	CompletableFuture<List<Todo>> findBySummaryAsyncJava8(String summary);
+
+	@Async
+	Future<List<Todo>> findBySummaryAsyncBeforeJava8(String summary);
+}
+----
