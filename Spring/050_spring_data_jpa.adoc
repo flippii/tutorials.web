@@ -83,6 +83,8 @@ public interface TodoRepository extends JpaRepository<Todo, Long> {
 }
 ----
 
+NOTE: The name of the parameters are irrelevant, but the order of the parameters must fit to the parameters mentioned in the method's name.
+
 === Using @Query for special SQL queries
 
 The query DSL derived from method signatures is really powerful and easy to handle.
