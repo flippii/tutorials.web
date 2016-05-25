@@ -61,6 +61,21 @@ Todo [id=1, summary=Test, description=null]
 Todo [id=2, summary=Detailed test, description=Detailed description]
 ----
 
-=== Adding custom methods
+=== Using the Spring Data JPA Query DSL
 
+For repository interfaces it is possible to create query like method names, which are parsed by Spring.
 
+See <<custom-spring-data-jpa-repository-query-methods>> for further information.
+
+==== Exercises Spring Data JPA Query DSL
+
+Please add methods for the following queries:
+
+. Query Todos by summary
+. Query just one optional Todo by summary and due date
+. Query a stream of Todos by summary or description
+. Count the amout of Todos in the database table
+. Write a custom query for all todos in the year 2016
+. Get all available Todos asynchronously 
+
+==== Solutions for Spring Data JPA Query DSL exercises
