@@ -14,7 +14,7 @@ The `ITodo` interface now should also provide a description for additional infor
 
 [source, java]
 ----
-include::res/ITodoWithDescription.java[]
+include::res/di/ITodoWithDescription.java[]
 ----
 
 The `Todo` implementation must implement the description getter and setter. 
@@ -25,7 +25,7 @@ In order to see the description in the sample application it is added to the ove
 
 [source, java]
 ----
-include::res/TodoWithDescription.java[]
+include::res/di/TodoWithDescription.java[]
 ----
 
 === Validate 1
@@ -45,7 +45,7 @@ To get a real description an additional Bean has to be added to the _Config.java
 
 [source, java]
 ----
-include::res/ConfigAutowireDescription.java[]
+include::res/di/ConfigAutowireDescription.java[]
 ----
 
 When running the application this again would result in an `NoUniqueBeanDefinitionException`.
@@ -68,14 +68,14 @@ So the summary Bean can be qualified with the word "summary" and the description
 
 [source, java]
 ----
-include::res/ConfigAutowireDescriptionQualified.java[]
+include::res/di/ConfigAutowireDescriptionQualified.java[]
 ----
 
 To address a certain qualified Bean the `@Qualifier` annotation can either be used on class, parameter, method or field level.
 
 [source, java]
 ----
-include::res/TodoWithDescriptionQualified.java[]
+include::res/di/TodoWithDescriptionQualified.java[]
 ----
 
 In this case the summary parameter in the constructor is annotated with `@Qualifier("summary")` and the `setDescription` method is annotated with `@Qualifier("description")`.

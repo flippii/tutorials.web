@@ -25,14 +25,14 @@ Add a new +ITodo.java+ interface, which should be available as bean in the Sprin
 
 [source, Java]
 ----
-include::res/ITodo.java[]
+include::res/di/ITodo.java[]
 ----
 
 The implementation of the `ITodo` interface should look like this:
 
 [source, Java]
 ----
-include::res/Todo.java[]
+include::res/di/Todo.java[]
 ----
 
 There are several ways to populate an`ITodo` implementation, but the easiest one is to use a Java configuration by using the `@Configuration` and `@ComponentScan` annotation.
@@ -43,7 +43,7 @@ Create a +Config.java+ class inside the new package.
 
 [source,java]
 ----
-include::res/ConfigScan.java[]
+include::res/di/ConfigScan.java[]
 ----
 
 This `Config` class let's spring automatically scan the whole _com.vogella_ package for classes, which should be available in Spring's DI container.
@@ -52,7 +52,7 @@ Change the +Application.java+ class to the following:
 
 [source, Java]
 ----
-include::res/Application.java[]
+include::res/di/Application.java[]
 ----
 
 

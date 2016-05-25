@@ -14,7 +14,7 @@ By doing this and readding the `@Component` annotation to the `Todo` Spring will
 
 [source, Java]
 ----
-include::res/TodoAutowired.java[]
+include::res/di/TodoAutowired.java[]
 ----
 
 Now all constructor parameters have to be available so that `@Autowired` can work properly.
@@ -23,7 +23,7 @@ Optionally also the setter methods, e.g., dueDate and done, can be provided.
 
 [source, Java]
 ----
-include::res/ConfigAutowire.java[]
+include::res/di/ConfigAutowire.java[]
 ----
 
 === Validate

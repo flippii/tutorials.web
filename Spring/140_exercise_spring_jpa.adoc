@@ -88,7 +88,7 @@ Please do not look at the solutions beforehand and try it on your own.
 [source, java]
 ----
 
-include::res/jpa/TodoRepositoryFindBySummary.java[]
+include::res/jpa/TodoRepositoryGetBySummary.java[]
 
 ----
 

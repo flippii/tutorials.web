@@ -13,7 +13,7 @@ In order to explicitly create a `Todo` instance a method in the `Config` class a
 
 [source,java]
 ----
-include::res/ConfigExplicit.java[]
+include::res/di/ConfigExplicit.java[]
 ----
 
 === Validate 1
@@ -38,7 +38,7 @@ This ambiguity has to be handled. Therefore either the `@Component` annotation o
 
 [source,java]
 ----
-include::res/ConfigExplicitPrimary.java[]
+include::res/di/ConfigExplicitPrimary.java[]
 ----
 
 === Validate 2
