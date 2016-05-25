@@ -75,7 +75,69 @@ Please add methods for the following queries:
 . Query just one optional Todo by summary and due date
 . Query a stream of Todos by summary or description
 . Count the amout of Todos in the database table
+. Count the amout of Todos with a certain summary
 . Write a custom query for all todos in the year 2016
-. Get all available Todos asynchronously 
+. Get available Todos by summary asynchronously
+
+Please do not look at the solutions beforehand and try it on your own.
 
 ==== Solutions for Spring Data JPA Query DSL exercises
+
+===== Solution: Query Todos by summary
+
+[source, java]
+----
+
+include::res/jpa/TodoRepositoryFindBySummary.java[]
+
+----
+
+===== Solution: Query just one optional Todo by summary and due date
+
+[source, java]
+----
+
+include::res/jpa/TodoRepositoryFindBySummaryAndDueDate.java[]
+
+----
+
+===== Solution: Query a stream of Todos by summary or description
+
+[source, java]
+----
+
+include::res/jpa/TodoRepositoryReadBySummaryOrDescription.java[]
+
+----
+
+===== Solution: Count the amout of Todos in the database table
+
+The `org.springframework.data.repository.CrudRepository<T, ID>` already offers a `count()` method, which can be used for this use case.
+
+===== Solution: Count the amout of Todos with a certain summary
+
+[source, java]
+----
+
+include::res/jpa/TodoRepositoryCountBySummary.java[]
+
+----
+
+===== Solution: Write a custom query for all todos in the year 2016
+
+[source, java]
+----
+
+include::res/jpa/TodoRepositoryCustomBetweenDateQuery.java[]
+
+----
+
+===== Solution: Get available Todos by summary asynchronously
+
+[source, java]
+----
+
+include::res/jpa/TodoRepositoryGetAsyncBySummary.java[]
+
+----
+

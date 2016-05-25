@@ -35,10 +35,9 @@ Spring Data JPA is able to parse method names, tries to guess its purpose and tr
 
 [source, java]
 ----
-public interface TodoRepository extends CrudRepository<Todo, Long> {
 
-	List<Todo> findBySummary(String summary);
-}
+include::res/jpa/TodoRepositoryFindBySummary.java[]
+
 ----
 
 The `findBySummary` method will find a list of todo objects by summary.
