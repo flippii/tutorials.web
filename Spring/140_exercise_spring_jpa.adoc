@@ -14,15 +14,17 @@ Use the following input for the wizard:
 
 image::img/new-spring-boot-project-wizard-jpa.png[] 
 
-Now press btn:[Next] and choose _JPA_ and _H2_ in the _SQL_ category.
+Now press btn:[Next] and choose _Lombok_, _JPA_ and _H2_.
 
-image::img/sql-category-jpa-h2.png[] 
+image::img/spring-data-jpa-modules.png[] 
 
 Then press btn:[Finish] in order to create a Spring Data JPA project.
 
 === Creating a JPA Entity
 
 This time the `Todo` should be stored in a H2 database, therefore the `Todo` must make use of JPA annotations, like `@Entity`, `@Id` and `@GeneratedValue`.
+
+In order to save time and avoid writing boilerplate code the `@Data`annotation is used to generate getters and setters for the `Todo` entity.
 
 [source, java]
 ----
