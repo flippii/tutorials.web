@@ -1,8 +1,12 @@
 = Using JavaScript with Eclipse - Tutorial
 :linkcss:
+:sectnums:                                                          
 :experimental:
-(c) 2016 vogella GmbH
-Version 1.1, 15.04.2016
+:icons:
+:imagesdir: ./img
+
+Lars Vogel, (c) 2016 vogella GmbH
+Version 1.1, 01.06.2016
 
 [abstract]
 The article contains a introduction to JavaScript development with the Eclipse IDE.

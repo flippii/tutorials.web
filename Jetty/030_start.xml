@@ -1,0 +1,23 @@
+[[startjetty_jar]]
+== Start Jetty from the JAR file
+
+To start Jetty, switch on the command line to the installation directory and issue the following command.
+
+
+		<programlisting>
+			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+				parse="text" href="../examples/startjetty.txt" />
+		</programlisting>
+
+This starts Jetty on http://localhost:8080/
+
+	<para>
+		<mediaobject>
+			<imageobject>
+				<imagedata fileref="images/jetty10.gif" />
+				
+			</imageobject>
+		</mediaobject>
+	</para>
+	
+To stop Jetty press Ctrl+C. 

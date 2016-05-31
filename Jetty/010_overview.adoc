@@ -1,0 +1,10 @@
+[[jettyoverview]]
+== What is Jetty?
+
+_Jetty_ is a web container. It has the following core components.
+
+* Http Server   
+* Servlet Container
+* HTTP Client 
+
+The current version of Jetty is Jetty 9 which supports the Servlet API 3.1.

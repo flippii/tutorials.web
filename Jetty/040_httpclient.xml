@@ -1,0 +1,9 @@
+[[httpclientjetty]]
+== Using the HttpClient
+
+The following code show a few examples of using the HttpClient of Jetty.
+		
+		<programlisting>
+			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+				parse="text" href="../examples/client/Using.java" />
+		</programlisting>

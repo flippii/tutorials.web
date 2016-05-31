@@ -1,0 +1,6 @@
+== Jetty resources
+
+http://eclipse.org/jetty/ Jetty homepage
+
+https://wiki.eclipse.org/Jetty/Tutorial/Embedding_Jetty Embedding Jetty Tutorial
+
