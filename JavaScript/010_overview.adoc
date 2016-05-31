@@ -25,15 +25,15 @@ Switch to the _Web_ perspective and create a new _Static Web Project_.
 
 Select menu:View[File > New > Static Web Project].
 
-image::img/javascriptwizard1.png[]
+image::javascriptwizard1.png[]
 
-image::img/javascriptwizard2.png[]
+image::javascriptwizard2.png[]
 
 Create a new HTML file with menu:View[File > New > > Other > Web > HTML File].
 
-image::img/javascriptwizard4.png[]
+image::javascriptwizard4.png[]
 
-image::img/javascriptwizard5.png[]
+image::javascriptwizard5.png[]
 
  
 Adjust the HTML code to the following. 
@@ -47,7 +47,7 @@ include::examples/javascript/helloworld.html[]
 Afterwards open it via its context menu:Open View[Web Browser].
 The commands within the script tags runs and "Hello, JavaScript!" is written to the webpage.
 
-image::img/javascriptwizard3.png[]
+image::javascriptwizard3.png[]
 
 [[javascript_external]]
 
@@ -63,7 +63,7 @@ include::examples/javascript/javascriptinclude.html[]
 
 Create the file 'myfirstjsfile.js' in the same directory as the HTML page.
 			
-image::img/javascriptwizard6.png[]
+image::javascriptwizard6.png[]
 
 As the JavaScript is in a separate file you do not have to  use script tag. 
 Simple write the code directly into the file.
