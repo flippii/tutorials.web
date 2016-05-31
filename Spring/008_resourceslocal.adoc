@@ -5,3 +5,5 @@ Spring on Github - https://github.com/spring-projects
 Spring Guide - https://spring.io/guides
 
 Spring  Modules - https://docs.spring.io/spring/docs/current/spring-framework-reference/html/overview.html
+
+Spring Data Rest with React JS - https://github.com/gregturn/draft-tut-react-and-spring-data-rest
