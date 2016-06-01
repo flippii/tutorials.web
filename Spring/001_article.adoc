@@ -21,6 +21,7 @@ include::120_exercise_spring_di_autowire.adoc[]
 include::130_exercise_spring_di_qualifier.adoc[]
 include::140_exercise_spring_jpa.adoc[]
 include::150_exercise_spring_data_rest.adoc[]
+include::160_exercise_frontend.adoc[]
 
 include::008_resourceslocal.adoc[]
 

@@ -1,0 +1,50 @@
+== Exercise - Creating an UI Frontend
+
+=== Target
+
+In this exercise a UI frontend is created.
+Later on different JavaScript frameworks like Rest and React will be used.
+
+=== Change the root URI for the rest API
+
+Since the root URI, e.g., `http://localhost:8080/` of a web application should show an UI to the user rather then json or xml, the root URI for the rest API should be changed.
+
+This can be done by using the `spring.data.rest.base-path` property in the _application.properties_.
+
+[source, properties]
+----
+spring.data.rest.base-path=/api
+----
+
+The _application.properties_ file is usually located in _src/main/resources/application.properties_.
+
+WARNING: Now the URLs, which were used in the `CommandLineRunner` from previous exercises have to be adjusted.
+
+=== Creating an index.html single page app
+
+For the UI an index.html file should be created, which contains the single page app powered by https://facebook.github.io/react/[React].
+
+For now the _index.html_ file should look like this:
+
+[source, html]
+----
+include::res/react/index-first.html[]
+----
+
+The _index.html_ file has to be located in _src/main/resources/templates_.
+
+image::img/index-html-location.png[]
+
+=== Creating a @Controller for the UI
+
+To let the root URI point to this _index.html_ file, the mapping to the _index_ has to be defined.
+
+[source, java]
+----
+include::res/react/RootUriController.java[]
+----
+
+=== Validate
+
+Start the Spring Application, open up the http://localhost:8080/ in a browser and see whether _Hello Spring!_ is shown.
+
