@@ -1,0 +1,23 @@
+{
+  "name": "npm-sample",
+  "version": "1.0.0",
+  "description": "Creating a sample package.json file",
+  "main": "app.js",
+  "keywords": [
+    "spring",
+    "npm",
+    "react",
+    "rest"
+  ],
+  "author": "Simon Scholz",
+  "license": " EPL-1.0",
+  "dependencies": {
+    "react": "^15.1.0", #<1>
+    "rest": "^1.3.2" #<2>
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.1", #<3>
+    "babel-loader": "^6.2.4", #<4>
+    "webpack": "^1.13.1" #<5>
+  }
+}

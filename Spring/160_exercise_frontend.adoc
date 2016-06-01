@@ -28,7 +28,7 @@ For now the _index.html_ file should look like this:
 
 [source, html]
 ----
-include::res/react/index-first.html[]
+include::res/js/index-first.html[]
 ----
 
 The _index.html_ file has to be located in _src/main/resources/templates_.
@@ -41,7 +41,7 @@ To let the root URI point to this _index.html_ file, the mapping to the _index_ 
 
 [source, java]
 ----
-include::res/react/RootUriController.java[]
+include::res/js/RootUriController.java[]
 ----
 
 === Validate
