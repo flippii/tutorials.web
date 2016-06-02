@@ -84,6 +84,22 @@ public interface TodoRepository extends JpaRepository<Todo, Long> {
 
 NOTE: The name of the parameters are irrelevant, but the order of the parameters must fit to the parameters mentioned in the method's name.
 
+=== Creating async queries with @Async
+
+By using the `@org.springframework.scheduling.annotation.Async` annotation it is possible to return a  `Future<T>` or a Java 8 `CompletableFuture<T>`.
+
+[source, java]
+----
+public interface TodoRepository extends CrudRepository<Todo, Long> {
+
+	@Async
+	CompletableFuture<List<Todo>> findBySummaryAsyncJava8(String summary);
+
+	@Async
+	Future<List<Todo>> findBySummaryAsyncBeforeJava8(String summary);
+}
+----
+
 === Using @Query for special SQL queries
 
 The query DSL derived from method signatures is really powerful and easy to handle.
@@ -109,18 +125,3 @@ Because the naming convention is the only thing that really counts, e.g., the `T
 TIP: `Impl` is the default postfix, which can also be changed by using 
 `@EnableJpaRepositories(repositoryImplementationPostfix="Helper")` in the `Config` class
 
-=== Creating async queries with @Async
-
-By using the `@org.springframework.scheduling.annotation.Async` annotation it is possible to return a  `Future<T>` or a Java 8 `CompletableFuture<T>`.
-
-[source, java]
-----
-public interface TodoRepository extends CrudRepository<Todo, Long> {
-
-	@Async
-	CompletableFuture<List<Todo>> findBySummaryAsyncJava8(String summary);
-
-	@Async
-	Future<List<Todo>> findBySummaryAsyncBeforeJava8(String summary);
-}
-----
