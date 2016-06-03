@@ -1,0 +1,30 @@
+== Exercise - Using rest.js
+
+=== Target
+
+In this exercise rest.js, which is a minimalistic rest client for JavaScript, should be used to query the rest endpoints.
+
+=== Configure the rest.js
+
+In rest.js several different interceptors and converter can be configured.
+
+For this example the hal+json mime type is used.
+
+To configure a rest.js instance a _restclient.js_ script is created inside the _static_ directory.
+
+[source, javascript]
+----
+include::res/js/restclient.js[]
+----
+
+This _restclient.js_ script can then be obtained and used in the _app.js_ like this:
+
+[source, javascript]
+----
+include::res/js/app-restclient.js[]
+----
+
+<1> Require the previously specified rest client
+<2> Query a certain path and handle the returning response
+<3> Handle the error case
+

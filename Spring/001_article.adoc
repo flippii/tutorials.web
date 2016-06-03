@@ -23,6 +23,8 @@ include::140_exercise_spring_jpa.adoc[]
 include::150_exercise_spring_data_rest.adoc[]
 include::160_exercise_frontend.adoc[]
 include::170_exercise_npm.adoc[]
+include::180_exercise_webpack_babel.adoc[]
+include::190_exercise_rest.adoc[]
 
 include::008_resourceslocal.adoc[]
 
