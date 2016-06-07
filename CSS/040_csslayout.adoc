@@ -15,4 +15,4 @@ include::examples/layout/styleslayout.css[]
 
 This result in the following layout.
 
-image::img/layout10.gif[]
+image::layout10.gif[]

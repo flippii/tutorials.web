@@ -1,5 +1,9 @@
 = Cascading Style Sheets (CSS) - Tutorial
-:sectnums:
+:linkcss:
+:sectnums:                                                          
+:experimental:
+:icons:
+:imagesdir: ./img
 Lars Vogel and Jennifer Nerlich - https://www.twitter.com[vogella] https://www.twitter.com[jnerlich]
 :keywords: CSS, HTML
 :revdate: 20.05.2016

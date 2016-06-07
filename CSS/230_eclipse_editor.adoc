@@ -11,7 +11,7 @@ First just make sure you have installed the Web Package of Eclipse.
 Otherwise you wont see the Web Content Settings in the Properties page.
 In Eclipse go to Help -> Install New Software ... -> select your Eclipse release software site -> select the Web Package -> Press Next >
 
-image::img/install_web.png[Install Web Package for Eclipse] 
+image::install_web.png[Install Web Package for Eclipse] 
 
 After the installation perform the following steps:
 
@@ -21,6 +21,6 @@ After the installation perform the following steps:
 * Set the CSS Profile value to "CSS3: Cascading Style Sheets, level 3"
 * Click the OK button
 
-image::img/css3_profile.png[CSS3 Profile]
+image::css3_profile.png[CSS3 Profile]
 
 This guide applies for Eclipse releases up to Mars. With Neon M6 the default css profile will be set to CSS3.

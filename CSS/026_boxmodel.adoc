@@ -11,7 +11,7 @@ Margin defines the outer distance of other elements.
 You can set values for top, right, bottom and left.
 
 
-image::img/css-margins.png[Displaying the CSS margin settings] 
+image::css-margins.png[Displaying the CSS margin settings] 
 
 You can define the margins for a box individually or combine them into one statement.
 
