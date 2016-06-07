@@ -12,7 +12,7 @@ include::examples/javascript/javascriptDOM.html[]
 ----
 
 [[javascripthtml_meta]]
-=== Reading META Tags via JavaScript</title>
+=== Reading META Tags via JavaScript
 
 You can use JavaScript to read existing meta tags from the webpage. 
 The following reads the content of the meta tag description from the webpage.
