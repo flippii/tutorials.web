@@ -1,0 +1,21 @@
+
+<!-- this is an absolute link -->
+<a href="http://www.vogella.com"> Java and Eclipse Tutorials </a>
+
+<!-- this is a relativ link to a page in the same directory-->
+<a href="anotherwebpage.html"> Java and Eclipse Tutorials </a>
+
+<!-- this is the same as above-->
+<a href="/anotherwebpage.html"> Java and Eclipse Tutorials </a>
+
+<!-- this is a relativ link to a page on a higher directory-->
+<a href="../page2.html"> Java and Eclipse Tutorials </a>
+
+<!-- This will define a invisible anchor in your document which you can jump to-->
+<a name="top"> This is the place to jump to	 </a>
+
+<!-- if you click this link you will jump to your anchor-->
+<a href="#top"> To the Top </a>
+
+
+

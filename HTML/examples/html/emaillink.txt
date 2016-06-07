@@ -1,0 +1,3 @@
+<a href="mailto:foo@bar.com?Subject=Support%20request">
+	Contact us via email
+</a>

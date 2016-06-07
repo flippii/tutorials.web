@@ -1,0 +1,15 @@
+<section id="geolocation">
+	<title>Geolocation</title>
+	<para>
+		HTML5 supports a geolocation API. For example you can read your
+		currently geolocation and display this postion on a google map via the
+		following code HTML page. 
+	</para>
+
+	<para>
+		<programlisting>
+			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+				parse="text" href="./examples/geolocation/geolocation.html" />
+		</programlisting>
+	</para>
+</section>

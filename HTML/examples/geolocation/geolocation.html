@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript">
+    if (navigator.geolocation) {
+    	navigator.geolocation.getCurrentPosition(function(position) {  
+      		alert("Latitude: " + position.coords.latitude);
+      		alert("Longitude: ' + position.coords.longitude);
+    	});
+      navigator.geolocation.getCurrentPosition(function(position) {  
+        document.location.href =
+          "http://maps.google.com/maps?q=" 
+          + position.coords.latitude + ",+" 
+          + position.coords.longitude
+          + "+(My%20position)&iwloc=A&hl=en";
+      });
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>

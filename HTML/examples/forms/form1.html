@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"> 
+  <title>A form</title>
+ </head>
+ <body>
+ <form action="http://vogellatodo.appspot.com/save.php" method="post">
+ 
+ <!-- Simple text field -->
+ <label for="text">Name </label> 
+ <input type="text" name="input"/>
+ <br/>
+ 
+  <!-- Textarea -->
+ <label for="textarea">Description </label> 
+ <textarea  name="area" cols="50" rows="5">Type your comment here</textarea>
+ <br/>
+ 
+ <!-- Two checkboxes -->
+ <label for="checkbox1">Linux </label> 
+ <input type="checkbox" name="checkbox1" value= "1"/>
+ <br/>
+  
+ <label for="checkbox2">Windows </label> 
+ <input type="checkbox" name="checkbox2" value= "2" checked="checked"/>
+ <br/>
+ 
+ <!-- Radiobutton -->
+ <label for="r1"> Linux </label> 
+ <input type="radio" name="radio" value= "r1"/>
+ <br/>
+  
+ <label for="r2">Windows </label> 
+ <input type="radio" name="radio" value= "r2" checked="checked"/>
+ <br/>
+ 
+  <!-- Select Options -->
+ <select name="Browser">
+ <option selected="selected"> Firefox </option>
+ <option> Internet Explorer</option>
+ <option>Chrome </option>
+ </select>
+  <br/>	
+ 
+ 
+ <input type="submit" name="submit" value="Send Request"/>
+ </form>
+ </body>
+</html>

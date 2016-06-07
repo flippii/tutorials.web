@@ -1,0 +1,4 @@
+
+<a href="www.vogella.com"> 
+	<img src="http://www.vogella.com/img/common/LarsVogelAbout.jpg"  alt="Lars Vogel Picture"/> 
+</a>

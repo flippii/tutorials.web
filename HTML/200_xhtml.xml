@@ -1,0 +1,28 @@
+<section id="xhtml">
+	<title>XHTML</title>
+	<para>
+		XHTML is similar to HTML but much stricter. XHTML defines the
+		following strict requirements:
+
+		• Write all code in lowercase letters
+		•
+		Encase all attribute values in double quotes
+		• Each tag must have an
+		end specified. This is normally
+		done with an ending tag, but a special
+		case allows for
+		non-content tags.
+		<itemizedlist>
+			<listitem><para>Each HTML files must define its doctype    </para>
+			</listitem>
+			<listitem><para>All attribute values must be in double quotes </para>
+			</listitem>
+			<listitem><para>Each tag must have an end specified.     </para>
+			</listitem>
+		</itemizedlist>
+	</para>
+	<para> In HTML5 the MIME-type determines if the HTLM is strict XML or
+		standard HTML. A document served as "text/html" must be a HTML document, and a document served with
+		an XML MIME type such as "application/xhtml+xml" must conform to the
+		requirements of HML.</para>
+</section>

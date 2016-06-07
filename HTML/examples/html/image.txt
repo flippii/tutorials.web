@@ -1,0 +1,4 @@
+
+<p>
+<img src="http://www.vogella.com/img/common/LarsVogelAbout.jpg"  alt="Lars Vogel Picture"/> 
+</p>
