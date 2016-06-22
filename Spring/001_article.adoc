@@ -25,6 +25,7 @@ include::160_exercise_frontend.adoc[]
 include::170_exercise_npm.adoc[]
 include::180_exercise_webpack_babel.adoc[]
 include::190_exercise_rest.adoc[]
+include::200_exercise_react.adoc[]
 
 include::008_resourceslocal.adoc[]
 

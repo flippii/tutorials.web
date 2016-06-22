@@ -40,12 +40,13 @@ TIP: `--save-dev` adds the dependency to the `devDependencies` closure in the _p
 The following packages should be added:
 
 <1> react (use --save)
-<2> rest (use --save)
-<3> babel-core (use --save-dev)
-<4> babel-loader (use --save-dev)
-<5> babel-preset-es2015 (use --save-dev)
-<6> babel-preset-react (use --save-dev)
-<7> webpack (use --save-dev)
+<2> react-dom (use --save)
+<3> rest (use --save)
+<4> babel-core (use --save-dev)
+<5> babel-loader (use --save-dev)
+<6> babel-preset-es2015 (use --save-dev)
+<7> babel-preset-react (use --save-dev)
+<8> webpack (use --save-dev)
 
 After adding all these packages the contents of the _package.json_ file should look similar to this:
 

@@ -1,0 +1,27 @@
+== Exercise - Creating a UI frontend with react
+
+=== Target
+
+In this exercise a UI frontend with react is created.
+
+=== Using rest.js react to show a list of Todos
+
+In order to make use of react these packages are required:
+
+* const React = require('react');
+* const ReactDOM = require('react-dom');
+
+With the `React.Component` class web components can be defined, which are rendered.
+
+[source, javascript]
+----
+include::res/js/app-react-basic.js[]
+----
+
+When the _app.js_ script has been changed, Webpack needs to be run again so that a new _bundle.js_ file is generated.
+
+=== Validate
+
+Run the Spring application and see the table of Todos.
+
+image::img/react-table.png[]
