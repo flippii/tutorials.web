@@ -11,13 +11,13 @@ To start Jetty, switch on the command line to the installation directory and iss
 
 This starts Jetty on http://localhost:8080/
 
-	<para>
+	
 		<mediaobject>
 			<imageobject>
 				<imagedata fileref="images/jetty10.gif" />
 				
 			</imageobject>
 		</mediaobject>
-	</para>
+	
 	
 To stop Jetty press Ctrl+C. 
