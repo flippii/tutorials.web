@@ -1,0 +1,144 @@
+<section id="javastax">
+	<title>Streaming API for XML (StaX)</title>
+	<section id="javastax_overview">
+		<title>Overview</title>
+		<para>
+			Streaming API for XML, called StaX, is an API for
+			reading
+			and
+			writing XML Documents.
+		</para>
+		<para>
+			StaX is a Pull-Parsing model. Application can take the
+			control
+			over parsing the XML documents by pulling (taking)
+			the events from the
+			parser.
+		</para>
+		<para>
+			The core StaX API falls into two categories and they are
+			listed below.
+			They are
+
+			<itemizedlist>
+				<listitem>
+					<para>Cursor API</para>
+				</listitem>
+				<listitem>
+					<para>Event Iterator API</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+		<para>
+			Applications can use any of these two API for parsing XML
+			documents.
+			The following will focus on the event iterator
+			API as I consider it
+			more convenient to use.
+		</para>
+
+	</section>
+	<section id="javastax_api">
+		<title>Event Iterator API</title>
+		<para>
+			The event iterator API has two main interfaces:
+			XMLEventReader
+			for parsing XML and XMLEventWriter for
+			generating XML.
+		</para>
+	</section>
+
+
+	<section id="javastax_read">
+		<title>XMLEventReader - Read XML Example</title>
+		<para> This example is stored in project "de.vogella.xml.stax.reader".
+		</para>
+		<para>
+			Applications loop over the entire document requesting for
+			the
+			Next Event. The Event Iterator API is implemented on top
+			of the Cursor
+			API.
+		</para>
+
+		<para>
+			In this example we will read the following XML document and
+			create objects from it.
+		</para>
+		<para>
+			<programlisting language="xml">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/staxread/config.xml" />
+			</programlisting>
+		</para>
+		<para> Define therefore the following class to store the individual
+			entries of the XML file.
+		</para>
+		<para>
+			<programlisting language="java">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/staxread/Item.java" />
+			</programlisting>
+		</para>
+		<para>
+			The following reads the XML file and creates a List of object
+			Items from the entries in the XML file.
+		</para>
+
+		<para>
+			<programlisting language="java">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/staxread/StaXParser.java" />
+			</programlisting>
+		</para>
+		<para> You can test the parser via the following test program. Please
+			note that the file <filename>config.xml</filename> must exist in the Java project folder.
+		</para>
+		<para>
+			<programlisting language="java">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/staxread/TestRead.java" />
+			</programlisting>
+		</para>
+	</section>
+
+	<section id="javastax_write">
+		<title>Write XML File Example</title>
+		<para> This example is stored in project "de.vogella.xml.stax.writer".
+		</para>
+		<para>
+			Let's assume you would like to write the following simple XML
+			file.
+		</para>
+		<para>
+			<programlisting language="xml">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/staxwrite/config.xml" />
+			</programlisting>
+		</para>
+		<para>
+			StaX does not provide functionality to automatically format the XML file so you have to add end-of-lines and tab
+			information to
+			your XML file.
+		</para>
+
+		<para>
+			<programlisting language="java">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/staxwrite/StaxWriter.java" />
+			</programlisting>
+		</para>
+		<para> And a little test.</para>
+		<para>
+			<programlisting language="java">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/staxwrite/TestWrite.java" />
+			</programlisting>
+		</para>
+
+		<para>
+			For another (more complex) example of using Stax, please see
+			<ulink url="http://www.vogella.com/tutorials/RSSFeed/article.html"> Reading and creating RSS feeds via Java (with Stax)</ulink>.
+		</para>
+	</section>
+</section>

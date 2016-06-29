@@ -1,0 +1,135 @@
+<section id="xml_overview">
+	<title>XML Introduction</title>
+	<section id="xml_overview_s2a">
+		<title>XML Overview</title>
+		<para>
+			XML is the abbreviation for
+			<wordasword>Extensible Markup Language</wordasword>
+			and is an established data exchange format. XML
+			was defined
+			1998 by
+			the
+			World Wide Web Consortium (W3C).
+		</para>
+		<para>
+			An XML document consists of elements, each element has a
+			start
+			tag, content and an end tag. An XML document must have
+			exactly
+			one root
+			element (i.e., one tag which encloses the
+			remaining tags). XML
+			differentiates between capital and non-capital letters.
+
+		</para>
+		<para>An XML file must be "well-formed".</para>
+		<para>
+			A
+			<wordasword>well-formed</wordasword>
+			XML file must apply to the following conditions:
+			<itemizedlist>
+				<listitem>
+					<para>An XML document always starts with a prolog (see
+						below for an
+						explanation of what a prolog is)
+					</para>
+				</listitem>
+				<listitem>
+					<para>Every opening tag has a closing tag.</para>
+				</listitem>
+				<listitem>
+					<para>All tags are completely nested.</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+
+		<para>
+			An XML file is called
+			<wordasword>valid</wordasword>
+			if it is well-formed and if it is
+			contains a link to an XML schema
+			and
+			is valid according to the schema.
+		</para>
+	</section>
+	<section id="xml_comparisionwithotherformats">
+		<title>Comparison of XML to other formats</title>
+
+		<para>
+			XML has the following characteristics which makes processing it via
+			computer programs relatively easy compared to a binary or
+			unstructured
+			format:
+			<itemizedlist>
+				<listitem>
+					<para>XML is plain text</para>
+				</listitem>
+				<listitem>
+					<para>XML represents data without defining how the data should be
+						displayed
+					</para>
+				</listitem>
+				<listitem>
+					<para>XML can be transformed into other formats via XSL</para>
+				</listitem>
+				<listitem>
+					<para>XML can be easily processed via standard parsers
+					</para>
+				</listitem>
+				<listitem>
+					<para>XML files are hierarchical</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+		<para>On the other side is XML format is relatively verbose, e.g., if
+			data is
+			represented as XML the size of this data is relatively large
+			compared to other formats. In the Internet JSON or binary formats are
+			frequently used to
+			replace XML if the data throughput is important.
+		</para>
+	</section>
+
+	<section id="xml_overview_s2b">
+		<title>XML Example</title>
+		<para>The following is a valid, well-formed XML file.</para>
+		<para>
+			<programlisting language="xml">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/xmlintro/firstxmlfile.txt" />
+			</programlisting>
+		</para>
+	</section>
+
+	<section id="xml_overview_s2c">
+		<title>XML Elements</title>
+		<para>
+			An XML document always starts with a
+			<code>prolog</code>
+			which
+			describes the XML file.
+			This
+			<code>prolog</code>
+			can be minimal, e.g.
+				<![CDATA[ <?xml version="1.0"?> ]]>
+			or can contain other information, e.g. the encoding,
+			e.g.
+				<![CDATA[ <?xml version="1.0" encoding="UTF-8" standalone="yes" ?> ]]>
+		</para>
+		<para>
+			A tag which does not enclose any content is know as an
+			"empty tag".
+			For
+			example:
+
+				<![CDATA[ <flag/> ]]>
+		</para>
+	</section>
+
+	<para>
+		Comments in XML are defined as:
+				<![CDATA[ <! COMMENT> ]]>
+	</para>
+
+
+</section>

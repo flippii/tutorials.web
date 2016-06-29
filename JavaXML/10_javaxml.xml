@@ -1,0 +1,77 @@
+<section id="javaxml">
+	<title>Java XML overview</title>
+	<para>
+		The Java programming language contains several methods for
+		processing and writing XML.
+	</para>
+	<para>Older Java versions supported only the DOM API (Document Object
+		Model) and the SAX (Simple API for XML) API.
+	</para>
+	<para>In DOM you
+		access the XML
+		document over an object tree. DOM can be
+		used to read
+		and write XML
+		files.
+	</para>
+	<para>SAX (Simple API for XML)
+		is a Java API for
+		sequential reading of
+		XML files. SAX can only read XML
+		documents. SAX provides an
+		event driven
+		XML Processing following the
+		Push-Parsing Model, e.g., you register
+		listeners in the
+		form of Handlers to the
+		Parser and these are
+		notified
+		through call-back
+		methods.
+	</para>
+	<para>Both DOM and
+		Sax are older APIs
+		and I recommend not using them anymore.
+	</para>
+	<para> Stax (Streaming API for XML) is an API for
+		reading and writing
+		XML Documents. It was introduced in Java 6.0 and
+		is considered better
+		than SAX
+		and DOM.
+	</para>
+	<para>
+		Java Architecture for XML Binding (
+		<ulink url="http://www.vogella.com/tutorials/JAXB/article.html">JAXB</ulink>
+		) is a Java standard that
+		defines how Java objects are
+		converted to
+		XML
+		and vice versa (specified using a
+		standard set of mappings).
+		JAXB
+		defines a
+		programmer API for reading and
+		writing Java objects to
+		/ from
+		XML
+		documents and a service provider
+		which allows
+		the selection of the
+		JAXB
+		implementation. JAXB applies
+		a lot of defaults
+		thus making reading
+		and
+		writing
+		of XML via Java very easy.
+	</para>
+	<para>
+		The following explains the Stax interface; for an
+		introduction to
+		JAXB,
+		please see
+		<ulink url="http://www.vogella.com/tutorials/JAXB/article.html"> JAXB tutorial</ulink>
+		.
+	</para>
+</section>
