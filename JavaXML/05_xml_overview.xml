@@ -28,19 +28,19 @@
 			<wordasword>well-formed</wordasword>
 			XML file must apply to the following conditions:
 			<itemizedlist>
-				<listitem>
+				*
 					<para>An XML document always starts with a prolog (see
 						below for an
 						explanation of what a prolog is)
 					</para>
-				</listitem>
-				<listitem>
+				
+				*
 					<para>Every opening tag has a closing tag.</para>
-				</listitem>
-				<listitem>
+				
+				*
 					<para>All tags are completely nested.</para>
-				</listitem>
-			</itemizedlist>
+				
+			
 		</para>
 
 		<para>
@@ -61,25 +61,25 @@
 			unstructured
 			format:
 			<itemizedlist>
-				<listitem>
+				*
 					<para>XML is plain text</para>
-				</listitem>
-				<listitem>
+				
+				*
 					<para>XML represents data without defining how the data should be
 						displayed
 					</para>
-				</listitem>
-				<listitem>
+				
+				*
 					<para>XML can be transformed into other formats via XSL</para>
-				</listitem>
-				<listitem>
+				
+				*
 					<para>XML can be easily processed via standard parsers
 					</para>
-				</listitem>
-				<listitem>
+				
+				*
 					<para>XML files are hierarchical</para>
-				</listitem>
-			</itemizedlist>
+				
+			
 		</para>
 		<para>On the other side is XML format is relatively verbose, e.g., if
 			data is

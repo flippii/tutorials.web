@@ -28,8 +28,8 @@
 				with Java. The Java Streaming API for XML (Stax) and the Java XPath
 				library are explained and demonstrated.
 			</para>
-		</abstract>
-	</articleinfo>
+		
+	
 	<?dbhtml-include href="../../web/advertisement/afterTableOfContent"?>
 	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="05_xml_overview.xml" />
 	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="10_javaxml.xml" />

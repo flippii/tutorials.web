@@ -13,13 +13,13 @@
 		case allows for
 		non-content tags.
 		<itemizedlist>
-			<listitem><para>Each HTML files must define its doctype    </para>
-			</listitem>
-			<listitem><para>All attribute values must be in double quotes </para>
-			</listitem>
-			<listitem><para>Each tag must have an end specified.     </para>
-			</listitem>
-		</itemizedlist>
+			*<para>Each HTML files must define its doctype    </para>
+			
+			*<para>All attribute values must be in double quotes </para>
+			
+			*<para>Each tag must have an end specified.     </para>
+			
+		
 	</para>
 	<para> In HTML5 the MIME-type determines if the HTLM is strict XML or
 		standard HTML. A document served as "text/html" must be a HTML document, and a document served with

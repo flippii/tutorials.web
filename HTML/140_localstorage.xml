@@ -5,23 +5,23 @@
 		find:
 
 		<itemizedlist>
-			<listitem>
+			*
 				<para>Web storage/ Local storage: key / Value storage, supported by
 					most recent
 					browsers, no transactions</para>
-			</listitem>
-			<listitem>
+			
+			*
 				<para>WEb SQL Database: Full database in the browser</para>
-			</listitem>
-			<listitem>
+			
+			*
 				<para>IndexedDB: Similar to Web storage but you can index on certain
 					fields </para>
-			</listitem>
-			<listitem>
+			
+			*
 				<para>File API: Allows to store files on the local file system
 				</para>
-			</listitem>
-		</itemizedlist>
+			
+		
 
 	</para>
 

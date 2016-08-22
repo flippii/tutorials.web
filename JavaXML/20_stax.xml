@@ -21,13 +21,13 @@
 			They are
 
 			<itemizedlist>
-				<listitem>
+				*
 					<para>Cursor API</para>
-				</listitem>
-				<listitem>
+				
+				*
 					<para>Event Iterator API</para>
-				</listitem>
-			</itemizedlist>
+				
+			
 		</para>
 		<para>
 			Applications can use any of these two API for parsing XML

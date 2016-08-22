@@ -16,8 +16,8 @@ This starts Jetty on http://localhost:8080/
 			<imageobject>
 				<imagedata fileref="images/jetty10.gif" />
 				
-			</imageobject>
-		</mediaobject>
+			
+		
 	
 	
 To stop Jetty press Ctrl+C. 

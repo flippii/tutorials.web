@@ -26,8 +26,8 @@
 			<title>HTML5</title>
 			<para>This article gives an overview of HTML5 (Hypertext Markup Language Version 5).
 			</para>
-		</abstract>
-	</articleinfo>
+		
+	
 	<?dbhtml-include href="../../web/advertisement/afterTableOfContent"?>
 	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="001_overview.xml" />
 	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="020_elements.xml" />
