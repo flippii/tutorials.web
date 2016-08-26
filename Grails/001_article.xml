@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<article>
+	<articleinfo>
+		<title>Grails Development - Tutorial</title>
+		<author>
+			<firstname>Lars</firstname>
+			<surname>Vogel</surname>
+		</author>
+		<copyright>
+			<year>2008 - 2014</year>
+			<holder>vogella GmbH</holder>
+		</copyright>
+		<pubdate>08.12.2014</pubdate>
+		<releaseinfo>
+			<para>Version 1.1</para>
+		</releaseinfo>
+		
+		<abstract id="abstract">
+			<title>Grails Webapplication</title>
+
+			<para> This article explains how to build a Grails application.
+				This
+				article is based on Java 1.6 and Grails 2.4.4.
+			</para>
+		</abstract>
+	</articleinfo>
+	<?dbhtml-include href="../../web/advertisement/afterTableOfContent"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="010_overview.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="012_whatisgroovy.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="030_installation.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="040_firstgrailsapp.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="044_guestbook.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="046_bootstrapdata.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="050_grailslayout.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="060_grailscreatewar.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="070_grailstest.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="080_eclipse.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../10_Include/support.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="006_resources.xml" />
+	<?dbhtml-include href="../../web/vgwort/Grails"?>
+</article>

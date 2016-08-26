@@ -1,0 +1,67 @@
+<section id="wsexample">
+	<title>Example</title>
+	<section id="wsexample_server">
+		<title>Create the server Java project</title>
+		<para>Create a Java project
+			"de.vogella.webservice.java6.first.provider". Create a package with
+			the same name and then the following class.</para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/WiseQuoteServer.java" />
+			</programlisting>
+		</para>
+		<para>
+			If you start your main program the service should be up and running.
+			<tip>Try to access http://localhost:9191/wisequotes?wsdl via a
+				browser. You should see the WSDL of your server.</tip>
+		</para>
+	</section>
+	<section id="wsexample_clientcode">
+		<para> Create now the client code. Using the console switch to an
+			empty directory and call the wsimport command line tool which is part
+			of the JDK.</para>
+		<para>
+			<tip> the JDK/bin directory needs to be in your path to be able to
+				call wsimport.</tip>
+		</para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/wsdlcreate.txt" />
+			</programlisting>
+		</para>
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/webservice10.gif" />
+					
+				</imageobject>
+			</mediaobject>
+		</para>
+		<para>This call will create an interface with the webservice
+			methods and factory to use the webservice.</para>
+	</section>
+	<section id="wsexample_client">
+		<title>Using the Webservice</title>
+		<para> Create a new Java project
+			"de.vogella.webservice.java6.first.consumer" create a package with
+			the same name, copy the created java classes to your new project /
+			package and adjust the path name.</para>
+		<para> Create a new Java class TestWS.java with the following coding.
+			The code demonstrates how to get the connection directly and how to
+			get the connection with specifying the URL.</para>
+		<para>
+			<tip> Specifying the URL is useful in case you what to use a
+				TCP-monitor to trace the TCP data. In this case you would direct the
+				client to the TCP monitor which would re-direct the TCP data to the
+				server and vice versa.</tip>
+		</para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/TestWS.java" />
+			</programlisting>
+		</para>
+	</section>
+</section>

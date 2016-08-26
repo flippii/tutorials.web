@@ -1,0 +1,86 @@
+<section id="eclipse">
+	<title>Using Eclipse</title>
+	<para> You can also use Eclipse for developing GAE applications via the
+		PyDev plugin.</para>
+
+	<section id="eclipse_pydev">
+		<title>Eclipse and Pydev</title>
+		<para>
+			Please see
+			<ulink url="http://www.vogella.com/tutorials/Python/article.html"> Python Development with Eclipse</ulink>
+			to learn how to install and use Eclipse and Pydev. The remaining
+			focuses on the additional setup to use the GAE.
+		</para>
+	</section>
+	<section id="eclipse_project">
+		<title>Project</title>
+
+		<para>
+			Create a Python project called "de.vogella.gae.python.todo". See
+			<ulink url="http://www.vogella.com/tutorials/Python/article.html"> Python Development with Eclipse</ulink>
+			for how to create a new Pydev / Python project in Eclipse.
+		</para>
+		<para> Use Python version 2.5. Remember that the GAE does currently
+			only support Python version 2.5</para>
+		<para> Copy the content of the directory from the previous example
+			(all your files and directeries): todo.py, app.yam, index.html)into
+			the source folder.</para>
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/eclipse50.gif" />
+					
+				</imageobject>
+			</mediaobject>
+		</para>
+	</section>
+	<section id="eclipse_gaesdk">
+		<title>Make GAE SDK available</title>
+		<para> We need to add the GAE SDK to the pythonpath. Right-click your
+			project and select properties. Select PYTHONPATH and press "Add
+			source folder" in the "External Source Folder". Select the
+			installation directory of the GAE SDK. Also add lib/django,
+			lib/webob
+			and lib/yaml</para>
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/eclipse60.gif" />
+					
+				</imageobject>
+			</mediaobject>
+		</para>
+	</section>
+	<section id="eclipse_run">
+		<title>Run your application</title>
+		<para> You still can use the command line to run your GAE application.
+			But we are now going to configure Eclipse to allow you to run your
+			application directly from Eclipse.</para>
+		<para> Right-click on "todo.py", select Run As -> Run Configuration.
+			Under Main Module maintain the path to dev_appserver.py</para>
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/eclipse70.gif" />
+					
+				</imageobject>
+			</mediaobject>
+		</para>
+		<para> Switch to the argument tab and maintain the full path name of
+			your project as a parameter. Put the parameter in double-quotes.
+		</para>
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/eclipse80.gif" />
+					
+				</imageobject>
+			</mediaobject>
+		</para>
+		<para> Click run to start your application. If you have the console
+			view open (Window -> Show View -> Console) you should see the
+			familiar output of the GAE and be able to open the application in
+			your browser as before.</para>
+	</section>
+	
+</section>

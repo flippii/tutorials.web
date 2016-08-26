@@ -1,0 +1,19 @@
+<section id="memcache">
+	<title>Memcache</title>
+
+	<para> Google provides on the Google App Engine memcache as a caching
+		mechanism. </para>
+	<para>
+		Memcache is a high-performance, distributed memory object caching
+		system, primarily intended for fast access to cached results of
+		datastore queries.
+	</para>
+	<para> Similar to Bigtable it works similar to a map with key and
+		objects. If the memory consumption of memcache is to big then memory
+		will automatically released based on a Last-Recently-Used (LRU)
+		strategy. </para>
+
+	<para> Google provides an API to put something into memcache and to
+		remove something again from memcache.</para>
+
+</section>

@@ -1,0 +1,2 @@
+
+http://your_domain:port/display-name/url-pattern/path_from_rest_class

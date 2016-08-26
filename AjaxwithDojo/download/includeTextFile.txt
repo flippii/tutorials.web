@@ -1,0 +1,17 @@
+<h1> Overview </h1>
+<b>Ajax (Asynchronous JavaScript and XML)</b> describes the
+possibility to communicate with the webserver in the
+backgroundand to update webpage with information from the
+webserver without re-loading the webpage.
+
+<BR> 
+	
+Ajax can improve the usablity of a webpage, e.g. a webpage
+can quickly be displayed while information is still loaded
+from the webserver.
+	
+<BR> 
+
+Ajax is based on the XMLHttpRequest and is considered to by
+a key technology to realise Web 2.0. For detaila on the
+XMLHttpRequest please see the appendix.

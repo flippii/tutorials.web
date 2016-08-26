@@ -1,0 +1,3 @@
+grails create-domain-class com.vogella.grails.guestbook.Feedback
+grails create-domain-class com.vogella.grails.guestbook.User
+grails create-domain-class com.vogella.grails.guestbook.Comment

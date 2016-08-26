@@ -1,0 +1,181 @@
+<section id="jsf">
+	<title>JavaServer Faces - JSF</title>
+	<section id="jsf_overview">
+		<title>What is JSF</title>
+		<para>
+			JavaServer Faces (JSF) is a UI component based Java Web
+			application
+			framework. JSF is serverbased, e.g. the JSF UI components
+			and their
+			state
+			are represented on the server with a defined life cycle
+			of
+			the UI components. JSF  is part of
+			the Java EE standard.
+			</para>
+		<para>
+			A JSF application run in a
+			standard web
+			container, for example
+			<ulink url="http://www.vogella.com/tutorials/ApacheTomcat/article.html">Tomcat</ulink>
+			or
+			<ulink url="http://www.vogella.com/tutorials/Jetty/article.html"> Jetty</ulink>
+			.
+		</para>
+		<para>
+			This articles provides an introduction to JSF using only standard JSF
+			features.
+			For the usage of special Apache Trinidad features please see
+			<ulink url="http://www.vogella.com/tutorials/ApacheMyFaces/article.html"> Apache Myfaces Trinidad with Eclipse - Tutorial</ulink>
+			.
+		</para>
+	</section>
+	<section id="jsf_application">
+		<title>A JSF application</title>
+		<para> A JSF application consists of web pages with JSF UI components.
+			A JSF application requires also some configuration files
+			("faces-config.xml" and
+			<filename>web.xml</filename>). </para>
+		<para>
+			The faces-config.xml defines:
+
+			<itemizedlist>
+				<listitem><para>Managed Bean - the data elements of the JSF
+						application
+						(managed beans and
+						backing
+						beans) Represents a Java class which will
+						be created dynamically
+						during runtime of the JSF application. It
+						can be defined for which
+						scope the bean is valid (Session, Request,
+						Application or none).
+
+						  </para>
+				</listitem>
+				<listitem><para>the navigation
+						between
+						web pages    </para>
+				</listitem>
+				<listitem><para>data validators - Used to check the validity of UI input
+					</para>
+				</listitem>
+				<listitem><para>data converters -Used to translate between UI and model
+					</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+		<para>
+			Managed beans are
+			simple Java objects (POJO's) which are
+			declared
+			in
+			"faces-config.xml"
+			and can be used in an JSF application.
+			For example
+			you can define a
+			Java object "Person". Once you define the
+			object in
+			faces-config.xml
+			you can use the attributes of Person in your
+			JSF UI
+			components, e.g.
+			by binding the value "firstName" of this object
+			to an
+			JSF input
+			field.
+		</para>
+		<para> JSF uses the Unified Expression Language (EL) to bind UI
+			components to object attributes or methods. </para>
+	</section>
+	<section id="jsf_valuebinding">
+		<title>Value and Method Binding</title>
+		<para> In JSF you can access the values of a managed bean via
+			value
+			binding. For value binding the universal Expression
+			Language (EL) is
+			used (to access bean and / or methods). In JSF you
+			do not need to
+			specify the get() or set() method but just the
+			variable name.</para>
+		<para> Method binding can be used to bind a JSF component, e.g. a
+			button to an method of a Java class.</para>
+		<para>
+			<tip> Expression Language statements either start with "${" or with
+				"#{"
+				and end with "}". JSP EL expressions are using the ${...}
+				syntax.
+				These EL expressions are immediately evaluated. JSF EL
+				expressions
+				are of the type #{...}. These are only evaluated when
+				needed (and
+				otherwise stored as strings).</tip>
+		</para>
+	</section>
+	<section id="jsf_prerequisites">
+		<title>Prerequisites to use JSF</title>
+		<para>
+			To use JSF you need:
+			<itemizedlist>
+				<listitem>
+					<para>JSF Implementation (in the form of the JSF jars)</para>
+				</listitem>
+				<listitem>
+					<para>The JSTL tags library</para>
+				</listitem>
+				<listitem>
+					<para>A Java runtime environment</para>
+				</listitem>
+				<listitem>
+					<para>A web-container to use JSF in (for example Tomcat)</para>
+				</listitem>
+
+			</itemizedlist>
+		</para>
+
+	</section>
+
+	<section id="jsf_mainfeatures">
+		<title>JSF Main features</title>
+		<para>
+			JSP has the following main features:
+			<itemizedlist>
+				<listitem>
+					<para>JSP is based on the Model-View-Controller concept</para>
+				</listitem>
+				<listitem>
+					<para>JSP has a stateful UI component model, e.g. each component is
+						aware of its data</para>
+				</listitem>
+				<listitem>
+					<para>JSF separates the functionality of a component from the
+						display of the component. The renderer is responsible of
+						displaying the component for a certain client. This renderer can
+						get
+						exchanged. The
+						standard
+						renderer for JSF components is the HTML
+						renderer.</para>
+				</listitem>
+				<listitem>
+					<para>JSP support listeners on UI components</para>
+				</listitem>
+				<listitem>
+					<para>JSP support data validation, data binding and data conversion
+						between the UI and the model</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+	</section>
+	<section id="jsf_jsp">
+		<title>JSP and JSF</title>
+		<para> In this tutorial the JSF application will be build based on
+			JavaServer Pages (JSP's). JSTL tags are used to include JSF UI
+			components into the
+			JSP. This is standard in JSF 1.2. The JSF 2.0
+			version is
+			using
+			Facelets. </para>
+	</section>
+
+</section>

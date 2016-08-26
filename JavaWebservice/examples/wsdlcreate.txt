@@ -1,0 +1,2 @@
+
+wsimport -keep http://localhost:9191/wisequotes?wsdl

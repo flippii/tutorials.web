@@ -1,0 +1,2 @@
+
+projectCreator -eclipse de.vogella.gwt.helloworld -out c:\temp\tempDir

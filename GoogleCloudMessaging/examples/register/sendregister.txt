@@ -1,0 +1,7 @@
+
+public void register(View view) {
+	Intent intent = new Intent("com.google.android.c2dm.intent.REGISTER");
+	intent.putExtra("app",PendingIntent.getBroadcast(this, 0, new Intent(), 0));
+	intent.putExtra("sender", "youruser@gmail.com");
+	startService(intent);
+}

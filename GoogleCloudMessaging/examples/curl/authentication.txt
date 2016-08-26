@@ -1,0 +1,4 @@
+
+curl https://www.google.com/accounts/ClientLogin -d 
+	Email=your_user -d "Passwd=your_password" -d accountType=GOOGLE 
+	-d source=Google-cURL-Example -d service=ac2dm

@@ -1,101 +1,101 @@
 <section id="htmlelements">
-	<title>HTML Standard Elements</title>
-	<para>
+	<title>HTML Standard Elements
+	
 		The following defines standard HTML elements. If you want to try out
 		these
 		elements, take the example of your first webpage and place the
 		new
 		tags between the <![CDATA[ <body> </body> ]]>
 		tag. Save your file and re-load your browser to see the result.
-	</para>
+	
 	<section id="htmlelements_blocks">
-		<title>Blocks and structural elements</title>
-		<para><![CDATA[ <p> </p> ]]>
+		<title>Blocks and structural elements
+		<![CDATA[ <p> </p> ]]>
 			describes a paragraph and <![CDATA[ <h1> </h1> ]]>
 			a headline. You have six headlines available from  <![CDATA[ <h1> </h1> ]]>
 			to <![CDATA[ <h6> </h6> ]]>.
-		</para>
-		<para> <![CDATA[ <br/> ]]>
+		
+		 <![CDATA[ <br/> ]]>
 			describes a line break. Please note that this tag is directly closed
 			via the slash at the end. <![CDATA[ <br> </br> ]]>
 			is incorrect. <![CDATA[ <hr/> ]]>
 			inserts a line into the text.
-		</para>
+		
 	</section>
 	<section id="htmlelements_tags">
-		<title>HTML Links</title>
-		<para> The following describes a link in HTML. The attribute "href"
+		<title>HTML Links
+		 The following describes a link in HTML. The attribute "href"
 			defines the target
 			of the link. A link can be absolute or relativ to
 			the existing
 			webpage.
-		</para>
+		
 
-		<para>
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
 					parse="text" href="./examples/html/anchor.txt" />
 			</programlisting>
-		</para>
+		
 
-		<para> The following listing contains a link which displays a image.
-		</para>
-		<para>
+		 The following listing contains a link which displays a image.
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
 					parse="text" href="./examples/html/imagelink.txt" />
 			</programlisting>
-		</para>
-		<para> The following example shows how to create a link for an email.
-		</para>
-		<para>
+		
+		 The following example shows how to create a link for an email.
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
 					parse="text" href="./examples/html/emaillink.txt" />
 			</programlisting>
-		</para>
+		
 		
 	</section>
 	<section id="htmlelements_list">
-		<title>Lists</title>
-		<para> HTML supports ordered and unordered lists. </para>
-		<para>
+		<title>Lists
+		 HTML supports ordered and unordered lists. 
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
 					parse="text" href="./examples/html/lists.txt" />
 			</programlisting>
-		</para>
+		
 	</section>
 	<section id="htmlelements_table">
-		<title>Tables</title>
-		<para>
+		<title>Tables
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
 					parse="text" href="./examples/html/table.txt" />
 			</programlisting>
-		</para>
+		
 	</section>
 	<section id="htmlelements_image">
-		<title>Image</title>
-		<para>Images should have the "alt" tag defined and can optionally
+		<title>Image
+		Images should have the "alt" tag defined and can optionally
 			definde a width and a height.
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
 					parse="text" href="./examples/html/image.txt" />
 			</programlisting>
-		</para>
+		
 	</section>
 
 	<section id="htmlelements_specialsigns">
-		<title>Special signs</title>
-		<para> Use the following special signs to display them in your
+		<title>Special signs
+		 Use the following special signs to display them in your
 			webpage.
-		</para>
+		
 
 		<table frame='all'>
-			<title>Special signs</title>
+			<title>Special signs
 			<tgroup cols='2' align='left' colsep='1' rowsep='1'>
 				<colspec colname='c1' />
 				<colspec colname='c2' />

@@ -1,41 +1,41 @@
 <section id="javaxpath">
-	<title>XPath</title>
+	<title>XPath
 	<section id="javaxpath_a">
-		<title>Overview</title>
-		<para>
+		<title>Overview
+		
 			XPath (XML Path Language) is a language for selecting /
 			searching nodes from an XML document.
 			Java 5 introduced the javax.xml.xpath package which provides a XPath library.
-		</para>
-		<para>
+		
+		
 			The following explains how to use XPath to query an XML
 			document via Java.
-		</para>
+		
 	</section>
 	<section id="javaxpath_b">
-		<title>Using XPath</title>
-		<para>
+		<title>Using XPath
+		
 			The following explains how to use XPath. Create a new Java
 			project called <wordasword>UsingXPath</wordasword>.
-		</para>
-		<para>Create the following xml file.</para>
-		<para>
+		
+		Create the following xml file.
+		
 			<programlisting language="xml">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
 					parse="text" href="./examples/xpath/person.xml" />
 			</programlisting>
-		</para>
-		<para>
+		
+		
 			Create a new package "myxml" and a new Java class
 			"QueryXML".
-		</para>
 		
-		<para>
+		
+		
 			<programlisting language="java">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
 					parse="text" href="./examples/xpath/QueryXML.java" />
 			</programlisting>
-		</para>
+		
 	</section>
 
 

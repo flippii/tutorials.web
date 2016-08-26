@@ -1,0 +1,56 @@
+<section id="dojoclientside">
+	<title>Your first Dojo pages</title>
+	<section id="dojoclientside_table">
+		<title>Table handling</title>
+		<para>
+			In your directory "web" create a
+			table.html
+			file with the following content.
+		</para>
+		<para>
+			<tip>
+				The following uses the dojo cascading style sheets
+				(css). If you
+				want to overwrite any of these style can
+				assume that you also include
+				another style sheet after
+				the dojo css include and overwrite any
+				style you like.
+			</tip>
+		</para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/closeopenheader.html" />
+			</programlisting>
+		</para>
+		<para>
+			Load the created webpage in a browser. You get a table with
+			can
+			be minimized and maximized again.
+		</para>
+
+		<para>
+			This example shows the same table but is closed by default
+		</para>
+
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/closeopenheader2.html" />
+			</programlisting>
+		</para>
+	</section>
+	<section id="dojoclientside_s2b">
+		<title>Tooltip</title>
+		<para>This HTML file uses a tooltip on one element.</para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/tooltip.html" />
+			</programlisting>
+		</para>
+	</section>
+
+
+</section>

@@ -1,0 +1,43 @@
+<section id="jerseyprojectsetup">
+	<title>Installation of Jersey</title>
+	<section id="jerseyprojectsetup_manual">
+		<title>Manual setup of Jersey libraries in an Eclipse project</title>
+		<para>
+			Download the Jersey distribution as zip file from the
+			<ulink url="https://jersey.java.net/download.html">Jersey download site</ulink>
+			.
+		</para>
+
+		<para>
+			The zip contains the Jersey implementation JAR and its
+			core
+			dependencies. It does
+			not provide
+			dependencies for third
+			party JARs
+			beyond those for
+			JSON support
+			and JavaDoc.
+		</para>
+		<para>
+			Copy all JARs from your Jersey download into the
+			<filename class="directory">WEB-INF/lib</filename>
+			folder.
+		</para>
+
+
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/jerseryfirst40.png" />
+				</imageobject>
+			</mediaobject>
+		</para>
+
+
+	</section>
+	<section id="jerseyprojectsetup_gradle">
+		<title>Required setup for Gradle with Eclipse web projects</title>
+		<para>TODO...</para>
+	</section>
+</section>

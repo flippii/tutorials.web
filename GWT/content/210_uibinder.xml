@@ -1,0 +1,85 @@
+<section id="uibinder">
+	<title>UIBinder</title>
+	<para> UIBinder allows to design GWT UI's declarative via XML. </para>
+	<para> Create a new GWT project "de.vogella.gwt.uibinder" with the
+		package
+		"de.vogella.gwt.uibinder". </para>
+	<para> To use UIBinder you also need to inherit from
+		"com.google.gwt.uibinder.UiBinder" in your "gwt.xml" file.</para>
+	<para>
+		<programlisting>
+			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+				parse="text" href="../examples/uibinder/De_vogella_gwt_uibinder.gwt.xml" />
+		</programlisting>
+	</para>
+
+	<para> In your client package create the file
+		"HelloWidgetWorld.ui.xml".</para>
+
+
+	<para>
+		<programlisting>
+			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+				parse="text" href="../examples/uibinder/HelloWidgetWorld.ui.xml" />
+		</programlisting>
+	</para>
+	<para> Create the following class which uses the xml file for building
+		actions. By convention the name of the xml must equal to the class
+		name
+		+ "ui.xml". </para>
+
+	<para>
+		<programlisting>
+			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+				parse="text" href="../examples/uibinder/HelloWidgetWorld.java" />
+		</programlisting>
+	</para>
+
+	<para> Create also in the client package the file "MyHTMLTable.ui.xml"
+		This creates a
+		HTML Panel which allow us to layout the UI controls
+		nicely. </para>
+
+
+	<para>
+		<programlisting>
+			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+				parse="text" href="../examples/uibinder/MyHTMLTable.ui.xml" />
+		</programlisting>
+	</para>
+	<para> Create the corresponding "MyHTMLTable.java" file. </para>
+
+	<para>
+		<programlisting>
+			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+				parse="text" href="../examples/uibinder/MyHTMLTable.java" />
+		</programlisting>
+	</para>
+	<para> In your entry point you can now load the class as an composite.
+	</para>
+
+	<para>
+		<programlisting>
+			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+				parse="text" href="../examples/uibinder/De_vogella_gwt_uibinder.java" />
+		</programlisting>
+	</para>
+	<para>Change the <filename>web.xml</filename> to the following.</para>
+	<para>
+		<programlisting>
+			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+				parse="text" href="../examples/uibinder/web.xml" />
+		</programlisting>
+	</para>
+	<para> The result should look like the following. </para>
+
+	<para>
+		<mediaobject>
+			<imageobject>
+				<imagedata fileref="images/uibinder10.gif" />
+				
+			</imageobject>
+		</mediaobject>
+	</para>
+
+</section>

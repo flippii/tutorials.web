@@ -1,20 +1,20 @@
 <section id="canvas">
-	<title>Canvas</title>
-	<para>HTML5
+	<title>Canvas
+	HTML5
 		introduces the <![CDATA[ <canvas> </canvas> ]]>
 		element which is a black element on which you can draw in real time
 		via JavaScript. Canvas has the advantages that as it is part of the
 		HTML specification all browser will support it directly without the
 		need to install a plugin. Currently canvas only supports 2D rendering
 		but 3D rendering is planned for the future.
-	</para>
-	<para> Create for example the following page which draws on the canvas
-		a rectangle. </para>
+	
+	 Create for example the following page which draws on the canvas
+		a rectangle. 
 
-	<para>
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
 				parse="text" href="./examples/canvas/canvas.html" />
 		</programlisting>
-	</para>
+	
 </section>

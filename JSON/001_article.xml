@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <article>
 	<articleinfo>
-		<title>What is JSON? - Tutorial</title>
+		<title>What is JSON? - Tutorial
 		<author>
 			<firstname>Lars</firstname>
 			<surname>Vogel </surname>
@@ -17,16 +17,16 @@
 		<pubdate>04.12.2014</pubdate>
 
 		<releaseinfo>
-			<para>Version 1.4</para>
+			Version 1.4
 		</releaseinfo>
 
 		
 
 		<abstract id="abstract">
-			<title>JSON</title>
-			<para>
+			<title>JSON
+			
 				This article explains JSON, the JavaScript Object Notification.
-			</para>
+			
 
 		
 	

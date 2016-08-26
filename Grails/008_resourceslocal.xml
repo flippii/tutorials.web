@@ -1,0 +1,33 @@
+<section id="resources_grails">
+        <title>Grails links</title>
+        <para>
+            <ulink url="http://grails.codehaus.org">
+                Grails Homepage</ulink>
+        </para>
+        <para>
+            <ulink url="http://groovy.codehaus.org">
+                Groovy Homepage</ulink>
+        </para>
+        <para>
+            <ulink url="http://www.grails.org/Tutorials">
+                List of Grails tutorials</ulink>
+        </para>
+        <para>
+            <ulink url="http://www.vogella.com/tutorials/Groovy/article.html">
+                Groovy tutorials</ulink>
+        </para>
+        <para>
+            <ulink url="http://www.grails.org/Tutorials">
+                List of Grails tutorials</ulink>
+        </para>
+        <para>
+            <ulink url="http://www.vogella.com/tutorials/Jetty/article.html">
+                Tutorial about the Jetty webserver</ulink>
+        </para>
+        <para>
+            <ulink url="http://www.vogella.com/tutorials/ApacheTomcat/article.html">
+                Tutorial about the Apache Tomcat webserver</ulink>
+        </para>
+        
+        
+    </section>

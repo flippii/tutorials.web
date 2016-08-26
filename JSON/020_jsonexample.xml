@@ -1,6 +1,6 @@
 <section id="json_example">
-	<title>Example of an JSON </title>
-	<para>
+	<title>Example of an JSON 
+	
 		An JSON object is a set of key / value pairs
 		which starts
 		with "{"
@@ -8,24 +8,24 @@
 		ends
 		with
 		"}".
-	</para>
-	<para>
+	
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
 				parse="text" href="./examples/json/person.txt" />
 		</programlisting>
-	</para>
-	<para>
+	
+	
 		Lists are one or more values surrounded
 		by [] and
 		separated by
 		",".
-	</para>
-	<para>
+	
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
 				parse="text" href="./examples/json/persons.txt" />
 		</programlisting>
-	</para>
+	
 
 </section>

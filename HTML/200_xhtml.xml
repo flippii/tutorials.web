@@ -1,6 +1,6 @@
 <section id="xhtml">
-	<title>XHTML</title>
-	<para>
+	<title>XHTML
+	
 		XHTML is similar to HTML but much stricter. XHTML defines the
 		following strict requirements:
 
@@ -13,16 +13,16 @@
 		case allows for
 		non-content tags.
 		<itemizedlist>
-			*<para>Each HTML files must define its doctype    </para>
+			*Each HTML files must define its doctype    
 			
-			*<para>All attribute values must be in double quotes </para>
+			*All attribute values must be in double quotes 
 			
-			*<para>Each tag must have an end specified.     </para>
+			*Each tag must have an end specified.     
 			
 		
-	</para>
-	<para> In HTML5 the MIME-type determines if the HTLM is strict XML or
+	
+	 In HTML5 the MIME-type determines if the HTLM is strict XML or
 		standard HTML. A document served as "text/html" must be a HTML document, and a document served with
 		an XML MIME type such as "application/xhtml+xml" must conform to the
-		requirements of HML.</para>
+		requirements of HML.
 </section>

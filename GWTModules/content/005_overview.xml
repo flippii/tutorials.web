@@ -1,0 +1,12 @@
+<section id="overview">
+	<title>Google Web Toolkit</title>
+	<para>
+		For an introduction in
+		<ulink url="http://www.vogella.com/tutorials/GWT/article.html"> GWT</ulink>
+		please see
+		<ulink url="http://www.vogella.com/tutorials/GWT/article.html"> GWT tutorial.</ulink>
+		. The following describes how to use external jars or Java projects
+		within your GWT project.
+	</para>
+
+</section>

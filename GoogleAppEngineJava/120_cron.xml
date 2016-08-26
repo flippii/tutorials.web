@@ -1,0 +1,34 @@
+<section id="cron">
+	<title>Cron jobs</title>
+	<para> You can define cron jobs in your application. Via a cron job on
+		th AppEngine you
+		can access a URL according to a time pattern which is
+		defined similar to the cron jobs on Unix. You define your cron jobs in
+		a file "cron.xml" in the <filename>WEB-INF</filename>
+		folder of you application. 
+	</para>
+	<para>
+		<programlisting>
+			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+				parse="text" href="./examples/cron/cron.xml" />
+		</programlisting>
+	</para>
+
+	<para> This cron job will call the local website /count every minute.
+	</para>
+
+	<para> You can check you cron jobs in the admin console. </para>
+
+	<para>
+		<mediaobject>
+			<imageobject>
+				<imagedata fileref="images/cron10.gif" />
+				
+			</imageobject>
+		</mediaobject>
+	</para>
+	<para>
+		<tip>Please note that you should avoid running unnecessary cron jobs
+			as this increases the load of the AppEngine. </tip>
+	</para>
+</section>

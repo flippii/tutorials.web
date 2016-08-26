@@ -1,0 +1,22 @@
+
+.label {
+	color: #15428b;
+	font: normal 12px tahoma, arial, helvetica, sans-serif;
+	border: 1px solid #99bbe8;
+	padding: 10px;
+}
+
+.gwt-Button {
+	height: 1.7em;
+	margin-bottom: 5px;
+	padding-bottom: 3px;
+	font-size: 12px;
+	font-family: arial, sans-serif;
+}
+
+.headerpane {
+	padding-left: 5px;
+	background-color: #e3dede;
+	font-size: 12px;
+	font-family: arial, sans-serif;
+}

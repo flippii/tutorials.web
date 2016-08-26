@@ -1,0 +1,137 @@
+<section id="c2dmapp">
+	<title>Tutorial: Create your C2DM enabled application</title>
+	<section id="example_project">
+		<title>Project and Layout</title>
+		<para>
+			Create the Android project
+			"de.vogella.android.c2dm.simpleclient" with
+			the
+			activity
+			"C2DMClientActivity". Create the following layout
+			<filename>main.xml</filename>
+			.
+		</para>
+
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/first/main.xml" />
+			</programlisting>
+		</para>
+		<para> Also create the layout "activity_result.xml" which we will use
+			in our result activities.
+		</para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/first/activity_result.xml" />
+			</programlisting>
+		</para>
+	</section>
+
+	<section id="example_manifest">
+		<title>Create receivers and activities</title>
+
+		<para> Create the following class "C2DMReceiverReceiver" and
+			"C2DMMessageReceiver" which we will later
+			registers as receivers for
+			the registration intent and the message intent.
+		</para>
+
+
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/first/C2DMRegistrationReceiver.java" />
+			</programlisting>
+		</para>
+
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/first/C2DMMessageReceiver.java" />
+			</programlisting>
+		</para>
+		<para> Also create the following two Activities which we will use to
+			see the results.
+		</para>
+
+
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/first/RegistrationResultActivity.java" />
+			</programlisting>
+		</para>
+
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/first/MessageReceivedActivity.java" />
+			</programlisting>
+		</para>
+
+		<para>
+			Create the following
+			<filename>AndroidManifest.xml</filename>
+			file. That will register
+			the Intent Receivers, Activities and requests
+			the required
+			permissions.
+		</para>
+
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/first/AndroidManifest.xml" />
+			</programlisting>
+		</para>
+		<para> Change your "C2DMClientActivity" class to the following.
+		</para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/first/C2DMClientActivity.java" />
+			</programlisting>
+		</para>
+		<para> The methods in the activity are connected to the buttons via
+			the onclick property of the buttons. The first button
+			triggers a
+			request for a registration ID and the second button shows the
+			saved
+			registration key. Both also write the registration id also to the
+			Logcat View.
+		</para>
+		<para>
+			Copy the registration Id from the Logcat View so that you can
+			later use it in your server implementation.
+		</para>
+	</section>
+	<section id="example_register">
+		<title>Register your application</title>
+
+		<para>Run your application, maintain your registered user and press
+			the button. Check LogCat for the registration ID.
+		</para>
+		<para>
+			If you see the following message:
+		</para>
+		<para>
+			<programlisting language="java">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/snippets/message.txt" />
+			</programlisting>
+		</para>
+
+
+
+		<para>
+			make
+			sure you are using a Google device and that you have a
+			Google
+			user
+			registered on the device.
+		</para>
+	</section>
+
+</section>

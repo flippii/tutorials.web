@@ -1,0 +1,106 @@
+<section id="firstgrails">
+	<title>Exercise: Create Grails web application</title>
+	<section id="firstgrails_target">
+		<title>Target</title>
+		<para>We want to develop a guestbook application, in this exercise see
+			start with the intial template.
+		</para>
+	</section>
+
+	<section id="firstgrails_create">
+		<title>Create your application</title>
+		<para>
+			Let's create the application with the name
+			<code>com.vogella.grails.guestbook</code>
+			. The name of the application is used for the URL on which
+			the
+			application will later run and the WAR file which will be later
+			created.
+		</para>
+		<para>
+			Create a new directory that will
+			contain your Grails
+			application.
+			Open a
+			command shell, switch to this
+			new
+			directory and
+			type in the
+			following
+			command.
+		</para>
+		<para>
+			<programlisting language="bourne">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/firstgrails/create-app.txt" />
+			</programlisting>
+		</para>
+		<para>
+			After a little while the command line tells you that the
+			application was
+			generated.
+		</para>
+		<para>
+			This command creates the directory structure and the base
+			configuration of your new web application.
+		</para>
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/firstgrailsapplication10.png"
+						scale="40" />
+				</imageobject>
+			</mediaobject>
+		</para>
+		<para>
+			This created already a full web application.
+		</para>
+	</section>
+
+	<section id="firstgrails_run">
+		<title>Run your application</title>
+		<para>
+			The created application can already run. In the shell switch
+			into your
+			directory
+			<filename class="directory">com.vogella.grails.guestbook</filename>
+			.
+			You can then start
+			your
+			application with the following
+			command.
+		</para>
+		<para>
+			<programlisting language="Bourne">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/firstgrails/grailsrun.txt" />
+			</programlisting>
+		</para>
+		<para>
+			This should start
+			the Grails internal web container and you
+			should
+			receive the message
+			"Server running. Browse to
+			http://localhost:8080/com.vogella.grails.guestbook".
+			Open a browser
+			and
+			open the URL
+		</para>
+		<para>
+			<ulink url="http://localhost:8080/com.vogella.grails.guestbook">
+				http://localhost:8080/com.vogella.grails.guestbook
+			</ulink>
+		</para>
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/firstgrailsapplication20.png"
+						scale="40" />
+				</imageobject>
+			</mediaobject>
+		</para>
+		<para> Congratulations to your first running Grails application!
+		</para>
+	</section>
+</section>

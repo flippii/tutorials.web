@@ -1,0 +1,20 @@
+<section id="installation">
+	<title>Installation</title>
+	<para>
+		Download and install Python 2.5.2. This is the version that runs on
+		the Google App Engine and should therefore be used.
+		<ulink url="http://www.python.org/download/releases/2.5.2/"> http://www.python.org/download/releases/2.5.2/</ulink>
+	</para>
+
+	<para>
+		Download the Python version of the Google App Engine from
+
+		<ulink url="http://code.google.com/intl/en/appengine/downloads.html"> Download Site for the GAE</ulink>
+		.
+
+		The main page for the GAE is
+		<ulink url="http://code.google.com/intl/en/appengine/"> http://code.google.com/intl/en/appengine/</ulink>
+	</para>
+	<para> On the main page you need to created an account if you have not
+		yet done so.</para>
+</section>

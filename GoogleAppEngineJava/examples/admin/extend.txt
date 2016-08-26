@@ -1,0 +1,4 @@
+
+<admin-console>
+		<page name="Static List" url="/static.html" />
+</admin-console>

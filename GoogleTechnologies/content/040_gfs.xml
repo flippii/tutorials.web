@@ -1,0 +1,12 @@
+<section id="gfs">
+	<title>Google File System</title>
+	<para>
+		Google has the GFS, a distributed, multi-gigabyte files. This file
+		system is described
+		<ulink url="http://labs.google.com/papers/gfs.html">Google File System Whitepaper</ulink>
+		.
+	</para>
+	<para> GFS does not handle the replication between different data
+		centers. </para>
+
+</section>

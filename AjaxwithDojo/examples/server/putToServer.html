@@ -1,0 +1,41 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<script type="text/javascript" src="dojoroot/dojo/dojo.js"
+	djConfig="parseOnLoad: true, isDebug: false">
+</script>
+
+
+<script type="text/javascript">
+    function sendDataToServer() { // 
+      dojo.xhrGet( { // 
+        // The following URL must match that used to test the server.
+        url: "http://www.vogella.com/tutorials/AjaxwithDojo/download/includeTextFile.txt", 
+        handleAs: "text",
+
+        timeout: 5000, // Time in milliseconds
+
+        // The LOAD function will be called on a successful response.
+        load: function(response, ioArgs) { //
+          dojo.byId("replace").innerHTML = response; // 
+          return response; // 
+        },
+
+        // The ERROR function will be called in an error case.
+        error: function(response, ioArgs) { // 
+          console.error("HTTP status code: ", ioArgs.xhr.status); //
+          dojo.byId("replace").innerHTML = 'Loading the ressource from the server did not work'; //  
+          return response; // 
+          }
+        });
+      }
+  </script>
+  <script type="text/javascript">
+    dojo.addOnLoad(readFile); 
+  </script>
+</head>
+<body>
+<div id="replace" style="font-size: big"></div>
+</body>
+</html>

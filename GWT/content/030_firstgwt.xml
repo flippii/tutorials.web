@@ -1,0 +1,161 @@
+<section id="firstgwt">
+	<title>Create your first GWT application</title>
+	<para> The following is a description of the usage of the Google
+	 plug-in to create a new GWT application. plugin.</para>
+	<section id="firstgwt_project">
+		<title>Project</title>
+		<para>
+			Select File > New > Web Application Project. Enter the name
+			"de.vogella.gwt.helloworld" for your project and the java package.
+			Only select "Use Google Web
+			Toolkit", as we will not use the
+			<ulink
+				url="http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html">
+				Google App Engine</ulink>
+			in this tutorial.
+		</para>
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/gwt10.gif" />
+				</imageobject>
+			</mediaobject>
+		</para>
+
+
+
+		<para>
+			<tip>
+				Unfortunately the Google Plugin does not allow to create a new Web
+				Application Project without creating template files. The template
+				files are nice for the first try but annoying if you want to start
+				from scratch with a new GWT application. Please stare / vote for bug
+				<ulink
+					url="http://code.google.com/p/googleappengine/issues/detail?id=1547">
+					Issue 1547</ulink>
+				to get this solved.
+			</tip>
+		</para>
+		<para> Delete all java files under the package "client" and "server".
+		</para>
+	</section>
+	<section id="firstgwt_entrypoint">
+		<title>GWT entry point</title>
+		<para>Create the following
+			Java class "HelloGwt" in the
+			"de.vogella.gwt.helloworld.client" package.
+		</para>
+		<para>
+			<programlisting language="java">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/firstgwt/HelloGwt.java" />
+			</programlisting>
+		</para>
+		<para> Create the file
+			"De_vogella_gwt_helloworld.gwt.xml" in package
+			"de.vogella.gwt.helloworld" to the following.</para>
+		<para>
+			<programlisting language="xml">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/firstgwt/De_vogella_gwt_helloworld.gwt.xml" />
+			</programlisting>
+		</para>
+		<para> This file defines your entry point to your application. In GWT
+			the entry point is similar to the main method in Java.</para>
+	</section>
+	<section id="firstgwt_html">
+		<title>HTML page</title>
+		<para> In the folder "war" you should find a folder with the
+			file "De_vogella_gwt_helloworld.html". Change this file to the
+			following.</para>
+		<para>
+			<programlisting language="html">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/firstgwt/De_vogella_gwt_helloworld.html" />
+			</programlisting>
+		</para>
+		<para>
+			<tip> Please note that the HTML files point to the generated
+				JavaScript file in the script tag. If you are using a different project
+				name, you need to adjust the path. </tip>
+		</para>
+	</section>
+	<section id="firstgwt_webxml">
+		<title>web.xml</title>
+		<para> The Google Plugin created also a web.xml and placed a
+			reference
+			to a servlet (which we deleted). Change the web.xml to the
+			following.
+		</para>
+		<para>
+			<programlisting language="xml">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/firstgwt/web.xml" />
+			</programlisting>
+		</para>
+	</section>
+
+	<section id="firstgwt_css">
+		<title>Modify CSS</title>
+		<para> Change the CSS of our application. In
+			folder war you find a file
+			"De_vogella_gwt_helloworld.css". Change it
+			to the following.</para>
+		<para>
+			<programlisting language="css">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/firstgwt/De_vogella_gwt_helloworld.css" />
+			</programlisting>
+		</para>
+
+		<para>
+			<tip> The css file is referred to by the HTML page.</tip>
+		</para>
+		<para>
+			<tip>
+				You can assign a certain style to your GWT UI elements by using the
+				"setStyleName"-Method as shown below.
+				<programlisting language="xml">
+					<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+						parse="text" href="../examples/firstgwt/HelloGwtStyles.java" />
+				</programlisting>
+			</tip>
+		</para>
+	</section>
+
+	<section id="firstgwt_run">
+		<title>Run</title>
+		<para> To run your application right-click the project and select Run
+			As -> "Web application".</para>
+		<para> This opens a new view "Development Mode. Copy the url from this
+			view.</para>
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/gwt20.gif" />
+				</imageobject>
+			</mediaobject>
+		</para>
+
+		<para> Paste this url in your browser and install the required plug-in (is necessary).</para>
+
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/gwt24.gif" />
+				</imageobject>
+			</mediaobject>
+		</para>
+		<para>The result should look like this:</para>
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/gwt30.gif" />
+				</imageobject>
+			</mediaobject>
+		</para>
+		<para>Congratulations! You created your first GWT
+			application.</para>
+	</section>
+
+</section>

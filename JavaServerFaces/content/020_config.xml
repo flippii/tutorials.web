@@ -1,0 +1,52 @@
+<section id="jsfconfig">
+	<title>JSF configuration files</title>
+	<section id="jsfconfig_overview">
+		<title>Overview</title>
+		<para>
+			JSF is based on the following configuration files:
+			<itemizedlist>
+				<listitem><para>web.xml - General web application configuration file</para>
+				</listitem>
+				<listitem>
+					<para>faces-config.xml - Contains the configuration
+						of the JSF
+						application.</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+
+	</section>
+	<section id="jsfconfig_webxml">
+		<title>web.xml</title>
+		<para>
+			JSF requires the central
+			configuration list <filename>web.xml</filename> in the
+			directory WEB-INF of the
+			application. This is similar to other
+			web-applications which are based on
+			servlets.
+		</para>
+		<para>
+			You must specify in <filename>web.xml</filename> that a
+			"FacesServlet" is
+			responsible for handling JSF applications.
+			"FacesServlet" is the
+			central controller for the JSF
+			application.
+
+			"FacesServlet" receives all
+			requests for the JSF
+			application and
+			initializes the JSF
+			components
+			before the JSP is displayed. 
+		</para>
+	</section>
+	<section id="jsfconfig_facesconfigxml">
+		<title>faces-config.xml</title>
+		<para>
+			"faces-config.xml" allows to configure the application, managed
+			beans, convertors, validators, and navigation.
+		</para>
+	</section>
+</section>

@@ -1,0 +1,192 @@
+<section id="restjersey">
+	<title>JAX-RS with Jersey</title>
+	<section id="jaxrs_intro">
+		<title>JAX-RS</title>
+		<para>
+			Java defines REST support via the
+			<wordasword>Java Specification Request (JSR)</wordasword>
+			311. This specification is called
+			JAX-RS (The Java API for
+			RESTful
+			Web
+			Services).
+			JAX-RS uses annotations
+			to define the REST relevance of
+			Java
+			classes.
+		</para>
+	</section>
+	<section id="jersey_intro">
+		<title>Jersey</title>
+		<para>
+			<wordasword>Jersey</wordasword>
+			is the reference
+			implementation for the JSR 311 specification.
+		</para>
+
+		<para>
+
+			The
+			Jersey implementation provides a library to implement Restful
+			webservices in a Java servlet container.
+		</para>
+		<para>
+			On the server side Jersey provides a servlet implementation which
+			scans predefined
+			classes to identify RESTful resources.
+			In your
+			<filename>web.xml</filename>
+			configuration file your register this servlet for your web
+			application.
+		</para>
+		<para>
+			The Jersey implementation also provides a client
+			library to
+			communicate with
+			a RESTful webservice.
+		</para>
+
+		<para>
+			The base
+			URL
+			of this servlet is:
+		</para>
+		<para>
+			<programlisting language="text">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/path/path.txt" />
+			</programlisting>
+		</para>
+		<para>
+			This servlet analyzes the incoming HTTP request and
+			selects
+			the
+			correct class and method to respond to this request. This
+			selection
+			is
+			based on annotations in the class and methods.
+		</para>
+		<para>
+			A REST web application consists, therefore, out of data classes
+			(resources)
+			and
+			services. These two types are typically maintained in
+			different
+			packages as the Jersey servlet will be instructed via the
+			<filename>web.xml</filename>
+			to
+			scan certain packages for data classes.
+		</para>
+
+		<para>
+			JAX-RS
+			supports the creation of XML and JSON via
+			the Java
+			Architecture for
+			XML Binding (JAXB).
+		</para>
+	</section>
+
+	<section id="restjersey_annotations">
+		<title>JAX-RS annotations</title>
+		<para>
+			The most important
+			annotations in JAX-RS are listed in the following
+			table.
+			<table frame='all'>
+				<title>JAX-RS annotations</title>
+				<tgroup cols='2' align='left' colsep='1' rowsep='1'>
+					<colspec colname='c1' />
+					<colspec colname='c2' />
+					<thead>
+						<row>
+							<entry>Annotation</entry>
+							<entry>Description</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry>@PATH(your_path)</entry>
+							<entry>
+								Sets the path to base URL + /your_path. The base URL is
+								based on
+								your application name, the servlet and the URL pattern
+								from the
+								<filename>web.xml</filename>
+								configuration file.
+							</entry>
+						</row>
+						<row>
+							<entry>@POST</entry>
+							<entry>
+								Indicates that the following method will answer to an HTTP
+								POST
+								request.
+							</entry>
+						</row>
+						<row>
+							<entry>@GET</entry>
+							<entry>
+								Indicates that the following method will answer to an HTTP
+								GET
+								request.
+							</entry>
+						</row>
+						<row>
+							<entry>@PUT</entry>
+							<entry>
+								Indicates that the following method will answer to an HTTP
+								PUT
+								request.
+							</entry>
+						</row>
+						<row>
+							<entry>@DELETE</entry>
+							<entry>
+								Indicates that the following method will answer to an HTTP
+								DELETE
+								request.
+							</entry>
+						</row>
+						<row>
+							<entry>@Produces(MediaType.TEXT_PLAIN[, more-types])</entry>
+							<entry>
+								@Produces defines which MIME type is delivered by a method
+								annotated with @GET. In the example text ("text/plain") is
+								produced. Other examples would be "application/xml" or
+								"application/json".
+							</entry>
+						</row>
+						<row>
+							<entry>@Consumes(type[, more-types])</entry>
+							<entry>
+								@Consumes defines which MIME type is consumed by this
+								method.
+							</entry>
+						</row>
+						<row>
+							<entry>@PathParam</entry>
+							<entry>
+								Used to inject values from the URL into a method
+								parameter.
+								This way you inject, for example, the ID of a resource
+								into the method to get the correct object.
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</para>   
+		<para>
+			The complete path to a resource is based on the base
+			URL and the
+			@PATh annotation in your class.
+		</para>
+		<para>
+			<programlisting language="text">
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/path/path1.txt" />
+			</programlisting>
+		</para>
+	</section>
+</section>

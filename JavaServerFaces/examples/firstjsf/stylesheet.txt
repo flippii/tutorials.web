@@ -1,0 +1,2 @@
+
+<LINK href="<%=request.getContextPath()%>/css/mystyle.css" rel="stylesheet" type="text/css">

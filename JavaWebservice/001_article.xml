@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<article>
+	<articleinfo>
+		<title>Webservices with Java 1.6 - Tutorial</title>
+		<author>
+			<firstname>Lars</firstname>
+			<surname>Vogel</surname>
+			<affiliation>
+				<address>
+					<email>lars.vogel@vogella.com</email>
+				</address>
+			</affiliation>
+		</author>
+		<copyright>
+			<year>2008</year>
+			<holder role="mailto:lars.vogel@vogella.com"> Lars Vogel</holder>
+		</copyright>
+		<pubdate>23.11.2008</pubdate>
+		<releaseinfo>
+			<para>Version 0.1</para>
+		</releaseinfo>
+		<abstract id="abstract">
+			<title>Abstract</title>
+			<para> This article describes how to create a simple SOAP webservice
+				with standard Java 1.6.</para>
+		</abstract>
+	</articleinfo>
+	<?dbhtml-include href="../../web/advertisement/afterTableOfContent"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/10_overview.xml" />
+	<?dbhtml-include href="../../web/advertisement/inBetween01"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/20_example.xml" />
+	<?dbhtml-include href="../../web/advertisement/beforeSupport"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../10_Include/support.xml" />
+	<?dbhtml-include href="../../web/advertisement/afterSupport"?>	
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="resources.xml" />
+	<?dbhtml-include href="../../web/vgwort/JavaWebservice"?>
+</article>

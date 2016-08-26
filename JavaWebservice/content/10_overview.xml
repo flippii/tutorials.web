@@ -1,0 +1,29 @@
+<section id="javawebservice">
+	<title>Webservices with standard Java</title>
+	<section id="javawebservice_overview">
+		<title>Overview</title>
+		<para> Java 1.6 introduced the possibility to create standard SOAP
+			webservices with the standard JDK.</para>
+	</section>
+	<section id="javawebservice_process">
+		<title>Process</title>
+		<para>
+			To use standard Java for creating a webservice you
+			<itemizedlist>
+				<listitem>
+					<para>create a standard java class</para>
+				</listitem>
+				<listitem>
+					<para>use annotations to describe the class as a webservice
+					</para>
+				</listitem>
+				<listitem>
+					<para>run a command line tool to create the WSDL</para>
+				</listitem>
+				<listitem>
+					<para>you run the class for example via a main program</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+	</section>
+</section>

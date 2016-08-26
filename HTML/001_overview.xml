@@ -1,8 +1,8 @@
 <section id="html_overview">
-	<title>HTML5</title>
+	<title>HTML5
 	<section id="overview_what">
-		<title>What is HTML?</title>
-		<para>
+		<title>What is HTML?
+		
 			HTML (Hypertext Markup Language) is a standard to describe the
 			content of webpages. HTML pages are
 			text files which typically end
@@ -10,15 +10,15 @@
 			the ".html" extension. HTML is a
 			<wordasword>markup language</wordasword>
 			.
-		</para>
-		<para>
+		
+		
 			The
 			current version of HTML is HTML5. HTML5
 			supports XML syntax.
 			This tutorial uses the HTML5 XML syntax.
-		</para>
+		
 
-		<para>
+		
 			In HTML you describe the
 			content in pure text, by
 			defining
@@ -40,20 +40,20 @@
 			placed between the <![CDATA[ <body> </body> ]]>
 			tags, the <![CDATA[ <head> </head> ]]>
 			tag contains general information about the webpage.
-		</para>
+		
 	</section>
 	<section id="overview_css">
-		<title>CSS</title>
-		<para>
+		<title>CSS
+		
 			HTML by ifself does not define a lot of display options. You use
 			<ulink url="http://www.vogella.com/tutorials/CSS/article.html"> CSS</ulink>
 			to define how HTML element should be displayed.
-		</para>
+		
 
 	</section>
 	<section id="overview_structure">
-		<title>A structured example</title>
-		<para>
+		<title>A structured example
+		
 			HTML5 introduced several new ways of classifying content of the
 			webpage, e.g., <![CDATA[ <nav> </nav> ]]>
 			for the navigation part of the page, <![CDATA[ <article> </article> ]]>
@@ -61,29 +61,29 @@
 			to represent a sidebar with related information.<![CDATA[ <footer> </footer> ]]>
 			for a footer in the HTML page and <![CDATA[ <address> </address> ]]>
 			for the contact information of the author.
-		</para>
-		<para>
+		
+		
 			The following displays an example which uses these new
 			elements. Most
 			browser will not change the display based on them but
 			you can use
 			<ulink url="http://www.vogella.com/tutorials/CSS/article.html"> CSS</ulink>
 			to select these elements and style them accordingly.
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
 					parse="text" href="./examples/structure/example.html" />
 			</programlisting>
-		</para>
+		
 	</section>
 	<section id="overview_validators">
-		<title>HTML validators</title>
-		<para>
+		<title>HTML validators
+		
 			You can use
 			<ulink url="http://validator.w3.org/"> http://validator.w3.org/</ulink>
 			to check the validity of your HTML code.
-		</para>
+		
 	</section>
 
 </section>

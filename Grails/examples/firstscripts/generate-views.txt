@@ -1,0 +1,3 @@
+grails generate-views com.vogella.grails.guestbook.Feedback
+grails generate-views com.vogella.grails.guestbook.User
+grails generate-views com.vogella.grails.guestbook.Comment

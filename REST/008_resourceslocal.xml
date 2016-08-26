@@ -1,0 +1,14 @@
+<section id="resources_rest">
+	<title>Rest Resources</title>
+	<para>
+		<ulink url="http://jersey.java.net/">Jersey Homepage</ulink>
+	</para>
+
+	<para>
+		<ulink url="http://jcp.org/aboutJava/communityprocess/final/jsr311/index.html">JSR 311</ulink>
+	</para>
+
+	<para>
+		<ulink url="http://www.vogella.com/tutorials/JAXB/article.html"> JAXB tutorial</ulink>
+	</para>
+</section>

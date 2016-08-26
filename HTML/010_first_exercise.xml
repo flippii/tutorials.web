@@ -1,6 +1,6 @@
 	<section id="exercise_firsthtml">
-		<title>Exercise: Create HTML page</title>
-		<para> HTML
+		<title>Exercise: Create HTML page
+		 HTML
 			files needs to be plain text. Use a simple text editor,
 			e.g., Notepad under Windows and save
 			the following text as
@@ -10,27 +10,27 @@
 			additional information in the file.
 			Create
 			the following text.
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
 					parse="text" href="./examples/example.html" />
 			</programlisting>
-		</para>
+		
 
-		<para>Open this page in a browser, e.g., by
+		Open this page in a browser, e.g., by
 			double-clicking on your
 			page.
 			The result should look like the following.
-		</para>
+		
 
-		<para>
+		
 			<mediaobject>
 				<imageobject>
 					<imagedata fileref="images/html10.gif" />
 
 				
 			
-		</para>
+		
 
 </section>

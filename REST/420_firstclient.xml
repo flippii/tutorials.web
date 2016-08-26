@@ -1,0 +1,23 @@
+<section id="firstclient">
+	<title>Create a REST client</title>
+	<para>
+		Jersey contains a REST client library which can be used for
+		testing or
+		to build a real client in Java. The usage of this library is demonstrated in the following tutorial.
+	</para>
+	<para>
+		Create a new Java project
+		<wordasword>com.vogella.jersey.first.client</wordasword>
+		and add the
+		Jersey JARs to the project and the project build path.
+		Create the
+		following test class.
+	</para>
+	<para>
+		<programlisting language="java">
+			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+				parse="text" href="./examples/test/Test.java" />
+		</programlisting>
+	</para>
+
+</section>

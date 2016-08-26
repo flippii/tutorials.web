@@ -1,34 +1,34 @@
 <section id="localstorage">
-	<title>Local storage</title>
-	<para>
+	<title>Local storage
+	
 		HTML5 supports local storage of data to work offline. Currently you
 		find:
 
 		<itemizedlist>
 			*
-				<para>Web storage/ Local storage: key / Value storage, supported by
+				Web storage/ Local storage: key / Value storage, supported by
 					most recent
-					browsers, no transactions</para>
+					browsers, no transactions
 			
 			*
-				<para>WEb SQL Database: Full database in the browser</para>
+				WEb SQL Database: Full database in the browser
 			
 			*
-				<para>IndexedDB: Similar to Web storage but you can index on certain
-					fields </para>
+				IndexedDB: Similar to Web storage but you can index on certain
+					fields 
 			
 			*
-				<para>File API: Allows to store files on the local file system
-				</para>
+				File API: Allows to store files on the local file system
+				
 			
 		
 
-	</para>
+	
 
-	<para>
+	
 		Currently it is recommended to use local storage as it has the largest
 		support. For an example see
 		<ulink url="http://www.html5rocks.com/tutorials/offline/takingappoffline/">
 			http://www.html5rocks.com/tutorials/offline/takingappoffline/</ulink>
-	</para>
+	
 </section>

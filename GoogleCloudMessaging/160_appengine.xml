@@ -1,0 +1,38 @@
+<section id="tutorial_serverapp">
+	<title>Tutorial: Create your server ;-) application</title>
+	<para> As described earlier the application server needs to get an
+		authentication key via HTTPS. Afterwards it can send messages to
+		the device via HTTP by supplying the authentication key and the
+		registration ID.
+	</para>
+	<para>
+		To avoid that you have to learn about
+		<ulink url="http://www.vogella.com/tutorials/EclipseWTP/article.html"> server side Java programming</ulink>
+		we will "simulate" the server by another Android application. In
+		general you could create a server side application for example with
+		the
+		<ulink
+			url="http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html">Google App Engine</ulink>
+		.
+	</para>
+	<para> Create a new Android application
+		"de.vogella.android.c2dm.server" with the Activity "ServerSimulator".
+		Assign the permission "android.permission.INTERNET" to this activity.
+	</para>
+	<para>Change <filename>main.xml</filename> to the following. </para>
+	<para>
+		<programlisting>
+			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+				parse="text" href="./examples/server/main.xml" />
+		</programlisting>
+	</para>
+	<para> Change "ServerSimulator" to the following. Make your to use
+		your registration key, your user and your password.
+	</para>
+	<para>
+		<programlisting>
+			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+				parse="text" href="./examples/server/ServerSimulator.java" />
+		</programlisting>
+	</para>
+</section>

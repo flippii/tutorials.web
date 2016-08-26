@@ -1,0 +1,28 @@
+<section id="installation">
+	<title>Installation</title>
+	<section id="installation_eclipse">
+		<title>Eclipse</title>
+		<para>
+			For JSP development you need the Eclipse WTP and an installed Tomcat.
+			See
+			<ulink url="http://www.vogella.com/tutorials/EclipseWTP/article.html"> Installation of Eclipse WTP and Tomcat</ulink>
+			.
+		</para>
+	</section>
+	<section id="installation_jsf">
+		<title>JSF library</title>
+		<para>
+			A JSF library is required. We will later use Eclipse to download and install the Apache
+			MyFaces JSF
+			implementation during project creation. 
+		</para>
+	</section>
+	<section id="installation_jslt">
+		<title>JSLT library</title>
+		<para>
+			Download the JSLT library from
+			<ulink url="https://jstl.dev.java.net/"> https://jstl.dev.java.net/</ulink>
+			.
+		</para>
+	</section>
+</section>

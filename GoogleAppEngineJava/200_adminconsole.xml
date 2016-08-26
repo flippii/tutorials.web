@@ -1,0 +1,63 @@
+<section id="adminconsole">
+	<title>Admin Console</title>
+	<section id="adminconsole_overview">
+		<title>Overview</title>
+		<para>The Admin Console provides you with a lot of information about
+			your application. For example you can acces the data stored in the
+			datastore or look at the log files of your application. 
+		</para>
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/log10.gif" />
+					
+				</imageobject>
+			</mediaobject>
+		</para>
+
+		<para>
+			You can also use standard Java Logging for creating custom logs on
+			the
+			GAE/J. See
+			<ulink url="http://www.vogella.com/tutorials/Logging/article.html"> Java Logging Tutorial</ulink>
+			and
+			<ulink
+				url="http://code.google.com/appengine/docs/java/runtime.html#Logging"> Logging on the GAE/J</ulink>
+			.
+		</para>
+	</section>
+
+
+	<section id="adminconsole_extend">
+		<title>Extend the Admin Console</title>
+		<para> You can also extend the admin console with own pages. Create
+			the following entry in "appengine-web.xml". </para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/admin/extend.txt" />
+			</programlisting>
+		</para>
+
+		<para> We will just use a static HTML for the example. Create the
+			following file in the <filename>WEB-INF</filename> folder. </para>
+
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="./examples/admin/static.html" />
+			</programlisting>
+		</para>
+		<para> If you redeploy your application you have another entry in your
+			Admin console. </para>
+		<para>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="images/admin20.gif" />
+					
+				</imageobject>
+			</mediaobject>
+		</para>
+	</section>
+
+</section>

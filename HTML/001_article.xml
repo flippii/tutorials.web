@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <article>
 	<articleinfo>
-		<title>Introduction to HTML - Tutorial</title>
+		<title>Introduction to HTML - Tutorial
 		<author>
 			<firstname>Lars</firstname>
 			<surname>Vogel</surname>
@@ -19,13 +19,13 @@
 		</copyright>
 		<pubdate>08.01.2016</pubdate>
 		<releaseinfo>
-			<para>Version 1.8</para>
+			Version 1.8
 		</releaseinfo>
 		
 		<abstract id="abstract">
-			<title>HTML5</title>
-			<para>This article gives an overview of HTML5 (Hypertext Markup Language Version 5).
-			</para>
+			<title>HTML5
+			This article gives an overview of HTML5 (Hypertext Markup Language Version 5).
+			
 		
 	
 	<?dbhtml-include href="../../web/advertisement/afterTableOfContent"?>

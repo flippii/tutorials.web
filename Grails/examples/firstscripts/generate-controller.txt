@@ -1,0 +1,3 @@
+grails generate-controller com.vogella.grails.guestbook.Feedback
+grails generate-controller com.vogella.grails.guestbook.User
+grails generate-controller com.vogella.grails.guestbook.Comment

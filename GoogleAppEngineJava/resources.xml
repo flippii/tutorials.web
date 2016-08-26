@@ -1,0 +1,24 @@
+<section id="resources">
+	<title>Links and Literature</title>
+	<section id="links">
+		<title>Google App Engine Links</title>
+		<para>
+			<ulink url="http://www.vogella.com/tutorials/GoogleAppEngine/article.html">
+				http://www.vogella.com/tutorials/GoogleAppEngine/article.html</ulink>
+			Google App Engine Development with Python
+		</para>
+		<para>
+			<ulink url="http://code.google.com/intl/en/appengine"> Google App Engine</ulink>
+		</para>
+
+		<para>
+			<ulink url="http://code.google.com/p/googleappengine/issues"> Google App Engine Issues</ulink>
+
+		</para>
+		<para>
+			<ulink url="http://groups.google.com/group/google-appengine">Google Discussion Group for Google App Engine</ulink>
+		</para>
+
+	</section>
+		<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../10_Include/resources.xml" />
+</section>

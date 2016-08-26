@@ -1,0 +1,72 @@
+<section id="dojoserver">
+	<title>Accessing the server</title>
+	<section id="dojoserver_s2a">
+		<title>Reading a fixed file from a server</title>
+		<para>
+			Dojo allows you to read data from the server. The following
+			HTML page will connect the server and asynchronously load
+			the content from the web server. In this example the loaded
+			content is a static text page.
+		</para>
+		
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/server/readServer.html" />
+			</programlisting>
+		</para>
+		<para>
+			<tip>
+				This example may not be running on a local file system.
+				If you do not see something try to replace the URL
+				http://www.vogella.com/tutorials/AjaxwithDojo/download/includeTextFile.txt
+				with a path to a local file. This should then also work
+				with a local running HTML page.
+			</tip>
+		</para>
+		<para>
+			Start the HTML. The Dojo javascript will access the text
+			file in the background and update the webpage with the
+			information once the text file is read.
+		</para>
+		<para>
+			Welcome to the world of Ajax! You successfully loaded a
+			content from a website and included the response into your
+			existing HTML page.
+
+		</para>
+	</section>
+
+	<section id="dojoserver_s2b">
+		<title>Send data to the server and update the page with the response</title>
+		<para>
+			Now you need a build a server side application. I'm going to
+			use Java Servlets for this but you can use any other
+			language on the server you like, e.g. Perl, PHP, etc.
+		</para>
+		<para>
+			Create the following Java servlet, compile it and deploy it
+			to your server. I'm going to assume that the servlet will be
+			running on the URL yourhomepage/servlets/ReturnParameters.
+		</para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/server/ReturnParameters.java" />
+			</programlisting>
+		</para>
+		<para>
+			Now create the following HTML page which calls the servlet
+			with two parameters and displays the result at a certain
+			place in the application.
+		</para>
+
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/server/paratoServlet.html" />
+			</programlisting>
+		</para>
+
+	</section>
+</section>

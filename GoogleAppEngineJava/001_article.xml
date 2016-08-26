@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<article>
+	<articleinfo>
+		<title>Google App Engine for Java - Tutorial</title>
+		<author>
+			<firstname>Lars</firstname>
+			<surname>Vogel</surname>
+		</author>
+		<copyright>
+			<year>2009</year>
+			<year>2010</year>
+			<year>2011</year>
+			<year>2012</year>
+			<year>2013</year>
+			<year>2014</year>
+			<holder>vogella GmbH</holder>
+		</copyright>
+		<pubdate>01.08.2014</pubdate>
+		<releaseinfo>
+			<para>Version 2.7</para>
+		</releaseinfo>
+		
+		<abstract id="abstract">
+			<title>Google App Engine and JPA</title>
+			<para> This article describes the creation of a Java web application
+				on the Google App Engine. It uses JPA. The tutorial is based on Java
+				1.7, Eclipse
+				4.4 and GAE
+				version 1.4.2.
+			</para>
+		</abstract>
+	</articleinfo>
+	<?dbhtml-include href="../../web/advertisement/afterTableOfContent"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="010_overview.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+		href="../10_Include/Google/20_gwt_gae_install.xml" />
+	<?dbhtml-include href="../../web/advertisement/inBetween01"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="030_register.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="040_creatingapps.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="050_persistence.xml" />
+	<?dbhtml-include href="../../web/advertisement/inBetween02"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="060_todo.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="100_email.xml" />
+	<?dbhtml-include href="../../web/advertisement/inBetween03"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="120_cron.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="140_logging.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="200_adminconsole.xml" />
+	<?dbhtml-include href="../../web/advertisement/beforeSupport"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../10_Include/support.xml" />	
+	<?dbhtml-include href="../../web/advertisement/afterSupport"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="resources.xml" />
+	<?dbhtml-include href="../../web/vgwort/GoogleAppEngineJava"?>
+</article>

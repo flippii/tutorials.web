@@ -1,0 +1,4 @@
+
+curl --header "Authorization: GoogleLogin auth=your_authenticationid" 
+	"https://android.apis.google.com/c2dm/send" -d registration_id=your_registration 
+	-d "data.payload=payload" -d collapse_key=0

@@ -1,0 +1,2 @@
+
+applicationCreator -eclipse de.vogella.gwt.helloworld de.vogella.gwt.helloworld.client.HelloGwt -out c:\temp\tempDir

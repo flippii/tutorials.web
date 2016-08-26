@@ -1,0 +1,4 @@
+
+log.info("Your information log message");
+log.warning("Your warning log message");
+log.severe("Your severe log message");

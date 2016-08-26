@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<article>
+	<articleinfo>
+		<title>REST with Java (JAX-RS) using Jersey - Tutorial</title>
+		<author>
+			<firstname>Lars</firstname>
+			<surname>Vogel</surname>
+		</author>
+		<copyright>
+			<year>2009</year>
+			<year>2010</year>
+			<year>2011</year>
+			<year>2012</year>
+			<year>2013</year>
+			<year>2014</year>
+			<year>2015</year>
+			<holder>vogella GmbH</holder>
+		</copyright>
+		<pubdate>15.12.2015</pubdate>
+		<releaseinfo>
+			<para>Version 2.5</para>
+		</releaseinfo>
+
+		<abstract id="abstract">
+			<title>RESTful web services with Java (Jersey / JAX-RS)</title>
+			<para>
+				This tutorial explains how to develop RESTful web services in
+				Java
+				with the JAX-RS reference implementation
+				Jersey.
+			</para>
+			<para>
+				In this tutorial Eclipse 4.5 (Mars), Java 1.8, Tomcat 6.0 and
+				JAX-RS 2.0
+				(with Jersey
+				2.11) is used.
+			</para>
+		</abstract>
+	</articleinfo>
+	<?dbhtml-include href="../../web/advertisement/afterTableOfContent"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="010_overview.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="020_jaxrsjersey.xml" />
+	<?dbhtml-include href="../../web/advertisement/inBetween01"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="300_installation.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="310_webcontainer.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="320_prerequisites.xml" />
+	<?dbhtml-include href="../../web/advertisement/inBetween02"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="400_first.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="420_firstclient.xml" />
+	<?dbhtml-include href="../../web/advertisement/inBetween03"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="420_jaxb.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="500_crud.xml" />
+	<?dbhtml-include href="../../web/advertisement/beforeSupport"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../10_Include/support.xml" />	
+	<?dbhtml-include href="../../web/advertisement/afterSupport"?>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="006_resources.xml" />
+	<?dbhtml-include href="../../web/vgwort/REST"?>
+</article>
