@@ -109,7 +109,7 @@
 				expressions
 				are of the type #{...}. These are only evaluated when
 				needed (and
-				otherwise stored as strings).</tip>
+				otherwise stored as strings).
 		</para>
 	</section>
 	<section id="jsf_prerequisites">

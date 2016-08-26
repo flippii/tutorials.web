@@ -47,7 +47,7 @@
 		<tip>
 			At least for me the configuration dialog showed an error. I did
 			ignore this error and the re-compiled project did not show errors.
-		</tip>
+		
 	</para>
 	<para>
 		A tighter integration of Grails is achieved by the

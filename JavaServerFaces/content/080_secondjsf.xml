@@ -22,7 +22,7 @@
 		<para>
 			<tip> Please note that we are hard-coding that only user tester with
 				password tester can login.
-			</tip>
+			
 		</para>
 		<para> Create the following class.</para>
 		<para>
@@ -35,7 +35,7 @@
 			<tip> The class Card contains currently some controller code. The
 				next chapter will demonstrate how to keep your model code clean and
 				how to use controllers directly.
-			</tip>
+			
 		</para>
 	</section>
 	<section id="secondjsf_managedbeans">
@@ -236,7 +236,7 @@
 			<tip> The user bean return the String success. In the navigation rule
 				you now defined that if we receive "success" then we should be going
 				to the next page.
-			</tip>
+			
 		</para>
 		<para>
 			<mediaobject>
@@ -258,7 +258,7 @@
 		<para>
 			<tip> Remember that we are hard-coding that only user "tester" with
 				password "tester" can login. Try another user this should not work.
-			</tip>
+			
 		</para>
 		<para> You should be able to login with the right user and move to the
 			next page.

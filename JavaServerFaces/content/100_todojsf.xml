@@ -58,7 +58,7 @@
 		</para>
 		<para>
 			<tip> Using the Facet tag you can create a header for a dataTable
-				component.</tip>
+				component.
 		</para>
 		<para> You have added a actionListener. This can call a method which
 			can receive an object of type ActionEvent. actionListeners are nice

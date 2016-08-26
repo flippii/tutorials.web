@@ -8,7 +8,7 @@
 		application logic.</para>
 	<para>
 		<tip> In general it is considered as a good design practice to keep
-			the model independently from the application logic.</tip>
+			the model independently from the application logic.
 	</para>
 	<para>This example will also demonstrate the usage of dependency
 		injection in JSF.</para>

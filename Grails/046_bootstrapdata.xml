@@ -63,7 +63,7 @@
 			<tip>
 				Remove the bootstrapped entries as you will otherwise get errors
 				as the system tries to create the same entries again.
-			</tip>
+			
 		</para>
 	</section>
 
@@ -91,7 +91,7 @@
 				<property>JAVA_HOME</property>
 				points to
 				the JDK and not JRE. The JDK is required for this step.
-			</tip>
+			
 		</para>
 		<para>
 			Remove

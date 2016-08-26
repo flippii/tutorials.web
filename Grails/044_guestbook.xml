@@ -116,7 +116,7 @@
 				<code>lastUpdated</code>
 				are also known by Grails
 				and will be filled automatically.
-			</tip>
+			
 		</para>
 
 		<para>
@@ -129,7 +129,7 @@
 							parse="text" href="./examples/firstgrails/grailsclean.txt" />
 					</programlisting>
 				</para>
-			</tip>
+			
 		</para>
 	</section>
 

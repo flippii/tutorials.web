@@ -88,7 +88,7 @@
 		<para>
 			<tip>Email notification does not work in the local version. This
 				feature is only available after the upload to the Google cloud.
-			</tip>
+			
 		</para>
 		<para> Create the file "todo.py" with the following content. Study the
 			source code; I tried to document it well in the hope that it is
@@ -106,7 +106,7 @@
 		<para>
 			<tip> This uses the Django template language. See the appendix for an
 				weblink for the Django template language.
-			</tip>
+			
 		</para>
 		<para>
 			<programlisting>
@@ -146,12 +146,12 @@
 		<para>
 			<tip> You can edit your python source code and just refresh the
 				browser to see the updates.
-			</tip>
+			
 		</para>
 		<para>
 			<tip>To stop the server press Ctrl+Break on Windows, Unix and Linux
 				using the standard Ctrl+C.
-			</tip>
+			
 		</para>
 	</section>
 	<section id="app_python_clean">

@@ -28,7 +28,7 @@
 				to the JDK and not the JRE. The JDK
 				is required to develop with
 				Grails.
-			</note>
+			
 		</para>
 		<para>Test your installation by opening a command line and running the
 			following command.

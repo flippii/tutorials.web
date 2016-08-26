@@ -92,7 +92,7 @@
 		</para>
 		<para>
 			<tip>This interface needs to be available on the client side,
-				therefore it must be placed in the client package.</tip>
+				therefore it must be placed in the client package.
 		</para>
 		<para> GWT uses asynchronous communication therefore you also need to
 			create the asynchronous version of this interface. The name of this
@@ -107,7 +107,7 @@
 		<para>
 			<tip>The implementation of this asynchronous interface will be
 				automatically
-				created by the GWT compiler.</tip>
+				created by the GWT compiler.
 		</para>
 	</section>
 	<section id="server_service">
@@ -162,7 +162,7 @@
 				you call your server your GWT application will continue and at some
 				undefined point in time it will receive the data from the server.
 				Make sure that you do not assume in your code that the call to the
-				server is finished.</tip>
+				server is finished.
 		</para>
 		<para> Create the following class.</para>
 		<para>

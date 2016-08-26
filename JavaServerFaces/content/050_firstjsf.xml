@@ -111,7 +111,7 @@
 		<para>
 			<tip> To add the JSF settings to an existing dynamic web project,
 				right-click on your project, select Project Properties -> Project
-				Facets and add then JSF facet to your project.</tip>
+				Facets and add then JSF facet to your project.
 		</para>
 	</section>
 	<section id="firstjsf_model">
@@ -190,7 +190,7 @@
 			<tip>
 				All JSF tag must be always be enclosed in a <![CDATA[<f:view> ]]>
 				tag.
-			</tip>
+			
 		</para>
 	</section>
 	<section id="firstjsf_run">

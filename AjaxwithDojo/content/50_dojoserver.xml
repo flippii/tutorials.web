@@ -22,7 +22,7 @@
 				http://www.vogella.com/tutorials/AjaxwithDojo/download/includeTextFile.txt
 				with a path to a local file. This should then also work
 				with a local running HTML page.
-			</tip>
+			
 		</para>
 		<para>
 			Start the HTML. The Dojo javascript will access the text

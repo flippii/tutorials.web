@@ -29,6 +29,6 @@
 	</para>
 	<para>
 		<tip>Please note that you should avoid running unnecessary cron jobs
-			as this increases the load of the AppEngine. </tip>
+			as this increases the load of the AppEngine. 
 	</para>
 </section>

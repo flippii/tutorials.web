@@ -14,7 +14,7 @@
 		<para>
 			If you start your main program the service should be up and running.
 			<tip>Try to access http://localhost:9191/wisequotes?wsdl via a
-				browser. You should see the WSDL of your server.</tip>
+				browser. You should see the WSDL of your server.
 		</para>
 	</section>
 	<section id="wsexample_clientcode">
@@ -23,7 +23,7 @@
 			of the JDK.</para>
 		<para>
 			<tip> the JDK/bin directory needs to be in your path to be able to
-				call wsimport.</tip>
+				call wsimport.
 		</para>
 		<para>
 			<programlisting>
@@ -55,7 +55,7 @@
 			<tip> Specifying the URL is useful in case you what to use a
 				TCP-monitor to trace the TCP data. In this case you would direct the
 				client to the TCP monitor which would re-direct the TCP data to the
-				server and vice versa.</tip>
+				server and vice versa.
 		</para>
 		<para>
 			<programlisting>
