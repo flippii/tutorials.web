@@ -1,42 +1,41 @@
 <section id="components">
-	<title>Build your own components</title>
-	<para> GWT allows you to build your own components based on other
+== Build your own components
+	 GWT allows you to build your own components based on other
 		widgets. To do this you extends
 		com.google.gwt.user.client.ui.Composite. These customer components can
-		be used as normal GWT components.</para>
-	<para> Building components is simple, you just offer the API your
+		be used as normal GWT components.
+	 Building components is simple, you just offer the API your
 		component should publish and then you call with each widget the
-		initWidget() method.</para>
-	<para>For example you can create the following component which is a
+		initWidget() method.
+	For example you can create the following component which is a
 		simple header label (I assume you can easily image a more complex
-		example).</para>
-	<para>
+		example).
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/component/Header.java" />
-		</programlisting>
-	</para>
-	<para> Adjust then the GWT module to use this component.</para>
-	<para>
+				parse="text" href="../examples/component/Header.java[]
+----
+	
+	 Adjust then the GWT module to use this component.
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/component/HelloGwt.java" />
-		</programlisting>
-	</para>
-	<para> Adjust the css to make the title look nicer.</para>
-	<para>
+				parse="text" href="../examples/component/HelloGwt.java[]
+----
+	
+	 Adjust the css to make the title look nicer.
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/component/HelloGwt.java" />
-		</programlisting>
-	</para>
-	<para> The result should look like the following.</para>
-	<para>
+				parse="text" href="../examples/component/HelloGwt.java[]
+----
+	
+	 The result should look like the following.
+	
 		<mediaobject>
 			<imageobject>
 				<imagedata fileref="images/component10.gif" />
 				
 			</imageobject>
 		</mediaobject>
-	</para>
-</section>
+	

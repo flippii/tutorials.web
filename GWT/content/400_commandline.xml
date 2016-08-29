@@ -1,46 +1,43 @@
 <section id="firstgwt">
-	<title>Create your first GWT project</title>
+== Create your first GWT project
 	<section id="firstgwt_project">
-		<title>Create project</title>
-		<para> You can also create the GWT projects directory from the command
+=== Create project
+		 You can also create the GWT projects directory from the command
 			line. Open a command shell (Start-> Run -> cmd on windows),switch to
 			the GWT installation directory (cd c:\GWT) and run the following two
-			commands.</para>
-		<para>
+			commands.
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/command/projectCreator" />
-			</programlisting>
-		</para>
-		<para> The final argument will be the full qualified class which will
-			run the application.</para>
-		<para>
+					parse="text" href="../examples/command/projectCreator[]
+----
+		
+		 The final argument will be the full qualified class which will
+			run the application.
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/command/applicationCreator" />
-			</programlisting>
-		</para>
-	</section>
+					parse="text" href="../examples/command/applicationCreator[]
+----
+		
+
 	<section id="firstgwt_import">
-		<title>Import project</title>
-		<para> The created files can be imported to Eclipse. Also a example
-			runtime configuration for Eclipse is created.</para>
-		<para> Select File -> Import -> General -> Existing Project into
-			Workspace.</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/helloworld10.gif" />
+=== Import project
+		 The created files can be imported to Eclipse. Also a example
+			runtime configuration for Eclipse is created.
+		 Select File -> Import -> General -> Existing Project into
+			Workspace.
+		
+image::helloworld10.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-	</section>
+		
+
 	<section id="firstgwt_run">
-		<title>Run project</title>
-		<para>Your project should have a launch configuration included.
+=== Run project
+		Your project should have a launch configuration included.
 			Select HelloGwt.launch, right-click on it and select Run as->HelloGwt
-		</para>
-	</section>
+		
+
 	
-</section>

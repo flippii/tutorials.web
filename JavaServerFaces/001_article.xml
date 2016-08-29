@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <article>
 	<articleinfo>
-		<title>JSF (JavaServer Faces) - Tutorial</title>
+=== JSF (JavaServer Faces) - Tutorial
 		<author>
 			<firstname>Lars</firstname>
 			<surname>Vogel</surname>
@@ -12,22 +12,22 @@
 		</copyright>
 		<pubdate>26.06.2011</pubdate>
 		<releaseinfo>
-			<para>Version 1.4</para>
+			Version 1.4
 		</releaseinfo>
 		
 		<abstract id="abstract">
-			<title>JavaServer Faces with Eclipse</title>
-			<para> This article describes how to develop JavaServer Faces web
+	=== JavaServer Faces with Eclipse
+			 This article describes how to develop JavaServer Faces web
 				applications with Eclipse WTP JSF tooling. It demonstrates managed
 				beans,
 				validators, external
 				resource bundles and the JSF navigation
 				concept.
-			</para>
-			<para> This tutorial was developed with Java 1.6, JavaServerFaces
+			
+			 This tutorial was developed with Java 1.6, JavaServerFaces
 				1.2, the Apache MyFaces JSF implementation, Tomcat 6.0 and Eclipse
 				3.6.
-			</para>
+			
 		</abstract>
 	</articleinfo>
 include::../web/advertisement/afterTableOfContent.adoc[]

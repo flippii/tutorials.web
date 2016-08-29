@@ -1,55 +1,51 @@
 <section id="resources">
-	<title>Links and Literature</title>
+== Links and Literature
 	<section id="resources_articles">
-		<title>Tutorials and Websites</title>
-		<para>
-			<ulink url="http://www.jsfcentral.com/"> http://www.jsfcentral.com/</ulink>
+=== Tutorials and Websites
+		
+http://www.jsfcentral.com/"> http://www.jsfcentral.com/</ulink>
 			Information about JavaServer Faces
-		</para>
-		<para>
-			<ulink url="http://www.ibm.com/developerworks/edu/j-dw-java-jsf1-i.html">
+		
+		
+http://www.ibm.com/developerworks/edu/j-dw-java-jsf1-i.html">
 				www.ibm.com/developerworks/edu/j-dw-java-jsf1-i.html</ulink>
 			Getting started with JavaServer Faces 1.2, Part 1: Building basic
 			applications
-		</para>
-		<para>
-			<ulink url="http://www.ibm.com/developerworks/edu/j-dw-java-jsf2-i.html">
+		
+		
+http://www.ibm.com/developerworks/edu/j-dw-java-jsf2-i.html">
 				http://www.ibm.com/developerworks/edu/j-dw-java-jsf2-i.html</ulink>
 			Getting started with JavaServer Faces 1.2, Part 2: JSF life cycle,
 			conversion, validation, and phase listeners
-		</para>
-		<para>
-			<ulink
-				url="http://java.sun.com/products/jsp/reference/techart/unifiedEL.html"
+		
+		
+http://java.sun.com/products/jsp/reference/techart/unifiedEL.html"
 			> http://java.sun.com/products/jsp/reference/techart/unifiedEL.html</ulink>
 			Unified Expression Language
-		</para>
-	</section>
+		
+
 	<section id="resources_jsf">
-		<title>JSF component libraries</title>
-		<para>The following lists JSF implementations or JSF extension
-			implementations.</para>
-		<para>
-			<ulink url="http://myfaces.apache.org/"> http://myfaces.apache.org</ulink>
+=== JSF component libraries
+		The following lists JSF implementations or JSF extension
+			implementations.
+		
+http://myfaces.apache.org/"> http://myfaces.apache.org</ulink>
 			Apache MyFaces
-		</para>
-		<para>
-			<ulink url="http://www.jboss.org/jbossrichfaces/"> http://www.jboss.org/jbossrichfaces/</ulink>
+		
+		
+http://www.jboss.org/jbossrichfaces/"> http://www.jboss.org/jbossrichfaces/</ulink>
 			JBoss Rich Faces
-		</para>
-		<para>
-			<ulink
-				url="http://www.oracle.com/technology/products/adf/adffaces/index.html"
+		
+		
+http://www.oracle.com/technology/products/adf/adffaces/index.html"
 			> http://www.oracle.com/technology/products/adf/adffaces/index.html</ulink>
 			Oracle ADF Faces Rich Client Components (JSF implementation of
 			Oracle)
-		</para>
-		<para>
-			<ulink
-				url="http://www.eclipse.org/webtools/jsf/dev_resource/JSFTutorial-RC3/JSFTools_tutorial.html"
+		
+		
+http://www.eclipse.org/webtools/jsf/dev_resource/JSFTutorial-RC3/JSFTools_tutorial.html"
 			>
 				http://www.eclipse.org/webtools/jsf/dev_resource/JSFTutorial-RC3/JSFTools_tutorial.html</ulink>
 			Introduction to building JSF with Eclipse
-		</para>
-	</section>
-</section>
+		
+

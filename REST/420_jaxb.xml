@@ -1,99 +1,99 @@
 <section id="jaxb">
-	<title>RESTful web services and JAXB</title>
-	<para>
+== RESTful web services and JAXB
+	
 		JAX-RS supports the automatic creation of XML and JSON via JAXB. For
 		an introduction into XML please see
-		<ulink url="http://www.vogella.com/tutorials/JavaXML/article.html">Java and XML - Tutorial</ulink>
+		http://www.vogella.com/tutorials/JavaXML/article.html">Java and XML - Tutorial</ulink>
 		. For an introduction into JAXB please see
-		<ulink url="http://www.vogella.com/tutorials/JAXB/article.html">JAXB</ulink>
+		http://www.vogella.com/tutorials/JAXB/article.html">JAXB</ulink>
 		. You can continue this tutorial without reading these tutorials, but
 		they contain more background information.
-	</para>
+	
 	<section id="jaxb_project">
-		<title>Create necessary classes</title>
-		<para>
+=== Create necessary classes
+		
 			Create a new
 			<wordasword>Dynamic Web Project</wordasword>
 			called
 			<wordasword>com.vogella.jersey.jaxb</wordasword>
 			. Ensure you create
-			<filename>web.xml</filename>
+			`web.xml`
 			deployment descriptor.
-		</para>
+		
 
-	</section>
+
 	<section>
-		<title>Configure jersey usage</title>
-		<para>
+=== Configure jersey usage
+		
 			See
 			<xref linkend="jerseyprojectsetup" />
 			for the setup.
-		</para>
-	</section>
+		
+
 
 	<section id="jaxb_domainmodel">
-		<title>Create project</title>
-		<para>Create your domain class.</para>
-		<para>
+=== Create project
+		Create your domain class.
+		
 [source,java]
 -----
 include::res/jaxb/Todo.java[]
 ----
-		</para>
-		<para>
+		
+		
 			Create the following resource class. This class simply returns
 			an
 			instance of the
 			<code>Todo</code>
 			class.
-		</para>
-		<para>
+		
+		
 [source,java]
 -----
 include::res/jaxb/TodoResource.java[]
 ----
-		</para>
-		<para>
+		
+		
 			Change
-			<filename>web.xml</filename>
+			`web.xml`
 			to the following.
-		</para>
-		<para>
+		
+		
 			<programlisting language="xml">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/jaxb/web.xml" />
-			</programlisting>
-		</para>
-		<para>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/jaxb/web.xml[]
+----
+		
+		
 			Run you web application in Eclipse and validate that you can
 			access
 			your service. Your application should be
 			available under the
 			following
 			URL.
-		</para>
-		<para>
+		
+		
 			<programlisting language="text">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/links/todo1.txt" />
-			</programlisting>
-		</para>
-	</section>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/links/todo1.txt[]
+----
+		
+
 
 	<section id="jaxb_client">
-		<title>Create a client</title>
-		<para>
+=== Create a client
+		
 			Create a new Java project
 			<wordasword>de.vogella.jersey.jaxb.client</wordasword>
 			and add the
 			Jersey JARs to the project and the project build path.
 			Create the
 			following test class.
-		</para>
-		<para>
+		
+		
 [source,java]
 -----
 include::res/jaxb/Test.java[]
 ----
-		</para>
-	</section>
+		
 
-</section>
+
+

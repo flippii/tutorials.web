@@ -1,25 +1,24 @@
 <section id="webapp">
-	<title>Java Web application</title>
-	<para>
+== Java Web application
+	
 		A Java web application is a collection of dynamic resources
 		(such as
 		Servlets, JavaServer Pages, Java classes and jars) and
 		static resources
 		(HTML pages and pictures). A Java web application
 		can be deployed as a
-		<filename>WAR</filename>
+		`WAR`
 		(Web ARchive)
 		file.
-	</para>
-	<para>
+	
+	
 		A
-		<filename>WAR</filename>
+		`WAR`
 		file is a zip file
 		which
 		contains the complete
 		content of the
 		corresponding web
 		application.
-	</para>
+	
 
-</section>

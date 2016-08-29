@@ -1,16 +1,16 @@
 <section id="runapp">
-	<title>Running an application</title>
+== Running an application
 	<section id="runapp_server">
-		<title>On the App Engine</title>
-		<para>The process of creating an application on the Google App Engine
+=== On the App Engine
+		The process of creating an application on the Google App Engine
 			involves the creation of an application on the Google App Engine
 			website. Afterwards you can locally create a web application and
 			upload this application to the created application on the Google App
-			Engine. </para>
+			Engine. 
 
-		<para>
+		
 			To create an application on the
-			<ulink url="http://appengine.google.com/">App Engine</ulink>
+http://appengine.google.com/">App Engine</ulink>
 			press the button
 			"Create an
 			application"
@@ -20,11 +20,11 @@
 			available. Remember this name
 			because we will later use this in the creation of our demo
 			application.
-		</para>
-	</section>
+		
+
 	<section id="runapp_local">
-		<title>Running application locally</title>
-		<para>
+=== Running application locally
+		
 			The Eclipse Plugin allows to run applications for the Google
 			App
 			Engine locally in an environment which simulates the environment
@@ -35,7 +35,6 @@
 			XMPP
 			traffic. You find this local admin console on
 			"http://localhost:8888/_ah/admin/".
-		</para>
-	</section>
+		
 
-</section>
+

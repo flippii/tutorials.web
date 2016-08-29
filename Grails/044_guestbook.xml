@@ -1,17 +1,17 @@
 <section id="guestbookapplication">
-	<title>Exercise: Extend Grails web application</title>
+== Exercise: Extend Grails web application
 	<section id="guestbookapplication_target">
-		<title>Target</title>
-		<para>
+=== Target
+		
 			In this exercise you finish the  guestbook application you started
 			in
 			<xref linkend="firstgrails" />
 			.
-		</para>
-	</section>
+		
+
 	<section id="guestbookapplication_stopserver">
-		<title>Stop the server</title>
-		<para>
+=== Stop the server
+		
 			If you Grails application from
 			<xref linkend="firstgrails" />
 			is still running, stop the server via
@@ -22,11 +22,11 @@
 			.
 			We need the command line to
 			create more elements.
-		</para>
-	</section>
+		
+
 	<section id="guestbookapplication_model">
-		<title>Create the domain model</title>
-		<para>
+=== Create the domain model
+		
 			Our application does not do anything at the moment. Lets create the
 			a
 			domain
@@ -34,59 +34,59 @@
 			For your feedback system we would like to have:
 			<itemizedlist>
 				<listitem>
-					<para>Class Feedback: The feedback itself</para>
+					Class Feedback: The feedback itself
 				</listitem>
 				<listitem>
-					<para>Class User: The person who gives feedback</para>
+					Class User: The person who gives feedback
 				</listitem>
 				<listitem>
-					<para>Class Comment: A remark to the feedback</para>
+					Class Comment: A remark to the feedback
 				</listitem>
 			</itemizedlist>
-		</para>
-		<para>
+		
+		
 			Grails can create templates with empty classes and prepared unit
 			tests for your domain model. Create the domain model scaffolds via
 			the
 			following
 			commands:
-		</para>
-		<para>
+		
+		
 			<programlisting Language="Bourne">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstgrails/create-domain-class.txt" />
-			</programlisting>
-		</para>
-		<para>
+					parse="text" href="./examples/firstgrails/create-domain-class.txt[]
+----
+		
+		
 			This creates Groovy classes for the specified domain model in the
 			directory
-			<filename class="directory">.\grails-app/domain</filename>
+			<filename class="directory">.\grails-app/domain`
 			. In the
 			directory
-			<filename class="directory">.\test\unit</filename>
+			<filename class="directory">.\test\unit`
 			you
 			find empty files for your unit tests.
-		</para>
-		<para>Use a text editor to change the classes to the following:</para>
-		<para>
+		
+		Use a text editor to change the classes to the following:
+		
 			<programlisting language="Java">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstgrails/Feedback.java" />
-			</programlisting>
-		</para>
-		<para>
+					parse="text" href="./examples/firstgrails/Feedback.java[]
+----
+		
+		
 			<programlisting language="Java">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstgrails/User.java" />
-			</programlisting>
-		</para>
-		<para>
+					parse="text" href="./examples/firstgrails/User.java[]
+----
+		
+		
 			<programlisting language="Java">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstgrails/Comment.java" />
-			</programlisting>
-		</para>
-		<para>
+					parse="text" href="./examples/firstgrails/Comment.java[]
+----
+		
+		
 			Grails allows to define
 			constraints for the domain model via a
 			static
@@ -99,8 +99,8 @@
 			value via the
 			user interface, e.g., the URL
 			constraint.
-		</para>
-		<para>
+		
+		
 			<tip>
 				All model classes come with have a version and id property
 				of type
@@ -117,26 +117,26 @@
 				are also known by Grails
 				and will be filled automatically.
 			
-		</para>
+		
 
-		<para>
+		
 			<tip>
 				Changes in the domain model may require a restart of the Grails
 				server and running the following command:
-				<para>
+				
 					<programlisting Language="Bourne">
 						<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
 							parse="text" href="./examples/firstgrails/grailsclean.txt" />
 					</programlisting>
-				</para>
+				
 			
-		</para>
-	</section>
+		
+
 
 
 	<section id="guestbookapplication_controllerview">
-		<title>Dynamic Scaffolding</title>
-		<para>
+=== Dynamic Scaffolding
+		
 			Grails supports dynamic and static scaffolding for the user
 			interface. If you use dynamic scaffolding, then a user interface for
 			the
@@ -144,23 +144,23 @@
 			user
 			interface allows the operations Create, Read, Update and Delete
 			(CRUD).
-		</para>
-		<para>
+		
+		
 			To use dynamic scaffolding, create controllers for your domain
 			class via the following commands:
-		</para>
-		<para>
+		
+		
 			<programlisting language="Bourne">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstscripts/generate-controller.txt" />
-			</programlisting>
-		</para>
-		<para>
+					parse="text" href="./examples/firstscripts/generate-controller.txt[]
+----
+		
+		
 			This creates controller classes in the directory
-			<filename class="directory">/grails-app/controllers</filename>
+			<filename class="directory">/grails-app/controllers`
 			.
-		</para>
-		<para>
+		
+		
 			Activate the dynamic scaffolding in each controller by
 			replacing the
 			line which starts with
@@ -171,37 +171,37 @@
 			For example, for the
 			<code>FeedbackController</code>
 			.
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstgrails/FeedbackController.java" />
-			</programlisting>
-		</para>
-		<para>
+					parse="text" href="./examples/firstgrails/FeedbackController.java[]
+----
+		
+		
 			Do this also for
 			<code>UserController</code>
 			and
 			<code>CommentController</code>
 			.
 
-		</para>
-	</section>
-	<section id="guestbookapplication_testing">
-		<title>Testing the generated application</title>
+		
 
-		<para>
+	<section id="guestbookapplication_testing">
+=== Testing the generated application
+
+		
 			Run the application again via:
-		</para>
-	<para>
+		
+	
 		<programlisting Language="Bourne">
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/firstgrails/grailsrun.txt" />
-		</programlisting>
-	</para>
-	<para>
+				parse="text" href="./examples/firstgrails/grailsrun.txt[]
+----
+	
+	
 		Browse to
-		<ulink url="http://localhost:8080/com.vogella.grails.guestbook">
+		http://localhost:8080/com.vogella.grails.guestbook">
 			http://localhost:8080/com.vogella.grails.guestbook
 		</ulink>
 		.
@@ -209,46 +209,46 @@
 		application available. To start the app, click on
 		<guilabel>UserController</guilabel>
 		and create a user.
-	</para>
-	<para>
+	
+	
 		<mediaobject>
 			<imageobject>
 				<imagedata fileref="images//home/firstgrails30.png" size="40" />
 			</imageobject>
 		</mediaobject>
-	</para>
-	<para>
+	
+	
 		<mediaobject>
 			<imageobject>
 				<imagedata fileref="images//home/firstgrails34.png" size="40" />
 			</imageobject>
 		</mediaobject>
-	</para>
-	<para>
+	
+	
 		<mediaobject>
 			<imageobject>
 				<imagedata fileref="images//home/firstgrails40.png" size="40" />
 			</imageobject>
 		</mediaobject>
-	</para>
-	<para>
+	
+	
 		Afterwards use the
 		<guilabel>FeedbackController</guilabel>
 		to create a comment.
-	</para>
-	<para>
+	
+	
 		<mediaobject>
 			<imageobject>
 				<imagedata fileref="images/firstgrails50.png" size="40" />
 			</imageobject>
 		</mediaobject>
-	</para>
-	<para>
+	
+	
 		Click on
 		<guilabel>New Feedback</guilabel>
 		and enter a feedback.
-	</para>
-	<para>
+	
+	
 		<mediaobject>
 			<imageobject>
 				<imagedata fileref="images/firstgrails60.png"/>
@@ -257,8 +257,7 @@
 				<phrase></phrase>
 			</textobject>
 		</mediaobject>
-	</para>
 	
-</section>
+	
 
-</section>
+

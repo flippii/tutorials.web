@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <article>
 	<articleinfo>
-		<title>Webservices with Java 1.6 - Tutorial</title>
+=== Webservices with Java 1.6 - Tutorial
 		<author>
 			<firstname>Lars</firstname>
 			<surname>Vogel</surname>
@@ -17,12 +17,12 @@
 		</copyright>
 		<pubdate>23.11.2008</pubdate>
 		<releaseinfo>
-			<para>Version 0.1</para>
+			Version 0.1
 		</releaseinfo>
 		<abstract id="abstract">
-			<title>Abstract</title>
-			<para> This article describes how to create a simple SOAP webservice
-				with standard Java 1.6.</para>
+	=== Abstract
+			 This article describes how to create a simple SOAP webservice
+				with standard Java 1.6.
 		</abstract>
 	</articleinfo>
 include::../web/advertisement/afterTableOfContent.adoc[]

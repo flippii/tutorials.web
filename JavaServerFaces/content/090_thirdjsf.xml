@@ -1,110 +1,105 @@
 <section id="thirdjsf">
-	<title>JSF application with a controller</title>
-	<para> We will now extend the example from the previous chapter to a
+== JSF application with a controller
+	 We will now extend the example from the previous chapter to a
 		math trainer. The system will propose two number and the user must
-		multiply both values and input the result.</para>
-	<para> This JSF application will use a controller which handles the JSF
+		multiply both values and input the result.
+	 This JSF application will use a controller which handles the JSF
 		logic. This will allow you to create a domain model without
-		application logic.</para>
-	<para>
+		application logic.
+	
 		<tip> In general it is considered as a good design practice to keep
 			the model independently from the application logic.
-	</para>
-	<para>This example will also demonstrate the usage of dependency
-		injection in JSF.</para>
+	
+	This example will also demonstrate the usage of dependency
+		injection in JSF.
 	<section id="thirdjsf_project">
-		<title>Create JSF Project</title>
-		<para> Create a new Dynamic Web Project "de.vogella.jsf.card".</para>
-	</section>
+=== Create JSF Project
+		 Create a new Dynamic Web Project "de.vogella.jsf.card".
+
 	<section id="thirdjsf_model">
-		<title>Domain model</title>
-		<para> Create a new package de.vogella.jsf.card.model and the
-			following class.</para>
-		<para>
+=== Domain model
+		 Create a new package de.vogella.jsf.card.model and the
+			following class.
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/thirdjsf/Card.java" />
-			</programlisting>
-		</para>
-	</section>
+					parse="text" href="../examples/thirdjsf/Card.java[]
+----
+		
+
 	<section id="thirdjsf_controller">
-		<title>Controller</title>
-		<para> Create the following class CardController.</para>
-		<para>
+=== Controller
+		 Create the following class CardController.
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/thirdjsf/CardController.java" />
-			</programlisting>
-		</para>
-		<para> This class has a field resultPanel. This field will later get
-			connected to a UIComponent (panel) from the JSP.</para>
-	</section>
+					parse="text" href="../examples/thirdjsf/CardController.java[]
+----
+		
+		 This class has a field resultPanel. This field will later get
+			connected to a UIComponent (panel) from the JSP.
+
 	<section id="thirdjsf_managedbeans">
-		<title>Register your managed beans- Dependency injection</title>
-		<para> Double-click on faces-config.xml and select the tab
+=== Register your managed beans- Dependency injection
+		 Double-click on faces-config.xml and select the tab
 			"ManagedBeans". Register the classes "CardController" and "Card" as
 			managed beans. The scope of card will be set to none as it will be
 			inserted into the ControllerCard via dependency injection. In the
 			initialization tab maintain the data as displayed in the screenshot.
 			The value #{card} refers to the  managed bean "card".
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/controller10.gif" />
+		
+		
+image::controller10.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-		<para>The generated XML code should look like the following (you
+		
+		The generated XML code should look like the following (you
 			see
-			this if you select the tab "Source".</para>
-		<para>
+			this if you select the tab "Source".
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/thirdjsf/managedBean.txt" />
-			</programlisting>
-		</para>
-	</section>
+					parse="text" href="../examples/thirdjsf/managedBean.txt[]
+----
+		
+
 	<section id="thirdjsf_resourcebundle">
-		<title>Resource bundle for messages</title>
-		<para> Create the following file "messages.properties" in your source
-			folder under the package "de.vogella.jsf.card".</para>
-		<para>
+=== Resource bundle for messages
+		 Create the following file "messages.properties" in your source
+			folder under the package "de.vogella.jsf.card".
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/thirdjsf/messages.properties" />
-			</programlisting>
-		</para>
-	</section>
+					parse="text" href="../examples/thirdjsf/messages.properties[]
+----
+		
+
 	<section id="thirdjsf_firstjsp">
-		<title>JavaServer Page with JSF components</title>
-		<para> Create a new JSP page "Trainer.jsp" and change the code to the
-			following:</para>
-		<para>
+=== JavaServer Page with JSF components
+		 Create a new JSP page "Trainer.jsp" and change the code to the
+			following:
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/thirdjsf/Trainer.jsp" />
-			</programlisting>
-		</para>
-		<para> From the previously examples you should be able to read most of
+					parse="text" href="../examples/thirdjsf/Trainer.jsp[]
+----
+		
+		 From the previously examples you should be able to read most of
 			the fields. What is new is that is use now the binding. Binding
 			allows to bind certain UIControls to a managed bean. This way be bind
 			the panel for the result to the controller. The controller can then
 			set the rendered attribute of this UIControl depending on the user
-			settings.</para>
-	</section>
+			settings.
+
 	<section id="thirdjsf_run">
-		<title>Run your webapplication</title>
-		<para> To run your webapplication, select Trainer.jsp, right
-			mouse-click- >run as -> run on server.</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/controller30.gif" />
+=== Run your webapplication
+		 To run your webapplication, select Trainer.jsp, right
+			mouse-click- >run as -> run on server.
+		
+image::controller30.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-	</section>
-</section>
+		
+

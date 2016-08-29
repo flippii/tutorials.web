@@ -1,8 +1,8 @@
 <section id="example">
-	<title>Examples</title>
+== Examples
 	<section id="example_project">
-		<title>Project and Expectations</title>
-		<para>
+=== Project and Expectations
+		
 			The following examples do not necessary work out of the box as
 			we do not
 			provide the required backend for receiving the data. Think
@@ -12,8 +12,8 @@
 			HttpClient libraries from the Apache Website, you can download the
 			"bin" package it
 			includes all dependencies.
-		</para>
-		<para>
+		
+		
 			Create a new Java project
 			<wordasword>de.vogella.web.httpclient</wordasword>
 			,
@@ -23,51 +23,51 @@
 			path of your Java project. We use the project for
 			creating our
 			tests.
-		</para>
-	</section>
+		
+
 
 	<section id="example_get">
-		<title>Http Get</title>
-		<para>
+=== Http Get
+		
 			The following is an example an HTTP Get request via
 			<code>HttpClient</code>
 			.
-		</para>
+		
 
-		<para>
+		
 			<programlisting language="java">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/httpclient/getHttpClient.txt" />
-			</programlisting>
-		</para>
+					parse="text" href="../examples/httpclient/getHttpClient.txt[]
+----
+		
 
 
-	</section>
+
 
 	<section id="example_post">
-		<title>Http Post</title>
-		<para> The following will send a post request to the URL
+=== Http Post
+		 The following will send a post request to the URL
 			"http://vogellac2dm.appspot.com/register" and include a parameter
 			"registrationid" which an random value.
 
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/httpclient/SimpleHttpPut.java" />
-			</programlisting>
-		</para>
-		<para> The following request adds several parameters to the post
+					parse="text" href="../examples/httpclient/SimpleHttpPut.java[]
+----
+		
+		 The following request adds several parameters to the post
 			request.
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/httpclient/TestHttpClient.java" />
-			</programlisting>
-		</para>
-	</section>
+					parse="text" href="../examples/httpclient/TestHttpClient.java[]
+----
+		
 
 
 
-</section>
+
+

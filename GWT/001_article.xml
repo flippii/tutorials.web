@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <article>
 	<articleinfo>
-		<title>GWT - Tutorial</title>
+=== GWT - Tutorial
 		<author>
 			<firstname>Lars</firstname>
 			<surname>Vogel</surname>
@@ -12,21 +12,21 @@
 		</copyright>
 		<pubdate>30.09.2011</pubdate>
 		<releaseinfo>
-			<para>Version 2.3</para>
+			Version 2.3
 		</releaseinfo>
 
 		
 
 		<abstract id="abstract">
-			<title>GWT Tutorial</title>
-			<para> This tutorial describes how to develop a Web application with
+	=== GWT Tutorial
+			 This tutorial describes how to develop a Web application with
 				GWT and
 				the Google Plugin for Eclipse. This article assumes basic
 				Eclipse and Java
 				knowledge. The tutorial
 				was developed
 				using JDK 1.6,
-				GWT 2.3 and Eclipse 3.7.</para>
+				GWT 2.3 and Eclipse 3.7.
 		</abstract>
 	</articleinfo>
 include::../web/advertisement/afterTableOfContent.adoc[]

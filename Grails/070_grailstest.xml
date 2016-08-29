@@ -1,16 +1,16 @@
 <section id="grailstest">
-	<title>Testing your application</title>
-	<para>
+== Testing your application
+	
 		The command <code>create-domain-class</code> automatically creates a
 		test for the domain-class. Go to your directory
-		<filename class="directory">test/integration</filename>
-		and open the file <filename>FeedbackTests.groovy</filename>.
-	</para>
-	<para>You can run your test via the following command.</para>
-	<para>
+		<filename class="directory">test/integration`
+		and open the file `FeedbackTests.groovy`.
+	
+	You can run your test via the following command.
+	
 		<programlisting language="Bourne">
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/test/testGroovy.txt" />
-		</programlisting>
-	</para>
-</section>
+				parse="text" href="./examples/test/testGroovy.txt[]
+----
+	
+

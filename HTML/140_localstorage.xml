@@ -1,5 +1,5 @@
 <section id="localstorage">
-	<title>Local storage
+== Local storage
 	
 		HTML5 supports local storage of data to work offline. Currently you
 		find:
@@ -28,7 +28,6 @@
 	
 		Currently it is recommended to use local storage as it has the largest
 		support. For an example see
-		<ulink url="http://www.html5rocks.com/tutorials/offline/takingappoffline/">
+		http://www.html5rocks.com/tutorials/offline/takingappoffline/">
 			http://www.html5rocks.com/tutorials/offline/takingappoffline/</ulink>
 	
-</section>

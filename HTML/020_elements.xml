@@ -1,5 +1,5 @@
 <section id="htmlelements">
-	<title>HTML Standard Elements
+== HTML Standard Elements
 	
 		The following defines standard HTML elements. If you want to try out
 		these
@@ -9,7 +9,7 @@
 		tag. Save your file and re-load your browser to see the result.
 	
 	<section id="htmlelements_blocks">
-		<title>Blocks and structural elements
+=== Blocks and structural elements
 		<![CDATA[ <p> </p> ]]>
 			describes a paragraph and <![CDATA[ <h1> </h1> ]]>
 			a headline. You have six headlines available from  <![CDATA[ <h1> </h1> ]]>
@@ -21,9 +21,9 @@
 			is incorrect. <![CDATA[ <hr/> ]]>
 			inserts a line into the text.
 		
-	</section>
+
 	<section id="htmlelements_tags">
-		<title>HTML Links
+=== HTML Links
 		 The following describes a link in HTML. The attribute "href"
 			defines the target
 			of the link. A link can be absolute or relativ to
@@ -34,8 +34,8 @@
 		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/html/anchor.txt" />
-			</programlisting>
+					parse="text" href="./examples/html/anchor.txt[]
+----
 		
 
 		 The following listing contains a link which displays a image.
@@ -43,60 +43,60 @@
 		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/html/imagelink.txt" />
-			</programlisting>
+					parse="text" href="./examples/html/imagelink.txt[]
+----
 		
 		 The following example shows how to create a link for an email.
 		
 		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/html/emaillink.txt" />
-			</programlisting>
+					parse="text" href="./examples/html/emaillink.txt[]
+----
 		
 		
-	</section>
+
 	<section id="htmlelements_list">
-		<title>Lists
+=== Lists
 		 HTML supports ordered and unordered lists. 
 		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/html/lists.txt" />
-			</programlisting>
+					parse="text" href="./examples/html/lists.txt[]
+----
 		
-	</section>
+
 	<section id="htmlelements_table">
-		<title>Tables
+=== Tables
 		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/html/table.txt" />
-			</programlisting>
+					parse="text" href="./examples/html/table.txt[]
+----
 		
-	</section>
+
 	<section id="htmlelements_image">
-		<title>Image
+=== Image
 		Images should have the "alt" tag defined and can optionally
 			definde a width and a height.
 		
 		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/html/image.txt" />
-			</programlisting>
+					parse="text" href="./examples/html/image.txt[]
+----
 		
-	</section>
+
 
 	<section id="htmlelements_specialsigns">
-		<title>Special signs
+=== Special signs
 		 Use the following special signs to display them in your
 			webpage.
 
 .Table Title
 |===
 
-			<title>Special signs
+	=== Special signs
 			<tgroup cols='2' align='left' colsep='1' rowsep='1'>
 				<colspec colname='c1' />
 				<colspec colname='c2' />
@@ -143,5 +143,4 @@
 				
 			
 		|===
-	</section>
-</section>
+

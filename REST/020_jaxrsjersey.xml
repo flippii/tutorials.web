@@ -1,8 +1,8 @@
 <section id="restjersey">
-	<title>JAX-RS with Jersey</title>
+== JAX-RS with Jersey
 	<section id="jaxrs_intro">
-		<title>JAX-RS</title>
-		<para>
+=== JAX-RS
+		
 			Java defines REST support via the
 			<wordasword>Java Specification Request (JSR)</wordasword>
 			311. This specification is called
@@ -14,50 +14,50 @@
 			to define the REST relevance of
 			Java
 			classes.
-		</para>
-	</section>
+		
+
 	<section id="jersey_intro">
-		<title>Jersey</title>
-		<para>
+=== Jersey
+		
 			<wordasword>Jersey</wordasword>
 			is the reference
 			implementation for the JSR 311 specification.
-		</para>
+		
 
-		<para>
+		
 
 			The
 			Jersey implementation provides a library to implement Restful
 			webservices in a Java servlet container.
-		</para>
-		<para>
+		
+		
 			On the server side Jersey provides a servlet implementation which
 			scans predefined
 			classes to identify RESTful resources.
 			In your
-			<filename>web.xml</filename>
+			`web.xml`
 			configuration file your register this servlet for your web
 			application.
-		</para>
-		<para>
+		
+		
 			The Jersey implementation also provides a client
 			library to
 			communicate with
 			a RESTful webservice.
-		</para>
+		
 
-		<para>
+		
 			The base
 			URL
 			of this servlet is:
-		</para>
-		<para>
-			<programlisting language="text">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/path/path.txt" />
-			</programlisting>
-		</para>
-		<para>
+		
+		
+[source,text]
+----
+include::res/path/path.txt[]
+----
+		
+		
 			This servlet analyzes the incoming HTTP request and
 			selects
 			the
@@ -65,31 +65,31 @@
 			selection
 			is
 			based on annotations in the class and methods.
-		</para>
-		<para>
+		
+		
 			A REST web application consists, therefore, out of data classes
 			(resources)
 			and
 			services. These two types are typically maintained in
 			different
 			packages as the Jersey servlet will be instructed via the
-			<filename>web.xml</filename>
+			`web.xml`
 			to
 			scan certain packages for data classes.
-		</para>
+		
 
-		<para>
+		
 			JAX-RS
 			supports the creation of XML and JSON via
 			the Java
 			Architecture for
 			XML Binding (JAXB).
-		</para>
-	</section>
+		
+
 
 	<section id="restjersey_annotations">
-		<title>JAX-RS annotations</title>
-		<para>
+=== JAX-RS annotations
+		
 			The most important
 			annotations in JAX-RS are listed in the following
 			table.
@@ -97,7 +97,7 @@
 .Table Title
 |===
 
-				<title>JAX-RS annotations</title>
+		=== JAX-RS annotations
 				<tgroup cols='2' align='left' colsep='1' rowsep='1'>
 					<colspec colname='c1' />
 					<colspec colname='c2' />
@@ -115,7 +115,7 @@
 								based on
 								your application name, the servlet and the URL pattern
 								from the
-								<filename>web.xml</filename>
+								`web.xml`
 								configuration file.
 							
 						
@@ -179,17 +179,16 @@
 					
 				
 			|===
-		</para>   
-		<para>
+		   
+		
 			The complete path to a resource is based on the base
 			URL and the
 			@PATh annotation in your class.
-		</para>
-		<para>
-			<programlisting language="text">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/path/path1.txt" />
-			</programlisting>
-		</para>
-	</section>
-</section>
+		
+		
+[source,text]
+----
+include::res/path/path1.txt[]
+----
+		
+

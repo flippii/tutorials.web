@@ -1,12 +1,11 @@
 <section id="resources">
-	<title>Links and Literature</title>
+== Links and Literature
 	<section id="links">
-		<title>Google Technology Links</title>
-		<para>
-			<ulink url="http://research.google.com/pubs/papers.html">
+=== Google Technology Links
+		
+http://research.google.com/pubs/papers.html">
 				Google Research Papers</ulink>
-		</para>
+		
 		
 
-	</section>
-</section>
+

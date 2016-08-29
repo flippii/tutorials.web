@@ -1,13 +1,13 @@
 <section id="install">
-	<title>Installation</title>
+== Installation
 	<section id="install_commandline">
-		<title>Installation of the Grails command line tools</title>
-		<para>
+=== Installation of the Grails command line tools
+		
 			Download the latest official release of Grails from the
-			<ulink url="https://grails.org/download">Grails download page</ulink>
+https://grails.org/download">Grails download page</ulink>
 			. Unzip the download to a directory of your choice.
-		</para>
-		<para>
+		
+		
 			Setup your
 			<property>GRAILS_HOME</property>
 			environment variable pointing to your
@@ -15,12 +15,12 @@
 			Grails.
 			Also add
 			the
-			<filename class="directory">$GRAILS_HOME/bin</filename>
+			<filename class="directory">$GRAILS_HOME/bin`
 			to the
 			<property>PATH</property>
 			variable.
-		</para>
-		<para>
+		
+		
 			<note>
 				Please make sure that the environment variable
 				<property>JAVA_HOME</property>
@@ -29,61 +29,55 @@
 				is required to develop with
 				Grails.
 			
-		</para>
-		<para>Test your installation by opening a command line and running the
+		
+		Test your installation by opening a command line and running the
 			following command.
-		</para>
-		<para>
+		
+		
 			<programlisting language="java">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/installation/version.txt" />
-			</programlisting>
-		</para>
-		<para>This should result in the output of the currently installed
+					parse="text" href="./examples/installation/version.txt[]
+----
+		
+		This should result in the output of the currently installed
 			Grails version.
-		</para>
+		
 
 
-	</section>
+
 	<section id="grails_eclipsesupport">
-		<title>Installing the Grails Eclipse plug-in</title>
-		<para>The Eclipse IDE has great support for the Grails applications.
-		</para>
-		<para>
+=== Installing the Grails Eclipse plug-in
+		The Eclipse IDE has great support for the Grails applications.
+		
+		
 			Open the Eclipse Update manager via the
-			<menuchoice>
-				<guimenu>Help</guimenu>
-				<guisubmenu>Install New Software...</guisubmenu>
-			</menuchoice>
+menu:Help[Install New Software...]
 			menu entry
 			to install the Grails Eclipse plug-in. Enter the following
 			URL in this dialog:
-		</para>
-		<para>
+		
+		
 			<programlisting language="java">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/install/updatesite.txt" />
-			</programlisting>
-		</para>
+					parse="text" href="./examples/install/updatesite.txt[]
+----
+		
 
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/grailseclipseinstallation10"
+		
+image::grailseclipseinstallation10"
 						scale="40" />
 				</imageobject>
 				<textobject>
 					<phrase>Install Grails support for Eclipse</phrase>
 				</textobject>
 			</mediaobject>
-		</para>
-		<para>
+		
+		
 			The update site is Eclipse version dependent, see
-			<ulink url="https://spring.io/tools/ggts/all">Groovy/Grails Tool Suite™ Downloads</ulink>
+https://spring.io/tools/ggts/all">Groovy/Grails Tool Suite™ Downloads</ulink>
 			if you use a different release than Eclipse 4.4.
-		</para>
-
-	</section>
+		
 
 
-</section>
+
+

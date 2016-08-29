@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <article>
 	<articleinfo>
-		<title>Google App Engine for Java - Tutorial</title>
+=== Google App Engine for Java - Tutorial
 		<author>
 			<firstname>Lars</firstname>
 			<surname>Vogel</surname>
@@ -17,17 +17,17 @@
 		</copyright>
 		<pubdate>01.08.2014</pubdate>
 		<releaseinfo>
-			<para>Version 2.7</para>
+			Version 2.7
 		</releaseinfo>
 		
 		<abstract id="abstract">
-			<title>Google App Engine and JPA</title>
-			<para> This article describes the creation of a Java web application
+	=== Google App Engine and JPA
+			 This article describes the creation of a Java web application
 				on the Google App Engine. It uses JPA. The tutorial is based on Java
 				1.7, Eclipse
 				4.4 and GAE
 				version 1.4.2.
-			</para>
+			
 		</abstract>
 	</articleinfo>
 include::../web/advertisement/afterTableOfContent.adoc[]

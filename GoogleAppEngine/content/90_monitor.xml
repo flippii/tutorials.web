@@ -1,7 +1,6 @@
 <section id="monitor">
-	<title>Monitor your application</title>
-	<para>
+== Monitor your application
+	
 		Google provides a monitor application
-		<ulink url="http://appengine.google.com/">http://appengine.google.com/</ulink>
-	</para>
-</section>
+		http://appengine.google.com/">http://appengine.google.com/</ulink>
+	

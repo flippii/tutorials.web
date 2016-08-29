@@ -1,91 +1,88 @@
 <section id="todojsf">
-	<title>A Todo JSF application</title>
-	<para> Lets now create a JSF application for maintaining a Todo list.
+== A Todo JSF application
+	 Lets now create a JSF application for maintaining a Todo list.
 		The main new thing we will cover is the handling of tables in JSF.
 		These tables will be created based on a Java collection from the
-		managed bean.</para>
+		managed bean.
 	<section id="todojsf_project">
-		<title>Create JSF Project</title>
-		<para> Create a new Dynamic Web Project "de.vogella.jsf.todo".</para>
-	</section>
+=== Create JSF Project
+		 Create a new Dynamic Web Project "de.vogella.jsf.todo".
+
 	<section id="todojsf_model">
-		<title>Domain model</title>
-		<para> Create a new package de.vogella.jsf.todo.model and the
-			following class.</para>
-		<para>
+=== Domain model
+		 Create a new package de.vogella.jsf.todo.model and the
+			following class.
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/todojsf/Todo.java" />
-			</programlisting>
-		</para>
-	</section>
+					parse="text" href="../examples/todojsf/Todo.java[]
+----
+		
+
 	<section id="todojsf_controller">
-		<title>Controller</title>
-		<para> Create the package de.vogella.jsf.todo.controller and the
-			following class TodoController.</para>
-		<para>
+=== Controller
+		 Create the package de.vogella.jsf.todo.controller and the
+			following class TodoController.
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/todojsf/TodoController.java" />
-			</programlisting>
-		</para>
-	</section>
+					parse="text" href="../examples/todojsf/TodoController.java[]
+----
+		
+
 	<section id="todojsf_managedbeans">
-		<title>Register your managed beans</title>
-		<para> Double-click on faces-config.xml and select the tab
-			"ManagedBeans". Register the TodoController.</para>
-	</section>
+=== Register your managed beans
+		 Double-click on faces-config.xml and select the tab
+			"ManagedBeans". Register the TodoController.
+
 	<section id="todojsf_css">
-		<title>Create css</title>
-		<para> In your folder WebContent create a folder css. Create a file
-			mystyle.css with the following content.</para>
-		<para>
+=== Create css
+		 In your folder WebContent create a folder css. Create a file
+			mystyle.css with the following content.
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/todojsf/mystyle.css" />
-			</programlisting>
-		</para>
-	</section>
+					parse="text" href="../examples/todojsf/mystyle.css[]
+----
+		
+
 	<section id="todojsf_firstjsp">
-		<title>JavaServer Page with JSF components</title>
-		<para> Create a new JSP page "Todo.jsp" and change the code to the
-			following:</para>
-		<para>
+=== JavaServer Page with JSF components
+		 Create a new JSP page "Todo.jsp" and change the code to the
+			following:
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/todojsf/Todo.jsp" />
-			</programlisting>
-		</para>
-		<para>
+					parse="text" href="../examples/todojsf/Todo.jsp[]
+----
+		
+		
 			<tip> Using the Facet tag you can create a header for a dataTable
 				component.
-		</para>
-		<para> You have added a actionListener. This can call a method which
+		
+		 You have added a actionListener. This can call a method which
 			can receive an object of type ActionEvent. actionListeners are nice
-			if you want to use the same method with different parameters.</para>
-		<para>We also use selectOneMenu which allows to select a value from
-			a pre-defined list.</para>
-		<para> The main new thing here is h:datatable tag. This tag defines a
+			if you want to use the same method with different parameters.
+		We also use selectOneMenu which allows to select a value from
+			a pre-defined list.
+		 The main new thing here is h:datatable tag. This tag defines a
 			table. value can get a list as a parameter and var define the
 			variable which will be used to create each row. This is very similar
-			to the foreach loop.</para>
-		<para>The other new element is the setPropertyActionListener. This
+			to the foreach loop.
+		The other new element is the setPropertyActionListener. This
 			allow you to listener to changes for this link, e.g. a mouse click.
 			This copies the current selected row into the field todo. The method
 			delete from the controller will then remove this elements from the
-			list.</para>
-	</section>
+			list.
+
 	<section id="todojsf_run">
-		<title>Run your webapplication</title>
-		<para> If you run your webapplication you should be seeing the
-			following:</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/todo90.gif" />
+=== Run your webapplication
+		 If you run your webapplication you should be seeing the
+			following:
+		
+image::todo90.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-	</section>
-</section>
+		
+

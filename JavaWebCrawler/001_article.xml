@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <article>
 	<articleinfo>
-		<title>Eclipse Forms API - Tutorial</title>
+=== Eclipse Forms API - Tutorial
 		<author>
 			<firstname>Lars</firstname>
 			<surname>Vogel</surname>
@@ -12,14 +12,14 @@
 		</copyright>
 		<pubdate>25.06.2009</pubdate>
 		<releaseinfo>
-			<para>Version 0.2</para>
+			Version 0.2
 		</releaseinfo>
 		
 		<abstract id="abstract">
-			<title>Abstract</title>
-			<para> This article describes how to build User Interfaces using
+	=== Abstract
+			 This article describes how to build User Interfaces using
 				Eclipse Forms.
-			</para>
+			
 		</abstract>
 	</articleinfo>
 include::../web/advertisement/afterTableOfContent.adoc[]

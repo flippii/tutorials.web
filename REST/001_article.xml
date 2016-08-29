@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <article>
 	<articleinfo>
-		<title>REST with Java (JAX-RS) using Jersey - Tutorial</title>
+=== REST with Java (JAX-RS) using Jersey - Tutorial
 		<author>
 			<firstname>Lars</firstname>
 			<surname>Vogel</surname>
@@ -18,23 +18,23 @@
 		</copyright>
 		<pubdate>15.12.2015</pubdate>
 		<releaseinfo>
-			<para>Version 2.5</para>
+			Version 2.5
 		</releaseinfo>
 
 		<abstract id="abstract">
-			<title>RESTful web services with Java (Jersey / JAX-RS)</title>
-			<para>
+	=== RESTful web services with Java (Jersey / JAX-RS)
+			
 				This tutorial explains how to develop RESTful web services in
 				Java
 				with the JAX-RS reference implementation
 				Jersey.
-			</para>
-			<para>
+			
+			
 				In this tutorial Eclipse 4.5 (Mars), Java 1.8, Tomcat 6.0 and
 				JAX-RS 2.0
 				(with Jersey
 				2.11) is used.
-			</para>
+			
 		</abstract>
 	</articleinfo>
 include::../web/advertisement/afterTableOfContent.adoc[]

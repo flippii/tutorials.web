@@ -1,5 +1,5 @@
 <section id="canvas">
-	<title>Canvas
+== Canvas
 	HTML5
 		introduces the <![CDATA[ <canvas> </canvas> ]]>
 		element which is a black element on which you can draw in real time
@@ -14,7 +14,6 @@
 	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/canvas/canvas.html" />
-		</programlisting>
+				parse="text" href="./examples/canvas/canvas.html[]
+----
 	
-</section>

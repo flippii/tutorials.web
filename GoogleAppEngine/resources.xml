@@ -1,29 +1,27 @@
 <section id="resources">
-	<title>Links and Literature</title>
+== Links and Literature
 	<section id="links">
-		<title>Links</title>
-		<para>
-			<ulink
-				url="http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html"
+=== Links
+		
+http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html"
 			> http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html</ulink>
 			Google App Engine Development with Java
-		</para>
-		<para>
-			<ulink url="http://code.google.com/intl/en/appengine"> http://code.google.com/intl/en/appengine</ulink>
+		
+		
+http://code.google.com/intl/en/appengine"> http://code.google.com/intl/en/appengine</ulink>
 			Google App Engine
-		</para>
-		<para>
-			<ulink url="http://www.python.org/"> http://www.python.org/</ulink>
+		
+		
+http://www.python.org/"> http://www.python.org/</ulink>
 			Python Homepage
-		</para>
-		<para>
-			<ulink url="http://docs.python.org/"> http://docs.python.org/</ulink>
+		
+		
+http://docs.python.org/"> http://docs.python.org/</ulink>
 			Python Documentation
-		</para>
-		<para>
-			<ulink url="http://www.djangoproject.com/documentation/0.96/templates/">
+		
+		
+http://www.djangoproject.com/documentation/0.96/templates/">
 				http://www.djangoproject.com/documentation/0.96/templates/</ulink>
 			Django template language
-		</para>
-	</section>
-</section>
+		
+

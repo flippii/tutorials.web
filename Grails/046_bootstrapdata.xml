@@ -1,26 +1,26 @@
 <section id="bootstrapandpersistsdata">
-	<title>Exercise: Bootstrap and persists data</title>
+== Exercise: Bootstrap and persists data
 	<section id="bootstrapandpersistsdata_target">
-		<title>Target</title>
-		<para>
+=== Target
+		
 			In this exercise you create example data and store the data between
 			application restarts. This exercise builds on
 			<xref linkend="guestbookapplication" />
 			.
-		</para>
-	</section>
+		
+
 
 	<section id="firstgrails_scaffolding">
-		<title>Bootstrapping example data</title>
-		<para>
+=== Bootstrapping example data
+		
 			Grails allows to simulate example data (this is called
 			bootstrapping).
 			To create example data, you can use the class
-			<filename>BootStrap.groovy</filename>
+			`BootStrap.groovy`
 			from
 			the
 			directory
-			<filename class="directory">./grails-app/conf</filename>
+			<filename class="directory">./grails-app/conf`
 			with some data.
 			This class is
 			automatically executed whenever the
@@ -28,62 +28,62 @@
 			and can be used
 			to create some example data for
 			testing.
-		</para>
+		
 
-		<para>Change the code to the following.</para>
+		Change the code to the following.
 
-		<para>
+		
 			<programlisting language="java">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstgrails/Bootstrap.java" />
-			</programlisting>
-		</para>
-		<para>
+					parse="text" href="./examples/firstgrails/Bootstrap.java[]
+----
+		
+		
 			The grails server should pickup the change automatically. Wait
 			a
 			while (or re-start the server to be sure) and check if you get an
 			error message.
-		</para>
-	</section>
+		
+
 
 	<section id="firstgrailsapp_store">
-		<title>Store the data</title>
-		<para>
+=== Store the data
+		
 			By default, the data maintained in the web application is not
 			stored. If your entries should be saved to the database after server
 			shutdown, use the following command to start it.
-		</para>
-		<para>
+		
+		
 			<programlisting language="Bourne">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstgrails/prod-run-app.txt" />
-			</programlisting>
-		</para>
-		<para>
+					parse="text" href="./examples/firstgrails/prod-run-app.txt[]
+----
+		
+		
 			<tip>
 				Remove the bootstrapped entries as you will otherwise get errors
 				as the system tries to create the same entries again.
 			
-		</para>
-	</section>
+		
+
 
 	<section id="firstgrails_controllerview_scaffolding">
-		<title>Static scaffolding</title>
-		<para>
+=== Static scaffolding
+		
 			To switch from dynamic scaffolding to static scaffolding, you
 			need to have views. Grails can generate them for you.
-		</para>
-		<para>
+		
+		
 			Type in the following to create a scaffold for the controller
 			and the view.
-		</para>
-		<para>
+		
+		
 			<programlisting language="Bourne">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstscripts/generate-views.txt" />
-			</programlisting>
-		</para>
-		<para>
+					parse="text" href="./examples/firstscripts/generate-views.txt[]
+----
+		
+		
 			<tip>
 				If you receive the error "Error starting Sun's native2ascii",
 				then
@@ -92,18 +92,18 @@
 				points to
 				the JDK and not JRE. The JDK is required for this step.
 			
-		</para>
-		<para>
+		
+		
 			Remove
 			<code>def scaffold = true</code>
 			in your controller to use your
 			generated views.
-		</para>
-		<para>
+		
+		
 			This creates the GSP (Groovy Server pages) for your actions in
 			the
 			directroy
-			<filename class="directory">grails-app\views</filename>
+			<filename class="directory">grails-app\views`
 			.
 			GSP are standard HTML code with
 			Groovy mixed in.
@@ -120,8 +120,7 @@
 			corresponding views
 			have been
 			created under
-			<filename class="directory">grails-app/views</filename>
+			<filename class="directory">grails-app/views`
 			.
-		</para>
-	</section>
-</section>
+		
+

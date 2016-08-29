@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <article>
 	<articleinfo>
-		<title>Google Technologies - Overview - Tutorial</title>
+=== Google Technologies - Overview - Tutorial
 		<author>
 			<firstname>Lars</firstname>
 			<surname>Vogel</surname>
@@ -12,14 +12,14 @@
 		</copyright>
 		<pubdate>09.04.2011</pubdate>
 		<releaseinfo>
-			<para>Version 0.7</para>
+			Version 0.7
 		</releaseinfo>
 		
 		<abstract id="abstract">
-			<title>Google Technologies</title>
-			<para> This article servers as a point to capture information about
+	=== Google Technologies
+			 This article servers as a point to capture information about
 				Google technologies, e.g. Pagerank, Bigtable, Google Search, etc.
-			</para>
+			
 		</abstract>
 	</articleinfo>
 include::../web/advertisement/afterTableOfContent.adoc[]

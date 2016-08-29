@@ -1,17 +1,17 @@
 <section id="javawebterminology_overview">
-	<title>Web development</title>
+== Web development
 	<section id="javawebterminology_overview1">
-		<title>Webdevelopment with Java</title>
-		<para>
+=== Webdevelopment with Java
+		
 			Java has strong support for web development. While Java on the
 			desktop, with the notable exception of Eclipse RCP based application
 			was never a huge success, Java is frequently used at the server side.
-		</para>
+		
 
-	</section>
+
 	<section id="overview_webdevelopment">
-		<title>Web development</title>
-		<para>If you develop a web application (independent of the
+=== Web development
+		If you develop a web application (independent of the
 			programming
 			language your are using), you typically put your web application on
 			a
@@ -26,8 +26,8 @@
 			basically a machine which is separated by software into
 			smaller
 			machines.
-		</para>
-		<para>
+		
+		
 			It is possible to use your local computer as a server,
 			but
 			usually you want to have a fixed server which runs 24 hours per
@@ -36,20 +36,20 @@
 			days per week so that web clients can always reach your server
 			under a
 			pre-defined address.
-		</para>
-		<para>
+		
+		
 			For example,
-			<ulink url="http://blog.vogella.com/">blog.vogella.com</ulink>
+http://blog.vogella.com/">blog.vogella.com</ulink>
 			contains the vogella blog. This blog is a web application powered by
 			WordPress
 			which is a web application written in the server-side
 			scripting language
 			PHP.
-		</para>
-	</section>
+		
+
 	<section id="overview_servervscloud">
-		<title>Server vs cloud deployment</title>
-		<para>
+=== Server vs cloud deployment
+		
 			Instead of running your application directly on a dedicated
 			server,
 			you
@@ -59,17 +59,17 @@
 			example for
 			this is the Google App Engine which allows to host web
 			applications written in different programming languages.
-		</para>
+		
 
-	</section>
+
 	<section id="overview_container">
-		<title>Java web or Java EE container</title>
-		<para> Java web applications are typically not running directly on the
+=== Java web or Java EE container
+		 Java web applications are typically not running directly on the
 			server. Java web applications are running inside a web container on
 			the
 			server.
-		</para>
-		<para>
+		
+		
 			The container provides a
 			runtime environment for Java web
 			applications.
@@ -80,15 +80,15 @@
 			running Java applications. The
 			container itself
 			runs in the JVM.
-		</para>
-		<para>In general, Java distinguishes two containers: the web container
+		
+		In general, Java distinguishes two containers: the web container
 			and the Java EE container. Typical web containers in the Java world
 			are Tomcat or Jetty. A web container supports the execution of Java
 			servlets and
 			JavaServer Pages. A Java EE container supports additional
 			functionality, for example, distribution of server load.
-		</para>
-		<para>Most of the modern Java web frameworks are based on servlets.
+		
+		Most of the modern Java web frameworks are based on servlets.
 			Popular Java web frameworks are GWT, JavaServer
 			Faces,
 			Struts and the
@@ -97,7 +97,6 @@
 			web frameworks usually require as a minimum
 			container a web
 			container.
-		</para>
-	</section>
+		
+
 	
-</section>

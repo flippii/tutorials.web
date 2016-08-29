@@ -2,7 +2,7 @@
 
 <article>
 	<articleinfo>
-		<title>Ajax with the Dojo Toolkit - Tutorial</title>
+=== Ajax with the Dojo Toolkit - Tutorial
 		<author>
 			<firstname>Lars</firstname>
 			<surname>Vogel and Jennifer Nerlich de Vogel</surname>
@@ -15,17 +15,17 @@
 		<pubdate>31.05.2009</pubdate>
 
 		<releaseinfo>
-			<para>Version 0.5</para>
+			Version 0.5
 		</releaseinfo>
 
 		
 
 		<abstract id="abstract">
-			<title>Dojo</title>
-			<para>
+	=== Dojo
+			
 				This article describes the usage of the Dojo toolkit for
 				JavaScript programming. Dojo is an Ajax toolkit.
-			</para>
+			
 
 		</abstract>
 	</articleinfo>

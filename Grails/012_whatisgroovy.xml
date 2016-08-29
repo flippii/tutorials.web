@@ -1,7 +1,7 @@
 
 <section id="groovy">
-	<title>Groovy</title>
-	<para>
+== Groovy
+	
 		Groovy is (almost) a superset of Java, e.g., most valid Java
 		constructs
 		are also valid Groovy constructs. Groovy has several
@@ -10,10 +10,9 @@
 		closures, native
 		support for lists and maps, a shorter syntax and much
 		more.
-	</para>
-	<para>
+	
+	
 		See
-		<ulink url="http://www.vogella.com/tutorials/Groovy/article.html">Groovy tutorial</ulink>
+		http://www.vogella.com/tutorials/Groovy/article.html">Groovy tutorial</ulink>
 		for an introduction into Groovy.
-	</para>
-</section>
+	

@@ -1,85 +1,84 @@
 <section id="uibinder">
-	<title>UIBinder</title>
-	<para> UIBinder allows to design GWT UI's declarative via XML. </para>
-	<para> Create a new GWT project "de.vogella.gwt.uibinder" with the
+== UIBinder
+	 UIBinder allows to design GWT UI's declarative via XML. 
+	 Create a new GWT project "de.vogella.gwt.uibinder" with the
 		package
-		"de.vogella.gwt.uibinder". </para>
-	<para> To use UIBinder you also need to inherit from
-		"com.google.gwt.uibinder.UiBinder" in your "gwt.xml" file.</para>
-	<para>
+		"de.vogella.gwt.uibinder". 
+	 To use UIBinder you also need to inherit from
+		"com.google.gwt.uibinder.UiBinder" in your "gwt.xml" file.
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/uibinder/De_vogella_gwt_uibinder.gwt.xml" />
-		</programlisting>
-	</para>
+				parse="text" href="../examples/uibinder/De_vogella_gwt_uibinder.gwt.xml[]
+----
+	
 
-	<para> In your client package create the file
-		"HelloWidgetWorld.ui.xml".</para>
+	 In your client package create the file
+		"HelloWidgetWorld.ui.xml".
 
 
-	<para>
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/uibinder/HelloWidgetWorld.ui.xml" />
-		</programlisting>
-	</para>
-	<para> Create the following class which uses the xml file for building
+				parse="text" href="../examples/uibinder/HelloWidgetWorld.ui.xml[]
+----
+	
+	 Create the following class which uses the xml file for building
 		actions. By convention the name of the xml must equal to the class
 		name
-		+ "ui.xml". </para>
+		+ "ui.xml". 
 
-	<para>
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/uibinder/HelloWidgetWorld.java" />
-		</programlisting>
-	</para>
+				parse="text" href="../examples/uibinder/HelloWidgetWorld.java[]
+----
+	
 
-	<para> Create also in the client package the file "MyHTMLTable.ui.xml"
+	 Create also in the client package the file "MyHTMLTable.ui.xml"
 		This creates a
 		HTML Panel which allow us to layout the UI controls
-		nicely. </para>
+		nicely. 
 
 
-	<para>
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/uibinder/MyHTMLTable.ui.xml" />
-		</programlisting>
-	</para>
-	<para> Create the corresponding "MyHTMLTable.java" file. </para>
+				parse="text" href="../examples/uibinder/MyHTMLTable.ui.xml[]
+----
+	
+	 Create the corresponding "MyHTMLTable.java" file. 
 
-	<para>
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/uibinder/MyHTMLTable.java" />
-		</programlisting>
-	</para>
-	<para> In your entry point you can now load the class as an composite.
-	</para>
+				parse="text" href="../examples/uibinder/MyHTMLTable.java[]
+----
+	
+	 In your entry point you can now load the class as an composite.
+	
 
-	<para>
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/uibinder/De_vogella_gwt_uibinder.java" />
-		</programlisting>
-	</para>
-	<para>Change the <filename>web.xml</filename> to the following.</para>
-	<para>
+				parse="text" href="../examples/uibinder/De_vogella_gwt_uibinder.java[]
+----
+	
+	Change the `web.xml` to the following.
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/uibinder/web.xml" />
-		</programlisting>
-	</para>
-	<para> The result should look like the following. </para>
+				parse="text" href="../examples/uibinder/web.xml[]
+----
+	
+	 The result should look like the following. 
 
-	<para>
+	
 		<mediaobject>
 			<imageobject>
 				<imagedata fileref="images/uibinder10.gif" />
 				
 			</imageobject>
 		</mediaobject>
-	</para>
+	
 
-</section>

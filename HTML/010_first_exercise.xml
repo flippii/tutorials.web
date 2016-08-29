@@ -1,5 +1,5 @@
 	<section id="exercise_firsthtml">
-		<title>Exercise: Create HTML page
+=== Exercise: Create HTML page
 		 HTML
 			files needs to be plain text. Use a simple text editor,
 			e.g., Notepad under Windows and save
@@ -14,8 +14,8 @@
 		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/example.html" />
-			</programlisting>
+					parse="text" href="./examples/example.html[]
+----
 		
 
 		Open this page in a browser, e.g., by
@@ -25,12 +25,9 @@
 		
 
 		
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/html10.gif" />
+image::html10.gif" />
 
 				
 			
 		
 
-</section>

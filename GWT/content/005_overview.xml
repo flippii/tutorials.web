@@ -1,14 +1,14 @@
 <section id="overview">
-	<title>Overview</title>
+== Overview
 	<section id="overview_gwt">
-		<title>Google Web Toolkit</title>
-		<para> The Google Web Toolkit (GWT) is a toolkit to develop Ajax web
+=== Google Web Toolkit
+		 The Google Web Toolkit (GWT) is a toolkit to develop Ajax web
 			application with Java. The programmer writes Java code and this code is
 			translated into
 			HTML and Javascript via the GWT compiler. 
-			</para>
+			
 
-		<para>
+		
 			
 			The
 			compiler creates browser
@@ -22,28 +22,28 @@
 			support for the browser back button
 			and a JUnit based
 			test framework.
-		</para>
+		
 
-		<para>
+		
 			GWT provides two modes
 			<itemizedlist>
 				<listitem>
-					<para>Development Mode: allows to debug the Java code of your
+					Development Mode: allows to debug the Java code of your
 						application directly via the standard Java debugger.
-					</para>
+					
 				</listitem>
-				<listitem><para>Web mode: the application is translated into HTML and
+				<listitem>Web mode: the application is translated into HTML and
 						Javascript
 						code and can be deployed to a web server.
-					</para>
+					
 				</listitem>
 			</itemizedlist>
-		</para>
+		
 
-	</section>
+
 	<section id="overview_module">
-		<title>Modules, Entry Points and HTML pages</title>
-		<para>
+=== Modules, Entry Points and HTML pages
+		
 			GWT applications are described as
 			modules. A module
 			"modulename" is
@@ -60,14 +60,14 @@
 			"com.google.gwt.core.client.EntryPoint" which defines the
 			method
 			onModuleLoad().
-		</para>
-		<para>The module is connected to a HTML page, which is called "host
+		
+		The module is connected to a HTML page, which is called "host
 			page". The code for a GWT web
 			application executes within
 			this HTML
 			document.
-		</para>
-		<para>
+		
+		
 			The HTML page can
 			define "div" containers to which
 			the GWT
@@ -77,15 +77,14 @@
 			components or the GWT UI
 			components are simply assigned to the 
 			body tag of the HTML page.
-		</para>
-	</section>
+		
+
 	<section id="overview_css">
-		<title>Using CSS</title>
-		<para> The look and feel of a GWT application can be customized via
+=== Using CSS
+		 The look and feel of a GWT application can be customized via
 			CSS files. Each widget in GWT can be given a HTML "div" container and can therefore be individually styled by CSS. 
 			You use the Java
 			method setStyle(String s) for this.
-		</para>
-	</section>
+		
 
-</section>
+

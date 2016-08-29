@@ -1,10 +1,9 @@
 <section id="prerequisites">
-	<title>Prerequisites</title>
-	<para>
+== Prerequisites
+	
 		The following description assumes that you are familiar with creating
 		web applications in Eclipse.
 		See
-		<ulink url="http://www.vogella.com/tutorials/EclipseWTP/article.html">Eclipse WTP development</ulink>
+		http://www.vogella.com/tutorials/EclipseWTP/article.html">Eclipse WTP development</ulink>
 		for an introduction into creating web applications with Eclipse.
-	</para>
-</section>
+	

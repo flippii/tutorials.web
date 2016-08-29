@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <article>
 	<articleinfo>
-		<title>Google App Engine - Python Development (with Eclipse) -
-			Tutorial</title>
+=== Google App Engine - Python Development (with Eclipse) -
+			Tutorial
 		<author>
 			<firstname>Lars</firstname>
 			<surname>Vogel</surname>
@@ -13,24 +13,24 @@
 		</copyright>
 		<pubdate>12.06.2011</pubdate>
 		<releaseinfo>
-			<para>Version 1.1</para>
+			Version 1.1
 		</releaseinfo>
 		
 		<abstract id="abstract">
-			<title>Google App Engine - Python</title>
-			<para> This article describes the creation of a web application with
+	=== Google App Engine - Python
+			 This article describes the creation of a web application with
 				Python on
-				the Google App Engine. </para>
-			<para>The example created in this article will be a simple Todo
+				the Google App Engine. 
+			The example created in this article will be a simple Todo
 				list.
 				The usage of the email API will get demonstrated. Also
 				conditions in
 				the Django web template and formating of dates will
 				get demonstrated.
-			</para>
-			<para> The article demonstrates optionally the usage of Eclipse for
+			
+			 The article demonstrates optionally the usage of Eclipse for
 				developing, running and debugging the Google App Engine application.
-			</para>
+			
 		</abstract>
 	</articleinfo>
 include::../web/advertisement/afterTableOfContent.adoc[]

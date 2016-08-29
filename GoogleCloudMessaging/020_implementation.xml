@@ -1,8 +1,8 @@
 <section id="implementation">
-	<title>Implementation Steps</title>
+== Implementation Steps
 	<section id="implementation_applicationserver">
-		<title>Application Server Registration</title>
-		<para>The application server needs to authenticate himself with
+=== Application Server Registration
+		The application server needs to authenticate himself with
 			the
 			C2DM servers. Via an email and password an authentication
 			token
@@ -16,40 +16,40 @@
 			server
 			with the C2DM
 			servers once he sends out messages.
-		</para>
-		<para>
+		
+		
 			For
 			example you can get the token for an registered email and
 			password via the following coding:
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/server/AuthenticationUtil.java" />
-			</programlisting>
-		</para>
-		<para> The token is periodically refreshed.</para>
+					parse="text" href="./examples/server/AuthenticationUtil.java[]
+----
+		
+		 The token is periodically refreshed.
 
-		<para>The above example is in Java. It is also possible to get the
+		The above example is in Java. It is also possible to get the
 			token via other http tools or programming languages. For
 			example you
 			can simulate the server via the command line tool with
 			the tool
 			curl.
-		</para>
-	</section>
+		
+
 
 
 	<section id="implementation_mobileregistration">
-		<title>Getting the registration ID for the mobile app</title>
-		<para>To register your Android app for the C2DM service you fire an
+=== Getting the registration ID for the mobile app
+		To register your Android app for the C2DM service you fire an
 			registration intent
 			"com.google.android.c2dm.intent.REGISTER". This
 			will trigger a service which will send the registration to the Google
 			C2DM
 			servers.
-		</para>
-		<para>
+		
+		
 			The
 			intent include an extra with the key "sender" and the email
 			address which was registered for the C2DM service. It also must
@@ -64,43 +64,43 @@
 			message
 			service. Replace in the following example "youruser@gmail.com"
 			which your email address.
-		</para>
+		
 
-		<para>
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/register/sendregister.txt" />
-			</programlisting>
-		</para>
+					parse="text" href="./examples/register/sendregister.txt[]
+----
+		
 
-		<para>The service will asynchronously register with Google and will
+		The service will asynchronously register with Google and will
 			send the "com.google.android.c2dm.intent.REGISTRATION" intent upon
 			successful registration. Your
 			application need to register an
 			Broadcast Receiver for this intent. This also requires the usage of a
 			permission based on your package as the Android system checks this
 			internally.
-		</para>
+		
 
-		<para>
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/register/C2DMRegistrationReceiver.java" />
-			</programlisting>
-		</para>
+					parse="text" href="./examples/register/C2DMRegistrationReceiver.java[]
+----
+		
 
-		<para> The ""AndroidManifest.xml looks like the following. Please note
+		 The ""AndroidManifest.xml looks like the following. Please note
 			that if you are using a different package that you have to adjust
 			this coding.
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/register/AndroidManifest.xml" />
-			</programlisting>
-		</para>
+					parse="text" href="./examples/register/AndroidManifest.xml[]
+----
+		
 
-		<para>The "com.google.android.c2dm.intent.REGISTRATION" intent
+		The "com.google.android.c2dm.intent.REGISTRATION" intent
 			includes a
 			registration
 			ID. Each registration ID
@@ -109,75 +109,75 @@
 			e.g. every
 			Android phone will receive
 			its own registration code.
-		</para>
-		<para> The C2DM may refresh this registration ID periodically but
+		
+		 The C2DM may refresh this registration ID periodically but
 			until a refreshment your application should store this ID for later
 			use.
-		</para>
+		
 
-		<para>
+		
 			After the Android app received the registration
 			ID it
 			has to send
 			this information to the application server. The application server
 			can use the registration ID to send a message to the device via the
 			C2DM servers from Google.
-		</para>
-		<para> For example the following code sends the deviceId and the
+		
+		 For example the following code sends the deviceId and the
 			registrationId to a server.
-		</para>
+		
 
-		<para>
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/register/sendToServer.txt" />
-			</programlisting>
-		</para>
-		<para>
+					parse="text" href="./examples/register/sendToServer.txt[]
+----
+		
+		
 			The
 			server
 			uses some persistence to store the registration IDs.
-		</para>
+		
 
 
 
-	</section>
+
 
 	<section id="c2dm_registermessage">
-		<title>Register Receiver for C2DM messages</title>
-		<para> Similar to registration of the registration receiver you need
+=== Register Receiver for C2DM messages
+		 Similar to registration of the registration receiver you need
 			to configure a message receiver. This could be the same or a
 			different receiver then the registration receiver. The following
 			shows
 			an example of an separate message receiver.
-		</para>
+		
 
-		<para>
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/register/C2DMMessageReceiver.java" />
-			</programlisting>
-		</para>
-		<para> In addition you need to register the message receiver in your
-			<filename>AndroidManifest.xml</filename> file.
-		</para>
+					parse="text" href="./examples/register/C2DMMessageReceiver.java[]
+----
+		
+		 In addition you need to register the message receiver in your
+			`AndroidManifest.xml` file.
+		
 
-		<para>
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/register/messagereceiver.txt" />
-			</programlisting>
-		</para>
+					parse="text" href="./examples/register/messagereceiver.txt[]
+----
+		
 
-	</section>
+
 	<section id="c2dm_sendmessage">
-		<title>Send messages</title>
-		<para>At this point your application server and your Android app are
+=== Send messages
+		At this point your application server and your Android app are
 			ready to use C2DM. Your server has his authentication token and the
 			registration ID of the app. And the mobile app has registered
 			Broadcast Receiver for receiving the message.
-		</para>
-		<para> To send a message to a device, the application server sends a
+		
+		 To send a message to a device, the application server sends a
 			HTTP POST request to the Google
 			C2DM servers. This HTTP GET request
 			contains the registration ID for this device and well as
@@ -186,20 +186,20 @@
 			tell Google that this server is allowed
 			to
 			send messages).
-		</para>
+		
 
-		<para>
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/server/MessageUtil.java" />
-			</programlisting>
-		</para>
-		<para> Once your server sends the message to the C2DM server this
+					parse="text" href="./examples/server/MessageUtil.java[]
+----
+		
+		 Once your server sends the message to the C2DM server this
 			server will queue the message until the device is available. The
 			message will be send to the device as a broadcast. Your application
 			needs to register for this broadcast event to receive the message.
-		</para>
-		<para> A received message is send to the registered broadcast receiver
+		
+		 A received message is send to the registered broadcast receiver
 			for "com.google.android.c2dm.intent.RECEIVE".
 			The data can be
 			received
@@ -211,9 +211,8 @@
 			"payload". The
 			receiver can extracts this data and can react
 			to it.
-		</para>
-
-	</section>
+		
 
 
-</section>
+
+

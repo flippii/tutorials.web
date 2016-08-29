@@ -1,8 +1,8 @@
 <section id="rest">
-	<title>REST - Representational State Transfer</title>
+== REST - Representational State Transfer
 	<section id="rest_overview">
-		<title>What is REST?</title>
-		<para>
+=== What is REST?
+		
 			REST is an architectural style which is
 			based on web-standards
 			and the HTTP protocol. REST was first
@@ -17,8 +17,8 @@
 			provides access to the resources and a REST client which
 			accesses and
 			modifies the REST resources.
-		</para>
-		<para>
+		
+		
 			Every resource should support
 			the HTTP
 			common
@@ -37,11 +37,11 @@
 			via the HTTP protocol
 			(content
 			negotiation).
-		</para>
-	</section>
+		
+
 	<section id="rest_httpmethods">
-		<title>HTTP methods</title>
-		<para>
+=== HTTP methods
+		
 			The
 			<wordasword>PUT</wordasword>
 			,
@@ -53,44 +53,44 @@
 			methods
 			are typical used in REST based architectures.
 			The following table gives an explanation of these operations.
-		</para>
-		<para>
+		
+		
 			<itemizedlist>
 				<listitem>
-					<para>
+					
 						GET defines a reading access of the resource without
 						side-effects. The resource is never changed via a GET request,
 						e.g., the request has no side effects (idempotent).
-					</para>
+					
 				</listitem>
 				<listitem>
-					<para>
+					
 						PUT
 						creates a new resource. It must also be idempotent.
-					</para>
+					
 				</listitem>
 				<listitem>
-					<para>
+					
 						DELETE
 						removes the resources. The operations are idempotent.
 						They
 						can get
 						repeated without leading to different results.
-					</para>
+					
 				</listitem>
 				<listitem>
-					<para>
+					
 						POST
 						updates an existing resource or creates a new resource.
-					</para>
+					
 				</listitem>
 			</itemizedlist>
-		</para>
-	</section>
+		
+
 
 	<section id="rest_webservices">
-		<title>RESTFul web services</title>
-		<para>
+=== RESTFul web services
+		
 			A RESTFul web services are based on HTTP methods and the
 			concept
 			of
@@ -105,7 +105,6 @@
 			set
 			of operations (POST, GET, PUT, DELETE)
 			which are supported.
-		</para>
-	</section>
+		
 
-</section>
+

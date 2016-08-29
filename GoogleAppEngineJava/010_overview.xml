@@ -1,14 +1,14 @@
 <section id="googleappengine">
-	<title>Google App Engine for Java (GAE/J)</title>
+== Google App Engine for Java (GAE/J)
 	<section id="googleappengine_overview">
-		<title>Overview</title>
-		<para>
+=== Overview
+		
 			Google offers a cloud
 			computing infrastructure called
-			<ulink url="http://appengine.google.com/"> Google App Engine</ulink>
+http://appengine.google.com/"> Google App Engine</ulink>
 			(App Engine) for creating and
 			running
-			<ulink url="http://www.vogella.com/tutorials/EclipseWTP/article.html">web applications</ulink>
+http://www.vogella.com/tutorials/EclipseWTP/article.html">web applications</ulink>
 			.
 			App Engine
 			allows the dynamic allocation of system
@@ -19,23 +19,23 @@
 			Currently
 			App Engine
 			supports
-			<ulink url="http://www.vogella.com/tutorials/GoogleAppEngine/article.html">Python</ulink>
+http://www.vogella.com/tutorials/GoogleAppEngine/article.html">Python</ulink>
 			and Java based applications. This includes
 			Java
 			Virtual Machine
 			(JVM)
 			based
 			languages, e.g.
-			<ulink url="http://www.vogella.com/tutorials/Groovy/article.html"> Groovy</ulink>
+http://www.vogella.com/tutorials/Groovy/article.html"> Groovy</ulink>
 			or
-			<ulink url="http://www.vogella.com/tutorials/Scala/article.html"> Scala</ulink>
+http://www.vogella.com/tutorials/Scala/article.html"> Scala</ulink>
 			. This article will cover the App Engine for Java (GAE/J)).
-		</para>
+		
 
-	</section>
+
 	<section id="googleappengine_standards">
-		<title>Standard API's via App Engine specific API's</title>
-		<para>
+=== Standard API's via App Engine specific API's
+		
 			The App Engine offers frequently standard Java API's and
 			App
 			Engine
@@ -47,13 +47,13 @@
 			Tomcat or
 			Jetty, you should only use
 			Java standard API. 
-		</para>
-	</section>
+		
+
 	<section id="googleappengine_technologies">
-		<title>AppEngine technologies</title>
-		<para>
+=== AppEngine technologies
+		
 			App Engine uses the
-			<ulink url="http://www.vogella.com/tutorials/Jetty/article.html">Jetty</ulink>
+http://www.vogella.com/tutorials/Jetty/article.html">Jetty</ulink>
 			servlet container to host
 			applications and
 			supports the Java Servlet
@@ -61,32 +61,29 @@
 			provides access to
 			databases via Java Data
 			Objects (JDO) and the
-			<ulink
-				url="http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html"> Java Persistence API (JPA)</ulink>
+http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html"> Java Persistence API (JPA)</ulink>
 			. In the background App Engine uses
-			<ulink
-				url="http://www.vogella.com/tutorials/GoogleTechnologies/article.html#bigtable"> Google Bigtable</ulink>
+http://www.vogella.com/tutorials/GoogleTechnologies/article.html#bigtable"> Google Bigtable</ulink>
 			as the distributed storage system for persisting application data.
-		</para>
-		<para>
+		
+		
 			Google provides
-			<ulink
-				url="http://www.vogella.com/tutorials/GoogleTechnologies/article.html#memcache"> Memcache</ulink>
+http://www.vogella.com/tutorials/GoogleTechnologies/article.html#memcache"> Memcache</ulink>
 			as a caching mechanism. Developers who want to code against the
 			standard Java API can use the JCache implementation (based on JSR
 			107).
-		</para>
-	</section>
+		
+
 	<section id="googleappengine_services">
-		<title>Services</title>
-		<para> The App Engine provides several services. For example the
+=== Services
+		 The App Engine provides several services. For example the
 			Blobstore allows to upload and store and serve large data objects
 			(blobs) with a limit of  2 Gigabyte. To create a blob you
-			upload a file via an HTTP request.   </para>
-	</section>
+			upload a file via an HTTP request.   
+
 	<section id="googleappengine_versions">
-		<title>Versions</title>
-		<para> Google App Engine supports the creation of several version of
+=== Versions
+		 Google App Engine supports the creation of several version of
 			your application. In the Admin Console you can select which version
 			should be active. Your active application "your-name" will be
 			accessible via the URL "http://your-name.appspot.com". Each version
@@ -95,12 +92,12 @@
 			are
 			accessable via "http://versionnumber.latest.your-name.appspot.com"
 			where version is for example "2" and "latest" is a fixed string.
-		</para>
-	</section>
-	<section id="googleappengine_restrictions">
-		<title>Restrictions</title>
+		
 
-		<para>
+	<section id="googleappengine_restrictions">
+=== Restrictions
+
+		
 			App Engine runs a version of Java 6 but does not provide all
 			Java
 			classes, for example
@@ -108,37 +105,37 @@
 			and most AWT classes
 			are not
 			supported. 
-			</para>
+			
 
-		<para> You cannot use <ulink url="http://www.vogella.com/tutorials/JavaConcurrency/article.html">Threads</ulink> or frameworks which uses Threads. You
+		 You cannot use http://www.vogella.com/tutorials/JavaConcurrency/article.html">Threads</ulink> or frameworks which uses Threads. You
 			can also not write to the filesystem and only read files which are
 			part of your application. Certain "java.lang.System" actions, e.g. gc()
 			or exit() will do nothing. You can not call JNI code. Reflection
 			is possible for your own classes and standard Java classes but your
 			cannot use reflection to access other classes outside your
-			application.  </para>
-		<para>
+			application.  
+		
 			See
 
-			<ulink url="http://code.google.com/appengine/docs/java/jrewhitelist.html"> Java Whitelist for
+http://code.google.com/appengine/docs/java/jrewhitelist.html"> Java Whitelist for
 				a full
 				list
 				of
 				supported
 				classes.</ulink>
-		</para>
-		<para> A servlet needs also to reply within 30 seconds otherwise a
-			"com.google.apphosting.api.DeadlineExceededException" is thrown. 	</para>
-	</section>
+		
+		 A servlet needs also to reply within 30 seconds otherwise a
+			"com.google.apphosting.api.DeadlineExceededException" is thrown. 	
+
 
 	<section id="googleappengine_quotes">
-		<title>Quotas</title>
-		<para>
+=== Quotas
+		
 
 			Google offers free hosting for websites which are not highly
 			frequented, e.g. 5 Millions page views. The price model for the
 			websites that exceed thier daily quota is listed on the
-			<ulink url="http://code.google.com/appengine/docs/billing.html"> Google billing
+http://code.google.com/appengine/docs/billing.html"> Google billing
 				documentation pages</ulink>
 			. The usage quotas
 			of the App Engine are constantly changing but, at
@@ -147,12 +144,11 @@
 			which translates
 			approx. in 6.5 CPU hours and 1 gigabyte of outbound
 			traffic.
-		</para>
+		
 
-		<para> Currently a user can create a maximum of 10 applications on the
+		 Currently a user can create a maximum of 10 applications on the
 			Google App Engine. The user can delete existing application in the
-			Admin Console under Application Settings. </para>
+			Admin Console under Application Settings. 
 
-	</section>
 
-</section>
+

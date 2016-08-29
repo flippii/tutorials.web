@@ -1,37 +1,32 @@
 <section id="grailseclipse">
-	<title>Using Eclipse for Grails development</title>
-	<para>
+== Using Eclipse for Grails development
+	
 		The following requires that Eclipse is
 		installed with the Groovy plug-in. Please see
-		<ulink url="http://www.vogella.com/tutorials/Groovy/article.html">
+		http://www.vogella.com/tutorials/Groovy/article.html">
 			Groovy Eclipse Plugin</ulink>
 		for more information.
-	</para>
-	<para>
+	
+	
 		After running <code>grails create-app</code>
-		you may notice the <filename>.project</filename>
-		and <filename>.classpath</filename> file.
+		you may notice the `.project`
+		and `.classpath` file.
 		These Eclipse related files are
 		created
 		automatically
 		and allow you to import the project into Eclipse.
 		Import
 		your project via
-			<menuchoice>
-				<guimenu>File</guimenu>
-				<guisubmenu>Import</guisubmenu>
-				<guisubmenu>General</guisubmenu>
-				<guisubmenu>Existing Project into Workspace</guisubmenu>
-			</menuchoice>
-		</para>
-	<para>
+menu:File[Import > General > Existing Project into Workspace]
+		
+	
 		<mediaobject>
 			<imageobject>
 				<imagedata fileref="images/eclipse10.gif" />
 			</imageobject>
 		</mediaobject>
-	</para>
-	<para>
+	
+	
 		The environment variable 
 		<property>GRAILS_HOME</property> may not be
 		set in Eclipse.
@@ -42,16 +37,15 @@
 		Variable</guibutton> and then <guibutton>Configure Variables</guibutton>. Press
 		<guibutton>New</guibutton> and add
 		<property>GRAILS_HOME</property>.
-	</para>
-	<para>
+	
+	
 		<tip>
 			At least for me the configuration dialog showed an error. I did
 			ignore this error and the re-compiled project did not show errors.
 		
-	</para>
-	<para>
+	
+	
 		A tighter integration of Grails is achieved by the
-		<ulink url="http://www.grails.org/STS+Integration">
+		http://www.grails.org/STS+Integration">
 			SpringSource Tool Suite (STS)</ulink>.
-	</para>
-</section>
+	

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <article>
 	<articleinfo>
-		<title>Introduction to Java Web development - Tutorial</title>
+=== Introduction to Java Web development - Tutorial
 		<author>
 			<firstname>Lars</firstname>
 			<surname>Vogel</surname>
@@ -11,18 +11,18 @@
 			<holder>vogella GmbH</holder>
 		</copyright>
 		<releaseinfo>
-			<para>Version 0.5</para>
+			Version 0.5
 		</releaseinfo>
 		<pubdate>30.09.2010</pubdate>
 		
 		<abstract id="abstract">
-			<title>Java Web technologies</title>
-			<para>This article gives an overview of the
+	=== Java Web technologies
+			This article gives an overview of the
 				standard web
 				technologies
 				for Java. It explains the terms web applications,
 				servlets, JSPs and
-				web container. </para>
+				web container. 
 		</abstract>
 	</articleinfo>
 	include::../web/advertisement/afterTableOfContent.adoc[]

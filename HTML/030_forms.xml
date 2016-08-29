@@ -1,5 +1,5 @@
 <section id="forms">
-	<title>Forms
+== Forms
 	
 		Forms are used to capture input from the user. The input of a
 		form is
@@ -16,8 +16,7 @@
 	
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/forms/form1.html" />
-			</programlisting>
+					parse="text" href="./examples/forms/form1.html[]
+----
 		
 
-</section>

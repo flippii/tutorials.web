@@ -1,12 +1,12 @@
 <section id="tutorial_serverapp">
-	<title>Tutorial: Create your server application</title>
-	<para> As described earlier the application server needs to get an
+== Tutorial: Create your server application
+	 As described earlier the application server needs to get an
 		authentication key via HTTPS. Afterwards it can send messages to
 		the
 		device via HTTP by supplying the authentication key and the
 		registration ID.
-	</para>
-	<para>
+	
+	
 		We will simulate the Server via a Java program. The
 		registration
 		ID of the device will be hard-coded into this app as we
@@ -14,78 +14,77 @@
 		possibility to reach this app via http. Keep in mind
 		that this is only
 		an example to make it simple to test C2DM.
-	</para>
-	<para> To store you credentials use the following class. </para>
-	<para>
+	
+	 To store you credentials use the following class. 
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/server/SecureStorage.java" />
-		</programlisting>
-	</para>
-	<para>
+				parse="text" href="./examples/server/SecureStorage.java[]
+----
+	
+	
 		Create a new Java project
 		"de.vogella.java.c2dm.server". Create the
 		following class. This class is an utility class to get the
 		authentication token from the Google server.
 
-		<para>
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/server/AuthenticationUtil.java" />
-			</programlisting>
-		</para>
-	</para>
+					parse="text" href="./examples/server/AuthenticationUtil.java[]
+----
+		
+	
 
 
-	<para>Create the following class "GetAuthenticationToken". This class
+	Create the following class "GetAuthenticationToken". This class
 		can be used to get the authentication token.
-	</para>
-	<para>
+	
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/server/GetAuthenticationToken.java" />
-		</programlisting>
-	</para>
-	<para> Run your GetAuthenticationToken class and copy the
+				parse="text" href="./examples/server/GetAuthenticationToken.java[]
+----
+	
+	 Run your GetAuthenticationToken class and copy the
 		authentication token from the command line.
-	</para>
-	<para> Create the following class and maintain your authentication
+	
+	 Create the following class and maintain your authentication
 		token
 		and your registration id.
-	</para>
+	
 
-	<para>
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/server/ServerConfiguration.java" />
-		</programlisting>
-	</para>
+				parse="text" href="./examples/server/ServerConfiguration.java[]
+----
+	
 
-	<para>Also create the following utility class which will allow to send
+	Also create the following utility class which will allow to send
 		messages to your device.
-	</para>
-	<para>
+	
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/server/MessageUtil.java" />
-		</programlisting>
-	</para>
+				parse="text" href="./examples/server/MessageUtil.java[]
+----
+	
 
-	<para>Finally create the following class "SendMessageToDevice" which
+	Finally create the following class "SendMessageToDevice" which
 		can send messages to your device.
-	</para>
+	
 
-	<para>
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/server/SendMessageToDevice.java" />
-		</programlisting>
-	</para>
-	<para> Run it. This should send a  message to your device and give
+				parse="text" href="./examples/server/SendMessageToDevice.java[]
+----
+	
+	 Run it. This should send a  message to your device and give
 		you the return code "200". On your device you should see a
 		notification and if you open it you should see the message displayed.
-	</para>
+	
 
 
 
-</section>

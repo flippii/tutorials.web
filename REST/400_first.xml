@@ -1,63 +1,51 @@
 <section id="firstjersey">
-	<title>Create your first RESTful Webservice</title>
+== Create your first RESTful Webservice
 	<section id="firstjersey_project">
-		<title>Create a new web project </title>
-		<para>
+=== Create a new web project 
+		
 			Create a new
 			<wordasword>Dynamic Web Project</wordasword>
 			called
 			<wordasword>com.vogella.jersey.first</wordasword>
 			.
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/jerseryfirst10.png" />
-				</imageobject>
-			</mediaobject>
-		</para>
+		
+		
+image::jerseryfirst10.png[]
+		
 
-		<para>
+		
 			Ensure that you create the
-			<filename>web.xml</filename>
+			`web.xml`
 			deployment descriptor.
-		</para>
+		
 
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/jerseryfirst20.png" />
-				</imageobject>
-			</mediaobject>
-		</para>
+		
+image::jerseryfirst20.png[]
+		
 
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/jerseryfirst30.png" />
-				</imageobject>
-			</mediaobject>
-		</para>
-	</section>
+		
+image::jerseryfirst30.png[]
+		
+
 	<section id="firstjersey_libraries">
-		<title>Configure jersey usage</title>
-		<para>
+=== Configure jersey usage
+		
 			See
 			<xref linkend="jerseyprojectsetup" />
 			for the setup.
-		</para>
-	</section>
+		
+
 
 	<section id="firstjersey_class">
-		<title>Java Class</title>
-		<para>Create the following class.</para>
-		<para>
+=== Java Class
+		Create the following class.
+		
 [source,java]
 -----
 include::res/first/Hello.java[]
 ----
-		</para>
-		<para>
+		
+		
 			This class
 			register itself as a get
 			resource via the
@@ -75,34 +63,34 @@ include::res/first/Hello.java[]
 			<code>@Path</code>
 			annotation that its service
 			is available under the
-			<parameter>hello</parameter>
+			`hello`
 			URL.
-		</para>
-		<para>
+		
+		
 			The browser will always request the HTML MIME type. To see the
 			text
 			version, you can use tool like
-			<ulink url="http://www.vogella.com/tutorials/Ubuntu/article.html#network_curl">curl</ulink>
+http://www.vogella.com/tutorials/Ubuntu/article.html#network_curl">curl</ulink>
 			.
-		</para>
-	</section>
+		
+
 	<section id="first_servletdispatcher">
-		<title>Define Jersey Servlet dispatcher</title>
-		<para>
+=== Define Jersey Servlet dispatcher
+		
 			You need to register Jersey as the servlet dispatcher for REST
 			requests. Open the file
-			<filename>web.xml</filename>
+			`web.xml`
 			and modify it to the following.
-		</para>
-		<para>
+		
+		
 			<programlisting language="xml">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/first/web.xml" />
-			</programlisting>
-		</para>
-		<para>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/first/web.xml[]
+----
+		
+		
 			The
 			parameter
-			<parameter>jersey.config.server.provider.packages</parameter>
+			`jersey.config.server.provider.packages`
 			defines in
 			which
 			package Jersey will look for the web service classes.
@@ -110,54 +98,51 @@ include::res/first/Hello.java[]
 			property must point to your resources
 			classes. The URL pattern
 			defines the part of the base URL your application will be placed.
-		</para>
-	</section>
+		
+
 
 	<section id="first_run">
-		<title>Run your rest service</title>
-		<para>
+=== Run your rest service
+		
 			Run you web application in Eclipse. See
-			<ulink url="http://www.vogella.com/tutorials/EclipseWTP/article.html">Eclipse WTP</ulink>
+http://www.vogella.com/tutorials/EclipseWTP/article.html">Eclipse WTP</ulink>
 			for details on how to run dynamic web applications.
-		</para>
-		<para>
+		
+		
 			You should be able to access your resources under the following
 			URL:
 			http://localhost:8080/com.vogella.jersey.first/rest/hello
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/jerseryfirstresult80.png"/>
+		
+		
+image::jerseryfirstresult80.png"/>
 				</imageobject>
 				<textobject>
 					<phrase>Result of the Jersey service</phrase>
 				</textobject>
 			</mediaobject>
-		</para>
-		<para>
+		
+		
 
 			This name
 			is
 			derived from the "display-name" defined in the
-			<filename>web.xml</filename>
+			`web.xml`
 			file,
 			augmented with the servlet-mapping URL-pattern and the
-			<parameter>hello</parameter>
+			`hello`
 			<code>@Path</code>
 			annotation from your class file.
 			You
 			should get
 			the message "Hello
 			Jersey".
-		</para>
-		<para>
+		
+		
 			The browser requests the HTML representation of your resource.
 			In the next chapter we are going to write a client
 			which will read
 			the XML representation.
-		</para>
-	</section>
+		
 
 
-</section>
+

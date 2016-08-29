@@ -1,226 +1,193 @@
 <section id="firstjsf">
-	<title>Your first JSF project</title>
-	<para> Our first JSF example will be a celsius to fahrenheit convertor.
-	</para>
+== Your first JSF project
+	 Our first JSF example will be a celsius to fahrenheit convertor.
+	
 	<section id="firstjsf_project">
-		<title>Create JSF Project</title>
-		<para> Create a new Dynamic Web Project "de.vogella.jsf.first". Under
-			"Configuration" select "JavaServer Faces v1.2".</para>
+=== Create JSF Project
+		 Create a new Dynamic Web Project "de.vogella.jsf.first". Under
+			"Configuration" select "JavaServer Faces v1.2".
 
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/firstjsf10.gif" />
+		
+image::firstjsf10.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-		<para>
-		</para>
-		<para>Press next until you see the following screen.  </para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/firstjsf20.gif" />
+		
+		
+		
+		Press next until you see the following screen.  
+		
+image::firstjsf20.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-		<para> The first time you create a JSF project you
+		
+		 The first time you create a JSF project you
 			need to install /
 			download a JSF implementation. Press the "Download
 			library..." button
-			and select the Apache Library and install it.</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/firstjsf30.gif" />
+			and select the Apache Library and install it.
+		
+image::firstjsf30.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
+		
 
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/firstjsf34.gif" />
+		
+image::firstjsf34.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
+		
 
-		<para> Press Manage libraries and create a library for JSTL. </para>
+		 Press Manage libraries and create a library for JSTL. 
 
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/firstjsf35.gif" />
+		
+image::firstjsf35.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/firstjsf36.gif" />
+		
+		
+image::firstjsf36.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/firstjsf37.gif" />
+		
+		
+image::firstjsf37.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/firstjsf38.gif" />
+		
+		
+image::firstjsf38.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/firstjsf39.gif" />
+		
+		
+image::firstjsf39.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/firstjsf40.gif" />
+		
+		
+image::firstjsf40.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
+		
 
-		<para>Click "Finish". Your project has been created</para>
-	</section>
+		Click "Finish". Your project has been created
+
 	<section id="firstjsf_review">
-		<title>Review the generated project</title>
-		<para>Review the <filename>web.xml</filename> file. It has an entry for the Faces Servlet
+=== Review the generated project
+		Review the `web.xml` file. It has an entry for the Faces Servlet
 			and for the servlet mapping. Also the file "faces-config.xml" has
 			been
-			created.</para>
-		<para>
+			created.
+		
 			<tip> To add the JSF settings to an existing dynamic web project,
 				right-click on your project, select Project Properties -> Project
 				Facets and add then JSF facet to your project.
-		</para>
-	</section>
+		
+
 	<section id="firstjsf_model">
-		<title>Domain Model</title>
-		<para>Create a package "de.vogella.jsf.first.model" and the class
-			"TemperatureConvertor".</para>
-		<para>
+=== Domain Model
+		Create a package "de.vogella.jsf.first.model" and the class
+			"TemperatureConvertor".
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/firstjsf/TemperatureConvertor.java" />
-			</programlisting>
-		</para>
-	</section>
-	<section id="firstjsf_managedbean">
-		<title>Define managed bean</title>
-		<para> Double-click on faces-config.xml in the WEB-INF directory and
-			select the tab "ManagedBeans".</para>
+					parse="text" href="../examples/firstjsf/TemperatureConvertor.java[]
+----
+		
 
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/managedbeans10.gif" />
+	<section id="firstjsf_managedbean">
+=== Define managed bean
+		 Double-click on faces-config.xml in the WEB-INF directory and
+			select the tab "ManagedBeans".
+
+		
+image::managedbeans10.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-		<para> Press add and maintain your class. </para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/managedbeans20.gif" />
+		
+		 Press add and maintain your class. 
+		
+image::managedbeans20.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/managedbeans22.gif" />
+		
+		
+image::managedbeans22.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-		<para>The result should look like the following:</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/managedbeans30.gif" />
+		
+		The result should look like the following:
+		
+image::managedbeans30.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-	</section>
+		
+
 	<section id="firstjsf_jsp">
-		<title>Create JSP</title>
-		<para>Select your project, right-click on it, select New -> JSP.
+=== Create JSP
+		Select your project, right-click on it, select New -> JSP.
 			Create the JSP page "Convertor.jsp". Use the "New JavaServer Faces
 			(JSF) Page (html)" template. 
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/firstjsf44.gif" />
+		
+		
+image::firstjsf44.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-		<para> Change the code to the following.</para>
-		<para>
+		
+		 Change the code to the following.
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/firstjsf/Convertor.jsp" />
-			</programlisting>
-		</para>
-		<para>
+					parse="text" href="../examples/firstjsf/Convertor.jsp[]
+----
+		
+		
 			<tip>
 				All JSF tag must be always be enclosed in a <![CDATA[<f:view> ]]>
 				tag.
 			
-		</para>
-	</section>
-	<section id="firstjsf_run">
-		<title>Run your webapplication</title>
-		<para> Select Convertor.jsp, right
-			mouse-click- >run as -> run on
-			server.</para>
+		
 
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/firstjsf50.gif" />
+	<section id="firstjsf_run">
+=== Run your webapplication
+		 Select Convertor.jsp, right
+			mouse-click- >run as -> run on
+			server.
+
+		
+image::firstjsf50.gif" />
 					
 				</imageobject>
 			</mediaobject>
-		</para>
-		<para>Congratulations. You should be able to use your JSF application.
-		</para>
-	</section>
+		
+		Congratulations. You should be able to use your JSF application.
+		
+
 	<section id="firstjsf_css">
-		<title>Layout via css</title>
-		<para> JFP application can get styles via css files. To load a style
+=== Layout via css
+		 JFP application can get styles via css files. To load a style
 			sheet include the following in your JSP page in the header section.
 			This then related to a mystyle.css file under your folder
-			WebContent/css..</para>
-		<para>
+			WebContent/css..
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/firstjsf/stylesheet.txt" />
-			</programlisting>
-		</para>
-	</section>
-</section>
+					parse="text" href="../examples/firstjsf/stylesheet.txt[]
+----
+		
+

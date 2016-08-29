@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <article>
 	<articleinfo>
-		<title>Grails Development - Tutorial</title>
+=== Grails Development - Tutorial
 		<author>
 			<firstname>Lars</firstname>
 			<surname>Vogel</surname>
@@ -12,16 +12,16 @@
 		</copyright>
 		<pubdate>08.12.2014</pubdate>
 		<releaseinfo>
-			<para>Version 1.1</para>
+			Version 1.1
 		</releaseinfo>
 		
 		<abstract id="abstract">
-			<title>Grails Webapplication</title>
+	=== Grails Webapplication
 
-			<para> This article explains how to build a Grails application.
+			 This article explains how to build a Grails application.
 				This
 				article is based on Java 1.6 and Grails 2.4.4.
-			</para>
+			
 		</abstract>
 	</articleinfo>
 include::../web/advertisement/afterTableOfContent.adoc[]

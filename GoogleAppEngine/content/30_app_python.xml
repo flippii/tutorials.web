@@ -1,198 +1,197 @@
 <section id="app_python">
-	<title>Developing your first application</title>
-	<para> In this part of the tutorial we will develop a small Todo list.
+== Developing your first application
+	 In this part of the tutorial we will develop a small Todo list.
 		This list will allow you to store todos, send out email reminders to
 		yourself and delete todos. You can also store a URL and a description
 		to each todo.
-	</para>
-	<para> I suggest to use Eclipse with Pydevas IDE as Python interprets
+	
+	 I suggest to use Eclipse with Pydevas IDE as Python interprets
 		intension
 		as inclination of blocks and therefore you may run into
 		problems
 		copying code from this tutorial if you use a standard text
 		editor.
-	</para>
-	<para>
+	
+	
 		<mediaobject>
 			<imageobject>
 				<imagedata fileref="images/todo10.gif" />
 				
 			</imageobject>
 		</mediaobject>
-	</para>
-	<para>
+	
+	
 		The source of this example is stored in project
 		"de.vogella.gae.python.todo" and can be browsed on
-		<ulink url="http://www.vogella.com/code.html">www.vogella.com source code</ulink>
-	</para>
+		http://www.vogella.com/code.html">www.vogella.com source code</ulink>
+	
 	<section id="app_python_dir">
-		<title>Directory</title>
-		<para> Create a new directory "googleappengine01", e.g.
+=== Directory
+		 Create a new directory "googleappengine01", e.g.
 			c:\temp\googleappengine01. All the following files must be created
 			within this directory.
-		</para>
-	</section>
+		
+
 	<section id="app_python_config">
-		<title>Configuration File</title>
-		<para> Create the following configuration file for your application.
+=== Configuration File
+		 Create the following configuration file for your application.
 			It define the application name, the runtime and defines the handler
 			script which should get invoked for a specific URL.
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/first/app.yaml" />
-			</programlisting>
-		</para>
-		<para> The script defines that all URL request will be handled by the
+					parse="text" href="../examples/first/app.yaml[]
+----
+		
+		 The script defines that all URL request will be handled by the
 			script "todo.py". It also defines two static directories in which
 			static content is stored which can also be served. Without this
 			definition the Google app engine would not deliver this content to
 			the webbrowser.
-		</para>
-	</section>
+		
+
 	<section id="app_python_application">
-		<title>Create the application</title>
-		<para>
+=== Create the application
+		
 			Python allows to define several classes in one source file. We are
 			going to create the following classes:
 			<itemizedlist>
 				<listitem>
-					<para>TodoModel: Defines the data model for your
+					TodoModel: Defines the data model for your
 						application.
-					</para>
+					
 				</listitem>
 				<listitem>
-					<para>MainPage: Serves as the main entry point, user
+					MainPage: Serves as the main entry point, user
 						validation is
 						checked here
-					</para>
+					
 				</listitem>
 				<listitem>
-					<para>New: This class will create the new Todo in the database
-					</para>
+					New: This class will create the new Todo in the database
+					
 				</listitem>
 				<listitem>
-					<para>Done: Marks the todo as complete and deletes it from the
+					Done: Marks the todo as complete and deletes it from the
 						database
-					</para>
+					
 				</listitem>
 				<listitem>
-					<para>Email: Sends the selected todo to yourself via email as
+					Email: Sends the selected todo to yourself via email as
 						a
 						reminder
-					</para>
+					
 				</listitem>
 			</itemizedlist>
-		</para>
-		<para>
+		
+		
 			<tip>Email notification does not work in the local version. This
 				feature is only available after the upload to the Google cloud.
 			
-		</para>
-		<para> Create the file "todo.py" with the following content. Study the
+		
+		 Create the file "todo.py" with the following content. Study the
 			source code; I tried to document it well in the hope that it is
 			self-explaining.
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/first/todo.py" />
-			</programlisting>
-		</para>
-		<para> This class MainPage uses a HTML template "index.html" for the
+					parse="text" href="../examples/first/todo.py[]
+----
+		
+		 This class MainPage uses a HTML template "index.html" for the
 			rendering. Create the following file.
-		</para>
-		<para>
+		
+		
 			<tip> This uses the Django template language. See the appendix for an
 				weblink for the Django template language.
 			
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/first/index.html" />
-			</programlisting>
-		</para>
-		<para>Also create the directory css and put in this file
+					parse="text" href="../examples/first/index.html[]
+----
+		
+		Also create the directory css and put in this file
 			"main.css".
 			This is the style sheet used to make index.html "pretty".
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/first/main.css" />
-			</programlisting>
-		</para>
-		<para> Optional you can put a graphic "todo.png" into the images
+					parse="text" href="../examples/first/main.css[]
+----
+		
+		 Optional you can put a graphic "todo.png" into the images
 			directory.
-		</para>
-	</section>
+		
+
 	<section id="app_python_run">
-		<title>Run your application</title>
-		<para> Switch to a command line. Switch to the directory which
+=== Run your application
+		 Switch to a command line. Switch to the directory which
 			contains your application directory. Start your application locally
 			with the following command.
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/first/start.txt" />
-			</programlisting>
-		</para>
-		<para> Switch to a browser and access your local host via:
+					parse="text" href="../examples/first/start.txt[]
+----
+		
+		 Switch to a browser and access your local host via:
 			http://localhost:8080/
-		</para>
-		<para>
+		
+		
 			<tip> You can edit your python source code and just refresh the
 				browser to see the updates.
 			
-		</para>
-		<para>
+		
+		
 			<tip>To stop the server press Ctrl+Break on Windows, Unix and Linux
 				using the standard Ctrl+C.
 			
-		</para>
-	</section>
+		
+
 	<section id="app_python_clean">
-		<title>Clean your test data</title>
-		<para> The local installation will store your test data until you tell
+=== Clean your test data
+		 The local installation will store your test data until you tell
 			the engine to delete the test data. Use therefore the
 			--clear_datastore option during startup.
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/first/clear.txt" />
-			</programlisting>
-		</para>
-	</section>
+					parse="text" href="../examples/first/clear.txt[]
+----
+		
+
 	<section id="app_python_upload">
-		<title>Deploy your application</title>
-		<para>
+=== Deploy your application
+		
 			Now deploy your application to the Google cloud. Open the following
 			URL
-			<ulink url="http://appengine.google.com/"> http://appengine.google.com/</ulink>
+http://appengine.google.com/"> http://appengine.google.com/</ulink>
 			and login with your Google User. Press the button "Create an
 			application".
-		</para>
-		<para> You need then to verify your account via an SMS.</para>
-		<para> Create an application name. You have to choose one which is
+		
+		 You need then to verify your account via an SMS.
+		 Create an application name. You have to choose one which is
 			still available. After you found one you need to change the
 			application in the app.yaml file to this new name.
-		</para>
-		<para>Use now the command line to upload your application.</para>
-		<para>
+		
+		Use now the command line to upload your application.
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/first/deploy.txt" />
-			</programlisting>
-		</para>
-		<para>
+					parse="text" href="../examples/first/deploy.txt[]
+----
+		
+		
 			Thats it. You should now be able to find your application at
 			http://yourname.appspot.com/. For example this example can be found
 			at
-			<ulink url="http://myvogella.appspot.com/"> http://myvogella.appspot.com/</ulink>
-		</para>
-	</section>
-</section>
+http://myvogella.appspot.com/"> http://myvogella.appspot.com/</ulink>
+		
+

@@ -1,5 +1,5 @@
 <section id="json_javascript">
-	<title>Java Script
+== Java Script
 
 	 The following is an example of an JSON object and its usage in
 		JavaScript. You evaluate the JSON via the function eval and can then
@@ -10,7 +10,7 @@
 	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/json/json.html" />
-		</programlisting>
+				parse="text" href="./examples/json/json.html[]
+----
 	
-</section>
+

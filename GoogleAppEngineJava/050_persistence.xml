@@ -1,22 +1,18 @@
 <section id="jpapersistence">
-	<title>Persistence with JPA</title>
-		<para>
+== Persistence with JPA
+		
 			GAE/J supports
-			<ulink
-				url="http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html"> JPA</ulink> (Java Persistence API)
+http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html"> JPA</ulink> (Java Persistence API)
 			1.0 for persisting data. As all data on the GAE/J are
 			stored in
 			Bigtable
 			some features of JPA are not supported. See
-			<ulink
-				url="http://code.google.com/intl/de-DE/appengine/docs/java/datastore/usingjpa.html"> JPA on GAE/J</ulink>
+http://code.google.com/intl/de-DE/appengine/docs/java/datastore/usingjpa.html"> JPA on GAE/J</ulink>
 			for details.
 			Alternatively to JPA you can also use JDO or the low-level API of the App Engine. The
 			datastorage facility is described in
-			<ulink
-				url="http://code.google.com/appengine/docs/java/datastore/overview.html">Datastore Java API Overview</ulink>
+http://code.google.com/appengine/docs/java/datastore/overview.html">Datastore Java API Overview</ulink>
 			.
-		</para>
+		
 
 
-</section>

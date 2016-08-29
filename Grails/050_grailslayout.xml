@@ -1,39 +1,38 @@
 <section id="grailslayout">
-	<title>Change the layout of your Grails application</title>
+== Change the layout of your Grails application
 	<section id="grailslayout_s2a">
-		<title>Changing the generated views</title>
-		<para>
+=== Changing the generated views
+		
 			If you are not satisfied with the order of the fields, you can
 			change the views directly. For example in the following view
 			I did change the order of the fields so that name is
 			displayed before comment.
-		</para>
-		<para>
+		
+		
 			<programlisting language="HTML">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/view/create.gsp" />
-			</programlisting>
-		</para>
-	</section>
+					parse="text" href="./examples/view/create.gsp[]
+----
+		
+
 
 	<section id="grailslayout_s2b">
-		<title>Using CSS</title>
-		<para>
+=== Using CSS
+		
 			Grails created the default CSS style sheets under the
-			directory <filename>web-app/css/main.css</filename>
-		</para>
-		<para>
+			directory `web-app/css/main.css`
+		
+		
 			You can directly change the main.css to make your
 			application look different. For example if the feedback
 			field should be larger then the name field add then
 			following to main.css.
-		</para>
-		<para>
+		
+		
 			<programlisting language="CSS">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/css/main.css" />
-			</programlisting>
-		</para>
-	</section>
+					parse="text" href="./examples/css/main.css[]
+----
+		
 
-</section>
+

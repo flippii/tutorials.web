@@ -1,5 +1,5 @@
 <section id="xhtml">
-	<title>XHTML
+== XHTML
 	
 		XHTML is similar to HTML but much stricter. XHTML defines the
 		following strict requirements:
@@ -25,4 +25,3 @@
 		standard HTML. A document served as "text/html" must be a HTML document, and a document served with
 		an XML MIME type such as "application/xhtml+xml" must conform to the
 		requirements of HML.
-</section>

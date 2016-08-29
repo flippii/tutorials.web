@@ -1,25 +1,23 @@
 <section id="dojoresources">
-	<title>Links and Literature</title>
+== Links and Literature
 
-	<para>
-		<ulink url="http://www.w3.org/TR/XMLHttpRequest/">
+	
+		http://www.w3.org/TR/XMLHttpRequest/">
 			http://www.w3.org/TR/XMLHttpRequest</ulink>
 		W3-Consortium on XMLHttpRequest
-	</para>
+	
 
-	<para>
-		<ulink url="http://dojotoolkit.org/">
+	
+		http://dojotoolkit.org/">
 			http://dojotoolkit.org</ulink>
 		The Dojo Toolkit
-	</para>
+	
 
-	<para>
-		<ulink
-			url="http://www-128.ibm.com/developerworks/web/library/wa-aj-basics2/">
+	
+http://www-128.ibm.com/developerworks/web/library/wa-aj-basics2/">
 			http://www-128.ibm.com/developerworks/web/library/wa-aj-basics2</ulink>
 		IBM article about Dojo
-	</para>
+	
 
 
 
-</section>

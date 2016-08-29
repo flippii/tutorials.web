@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <article>
 	<articleinfo>
-		<title>GWT - Using external jars / Java Projects - Tutorial</title>
+=== GWT - Using external jars / Java Projects - Tutorial
 		<author>
 			<firstname>Lars</firstname>
 			<surname>Vogel</surname>
@@ -12,17 +12,17 @@
 		</copyright>
 		<pubdate>06.08.2010</pubdate>
 		<releaseinfo>
-			<para>Version 1.9</para>
+			Version 1.9
 		</releaseinfo>
 
 		
 
 		<abstract id="abstract">
-			<title>GWT Tutorial</title>
-			<para> This tutorial describes how to use external jars or Java projects in GWT. The article
+	=== GWT Tutorial
+			 This tutorial describes how to use external jars or Java projects in GWT. The article
 				was developed
 				using JDK 1.6,
-				GWT 2.0 and Eclipse 3.6 (Helios)).</para>
+				GWT 2.0 and Eclipse 3.6 (Helios)).
 		</abstract>
 	</articleinfo>
 include::../web/advertisement/afterTableOfContent.adoc[]

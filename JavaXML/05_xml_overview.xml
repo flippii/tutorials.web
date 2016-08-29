@@ -1,7 +1,7 @@
 <section id="xml_overview">
-	<title>XML Introduction
+== XML Introduction
 	<section id="xml_overview_s2a">
-		<title>XML Overview
+=== XML Overview
 		
 			XML is the abbreviation for
 			<wordasword>Extensible Markup Language</wordasword>
@@ -51,9 +51,9 @@
 			and
 			is valid according to the schema.
 		
-	</section>
+
 	<section id="xml_comparisionwithotherformats">
-		<title>Comparison of XML to other formats
+=== Comparison of XML to other formats
 
 		
 			XML has the following characteristics which makes processing it via
@@ -88,21 +88,21 @@
 			frequently used to
 			replace XML if the data throughput is important.
 		
-	</section>
+
 
 	<section id="xml_overview_s2b">
-		<title>XML Example
+=== XML Example
 		The following is a valid, well-formed XML file.
 		
 			<programlisting language="xml">
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/xmlintro/firstxmlfile.txt" />
-			</programlisting>
+					parse="text" href="./examples/xmlintro/firstxmlfile.txt[]
+----
 		
-	</section>
+
 
 	<section id="xml_overview_s2c">
-		<title>XML Elements
+=== XML Elements
 		
 			An XML document always starts with a
 			<code>prolog</code>
@@ -124,7 +124,7 @@
 
 				<![CDATA[ <flag/> ]]>
 		
-	</section>
+
 
 	
 		Comments in XML are defined as:
@@ -132,4 +132,4 @@
 	
 
 
-</section>
+

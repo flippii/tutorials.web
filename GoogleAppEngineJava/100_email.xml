@@ -1,55 +1,55 @@
 <section id="email">
-	<title>Email handling</title>
-	<para> AppEngine allows your application to send and receive emails. We
+== Email handling
+	 AppEngine allows your application to send and receive emails. We
 		will use the receive email feature
 		to be able to receive new TODOs via
 		email.
-	</para>
+	
 
-	<para>
+	
 		To receive emails in your application you have to declare that
 		your application is allowed to use the mail
 		service. Add
 		the service
 		"mail" to
 		your "appengine-web.xml".
-	</para>
+	
 
-	<para>
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/mail/appengine-web.xml" />
-		</programlisting>
-	</para>
-	<para>
+				parse="text" href="./examples/mail/appengine-web.xml[]
+----
+	
+	
 			After redeploying your app you can check in the admin console of
 			the
 			appengine under Application Settings if incoming email is
 			allowed.
-			<para>
+			
 				<mediaobject>
 					<imageobject>
 						<imagedata fileref="images/admin10.gif" />
 						
 					</imageobject>
 				</mediaobject>
-			</para>
+			
 
-	</para>
+	
 
-	<para>
+	
 		After defining that your application can receive email you need
 		to
 		define the email address for your application. The email address would be:
-	<para>
-	<para>
+	
+	
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/email/address.txt" />
-			</programlisting>
-		</para>	
+					parse="text" href="./examples/email/address.txt[]
+----
+			
 		
-	</para>
+	
 		
 		This address follows
 		the pattern: "user@domain". The domainis based on
@@ -61,11 +61,11 @@
 		You can add use any
 		user you want
 		as long as you provide a mapping to a
-		servlet in <filename>web.xml</filename>.
-	</para>
-	<para>
+		servlet in `web.xml`.
+	
+	
 		Via
-		the <filename>web.xml</filename> you define which servlet
+		the `web.xml` you define which servlet
 		answers to which user.
 		The url
 		pattern must start with "/_ah/mail/" to
@@ -74,38 +74,37 @@
 		mapping for receiving emails. The url
 		pattern can  include
 		wildcards. 
-	</para>
-	<para>We will define that one servlet receives the email for all users.
+	
+	We will define that one servlet receives the email for all users.
 		Add the following servlet
-		mappings to your <filename>web.xml</filename>, make sure you
+		mappings to your `web.xml`, make sure you
 		replace the string
-		"applicationid" with your real id. " </para>
+		"applicationid" with your real id. " 
 
-	<para>
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/mail/web.xml" />
-		</programlisting>
-	</para>
-	<para> Create the following servlet which will process your email.
-	</para>
-	<para>
+				parse="text" href="./examples/mail/web.xml[]
+----
+	
+	 Create the following servlet which will process your email.
+	
+	
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/mail/EmailServlet.java" />
-		</programlisting>
-	</para>
+				parse="text" href="./examples/mail/EmailServlet.java[]
+----
+	
 
-	<para> To test your email functionality start your application and open
+	 To test your email functionality start your application and open
 		the admin console on "http://localhost:8888/_ah/admin/". Select
 		Inbound Mail and maintain some test data. Make sure the To email
-		address match the servlet mapping for the email address. </para>
+		address match the servlet mapping for the email address. 
 
-	<para> Deploy your application. Send an email to
+	 Deploy your application. Send an email to
 		"whatever@applicationid.appspotmail.com". Login to your application.
 		You should get a new Todo
 		with the summary of the email header and the
 		description of the email
-		body. </para>
+		body. 
 
-</section>

@@ -1,109 +1,99 @@
 <section id="secondjsf">
-	<title>Your second JSF application</title>
-	<para> This second JSF application will add validation, resource
+== Your second JSF application
+	 This second JSF application will add validation, resource
 		bundles and navigation as additional functionality.
-	</para>
+	
 	<section id="secondjsf_project">
-		<title>Create JSF Project</title>
-		<para> Create a new Dynamic Web Project "de.vogella.jsf.starter".
-		</para>
-	</section>
+=== Create JSF Project
+		 Create a new Dynamic Web Project "de.vogella.jsf.starter".
+		
+
 	<section id="secondjsf_model">
-		<title>Domain model</title>
-		<para> Create a new package de.vogella.jsf.starter.model and the
+=== Domain model
+		 Create a new package de.vogella.jsf.starter.model and the
 			following class.
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/secondjsf/User.java" />
-			</programlisting>
-		</para>
-		<para>
+					parse="text" href="../examples/secondjsf/User.java[]
+----
+		
+		
 			<tip> Please note that we are hard-coding that only user tester with
 				password tester can login.
 			
-		</para>
-		<para> Create the following class.</para>
-		<para>
+		
+		 Create the following class.
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/secondjsf/Card.java" />
-			</programlisting>
-		</para>
-		<para>
+					parse="text" href="../examples/secondjsf/Card.java[]
+----
+		
+		
 			<tip> The class Card contains currently some controller code. The
 				next chapter will demonstrate how to keep your model code clean and
 				how to use controllers directly.
 			
-		</para>
-	</section>
+		
+
 	<section id="secondjsf_managedbeans">
-		<title>Register your managed beans</title>
-		<para> Double-click on faces-config.xml and select the tab
+=== Register your managed beans
+		 Double-click on faces-config.xml and select the tab
 			"ManagedBeans". Register your User.java and Card.java as managed
 			beans.
-		</para>
-	</section>
+		
+
 	<section id="secondjsf_validators">
-		<title>Validators</title>
-		<para> JSP allows to define validators which allows to check certain
+=== Validators
+		 JSP allows to define validators which allows to check certain
 			values which are placed in the UI. Create therefore the following
 			class.
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/secondjsf/LoginValidator.java" />
-			</programlisting>
-		</para>
-		<para> Select your faces-config.xml and select the tab Component.
+					parse="text" href="../examples/secondjsf/LoginValidator.java[]
+----
+		
+		 Select your faces-config.xml and select the tab Component.
 			Select Validators and press Add.
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/validator10.gif" />
+		
+		
+image::validator10.gif[]
+		
+		
+image::validator20.gif[]
+		
 
-				</imageobject>
-			</mediaobject>
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/validator20.gif" />
-
-				</imageobject>
-			</mediaobject>
-		</para>
-	</section>
 	<section id="secondjsf_resourcebundle">
-		<title>Resource bundle for messages</title>
-		<para> With JSP it is easy to use resource bundles for the static text
+=== Resource bundle for messages
+		 With JSP it is easy to use resource bundles for the static text
 			in your JSP application. Create the following file
 			"messages.properties" in your source folder under the package
 			"de.vogella.jsf.starter".
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/secondjsf/messages.properties" />
-			</programlisting>
-		</para>
-	</section>
+					parse="text" href="../examples/secondjsf/messages.properties[]
+----
+		
+
 	<section id="secondjsf_firstjsp">
-		<title>JavaServer Page with JSF components</title>
-		<para> Create a new JSP page "LoginView.jsp" and change the code to
+=== JavaServer Page with JSF components
+		 Create a new JSP page "LoginView.jsp" and change the code to
 			the following:
-		</para>
-		<para>
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/secondjsf/LoginView.jsp" />
-			</programlisting>
-		</para>
-		<para> Lets explain a few fields.</para>
-		<para>
+					parse="text" href="../examples/secondjsf/LoginView.jsp[]
+----
+		
+		 Lets explain a few fields.
+		
 
 .Table Title
 |===
@@ -171,108 +161,77 @@
 					
 				
 			|===
-		</para>
-		<para> Create another JSP "Trainer.jsp" with the following code.
-		</para>
-		<para>
+		
+		 Create another JSP "Trainer.jsp" with the following code.
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/secondjsf/Trainer.jsp" />
-			</programlisting>
-		</para>
-		<para> Create another JSP FailedLogin.jsp with the following code.
-		</para>
-		<para>
+					parse="text" href="../examples/secondjsf/Trainer.jsp[]
+----
+		
+		 Create another JSP FailedLogin.jsp with the following code.
+		
+		
 			<programlisting>
 				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/secondjsf/FailedLogin.jsp" />
-			</programlisting>
-		</para>
-	</section>
+					parse="text" href="../examples/secondjsf/FailedLogin.jsp[]
+----
+		
+
 	<section id="navigationrule">
-		<title>Navigation Rule</title>
-		<para> Select your faces-config.xml and select the tab "Navigation
+=== Navigation Rule
+		 Select your faces-config.xml and select the tab "Navigation
 			Rule". Make the palette available if necessary.
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/navigationrule10.gif" />
-
-				</imageobject>
-			</mediaobject>
-		</para>
-		<para> Select Page and click in the workarea. Add LoginView and
+		
+		
+image::navigationrule10.gif[]
+		
+		 Select Page and click in the workarea. Add LoginView and
 			Trainer to the workspace.
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/navigationrule20.gif" />
-
-				</imageobject>
-			</mediaobject>
-		</para>
-		<para> Click on Link, then on LoginView and then on Trainer. You
+		
+		
+image::navigationrule20.gif[]
+		
+		 Click on Link, then on LoginView and then on Trainer. You
 			should have now an arrow which indicates a navigation rule.
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/navigationrule30.gif" />
-
-				</imageobject>
-			</mediaobject>
-		</para>
-		<para>Click in the Palette on Select. Select then the arrow and the
+		
+		
+image::navigationrule30.gif[]
+		
+		Click in the Palette on Select. Select then the arrow and the
 			properities view. Input "success" in the From – Outcome
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/navigationrule40.gif" />
-
-				</imageobject>
-			</mediaobject>
-		</para>
-		<para>
+		
+		
+image::navigationrule40.gif[]
+		
+		
 			<tip> The user bean return the String success. In the navigation rule
 				you now defined that if we receive "success" then we should be going
 				to the next page.
 			
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/navigationrule50.gif" />
-
-				</imageobject>
-			</mediaobject>
-		</para>
-		<para> Add a navigation rule so that in the case the user does not use
+		
+		
+image::navigationrule50.gif[]
+		
+		 Add a navigation rule so that in the case the user does not use
 			the right user / password you send him to the failure page.
-		</para>
-	</section>
+		
+
 	<section id="secondjsf_run">
-		<title>Run your webapplication</title>
-		<para> To run your webapplication, select LoginView.jsp, right
+=== Run your webapplication
+		 To run your webapplication, select LoginView.jsp, right
 			mouse-click- >run as -> run on server.
-		</para>
-		<para>
+		
+		
 			<tip> Remember that we are hard-coding that only user "tester" with
 				password "tester" can login. Try another user this should not work.
 			
-		</para>
-		<para> You should be able to login with the right user and move to the
+		
+		 You should be able to login with the right user and move to the
 			next page.
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/secondjsf90.gif" />
+		
+		
+image::secondjsf90.gif[]
+		
 
-				</imageobject>
-			</mediaobject>
-		</para>
-	</section>
-</section>

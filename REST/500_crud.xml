@@ -1,29 +1,29 @@
 <section id="crud">
-	<title>CRUD RESTful webservice</title>
-	<para>
+== CRUD RESTful webservice
+	
 		This section creates a CRUD (Create, Read, Update, Delete)
 		restful web service. It will allow to maintain a list
 		of TODOs in your
 		web application via HTTP calls.
-	</para>
+	
 	<section id="crud_project">
-		<title>Project</title>
-		<para>
+=== Project
+		
 			Create a new dynamic project called
 			<wordasword>com.vogella.jersey.todo</wordasword>
 			and add
 			the Jersey libs. Change the
-			<filename>web.xml</filename>
+			`web.xml`
 			file to the following.
-		</para>
-		<para>
+		
+		
 			<programlisting language="xml">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/todo/web.xml" />
-			</programlisting>
-		</para>
-		<para>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/todo/web.xml[]
+----
+		
+		
 			Create the following data model and a
-			<ulink url="http://www.vogella.com/tutorials/DesignPatternSingleton/article.html">Singleton</ulink>
+http://www.vogella.com/tutorials/DesignPatternSingleton/article.html">Singleton</ulink>
 			which serves as the data provider for the model. We use the
 			implementation based on an enumeration. Please see the
 			link for
@@ -31,96 +31,92 @@
 			<code>Todo</code>
 			class is
 			annotated with a JAXB annotation. See
-			<ulink url="http://www.vogella.com/tutorials/JavaXML/article.html">Java and XML</ulink>
+http://www.vogella.com/tutorials/JavaXML/article.html">Java and XML</ulink>
 			to learn about JAXB.
-		</para>
-		<para>
+		
+		
 [source,java]
 -----
 include::res/todo/Todo.java[]
 ----
-		</para>
-		<para>
+		
+		
 [source,java]
 -----
 include::res/todo/TodoDao.java[]
 ----
-		</para>
-	</section>
+		
+
 
 	<section id="crud_webpage">
-		<title>Create a simple HTML form</title>
-		<para>
+=== Create a simple HTML form
+		
 			The REST service can be used via HTML forms. The following HTML
 			form
 			will allow to post new data to the service. Create
 			the following
 			page
 			called
-			<filename>create_todo.html</filename>
+			`create_todo.html`
 			in the
-			<filename class="directory">WebContent</filename>
+			<filename class="directory">WebContent`
 			folder.
-		</para>
-		<para>
+		
+		
 			<programlisting language="html">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/todo/create_todo.html" />
-			</programlisting>
-		</para>
-	</section>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/todo/create_todo.html[]
+----
+		
+
 	<section id="crud_class">
-		<title>Rest Service</title>
-		<para>
+=== Rest Service
+		
 			Create the following classes which will be used as REST
 			resources.
-		</para>
-		<para>
+		
+		
 [source,java]
 -----
 include::res/todo/TodoResource.java[]
 ----
-		</para>
-		<para>
+		
+		
 [source,java]
 -----
 include::res/todo/TodosResource.java[]
 ----
-		</para>
-		<para>
+		
+		
 			This TodosResource uses the
 			<code>@PathParam</code>
 			annotation to define that the
-			<parameter>id</parameter>
+			`id`
 			is inserted as parameter.
-		</para>
-	</section>
+		
+
 
 	<section id="crud_run">
-		<title>Run</title>
-		<para>
+=== Run
+		
 			Run you web application in Eclipse and test the availability of
 			your REST service under:
-			<ulink url="http://localhost:8080/com.vogella.jersey.todo/rest/todos">
+http://localhost:8080/com.vogella.jersey.todo/rest/todos">
 				http://localhost:8080/com.vogella.jersey.todo/rest/todos
 			</ulink>
 			. You should
 			see the XML representation of your TODO items.
-		</para>
-		<para>
-			<mediaobject>
-				<imageobject>
-					<imagedata fileref="images/todoserver10.gif" />
-				</imageobject>
-			</mediaobject>
-		</para>
-		<para>
+		
+		
+image::todoserver10.gif[]
+		
+		
 			To see the count of TODO items use
-			<ulink url="http://localhost:8080/com.vogella.jersey.todo/rest/todos/count">
+http://localhost:8080/com.vogella.jersey.todo/rest/todos/count">
 				http://localhost:8080/com.vogella.jersey.todo/rest/todos/count
 			</ulink>
 			to see an existing TODO use
 			"http://localhost:8080/com.vogella.jersey.todo/rest/todos/{id}", e.g.,
-			<ulink url="http://localhost:8080/com.vogella.jersey.todo/rest/todos/1">
+http://localhost:8080/com.vogella.jersey.todo/rest/todos/1">
 				http://localhost:8080/com.vogella.jersey.todo/rest/todos/1
 			</ulink>
 			to see
@@ -128,37 +124,36 @@ include::res/todo/TodosResource.java[]
 			<property>1</property>
 			. We currently have only TODOs with
 			the ids 1 and 2, all other requests will result in an HTTP error code.
-		</para>
-		<para>
+		
+		
 			Please note that with the browser you can only issue HTTP GET
 			requests. The next chapter will use the Jersey
 			client libraries to
 			issue get, post and delete.
-		</para>
-	</section>
+		
+
 
 	<section id="crud_client">
-		<title>Create a client</title>
-		<para>
+=== Create a client
+		
 			To test your service can you create new class in your server project. This project has already all required libs in
 			the classpath, so this is faster than creating a new project.
-		</para>
-		<para>Create the following class.</para>
-		<para>
+		
+		Create the following class.
+		
 [source,java]
 -----
 include::res/todo/Tester.java[]
 ----
-		</para>
-	</section>
+		
+
 
 	<section id="crud_html">
-		<title>Using the REST service via HTML page</title>
-		<para>
+=== Using the REST service via HTML page
+		
 			The above example contains a form which calls a post method of
 			your rest service.
-		</para>
-	</section>
+		
 
 
-</section>
+

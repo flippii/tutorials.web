@@ -1,28 +1,27 @@
 <section id="webcontainer">
-	<title>Web container</title>
-	<para>For this tutorial you can use any web container, for example
+== Web container
+	For this tutorial you can use any web container, for example
 		Tomcat or the Google App Engine.
-	</para>
-	<para>
+	
+	
 		If you want to use Tomcat
 		as servlet container please see
-		<ulink url="http://www.vogella.com/tutorials/EclipseWTP/article.html">Eclipse WTP</ulink>
+		http://www.vogella.com/tutorials/EclipseWTP/article.html">Eclipse WTP</ulink>
 		and
-		<ulink url="http://www.vogella.com/tutorials/ApacheTomcat/article.html">Apache Tomcat</ulink>
+		http://www.vogella.com/tutorials/ApacheTomcat/article.html">Apache Tomcat</ulink>
 		for instructions on how to install and use Eclipse WTP and Apache
 		Tomcat.
-	</para>
-	<para>
+	
+	
 		Alternative you could also use the
-		<ulink
-			url="http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html">Google App Engine</ulink>
+http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html">Google App Engine</ulink>
 		for running the server part of the following REST examples. If you
 		use
 		the Google App Engine, you do not have to install and configure
 		Tomcat.
-	</para>
+	
 	<tip>
-		<para>
+		
 			If you
 			are
 			using GAE/J, you have to create App Engine projects
@@ -30,7 +29,7 @@
 			of
 			<wordasword>Dynamic Web Project</wordasword>
 			. The following description is based on Apache Tomcat.
-		</para>
+		
 	
 	
-</section>
+

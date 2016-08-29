@@ -1,12 +1,12 @@
 <section id="register">
-	<title>Register at the Google App Engine</title>
-	<para>
+== Register at the Google App Engine
+	
 		To deploy your application to the Google cloud you need a AppEngine
 		account. To get such an account you need a Google email account.
 		Open
 		the
 		URL
-		<ulink url="http://appengine.google.com/">App Engine registration page</ulink>
+		http://appengine.google.com/">App Engine registration page</ulink>
 		and login with your Google account information. You
 		need to verify your
 		account via a valid phone number. After
@@ -18,6 +18,5 @@
 		verification code into the verification
 		box
 		online.
-	</para>
+	
 
-</section>

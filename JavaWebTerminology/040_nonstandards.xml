@@ -1,10 +1,9 @@
 <section id="nonstandards">
-	<title>Non standard based Java Web Development</title>
-	<para>
+== Non standard based Java Web Development
+	
 		For Java you also find lots of non-standard web development. For
 		example, GWT supports the Java development and is compiled into
 		JavaScript. See the
-		<ulink url="http://www.vogella.com/tutorials/GWT/article.html">GWT Tutorial</ulink>
+		http://www.vogella.com/tutorials/GWT/article.html">GWT Tutorial</ulink>
 		for more information.
-	</para>
-</section>
+	
