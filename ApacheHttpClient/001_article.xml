@@ -30,8 +30,8 @@ Version 0.3, 06.07.2016
 				Apache HttpClient 4.1.
 
 			
-		</abstract>
-	</articleinfo>
+  
+  
 include::../web/advertisement/afterTableOfContent.adoc[]
 include::content/010_httpclient.adoc[]
 	include::../web/advertisement/inBetween01.adoc[]

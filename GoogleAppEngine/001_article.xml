@@ -39,8 +39,8 @@ Version 0.3, 06.07.2016
 			 The article demonstrates optionally the usage of Eclipse for
 				developing, running and debugging the Google App Engine application.
 			
-		</abstract>
-	</articleinfo>
+  
+  
 include::../web/advertisement/afterTableOfContent.adoc[]
 include::content/10_overview.adoc[]
 include::content/20_installation.adoc[]

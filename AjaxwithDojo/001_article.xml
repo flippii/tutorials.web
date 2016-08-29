@@ -27,8 +27,8 @@
 				JavaScript programming. Dojo is an Ajax toolkit.
 			
 
-		</abstract>
-	</articleinfo>
+  
+  
 include::../web/advertisement/afterTableOfContent.adoc[]
 include::content/10_overview.adoc[]
 include::../web/advertisement/inBetween01.adoc[]

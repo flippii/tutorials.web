@@ -1,6 +1,16 @@
-<?xml version="1.0"?>
-<article>
-	<articleinfo>
+=  - Tutorial
+:linkcss:
+:sectnums:                                                          
+:experimental:
+:icons:
+:imagesdir: ./img
+Lars Vogel, (c) 2009, 2016 vogella GmbH
+Version 0.3, 29.08.2016
+:docinfodir: ../
+:vgwort: XXX
+
+[abstract]
+
 === Eclipse Forms API - Tutorial
 		<author>
 			<firstname>Lars</firstname>
@@ -20,8 +30,8 @@
 			 This article describes how to build User Interfaces using
 				Eclipse Forms.
 			
-		</abstract>
-	</articleinfo>
+  
+  
 include::../web/advertisement/afterTableOfContent.adoc[]
 include::content/010_forms.adoc[]
 include::../web/advertisement/inBetween01.adoc[]

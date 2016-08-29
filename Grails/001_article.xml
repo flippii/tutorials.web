@@ -1,6 +1,16 @@
-<?xml version="1.0"?>
-<article>
-	<articleinfo>
+=  - Tutorial
+:linkcss:
+:sectnums:                                                          
+:experimental:
+:icons:
+:imagesdir: ./img
+Lars Vogel, (c) 2009, 2016 vogella GmbH
+Version 0.3, 29.08.2016
+:docinfodir: ../
+:vgwort: XXX
+
+[abstract]
+
 === Grails Development - Tutorial
 		<author>
 			<firstname>Lars</firstname>
@@ -22,8 +32,8 @@
 				This
 				article is based on Java 1.6 and Grails 2.4.4.
 			
-		</abstract>
-	</articleinfo>
+  
+  
 include::../web/advertisement/afterTableOfContent.adoc[]
 include::010_overview.adoc[]
 include::012_whatisgroovy.adoc[]
