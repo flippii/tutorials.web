@@ -6,18 +6,13 @@ To start Jetty, switch on the command line to the installation directory and iss
 
 		<programlisting>
 			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/startjetty.txt" />
-		</programlisting>
+				parse="text" href="../examples/startjetty.txt[]
+----
 
 This starts Jetty on http://localhost:8080/
 
 	
-		<mediaobject>
-			<imageobject>
-				<imagedata fileref="images/jetty10.gif" />
-				
-			
-		
+image::jetty10.gif[]
 	
 	
 To stop Jetty press Ctrl+C. 

@@ -24,3 +24,4 @@ After the installation perform the following steps:
 image::css3_profile.png[CSS3 Profile]
 
 This guide applies for Eclipse releases up to Mars. With Neon M6 the default css profile will be set to CSS3.
+
