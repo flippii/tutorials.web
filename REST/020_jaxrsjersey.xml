@@ -93,89 +93,92 @@
 			The most important
 			annotations in JAX-RS are listed in the following
 			table.
-			<table frame='all'>
+
+.Table Title
+|===
+
 				<title>JAX-RS annotations</title>
 				<tgroup cols='2' align='left' colsep='1' rowsep='1'>
 					<colspec colname='c1' />
 					<colspec colname='c2' />
-					<thead>
-						<row>
-							<entry>Annotation</entry>
-							<entry>Description</entry>
-						</row>
-					</thead>
-					<tbody>
-						<row>
-							<entry>@PATH(your_path)</entry>
-							<entry>
+					
+						
+|Annotation
+|Description
+						
+					
+					
+						
+|@PATH(your_path)
+|
 								Sets the path to base URL + /your_path. The base URL is
 								based on
 								your application name, the servlet and the URL pattern
 								from the
 								<filename>web.xml</filename>
 								configuration file.
-							</entry>
-						</row>
-						<row>
-							<entry>@POST</entry>
-							<entry>
+							
+						
+						
+|@POST
+|
 								Indicates that the following method will answer to an HTTP
 								POST
 								request.
-							</entry>
-						</row>
-						<row>
-							<entry>@GET</entry>
-							<entry>
+							
+						
+						
+|@GET
+|
 								Indicates that the following method will answer to an HTTP
 								GET
 								request.
-							</entry>
-						</row>
-						<row>
-							<entry>@PUT</entry>
-							<entry>
+							
+						
+						
+|@PUT
+|
 								Indicates that the following method will answer to an HTTP
 								PUT
 								request.
-							</entry>
-						</row>
-						<row>
-							<entry>@DELETE</entry>
-							<entry>
+							
+						
+						
+|@DELETE
+|
 								Indicates that the following method will answer to an HTTP
 								DELETE
 								request.
-							</entry>
-						</row>
-						<row>
-							<entry>@Produces(MediaType.TEXT_PLAIN[, more-types])</entry>
-							<entry>
+							
+						
+						
+|@Produces(MediaType.TEXT_PLAIN[, more-types])
+|
 								@Produces defines which MIME type is delivered by a method
 								annotated with @GET. In the example text ("text/plain") is
 								produced. Other examples would be "application/xml" or
 								"application/json".
-							</entry>
-						</row>
-						<row>
-							<entry>@Consumes(type[, more-types])</entry>
-							<entry>
+							
+						
+						
+|@Consumes(type[, more-types])
+|
 								@Consumes defines which MIME type is consumed by this
 								method.
-							</entry>
-						</row>
-						<row>
-							<entry>@PathParam</entry>
-							<entry>
+							
+						
+						
+|@PathParam
+|
 								Used to inject values from the URL into a method
 								parameter.
 								This way you inject, for example, the ID of a resource
 								into the method to get the correct object.
-							</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</table>
+							
+						
+					
+				
+			|===
 		</para>   
 		<para>
 			The complete path to a resource is based on the base

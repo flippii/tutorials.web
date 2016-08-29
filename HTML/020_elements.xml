@@ -92,55 +92,56 @@
 		<title>Special signs
 		 Use the following special signs to display them in your
 			webpage.
-		
 
-		<table frame='all'>
+.Table Title
+|===
+
 			<title>Special signs
 			<tgroup cols='2' align='left' colsep='1' rowsep='1'>
 				<colspec colname='c1' />
 				<colspec colname='c2' />
-				<thead>
-					<row>
-						<entry>Sign </entry>
-						<entry>HTML representation</entry>
-						<entry>Remark</entry>
-					</row>
-				</thead>
-				<tbody>
-					<row>
-						<entry>
-						</entry>
-						<entry>  <![CDATA[ &nbsp; ]]>
-						</entry>
-						<entry> Whitespace (" ")  </entry>
-					</row>
+				
+					
+|Sign 
+|HTML representation
+|Remark
+					
+				
+				
+					
+|
+						
+|  <![CDATA[ &nbsp; ]]>
+						
+| Whitespace (" ")  
+					
 
-					<row>
-						<entry> <![CDATA[ < ]]></entry>
-						<entry> <![CDATA[ &lt; ]]></entry>
-						<entry>
-						</entry>
-					</row>
-					<row>
-						<entry> <![CDATA[ > ]]>
-						</entry>
-						<entry><![CDATA[ &gt; ]]>
-						</entry>
-					</row>
-					<row>
-						<entry><![CDATA[ & ]]>
-						</entry>
-						<entry><![CDATA[  &amp; ]]>
-						</entry>
-					</row>
-					<row>
-						<entry> <![CDATA[ © ]]>
-						</entry>
-						<entry><![CDATA[ &copy; ]]>
-						</entry>
-					</row>
-				</tbody>
-			</tgroup>
-		</table>
+					
+| <![CDATA[ < ]]>
+| <![CDATA[ &lt; ]]>
+|
+						
+					
+					
+| <![CDATA[ > ]]>
+						
+|<![CDATA[ &gt; ]]>
+						
+					
+					
+|<![CDATA[ & ]]>
+						
+|<![CDATA[  &amp; ]]>
+						
+					
+					
+| <![CDATA[ © ]]>
+						
+|<![CDATA[ &copy; ]]>
+						
+					
+				
+			
+		|===
 	</section>
 </section>

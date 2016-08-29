@@ -35,14 +35,16 @@
 			to learn about JAXB.
 		</para>
 		<para>
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/todo/Todo.java" />
-			</programlisting>
+[source,java]
+-----
+include::res/todo/Todo.java[]
+----
 		</para>
 		<para>
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/todo/TodoDao.java" />
-			</programlisting>
+[source,java]
+-----
+include::res/todo/TodoDao.java[]
+----
 		</para>
 	</section>
 
@@ -73,14 +75,16 @@
 			resources.
 		</para>
 		<para>
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/todo/TodoResource.java" />
-			</programlisting>
+[source,java]
+-----
+include::res/todo/TodoResource.java[]
+----
 		</para>
 		<para>
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/todo/TodosResource.java" />
-			</programlisting>
+[source,java]
+-----
+include::res/todo/TodosResource.java[]
+----
 		</para>
 		<para>
 			This TodosResource uses the
@@ -141,9 +145,10 @@
 		</para>
 		<para>Create the following class.</para>
 		<para>
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/todo/Tester.java" />
-			</programlisting>
+[source,java]
+-----
+include::res/todo/Tester.java[]
+----
 		</para>
 	</section>
 

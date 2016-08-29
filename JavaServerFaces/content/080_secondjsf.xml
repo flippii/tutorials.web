@@ -104,70 +104,73 @@
 		</para>
 		<para> Lets explain a few fields.</para>
 		<para>
-			<table frame='all'>
+
+.Table Title
+|===
+
 				<tgroup cols='2' align='left' colsep='1' rowsep='1'>
 					<colspec colname='c1' />
 					<colspec colname='c2' />
-					<thead>
-						<row>
-							<entry>Element</entry>
-							<entry>Description</entry>
-						</row>
-					</thead>
-					<tbody>
-						<row>
-							<entry>	<![CDATA[ 
+					
+						
+|Element
+|Description
+						
+					
+					
+						
+|	<![CDATA[ 
 						<%@ taglib prefix="f" uri="http://java.sun.com/jsf/core"%>
 						<%@ taglib prefix="h" uri="http://java.sun.com/jsf/html"%>
-							]]></entry>
-							<entry>Makes the core and html tags available in the page
-							</entry>
-						</row>
-						<row>
-							<entry>	<![CDATA[ <f:view>]]></entry>
-							<entry>Indicates that the following will use JSF
+							]]>
+|Makes the core and html tags available in the page
+							
+						
+						
+|	<![CDATA[ <f:view>]]>
+|Indicates that the following will use JSF
 								components.
-							</entry>
-						</row>
-						<row>
-							<entry>	<![CDATA[ <f:loadBundle basename="de.vogella.jsf.starter.messages" var="msg"/>]]></entry>
-							<entry>load the resource / message bundle which is then
+							
+						
+						
+|	<![CDATA[ <f:loadBundle basename="de.vogella.jsf.starter.messages" var="msg"/>]]>
+|load the resource / message bundle which is then
 								available
 								in the application under the name msg
-							</entry>
-						</row>
-						<row>
-							<entry><![CDATA[  <h:form> ]]></entry>
-							<entry>Starts a form</entry>
-						</row>
-						<row>
-							<entry><![CDATA[ <h:outputLabel value="#{msg.user}"></h:outputLabel>  ]]></entry>
-							<entry>Define a label which used the text user define in
+							
+						
+						
+|<![CDATA[  <h:form> ]]>
+|Starts a form
+						
+						
+|<![CDATA[ <h:outputLabel value="#{msg.user}"></h:outputLabel>  ]]>
+|Define a label which used the text user define in
 								the
 								resource bundle
-							</entry>
-						</row>
-						<row>
-							<entry><![CDATA[ 	<h:inputText tabindex="1" value="#{user.name}"></h:inputText> ]]></entry>
-							<entry>Define a input field which used the managed bean
+							
+						
+						
+|<![CDATA[ 	<h:inputText tabindex="1" value="#{user.name}"></h:inputText> ]]>
+|Define a input field which used the managed bean
 								user and
 								maps to field name
-							</entry>
-						</row>
-						<row>
-							<entry><![CDATA[ 	<h:inputSecret tabindex="2" value="#{user.password}">]]></entry>
-							<entry>Masked input files, mapped to the managed bean user
+							
+						
+						
+|<![CDATA[ 	<h:inputSecret tabindex="2" value="#{user.password}">]]>
+|Masked input files, mapped to the managed bean user
 								and
 								field password
-							</entry>
-						</row>
-						<row>
-							<entry><![CDATA[ 	<h:commandButton action="#{user.login}" value="#{msg.login}"></h:commandButton> ]]></entry>
-							<entry>The button is mapped to the method user.login</entry>
-						</row>
-					</tbody>
-				</tgroup>
-			</table>
+							
+						
+						
+|<![CDATA[ 	<h:commandButton action="#{user.login}" value="#{msg.login}"></h:commandButton> ]]>
+|The button is mapped to the method user.login
+						
+					
+				
+			|===
 		</para>
 		<para> Create another JSP "Trainer.jsp" with the following code.
 		</para>

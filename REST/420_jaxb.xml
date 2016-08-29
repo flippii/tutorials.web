@@ -35,9 +35,10 @@
 		<title>Create project</title>
 		<para>Create your domain class.</para>
 		<para>
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/jaxb/Todo.java" />
-			</programlisting>
+[source,java]
+-----
+include::res/jaxb/Todo.java[]
+----
 		</para>
 		<para>
 			Create the following resource class. This class simply returns
@@ -47,9 +48,10 @@
 			class.
 		</para>
 		<para>
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/jaxb/TodoResource.java" />
-			</programlisting>
+[source,java]
+-----
+include::res/jaxb/TodoResource.java[]
+----
 		</para>
 		<para>
 			Change
@@ -87,9 +89,10 @@
 			following test class.
 		</para>
 		<para>
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="./examples/jaxb/Test.java" />
-			</programlisting>
+[source,java]
+-----
+include::res/jaxb/Test.java[]
+----
 		</para>
 	</section>
 
