@@ -29,22 +29,24 @@
 				GWT 2.3 and Eclipse 3.7.</para>
 		</abstract>
 	</articleinfo>
-	<?dbhtml-include href="../../web/advertisement/afterTableOfContent"?>
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/005_overview.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../10_Include/Google/20_gwt_gae_install.xml" />
-	<?dbhtml-include href="../../web/advertisement/inBetween01"?>
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/030_firstgwt.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/040_gwtstructure.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/060_debugging.xml" />
-	<?dbhtml-include href="../../web/advertisement/inBetween02"?>
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/200_server.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/210_uibinder.xml" />
-	<?dbhtml-include href="../../web/advertisement/inBetween03"?>
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/220_modules.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/240_components.xml" />
-	<?dbhtml-include href="../../web/advertisement/beforeSupport"?>
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../10_Include/support.xml" />	
-	<?dbhtml-include href="../../web/advertisement/afterSupport"?>
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="resources.xml" />
-	<?dbhtml-include href="../../web/vgwort/GWT"?>
-</article>
+include::../web/advertisement/afterTableOfContent.adoc[]
+include::content/005_overview.adoc[]
+include::../10_Include/Google/20_gwt_gae_install.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
+include::content/030_firstgwt.adoc[]
+include::content/040_gwtstructure.adoc[]
+include::content/060_debugging.adoc[]
+include::../web/advertisement/inBetween02.adoc[]
+include::content/200_server.adoc[]
+include::content/210_uibinder.adoc[]
+include::../web/advertisement/inBetween03.adoc[]
+include::content/220_modules.adoc[]
+include::content/240_components.adoc[]
+
+include::../support.adoc[]
+include::008_resourceslocal.adoc[]
+include::../copyright.adoc[]	
+
+
+
+

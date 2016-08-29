@@ -30,15 +30,16 @@
 
 		
 	
-	<?dbhtml-include href="../../web/advertisement/afterTableOfContent"?>
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="010_json.xml" />
+include::../web/advertisement/afterTableOfContent.adoc[]
+include::010_json.adoc[]
 	
 
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="020_jsonexample.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="040_json_usageinjavascript.xml" />
-	<?dbhtml-include href="../../web/advertisement/beforeSupport"?>
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../10_Include/support.xml" />	
-	<?dbhtml-include href="../../web/advertisement/afterSupport"?>
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="resources.xml" />
-	<?dbhtml-include href="../../web/vgwort/JSON"?>
-</article>
+include::020_jsonexample.adoc[]
+include::040_json_usageinjavascript.adoc[]
+
+include::../support.adoc[]
+include::008_resourceslocal.adoc[]
+include::../copyright.adoc[]	
+
+
+

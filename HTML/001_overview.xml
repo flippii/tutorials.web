@@ -56,7 +56,7 @@
 		
 			HTML5 introduced several new ways of classifying content of the
 			webpage, e.g., <![CDATA[ <nav> </nav> ]]>
-			for the navigation part of the page, <![CDATA[ <article> </article> ]]>
+			for the navigation part of the page, <![CDATA[ <article>  ]]>
 			to represent an independent article,<![CDATA[ <aside> </aside> ]]>
 			to represent a sidebar with related information.<![CDATA[ <footer> </footer> ]]>
 			for a footer in the HTML page and <![CDATA[ <address> </address> ]]>

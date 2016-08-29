@@ -24,18 +24,20 @@
 			</para>
 		</abstract>
 	</articleinfo>
-	<?dbhtml-include href="../../web/advertisement/afterTableOfContent"?>
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="010_overview.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="012_whatisgroovy.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="030_installation.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="040_firstgrailsapp.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="044_guestbook.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="046_bootstrapdata.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="050_grailslayout.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="060_grailscreatewar.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="070_grailstest.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="080_eclipse.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../10_Include/support.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="006_resources.xml" />
-	<?dbhtml-include href="../../web/vgwort/Grails"?>
-</article>
+include::../web/advertisement/afterTableOfContent.adoc[]
+include::010_overview.adoc[]
+include::012_whatisgroovy.adoc[]
+include::030_installation.adoc[]
+include::040_firstgrailsapp.adoc[]
+include::044_guestbook.adoc[]
+include::046_bootstrapdata.adoc[]
+include::050_grailslayout.adoc[]
+include::060_grailscreatewar.adoc[]
+include::070_grailstest.adoc[]
+include::080_eclipse.adoc[]
+include::../support.adoc[]
+include::008_resourceslocal.adoc[]
+include::../copyright.adoc[]
+include::006_resources.adoc[]
+
+
