@@ -13,9 +13,9 @@
 === Create necessary classes
 		
 			Create a new
-			<wordasword>Dynamic Web Project</wordasword>
+			_Dynamic Web Project_
 			called
-			<wordasword>com.vogella.jersey.jaxb</wordasword>
+			_com.vogella.jersey.jaxb_
 			. Ensure you create
 			`web.xml`
 			deployment descriptor.
@@ -82,7 +82,7 @@ include::res/jaxb/TodoResource.java[]
 === Create a client
 		
 			Create a new Java project
-			<wordasword>de.vogella.jersey.jaxb.client</wordasword>
+			_de.vogella.jersey.jaxb.client_
 			and add the
 			Jersey JARs to the project and the project build path.
 			Create the

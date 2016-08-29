@@ -13,9 +13,7 @@
 		editor.
 	
 	
-		<mediaobject>
-			<imageobject>
-				<imagedata fileref="images/todo10.gif" />
+image::todo10.gif" />
 				
 			</imageobject>
 		</mediaobject>

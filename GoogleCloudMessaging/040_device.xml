@@ -14,10 +14,7 @@
 		on
 		the
 		virtual device under
-		<menuchoice>
-			<guimenu>Settings</guimenu>
-			<guisubmenu>Accounts Sync</guisubmenu>
-		</menuchoice>
+		menu:Settings[Accounts Sync]
 		.
 	
 	

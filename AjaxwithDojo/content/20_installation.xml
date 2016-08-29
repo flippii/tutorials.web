@@ -22,9 +22,7 @@
 		like the following.
 	
 	
-		<mediaobject>
-			<imageobject>
-				<imagedata fileref="images/DojoFolder10.gif"/>
+image::DojoFolder10.gif"/>
 			</imageobject>
 		</mediaobject>
 	

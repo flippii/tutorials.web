@@ -117,9 +117,9 @@
 			If you see the following message:
 		
 		
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/snippets/message.txt[]
+[source,java]
+----
+include::res/snippets/message.txt[]
 ----
 		
 

@@ -74,9 +74,7 @@
 	 The result should look like the following. 
 
 	
-		<mediaobject>
-			<imageobject>
-				<imagedata fileref="images/uibinder10.gif" />
+image::uibinder10.gif" />
 				
 			</imageobject>
 		</mediaobject>

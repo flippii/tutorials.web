@@ -34,9 +34,9 @@ https://grails.org/download">Grails download page</ulink>
 			following command.
 		
 		
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/installation/version.txt[]
+[source,java]
+----
+include::res/installation/version.txt[]
 ----
 		
 		This should result in the output of the currently installed
@@ -57,9 +57,9 @@ menu:Help[Install New Software...]
 			URL in this dialog:
 		
 		
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/install/updatesite.txt[]
+[source,java]
+----
+include::res/install/updatesite.txt[]
 ----
 		
 

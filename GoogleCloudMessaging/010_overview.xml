@@ -30,7 +30,7 @@
 		
 			Via the Google Play services you can push notifications to your
 			application. To do this you must enable
-			<wordasword>Google Cloud Messaging for Android</wordasword>
+			_Google Cloud Messaging for Android_
 			in the
 https://console.developers.google.com/project">Google API Console</ulink>
 			.

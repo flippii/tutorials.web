@@ -43,13 +43,13 @@
 === HTTP methods
 		
 			The
-			<wordasword>PUT</wordasword>
+			_PUT_
 			,
-			<wordasword>GET</wordasword>
+			_GET_
 			,
-			<wordasword>POST</wordasword>
+			_POST_
 			and
-			<wordasword>DELETE</wordasword>
+			_DELETE_
 			methods
 			are typical used in REST based architectures.
 			The following table gives an explanation of these operations.

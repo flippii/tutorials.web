@@ -3,7 +3,7 @@
 	<section id="grailsoverview">
 === What is Grails?
 		
-			<wordasword>Grails</wordasword>
+			_Grails_
 			is a web framework based on
 			Groovy
 			and Java which can be
@@ -21,7 +21,7 @@
 			minutes. Grails
 			is
 			based on the
-			<wordasword>convention over configuration</wordasword>
+			_convention over configuration_
 			idea
 			which allows
 			the application to auto-wire
@@ -68,7 +68,7 @@
 
 		
 			Grails uses
-			<wordasword>GORM</wordasword>
+			_GORM_
 			(Grails Object Relational Mapping) for the
 			persistence of the domain
 			model. GORM is based on

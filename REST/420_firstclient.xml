@@ -7,7 +7,7 @@
 	
 	
 		Create a new Java project
-		<wordasword>com.vogella.jersey.first.client</wordasword>
+		_com.vogella.jersey.first.client_
 		and add the
 		Jersey JARs to the project and the project build path.
 		Create the

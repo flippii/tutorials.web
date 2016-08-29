@@ -27,7 +27,7 @@ http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html">Google App En
 			using GAE/J, you have to create App Engine projects
 			instead
 			of
-			<wordasword>Dynamic Web Project</wordasword>
+			_Dynamic Web Project_
 			. The following description is based on Apache Tomcat.
 		
 	

@@ -66,18 +66,18 @@
 			create objects from it.
 		
 		
-			<programlisting language="xml">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/staxread/config.xml[]
+[source,xml]
+----
+include::res/staxread/config.xml[]
 ----
 		
 		 Define therefore the following class to store the individual
 			entries of the XML file.
 		
 		
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/staxread/Item.java[]
+[source,java]
+----
+include::res/staxread/Item.java[]
 ----
 		
 		
@@ -86,18 +86,18 @@
 		
 
 		
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/staxread/StaXParser.java[]
+[source,java]
+----
+include::res/staxread/StaXParser.java[]
 ----
 		
 		 You can test the parser via the following test program. Please
 			note that the file `config.xml` must exist in the Java project folder.
 		
 		
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/staxread/TestRead.java[]
+[source,java]
+----
+include::res/staxread/TestRead.java[]
 ----
 		
 
@@ -111,9 +111,9 @@
 			file.
 		
 		
-			<programlisting language="xml">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/staxwrite/config.xml[]
+[source,xml]
+----
+include::res/staxwrite/config.xml[]
 ----
 		
 		
@@ -123,16 +123,16 @@
 		
 
 		
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/staxwrite/StaxWriter.java[]
+[source,java]
+----
+include::res/staxwrite/StaxWriter.java[]
 ----
 		
 		 And a little test.
 		
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/staxwrite/TestWrite.java[]
+[source,java]
+----
+include::res/staxwrite/TestWrite.java[]
 ----
 		
 

@@ -16,13 +16,13 @@
 === Using XPath
 		
 			The following explains how to use XPath. Create a new Java
-			project called <wordasword>UsingXPath</wordasword>.
+			project called _UsingXPath_.
 		
 		Create the following xml file.
 		
-			<programlisting language="xml">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/xpath/person.xml[]
+[source,xml]
+----
+include::res/xpath/person.xml[]
 ----
 		
 		
@@ -31,9 +31,9 @@
 		
 		
 		
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/xpath/QueryXML.java[]
+[source,java]
+----
+include::res/xpath/QueryXML.java[]
 ----
 		
 

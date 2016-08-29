@@ -10,7 +10,7 @@
 === Project
 		
 			Create a new dynamic project called
-			<wordasword>com.vogella.jersey.todo</wordasword>
+			_com.vogella.jersey.todo_
 			and add
 			the Jersey libs. Change the
 			`web.xml`

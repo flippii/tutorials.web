@@ -4,7 +4,7 @@
 === XML Overview
 		
 			XML is the abbreviation for
-			<wordasword>Extensible Markup Language</wordasword>
+			_Extensible Markup Language_
 			and is an established data exchange format. XML
 			was defined
 			1998 by
@@ -25,7 +25,7 @@
 		An XML file must be "well-formed".
 		
 			A
-			<wordasword>well-formed</wordasword>
+			_well-formed_
 			XML file must apply to the following conditions:
 			<itemizedlist>
 				*
@@ -45,7 +45,7 @@
 
 		
 			An XML file is called
-			<wordasword>valid</wordasword>
+			_valid_
 			if it is well-formed and if it is
 			contains a link to an XML schema
 			and
@@ -94,9 +94,9 @@
 === XML Example
 		The following is a valid, well-formed XML file.
 		
-			<programlisting language="xml">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/xmlintro/firstxmlfile.txt[]
+[source,xml]
+----
+include::res/xmlintro/firstxmlfile.txt[]
 ----
 		
 

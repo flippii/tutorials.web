@@ -69,21 +69,21 @@
 		
 		Use a text editor to change the classes to the following:
 		
-			<programlisting language="Java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstgrails/Feedback.java[]
+[source,java]
+----
+include::res/firstgrails/Feedback.java[]
 ----
 		
 		
-			<programlisting language="Java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstgrails/User.java[]
+[source,java]
+----
+include::res/firstgrails/User.java[]
 ----
 		
 		
-			<programlisting language="Java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstgrails/Comment.java[]
+[source,java]
+----
+include::res/firstgrails/Comment.java[]
 ----
 		
 		
@@ -207,51 +207,41 @@
 		.
 		You should have a full CRUD (create, retrieve, update, delete)
 		application available. To start the app, click on
-		<guilabel>UserController</guilabel>
+		_UserController_
 		and create a user.
 	
 	
-		<mediaobject>
-			<imageobject>
-				<imagedata fileref="images//home/firstgrails30.png" size="40" />
+image::/home/firstgrails30.png" size="40" />
 			</imageobject>
 		</mediaobject>
 	
 	
-		<mediaobject>
-			<imageobject>
-				<imagedata fileref="images//home/firstgrails34.png" size="40" />
+image::/home/firstgrails34.png" size="40" />
 			</imageobject>
 		</mediaobject>
 	
 	
-		<mediaobject>
-			<imageobject>
-				<imagedata fileref="images//home/firstgrails40.png" size="40" />
+image::/home/firstgrails40.png" size="40" />
 			</imageobject>
 		</mediaobject>
 	
 	
 		Afterwards use the
-		<guilabel>FeedbackController</guilabel>
+		_FeedbackController_
 		to create a comment.
 	
 	
-		<mediaobject>
-			<imageobject>
-				<imagedata fileref="images/firstgrails50.png" size="40" />
+image::firstgrails50.png" size="40" />
 			</imageobject>
 		</mediaobject>
 	
 	
 		Click on
-		<guilabel>New Feedback</guilabel>
+		_New Feedback_
 		and enter a feedback.
 	
 	
-		<mediaobject>
-			<imageobject>
-				<imagedata fileref="images/firstgrails60.png"/>
+image::firstgrails60.png"/>
 			</imageobject>
 			<textobject>
 				<phrase></phrase>

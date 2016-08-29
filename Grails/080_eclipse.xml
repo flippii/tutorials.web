@@ -20,9 +20,7 @@
 menu:File[Import > General > Existing Project into Workspace]
 		
 	
-		<mediaobject>
-			<imageobject>
-				<imagedata fileref="images/eclipse10.gif" />
+image::eclipse10.gif" />
 			</imageobject>
 		</mediaobject>
 	
@@ -31,11 +29,11 @@ menu:File[Import > General > Existing Project into Workspace]
 		<property>GRAILS_HOME</property> may not be
 		set in Eclipse.
 		Select your project, right-click on
-		it and select <guilabel>properties</guilabel>.
+		it and select _properties_.
 		Select the Java Build Path and here the tab
-		<guibutton>Libraries</guibutton>. Press <guibutton>Add
-		Variable</guibutton> and then <guibutton>Configure Variables</guibutton>. Press
-		<guibutton>New</guibutton> and add
+		btn:[Libraries]. Press btn:[Add
+		Variable] and then btn:[Configure Variables]. Press
+		btn:[New] and add
 		<property>GRAILS_HOME</property>.
 	
 	

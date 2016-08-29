@@ -4,9 +4,9 @@
 === Create a new web project 
 		
 			Create a new
-			<wordasword>Dynamic Web Project</wordasword>
+			_Dynamic Web Project_
 			called
-			<wordasword>com.vogella.jersey.first</wordasword>
+			_com.vogella.jersey.first_
 			.
 		
 		
@@ -56,9 +56,9 @@ include::res/first/Hello.java[]
 			annotation it
 			defines that it delivers
 			the
-			<wordasword>text</wordasword>
+			_text_
 			and the
-			<wordasword>HTML</wordasword>
+			_HTML_
 			MIME types. It also defines via the
 			<code>@Path</code>
 			annotation that its service

@@ -20,9 +20,7 @@
 	 You can check you cron jobs in the admin console. 
 
 	
-		<mediaobject>
-			<imageobject>
-				<imagedata fileref="images/cron10.gif" />
+image::cron10.gif" />
 				
 			</imageobject>
 		</mediaobject>
