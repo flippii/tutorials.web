@@ -216,7 +216,7 @@ image::gae30.png[]
 			
 				<mediaobject>
 					<imageobject>
-						<imagedata fileref="images/deploy10.gif" />
+						<imagedata fileref="images/deploy10.gif[]
 
 					</imageobject>
 				</mediaobject>

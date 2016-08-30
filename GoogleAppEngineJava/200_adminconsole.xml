@@ -7,7 +7,7 @@
 			datastore or look at the log files of your application. 
 		
 		
-image::log10.gif" />
+image::log10.gif[]
 					
 				</imageobject>
 			</mediaobject>
@@ -48,7 +48,7 @@ http://code.google.com/appengine/docs/java/runtime.html#Logging"> Logging on the
 		 If you redeploy your application you have another entry in your
 			Admin console. 
 		
-image::admin20.gif" />
+image::admin20.gif[]
 					
 				</imageobject>
 			</mediaobject>

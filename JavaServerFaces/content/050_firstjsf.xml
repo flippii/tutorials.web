@@ -8,7 +8,7 @@
 			"Configuration" select "JavaServer Faces v1.2".
 
 		
-image::firstjsf10.gif" />
+image::firstjsf10.gif[]
 					
 				</imageobject>
 			</mediaobject>
@@ -17,7 +17,7 @@ image::firstjsf10.gif" />
 		
 		Press next until you see the following screen.  
 		
-image::firstjsf20.gif" />
+image::firstjsf20.gif[]
 					
 				</imageobject>
 			</mediaobject>
@@ -28,14 +28,14 @@ image::firstjsf20.gif" />
 			library..." button
 			and select the Apache Library and install it.
 		
-image::firstjsf30.gif" />
+image::firstjsf30.gif[]
 					
 				</imageobject>
 			</mediaobject>
 		
 
 		
-image::firstjsf34.gif" />
+image::firstjsf34.gif[]
 					
 				</imageobject>
 			</mediaobject>
@@ -44,37 +44,37 @@ image::firstjsf34.gif" />
 		 Press Manage libraries and create a library for JSTL. 
 
 		
-image::firstjsf35.gif" />
+image::firstjsf35.gif[]
 					
 				</imageobject>
 			</mediaobject>
 		
 		
-image::firstjsf36.gif" />
+image::firstjsf36.gif[]
 					
 				</imageobject>
 			</mediaobject>
 		
 		
-image::firstjsf37.gif" />
+image::firstjsf37.gif[]
 					
 				</imageobject>
 			</mediaobject>
 		
 		
-image::firstjsf38.gif" />
+image::firstjsf38.gif[]
 					
 				</imageobject>
 			</mediaobject>
 		
 		
-image::firstjsf39.gif" />
+image::firstjsf39.gif[]
 					
 				</imageobject>
 			</mediaobject>
 		
 		
-image::firstjsf40.gif" />
+image::firstjsf40.gif[]
 					
 				</imageobject>
 			</mediaobject>
@@ -111,27 +111,27 @@ image::firstjsf40.gif" />
 			select the tab "ManagedBeans".
 
 		
-image::managedbeans10.gif" />
+image::managedbeans10.gif[]
 					
 				</imageobject>
 			</mediaobject>
 		
 		 Press add and maintain your class. 
 		
-image::managedbeans20.gif" />
+image::managedbeans20.gif[]
 					
 				</imageobject>
 			</mediaobject>
 		
 		
-image::managedbeans22.gif" />
+image::managedbeans22.gif[]
 					
 				</imageobject>
 			</mediaobject>
 		
 		The result should look like the following:
 		
-image::managedbeans30.gif" />
+image::managedbeans30.gif[]
 					
 				</imageobject>
 			</mediaobject>
@@ -144,7 +144,7 @@ image::managedbeans30.gif" />
 			(JSF) Page (html)" template. 
 		
 		
-image::firstjsf44.gif" />
+image::firstjsf44.gif[]
 					
 				</imageobject>
 			</mediaobject>
@@ -170,7 +170,7 @@ image::firstjsf44.gif" />
 			server.
 
 		
-image::firstjsf50.gif" />
+image::firstjsf50.gif[]
 					
 				</imageobject>
 			</mediaobject>

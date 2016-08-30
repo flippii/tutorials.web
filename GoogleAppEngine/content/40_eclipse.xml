@@ -26,7 +26,7 @@ http://www.vogella.com/tutorials/Python/article.html"> Python Development with E
 			(all your files and directeries): todo.py, app.yam, index.html)into
 			the source folder.
 		
-image::eclipse50.gif" />
+image::eclipse50.gif[]
 					
 				</imageobject>
 			</mediaobject>
@@ -41,7 +41,7 @@ image::eclipse50.gif" />
 			lib/webob
 			and lib/yaml
 		
-image::eclipse60.gif" />
+image::eclipse60.gif[]
 					
 				</imageobject>
 			</mediaobject>
@@ -55,7 +55,7 @@ image::eclipse60.gif" />
 		 Right-click on "todo.py", select Run As -> Run Configuration.
 			Under Main Module maintain the path to dev_appserver.py
 		
-image::eclipse70.gif" />
+image::eclipse70.gif[]
 					
 				</imageobject>
 			</mediaobject>
@@ -64,7 +64,7 @@ image::eclipse70.gif" />
 			your project as a parameter. Put the parameter in double-quotes.
 		
 		
-image::eclipse80.gif" />
+image::eclipse80.gif[]
 					
 				</imageobject>
 			</mediaobject>

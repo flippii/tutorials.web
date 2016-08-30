@@ -81,7 +81,7 @@
 			a dependency to the project "de.vogella.gwt.module.model".
 		
 		
-image::gwtmodule10.gif" />
+image::gwtmodule10.gif[]
 					
 				</imageobject>
 			</mediaobject>
@@ -106,7 +106,7 @@ image::gwtmodule10.gif" />
 		 If everything was setup correctly you can run your application.
 		
 		
-image::gwtmodule20.gif" />
+image::gwtmodule20.gif[]
 					
 				</imageobject>
 			</mediaobject>

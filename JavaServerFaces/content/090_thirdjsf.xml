@@ -49,7 +49,7 @@
 			The value #{card} refers to the  managed bean "card".
 		
 		
-image::controller10.gif" />
+image::controller10.gif[]
 					
 				</imageobject>
 			</mediaobject>
@@ -97,7 +97,7 @@ image::controller10.gif" />
 		 To run your webapplication, select Trainer.jsp, right
 			mouse-click- >run as -> run on server.
 		
-image::controller30.gif" />
+image::controller30.gif[]
 					
 				</imageobject>
 			</mediaobject>
