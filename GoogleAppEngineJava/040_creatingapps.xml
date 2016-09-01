@@ -1,6 +1,6 @@
-<section id="runapp">
+[[runapp">
 == Running an application
-	<section id="runapp_server">
+[[runapp_server">
 === On the App Engine
 		The process of creating an application on the Google App Engine
 			involves the creation of an application on the Google App Engine
@@ -10,7 +10,7 @@
 
 		
 			To create an application on the
-http://appengine.google.com/">App Engine</ulink>
+http://appengine.google.com/">App Engine]
 			press the button
 			"Create an
 			application"
@@ -22,7 +22,7 @@ http://appengine.google.com/">App Engine</ulink>
 			application.
 		
 
-	<section id="runapp_local">
+[[runapp_local">
 === Running application locally
 		
 			The Eclipse Plugin allows to run applications for the Google

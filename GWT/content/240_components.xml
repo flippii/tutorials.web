@@ -1,4 +1,4 @@
-<section id="components">
+[[components">
 == Build your own components
 	 GWT allows you to build your own components based on other
 		widgets. To do this you extends

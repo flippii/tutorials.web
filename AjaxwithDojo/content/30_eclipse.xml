@@ -1,12 +1,12 @@
 
-<section id="eclipse">
+[[eclipse">
 == Eclipse
 	 The following examples work without Eclipse but Eclipse
 		provides nice editors for html pages and css style sheets. 
 	
 		If you want you can use Eclipse
 		http://www.vogella.com/tutorials/Eclipse/article.html#install">
-			Eclipse installation</ulink>
+			Eclipse installation]
 		.
 	
 	 If you want to use Eclipse for the following examples, create a

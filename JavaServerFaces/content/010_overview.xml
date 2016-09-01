@@ -1,6 +1,6 @@
-<section id="jsf">
+[[jsf">
 == JavaServer Faces - JSF
-	<section id="jsf_overview">
+[[jsf_overview">
 === What is JSF
 		
 			JavaServer Faces (JSF) is a UI component based Java Web
@@ -17,20 +17,20 @@
 			A JSF application run in a
 			standard web
 			container, for example
-http://www.vogella.com/tutorials/ApacheTomcat/article.html">Tomcat</ulink>
+http://www.vogella.com/tutorials/ApacheTomcat/article.html">Tomcat]
 			or
-http://www.vogella.com/tutorials/Jetty/article.html"> Jetty</ulink>
+http://www.vogella.com/tutorials/Jetty/article.html"> Jetty]
 			.
 		
 		
 			This articles provides an introduction to JSF using only standard JSF
 			features.
 			For the usage of special Apache Trinidad features please see
-http://www.vogella.com/tutorials/ApacheMyFaces/article.html"> Apache Myfaces Trinidad with Eclipse - Tutorial</ulink>
+http://www.vogella.com/tutorials/ApacheMyFaces/article.html"> Apache Myfaces Trinidad with Eclipse - Tutorial]
 			.
 		
 
-	<section id="jsf_application">
+[[jsf_application">
 === A JSF application
 		 A JSF application consists of web pages with JSF UI components.
 			A JSF application requires also some configuration files
@@ -88,7 +88,7 @@ http://www.vogella.com/tutorials/ApacheMyFaces/article.html"> Apache Myfaces Tri
 		 JSF uses the Unified Expression Language (EL) to bind UI
 			components to object attributes or methods. 
 
-	<section id="jsf_valuebinding">
+[[jsf_valuebinding">
 === Value and Method Binding
 		 In JSF you can access the values of a managed bean via
 			value
@@ -112,7 +112,7 @@ http://www.vogella.com/tutorials/ApacheMyFaces/article.html"> Apache Myfaces Tri
 				otherwise stored as strings).
 		
 
-	<section id="jsf_prerequisites">
+[[jsf_prerequisites">
 === Prerequisites to use JSF
 		
 			To use JSF you need:
@@ -135,7 +135,7 @@ http://www.vogella.com/tutorials/ApacheMyFaces/article.html"> Apache Myfaces Tri
 
 
 
-	<section id="jsf_mainfeatures">
+[[jsf_mainfeatures">
 === JSF Main features
 		
 			JSP has the following main features:
@@ -167,7 +167,7 @@ http://www.vogella.com/tutorials/ApacheMyFaces/article.html"> Apache Myfaces Tri
 			</itemizedlist>
 		
 
-	<section id="jsf_jsp">
+[[jsf_jsp">
 === JSP and JSF
 		 In this tutorial the JSF application will be build based on
 			JavaServer Pages (JSP's). JSTL tags are used to include JSF UI

@@ -1,21 +1,21 @@
-<section id="resources">
+[[resources">
 == Links and Literature
 	
-	<section id="resources_xml">
+[[resources_xml">
 === Links and Literature
 		
 http://www.vogella.com/tutorials/RSSFeed/article.html">
-				Read and write RSS feeds via Java (Stax)</ulink>
+				Read and write RSS feeds via Java (Stax)]
 		
 
 		
 http://java.sun.com/developer/technicalArticles/WebServices/jaxb/">
-				JAXB Overview</ulink>
+				JAXB Overview]
 		
 
 		
 http://www.ibm.com/developerworks/library/x-javaxpathapi.html">
-				The Java XPath API (by Elliotte Rusty Harold)</ulink>
+				The Java XPath API (by Elliotte Rusty Harold)]
 		
 
 	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../10_Include/resources.xml" />

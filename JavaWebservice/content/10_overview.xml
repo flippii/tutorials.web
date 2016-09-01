@@ -1,11 +1,11 @@
-<section id="javawebservice">
+[[javawebservice">
 == Webservices with standard Java
-	<section id="javawebservice_overview">
+[[javawebservice_overview">
 === Overview
 		 Java 1.6 introduced the possibility to create standard SOAP
 			webservices with the standard JDK.
 
-	<section id="javawebservice_process">
+[[javawebservice_process">
 === Process
 		
 			To use standard Java for creating a webservice you

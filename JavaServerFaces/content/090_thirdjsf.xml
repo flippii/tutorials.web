@@ -1,4 +1,4 @@
-<section id="thirdjsf">
+[[thirdjsf">
 == JSF application with a controller
 	 We will now extend the example from the previous chapter to a
 		math trainer. The system will propose two number and the user must
@@ -12,11 +12,11 @@
 	
 	This example will also demonstrate the usage of dependency
 		injection in JSF.
-	<section id="thirdjsf_project">
+[[thirdjsf_project">
 === Create JSF Project
 		 Create a new Dynamic Web Project "de.vogella.jsf.card".
 
-	<section id="thirdjsf_model">
+[[thirdjsf_model">
 === Domain model
 		 Create a new package de.vogella.jsf.card.model and the
 			following class.
@@ -27,7 +27,7 @@
 ----
 		
 
-	<section id="thirdjsf_controller">
+[[thirdjsf_controller">
 === Controller
 		 Create the following class CardController.
 		
@@ -39,7 +39,7 @@
 		 This class has a field resultPanel. This field will later get
 			connected to a UIComponent (panel) from the JSP.
 
-	<section id="thirdjsf_managedbeans">
+[[thirdjsf_managedbeans">
 === Register your managed beans- Dependency injection
 		 Double-click on faces-config.xml and select the tab
 			"ManagedBeans". Register the classes "CardController" and "Card" as
@@ -64,7 +64,7 @@ image::controller10.gif[]
 ----
 		
 
-	<section id="thirdjsf_resourcebundle">
+[[thirdjsf_resourcebundle">
 === Resource bundle for messages
 		 Create the following file "messages.properties" in your source
 			folder under the package "de.vogella.jsf.card".
@@ -75,7 +75,7 @@ image::controller10.gif[]
 ----
 		
 
-	<section id="thirdjsf_firstjsp">
+[[thirdjsf_firstjsp">
 === JavaServer Page with JSF components
 		 Create a new JSP page "Trainer.jsp" and change the code to the
 			following:
@@ -92,7 +92,7 @@ image::controller10.gif[]
 			set the rendered attribute of this UIControl depending on the user
 			settings.
 
-	<section id="thirdjsf_run">
+[[thirdjsf_run">
 === Run your webapplication
 		 To run your webapplication, select Trainer.jsp, right
 			mouse-click- >run as -> run on server.

@@ -1,10 +1,10 @@
-<section id="overview">
+[[overview">
 == Google Web Toolkit
 	
 		For an introduction in
-		http://www.vogella.com/tutorials/GWT/article.html"> GWT</ulink>
+		http://www.vogella.com/tutorials/GWT/article.html"> GWT]
 		please see
-		http://www.vogella.com/tutorials/GWT/article.html"> GWT tutorial.</ulink>
+		http://www.vogella.com/tutorials/GWT/article.html"> GWT tutorial.]
 		. The following describes how to use external jars or Java projects
 		within your GWT project.
 	

@@ -1,15 +1,15 @@
-<section id="jaxb">
+[[jaxb">
 == RESTful web services and JAXB
 	
 		JAX-RS supports the automatic creation of XML and JSON via JAXB. For
 		an introduction into XML please see
-		http://www.vogella.com/tutorials/JavaXML/article.html">Java and XML - Tutorial</ulink>
+		http://www.vogella.com/tutorials/JavaXML/article.html">Java and XML - Tutorial]
 		. For an introduction into JAXB please see
-		http://www.vogella.com/tutorials/JAXB/article.html">JAXB</ulink>
+		http://www.vogella.com/tutorials/JAXB/article.html">JAXB]
 		. You can continue this tutorial without reading these tutorials, but
 		they contain more background information.
 	
-	<section id="jaxb_project">
+[[jaxb_project">
 === Create necessary classes
 		
 			Create a new
@@ -31,7 +31,7 @@
 		
 
 
-	<section id="jaxb_domainmodel">
+[[jaxb_domainmodel">
 === Create project
 		Create your domain class.
 		
@@ -78,7 +78,7 @@ include::res/jaxb/TodoResource.java[]
 		
 
 
-	<section id="jaxb_client">
+[[jaxb_client">
 === Create a client
 		
 			Create a new Java project

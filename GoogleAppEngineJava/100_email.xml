@@ -1,4 +1,4 @@
-<section id="email">
+[[email">
 == Email handling
 	 AppEngine allows your application to send and receive emails. We
 		will use the receive email feature

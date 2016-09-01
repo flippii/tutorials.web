@@ -1,6 +1,6 @@
-<section id="c2dmapp">
+[[c2dmapp">
 == Tutorial: Create your C2DM enabled application
-	<section id="example_project">
+[[example_project">
 === Project and Layout
 		
 			Create the Android project
@@ -29,7 +29,7 @@
 		
 
 
-	<section id="example_manifest">
+[[example_manifest">
 === Create receivers and activities
 
 		 Create the following class "C2DMReceiverReceiver" and
@@ -107,7 +107,7 @@
 			later use it in your server implementation.
 		
 
-	<section id="example_register">
+[[example_register">
 === Register your application
 
 		Run your application, maintain your registered user and press

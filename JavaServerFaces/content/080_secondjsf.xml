@@ -1,14 +1,14 @@
-<section id="secondjsf">
+[[secondjsf">
 == Your second JSF application
 	 This second JSF application will add validation, resource
 		bundles and navigation as additional functionality.
 	
-	<section id="secondjsf_project">
+[[secondjsf_project">
 === Create JSF Project
 		 Create a new Dynamic Web Project "de.vogella.jsf.starter".
 		
 
-	<section id="secondjsf_model">
+[[secondjsf_model">
 === Domain model
 		 Create a new package de.vogella.jsf.starter.model and the
 			following class.
@@ -38,14 +38,14 @@
 			
 		
 
-	<section id="secondjsf_managedbeans">
+[[secondjsf_managedbeans">
 === Register your managed beans
 		 Double-click on faces-config.xml and select the tab
 			"ManagedBeans". Register your User.java and Card.java as managed
 			beans.
 		
 
-	<section id="secondjsf_validators">
+[[secondjsf_validators">
 === Validators
 		 JSP allows to define validators which allows to check certain
 			values which are placed in the UI. Create therefore the following
@@ -67,7 +67,7 @@ image::validator10.gif[]
 image::validator20.gif[]
 		
 
-	<section id="secondjsf_resourcebundle">
+[[secondjsf_resourcebundle">
 === Resource bundle for messages
 		 With JSP it is easy to use resource bundles for the static text
 			in your JSP application. Create the following file
@@ -81,7 +81,7 @@ image::validator20.gif[]
 ----
 		
 
-	<section id="secondjsf_firstjsp">
+[[secondjsf_firstjsp">
 === JavaServer Page with JSF components
 		 Create a new JSP page "LoginView.jsp" and change the code to
 			the following:
@@ -179,7 +179,7 @@ image::validator20.gif[]
 ----
 		
 
-	<section id="navigationrule">
+[[navigationrule">
 === Navigation Rule
 		 Select your faces-config.xml and select the tab "Navigation
 			Rule". Make the palette available if necessary.
@@ -218,7 +218,7 @@ image::navigationrule50.gif[]
 			the right user / password you send him to the failure page.
 		
 
-	<section id="secondjsf_run">
+[[secondjsf_run">
 === Run your webapplication
 		 To run your webapplication, select LoginView.jsp, right
 			mouse-click- >run as -> run on server.

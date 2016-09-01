@@ -1,6 +1,6 @@
-<section id="c2dm">
+[[c2dm">
 == Cloud to device messaging
-	<section id="c2dm_overview">
+[[c2dm_overview">
 === Polling vs. Push
 		 Most mobile apps require data from the Internet.
 			One
@@ -24,7 +24,7 @@
 			constantly, Push is the preferred solution.
 		
 
-	<section id="c2dm_messaging">
+[[c2dm_messaging">
 === Cloud service
 
 		
@@ -32,7 +32,7 @@
 			application. To do this you must enable
 			_Google Cloud Messaging for Android_
 			in the
-https://console.developers.google.com/project">Google API Console</ulink>
+https://console.developers.google.com/project">Google API Console]
 			.
 		
 
@@ -104,7 +104,7 @@ https://console.developers.google.com/project">Google API Console</ulink>
 		
 
 
-	<section id="_c2dm_requirements">
+[[_c2dm_requirements">
 === Requirements
 		 C2MD is available as of Android 2.2 and requires that
 			Android
@@ -116,7 +116,7 @@ https://console.developers.google.com/project">Google API Console</ulink>
 		
 
 
-	<section id="c2dm_permissions">
+[[c2dm_permissions">
 === Permissions
 		
 			To use C2DM in your application to have to register for the following
@@ -149,7 +149,7 @@ https://console.developers.google.com/project">Google API Console</ulink>
 			permission.
 		
 
-	<section id="c2dm_receiver">
+[[c2dm_receiver">
 === Intent Receiver
 		
 			Your application must register an intent receiver for

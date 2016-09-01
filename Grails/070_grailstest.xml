@@ -1,4 +1,4 @@
-<section id="grailstest">
+[[grailstest">
 == Testing your application
 	
 		The command <code>create-domain-class</code> automatically creates a

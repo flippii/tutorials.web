@@ -1,4 +1,4 @@
-<section id="uibinder">
+[[uibinder">
 == UIBinder
 	 UIBinder allows to design GWT UI's declarative via XML. 
 	 Create a new GWT project "de.vogella.gwt.uibinder" with the

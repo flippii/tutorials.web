@@ -1,5 +1,5 @@
 
-<section id="groovy">
+[[groovy">
 == Groovy
 	
 		Groovy is (almost) a superset of Java, e.g., most valid Java
@@ -13,6 +13,6 @@
 	
 	
 		See
-		http://www.vogella.com/tutorials/Groovy/article.html">Groovy tutorial</ulink>
+		http://www.vogella.com/tutorials/Groovy/article.html">Groovy tutorial]
 		for an introduction into Groovy.
 	

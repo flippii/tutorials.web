@@ -1,6 +1,6 @@
-<section id="html_overview">
+[[html_overview">
 == HTML5
-	<section id="overview_what">
+[[overview_what">
 === What is HTML?
 		
 			HTML (Hypertext Markup Language) is a standard to describe the
@@ -42,16 +42,16 @@
 			tag contains general information about the webpage.
 		
 
-	<section id="overview_css">
+[[overview_css">
 === CSS
 		
 			HTML by ifself does not define a lot of display options. You use
-http://www.vogella.com/tutorials/CSS/article.html"> CSS</ulink>
+http://www.vogella.com/tutorials/CSS/article.html"> CSS]
 			to define how HTML element should be displayed.
 		
 
 
-	<section id="overview_structure">
+[[overview_structure">
 === A structured example
 		
 			HTML5 introduced several new ways of classifying content of the
@@ -67,7 +67,7 @@ http://www.vogella.com/tutorials/CSS/article.html"> CSS</ulink>
 			elements. Most
 			browser will not change the display based on them but
 			you can use
-http://www.vogella.com/tutorials/CSS/article.html"> CSS</ulink>
+http://www.vogella.com/tutorials/CSS/article.html"> CSS]
 			to select these elements and style them accordingly.
 		
 		
@@ -77,11 +77,11 @@ http://www.vogella.com/tutorials/CSS/article.html"> CSS</ulink>
 ----
 		
 
-	<section id="overview_validators">
+[[overview_validators">
 === HTML validators
 		
 			You can use
-http://validator.w3.org/"> http://validator.w3.org/</ulink>
+http://validator.w3.org/"> http://validator.w3.org/]
 			to check the validity of your HTML code.
 		
 

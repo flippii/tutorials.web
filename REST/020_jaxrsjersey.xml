@@ -1,6 +1,6 @@
-<section id="restjersey">
+[[restjersey">
 == JAX-RS with Jersey
-	<section id="jaxrs_intro">
+[[jaxrs_intro">
 === JAX-RS
 		
 			Java defines REST support via the
@@ -16,7 +16,7 @@
 			classes.
 		
 
-	<section id="jersey_intro">
+[[jersey_intro">
 === Jersey
 		
 			_Jersey_
@@ -87,7 +87,7 @@ include::res/path/path.txt[]
 		
 
 
-	<section id="restjersey_annotations">
+[[restjersey_annotations">
 === JAX-RS annotations
 		
 			The most important

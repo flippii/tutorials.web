@@ -1,6 +1,6 @@
-<section id="xml_overview">
+[[xml_overview">
 == XML Introduction
-	<section id="xml_overview_s2a">
+[[xml_overview_s2a">
 === XML Overview
 		
 			XML is the abbreviation for
@@ -52,7 +52,7 @@
 			is valid according to the schema.
 		
 
-	<section id="xml_comparisionwithotherformats">
+[[xml_comparisionwithotherformats">
 === Comparison of XML to other formats
 
 		
@@ -90,7 +90,7 @@
 		
 
 
-	<section id="xml_overview_s2b">
+[[xml_overview_s2b">
 === XML Example
 		The following is a valid, well-formed XML file.
 		
@@ -101,7 +101,7 @@ include::res/xmlintro/firstxmlfile.txt[]
 		
 
 
-	<section id="xml_overview_s2c">
+[[xml_overview_s2c">
 === XML Elements
 		
 			An XML document always starts with a

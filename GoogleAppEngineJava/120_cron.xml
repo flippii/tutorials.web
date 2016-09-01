@@ -1,4 +1,4 @@
-<section id="cron">
+[[cron">
 == Cron jobs
 	 You can define cron jobs in your application. Via a cron job on
 		th AppEngine you

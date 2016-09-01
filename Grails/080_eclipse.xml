@@ -1,10 +1,10 @@
-<section id="grailseclipse">
+[[grailseclipse">
 == Using Eclipse for Grails development
 	
 		The following requires that Eclipse is
 		installed with the Groovy plug-in. Please see
 		http://www.vogella.com/tutorials/Groovy/article.html">
-			Groovy Eclipse Plugin</ulink>
+			Groovy Eclipse Plugin]
 		for more information.
 	
 	
@@ -45,5 +45,5 @@ image::eclipse10.gif[]
 	
 		A tighter integration of Grails is achieved by the
 		http://www.grails.org/STS+Integration">
-			SpringSource Tool Suite (STS)</ulink>.
+			SpringSource Tool Suite (STS)].
 	

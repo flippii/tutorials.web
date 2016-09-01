@@ -1,6 +1,6 @@
-<section id="grails">
+[[grails">
 == Grails
-	<section id="grailsoverview">
+[[grailsoverview">
 === What is Grails?
 		
 			_Grails_
@@ -63,7 +63,7 @@
 			the command line to generated new user interfaces.
 		
 
-	<section id="gormoverview">
+[[gormoverview">
 === Object relationship mapping (ORM) with GORM
 
 		

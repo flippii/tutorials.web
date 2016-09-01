@@ -1,6 +1,6 @@
-<section id="javaxpath">
+[[javaxpath">
 == XPath
-	<section id="javaxpath_a">
+[[javaxpath_a">
 === Overview
 		
 			XPath (XML Path Language) is a language for selecting /
@@ -12,7 +12,7 @@
 			document via Java.
 		
 
-	<section id="javaxpath_b">
+[[javaxpath_b">
 === Using XPath
 		
 			The following explains how to use XPath. Create a new Java

@@ -1,6 +1,6 @@
-<section id="overview">
+[[overview">
 == Overview
-	<section id="overview_gwt">
+[[overview_gwt">
 === Google Web Toolkit
 		 The Google Web Toolkit (GWT) is a toolkit to develop Ajax web
 			application with Java. The programmer writes Java code and this code is
@@ -41,7 +41,7 @@
 		
 
 
-	<section id="overview_module">
+[[overview_module">
 === Modules, Entry Points and HTML pages
 		
 			GWT applications are described as
@@ -79,7 +79,7 @@
 			body tag of the HTML page.
 		
 
-	<section id="overview_css">
+[[overview_css">
 === Using CSS
 		 The look and feel of a GWT application can be customized via
 			CSS files. Each widget in GWT can be given a HTML "div" container and can therefore be individually styled by CSS. 

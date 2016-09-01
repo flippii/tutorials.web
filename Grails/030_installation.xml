@@ -1,10 +1,10 @@
-<section id="install">
+[[install">
 == Installation
-	<section id="install_commandline">
+[[install_commandline">
 === Installation of the Grails command line tools
 		
 			Download the latest official release of Grails from the
-https://grails.org/download">Grails download page</ulink>
+https://grails.org/download">Grails download page]
 			. Unzip the download to a directory of your choice.
 		
 		
@@ -45,7 +45,7 @@ include::res/installation/version.txt[]
 
 
 
-	<section id="grails_eclipsesupport">
+[[grails_eclipsesupport">
 === Installing the Grails Eclipse plug-in
 		The Eclipse IDE has great support for the Grails applications.
 		
@@ -74,7 +74,7 @@ image::grailseclipseinstallation10"
 		
 		
 			The update site is Eclipse version dependent, see
-https://spring.io/tools/ggts/all">Groovy/Grails Tool Suite™ Downloads</ulink>
+https://spring.io/tools/ggts/all">Groovy/Grails Tool Suite™ Downloads]
 			if you use a different release than Eclipse 4.4.
 		
 

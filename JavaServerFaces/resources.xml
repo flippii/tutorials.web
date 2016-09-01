@@ -1,51 +1,51 @@
-<section id="resources">
+[[resources">
 == Links and Literature
-	<section id="resources_articles">
+[[resources_articles">
 === Tutorials and Websites
 		
-http://www.jsfcentral.com/"> http://www.jsfcentral.com/</ulink>
+http://www.jsfcentral.com/"> http://www.jsfcentral.com/]
 			Information about JavaServer Faces
 		
 		
 http://www.ibm.com/developerworks/edu/j-dw-java-jsf1-i.html">
-				www.ibm.com/developerworks/edu/j-dw-java-jsf1-i.html</ulink>
+				www.ibm.com/developerworks/edu/j-dw-java-jsf1-i.html]
 			Getting started with JavaServer Faces 1.2, Part 1: Building basic
 			applications
 		
 		
 http://www.ibm.com/developerworks/edu/j-dw-java-jsf2-i.html">
-				http://www.ibm.com/developerworks/edu/j-dw-java-jsf2-i.html</ulink>
+				http://www.ibm.com/developerworks/edu/j-dw-java-jsf2-i.html]
 			Getting started with JavaServer Faces 1.2, Part 2: JSF life cycle,
 			conversion, validation, and phase listeners
 		
 		
 http://java.sun.com/products/jsp/reference/techart/unifiedEL.html"
-			> http://java.sun.com/products/jsp/reference/techart/unifiedEL.html</ulink>
+			> http://java.sun.com/products/jsp/reference/techart/unifiedEL.html]
 			Unified Expression Language
 		
 
-	<section id="resources_jsf">
+[[resources_jsf">
 === JSF component libraries
 		The following lists JSF implementations or JSF extension
 			implementations.
 		
-http://myfaces.apache.org/"> http://myfaces.apache.org</ulink>
+http://myfaces.apache.org/"> http://myfaces.apache.org]
 			Apache MyFaces
 		
 		
-http://www.jboss.org/jbossrichfaces/"> http://www.jboss.org/jbossrichfaces/</ulink>
+http://www.jboss.org/jbossrichfaces/"> http://www.jboss.org/jbossrichfaces/]
 			JBoss Rich Faces
 		
 		
 http://www.oracle.com/technology/products/adf/adffaces/index.html"
-			> http://www.oracle.com/technology/products/adf/adffaces/index.html</ulink>
+			> http://www.oracle.com/technology/products/adf/adffaces/index.html]
 			Oracle ADF Faces Rich Client Components (JSF implementation of
 			Oracle)
 		
 		
 http://www.eclipse.org/webtools/jsf/dev_resource/JSFTutorial-RC3/JSFTools_tutorial.html"
 			>
-				http://www.eclipse.org/webtools/jsf/dev_resource/JSFTutorial-RC3/JSFTools_tutorial.html</ulink>
+				http://www.eclipse.org/webtools/jsf/dev_resource/JSFTutorial-RC3/JSFTools_tutorial.html]
 			Introduction to building JSF with Eclipse
 		
 

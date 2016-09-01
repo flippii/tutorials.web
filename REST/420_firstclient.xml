@@ -1,4 +1,4 @@
-<section id="firstclient">
+[[firstclient">
 == Create a REST client
 	
 		Jersey contains a REST client library which can be used for
@@ -14,9 +14,9 @@
 		following test class.
 	
 	
-		<programlisting language="java">
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/test/Test.java[]
+[source,java]
+----
+include::res/test/Test.java[]
 ----
 	
 

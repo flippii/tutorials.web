@@ -1,6 +1,6 @@
-<section id="javawebterminology_overview">
+[[javawebterminology_overview">
 == Web development
-	<section id="javawebterminology_overview1">
+[[javawebterminology_overview1">
 === Webdevelopment with Java
 		
 			Java has strong support for web development. While Java on the
@@ -9,7 +9,7 @@
 		
 
 
-	<section id="overview_webdevelopment">
+[[overview_webdevelopment">
 === Web development
 		If you develop a web application (independent of the
 			programming
@@ -39,7 +39,7 @@
 		
 		
 			For example,
-http://blog.vogella.com/">blog.vogella.com</ulink>
+http://blog.vogella.com/">blog.vogella.com]
 			contains the vogella blog. This blog is a web application powered by
 			WordPress
 			which is a web application written in the server-side
@@ -47,7 +47,7 @@ http://blog.vogella.com/">blog.vogella.com</ulink>
 			PHP.
 		
 
-	<section id="overview_servervscloud">
+[[overview_servervscloud">
 === Server vs cloud deployment
 		
 			Instead of running your application directly on a dedicated
@@ -62,7 +62,7 @@ http://blog.vogella.com/">blog.vogella.com</ulink>
 		
 
 
-	<section id="overview_container">
+[[overview_container">
 === Java web or Java EE container
 		 Java web applications are typically not running directly on the
 			server. Java web applications are running inside a web container on

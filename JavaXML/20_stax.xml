@@ -1,6 +1,6 @@
-<section id="javastax">
+[[javastax">
 == Streaming API for XML (StaX)
-	<section id="javastax_overview">
+[[javastax_overview">
 === Overview
 		
 			Streaming API for XML, called StaX, is an API for
@@ -38,7 +38,7 @@
 		
 
 
-	<section id="javastax_api">
+[[javastax_api">
 === Event Iterator API
 		
 			The event iterator API has two main interfaces:
@@ -49,7 +49,7 @@
 
 
 
-	<section id="javastax_read">
+[[javastax_read">
 === XMLEventReader - Read XML Example
 		 This example is stored in project "de.vogella.xml.stax.reader".
 		
@@ -102,7 +102,7 @@ include::res/staxread/TestRead.java[]
 		
 
 
-	<section id="javastax_write">
+[[javastax_write">
 === Write XML File Example
 		 This example is stored in project "de.vogella.xml.stax.writer".
 		
@@ -138,7 +138,7 @@ include::res/staxwrite/TestWrite.java[]
 
 		
 			For another (more complex) example of using Stax, please see
-http://www.vogella.com/tutorials/RSSFeed/article.html"> Reading and creating RSS feeds via Java (with Stax)</ulink>.
+http://www.vogella.com/tutorials/RSSFeed/article.html"> Reading and creating RSS feeds via Java (with Stax)].
 		
 
 

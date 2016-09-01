@@ -1,6 +1,6 @@
-<section id="grailslayout">
+[[grailslayout">
 == Change the layout of your Grails application
-	<section id="grailslayout_s2a">
+[[grailslayout_s2a">
 === Changing the generated views
 		
 			If you are not satisfied with the order of the fields, you can
@@ -16,7 +16,7 @@
 		
 
 
-	<section id="grailslayout_s2b">
+[[grailslayout_s2b">
 === Using CSS
 		
 			Grails created the default CSS style sheets under the

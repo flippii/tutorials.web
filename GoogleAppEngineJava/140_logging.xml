@@ -1,8 +1,8 @@
-<section id="logging">
+[[logging">
 == Logging
 	
 		You can use
-		http://www.vogella.com/tutorials/Logging/article.html"> standard Java Logging</ulink>
+		http://www.vogella.com/tutorials/Logging/article.html"> standard Java Logging]
 		for logging on
 		the
 		App Engine. For example to define a logger in your
@@ -28,11 +28,11 @@
 	
 
 		You find your logs on the
-http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html#adminconsole">Admin Console</ulink>
+http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html#adminconsole">Admin Console]
 		. the For further information see
-		http://www.vogella.com/tutorials/Logging/article.html"> Java Logging Tutorial</ulink>
+		http://www.vogella.com/tutorials/Logging/article.html"> Java Logging Tutorial]
 		and
-http://code.google.com/appengine/docs/java/runtime.html#Logging"> Logging on the GAE/J</ulink>
+http://code.google.com/appengine/docs/java/runtime.html#Logging"> Logging on the GAE/J]
 		.
 	
 

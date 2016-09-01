@@ -1,6 +1,6 @@
-<section id="todo">
+[[todo">
 == Developing a task management web application
-	<section id="todo_overview">
+[[todo_overview">
 === Overview
 		
 			In the following exercise zou create a web app for a task management
@@ -8,11 +8,11 @@
 			and
 			JSP's. The persistence will be
 			handled by
-http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA</ulink>
+http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA]
 			. For
 			an introduction into servlet please
 			see
-http://www.vogella.com/tutorials/EclipseWTP/article.html"> Servlet and JSP development - Tutorial</ulink>
+http://www.vogella.com/tutorials/EclipseWTP/article.html"> Servlet and JSP development - Tutorial]
 
 		
 
@@ -20,7 +20,7 @@ http://www.vogella.com/tutorials/EclipseWTP/article.html"> Servlet and JSP devel
 image::todo.png[]
 		
 
-	<section id="todo_project">
+[[todo_project">
 === Project
 		
 			Create a new project called <code>com.vogella.gae.java.todo</code> via
@@ -47,11 +47,11 @@ image::gae20.gif[]
 image::gae25.gif[]
 		
 
-	<section id="todo_model">
+[[todo_model">
 === Create your model
 		
 			Create the following class which will be our model. The
-http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA</ulink>
+http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA]
 			metadata is already added.
 		
 
@@ -64,7 +64,7 @@ http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA</ulink>
 
 
 
-	<section id="todo_jpa">
+[[todo_jpa">
 === Setup JPA and your DAO
 		
 			To use JPA in your project you must create the JPA configuration
@@ -100,7 +100,7 @@ http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA</ulink>
 
 
 
-	<section id="todo_servlets">
+[[todo_servlets">
 === Create servlets
 
 		 Create the following two servlets. The first will be called if
@@ -122,7 +122,7 @@ http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA</ulink>
 		
 
 
-	<section id="todo_jsp">
+[[todo_jsp">
 === Create JSP
 		In the folder "war" create the following JSP
 			"TodoApplication.jsp".
@@ -147,7 +147,7 @@ http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA</ulink>
 
 
 
-	<section id="todo_web">
+[[todo_web">
 === web.xml
 		
 			Change
@@ -166,7 +166,7 @@ http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA</ulink>
 		
 
 
-	<section id="todo_runagain">
+[[todo_runagain">
 === Run your application again
 		 You should be able to run your application locally, login and
 			create and
@@ -176,13 +176,13 @@ http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA</ulink>
 image::todo.gif[]
 		
 
-	<section id="todo_application">
+[[todo_application">
 === Maintain application
 		
 			To deploy your application to the GAE you need to maintain your
 			application ID in the file "web/WEB-INF/appengine-web.xml". In the
 			tag "application" maintain the application you have created in
-http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html#register"> GAE/J Registration</ulink>
+http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html#register"> GAE/J Registration]
 			. In my example I use the application "vogellatodo".
 
 		
@@ -194,7 +194,7 @@ http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html#register"> GAE
 ----
 		
 
-	<section id="todo_deploy">
+[[todo_deploy">
 === Deploy your application
 		
 			Now deploy your application to the Google cloud. The following

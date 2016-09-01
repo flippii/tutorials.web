@@ -1,4 +1,4 @@
-<section id="tutorial_serverapp">
+[[tutorial_serverapp">
 == Tutorial: Create your server application
 	 As described earlier the application server needs to get an
 		authentication key via HTTPS. Afterwards it can send messages to

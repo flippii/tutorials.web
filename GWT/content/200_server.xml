@@ -1,6 +1,6 @@
-<section id="server">
+[[server">
 == Client and Server Communication (RPC)
-	<section id="server_overview">
+[[server_overview">
 === Overview
 		 GWT provides its own remote procedure calls (RPC's) which allow
 			the GWT client to call server-side methods. The implementation of GWT
@@ -50,7 +50,7 @@
 			</itemizedlist>
 		
 
-	<section id="server_project">
+[[server_project">
 === Create project and domain model
 		 Create a GWT project
 			"de.vogella.gwt.helloserver" with the
@@ -75,7 +75,7 @@
 ----
 		
 
-	<section id="server_interfaces">
+[[server_interfaces">
 === Interface
 		 The client server communication is based on an interface which
 			defines the possible communication methods.
@@ -110,7 +110,7 @@
 				created by the GWT compiler.
 		
 
-	<section id="server_service">
+[[server_service">
 === Create the server
 		 For the server implementation create a package
 			"de.vogella.gwt.helloserver.server". Create the following class which
@@ -122,7 +122,7 @@
 ----
 		
 
-	<section id="server_servlet">
+[[server_servlet">
 === Define servlet in web.xml
 		
 			To make GWT aware of this service change the web.xml file in
@@ -133,7 +133,7 @@
 ----
 		
 
-	<section id="server_table">
+[[server_table">
 === UI component - Table
 		 Create the following two classes which will be used to display
 			the data in a table. The implementation of "MyTable" is based on
@@ -151,7 +151,7 @@
 ----
 		
 
-	<section id="server_callback">
+[[server_callback">
 === Callback
 		 To receive a callback a class needs to be implemented which can
 			then react on a failure or success in the communication. The
@@ -175,7 +175,7 @@
 			line.
 
 
-	<section id="server_entrypoint">
+[[server_entrypoint">
 === Create your entry point
 		Create the following class.
 		
@@ -210,7 +210,7 @@
 ----
 		
 
-	<section id="server_run">
+[[server_run">
 === Run
 		 Run your application. If you click the button then a list
 			of

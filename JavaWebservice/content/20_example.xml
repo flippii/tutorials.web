@@ -1,6 +1,6 @@
-<section id="wsexample">
+[[wsexample">
 == Example
-	<section id="wsexample_server">
+[[wsexample_server">
 === Create the server Java project
 		Create a Java project
 			"de.vogella.webservice.java6.first.provider". Create a package with
@@ -17,7 +17,7 @@
 				browser. You should see the WSDL of your server.
 		
 
-	<section id="wsexample_clientcode">
+[[wsexample_clientcode">
 		 Create now the client code. Using the console switch to an
 			empty directory and call the wsimport command line tool which is part
 			of the JDK.
@@ -40,7 +40,7 @@ image::webservice10.gif[]
 		This call will create an interface with the webservice
 			methods and factory to use the webservice.
 
-	<section id="wsexample_client">
+[[wsexample_client">
 === Using the Webservice
 		 Create a new Java project
 			"de.vogella.webservice.java6.first.consumer" create a package with

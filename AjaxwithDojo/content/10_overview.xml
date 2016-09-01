@@ -1,6 +1,6 @@
-<section id="overview">
+[[overview">
 == Ajax - Asynchronous JavaScript and XML
-	<section id="overview_ajax">
+[[overview_ajax">
 === Overview
 		
 			Ajax (Asynchronous JavaScript and XML) describes the
@@ -30,11 +30,11 @@
 		
 
 
-	<section id="overview_javascript">
+[[overview_javascript">
 === Introduction to JavaScript
 		
 			This article assume some familiarity with JavaScript. Please see
-http://www.vogella.com/tutorials/JavaScript/article.html">Javascript - Tutorial</ulink>
+http://www.vogella.com/tutorials/JavaScript/article.html">Javascript - Tutorial]
 			for a introduction into JavaScript.
 		
 

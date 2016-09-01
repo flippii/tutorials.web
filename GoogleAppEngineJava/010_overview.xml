@@ -1,14 +1,14 @@
-<section id="googleappengine">
+[[googleappengine">
 == Google App Engine for Java (GAE/J)
-	<section id="googleappengine_overview">
+[[googleappengine_overview">
 === Overview
 		
 			Google offers a cloud
 			computing infrastructure called
-http://appengine.google.com/"> Google App Engine</ulink>
+http://appengine.google.com/"> Google App Engine]
 			(App Engine) for creating and
 			running
-http://www.vogella.com/tutorials/EclipseWTP/article.html">web applications</ulink>
+http://www.vogella.com/tutorials/EclipseWTP/article.html">web applications]
 			.
 			App Engine
 			allows the dynamic allocation of system
@@ -19,21 +19,21 @@ http://www.vogella.com/tutorials/EclipseWTP/article.html">web applications</ulin
 			Currently
 			App Engine
 			supports
-http://www.vogella.com/tutorials/GoogleAppEngine/article.html">Python</ulink>
+http://www.vogella.com/tutorials/GoogleAppEngine/article.html">Python]
 			and Java based applications. This includes
 			Java
 			Virtual Machine
 			(JVM)
 			based
 			languages, e.g.
-http://www.vogella.com/tutorials/Groovy/article.html"> Groovy</ulink>
+http://www.vogella.com/tutorials/Groovy/article.html"> Groovy]
 			or
-http://www.vogella.com/tutorials/Scala/article.html"> Scala</ulink>
+http://www.vogella.com/tutorials/Scala/article.html"> Scala]
 			. This article will cover the App Engine for Java (GAE/J)).
 		
 
 
-	<section id="googleappengine_standards">
+[[googleappengine_standards">
 === Standard API's via App Engine specific API's
 		
 			The App Engine offers frequently standard Java API's and
@@ -49,11 +49,11 @@ http://www.vogella.com/tutorials/Scala/article.html"> Scala</ulink>
 			Java standard API. 
 		
 
-	<section id="googleappengine_technologies">
+[[googleappengine_technologies">
 === AppEngine technologies
 		
 			App Engine uses the
-http://www.vogella.com/tutorials/Jetty/article.html">Jetty</ulink>
+http://www.vogella.com/tutorials/Jetty/article.html">Jetty]
 			servlet container to host
 			applications and
 			supports the Java Servlet
@@ -61,27 +61,27 @@ http://www.vogella.com/tutorials/Jetty/article.html">Jetty</ulink>
 			provides access to
 			databases via Java Data
 			Objects (JDO) and the
-http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html"> Java Persistence API (JPA)</ulink>
+http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html"> Java Persistence API (JPA)]
 			. In the background App Engine uses
-http://www.vogella.com/tutorials/GoogleTechnologies/article.html#bigtable"> Google Bigtable</ulink>
+http://www.vogella.com/tutorials/GoogleTechnologies/article.html#bigtable"> Google Bigtable]
 			as the distributed storage system for persisting application data.
 		
 		
 			Google provides
-http://www.vogella.com/tutorials/GoogleTechnologies/article.html#memcache"> Memcache</ulink>
+http://www.vogella.com/tutorials/GoogleTechnologies/article.html#memcache"> Memcache]
 			as a caching mechanism. Developers who want to code against the
 			standard Java API can use the JCache implementation (based on JSR
 			107).
 		
 
-	<section id="googleappengine_services">
+[[googleappengine_services">
 === Services
 		 The App Engine provides several services. For example the
 			Blobstore allows to upload and store and serve large data objects
 			(blobs) with a limit of  2 Gigabyte. To create a blob you
 			upload a file via an HTTP request.   
 
-	<section id="googleappengine_versions">
+[[googleappengine_versions">
 === Versions
 		 Google App Engine supports the creation of several version of
 			your application. In the Admin Console you can select which version
@@ -94,7 +94,7 @@ http://www.vogella.com/tutorials/GoogleTechnologies/article.html#memcache"> Memc
 			where version is for example "2" and "latest" is a fixed string.
 		
 
-	<section id="googleappengine_restrictions">
+[[googleappengine_restrictions">
 === Restrictions
 
 		
@@ -107,7 +107,7 @@ http://www.vogella.com/tutorials/GoogleTechnologies/article.html#memcache"> Memc
 			supported. 
 			
 
-		 You cannot use http://www.vogella.com/tutorials/JavaConcurrency/article.html">Threads</ulink> or frameworks which uses Threads. You
+		 You cannot use http://www.vogella.com/tutorials/JavaConcurrency/article.html">Threads] or frameworks which uses Threads. You
 			can also not write to the filesystem and only read files which are
 			part of your application. Certain "java.lang.System" actions, e.g. gc()
 			or exit() will do nothing. You can not call JNI code. Reflection
@@ -122,13 +122,13 @@ http://code.google.com/appengine/docs/java/jrewhitelist.html"> Java Whitelist fo
 				list
 				of
 				supported
-				classes.</ulink>
+				classes.]
 		
 		 A servlet needs also to reply within 30 seconds otherwise a
 			"com.google.apphosting.api.DeadlineExceededException" is thrown. 	
 
 
-	<section id="googleappengine_quotes">
+[[googleappengine_quotes">
 === Quotas
 		
 
@@ -136,7 +136,7 @@ http://code.google.com/appengine/docs/java/jrewhitelist.html"> Java Whitelist fo
 			frequented, e.g. 5 Millions page views. The price model for the
 			websites that exceed thier daily quota is listed on the
 http://code.google.com/appengine/docs/billing.html"> Google billing
-				documentation pages</ulink>
+				documentation pages]
 			. The usage quotas
 			of the App Engine are constantly changing but, at
 			the time of this

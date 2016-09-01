@@ -1,23 +1,23 @@
-<section id="eclipse">
+[[eclipse">
 == Using Eclipse
 	 You can also use Eclipse for developing GAE applications via the
 		PyDev plugin.
 
-	<section id="eclipse_pydev">
+[[eclipse_pydev">
 === Eclipse and Pydev
 		
 			Please see
-http://www.vogella.com/tutorials/Python/article.html"> Python Development with Eclipse</ulink>
+http://www.vogella.com/tutorials/Python/article.html"> Python Development with Eclipse]
 			to learn how to install and use Eclipse and Pydev. The remaining
 			focuses on the additional setup to use the GAE.
 		
 
-	<section id="eclipse_project">
+[[eclipse_project">
 === Project
 
 		
 			Create a Python project called "de.vogella.gae.python.todo". See
-http://www.vogella.com/tutorials/Python/article.html"> Python Development with Eclipse</ulink>
+http://www.vogella.com/tutorials/Python/article.html"> Python Development with Eclipse]
 			for how to create a new Pydev / Python project in Eclipse.
 		
 		 Use Python version 2.5. Remember that the GAE does currently
@@ -32,7 +32,7 @@ image::eclipse50.gif[]
 			</mediaobject>
 		
 
-	<section id="eclipse_gaesdk">
+[[eclipse_gaesdk">
 === Make GAE SDK available
 		 We need to add the GAE SDK to the pythonpath. Right-click your
 			project and select properties. Select PYTHONPATH and press "Add
@@ -47,7 +47,7 @@ image::eclipse60.gif[]
 			</mediaobject>
 		
 
-	<section id="eclipse_run">
+[[eclipse_run">
 === Run your application
 		 You still can use the command line to run your GAE application.
 			But we are now going to configure Eclipse to allow you to run your

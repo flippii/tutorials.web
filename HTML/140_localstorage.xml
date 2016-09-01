@@ -1,4 +1,4 @@
-<section id="localstorage">
+[[localstorage">
 == Local storage
 	
 		HTML5 supports local storage of data to work offline. Currently you
@@ -29,5 +29,5 @@
 		Currently it is recommended to use local storage as it has the largest
 		support. For an example see
 		http://www.html5rocks.com/tutorials/offline/takingappoffline/">
-			http://www.html5rocks.com/tutorials/offline/takingappoffline/</ulink>
+			http://www.html5rocks.com/tutorials/offline/takingappoffline/]
 	

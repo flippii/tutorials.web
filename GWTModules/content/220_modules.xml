@@ -1,6 +1,6 @@
-<section id="modules">
+[[modules">
 == Using external jars / Java projects in GWT
-	<section id="modules_overview">
+[[modules_overview">
 === Overview
 		The standard approach in Java is to have separated projects for
 			separate purposes. For example the domain model of the application is
@@ -42,7 +42,7 @@
 			</itemizedlist>
 		
 
-	<section id="modules_createmodule">
+[[modules_createmodule">
 === Create the module project
 		 Create a Java project "de.vogella.gwt.module.model" and package
 			"de.vogella.gwt.module.model". Create the following class.
@@ -63,7 +63,7 @@
 ----
 		
 
-	<section id="modules_use">
+[[modules_use">
 === Use the module in another project
 
 		We want to use this model in a GWT project. Create therefore a

@@ -1,6 +1,6 @@
-<section id="rest">
+[[rest">
 == REST - Representational State Transfer
-	<section id="rest_overview">
+[[rest_overview">
 === What is REST?
 		
 			REST is an architectural style which is
@@ -39,7 +39,7 @@
 			negotiation).
 		
 
-	<section id="rest_httpmethods">
+[[rest_httpmethods">
 === HTTP methods
 		
 			The
@@ -88,7 +88,7 @@
 		
 
 
-	<section id="rest_webservices">
+[[rest_webservices">
 === RESTFul web services
 		
 			A RESTFul web services are based on HTTP methods and the

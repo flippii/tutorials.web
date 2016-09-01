@@ -1,4 +1,4 @@
-<section id="register">
+[[register">
 == Register at the Google App Engine
 	
 		To deploy your application to the Google cloud you need a AppEngine
@@ -6,7 +6,7 @@
 		Open
 		the
 		URL
-		http://appengine.google.com/">App Engine registration page</ulink>
+		http://appengine.google.com/">App Engine registration page]
 		and login with your Google account information. You
 		need to verify your
 		account via a valid phone number. After

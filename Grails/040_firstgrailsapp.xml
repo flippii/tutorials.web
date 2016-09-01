@@ -1,13 +1,13 @@
-<section id="firstgrails">
+[[firstgrails">
 == Exercise: Create Grails web application
-	<section id="firstgrails_target">
+[[firstgrails_target">
 === Target
 		We want to develop a guestbook application, in this exercise see
 			start with the intial template.
 		
 
 
-	<section id="firstgrails_create">
+[[firstgrails_create">
 === Create your application
 		
 			Let's create the application with the name
@@ -53,7 +53,7 @@ image::firstgrailsapplication10.png"
 		
 
 
-	<section id="firstgrails_run">
+[[firstgrails_run">
 === Run your application
 		
 			The created application can already run. In the shell switch
@@ -86,7 +86,7 @@ image::firstgrailsapplication10.png"
 		
 http://localhost:8080/com.vogella.grails.guestbook">
 				http://localhost:8080/com.vogella.grails.guestbook
-			</ulink>
+			]
 		
 		
 image::firstgrailsapplication20.png"

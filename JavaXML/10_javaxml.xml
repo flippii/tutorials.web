@@ -1,4 +1,4 @@
-<section id="javaxml">
+[[javaxml">
 == Java XML overview
 	
 		The Java programming language contains several methods for
@@ -42,7 +42,7 @@
 	
 	
 		Java Architecture for XML Binding (
-		http://www.vogella.com/tutorials/JAXB/article.html">JAXB</ulink>
+		http://www.vogella.com/tutorials/JAXB/article.html">JAXB]
 		) is a Java standard that
 		defines how Java objects are
 		converted to
@@ -71,6 +71,6 @@
 		introduction to
 		JAXB,
 		please see
-		http://www.vogella.com/tutorials/JAXB/article.html"> JAXB tutorial</ulink>
+		http://www.vogella.com/tutorials/JAXB/article.html"> JAXB tutorial]
 		.
 	

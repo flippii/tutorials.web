@@ -1,6 +1,6 @@
-<section id="firstjersey">
+[[firstjersey">
 == Create your first RESTful Webservice
-	<section id="firstjersey_project">
+[[firstjersey_project">
 === Create a new web project 
 		
 			Create a new
@@ -27,7 +27,7 @@ image::jerseryfirst20.png[]
 image::jerseryfirst30.png[]
 		
 
-	<section id="firstjersey_libraries">
+[[firstjersey_libraries">
 === Configure jersey usage
 		
 			See
@@ -36,7 +36,7 @@ image::jerseryfirst30.png[]
 		
 
 
-	<section id="firstjersey_class">
+[[firstjersey_class">
 === Java Class
 		Create the following class.
 		
@@ -70,11 +70,11 @@ include::res/first/Hello.java[]
 			The browser will always request the HTML MIME type. To see the
 			text
 			version, you can use tool like
-http://www.vogella.com/tutorials/Ubuntu/article.html#network_curl">curl</ulink>
+http://www.vogella.com/tutorials/Ubuntu/article.html#network_curl">curl]
 			.
 		
 
-	<section id="first_servletdispatcher">
+[[first_servletdispatcher">
 === Define Jersey Servlet dispatcher
 		
 			You need to register Jersey as the servlet dispatcher for REST
@@ -101,11 +101,11 @@ http://www.vogella.com/tutorials/Ubuntu/article.html#network_curl">curl</ulink>
 		
 
 
-	<section id="first_run">
+[[first_run">
 === Run your rest service
 		
 			Run you web application in Eclipse. See
-http://www.vogella.com/tutorials/EclipseWTP/article.html">Eclipse WTP</ulink>
+http://www.vogella.com/tutorials/EclipseWTP/article.html">Eclipse WTP]
 			for details on how to run dynamic web applications.
 		
 		

@@ -1,4 +1,4 @@
-<section id="crud">
+[[crud">
 == CRUD RESTful webservice
 	
 		This section creates a CRUD (Create, Read, Update, Delete)
@@ -6,7 +6,7 @@
 		of TODOs in your
 		web application via HTTP calls.
 	
-	<section id="crud_project">
+[[crud_project">
 === Project
 		
 			Create a new dynamic project called
@@ -23,7 +23,7 @@
 		
 		
 			Create the following data model and a
-http://www.vogella.com/tutorials/DesignPatternSingleton/article.html">Singleton</ulink>
+http://www.vogella.com/tutorials/DesignPatternSingleton/article.html">Singleton]
 			which serves as the data provider for the model. We use the
 			implementation based on an enumeration. Please see the
 			link for
@@ -31,7 +31,7 @@ http://www.vogella.com/tutorials/DesignPatternSingleton/article.html">Singleton<
 			<code>Todo</code>
 			class is
 			annotated with a JAXB annotation. See
-http://www.vogella.com/tutorials/JavaXML/article.html">Java and XML</ulink>
+http://www.vogella.com/tutorials/JavaXML/article.html">Java and XML]
 			to learn about JAXB.
 		
 		
@@ -48,7 +48,7 @@ include::res/todo/TodoDao.java[]
 		
 
 
-	<section id="crud_webpage">
+[[crud_webpage">
 === Create a simple HTML form
 		
 			The REST service can be used via HTML forms. The following HTML
@@ -68,7 +68,7 @@ include::res/todo/TodoDao.java[]
 ----
 		
 
-	<section id="crud_class">
+[[crud_class">
 === Rest Service
 		
 			Create the following classes which will be used as REST
@@ -95,14 +95,14 @@ include::res/todo/TodosResource.java[]
 		
 
 
-	<section id="crud_run">
+[[crud_run">
 === Run
 		
 			Run you web application in Eclipse and test the availability of
 			your REST service under:
 http://localhost:8080/com.vogella.jersey.todo/rest/todos">
 				http://localhost:8080/com.vogella.jersey.todo/rest/todos
-			</ulink>
+			]
 			. You should
 			see the XML representation of your TODO items.
 		
@@ -113,12 +113,12 @@ image::todoserver10.gif[]
 			To see the count of TODO items use
 http://localhost:8080/com.vogella.jersey.todo/rest/todos/count">
 				http://localhost:8080/com.vogella.jersey.todo/rest/todos/count
-			</ulink>
+			]
 			to see an existing TODO use
 			"http://localhost:8080/com.vogella.jersey.todo/rest/todos/{id}", e.g.,
 http://localhost:8080/com.vogella.jersey.todo/rest/todos/1">
 				http://localhost:8080/com.vogella.jersey.todo/rest/todos/1
-			</ulink>
+			]
 			to see
 			the TODO with ID
 			<property>1</property>
@@ -133,7 +133,7 @@ http://localhost:8080/com.vogella.jersey.todo/rest/todos/1">
 		
 
 
-	<section id="crud_client">
+[[crud_client">
 === Create a client
 		
 			To test your service can you create new class in your server project. This project has already all required libs in
@@ -148,7 +148,7 @@ include::res/todo/Tester.java[]
 		
 
 
-	<section id="crud_html">
+[[crud_html">
 === Using the REST service via HTML page
 		
 			The above example contains a form which calls a post method of

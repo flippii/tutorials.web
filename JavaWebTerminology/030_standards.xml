@@ -1,12 +1,12 @@
-<section id="standards">
+[[standards">
 == Java Web Standards
 	
 		Standard Java technologies are defined via a standard process called
 		the
-		http://jcp.org">Java Community Process (JCP)</ulink>
+		http://jcp.org">Java Community Process (JCP)]
 		. The following technologies are defined via the JCP.
 	
-	<section id="servlet">
+[[servlet">
 === Servlet
 		
 			A servlet is a Java class which extends "HttpServlet" and
@@ -21,11 +21,11 @@
 			EE
 			6. For details
 			see the
-http://jcp.org/en/jsr/detail?id=315">Java Servlets 3.0 Spec</ulink>
+http://jcp.org/en/jsr/detail?id=315">Java Servlets 3.0 Spec]
 			.
 		
 
-	<section id="jsp">
+[[jsp">
 === JavaServer Page
 		
 			JavaServer Pages (JSP) are files which contain HTML and Java
@@ -35,10 +35,10 @@ http://jcp.org/en/jsr/detail?id=315">Java Servlets 3.0 Spec</ulink>
 			time the JSP is accessed. The current latest version is 2.1.
 
 			See
-http://jcp.org/en/jsr/detail?id=245">Specification for JavaServer Pages 2.1</ulink>
+http://jcp.org/en/jsr/detail?id=245">Specification for JavaServer Pages 2.1]
 		
 
-	<section id="JSTL">
+[[JSTL">
 === JavaServer Pages Standard Tag Library
 		
 			The JavaServer Pages Standard Tag Library (JSTL) encapsulates
@@ -49,13 +49,13 @@ http://jcp.org/en/jsr/detail?id=245">Specification for JavaServer Pages 2.1</uli
 			Specification version 2.1.
 		
 
-	<section id="tryitout">
+[[tryitout">
 === Getting started with Java web development
 		
 			Getting started with Java Web development is
 			relatively easy. You can
 			try it out via the following
-http://www.vogella.com/tutorials/EclipseWTP/article.html">Servlet and JSP Tutorial</ulink>
+http://www.vogella.com/tutorials/EclipseWTP/article.html">Servlet and JSP Tutorial]
 			.
 		
 

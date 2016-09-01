@@ -1,4 +1,4 @@
-<section id="pagerank">
+[[pagerank">
 == Pagerank
 	
 		Pagerank is the weight of importance for a webpage calculated by
@@ -15,7 +15,7 @@
 	
 		Please find a good description of the pagerank calculation in the
 		following article
-		http://www.ams.org/featurecolumn/archive/pagerank.html">http://www.ams.org/featurecolumn/archive/pagerank.html</ulink>
+		http://www.ams.org/featurecolumn/archive/pagerank.html">http://www.ams.org/featurecolumn/archive/pagerank.html]
 		.
 	
 

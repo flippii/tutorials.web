@@ -1,4 +1,4 @@
-<section id="tutorial_serverapp">
+[[tutorial_serverapp">
 == Tutorial: Create your server ;-) application
 	 As described earlier the application server needs to get an
 		authentication key via HTTPS. Afterwards it can send messages to
@@ -7,11 +7,11 @@
 	
 	
 		To avoid that you have to learn about
-		http://www.vogella.com/tutorials/EclipseWTP/article.html"> server side Java programming</ulink>
+		http://www.vogella.com/tutorials/EclipseWTP/article.html"> server side Java programming]
 		we will "simulate" the server by another Android application. In
 		general you could create a server side application for example with
 		the
-http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html">Google App Engine</ulink>
+http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html">Google App Engine]
 		.
 	
 	 Create a new Android application

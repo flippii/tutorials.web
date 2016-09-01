@@ -1,8 +1,8 @@
-<section id="firstgwt">
+[[firstgwt">
 == Create your first GWT application
 	 The following is a description of the usage of the Google
 	 plug-in to create a new GWT application. plugin.
-	<section id="firstgwt_project">
+[[firstgwt_project">
 === Project
 		
 			Select File > New > Web Application Project. Enter the name
@@ -10,7 +10,7 @@
 			Only select "Use Google Web
 			Toolkit", as we will not use the
 http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html">
-				Google App Engine</ulink>
+				Google App Engine]
 			in this tutorial.
 		
 		
@@ -27,14 +27,14 @@ image::gwt10.gif[]
 				from scratch with a new GWT application. Please stare / vote for bug
 				<ulink
 					url="http://code.google.com/p/googleappengine/issues/detail?id=1547">
-					Issue 1547</ulink>
+					Issue 1547]
 				to get this solved.
 			
 		
 		 Delete all java files under the package "client" and "server".
 		
 
-	<section id="firstgwt_entrypoint">
+[[firstgwt_entrypoint">
 === GWT entry point
 		Create the following
 			Java class "HelloGwt" in the
@@ -58,7 +58,7 @@ image::gwt10.gif[]
 		 This file defines your entry point to your application. In GWT
 			the entry point is similar to the main method in Java.
 
-	<section id="firstgwt_html">
+[[firstgwt_html">
 === HTML page
 		 In the folder "war" you should find a folder with the
 			file "De_vogella_gwt_helloworld.html". Change this file to the
@@ -75,7 +75,7 @@ image::gwt10.gif[]
 				name, you need to adjust the path. 
 		
 
-	<section id="firstgwt_webxml">
+[[firstgwt_webxml">
 === web.xml
 		 The Google Plugin created also a web.xml and placed a
 			reference
@@ -90,7 +90,7 @@ image::gwt10.gif[]
 		
 
 
-	<section id="firstgwt_css">
+[[firstgwt_css">
 === Modify CSS
 		 Change the CSS of our application. In
 			folder war you find a file
@@ -112,13 +112,13 @@ image::gwt10.gif[]
 				"setStyleName"-Method as shown below.
 				<programlisting language="xml">
 					<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-						parse="text" href="../examples/firstgwt/HelloGwtStyles.java" />
-				</programlisting>
+						parse="text" href="../examples/firstgwt/HelloGwtStyles.java[]
+----
 			
 		
 
 
-	<section id="firstgwt_run">
+[[firstgwt_run">
 === Run
 		 To run your application right-click the project and select Run
 			As -> "Web application".

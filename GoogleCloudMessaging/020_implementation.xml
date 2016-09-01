@@ -1,6 +1,6 @@
-<section id="implementation">
+[[implementation">
 == Implementation Steps
-	<section id="implementation_applicationserver">
+[[implementation_applicationserver">
 === Application Server Registration
 		The application server needs to authenticate himself with
 			the
@@ -40,7 +40,7 @@
 
 
 
-	<section id="implementation_mobileregistration">
+[[implementation_mobileregistration">
 === Getting the registration ID for the mobile app
 		To register your Android app for the C2DM service you fire an
 			registration intent
@@ -143,7 +143,7 @@
 
 
 
-	<section id="c2dm_registermessage">
+[[c2dm_registermessage">
 === Register Receiver for C2DM messages
 		 Similar to registration of the registration receiver you need
 			to configure a message receiver. This could be the same or a
@@ -170,7 +170,7 @@
 		
 
 
-	<section id="c2dm_sendmessage">
+[[c2dm_sendmessage">
 === Send messages
 		At this point your application server and your Android app are
 			ready to use C2DM. Your server has his authentication token and the

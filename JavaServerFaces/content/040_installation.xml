@@ -1,15 +1,15 @@
-<section id="installation">
+[[installation">
 == Installation
-	<section id="installation_eclipse">
+[[installation_eclipse">
 === Eclipse
 		
 			For JSP development you need the Eclipse WTP and an installed Tomcat.
 			See
-http://www.vogella.com/tutorials/EclipseWTP/article.html"> Installation of Eclipse WTP and Tomcat</ulink>
+http://www.vogella.com/tutorials/EclipseWTP/article.html"> Installation of Eclipse WTP and Tomcat]
 			.
 		
 
-	<section id="installation_jsf">
+[[installation_jsf">
 === JSF library
 		
 			A JSF library is required. We will later use Eclipse to download and install the Apache
@@ -17,11 +17,11 @@ http://www.vogella.com/tutorials/EclipseWTP/article.html"> Installation of Eclip
 			implementation during project creation. 
 		
 
-	<section id="installation_jslt">
+[[installation_jslt">
 === JSLT library
 		
 			Download the JSLT library from
-https://jstl.dev.java.net/"> https://jstl.dev.java.net/</ulink>
+https://jstl.dev.java.net/"> https://jstl.dev.java.net/]
 			.
 		
 

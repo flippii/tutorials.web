@@ -1,4 +1,4 @@
-<section id="app_python">
+[[app_python">
 == Developing your first application
 	 In this part of the tutorial we will develop a small Todo list.
 		This list will allow you to store todos, send out email reminders to
@@ -21,16 +21,16 @@ image::todo10.gif[]
 	
 		The source of this example is stored in project
 		"de.vogella.gae.python.todo" and can be browsed on
-		http://www.vogella.com/code.html">www.vogella.com source code</ulink>
+		http://www.vogella.com/code.html">www.vogella.com source code]
 	
-	<section id="app_python_dir">
+[[app_python_dir">
 === Directory
 		 Create a new directory "googleappengine01", e.g.
 			c:\temp\googleappengine01. All the following files must be created
 			within this directory.
 		
 
-	<section id="app_python_config">
+[[app_python_config">
 === Configuration File
 		 Create the following configuration file for your application.
 			It define the application name, the runtime and defines the handler
@@ -49,7 +49,7 @@ image::todo10.gif[]
 			the webbrowser.
 		
 
-	<section id="app_python_application">
+[[app_python_application">
 === Create the application
 		
 			Python allows to define several classes in one source file. We are
@@ -126,7 +126,7 @@ image::todo10.gif[]
 			directory.
 		
 
-	<section id="app_python_run">
+[[app_python_run">
 === Run your application
 		 Switch to a command line. Switch to the directory which
 			contains your application directory. Start your application locally
@@ -152,7 +152,7 @@ image::todo10.gif[]
 			
 		
 
-	<section id="app_python_clean">
+[[app_python_clean">
 === Clean your test data
 		 The local installation will store your test data until you tell
 			the engine to delete the test data. Use therefore the
@@ -165,12 +165,12 @@ image::todo10.gif[]
 ----
 		
 
-	<section id="app_python_upload">
+[[app_python_upload">
 === Deploy your application
 		
 			Now deploy your application to the Google cloud. Open the following
 			URL
-http://appengine.google.com/"> http://appengine.google.com/</ulink>
+http://appengine.google.com/"> http://appengine.google.com/]
 			and login with your Google User. Press the button "Create an
 			application".
 		
@@ -190,6 +190,6 @@ http://appengine.google.com/"> http://appengine.google.com/</ulink>
 			Thats it. You should now be able to find your application at
 			http://yourname.appspot.com/. For example this example can be found
 			at
-http://myvogella.appspot.com/"> http://myvogella.appspot.com/</ulink>
+http://myvogella.appspot.com/"> http://myvogella.appspot.com/]
 		
 

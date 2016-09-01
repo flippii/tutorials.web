@@ -1,6 +1,6 @@
-<section id="dojoserver">
+[[dojoserver">
 == Accessing the server
-	<section id="dojoserver_s2a">
+[[dojoserver_s2a">
 === Reading a fixed file from a server
 		
 			Dojo allows you to read data from the server. The following
@@ -37,7 +37,7 @@
 		
 
 
-	<section id="dojoserver_s2b">
+[[dojoserver_s2b">
 === Send data to the server and update the page with the response
 		
 			Now you need a build a server side application. I'm going to

@@ -1,6 +1,6 @@
-<section id="jsfconfig">
+[[jsfconfig">
 == JSF configuration files
-	<section id="jsfconfig_overview">
+[[jsfconfig_overview">
 === Overview
 		
 			JSF is based on the following configuration files:
@@ -16,7 +16,7 @@
 		
 
 
-	<section id="jsfconfig_webxml">
+[[jsfconfig_webxml">
 === web.xml
 		
 			JSF requires the central
@@ -42,7 +42,7 @@
 			before the JSP is displayed. 
 		
 
-	<section id="jsfconfig_facesconfigxml">
+[[jsfconfig_facesconfigxml">
 === faces-config.xml
 		
 			"faces-config.xml" allows to configure the application, managed

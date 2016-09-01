@@ -1,14 +1,14 @@
-<section id="todojsf">
+[[todojsf">
 == A Todo JSF application
 	 Lets now create a JSF application for maintaining a Todo list.
 		The main new thing we will cover is the handling of tables in JSF.
 		These tables will be created based on a Java collection from the
 		managed bean.
-	<section id="todojsf_project">
+[[todojsf_project">
 === Create JSF Project
 		 Create a new Dynamic Web Project "de.vogella.jsf.todo".
 
-	<section id="todojsf_model">
+[[todojsf_model">
 === Domain model
 		 Create a new package de.vogella.jsf.todo.model and the
 			following class.
@@ -19,7 +19,7 @@
 ----
 		
 
-	<section id="todojsf_controller">
+[[todojsf_controller">
 === Controller
 		 Create the package de.vogella.jsf.todo.controller and the
 			following class TodoController.
@@ -30,12 +30,12 @@
 ----
 		
 
-	<section id="todojsf_managedbeans">
+[[todojsf_managedbeans">
 === Register your managed beans
 		 Double-click on faces-config.xml and select the tab
 			"ManagedBeans". Register the TodoController.
 
-	<section id="todojsf_css">
+[[todojsf_css">
 === Create css
 		 In your folder WebContent create a folder css. Create a file
 			mystyle.css with the following content.
@@ -46,7 +46,7 @@
 ----
 		
 
-	<section id="todojsf_firstjsp">
+[[todojsf_firstjsp">
 === JavaServer Page with JSF components
 		 Create a new JSP page "Todo.jsp" and change the code to the
 			following:
@@ -75,7 +75,7 @@
 			delete from the controller will then remove this elements from the
 			list.
 
-	<section id="todojsf_run">
+[[todojsf_run">
 === Run your webapplication
 		 If you run your webapplication you should be seeing the
 			following:

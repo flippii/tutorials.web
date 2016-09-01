@@ -1,4 +1,4 @@
-<section id="htmlelements">
+[[htmlelements">
 == HTML Standard Elements
 	
 		The following defines standard HTML elements. If you want to try out
@@ -8,7 +8,7 @@
 		tags between the <![CDATA[ <body> </body> ]]>
 		tag. Save your file and re-load your browser to see the result.
 	
-	<section id="htmlelements_blocks">
+[[htmlelements_blocks">
 === Blocks and structural elements
 		<![CDATA[ <p> </p> ]]>
 			describes a paragraph and <![CDATA[ <h1> </h1> ]]>
@@ -22,7 +22,7 @@
 			inserts a line into the text.
 		
 
-	<section id="htmlelements_tags">
+[[htmlelements_tags">
 === HTML Links
 		 The following describes a link in HTML. The attribute "href"
 			defines the target
@@ -56,7 +56,7 @@
 		
 		
 
-	<section id="htmlelements_list">
+[[htmlelements_list">
 === Lists
 		 HTML supports ordered and unordered lists. 
 		
@@ -66,7 +66,7 @@
 ----
 		
 
-	<section id="htmlelements_table">
+[[htmlelements_table">
 === Tables
 		
 			<programlisting>
@@ -75,7 +75,7 @@
 ----
 		
 
-	<section id="htmlelements_image">
+[[htmlelements_image">
 === Image
 		Images should have the "alt" tag defined and can optionally
 			definde a width and a height.
@@ -88,7 +88,7 @@
 		
 
 
-	<section id="htmlelements_specialsigns">
+[[htmlelements_specialsigns">
 === Special signs
 		 Use the following special signs to display them in your
 			webpage.

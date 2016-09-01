@@ -1,11 +1,11 @@
-<section id="httpclient">
+[[httpclient">
 == Using the Apache HttpClient
 	
 		The Apache
 		HttpClient library simplifies handling HTTP requests.
 		To use
 		this library download the binaries with dependencies from
-		http://hc.apache.org/"> http://hc.apache.org/</ulink>
+		http://hc.apache.org/"> http://hc.apache.org/]
 		and add then to your project classpath.
 	
 	

@@ -1,6 +1,6 @@
-<section id="bootstrapandpersistsdata">
+[[bootstrapandpersistsdata">
 == Exercise: Bootstrap and persists data
-	<section id="bootstrapandpersistsdata_target">
+[[bootstrapandpersistsdata_target">
 === Target
 		
 			In this exercise you create example data and store the data between
@@ -10,7 +10,7 @@
 		
 
 
-	<section id="firstgrails_scaffolding">
+[[firstgrails_scaffolding">
 === Bootstrapping example data
 		
 			Grails allows to simulate example data (this is called
@@ -46,7 +46,7 @@ include::res/firstgrails/Bootstrap.java[]
 		
 
 
-	<section id="firstgrailsapp_store">
+[[firstgrailsapp_store">
 === Store the data
 		
 			By default, the data maintained in the web application is not
@@ -67,7 +67,7 @@ include::res/firstgrails/Bootstrap.java[]
 		
 
 
-	<section id="firstgrails_controllerview_scaffolding">
+[[firstgrails_controllerview_scaffolding">
 === Static scaffolding
 		
 			To switch from dynamic scaffolding to static scaffolding, you

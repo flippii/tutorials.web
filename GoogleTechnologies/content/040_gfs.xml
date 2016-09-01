@@ -1,9 +1,9 @@
-<section id="gfs">
+[[gfs">
 == Google File System
 	
 		Google has the GFS, a distributed, multi-gigabyte files. This file
 		system is described
-		http://labs.google.com/papers/gfs.html">Google File System Whitepaper</ulink>
+		http://labs.google.com/papers/gfs.html">Google File System Whitepaper]
 		.
 	
 	 GFS does not handle the replication between different data

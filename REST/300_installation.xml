@@ -1,10 +1,10 @@
-<section id="jerseyprojectsetup">
+[[jerseyprojectsetup">
 == Installation of Jersey
-	<section id="jerseyprojectsetup_manual">
+[[jerseyprojectsetup_manual">
 === Manual setup of Jersey libraries in an Eclipse project
 		
 			Download the Jersey distribution as zip file from the
-https://jersey.java.net/download.html">Jersey download site</ulink>
+https://jersey.java.net/download.html">Jersey download site]
 			.
 		
 
@@ -32,7 +32,7 @@ image::jerseryfirst40.png[]
 
 
 
-	<section id="jerseyprojectsetup_gradle">
+[[jerseyprojectsetup_gradle">
 === Required setup for Gradle with Eclipse web projects
 		TODO...
 

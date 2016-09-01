@@ -1,9 +1,9 @@
-<section id="prerequisites">
+[[prerequisites">
 == Prerequisites
 	
 		The following description assumes that you are familiar with creating
 		web applications in Eclipse.
 		See
-		http://www.vogella.com/tutorials/EclipseWTP/article.html">Eclipse WTP development</ulink>
+		http://www.vogella.com/tutorials/EclipseWTP/article.html">Eclipse WTP development]
 		for an introduction into creating web applications with Eclipse.
 	
