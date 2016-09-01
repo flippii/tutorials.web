@@ -10,9 +10,9 @@
 		"}".
 	
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/json/person.txt[]
+[source,text]
+----
+include::res/json/person.txt[]
 ----
 	
 	
@@ -22,9 +22,9 @@
 		",".
 	
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/json/persons.txt[]
+[source,text]
+----
+include::res/json/persons.txt[]
 ----
 	
 

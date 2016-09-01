@@ -32,26 +32,26 @@
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/html/anchor.txt[]
+[source,text]
+----
+include::res/html/anchor.txt[]
 ----
 		
 
 		 The following listing contains a link which displays a image.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/html/imagelink.txt[]
+[source,text]
+----
+include::res/html/imagelink.txt[]
 ----
 		
 		 The following example shows how to create a link for an email.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/html/emaillink.txt[]
+[source,text]
+----
+include::res/html/emaillink.txt[]
 ----
 		
 		
@@ -60,18 +60,18 @@
 === Lists
 		 HTML supports ordered and unordered lists. 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/html/lists.txt[]
+[source,text]
+----
+include::res/html/lists.txt[]
 ----
 		
 
 [[htmlelements_table">
 === Tables
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/html/table.txt[]
+[source,text]
+----
+include::res/html/table.txt[]
 ----
 		
 
@@ -81,9 +81,9 @@
 			definde a width and a height.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/html/image.txt[]
+[source,text]
+----
+include::res/html/image.txt[]
 ----
 		
 

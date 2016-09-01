@@ -56,9 +56,9 @@ http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA]
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/model/Todo.java[]
+[source,java]
+----
+include::res/model/Todo.java[]
 ----
 		
 
@@ -74,27 +74,27 @@ http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA]
 			datastore.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/jpa/persistence.xml[]
+[source,xml]
+----
+include::res/jpa/persistence.xml[]
 ----
 		
 		 The creation of the EntityManagerFactory is time-consuming
 			therefore we buffer it.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/jpa/EMFService.java[]
+[source,java]
+----
+include::res/jpa/EMFService.java[]
 ----
 		
 		 The following class provides the possibility to query for all
 			todos and to add and delete todos.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/jpa/Dao.java[]
+[source,java]
+----
+include::res/jpa/Dao.java[]
 ----
 		
 
@@ -108,16 +108,16 @@ http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA]
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/servlet/ServletCreateTodo.java[]
+[source,java]
+----
+include::res/servlet/ServletCreateTodo.java[]
 ----
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/servlet/ServletRemoveTodo.java[]
+[source,java]
+----
+include::res/servlet/ServletRemoveTodo.java[]
 ----
 		
 
@@ -129,9 +129,9 @@ http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA]
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/jsp/TodoApplication.jsp[]
+[source,text]
+----
+include::res/jsp/TodoApplication.jsp[]
 ----
 		
 		 The JSP refers to a css file. Create a folder "war/css" and
@@ -139,9 +139,9 @@ http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA]
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/jsp/main.css[]
+[source,text]
+----
+include::res/jsp/main.css[]
 ----
 		
 
@@ -159,9 +159,9 @@ http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA]
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/servlet/web.xml[]
+[source,xml]
+----
+include::res/servlet/web.xml[]
 ----
 		
 
@@ -188,9 +188,9 @@ http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html#register"> GAE
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/conf/appengine-web.xml[]
+[source,xml]
+----
+include::res/conf/appengine-web.xml[]
 ----
 		
 

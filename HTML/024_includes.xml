@@ -4,9 +4,9 @@
 		It is possible to include HTML elements into an HTML document.
 	
 	
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/include/include.html[]
+[source,html]
+----
+include::res/include/include.html[]
 ----
 		
 	

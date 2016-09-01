@@ -17,9 +17,9 @@
 	
 	 To store you credentials use the following class. 
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/server/SecureStorage.java[]
+[source,java]
+----
+include::res/server/SecureStorage.java[]
 ----
 	
 	
@@ -29,9 +29,9 @@
 		authentication token from the Google server.
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/server/AuthenticationUtil.java[]
+[source,java]
+----
+include::res/server/AuthenticationUtil.java[]
 ----
 		
 	
@@ -41,9 +41,9 @@
 		can be used to get the authentication token.
 	
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/server/GetAuthenticationToken.java[]
+[source,java]
+----
+include::res/server/GetAuthenticationToken.java[]
 ----
 	
 	 Run your GetAuthenticationToken class and copy the
@@ -55,9 +55,9 @@
 	
 
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/server/ServerConfiguration.java[]
+[source,java]
+----
+include::res/server/ServerConfiguration.java[]
 ----
 	
 
@@ -65,9 +65,9 @@
 		messages to your device.
 	
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/server/MessageUtil.java[]
+[source,java]
+----
+include::res/server/MessageUtil.java[]
 ----
 	
 
@@ -76,9 +76,9 @@
 	
 
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/server/SendMessageToDevice.java[]
+[source,java]
+----
+include::res/server/SendMessageToDevice.java[]
 ----
 	
 	 Run it. This should send a  message to your device and give

@@ -16,9 +16,9 @@
 	
 
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/mail/appengine-web.xml[]
+[source,xml]
+----
+include::res/mail/appengine-web.xml[]
 ----
 	
 	
@@ -43,9 +43,9 @@
 		define the email address for your application. The email address would be:
 	
 	
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/email/address.txt[]
+[source,text]
+----
+include::res/email/address.txt[]
 ----
 			
 		
@@ -82,17 +82,17 @@
 		"applicationid" with your real id. " 
 
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/mail/web.xml[]
+[source,text]
+----
+include::res/mail/web.xml[]
 ----
 	
 	 Create the following servlet which will process your email.
 	
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/mail/EmailServlet.java[]
+[source,text]
+----
+include::res/mail/EmailServlet.java[]
 ----
 	
 

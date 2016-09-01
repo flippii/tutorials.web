@@ -31,7 +31,7 @@ image::jerseryfirst30.png[]
 === Configure jersey usage
 		
 			See
-			<xref linkend="jerseyprojectsetup" />
+			<<jerseyprojectsetup>>
 			for the setup.
 		
 

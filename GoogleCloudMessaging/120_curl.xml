@@ -9,18 +9,18 @@ http://www.vogella.com/tutorials/Ubuntu/article.html#network_curl"> curl]
 	
 
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/curl/authentication.txt[]
+[source,text]
+----
+include::res/curl/authentication.txt[]
 ----
 	
 	 This part and the registration code can be used to send a
 		message to your device.
 	
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/curl/sendmessage.txt[]
+[source,text]
+----
+include::res/curl/sendmessage.txt[]
 ----
 	
 

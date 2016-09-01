@@ -24,7 +24,7 @@
 		false) or an
 		object.
 	
-	<warning>
+	WARNING:
 		While undefined by the standard you should avoid using duplicate
 			key names. Most JSON frameworks will override duplicate keys with the
 			last value.

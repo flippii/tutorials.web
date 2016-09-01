@@ -10,18 +10,18 @@
 	
 
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/logging/logdefine.txt[]
+[source,text]
+----
+include::res/logging/logdefine.txt[]
 ----
 	
 	
 		To log a message use the following. 
 		
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/logging/uselogger.txt[]
+[source,text]
+----
+include::res/logging/uselogger.txt[]
 ----
 	
 

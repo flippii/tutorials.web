@@ -23,9 +23,9 @@
 			password via the following coding:
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/server/AuthenticationUtil.java[]
+[source,java]
+----
+include::res/server/AuthenticationUtil.java[]
 ----
 		
 		 The token is periodically refreshed.
@@ -67,9 +67,9 @@
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/register/sendregister.txt[]
+[source,text]
+----
+include::res/register/sendregister.txt[]
 ----
 		
 
@@ -83,9 +83,9 @@
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/register/C2DMRegistrationReceiver.java[]
+[source,java]
+----
+include::res/register/C2DMRegistrationReceiver.java[]
 ----
 		
 
@@ -94,9 +94,9 @@
 			this coding.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/register/AndroidManifest.xml[]
+[source,xml]
+----
+include::res/register/AndroidManifest.xml[]
 ----
 		
 
@@ -128,9 +128,9 @@
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/register/sendToServer.txt[]
+[source,text]
+----
+include::res/register/sendToServer.txt[]
 ----
 		
 		
@@ -153,9 +153,9 @@
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/register/C2DMMessageReceiver.java[]
+[source,java]
+----
+include::res/register/C2DMMessageReceiver.java[]
 ----
 		
 		 In addition you need to register the message receiver in your
@@ -163,9 +163,9 @@
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/register/messagereceiver.txt[]
+[source,text]
+----
+include::res/register/messagereceiver.txt[]
 ----
 		
 
@@ -189,9 +189,9 @@
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/server/MessageUtil.java[]
+[source,java]
+----
+include::res/server/MessageUtil.java[]
 ----
 		
 		 Once your server sends the message to the C2DM server this

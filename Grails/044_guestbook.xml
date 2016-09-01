@@ -5,7 +5,7 @@
 		
 			In this exercise you finish the  guestbook application you started
 			in
-			<xref linkend="firstgrails" />
+			<<firstgrails>>
 			.
 		
 
@@ -13,7 +13,7 @@
 === Stop the server
 		
 			If you Grails application from
-			<xref linkend="firstgrails" />
+			<<firstgrails>>
 			is still running, stop the server via
 			<keycombo>
 				<keycap>Ctrl</keycap>
@@ -173,9 +173,9 @@ include::res/firstgrails/Comment.java[]
 			.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstgrails/FeedbackController.java[]
+[source,java]
+----
+include::res/firstgrails/FeedbackController.java[]
 ----
 		
 		

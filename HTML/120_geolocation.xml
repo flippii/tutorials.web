@@ -7,8 +7,8 @@
 	
 
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/geolocation/geolocation.html[]
+[source,text]
+----
+include::res/geolocation/geolocation.html[]
 ----
 	

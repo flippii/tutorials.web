@@ -20,17 +20,17 @@ http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html">Google App En
 	
 	Change `main.xml` to the following. 
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/server/main.xml[]
+[source,xml]
+----
+include::res/server/main.xml[]
 ----
 	
 	 Change "ServerSimulator" to the following. Make your to use
 		your registration key, your user and your password.
 	
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/server/ServerSimulator.java[]
+[source,java]
+----
+include::res/server/ServerSimulator.java[]
 ----
 	

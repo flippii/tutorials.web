@@ -13,18 +13,18 @@
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/first/main.xml[]
+[source,xml]
+----
+include::res/first/main.xml[]
 ----
 		
 		 Also create the layout "activity_result.xml" which we will use
 			in our result activities.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/first/activity_result.xml[]
+[source,xml]
+----
+include::res/first/activity_result.xml[]
 ----
 		
 
@@ -40,16 +40,16 @@
 
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/first/C2DMRegistrationReceiver.java[]
+[source,java]
+----
+include::res/first/C2DMRegistrationReceiver.java[]
 ----
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/first/C2DMMessageReceiver.java[]
+[source,java]
+----
+include::res/first/C2DMMessageReceiver.java[]
 ----
 		
 		 Also create the following two Activities which we will use to
@@ -58,16 +58,16 @@
 
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/first/RegistrationResultActivity.java[]
+[source,java]
+----
+include::res/first/RegistrationResultActivity.java[]
 ----
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/first/MessageReceivedActivity.java[]
+[source,java]
+----
+include::res/first/MessageReceivedActivity.java[]
 ----
 		
 
@@ -81,17 +81,17 @@
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/first/AndroidManifest.xml[]
+[source,xml]
+----
+include::res/first/AndroidManifest.xml[]
 ----
 		
 		 Change your "C2DMClientActivity" class to the following.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/first/C2DMClientActivity.java[]
+[source,java]
+----
+include::res/first/C2DMClientActivity.java[]
 ----
 		
 		 The methods in the activity are connected to the buttons via

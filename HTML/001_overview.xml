@@ -71,9 +71,9 @@ http://www.vogella.com/tutorials/CSS/article.html"> CSS]
 			to select these elements and style them accordingly.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/structure/example.html[]
+[source,text]
+----
+include::res/structure/example.html[]
 ----
 		
 

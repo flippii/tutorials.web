@@ -12,8 +12,8 @@
 		a rectangle. 
 
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="./examples/canvas/canvas.html[]
+[source,html]
+----
+include::res/canvas/canvas.html[]
 ----
 	

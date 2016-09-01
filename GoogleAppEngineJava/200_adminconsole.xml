@@ -30,9 +30,9 @@ http://code.google.com/appengine/docs/java/runtime.html#Logging"> Logging on the
 		 You can also extend the admin console with own pages. Create
 			the following entry in "appengine-web.xml". 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/admin/extend.txt[]
+[source,text]
+----
+include::res/admin/extend.txt[]
 ----
 		
 
@@ -40,9 +40,9 @@ http://code.google.com/appengine/docs/java/runtime.html#Logging"> Logging on the
 			following file in the `WEB-INF` folder. 
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/admin/static.html[]
+[source,text]
+----
+include::res/admin/static.html[]
 ----
 		
 		 If you redeploy your application you have another entry in your
