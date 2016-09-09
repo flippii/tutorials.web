@@ -30,9 +30,9 @@
 			command.
 		
 		
-			<programlisting language="bourne">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstgrails/create-app.txt[]
+[source,bourne]
+----
+include::res/firstgrails/create-app.txt[]
 ----
 		
 		
@@ -67,9 +67,9 @@ image::firstgrailsapplication10.png"
 			command.
 		
 		
-			<programlisting language="Bourne">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstgrails/grailsrun.txt[]
+[source,bourne]
+----
+include::res/firstgrails/grailsrun.txt[]
 ----
 		
 		

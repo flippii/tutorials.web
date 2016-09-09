@@ -52,9 +52,9 @@
 			commands:
 		
 		
-			<programlisting Language="Bourne">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstgrails/create-domain-class.txt[]
+[source,bourne]
+----
+include::res/firstgrails/create-domain-class.txt[]
 ----
 		
 		
@@ -150,9 +150,9 @@ include::res/firstgrails/Comment.java[]
 			class via the following commands:
 		
 		
-			<programlisting language="Bourne">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstscripts/generate-controller.txt[]
+[source,bourne]
+----
+include::res/firstscripts/generate-controller.txt[]
 ----
 		
 		

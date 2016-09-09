@@ -54,9 +54,9 @@ include::res/firstgrails/Bootstrap.java[]
 			shutdown, use the following command to start it.
 		
 		
-			<programlisting language="Bourne">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstgrails/prod-run-app.txt[]
+[source,bourne]
+----
+include::res/firstgrails/prod-run-app.txt[]
 ----
 		
 		
@@ -78,9 +78,9 @@ include::res/firstgrails/Bootstrap.java[]
 			and the view.
 		
 		
-			<programlisting language="Bourne">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="./examples/firstscripts/generate-views.txt[]
+[source,bourne]
+----
+include::res/firstscripts/generate-views.txt[]
 ----
 		
 		
