@@ -11,29 +11,26 @@
 		simple header label (I assume you can easily image a more complex
 		example).
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/component/Header.java[]
+[source,java]
+----
+include::res/component/Header.java[]
 ----
 	
 	 Adjust then the GWT module to use this component.
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/component/HelloGwt.java[]
+[source,java]
+----
+include::res/component/HelloGwt.java[]
 ----
 	
 	 Adjust the css to make the title look nicer.
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/component/HelloGwt.java[]
+[source,java]
+----
+include::res/component/HelloGwt.java[]
 ----
 	
 	 The result should look like the following.
 	
 image::component10.gif[]
-				
-			</imageobject>
-		</mediaobject>
 	

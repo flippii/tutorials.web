@@ -7,9 +7,9 @@
 	 To use UIBinder you also need to inherit from
 		"com.google.gwt.uibinder.UiBinder" in your "gwt.xml" file.
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/uibinder/De_vogella_gwt_uibinder.gwt.xml[]
+[source,xml]
+----
+include::res/uibinder/De_vogella_gwt_uibinder.gwt.xml[]
 ----
 	
 
@@ -18,9 +18,9 @@
 
 
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/uibinder/HelloWidgetWorld.ui.xml[]
+[source,xml]
+----
+include::res/uibinder/HelloWidgetWorld.ui.xml[]
 ----
 	
 	 Create the following class which uses the xml file for building
@@ -29,9 +29,9 @@
 		+ "ui.xml". 
 
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/uibinder/HelloWidgetWorld.java[]
+[source,java]
+----
+include::res/uibinder/HelloWidgetWorld.java[]
 ----
 	
 
@@ -42,33 +42,33 @@
 
 
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/uibinder/MyHTMLTable.ui.xml[]
+[source,xml]
+----
+include::res/uibinder/MyHTMLTable.ui.xml[]
 ----
 	
 	 Create the corresponding "MyHTMLTable.java" file. 
 
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/uibinder/MyHTMLTable.java[]
+[source,java]
+----
+include::res/uibinder/MyHTMLTable.java[]
 ----
 	
 	 In your entry point you can now load the class as an composite.
 	
 
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/uibinder/De_vogella_gwt_uibinder.java[]
+[source,java]
+----
+include::res/uibinder/De_vogella_gwt_uibinder.java[]
 ----
 	
 	Change the `web.xml` to the following.
 	
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/uibinder/web.xml[]
+[source,xml]
+----
+include::res/uibinder/web.xml[]
 ----
 	
 	 The result should look like the following. 

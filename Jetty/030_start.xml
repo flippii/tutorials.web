@@ -4,9 +4,9 @@
 To start Jetty, switch on the command line to the installation directory and issue the following command.
 
 
-		<programlisting>
-			<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-				parse="text" href="../examples/startjetty.txt[]
+[source,text]
+----
+include::res/startjetty.txt[]
 ----
 
 This starts Jetty on http://localhost:8080/
