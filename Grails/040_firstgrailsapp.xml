@@ -45,8 +45,7 @@ include::res/firstgrails/create-app.txt[]
 			configuration of your new web application.
 		
 		
-image::firstgrailsapplication10.png"
-						scale="40[]
+image::firstgrailsapplication10.png[]
 		
 		
 			This created already a full web application.
@@ -89,8 +88,7 @@ http://localhost:8080/com.vogella.grails.guestbook">
 			]
 		
 		
-image::firstgrailsapplication20.png"
-						scale="40[]
+image::firstgrailsapplication20.png[]
 		
 		 Congratulations to your first running Grails application!
 		

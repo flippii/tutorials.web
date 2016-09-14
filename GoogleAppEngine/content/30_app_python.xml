@@ -37,9 +37,9 @@ image::todo10.gif[]
 			script which should get invoked for a specific URL.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/first/app.yaml[]
+[source,text]
+----
+include::res/first/app.yaml[]
 ----
 		
 		 The script defines that all URL request will be handled by the
@@ -93,9 +93,9 @@ image::todo10.gif[]
 			self-explaining.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/first/todo.py[]
+[source,text]
+----
+include::res/first/todo.py[]
 ----
 		
 		 This class MainPage uses a HTML template "index.html" for the
@@ -107,9 +107,9 @@ image::todo10.gif[]
 			
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/first/index.html[]
+[source,text]
+----
+include::res/first/index.html[]
 ----
 		
 		Also create the directory css and put in this file
@@ -117,9 +117,9 @@ image::todo10.gif[]
 			This is the style sheet used to make index.html "pretty".
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/first/main.css[]
+[source,text]
+----
+include::res/first/main.css[]
 ----
 		
 		 Optional you can put a graphic "todo.png" into the images
@@ -133,9 +133,9 @@ image::todo10.gif[]
 			with the following command.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/first/start.txt[]
+[source,text]
+----
+include::res/first/start.txt[]
 ----
 		
 		 Switch to a browser and access your local host via:
@@ -159,9 +159,9 @@ image::todo10.gif[]
 			--clear_datastore option during startup.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/first/clear.txt[]
+[source,text]
+----
+include::res/first/clear.txt[]
 ----
 		
 
@@ -181,9 +181,9 @@ http://appengine.google.com/"> http://appengine.google.com/]
 		
 		Use now the command line to upload your application.
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/first/deploy.txt[]
+[source,text]
+----
+include::res/first/deploy.txt[]
 ----
 		
 		

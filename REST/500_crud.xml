@@ -121,7 +121,7 @@ http://localhost:8080/com.vogella.jersey.todo/rest/todos/1">
 			]
 			to see
 			the TODO with ID
-			<property>1</property>
+			`1`
 			. We currently have only TODOs with
 			the ids 1 and 2, all other requests will result in an HTTP error code.
 		

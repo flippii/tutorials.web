@@ -9,7 +9,7 @@ https://grails.org/download">Grails download page]
 		
 		
 			Setup your
-			<property>GRAILS_HOME</property>
+			`GRAILS_HOME`
 			environment variable pointing to your
 			installation directory of
 			Grails.
@@ -17,13 +17,13 @@ https://grails.org/download">Grails download page]
 			the
 			<filename class="directory">$GRAILS_HOME/bin`
 			to the
-			<property>PATH</property>
+			`PATH`
 			variable.
 		
 		
 			<note>
 				Please make sure that the environment variable
-				<property>JAVA_HOME</property>
+				`JAVA_HOME`
 				is set
 				to the JDK and not the JRE. The JDK
 				is required to develop with
@@ -64,8 +64,7 @@ include::res/install/updatesite.txt[]
 		
 
 		
-image::grailseclipseinstallation10"
-						scale="40" />
+image::grailseclipseinstallation10" />
 				</imageobject>
 				<textobject>
 					<phrase>Install Grails support for Eclipse</phrase>

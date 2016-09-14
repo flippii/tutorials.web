@@ -99,9 +99,9 @@ image::firstjsf40.gif[]
 		Create a package "de.vogella.jsf.first.model" and the class
 			"TemperatureConvertor".
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/firstjsf/TemperatureConvertor.java[]
+[source,text]
+----
+include::res/firstjsf/TemperatureConvertor.java[]
 ----
 		
 
@@ -151,9 +151,9 @@ image::firstjsf44.gif[]
 		
 		 Change the code to the following.
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/firstjsf/Convertor.jsp[]
+[source,text]
+----
+include::res/firstjsf/Convertor.jsp[]
 ----
 		
 		
@@ -185,9 +185,9 @@ image::firstjsf50.gif[]
 			This then related to a mystyle.css file under your folder
 			WebContent/css..
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/firstjsf/stylesheet.txt[]
+[source,text]
+----
+include::res/firstjsf/stylesheet.txt[]
 ----
 		
 

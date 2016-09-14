@@ -7,17 +7,17 @@
 			the GWT installation directory (cd c:\GWT) and run the following two
 			commands.
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/command/projectCreator[]
+[source,text]
+----
+include::res/command/projectCreator[]
 ----
 		
 		 The final argument will be the full qualified class which will
 			run the application.
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/command/applicationCreator[]
+[source,text]
+----
+include::res/command/applicationCreator[]
 ----
 		
 

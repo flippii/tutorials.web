@@ -14,9 +14,9 @@
 			following class.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/secondjsf/User.java[]
+[source,text]
+----
+include::res/secondjsf/User.java[]
 ----
 		
 		
@@ -26,9 +26,9 @@
 		
 		 Create the following class.
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/secondjsf/Card.java[]
+[source,text]
+----
+include::res/secondjsf/Card.java[]
 ----
 		
 		
@@ -52,9 +52,9 @@
 			class.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/secondjsf/LoginValidator.java[]
+[source,text]
+----
+include::res/secondjsf/LoginValidator.java[]
 ----
 		
 		 Select your faces-config.xml and select the tab Component.
@@ -75,9 +75,9 @@ image::validator20.gif[]
 			"de.vogella.jsf.starter".
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/secondjsf/messages.properties[]
+[source,text]
+----
+include::res/secondjsf/messages.properties[]
 ----
 		
 
@@ -87,9 +87,9 @@ image::validator20.gif[]
 			the following:
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/secondjsf/LoginView.jsp[]
+[source,text]
+----
+include::res/secondjsf/LoginView.jsp[]
 ----
 		
 		 Lets explain a few fields.
@@ -165,17 +165,17 @@ image::validator20.gif[]
 		 Create another JSP "Trainer.jsp" with the following code.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/secondjsf/Trainer.jsp[]
+[source,text]
+----
+include::res/secondjsf/Trainer.jsp[]
 ----
 		
 		 Create another JSP FailedLogin.jsp with the following code.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/secondjsf/FailedLogin.jsp[]
+[source,text]
+----
+include::res/secondjsf/FailedLogin.jsp[]
 ----
 		
 

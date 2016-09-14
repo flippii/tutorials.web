@@ -52,18 +52,18 @@
 
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/httpclient/SimpleHttpPut.java[]
+[source,text]
+----
+include::res/httpclient/SimpleHttpPut.java[]
 ----
 		
 		 The following request adds several parameters to the post
 			request.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/httpclient/TestHttpClient.java[]
+[source,text]
+----
+include::res/httpclient/TestHttpClient.java[]
 ----
 		
 

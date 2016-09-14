@@ -6,9 +6,9 @@
 			"de.vogella.webservice.java6.first.provider". Create a package with
 			the same name and then the following class.
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/WiseQuoteServer.java[]
+[source,text]
+----
+include::res/WiseQuoteServer.java[]
 ----
 		
 		
@@ -26,9 +26,9 @@
 				call wsimport.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/wsdlcreate.txt[]
+[source,text]
+----
+include::res/wsdlcreate.txt[]
 ----
 		
 		
@@ -56,9 +56,9 @@ image::webservice10.gif[]
 				server and vice versa.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/TestWS.java[]
+[source,text]
+----
+include::res/TestWS.java[]
 ----
 		
 

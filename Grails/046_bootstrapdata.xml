@@ -88,7 +88,7 @@ include::res/firstscripts/generate-views.txt[]
 				If you receive the error "Error starting Sun's native2ascii",
 				then
 				make sure that your environment variable
-				<property>JAVA_HOME</property>
+				`JAVA_HOME`
 				points to
 				the JDK and not JRE. The JDK is required for this step.
 			

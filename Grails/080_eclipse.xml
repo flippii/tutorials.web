@@ -26,7 +26,7 @@ image::eclipse10.gif[]
 	
 	
 		The environment variable 
-		<property>GRAILS_HOME</property> may not be
+		`GRAILS_HOME` may not be
 		set in Eclipse.
 		Select your project, right-click on
 		it and select _properties_.
@@ -34,7 +34,7 @@ image::eclipse10.gif[]
 		btn:[Libraries]. Press btn:[Add
 		Variable] and then btn:[Configure Variables]. Press
 		btn:[New] and add
-		<property>GRAILS_HOME</property>.
+		`GRAILS_HOME`.
 	
 	
 		<tip>

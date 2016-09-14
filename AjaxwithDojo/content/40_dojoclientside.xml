@@ -19,9 +19,9 @@
 			
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/closeopenheader.html[]
+[source,text]
+----
+include::res/closeopenheader.html[]
 ----
 		
 		
@@ -35,9 +35,9 @@
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/closeopenheader2.html[]
+[source,text]
+----
+include::res/closeopenheader2.html[]
 ----
 		
 
@@ -45,9 +45,9 @@
 === Tooltip
 		This HTML file uses a tooltip on one element.
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/tooltip.html[]
+[source,text]
+----
+include::res/tooltip.html[]
 ----
 		
 

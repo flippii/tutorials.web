@@ -21,9 +21,9 @@
 		 Create a new package de.vogella.jsf.card.model and the
 			following class.
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/thirdjsf/Card.java[]
+[source,text]
+----
+include::res/thirdjsf/Card.java[]
 ----
 		
 
@@ -31,9 +31,9 @@
 === Controller
 		 Create the following class CardController.
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/thirdjsf/CardController.java[]
+[source,text]
+----
+include::res/thirdjsf/CardController.java[]
 ----
 		
 		 This class has a field resultPanel. This field will later get
@@ -58,9 +58,9 @@ image::controller10.gif[]
 			see
 			this if you select the tab "Source".
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/thirdjsf/managedBean.txt[]
+[source,text]
+----
+include::res/thirdjsf/managedBean.txt[]
 ----
 		
 
@@ -69,9 +69,9 @@ image::controller10.gif[]
 		 Create the following file "messages.properties" in your source
 			folder under the package "de.vogella.jsf.card".
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/thirdjsf/messages.properties[]
+[source,text]
+----
+include::res/thirdjsf/messages.properties[]
 ----
 		
 
@@ -80,9 +80,9 @@ image::controller10.gif[]
 		 Create a new JSP page "Trainer.jsp" and change the code to the
 			following:
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/thirdjsf/Trainer.jsp[]
+[source,text]
+----
+include::res/thirdjsf/Trainer.jsp[]
 ----
 		
 		 From the previously examples you should be able to read most of

@@ -13,9 +13,9 @@
 		 Create a new package de.vogella.jsf.todo.model and the
 			following class.
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/todojsf/Todo.java[]
+[source,text]
+----
+include::res/todojsf/Todo.java[]
 ----
 		
 
@@ -24,9 +24,9 @@
 		 Create the package de.vogella.jsf.todo.controller and the
 			following class TodoController.
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/todojsf/TodoController.java[]
+[source,text]
+----
+include::res/todojsf/TodoController.java[]
 ----
 		
 
@@ -40,9 +40,9 @@
 		 In your folder WebContent create a folder css. Create a file
 			mystyle.css with the following content.
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/todojsf/mystyle.css[]
+[source,text]
+----
+include::res/todojsf/mystyle.css[]
 ----
 		
 
@@ -51,9 +51,9 @@
 		 Create a new JSP page "Todo.jsp" and change the code to the
 			following:
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/todojsf/Todo.jsp[]
+[source,text]
+----
+include::res/todojsf/Todo.jsp[]
 ----
 		
 		

@@ -47,9 +47,9 @@
 		 Create a Java project "de.vogella.gwt.module.model" and package
 			"de.vogella.gwt.module.model". Create the following class.
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/module/Person.java[]
+[source,text]
+----
+include::res/module/Person.java[]
 ----
 		
 		 Create in package "de.vogella.gwt.module" the file
@@ -57,9 +57,9 @@
 			This will be the module definition for GWT. 
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/module/model.gwt.xml[]
+[source,text]
+----
+include::res/module/model.gwt.xml[]
 ----
 		
 
@@ -70,9 +70,9 @@
 			new GWT project "de.vogella.gwt.module.application" similar to the
 			first example of this article with the following entry point.
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/module/ModulTest.java[]
+[source,text]
+----
+include::res/module/ModulTest.java[]
 ----
 		
 		 To make the module project available for the Java compiler,

@@ -10,9 +10,9 @@
 		
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/server/readServer.html[]
+[source,text]
+----
+include::res/server/readServer.html[]
 ----
 		
 		
@@ -50,9 +50,9 @@
 			running on the URL yourhomepage/servlets/ReturnParameters.
 		
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/server/ReturnParameters.java[]
+[source,text]
+----
+include::res/server/ReturnParameters.java[]
 ----
 		
 		
@@ -62,9 +62,9 @@
 		
 
 		
-			<programlisting>
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/server/paratoServlet.html[]
+[source,text]
+----
+include::res/server/paratoServlet.html[]
 ----
 		
 
