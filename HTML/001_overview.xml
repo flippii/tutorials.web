@@ -46,7 +46,7 @@
 === CSS
 		
 			HTML by ifself does not define a lot of display options. You use
-http://www.vogella.com/tutorials/CSS/article.html"> CSS]
+http://www.vogella.com/tutorials/CSS/article.html[CSS]
 			to define how HTML element should be displayed.
 		
 
@@ -67,7 +67,7 @@ http://www.vogella.com/tutorials/CSS/article.html"> CSS]
 			elements. Most
 			browser will not change the display based on them but
 			you can use
-http://www.vogella.com/tutorials/CSS/article.html"> CSS]
+http://www.vogella.com/tutorials/CSS/article.html[CSS]
 			to select these elements and style them accordingly.
 		
 		

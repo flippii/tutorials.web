@@ -23,7 +23,7 @@
 		
 		
 			Create the following data model and a
-http://www.vogella.com/tutorials/DesignPatternSingleton/article.html">Singleton]
+http://www.vogella.com/tutorials/DesignPatternSingleton/article.html[Singleton]
 			which serves as the data provider for the model. We use the
 			implementation based on an enumeration. Please see the
 			link for
@@ -31,7 +31,7 @@ http://www.vogella.com/tutorials/DesignPatternSingleton/article.html">Singleton]
 			<code>Todo</code>
 			class is
 			annotated with a JAXB annotation. See
-http://www.vogella.com/tutorials/JavaXML/article.html">Java and XML]
+http://www.vogella.com/tutorials/JavaXML/article.html[Java and XML]
 			to learn about JAXB.
 		
 		

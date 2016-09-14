@@ -17,7 +17,7 @@ image::log10.gif[]
 			You can also use standard Java Logging for creating custom logs on
 			the
 			GAE/J. See
-http://www.vogella.com/tutorials/Logging/article.html"> Java Logging Tutorial]
+http://www.vogella.com/tutorials/Logging/article.html[Java Logging Tutorial]
 			and
 http://code.google.com/appengine/docs/java/runtime.html#Logging"> Logging on the GAE/J]
 			.

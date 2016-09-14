@@ -6,15 +6,15 @@
 	
 		If you want to use Tomcat
 		as servlet container please see
-		http://www.vogella.com/tutorials/EclipseWTP/article.html">Eclipse WTP]
+		http://www.vogella.com/tutorials/EclipseWTP/article.html[Eclipse WTP]
 		and
-		http://www.vogella.com/tutorials/ApacheTomcat/article.html">Apache Tomcat]
+		http://www.vogella.com/tutorials/ApacheTomcat/article.html[Apache Tomcat]
 		for instructions on how to install and use Eclipse WTP and Apache
 		Tomcat.
 	
 	
 		Alternative you could also use the
-http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html">Google App Engine]
+http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html[Google App Engine]
 		for running the server part of the following REST examples. If you
 		use
 		the Google App Engine, you do not have to install and configure

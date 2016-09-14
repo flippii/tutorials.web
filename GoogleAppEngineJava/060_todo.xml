@@ -8,11 +8,11 @@
 			and
 			JSP's. The persistence will be
 			handled by
-http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA]
+http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html[JPA]
 			. For
 			an introduction into servlet please
 			see
-http://www.vogella.com/tutorials/EclipseWTP/article.html"> Servlet and JSP development - Tutorial]
+http://www.vogella.com/tutorials/EclipseWTP/article.html[Servlet and JSP development - Tutorial]
 
 		
 
@@ -51,7 +51,7 @@ image::gae25.gif[]
 === Create your model
 		
 			Create the following class which will be our model. The
-http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html">JPA]
+http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html[JPA]
 			metadata is already added.
 		
 
