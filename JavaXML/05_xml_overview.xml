@@ -27,7 +27,7 @@
 			A
 			_well-formed_
 			XML file must apply to the following conditions:
-			<itemizedlist>
+			
 				*
 					An XML document always starts with a prolog (see
 						below for an
@@ -60,7 +60,7 @@
 			computer programs relatively easy compared to a binary or
 			unstructured
 			format:
-			<itemizedlist>
+			
 				*
 					XML is plain text
 				

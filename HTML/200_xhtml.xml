@@ -12,7 +12,7 @@
 		done with an ending tag, but a special
 		case allows for
 		non-content tags.
-		<itemizedlist>
+		
 			*Each HTML files must define its doctype    
 			
 			*All attribute values must be in double quotes 

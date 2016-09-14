@@ -39,7 +39,7 @@ http://www.vogella.com/tutorials/ApacheMyFaces/article.html"> Apache Myfaces Tri
 		
 			The faces-config.xml defines:
 
-			<itemizedlist>
+			
 				<listitem>Managed Bean - the data elements of the JSF
 						application
 						(managed beans and
@@ -116,7 +116,7 @@ http://www.vogella.com/tutorials/ApacheMyFaces/article.html"> Apache Myfaces Tri
 === Prerequisites to use JSF
 		
 			To use JSF you need:
-			<itemizedlist>
+			
 				<listitem>
 					JSF Implementation (in the form of the JSF jars)
 				</listitem>
@@ -139,7 +139,7 @@ http://www.vogella.com/tutorials/ApacheMyFaces/article.html"> Apache Myfaces Tri
 === JSF Main features
 		
 			JSP has the following main features:
-			<itemizedlist>
+			
 				<listitem>
 					JSP is based on the Model-View-Controller concept
 				</listitem>

@@ -54,7 +54,7 @@ include::res/first/app.yaml[]
 		
 			Python allows to define several classes in one source file. We are
 			going to create the following classes:
-			<itemizedlist>
+			
 				<listitem>
 					TodoModel: Defines the data model for your
 						application.

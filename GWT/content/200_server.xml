@@ -35,7 +35,7 @@
 
 		
 			To create a GWT service you need to define the following:
-			<itemizedlist>
+			
 				<listitem>An interface which extends RemoteService that lists the
 						service
 						methods.     

@@ -122,7 +122,7 @@ https://console.developers.google.com/project">Google API Console]
 			To use C2DM in your application to have to register for the following
 			permissions
 
-			<itemizedlist>
+			
 				<listitem>
 					com.google.android.c2dm.permission.RECEIVE  
 				</listitem>
@@ -156,7 +156,7 @@ https://console.developers.google.com/project">Google API Console]
 			the two
 			intents:
 
-			<itemizedlist>
+			
 				<listitem>
 					com.google.android.c2dm.intent.REGISTRATION      
 				</listitem>

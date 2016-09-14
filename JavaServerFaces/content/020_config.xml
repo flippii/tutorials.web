@@ -4,7 +4,7 @@
 === Overview
 		
 			JSF is based on the following configuration files:
-			<itemizedlist>
+			
 				<listitem>web.xml - General web application configuration file
 				</listitem>
 				<listitem>

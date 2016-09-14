@@ -26,7 +26,7 @@
 
 		
 			GWT provides two modes
-			<itemizedlist>
+			
 				<listitem>
 					Development Mode: allows to debug the Java code of your
 						application directly via the standard Java debugger.

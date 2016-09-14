@@ -11,7 +11,7 @@ image::gwtstructure10.gif[]
 			</mediaobject>
 		
 		An GWT application consists of the following parts
-		<itemizedlist>
+		
 			<listitem>
 				Module descriptor: XML file which specifies mainly the
 					entry

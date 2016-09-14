@@ -32,7 +32,7 @@
 			domain
 			model.
 			For your feedback system we would like to have:
-			<itemizedlist>
+			
 				<listitem>
 					Class Feedback: The feedback itself
 				</listitem>
@@ -244,8 +244,7 @@ image::firstgrails50.png" size="40" />
 image::firstgrails60.png"/>
 			</imageobject>
 			<textobject>
-				<phrase></phrase>
-			</textobject>
+				<phrase>]
 		</mediaobject>
 	
 	

@@ -9,7 +9,7 @@
 === Process
 		
 			To use standard Java for creating a webservice you
-			<itemizedlist>
+			
 				<listitem>
 					create a standard java class
 				</listitem>

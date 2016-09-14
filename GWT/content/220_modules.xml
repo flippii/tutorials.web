@@ -24,7 +24,7 @@
 			be able to compile them.
 		
 			To make the Java files available to the GWT compiler you need to
-			<itemizedlist>
+			
 				<listitem>
 					Create a gwt.xml file in the Java project / jar file
 						which you
