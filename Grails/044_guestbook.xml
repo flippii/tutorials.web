@@ -15,10 +15,7 @@
 			If you Grails application from
 			<<firstgrails>>
 			is still running, stop the server via
-			<keycombo>
-				<keycap>Ctrl</keycap>
-				<keycap>C</keycap>
-			</keycombo>
+			kbd:[Ctrl+C]
 			.
 			We need the command line to
 			create more elements.
