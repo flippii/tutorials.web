@@ -55,7 +55,7 @@ TIP: Besides that another query verb is `count`, which returns the count of a qu
 Also the method's return type is interchangeable, so the actual query is also determined by the return type.
 
 .Table Possible return types for query methods
-[cols="1, 2"]
+[cols="1,2",options="header"]
 |===
 |Type |Description
 
