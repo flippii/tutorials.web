@@ -41,7 +41,7 @@ image::jerseryfirst30.png[]
 		Create the following class.
 		
 [source,java]
------
+----
 include::res/first/Hello.java[]
 ----
 		

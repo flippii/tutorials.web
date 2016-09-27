@@ -36,13 +36,13 @@ http://www.vogella.com/tutorials/JavaXML/article.html[Java and XML]
 		
 		
 [source,java]
------
+----
 include::res/todo/Todo.java[]
 ----
 		
 		
 [source,java]
------
+----
 include::res/todo/TodoDao.java[]
 ----
 		
@@ -76,13 +76,13 @@ include::res/todo/TodoDao.java[]
 		
 		
 [source,java]
------
+----
 include::res/todo/TodoResource.java[]
 ----
 		
 		
 [source,java]
------
+----
 include::res/todo/TodosResource.java[]
 ----
 		
@@ -142,7 +142,7 @@ http://localhost:8080/com.vogella.jersey.todo/rest/todos/1">
 		Create the following class.
 		
 [source,java]
------
+----
 include::res/todo/Tester.java[]
 ----
 		

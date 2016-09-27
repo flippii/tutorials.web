@@ -33,9 +33,9 @@ Version 0.3, 29.08.2016
   
   
 include::../web/advertisement/afterTableOfContent.adoc[]
-include::content/010_forms.adoc[]
+include::010_forms.adoc[]
 include::../web/advertisement/inBetween01.adoc[]
-include::content/020_firstforms.adoc[]
+include::020_firstforms.adoc[]
 
 include::../support.adoc[]
 include::008_resourceslocal.adoc[]
