@@ -55,33 +55,33 @@ include::res/first/app.yaml[]
 			Python allows to define several classes in one source file. We are
 			going to create the following classes:
 			
-				<listitem>
+				* 
 					TodoModel: Defines the data model for your
 						application.
 					
-				</listitem>
-				<listitem>
+				
+				* 
 					MainPage: Serves as the main entry point, user
 						validation is
 						checked here
 					
-				</listitem>
-				<listitem>
+				
+				* 
 					New: This class will create the new Todo in the database
 					
-				</listitem>
-				<listitem>
+				
+				* 
 					Done: Marks the todo as complete and deletes it from the
 						database
 					
-				</listitem>
-				<listitem>
+				
+				* 
 					Email: Sends the selected todo to yourself via email as
 						a
 						reminder
 					
-				</listitem>
-			</itemizedlist>
+				
+			
 		
 		
 			<tip>Email notification does not work in the local version. This

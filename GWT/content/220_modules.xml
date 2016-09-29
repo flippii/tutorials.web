@@ -25,21 +25,21 @@
 		
 			To make the Java files available to the GWT compiler you need to
 			
-				<listitem>
+				* 
 					Create a gwt.xml file in the Java project / jar file
 						which you
 						want to use - This will instruct the GWT compiler to use
 						the listed
 						classes.
-				</listitem>
-				<listitem>
+				
+				* 
 					Use the included library via the inherit definition
-				</listitem>
-				<listitem>
+				
+				* 
 					If you are using a jar file you also need to include the
 						source files in the jar
-				</listitem>
-			</itemizedlist>
+				
+			
 		
 
 [[modules_createmodule">

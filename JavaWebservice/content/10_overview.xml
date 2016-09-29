@@ -10,19 +10,19 @@
 		
 			To use standard Java for creating a webservice you
 			
-				<listitem>
+				* 
 					create a standard java class
-				</listitem>
-				<listitem>
+				
+				* 
 					use annotations to describe the class as a webservice
 					
-				</listitem>
-				<listitem>
+				
+				* 
 					run a command line tool to create the WSDL
-				</listitem>
-				<listitem>
+				
+				* 
 					you run the class for example via a main program
-				</listitem>
-			</itemizedlist>
+				
+			
 		
 

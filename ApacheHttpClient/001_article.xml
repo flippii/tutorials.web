@@ -23,7 +23,7 @@ Version 0.3, 06.07.2016
 			Version 1.2
 		</releaseinfo>
 		
-		<abstract id="abstract">
+[abstract]
 	=== Apache HttpClient
 			 This tutorial describes how to use the Apache HttpClient
 				library for accessing HTTP resources. This tutorial is based on

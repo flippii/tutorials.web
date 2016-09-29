@@ -56,20 +56,20 @@
 		
 		
 			
-				<listitem>
+				* 
 					
 						GET defines a reading access of the resource without
 						side-effects. The resource is never changed via a GET request,
 						e.g., the request has no side effects (idempotent).
 					
-				</listitem>
-				<listitem>
+				
+				* 
 					
 						PUT
 						creates a new resource. It must also be idempotent.
 					
-				</listitem>
-				<listitem>
+				
+				* 
 					
 						DELETE
 						removes the resources. The operations are idempotent.
@@ -77,14 +77,14 @@
 						can get
 						repeated without leading to different results.
 					
-				</listitem>
-				<listitem>
+				
+				* 
 					
 						POST
 						updates an existing resource or creates a new resource.
 					
-				</listitem>
-			</itemizedlist>
+				
+			
 		
 
 

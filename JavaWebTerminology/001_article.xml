@@ -23,7 +23,7 @@ Version 0.3, 06.07.2016
 		</releaseinfo>
 		<pubdate>30.09.2010</pubdate>
 		
-		<abstract id="abstract">
+[abstract]
 	=== Java Web technologies
 			This article gives an overview of the
 				standard web

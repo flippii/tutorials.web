@@ -5,14 +5,14 @@
 		
 			JSF is based on the following configuration files:
 			
-				<listitem>web.xml - General web application configuration file
-				</listitem>
-				<listitem>
+				* web.xml - General web application configuration file
+				
+				* 
 					faces-config.xml - Contains the configuration
 						of the JSF
 						application.
-				</listitem>
-			</itemizedlist>
+				
+			
 		
 
 

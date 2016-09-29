@@ -25,7 +25,7 @@ Version 0.3, 29.08.2016
 			Version 1.1
 		</releaseinfo>
 		
-		<abstract id="abstract">
+[abstract]
 	=== Grails Webapplication
 
 			 This article explains how to build a Grails application.

@@ -32,7 +32,7 @@ Version 0.3, 29.08.2016
 
 		
 
-		<abstract id="abstract">
+[abstract]
 	=== JSON
 			
 				This article explains JSON, the JavaScript Object Notification.

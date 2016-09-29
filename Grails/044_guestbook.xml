@@ -30,16 +30,16 @@
 			model.
 			For your feedback system we would like to have:
 			
-				<listitem>
+				* 
 					Class Feedback: The feedback itself
-				</listitem>
-				<listitem>
+				
+				* 
 					Class User: The person who gives feedback
-				</listitem>
-				<listitem>
+				
+				* 
 					Class Comment: A remark to the feedback
-				</listitem>
-			</itemizedlist>
+				
+			
 		
 		
 			Grails can create templates with empty classes and prepared unit

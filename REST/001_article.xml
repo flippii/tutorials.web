@@ -29,7 +29,7 @@ Version 0.3, 06.07.2016
 			Version 2.5
 		</releaseinfo>
 
-		<abstract id="abstract">
+[abstract]
 	=== RESTful web services with Java (Jersey / JAX-RS)
 			
 				This tutorial explains how to develop RESTful web services in

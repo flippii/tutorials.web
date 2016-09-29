@@ -40,7 +40,7 @@ http://www.vogella.com/tutorials/ApacheMyFaces/article.html[Apache Myfaces Trini
 			The faces-config.xml defines:
 
 			
-				<listitem>Managed Bean - the data elements of the JSF
+				* Managed Bean - the data elements of the JSF
 						application
 						(managed beans and
 						backing
@@ -52,18 +52,18 @@ http://www.vogella.com/tutorials/ApacheMyFaces/article.html[Apache Myfaces Trini
 						Application or none).
 
 						  
-				</listitem>
-				<listitem>the navigation
+				
+				* the navigation
 						between
 						web pages    
-				</listitem>
-				<listitem>data validators - Used to check the validity of UI input
+				
+				* data validators - Used to check the validity of UI input
 					
-				</listitem>
-				<listitem>data converters -Used to translate between UI and model
+				
+				* data converters -Used to translate between UI and model
 					
-				</listitem>
-			</itemizedlist>
+				
+			
 		
 		
 			Managed beans are
@@ -117,20 +117,20 @@ http://www.vogella.com/tutorials/ApacheMyFaces/article.html[Apache Myfaces Trini
 		
 			To use JSF you need:
 			
-				<listitem>
+				* 
 					JSF Implementation (in the form of the JSF jars)
-				</listitem>
-				<listitem>
+				
+				* 
 					The JSTL tags library
-				</listitem>
-				<listitem>
+				
+				* 
 					A Java runtime environment
-				</listitem>
-				<listitem>
+				
+				* 
 					A web-container to use JSF in (for example Tomcat)
-				</listitem>
+				
 
-			</itemizedlist>
+			
 		
 
 
@@ -140,14 +140,14 @@ http://www.vogella.com/tutorials/ApacheMyFaces/article.html[Apache Myfaces Trini
 		
 			JSP has the following main features:
 			
-				<listitem>
+				* 
 					JSP is based on the Model-View-Controller concept
-				</listitem>
-				<listitem>
+				
+				* 
 					JSP has a stateful UI component model, e.g. each component is
 						aware of its data
-				</listitem>
-				<listitem>
+				
+				* 
 					JSF separates the functionality of a component from the
 						display of the component. The renderer is responsible of
 						displaying the component for a certain client. This renderer can
@@ -156,15 +156,15 @@ http://www.vogella.com/tutorials/ApacheMyFaces/article.html[Apache Myfaces Trini
 						standard
 						renderer for JSF components is the HTML
 						renderer.
-				</listitem>
-				<listitem>
+				
+				* 
 					JSP support listeners on UI components
-				</listitem>
-				<listitem>
+				
+				* 
 					JSP support data validation, data binding and data conversion
 						between the UI and the model
-				</listitem>
-			</itemizedlist>
+				
+			
 		
 
 [[jsf_jsp">

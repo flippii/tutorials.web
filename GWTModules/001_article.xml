@@ -25,7 +25,7 @@ Version 0.3, 06.07.2016
 
 		
 
-		<abstract id="abstract">
+[abstract]
 	=== GWT Tutorial
 			 This tutorial describes how to use external jars or Java projects in GWT. The article
 				was developed

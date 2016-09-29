@@ -36,18 +36,18 @@
 		
 			To create a GWT service you need to define the following:
 			
-				<listitem>An interface which extends RemoteService that lists the
+				* An interface which extends RemoteService that lists the
 						service
 						methods.     
-				</listitem>
-				<listitem>
+				
+				* 
 					An implementation - implements the interface and extends the
 						RemoteServiceServlet. 
-				</listitem>
-				<listitem>Define an asynchronous interface to your service which will
+				
+				* Define an asynchronous interface to your service which will
 						be used in the client code     
-				</listitem>
-			</itemizedlist>
+				
+			
 		
 
 [[server_project">

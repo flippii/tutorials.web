@@ -29,7 +29,7 @@ Version 0.3, 06.07.2016
 			Version 2.1
 		</releaseinfo>
 		
-		<abstract id="abstract">
+[abstract]
 	=== Java and XML
 			
 				This article gives an introduction into XML and its usage

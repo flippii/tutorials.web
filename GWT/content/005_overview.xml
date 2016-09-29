@@ -27,17 +27,17 @@
 		
 			GWT provides two modes
 			
-				<listitem>
+				* 
 					Development Mode: allows to debug the Java code of your
 						application directly via the standard Java debugger.
 					
-				</listitem>
-				<listitem>Web mode: the application is translated into HTML and
+				
+				* Web mode: the application is translated into HTML and
 						Javascript
 						code and can be deployed to a web server.
 					
-				</listitem>
-			</itemizedlist>
+				
+			
 		
 
 

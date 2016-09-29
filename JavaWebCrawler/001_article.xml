@@ -25,7 +25,7 @@ Version 0.3, 29.08.2016
 			Version 0.2
 		</releaseinfo>
 		
-		<abstract id="abstract">
+[abstract]
 	=== Abstract
 			 This article describes how to build User Interfaces using
 				Eclipse Forms.

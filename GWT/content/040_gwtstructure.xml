@@ -12,26 +12,26 @@ image::gwtstructure10.gif[]
 		
 		An GWT application consists of the following parts
 		
-			<listitem>
+			* 
 				Module descriptor: XML file which specifies mainly the
 					entry
 					point of the application. It has the name of your module plus
 					.gwt.xml
-			</listitem>
-			<listitem>
+			
+			* 
 				war: Under the folder "war" you find the HTML page which
 					contains the GWT application. Additional public resources, e.g.
 					other HTML pages, images or css files should be stored here. Here
 					you find also the standard WEB-INF folder.
-			</listitem>
-			<listitem>
+			
+			* 
 				Source code: under your default package your find a
 					package
 					"client" All Java code which is compiled for the client
 					(Webbrowser) must be stored under client. For the service you would
 					use the package "server".
-			</listitem>
-		</itemizedlist>
+			
+		
 
 [[gwtstructure_moduledescriptor">
 === Module Descriptor

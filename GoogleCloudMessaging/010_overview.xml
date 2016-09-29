@@ -123,13 +123,13 @@ https://console.developers.google.com/project">Google API Console]
 			permissions
 
 			
-				<listitem>
+				* 
 					com.google.android.c2dm.permission.RECEIVE  
-				</listitem>
-				<listitem>
+				
+				* 
 					android.permission.INTERNET     
-				</listitem>
-			</itemizedlist>
+				
+			
 		
 		
 			Your application
@@ -157,13 +157,13 @@ https://console.developers.google.com/project">Google API Console]
 			intents:
 
 			
-				<listitem>
+				* 
 					com.google.android.c2dm.intent.REGISTRATION      
-				</listitem>
-				<listitem>
+				
+				* 
 					com.google.android.c2dm.intent.RECEIVE   
-				</listitem>
-			</itemizedlist>
+				
+			
 		
 
 		 The receiver for "com.google.android.c2dm.intent.RECEIVE" will

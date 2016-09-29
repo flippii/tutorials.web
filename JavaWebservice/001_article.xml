@@ -27,7 +27,7 @@ Version 0.3, 06.07.2016
 		<releaseinfo>
 			Version 0.1
 		</releaseinfo>
-		<abstract id="abstract">
+[abstract]
 	=== Abstract
 			 This article describes how to create a simple SOAP webservice
 				with standard Java 1.6.

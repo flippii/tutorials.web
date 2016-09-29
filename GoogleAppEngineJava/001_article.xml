@@ -28,7 +28,7 @@ Version 0.3, 06.07.2016
 			Version 2.7
 		</releaseinfo>
 		
-		<abstract id="abstract">
+[abstract]
 	=== Google App Engine and JPA
 			 This article describes the creation of a Java web application
 				on the Google App Engine. It uses JPA. The tutorial is based on Java

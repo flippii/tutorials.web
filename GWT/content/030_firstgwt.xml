@@ -41,9 +41,9 @@ image::gwt10.gif[]
 			"de.vogella.gwt.helloworld.client" package.
 		
 		
-			<programlisting language="java">
-				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-					parse="text" href="../examples/firstgwt/HelloGwt.java[]
+[source,java]
+----
+include::res/firstgwt/HelloGwt.java[]
 ----
 		
 		 Create the file
