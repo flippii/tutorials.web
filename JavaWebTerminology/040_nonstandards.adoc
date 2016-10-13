@@ -1,0 +1,9 @@
+[[nonstandards]]
+== Non standard based Java Web Development
+	
+For Java you also find lots of non-standard web development. For
+example, GWT supports the Java development and is compiled into
+JavaScript. See the
+http://www.vogella.com/tutorials/GWT/article.html[GWT Tutorial]
+for more information.
+	

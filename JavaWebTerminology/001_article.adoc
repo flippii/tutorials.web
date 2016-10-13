@@ -1,0 +1,26 @@
+= Introduction to Java Web development - Tutorial
+:linkcss:
+:sectnums:                                                          
+:experimental:
+:icons:
+:imagesdir: ./img
+Lars Vogel, (c) 2009, 2016 vogella GmbH
+Version 0.6, 06.10.2016
+:docinfodir: ../
+:vgwort: JavaWebTerminology
+
+[abstract]
+Java Web technologies.
+This article gives an overview of the standard web technologies for Java. 
+It explains the terms web applications, servlets, JSPs and web container. 
+  
+include::../web/advertisement/afterTableOfContent.adoc[]
+include::010_overview.adoc[]
+include::020_webapp.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
+include::030_standards.adoc[]
+include::040_nonstandards.adoc[]
+include::../support.adoc[]
+include::008_resourceslocal.adoc[]
+include::../copyright.adoc[]	
+

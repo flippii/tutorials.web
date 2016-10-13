@@ -1,0 +1,51 @@
+[[standards]]
+== Java Web Standards
+	
+Standard Java technologies are defined via a standard process called the http://jcp.org[Java Community Process (JCP)]. 
+The following technologies are defined via the JCP.
+	
+[[servlet]]
+=== Servlet
+
+A servlet is a Java class which extends "HttpServlet" and
+answers a
+HTTP request within a
+web
+container.
+The latest official
+version
+is
+Servlets 3.0 which is also part of Java
+EE 6. For details
+see the
+http://jcp.org/en/jsr/detail?id=315[Java Servlets 3.0 Spec].
+
+[[jsp]]
+=== JavaServer Page
+
+JavaServer Pages (JSP) are files which contain HTML and Java
+code.
+The
+web cotainer compiles the JSP into a servlet at the first
+time the JSP is accessed. The current latest version is 2.1.
+
+See http://jcp.org/en/jsr/detail?id=245[Specification for JavaServer Pages 2.1]
+
+[[JSTL]]
+=== JavaServer Pages Standard Tag Library
+
+The JavaServer Pages Standard Tag Library (JSTL) encapsulates
+the core functionality common to many Web
+applications as simple tags.
+The current version is 1.2 is part of the JavaServer
+Pages
+Specification version 2.1.
+
+[[tryitout]]
+=== Getting started with Java web development
+
+Getting started with Java Web development is
+relatively easy. You can
+try it out via the following
+http://www.vogella.com/tutorials/EclipseWTP/article.html[Servlet and JSP Tutorial].
+

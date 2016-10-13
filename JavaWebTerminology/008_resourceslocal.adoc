@@ -1,0 +1,8 @@
+[[resources]]
+== Links and Literature
+
+[[resources_web]]
+=== Java Webdevelopment
+
+http://www.vogella.com/tutorials/EclipseWTP/article.html[Servlet and JSP development with Eclipse WTP - Tutorial]
+
