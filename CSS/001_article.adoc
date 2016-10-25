@@ -4,13 +4,12 @@
 :experimental:
 :icons:
 :imagesdir: ./img
-Lars Vogel and Jennifer Nerlich - https://www.twitter.com[vogella] https://www.twitter.com[jnerlich]
-:keywords: CSS, HTML
-:revdate: 20.05.2016
-:revnumber: 1.6
+Lars Vogel, Jennifer Nerlich, (c) 2008, 2016 vogella GmbH
+Version 1.6, 25.10.2016
 :docinfodir: ../
 :vgwort: CSS
 
+[abstract]
 This article explains how to use CSS for styling HTML pages.
 	
 include::../web/advertisement/afterTableOfContent.adoc[]				
