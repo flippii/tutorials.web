@@ -23,10 +23,10 @@ image::todo.png[]
 [[todo_project">
 === Project
 		
-			Create a new project called <code>com.vogella.gae.java.todo</code> via
+			Create a new project called `com.vogella.gae.java.todo` via
 menu:File[New > Web Application Project]
 			. Package
-			name is also <code>com.vogella.gae.java.todo</code>.
+			name is also `com.vogella.gae.java.todo`.
 		
 		
 image::gae10.gif[]

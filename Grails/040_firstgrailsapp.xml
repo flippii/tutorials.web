@@ -11,7 +11,7 @@
 === Create your application
 		
 			Let's create the application with the name
-			<code>com.vogella.grails.guestbook</code>
+			`com.vogella.grails.guestbook`
 			. The name of the application is used for the URL on which
 			the
 			application will later run and the WAR file which will be later

@@ -95,7 +95,7 @@ include::res/firstscripts/generate-views.txt[]
 		
 		
 			Remove
-			<code>def scaffold = true</code>
+			`def scaffold = true`
 			in your controller to use your
 			generated views.
 		

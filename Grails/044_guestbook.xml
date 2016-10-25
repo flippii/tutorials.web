@@ -89,7 +89,7 @@ include::res/firstgrails/Comment.java[]
 			static
 			method. Some of these
 			constraints, e.g.,
-			<code>nullable</code>
+			`nullable`
 			are reflected
 			in the database, others are
 			only used to validate this
@@ -101,16 +101,16 @@ include::res/firstgrails/Comment.java[]
 			<tip>
 				All model classes come with have a version and id property
 				of type
-				<code>Long</code>
+				`Long`
 				and a
-				<code>toString()</code>
+				`toString()`
 				method by default.
 				These methods will be dynamically injected
 				if the
 				model has no implementation of it's own.
-				<code>dataCreated</code>
+				`dataCreated`
 				and
-				<code>lastUpdated</code>
+				`lastUpdated`
 				are also known by Grails
 				and will be filled automatically.
 			
@@ -161,12 +161,12 @@ include::res/firstscripts/generate-controller.txt[]
 			Activate the dynamic scaffolding in each controller by
 			replacing the
 			line which starts with
-			<code>def index</code>
+			`def index`
 			with
-			<code>def scaffold = NameOfTheDomainClass</code>
+			`def scaffold = NameOfTheDomainClass`
 			.
 			For example, for the
-			<code>FeedbackController</code>
+			`FeedbackController`
 			.
 		
 		
@@ -177,9 +177,9 @@ include::res/firstgrails/FeedbackController.java[]
 		
 		
 			Do this also for
-			<code>UserController</code>
+			`UserController`
 			and
-			<code>CommentController</code>
+			`CommentController`
 			.
 
 		

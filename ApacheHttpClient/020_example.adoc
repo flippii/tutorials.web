@@ -1,0 +1,54 @@
+[[example]]
+== Examples
+
+[[example_project]]
+=== Project and Expectations
+		
+The following examples do not necessary work out of the box as
+we do not
+provide the required backend for receiving the data. Think
+of the
+following as examples how to setup HttpClients. Download
+the
+HttpClient libraries from the Apache Website, you can download the
+"bin" package it
+includes all dependencies.
+		
+Create a new Java project
+_de.vogella.web.httpclient_,
+and
+add them
+to the
+path of your Java project. We use the project for
+creating our
+tests.
+
+[[example_get]]
+=== Http Get
+		
+The following is an example an HTTP Get request via `HttpClient`.
+		
+[source,java]
+----
+include::res/httpclient/getHttpClient.txt[]
+----
+		
+[[example_post]]
+=== Http Post
+
+The following will send a post request to the URL
+"http://vogellac2dm.appspot.com/register" and include a parameter
+"registrationid" which an random value.
+		
+[source,text]
+----
+include::res/httpclient/SimpleHttpPut.java[]
+----
+		
+The following request adds several parameters to the post request.
+		
+[source,text]
+----
+include::res/httpclient/TestHttpClient.java[]
+----
+

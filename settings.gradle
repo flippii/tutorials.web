@@ -10,4 +10,5 @@ include 'JavaWebTerminology'
 include 'JavaXML'
 include 'JSON'
 include 'AjaxwithDojo'
+include 'ApacheHttpClient'
 

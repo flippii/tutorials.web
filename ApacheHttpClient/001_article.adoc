@@ -1,0 +1,24 @@
+= Apache HttpClient - Tutorial
+:linkcss:
+:sectnums:                                                          
+:experimental:
+:icons:
+:imagesdir: ./img
+Lars Vogel, (c) 2008, 2016 vogella GmbH
+Version 1.3, 25.10.2016
+:docinfodir: ../
+:vgwort: ApacheHttpClient
+
+[abstract]
+Apache HttpClient.
+This tutorial describes how to use the Apache HttpClient library for accessing HTTP resources. 
+This tutorial is based on Apache HttpClient 4.1.
+  
+include::../web/advertisement/afterTableOfContent.adoc[]
+include::010_httpclient.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
+include::020_example.adoc[]
+include::../support.adoc[]
+include::008_resourceslocal.adoc[]
+include::../copyright.adoc[]	
+

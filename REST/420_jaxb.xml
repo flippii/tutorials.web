@@ -44,7 +44,7 @@ include::res/jaxb/Todo.java[]
 			Create the following resource class. This class simply returns
 			an
 			instance of the
-			<code>Todo</code>
+			`Todo`
 			class.
 		
 		

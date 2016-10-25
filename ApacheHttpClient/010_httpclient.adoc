@@ -1,0 +1,40 @@
+[[httpclient]]
+== Using the Apache HttpClient
+	
+The Apache
+HttpClient library simplifies handling HTTP requests.
+To use
+this library download the binaries with dependencies from
+http://hc.apache.org/
+and add then to your project classpath.
+	
+You retrieve and send data via the
+`HttpClient`
+class. An
+instance of this class can be created with
+`new DefaultHttpClient();`
+	
+`DefaultHttpClient`
+is the standard HttpClient and uses the
+`SingleClientConnManager`
+class to handle HTTP connections.
+`SingleClientConnManager`
+is not thread-safe, this means that access to it via several threads
+will create problems.
+	
+The HttpClient uses a
+`HttpUriRequest`
+to send and receive data.
+Important subclass of
+`HttpUriRequest`
+are
+`HttpGet`
+and
+`HttpPost`.
+
+You can get the
+response of
+the HttpClient as
+an
+InputStream.
+	

@@ -8,7 +8,7 @@
 		for more information.
 	
 	
-		After running <code>grails create-app</code>
+		After running `grails create-app`
 		you may notice the `.project`
 		and `.classpath` file.
 		These Eclipse related files are

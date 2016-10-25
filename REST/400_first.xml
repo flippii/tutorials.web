@@ -49,10 +49,10 @@ include::res/first/Hello.java[]
 			This class
 			register itself as a get
 			resource via the
-			<code>@GET</code>
+			`@GET`
 			annotation.
 			Via the
-			<code>@Produces</code>
+			`@Produces`
 			annotation it
 			defines that it delivers
 			the
@@ -60,7 +60,7 @@ include::res/first/Hello.java[]
 			and the
 			_HTML_
 			MIME types. It also defines via the
-			<code>@Path</code>
+			`@Path`
 			annotation that its service
 			is available under the
 			`hello`
@@ -130,7 +130,7 @@ image::jerseryfirstresult80.png"/>
 			file,
 			augmented with the servlet-mapping URL-pattern and the
 			`hello`
-			<code>@Path</code>
+			`@Path`
 			annotation from your class file.
 			You
 			should get
