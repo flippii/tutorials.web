@@ -1,0 +1,19 @@
+[[overview]]
+== Ajax - Asynchronous JavaScript and XML
+
+[[overview_ajax]]
+=== Overview
+		
+Ajax (Asynchronous JavaScript and XML) describes the possibility to communicate with the web server in the background and to update a webpage with information from the web server without re-loading the webpage.
+		
+Ajax can improve the usability of a webpage, e.g. a webpage can quickly be displayed while information is still loaded from the web server.
+		
+Ajax is based on the XMLHttpRequest and is considered to by a key technology to realize Web 2.0. 
+For details on the XMLHttpRequest please see the resource section of this article.
+
+[[overview_javascript]]
+=== Introduction to JavaScript
+		
+This article assume some familiarity with JavaScript. 
+Please see http://www.vogella.com/tutorials/JavaScript/article.html[Javascript - Tutorial] for a introduction into JavaScript.
+

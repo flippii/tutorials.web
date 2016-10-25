@@ -9,4 +9,5 @@ include 'SpringBoot'
 include 'JavaWebTerminology'
 include 'JavaXML'
 include 'JSON'
+include 'AjaxwithDojo'
 

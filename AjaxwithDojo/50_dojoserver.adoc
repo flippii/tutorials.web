@@ -1,0 +1,44 @@
+[[dojoserver]]
+== Accessing the server
+
+[[dojoserver_s2a]]
+=== Reading a fixed file from a server
+
+Dojo allows you to read data from the server. 
+The following HTML page will connect the server and asynchronously load the content from the web server. 
+In this example the loaded content is a static text page.
+
+[source,text]
+----
+include::res/server/readServer.html[]
+----
+
+TIP: This example may not be running on a local file system.
+If you do not see something try to replace the URL http://www.vogella.com/tutorials/AjaxwithDojo/download/includeTextFile.txt with a path to a local file. 
+This should then also work with a local running HTML page.
+
+Start the HTML. The Dojo javascript will access the text file in the background and update the webpage with the information once the text file is read.
+
+Welcome to the world of Ajax! You successfully loaded a content from a website and included the response into your existing HTML page.
+
+[[dojoserver_s2b]]
+=== Send data to the server and update the page with the response
+
+Now you need a build a server side application. 
+I'm going to use Java Servlets for this but you can use any other language on the server you like, e.g. Perl, PHP, etc.
+
+Create the following Java servlet, compile it and deploy it to your server. 
+I'm going to assume that the servlet will be running on the URL yourhomepage/servlets/ReturnParameters.
+
+[source,text]
+----
+include::res/server/ReturnParameters.java[]
+----
+
+Now create the following HTML page which calls the servlet with two parameters and displays the result at a certain place in the application.
+
+[source,text]
+----
+include::res/server/paratoServlet.html[]
+----
+

@@ -1,0 +1,36 @@
+[[dojoclientside]]
+== Your first Dojo pages
+
+[[dojoclientside_table]]
+=== Table handling
+
+In your directory "web" create a table.html file with the following content.
+
+TIP: The following uses the dojo cascading style sheets (css). 
+If you want to overwrite any of these style can assume that you also include another style sheet after the dojo css include and overwrite any style you like.
+
+[source,text]
+----
+include::res/closeopenheader.html[]
+----
+
+Load the created webpage in a browser. 
+You get a table with can be minimized and maximized again.
+
+This example shows the same table but is closed by default.
+
+[source,text]
+----
+include::res/closeopenheader2.html[]
+----
+
+[[dojoclientside_s2b]]
+=== Tooltip
+
+This HTML file uses a tooltip on one element.
+
+[source,text]
+----
+include::res/tooltip.html[]
+----
+

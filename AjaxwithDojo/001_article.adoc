@@ -1,0 +1,28 @@
+= Ajax with the Dojo Toolkit - Tutorial
+:linkcss:
+:sectnums:                                                          
+:experimental:
+:icons:
+:imagesdir: ./img
+Lars Vogel, (c) 2008, 2016 vogella GmbH
+Version 0.6, 29.10.2016
+:docinfodir: ../
+:vgwort: AjaxwithDojo
+
+[abstract]
+Dojo.
+This article describes the usage of the Dojo toolkit for JavaScript programming. 
+Dojo is an Ajax toolkit.
+  
+include::../web/advertisement/afterTableOfContent.adoc[]
+include::10_overview.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
+include::20_installation.adoc[]
+include::30_eclipse.adoc[]
+include::../web/advertisement/inBetween02.adoc[]
+include::40_dojoclientside.adoc[]
+include::50_dojoserver.adoc[]
+include::../support.adoc[]
+include::008_resourceslocal.adoc[]
+include::../copyright.adoc[]
+
