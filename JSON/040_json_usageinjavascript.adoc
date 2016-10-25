@@ -1,0 +1,12 @@
+[[json_javascript]]
+== Java Script
+
+The following is an example of an JSON object and its usage in JavaScript. 
+You evaluate the JSON via the function eval and can then assign it to an object. 
+This object can then be used in your JavaScript source code.
+	
+[source,html]
+----
+include::res/json/json.html[]
+----
+

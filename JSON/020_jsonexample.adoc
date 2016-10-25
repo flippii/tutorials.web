@@ -1,0 +1,17 @@
+[[json_example]]
+== Example of an JSON 
+	
+An JSON object is a set of key / value pairs which starts with "{" and ends with "}".
+	
+[source,text]
+----
+include::res/json/person.txt[]
+----
+	
+Lists are one or more values surrounded by [] and separated by ",".
+	
+[source,text]
+----
+include::res/json/persons.txt[]
+----
+
