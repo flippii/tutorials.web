@@ -8,22 +8,28 @@ Lars Vogel and Jennifer Nerlich - https://www.twitter.com[vogella] https://www.t
 :keywords: CSS, HTML
 :revdate: 20.05.2016
 :revnumber: 1.6
+:docinfodir: ../
+:vgwort: CSS
 
 This article explains how to use CSS for styling HTML pages.
-				
+	
+include::../web/advertisement/afterTableOfContent.adoc[]				
 include::010_overview.adoc[]
 include::018_css_exercise.adoc[]
 include::020_css_container.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
 include::024_css_includes.adoc[]
 include::026_boxmodel.adoc[]
 include::030_css_positioning.adoc[]
+include::../web/advertisement/inBetween02.adoc[]
 include::040_csslayout.adoc[]
 include::060_css_mediaquery.adoc[]
 include::200_size.adoc[]
+include::../web/advertisement/inBetween03.adoc[]
 include::220_text.adoc[]
 include::221_versioning.adoc[]
 include::230_eclipse_editor.adoc[]
-
-include::../copyright.adoc[]
+include::../support.adoc[]
 include::008_resourceslocal.adoc[]
+include::../copyright.adoc[]	
 
