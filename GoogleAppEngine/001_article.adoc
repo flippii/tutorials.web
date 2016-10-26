@@ -1,0 +1,31 @@
+= Google App Engine - Python Development (with Eclipse) - Tutorial
+:linkcss:
+:sectnums:                                                          
+:experimental:
+:icons:
+:imagesdir: ./img
+Lars Vogel, (c) 2008, 2016 vogella GmbH
+Version 1.2, 25.10.2016
+:docinfodir: ../
+:vgwort: GoogleAppEngine
+
+[abstract]
+Google App Engine - Python.
+This article describes the creation of a web application with Python on the Google App Engine. 
+The example created in this article will be a simple Todo list.
+The usage of the email API will get demonstrated. 
+Also conditions in the Django web template and formating of dates will get demonstrated.
+The article demonstrates optionally the usage of Eclipse for developing, running and debugging the Google App Engine application.
+  
+include::../web/advertisement/afterTableOfContent.adoc[]
+include::10_overview.adoc[]
+include::20_installation.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
+include::30_app_python.adoc[]
+include::40_eclipse.adoc[]
+include::../web/advertisement/inBetween02.adoc[]
+include::90_monitor.adoc[]
+include::../support.adoc[]
+include::008_resourceslocal.adoc[]
+include::../copyright.adoc[]	
+

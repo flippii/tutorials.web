@@ -1,0 +1,23 @@
+[[overview]]
+== Overview
+
+Google offers with the Google App Engine(GAE) a cloud computing
+infrastructure for creating and running web application on the Google
+infrastructure.
+The GAE is a platform to create web applications. Google does
+currently support Python, Java
+and several languages based on Java as a programming language for
+the Google App Engine. This article will focus on the development
+with Python but no previous knowledge of Python is required. See the
+resource part of a link to an introduction to the Google Apps Engine
+Development with Java.
+Cloud computing allows that system resources can be dynamically
+allocated to the application on demand. Currently the price model for
+the Google App Engine is not defined but Google offers a free starting offer
+for the GAE.
+Currently a user can create a maximum of 10 application on the
+Google App Engine.
+
+TIP: In case you want to use Eclipse only for standard Python development'(not for the Google App Engine) please see
+http://www.vogella.com/tutorials/Python/article.html[Python Development with Eclipse].
+

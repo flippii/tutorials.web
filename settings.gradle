@@ -12,4 +12,5 @@ include 'JSON'
 include 'AjaxwithDojo'
 include 'ApacheHttpClient'
 include 'ApacheTomcat'
+include 'GoogleAppEngine'
 

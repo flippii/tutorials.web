@@ -1,0 +1,144 @@
+[[app_python]]
+== Developing your first application
+
+In this part of the tutorial we will develop a small Todo list.
+This list will allow you to store todos, send out email reminders to
+yourself and delete todos. You can also store a URL and a description
+to each todo.
+
+I suggest to use Eclipse with Pydevas IDE as Python interprets
+intension
+as inclination of blocks and therefore you may run into
+problems
+copying code from this tutorial if you use a standard text
+editor.
+
+image::todo10.gif[]
+
+The source of this example is stored in project
+"de.vogella.gae.python.todo" and can be browsed on
+http://www.vogella.com/code.html[www.vogella.com source code].
+
+[[app_python_dir]]
+=== Directory
+
+Create a new directory "googleappengine01", e.g.
+c:\temp\googleappengine01. All the following files must be created
+within this directory.
+
+[[app_python_config]]
+=== Configuration File
+
+Create the following configuration file for your application.
+It define the application name, the runtime and defines the handler
+script which should get invoked for a specific URL.
+
+[source,text]
+----
+include::res/first/app.yaml[]
+----
+
+The script defines that all URL request will be handled by the
+script "todo.py". It also defines two static directories in which
+static content is stored which can also be served. Without this
+definition the Google app engine would not deliver this content to
+the webbrowser.
+
+[[app_python_application]]
+=== Create the application
+
+Python allows to define several classes in one source file. We are
+going to create the following classes:
+
+* TodoModel: Defines the data model for your application.
+* MainPage: Serves as the main entry point, user validation is checked here
+* New: This class will create the new Todo in the database
+* Done: Marks the todo as complete and deletes it from the database
+* Email: Sends the selected todo to yourself via email as a reminder
+
+TIP: Email notification does not work in the local version. 
+This feature is only available after the upload to the Google cloud.
+
+Create the file "todo.py" with the following content. Study the
+source code; I tried to document it well in the hope that it is
+self-explaining.
+
+[source,text]
+----
+include::res/first/todo.py[]
+----
+
+This class MainPage uses a HTML template "index.html" for the
+rendering. Create the following file.
+
+TIP: This uses the Django template language. 
+See the appendix for an weblink for the Django template language.
+
+[source,text]
+----
+include::res/first/index.html[]
+----
+
+Also create the directory css and put in this file "main.css".
+This is the style sheet used to make index.html "pretty".
+
+[source,text]
+----
+include::res/first/main.css[]
+----
+
+Optional you can put a graphic "todo.png" into the images directory.
+
+[[app_python_run]]
+=== Run your application
+
+Switch to a command line. Switch to the directory which
+contains your application directory. Start your application locally
+with the following command.
+
+[source,text]
+----
+include::res/first/start.txt[]
+----
+
+Switch to a browser and access your local host via: http://localhost:8080/.
+
+TIP: You can edit your python source code and just refresh the browser to see the updates.
+
+TIP: To stop the server press kbd:[Ctrl+Break] on Windows, Unix and Linux using the standard kbd:[Ctrl+C].
+
+[[app_python_clean]]
+=== Clean your test data
+
+The local installation will store your test data until you tell the engine to delete the test data. 
+Use therefore the --clear_datastore option during startup.
+
+[source,text]
+----
+include::res/first/clear.txt[]
+----
+
+[[app_python_upload]]
+=== Deploy your application
+
+Now deploy your application to the Google cloud. Open the following
+URL
+http://appengine.google.com/]] http://appengine.google.com/]
+and login with your Google User. Press the button "Create an application".
+
+You need then to verify your account via an SMS.
+Create an application name. You have to choose one which is
+still available. After you found one you need to change the
+application in the app.yaml file to this new name.
+
+Use now the command line to upload your application.
+
+[source,text]
+----
+include::res/first/deploy.txt[]
+----
+
+Thats it. You should now be able to find your application at
+http://yourname.appspot.com/. For example this example can be found
+at http://myvogella.appspot.com/.
+
