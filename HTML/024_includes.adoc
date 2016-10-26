@@ -1,0 +1,10 @@
+[[htmlincludes]]
+== HTML includes
+
+It is possible to include HTML elements into an HTML document.
+
+[source,html]
+----
+include::res/include/include.html[]
+----
+

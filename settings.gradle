@@ -19,4 +19,5 @@ include 'GoogleTechnologies'
 include 'Grails'
 include 'GWT'
 include 'GWTModules'
+include 'HTML'
 

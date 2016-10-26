@@ -1,0 +1,72 @@
+[[html_overview]]
+== HTML5
+
+[[overview_what]]
+=== What is HTML?
+
+HTML (Hypertext Markup Language) is a standard to describe the
+content of webpages. HTML pages are
+text files which typically end
+with the ".html" extension. 
+HTML is a _markup language_.
+
+The
+current version of HTML is HTML5. HTML5
+supports XML syntax.
+This tutorial uses the HTML5 XML syntax.
+
+In HTML you describe the
+content in pure text, by
+defining
+text
+as
+headings,
+paragraphs, lists, etc. A tag is a text
+surrounded by
+angle
+brackets. Tags usually have a
+beginning and end
+and
+contain
+other text
+between the start and end
+tag. The normal content
+of
+the webpage is
+placed between the <body> </body> tags, the <head> </head> tag contains general information about the webpage.
+
+[[overview_css]]
+=== CSS
+
+HTML by ifself does not define a lot of display options. You use
+http://www.vogella.com/tutorials/CSS/article.html[CSS]
+to define how HTML element should be displayed.
+
+[[overview_structure]]
+=== A structured example
+
+HTML5 introduced several new ways of classifying content of the
+webpage, e.g., <nav> </nav>
+for the navigation part of the page, <article>
+to represent an independent article,<aside> </aside>
+to represent a sidebar with related information.<footer> </footer>
+for a footer in the HTML page and <address> </address>
+for the contact information of the author.
+
+The following displays an example which uses these new
+elements. Most
+browser will not change the display based on them but
+you can use
+http://www.vogella.com/tutorials/CSS/article.html[CSS]
+to select these elements and style them accordingly.
+
+[source,html]
+----
+include::res/structure/example.html[]
+----
+
+[[overview_validators]]
+=== HTML validators
+
+You can use http://validator.w3.org/ to check the validity of your HTML code.
+

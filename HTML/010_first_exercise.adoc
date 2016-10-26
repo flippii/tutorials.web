@@ -1,0 +1,25 @@
+[[exercise_firsthtml]]
+=== Exercise: Create HTML page
+
+HTML files needs to be plain text. Use a simple text editor,
+e.g., Notepad under Windows and save
+the following text as
+"page1.html". Do not use a editor such as
+Winword as
+this editor saves
+additional information in the file.
+Create
+the following text.
+
+[source,html]
+----
+include::res/example.html[]
+----
+
+Open this page in a browser, e.g., by
+double-clicking on your
+page.
+The result should look like the following.
+
+image::html10.gif[]
+

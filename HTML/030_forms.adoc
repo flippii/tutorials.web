@@ -1,0 +1,19 @@
+[[forms]]
+== Forms
+
+Forms are used to capture input from the user. The input of a
+form is
+usually receive by a server side program which will receive
+the input
+from the form and can then process the data. In the <input>
+tag you define via the "type" attribute defines the expected type.
+HTML5 defines lots of possible types, unfortunately currently most of
+them are not supported by most browsers. If a browser does not
+recognize a certain type it will assume text. So it is save to use the
+types. Here is a form with some input fields.
+
+[source,html]
+----
+include::res/forms/form1.html[]
+----
+

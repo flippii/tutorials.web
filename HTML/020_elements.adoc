@@ -1,0 +1,109 @@
+[[htmlelements]]
+== HTML Standard Elements
+
+The following defines standard HTML elements. If you want to try out
+these
+elements, take the example of your first webpage and place the
+new
+tags between the <body> </body>
+tag. Save your file and re-load your browser to see the result.
+
+[[htmlelements_blocks]]
+=== Blocks and structural elements
+
+<p> </p>
+describes a paragraph and <h1> </h1>
+a headline. You have six headlines available from  <h1> </h1>
+to <h6> </h6>.
+
+<br/> describes a line break. Please note that this tag is directly closed
+via the slash at the end. <br> </br> is incorrect. 
+<hr/> inserts a line into the text.
+
+[[htmlelements_tags]]
+=== HTML Links
+
+The following describes a link in HTML. The attribute "href"
+defines the target
+of the link. A link can be absolute or relativ to
+the existing
+webpage.
+
+[source,text]
+----
+include::res/html/anchor.txt[]
+----
+
+The following listing contains a link which displays a image.
+
+[source,text]
+----
+include::res/html/imagelink.txt[]
+----
+
+The following example shows how to create a link for an email.
+
+[source,text]
+----
+include::res/html/emaillink.txt[]
+----
+
+[[htmlelements_list]]
+=== Lists
+
+HTML supports ordered and unordered lists. 
+
+[source,text]
+----
+include::res/html/lists.txt[]
+----
+
+[[htmlelements_table]]
+=== Tables
+
+[source,text]
+----
+include::res/html/table.txt[]
+----
+
+[[htmlelements_image]]
+=== Image
+
+Images should have the "alt" tag defined and can optionally definde a width and a height.
+
+[source,text]
+----
+include::res/html/image.txt[]
+----
+
+[[htmlelements_specialsigns]]
+=== Special signs
+
+Use the following special signs to display them in your webpage.
+
+.Special signs
+|===
+|Sign  |HTML representation |Remark
+
+|
+|&nbsp;
+|Whitespace (" ")  
+
+|<
+|&lt;
+|
+
+|>
+|&gt;
+|
+
+|&
+|&amp;
+|
+
+| ©
+|&copy;
+|
+
+|===
+
