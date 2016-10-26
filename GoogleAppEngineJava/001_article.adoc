@@ -1,0 +1,35 @@
+= Google App Engine for Java - Tutorial
+:linkcss:
+:sectnums:                                                          
+:experimental:
+:icons:
+:imagesdir: ./img
+Lars Vogel, (c) 2009, 2016 vogella GmbH
+Version 2.8, 25.10.2016
+:docinfodir: ../
+:vgwort: GoogleAppEngineJava
+
+[abstract]
+Google App Engine and JPA.
+This article describes the creation of a Java web application on the Google App Engine. 
+It uses JPA. 
+The tutorial is based on Java 1.7, Eclipse 4.4 and GAE version 1.4.2.
+  
+include::../web/advertisement/afterTableOfContent.adoc[]
+include::010_overview.adoc[]
+include::../10_Include/Google/20_gwt_gae_install.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
+include::030_register.adoc[]
+include::040_creatingapps.adoc[]
+include::050_persistence.adoc[]
+include::../web/advertisement/inBetween02.adoc[]
+include::060_todo.adoc[]
+include::100_email.adoc[]
+include::../web/advertisement/inBetween03.adoc[]
+include::120_cron.adoc[]
+include::140_logging.adoc[]
+include::200_adminconsole.adoc[]
+include::../support.adoc[]
+include::008_resourceslocal.adoc[]
+include::../copyright.adoc[]	
+

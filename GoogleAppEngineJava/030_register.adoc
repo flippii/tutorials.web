@@ -1,0 +1,21 @@
+[[register]]
+== Register at the Google App Engine
+
+To deploy your application to the Google cloud you need a AppEngine
+account. To get such an account you need a Google email account.
+Open
+the
+URL
+http://appengine.google.com/[App Engine registration page]
+and login with your Google account information. You
+need to verify your
+account via a valid phone number. After
+providing
+your phone number,
+Google will text you a verification code
+via SMS.
+You will then type the
+verification code into the verification
+box
+online.
+

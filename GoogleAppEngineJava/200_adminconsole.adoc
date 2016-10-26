@@ -1,0 +1,40 @@
+[[adminconsole]]
+== Admin Console
+
+[[adminconsole_overview]]
+=== Overview
+
+The Admin Console provides you with a lot of information about your application. 
+For example you can acces the data stored in the datastore or look at the log files of your application. 
+
+image::log10.gif[]
+
+You can also use standard Java Logging for creating custom logs on
+the
+GAE/J. See
+http://www.vogella.com/tutorials/Logging/article.html[Java Logging Tutorial]
+and
+http://code.google.com/appengine/docs/java/runtime.html#Logging[Logging on the GAE/J].
+
+[[adminconsole_extend]]
+=== Extend the Admin Console
+
+You can also extend the admin console with own pages. Create
+the following entry in "appengine-web.xml". 
+
+[source,text]
+----
+include::res/admin/extend.txt[]
+----
+
+We will just use a static HTML for the example. Create the following file in the `WEB-INF` folder. 
+
+[source,text]
+----
+include::res/admin/static.html[]
+----
+
+If you redeploy your application you have another entry in your Admin console. 
+
+image::admin20.gif[]
+
