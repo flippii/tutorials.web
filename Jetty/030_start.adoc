@@ -3,16 +3,14 @@
 
 To start Jetty, switch on the command line to the installation directory and issue the following command.
 
-
 [source,text]
 ----
 include::res/startjetty.txt[]
 ----
 
 This starts Jetty on http://localhost:8080/
-
 	
 image::jetty10.gif[]
 	
-	
-To stop Jetty press Ctrl+C. 
+To stop Jetty press kbd:[Ctrl+C]. 
+

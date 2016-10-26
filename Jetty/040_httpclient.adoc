@@ -7,3 +7,4 @@ The following code show a few examples of using the HttpClient of Jetty.
 ----
 include::res/client/Using.java[]
 ----
+
