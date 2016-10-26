@@ -1,0 +1,22 @@
+[[tutorial_curl]]
+== Tutorial: Using command line tool curl to simulator the server
+
+If you run a Linux system you can easily test the service on the
+command line. You can request your authentication key
+via
+http://www.vogella.com/tutorials/Ubuntu/article.html#network_curl[curl]
+on the command line. From the response get the part after "Auth=".
+
+[source,text]
+----
+include::res/curl/authentication.txt[]
+----
+
+This part and the registration code can be used to send a
+message to your device.
+
+[source,text]
+----
+include::res/curl/sendmessage.txt[]
+----
+

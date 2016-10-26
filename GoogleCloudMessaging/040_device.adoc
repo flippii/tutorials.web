@@ -1,0 +1,19 @@
+[[clouddevice]]
+== Device and Registration
+
+Currently C2DM is under beta testing. You need to ask for access. 
+Here is the http://code.google.com/android/c2dm/signup.html[link to the signup form].
+
+If you test the following example on the emulator make sure that
+you
+use Google API 8 or later. You also have to register a Google user
+on
+the
+virtual device under
+menu:Settings[Accounts Sync].
+
+If you test the following example on a
+real device make sure that
+the
+Android Market is installed.
+

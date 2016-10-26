@@ -1,0 +1,142 @@
+[[c2dm]]
+== Cloud to device messaging
+
+[[c2dm_overview]]
+=== Polling vs. Push
+
+Most mobile apps require data from the Internet.
+One
+approach for
+updating its data is that the
+apps
+periodically
+polls a server for new
+data (Polling). If
+no new data is available this approach uses
+unnecessary
+network
+bandwidth and consumes the battery of the mobile phone.
+
+An alternative approach is that
+the server contacts the mobile
+app once new data is available (Push). If the data does not
+change
+constantly, Push is the preferred solution.
+
+[[c2dm_messaging]]
+=== Cloud service
+
+Via the Google Play services you can push notifications to your
+application. To do this you must enable
+_Google Cloud Messaging for Android_
+in the
+https://console.developers.google.com/project[Google API Console].
+
+In a C2DM you have three involved parties. The application
+server which
+wants to push messages to the Android device,
+Googles C2DM
+servers
+and the Android app. 
+The program on the application server can
+be written in
+any programming language, e.g. Java, PHP, Python, etc.
+
+When the application server needs to push a message to
+the Android
+application, it
+sends the message via an HTTP POST to
+Google’s C2DM servers.
+
+The C2DM servers route the message to the device. 
+If the device
+is not online, the message will be delivered once the device
+is available. 
+Once the message is received, an Broadcast Intent is created. 
+The mobile app has registered an Intent Receiver for this Broadcast. 
+The app is started
+and processes the
+message via the
+defined
+Intent Receiver.
+
+C2DM messages are limited in
+size to 1024 bytes and are intended
+to inform the device about new
+data not to transfer it.
+The typical
+workflow is that Googles C2DM servers notify
+the
+Android
+app
+that new
+data is available. Afterwards the
+Android
+app
+fetches the data
+from a
+different server.
+
+Android devices maintain an connection to the Android Play server. 
+C2DM uses this existing connections to the Google servers.
+This connection
+is
+highly optimize to minimize bandwidth and battery
+consumption.
+
+C2DM is currently still in beta and you need to apply to use it.
+C2DM applies a limit of approximately 200 000 messages per
+sender per
+day and is currently free of charge.
+
+[[_c2dm_requirements]]
+=== Requirements
+
+C2MD is available as of Android 2.2 and requires that
+Android
+Play application is installed on the device.
+
+To use C2DM on the Android simulator you also need to use a
+Google device with API 8 or higher and to register with a Google
+account on the emulator via the Settings.
+
+[[c2dm_permissions]]
+=== Permissions
+
+To use C2DM in your application to have to register for the following
+permissions
+
+* com.google.android.c2dm.permission.RECEIVE  
+* android.permission.INTERNET     
+
+Your application
+should also declare the permission
+"applicationPackage +
+".permission.C2D_MESSAGE" with the
+"android:protectionLevel" of
+"signature" so that other applications
+cannot register
+and receive
+message for the application.
+android:protectionLevel="signature".
+ensures that applications with
+request a permission must be signed
+with same certificate as the
+application that declared the
+permission.
+
+[[c2dm_receiver]]
+=== Intent Receiver
+
+Your application must register an intent receiver for
+the two
+intents:
+
+* com.google.android.c2dm.intent.REGISTRATION      
+* com.google.android.c2dm.intent.RECEIVE   
+
+The receiver for "com.google.android.c2dm.intent.RECEIVE" will
+be called once a new message is received, while the receiver for
+"com.google.android.c2dm.intent.REGISTRATION" will be called once the
+registration code for the app is received.
+
