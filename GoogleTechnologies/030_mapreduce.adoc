@@ -1,0 +1,5 @@
+[[mapreduce]]
+== MapReduce
+	
+Please see http://www.vogella.com/tutorials/MapReduce/article.html[MapReduce].
+	

@@ -15,4 +15,5 @@ include 'ApacheTomcat'
 include 'GoogleAppEngine'
 include 'GoogleAppEngineJava'
 include 'GoogleCloudMessaging'
+include 'GoogleTechnologies'
 
