@@ -4,5 +4,4 @@
 [[resources_performance]]
 === Performance
 
-Not listet yet
 
