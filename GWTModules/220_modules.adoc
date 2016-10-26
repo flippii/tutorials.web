@@ -1,0 +1,88 @@
+[[modules]]
+== Using external jars / Java projects in GWT
+
+[[modules_overview]]
+=== Overview
+
+The standard approach in Java is to have separated projects for
+separate purposes. For example the domain model of the application is
+usually defined in its own project.
+One way of making these classes
+available to GWT is to copy
+them into the
+package "client" in your GWT project. 
+This is bad
+practice as it leads
+to code duplication (which is
+inherently evil).
+This chapter describes how you can make these
+projects
+available to the
+GWT compiler as modules.
+
+GWT needs to have access to the source files to compile them into Javascript code. 
+If you add the project or the jar file to your
+GWT classpath then the Java compiler will not complain if you use the
+classes from the included project / jar but the GWT compiler will not
+be able to compile them.
+
+To make the Java files available to the GWT compiler you need to
+
+* Create a gwt.xml file in the Java project / jar file which you want to use - This will instruct the GWT compiler to use the listed classes.
+* Use the included library via the inherit definition.
+* If you are using a jar file you also need to include the source files in the jar.
+
+[[modules_createmodule]]
+=== Create the module project
+ 
+Create a Java project "de.vogella.gwt.module.model" and package "de.vogella.gwt.module.model". 
+Create the following class.
+
+[source,java]
+----
+include::res/module/Person.java[]
+----
+
+Create in package "de.vogella.gwt.module" the file "model.gwt.xml" with the following content.
+This will be the module definition for GWT. 
+
+[source,xml]
+----
+include::res/module/model.gwt.xml[]
+----
+
+[[modules_use]]
+=== Use the module in another project
+
+We want to use this model in a GWT project. Create therefore a
+new GWT project "de.vogella.gwt.module.application" similar to the
+first example of this article with the following entry point.
+
+[source,java]
+----
+include::res/module/ModulTest.java[]
+----
+
+To make the module project available for the Java compiler,
+right-click your project, select properties -> Java Build Path
+and add
+a dependency to the project "de.vogella.gwt.module.model".
+
+image::gwtmodule10.gif[]
+
+Make the Java class of your new module available to the GWT
+compiler by using "inherits" in your file
+"De_vogella_gwt_module_application.gwt.xml".
+
+[source,xml]
+----
+include::res/module/De_vogella_gwt_module_application.gwt.xml[]
+----
+
+TIP:  If you make a typo here you will get an error message: [ERROR] Unable to find 'de/vogella/gwt/module/model2.gwt.xml' on your classpath;
+could be a typo, or maybe you forgot to include a classpath entry for source?
+
+If everything was setup correctly you can run your application.
+
+image::gwtmodule20.gif[]
+
