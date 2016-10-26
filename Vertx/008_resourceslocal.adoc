@@ -1,5 +1,6 @@
 == Vert.x resources
-http://vertx.io/docs/ Vert.x homepage
 
-http://paulbakker.io/osgi/vertx-osgi/ Using Vert.x with OSGi
+http://vertx.io/docs/[Vert.x homepage]
+
+http://paulbakker.io/osgi/vertx-osgi/[Using Vert.x with OSGi]
 
