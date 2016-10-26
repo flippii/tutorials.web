@@ -1,0 +1,27 @@
+[[jerseyprojectsetup]]
+== Installation of Jersey
+
+[[jerseyprojectsetup_manual]]
+=== Manual setup of Jersey libraries in an Eclipse project
+
+Download the Jersey distribution as zip file from the https://jersey.java.net/download.html[Jersey download site].
+
+The zip contains the Jersey implementation JAR and its
+core
+dependencies. It does
+not provide
+dependencies for third
+party JARs
+beyond those for
+JSON support
+and JavaDoc.
+
+Copy all JARs from your Jersey download into the `WEB-INF/lib` folder.
+
+image::jerseryfirst40.png[]
+
+[[jerseyprojectsetup_gradle]]
+=== Required setup for Gradle with Eclipse web projects
+
+TODO...
+

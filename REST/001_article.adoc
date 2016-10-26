@@ -1,0 +1,33 @@
+= REST with Java (JAX-RS) using Jersey - Tutorial
+:linkcss:
+:sectnums:                                                          
+:experimental:
+:icons:
+:imagesdir: ./img
+Lars Vogel, (c) 2009, 2016 vogella GmbH
+Version 2.6, 26.10.2016
+:docinfodir: ../
+:vgwort: REST
+
+[abstract]
+RESTful web services with Java (Jersey / JAX-RS).
+This tutorial explains how to develop RESTful web services in Java with the JAX-RS reference implementation Jersey.
+In this tutorial Eclipse 4.5 (Mars), Java 1.8, Tomcat 6.0 and JAX-RS 2.0 (with Jersey 2.11) is used.
+  
+include::../web/advertisement/afterTableOfContent.adoc[]
+include::010_overview.adoc[]
+include::020_jaxrsjersey.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
+include::300_installation.adoc[]
+include::310_webcontainer.adoc[]
+include::320_prerequisites.adoc[]
+include::../web/advertisement/inBetween02.adoc[]
+include::400_first.adoc[]
+include::420_firstclient.adoc[]
+include::../web/advertisement/inBetween03.adoc[]
+include::420_jaxb.adoc[]
+include::500_crud.adoc[]
+include::../support.adoc[]
+include::008_resourceslocal.adoc[]
+include::../copyright.adoc[]	
+

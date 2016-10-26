@@ -1,0 +1,83 @@
+[[jaxb]]
+== RESTful web services and JAXB
+
+JAX-RS supports the automatic creation of XML and JSON via JAXB. For
+an introduction into XML please see
+http://www.vogella.com/tutorials/JavaXML/article.html[Java and XML - Tutorial]
+. For an introduction into JAXB please see
+http://www.vogella.com/tutorials/JAXB/article.html[JAXB]
+. You can continue this tutorial without reading these tutorials, but
+they contain more background information.
+
+[[jaxb_project]]
+=== Create necessary classes
+
+Create a new
+_Dynamic Web Project_
+called
+_com.vogella.jersey.jaxb_
+. Ensure you create
+`web.xml`
+deployment descriptor.
+
+=== Configure jersey usage
+
+See <<jerseyprojectsetup>> for the setup.
+
+[[jaxb_domainmodel]]
+=== Create project
+
+Create your domain class.
+
+[source,java]
+----
+include::res/jaxb/Todo.java[]
+----
+
+Create the following resource class. This class simply returns
+an
+instance of the
+`Todo`
+class.
+
+[source,java]
+----
+include::res/jaxb/TodoResource.java[]
+----
+
+Change
+`web.xml`
+to the following.
+
+[source,xml]
+----
+include::res/jaxb/web.xml[]
+----
+
+Run you web application in Eclipse and validate that you can
+access
+your service. Your application should be
+available under the
+following
+URL.
+
+[source,text]
+----
+include::res/links/todo1.txt[]
+----
+
+[[jaxb_client]]
+=== Create a client
+
+Create a new Java project
+_de.vogella.jersey.jaxb.client_
+and add the
+Jersey JARs to the project and the project build path.
+Create the
+following test class.
+
+[source,java]
+----
+include::res/jaxb/Test.java[]
+----
+

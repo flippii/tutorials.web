@@ -23,4 +23,5 @@ include 'HTML'
 include 'JavaScript'
 include 'JavaServerFaces'
 include 'JavaWebservice'
+include 'REST'
 
