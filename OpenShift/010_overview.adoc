@@ -6,3 +6,4 @@ With OpenShift you have a choice of offerings, including online, on-premise, and
 OpenShift has built-in support for Java, Node.js, Ruby, Python, PHP, Perl and extensible functionality to add other languages.
 
 It has powerful command line client tools and a web management console to launch and manage your applications.
+
