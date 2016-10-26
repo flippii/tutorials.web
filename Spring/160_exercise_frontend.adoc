@@ -33,7 +33,7 @@ include::res/js/index-first.html[]
 
 The _index.html_ file has to be located in _src/main/resources/templates_.
 
-image::img/index-html-location.png[]
+image::index-html-location.png[]
 
 === Creating a @Controller for the UI
 

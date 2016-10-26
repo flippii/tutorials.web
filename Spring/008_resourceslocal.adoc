@@ -1,9 +1,10 @@
 == Spring resources
 
-Spring on Github - https://github.com/spring-projects
+https://github.com/spring-projects[Spring on Github]
 
-Spring Guide - https://spring.io/guides
+https://spring.io/guides[Spring Guide]
 
-Spring Modules - https://docs.spring.io/spring/docs/current/spring-framework-reference/html/overview.html
+https://docs.spring.io/spring/docs/current/spring-framework-reference/html/overview.html[Spring Modules[
 
-Spring Data Rest with React JS - https://github.com/gregturn/draft-tut-react-and-spring-data-rest
+https://github.com/gregturn/draft-tut-react-and-spring-data-rest[Spring Data Rest with React JS]
+

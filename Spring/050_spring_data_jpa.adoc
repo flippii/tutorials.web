@@ -7,7 +7,7 @@ So rather than implementing data access methods, e.g., CRUD methods, for differe
 
 Provided interfaces for repositories are:
 
-image::img/spring-data-repositories.png[]
+image::spring-data-repositories.png[]
 
 .Table Spring Data JPA repositories
 [cols="45%, 55%"]

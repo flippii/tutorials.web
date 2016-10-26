@@ -10,11 +10,11 @@ NPM is shipped together with NodeJS, which can be downloaded here: https://nodej
 
 On this the proper operating system can be chosen.
 
-image::img/install-node.png[]
+image::install-node.png[]
 
 To check the installation type `npm -v` in the command line.
 
-image::img/npm-version-check-cmd-line.png[]
+image::npm-version-check-cmd-line.png[]
 
 === Generating a package.json file
 
@@ -25,13 +25,13 @@ Having NPM properly installed it helps creating such a _package.json_ file.
 
 Just go to the _/com.vogella.spring.data.rest/src/main/resources/static_ folder from previous exercises in the command line, type `npm init` and give proper input, for example what is shown below.
 
-image::img/npm-init-cmd-line.png[]
+image::npm-init-cmd-line.png[]
 
 === Adding dependencies to the project
 
 Dependencies can be added by using the `npm install {your-desired-js-package}` command, e.g., `npm install react --save`.
 
-image::img/npm-install-react.png[]
+image::npm-install-react.png[]
 
 TIP: `--save` adds the dependency to the `dependency` closure in the _package.json_ file.
 

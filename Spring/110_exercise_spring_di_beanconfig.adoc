@@ -51,3 +51,4 @@ Besides the console output of the Spring framework this should be printed to the
 ----
 Todo [id=0, summary=Spring DI]
 ----
+

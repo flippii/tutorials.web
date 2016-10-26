@@ -8,15 +8,15 @@ This exercise should show how to use Spring Data Rest with an H2 database.
 
 Create a spring starter project, via the menu:New[Spring Starter] menu entry.
 
-image::img/new-menu-spring-starter.png[] 
+image::new-menu-spring-starter.png[] 
 
 Use the following input for the wizard:
 
-image::img/new-spring-boot-project-wizard-data-rest.png[] 
+image::new-spring-boot-project-wizard-data-rest.png[] 
 
 Now press btn:[Next] and choose _Lombok_,  _JPA_, _H2_, _Thymeleaf_, _Rest Repositories_ and _HATEOAS_.
 
-image::img/spring-data-rest-boot-modules.png[] 
+image::spring-data-rest-boot-modules.png[] 
 
 Then press btn:[Finish] in order to create a Spring Data Rest project.
 

@@ -24,4 +24,5 @@ When the _app.js_ script has been changed, Webpack needs to be run again so that
 
 Run the Spring application and see the table of Todos.
 
-image::img/react-table.png[]
+image::react-table.png[]
+

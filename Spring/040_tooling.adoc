@@ -2,4 +2,5 @@
 
 Pivotal itself provides the Spring Tool Suite (STS), which can be downloaded here: https://spring.io/tools/sts/all 
 
-image::img/sts-download.png[]
+image::sts-download.png[]
+

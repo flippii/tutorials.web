@@ -9,17 +9,17 @@ In this exercise a minimal Spring example using dependency injection is created.
 
 Create a spring starter project, via the menu:New[Spring Starter] menu entry.
 
-image::img/new-menu-spring-starter.png[] 
+image::new-menu-spring-starter.png[] 
 
 Use the following input for the wizard:
 
-image::img/new-spring-boot-project-wizard.png[] 
+image::new-spring-boot-project-wizard.png[] 
 
 Just press btn:[Next] and btn:[Finish] in order to create a simple project.
 
 The project looks like the following:
 
-image::img/first-di-spring-project.png[] 
+image::first-di-spring-project.png[] 
 
 Add a new +ITodo.java+ interface, which should be available as bean in the Spring DI container.
 
@@ -66,3 +66,4 @@ Besides the console output of the Spring framework this should be printed to the
 ----
 Todo [id=-1, summary=]
 ----
+
