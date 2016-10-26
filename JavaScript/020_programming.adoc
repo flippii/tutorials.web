@@ -8,14 +8,14 @@ The following example demonstrates how to declare and use variables in JavaScrip
 
 [source, javascript]
 ----
-include::examples/javascript/variables.html[]
+include::res/javascript/variables.html[]
 ----
 
 You may notice that there are two ways of declaring variables.
 
 [source, javascript]
 ----
-include::examples/javascript/var.txt[]
+include::res/javascript/var.txt[]
 ----
 	
 Variables defined without the keyword "var" are global variables.
@@ -34,7 +34,7 @@ You can also iterate over it.
 
 [source, javascript]
 ----
-include::examples/javascript/array.txt[]
+include::res/javascript/array.txt[]
 ----
 
 [[javascript_functions]]
@@ -48,7 +48,7 @@ You can call a function directly, or use the apply method on the function.
 
 [source, javascript]
 ----
-include::examples/function/function1.html[]
+include::res/function/function1.html[]
 ----
 
 [[javascript_prototype]]
@@ -64,7 +64,7 @@ The following gives an example how to assign a function to an HTML button.
 
 [source, javascript]
 ----
-include::examples/function/function.html[]
+include::res/function/function.html[]
 ----
 
 [[javascript_events]]

@@ -4,6 +4,7 @@ The easiest way to "debug" JavaScript is to use the `alert()` method which allow
 This is the equivalent to `println` in other programming languages. 
 For example the following program give a popup with the currently value to the user.
 
-include::examples/alert/alert.html[]
+include::res/alert/alert.html[]
 
 You can also open the webpage in a Browser like Chrome and debug it where.
+

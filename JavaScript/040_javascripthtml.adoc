@@ -1,5 +1,5 @@
 [[javascripthtml]]
-== Appendix - JavaScript and HTML interaction
+== JavaScript and HTML interaction
 
 [[javascripthtml_dom]]
 === HTML DOM
@@ -17,5 +17,6 @@ The following example shows how to find HTML elements with a certain div class a
 
 [source, javascript]
 ----
-include::examples/modify/manipulateHTML.html[]
+include::res/modify/manipulateHTML.html[]
 ----
+

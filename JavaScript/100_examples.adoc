@@ -6,9 +6,10 @@
 
 The following shows how a URL for an link can be dynamically created via JavaScript. 
 This examples uses JavaScript to create a link for the website "digg".
+
 [source,html]
 ----
-include::examples/javascript/javascriptDOM.html[]
+include::res/javascript/javascriptDOM.html[]
 ----
 
 [[javascripthtml_meta]]
@@ -19,7 +20,7 @@ The following reads the content of the meta tag description from the webpage.
 
 [source,html]
 ----
-include::examples/javascript/meta.html[]
+include::res/javascript/meta.html[]
 ----
 
 [[javascripthtml_forms]]
@@ -30,10 +31,11 @@ In this case the URL is automatically determined and send to the service once su
 
 [source,html]
 ----
-include::examples/forms/feedback.js[]
+include::res/forms/feedback.js[]
 ----
 
 [source,html]
 ----
-include::examples/forms/feedback.html[]
+include::res/forms/feedback.html[]
 ----
+

@@ -4,20 +4,24 @@
 :experimental:
 :icons:
 :imagesdir: ./img
-
-Lars Vogel, (c) 2016 vogella GmbH
-Version 1.1, 01.06.2016
+Lars Vogel, (c) 2008, 2016 vogella GmbH
+Version 1.2, 26.10.2016
+:docinfodir: ../
+:vgwort: JavaScript
 
 [abstract]
 The article contains a introduction to JavaScript development with the Eclipse IDE.
-				
+
+include::../web/advertisement/afterTableOfContent.adoc[]
 include::010_overview.adoc[]
 include::012_debugging.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
 include::020_programming.adoc[]
 include::040_javascripthtml.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
 include::100_examples.adoc[]
 include::200_typescript.adoc[]
+include::../support.adoc[]
 include::008_resourceslocal.adoc[]
-
-
+include::../copyright.adoc[]
 

@@ -2,3 +2,4 @@
 == TypeScript support in the Eclipse IDE
 
 Angelo Zerr provides support for TypeScript. See https://github.com/angelozerr/typescript.java for details.
+

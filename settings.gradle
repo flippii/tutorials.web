@@ -20,4 +20,5 @@ include 'Grails'
 include 'GWT'
 include 'GWTModules'
 include 'HTML'
+include 'JavaScript'
 

@@ -41,7 +41,7 @@ In this example the JavaScript is embedded into the HTML page.
 
 [source,html]
 ----
-include::examples/javascript/helloworld.html[]
+include::res/javascript/helloworld.html[]
 ----
 
 Afterwards open it via its context menu:Open View[Web Browser].
@@ -58,7 +58,7 @@ For example create the file 'javascriptinclude.html' with the following content.
 
 [source,html]
 ----
-include::examples/javascript/javascriptinclude.html[]
+include::res/javascript/javascriptinclude.html[]
 ----
 
 Create the file 'myfirstjsfile.js' in the same directory as the HTML page.
@@ -70,8 +70,9 @@ Simple write the code directly into the file.
 
 [source,html]
 ----
-include::examples/javascript/myfirstjsfile.js[]
+include::res/javascript/myfirstjsfile.js[]
 ----
 
 Open the HTML page in a browser. 
 The script should get executed and you should see the message.
+
