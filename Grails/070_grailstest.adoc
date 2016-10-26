@@ -1,0 +1,15 @@
+[[grailstest]]
+== Testing your application
+
+The command `create-domain-class` automatically creates a
+test for the domain-class. Go to your directory
+`test/integration`
+and open the file `FeedbackTests.groovy`.
+
+You can run your test via the following command.
+
+[source,bourne]
+----
+include::res/test/testGroovy.txt[]
+----
+

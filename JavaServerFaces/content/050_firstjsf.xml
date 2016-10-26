@@ -89,7 +89,7 @@ image::firstjsf40.gif[]
 			been
 			created.
 		
-			<tip> To add the JSF settings to an existing dynamic web project,
+			TIP:  To add the JSF settings to an existing dynamic web project,
 				right-click on your project, select Project Properties -> Project
 				Facets and add then JSF facet to your project.
 		
@@ -157,7 +157,7 @@ include::res/firstjsf/Convertor.jsp[]
 ----
 		
 		
-			<tip>
+			TIP: 
 				All JSF tag must be always be enclosed in a <![CDATA[<f:view> ]]>
 				tag.
 			

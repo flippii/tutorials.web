@@ -57,7 +57,7 @@ include::res/todojsf/Todo.jsp[]
 ----
 		
 		
-			<tip> Using the Facet tag you can create a header for a dataTable
+			TIP:  Using the Facet tag you can create a header for a dataTable
 				component.
 		
 		 You have added a actionListener. This can call a method which

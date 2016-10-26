@@ -20,7 +20,7 @@ include::res/secondjsf/User.java[]
 ----
 		
 		
-			<tip> Please note that we are hard-coding that only user tester with
+			TIP:  Please note that we are hard-coding that only user tester with
 				password tester can login.
 			
 		
@@ -32,7 +32,7 @@ include::res/secondjsf/Card.java[]
 ----
 		
 		
-			<tip> The class Card contains currently some controller code. The
+			TIP:  The class Card contains currently some controller code. The
 				next chapter will demonstrate how to keep your model code clean and
 				how to use controllers directly.
 			
@@ -206,7 +206,7 @@ image::navigationrule30.gif[]
 image::navigationrule40.gif[]
 		
 		
-			<tip> The user bean return the String success. In the navigation rule
+			TIP:  The user bean return the String success. In the navigation rule
 				you now defined that if we receive "success" then we should be going
 				to the next page.
 			
@@ -224,7 +224,7 @@ image::navigationrule50.gif[]
 			mouse-click- >run as -> run on server.
 		
 		
-			<tip> Remember that we are hard-coding that only user "tester" with
+			TIP:  Remember that we are hard-coding that only user "tester" with
 				password "tester" can login. Try another user this should not work.
 			
 		

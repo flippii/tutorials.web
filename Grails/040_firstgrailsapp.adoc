@@ -1,0 +1,79 @@
+[[firstgrails]]
+== Exercise: Create Grails web application
+
+[[firstgrails_target]]
+=== Target
+
+We want to develop a guestbook application, in this exercise see
+start with the intial template.
+
+[[firstgrails_create]]
+=== Create your application
+
+Let's create the application with the name
+`com.vogella.grails.guestbook`. 
+#The name of the application is used for the URL on which
+the
+application will later run and the WAR file which will be later
+created.
+
+Create a new directory that will
+contain your Grails
+application.
+Open a
+command shell, switch to this
+new
+directory and
+type in the
+following
+command.
+
+[source,bourne]
+----
+include::res/firstgrails/create-app.txt[]
+----
+
+After a little while the command line tells you that the
+application was
+generated.
+
+This command creates the directory structure and the base
+configuration of your new web application.
+
+image::firstgrailsapplication10.png[]
+
+This created already a full web application.
+
+[[firstgrails_run]]
+=== Run your application
+
+The created application can already run. In the shell switch
+into your
+directory
+`com.vogella.grails.guestbook`.
+You can then start
+your
+application with the following
+command.
+
+[source,bourne]
+----
+include::res/firstgrails/grailsrun.txt[]
+----
+
+This should start
+the Grails internal web container and you
+should
+receive the message
+"Server running. Browse to
+http://localhost:8080/com.vogella.grails.guestbook".
+Open a browser
+and
+open the URL
+
+http://localhost:8080/com.vogella.grails.guestbook
+
+image::firstgrailsapplication20.png[]
+
+Congratulations to your first running Grails application!
+

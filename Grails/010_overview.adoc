@@ -1,0 +1,73 @@
+[[grails]]
+== Grails
+[[grailsoverview]]
+=== What is Grails?
+		
+_Grails_ is a web framework based on
+Groovy
+and Java which can be
+deployed into
+existing Java web servers, e.g., Tomcat
+or
+Jetty.
+		
+Grails allows to quickly create web applications; its
+scaffolding
+capabilities let you create a new
+project within few
+minutes. Grails
+is
+based on the
+_convention over configuration_
+idea
+which allows
+the application to auto-wire
+itself based on naming
+schemes (instead
+of
+using
+configuration files, e.g, XML files).
+		
+Grails uses JavaEE as the architectural basis and Spring for
+structuring the application via dependency injection.
+		
+The Grails framework allows instance development without
+requiring any configuration.
+Just download Grails and you are ready to
+start. Grails accomplish this
+by automatically providing the Tomcat
+web container
+and the HSQLDB database during development. If you
+deploy
+you Grails application later, you can use another
+web container
+or
+database.
+		
+Grails is plug-in based and currently uses its own build system
+(Gant) but plans to migrated to Gradle. The Grails homepage provides
+several pre-defined plugins
+which extend the Grails framework.
+		
+During the start of a new development with Grails you mainly
+use
+the command line to generated new user interfaces.
+
+[[gormoverview]]
+=== Object relationship mapping (ORM) with GORM
+		
+Grails uses
+_GORM_
+(Grails Object Relational Mapping) for the
+persistence of the domain
+model. GORM is based on
+Hibernate. You can
+test with the
+HSQLDB and run
+in production
+against
+another database
+simply by
+changing the
+configuration file (`DataSource.groovy`).
+

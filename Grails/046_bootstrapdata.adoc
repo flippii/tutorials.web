@@ -1,0 +1,98 @@
+[[bootstrapandpersistsdata]]
+== Exercise: Bootstrap and persists data
+
+[[bootstrapandpersistsdata_target]]
+=== Target
+
+In this exercise you create example data and store the data between
+application restarts. This exercise builds on
+<<guestbookapplication>>.
+
+[[firstgrails_scaffolding]]
+=== Bootstrapping example data
+
+Grails allows to simulate example data (this is called
+bootstrapping).
+To create example data, you can use the class
+`BootStrap.groovy`
+from
+the
+directory
+`./grails-app/conf`
+with some data.
+This class is
+automatically executed whenever the
+server is started
+and can be used
+to create some example data for
+testing.
+
+Change the code to the following.
+
+[source,java]
+----
+include::res/firstgrails/Bootstrap.java[]
+----
+
+The grails server should pickup the change automatically. Wait
+a
+while (or re-start the server to be sure) and check if you get an
+error message.
+
+[[firstgrailsapp_store]]
+=== Store the data
+
+By default, the data maintained in the web application is not
+stored. If your entries should be saved to the database after server
+shutdown, use the following command to start it.
+
+[source,bourne]
+----
+include::res/firstgrails/prod-run-app.txt[]
+----
+
+TIP: Remove the bootstrapped entries as you will otherwise get errors as the system tries to create the same entries again.
+
+[[firstgrails_controllerview_scaffolding]]
+=== Static scaffolding
+
+To switch from dynamic scaffolding to static scaffolding, you
+need to have views. Grails can generate them for you.
+
+Type in the following to create a scaffold for the controller
+and the view.
+
+[source,bourne]
+----
+include::res/firstscripts/generate-views.txt[]
+----
+
+TIP: If you receive the error "Error starting Sun's native2ascii", then make sure that your environment variable `JAVA_HOME` points to the JDK and not JRE. 
+The JDK is required for this step.
+
+Remove
+`def scaffold = true`
+in your controller to use your
+generated views.
+
+This creates the GSP (Groovy Server pages) for your actions in
+the
+directroy
+`grails-app\views`.
+GSP are standard HTML code with
+Groovy mixed in.
+Have a look at the
+coding. The
+controller
+defines
+several actions
+(list,
+show, delete, edit).
+For all
+these
+actions
+corresponding views
+have been
+created under
+`grails-app/views`.
+

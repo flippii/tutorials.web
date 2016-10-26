@@ -7,7 +7,7 @@
 		logic. This will allow you to create a domain model without
 		application logic.
 	
-		<tip> In general it is considered as a good design practice to keep
+		TIP:  In general it is considered as a good design practice to keep
 			the model independently from the application logic.
 	
 	This example will also demonstrate the usage of dependency

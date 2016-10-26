@@ -1,0 +1,11 @@
+[[grailscreatewar]]
+== Create a WAR archive
+
+Type the following command to create a war archive. This archive
+can be deployed to a web container, for example, Tomcat.
+
+[source,bourne]
+----
+include::res/firstgrails/create-war.txt[]
+----
+

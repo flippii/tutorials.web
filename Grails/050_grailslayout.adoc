@@ -1,0 +1,33 @@
+[[grailslayout]]
+== Change the layout of your Grails application
+
+[[grailslayout_s2a]]
+=== Changing the generated views
+
+If you are not satisfied with the order of the fields, you can
+change the views directly. For example in the following view
+I did change the order of the fields so that name is
+displayed before comment.
+
+[source,gsp]
+----
+include::res/view/create.gsp[]
+----
+
+[[grailslayout_s2b]]
+=== Using CSS
+
+Grails created the default CSS style sheets under the
+directory `web-app/css/main.css`
+
+
+You can directly change the main.css to make your
+application look different. For example if the feedback
+field should be larger then the name field add then
+following to main.css.
+
+[source,css]
+----
+include::res/css/main.css[]
+----
+

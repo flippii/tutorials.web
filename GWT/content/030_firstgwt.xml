@@ -20,7 +20,7 @@ image::gwt10.gif[]
 
 
 		
-			<tip>
+			TIP: 
 				Unfortunately the Google Plugin does not allow to create a new Web
 				Application Project without creating template files. The template
 				files are nice for the first try but annoying if you want to start
@@ -70,7 +70,7 @@ include::res/firstgwt/HelloGwt.java[]
 ----
 		
 		
-			<tip> Please note that the HTML files point to the generated
+			TIP:  Please note that the HTML files point to the generated
 				JavaScript file in the script tag. If you are using a different project
 				name, you need to adjust the path. 
 		
@@ -104,10 +104,10 @@ include::res/firstgwt/HelloGwt.java[]
 		
 
 		
-			<tip> The css file is referred to by the HTML page.
+			TIP:  The css file is referred to by the HTML page.
 		
 		
-			<tip>
+			TIP: 
 				You can assign a certain style to your GWT UI elements by using the
 				"setStyleName"-Method as shown below.
 				<programlisting language="xml">

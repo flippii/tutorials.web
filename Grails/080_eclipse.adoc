@@ -1,0 +1,35 @@
+[[grailseclipse]]
+== Using Eclipse for Grails development
+
+The following requires that Eclipse is installed with the Groovy plug-in. 
+Please see http://www.vogella.com/tutorials/Groovy/article.html[Groovy Eclipse Plugin] for more information.
+
+After running `grails create-app`
+you may notice the `.project`
+and `.classpath` file.
+These Eclipse related files are
+created
+automatically
+and allow you to import the project into Eclipse.
+Import
+your project via
+menu:File[Import > General > Existing Project into Workspace]
+
+image::eclipse10.gif[]
+
+The environment variable 
+`GRAILS_HOME` may not be
+set in Eclipse.
+Select your project, right-click on
+it and select _properties_.
+Select the Java Build Path and here the tab
+btn:[Libraries]. Press btn:[Add
+Variable] and then btn:[Configure Variables]. Press
+btn:[New] and add
+`GRAILS_HOME`.
+
+TIP: At least for me the configuration dialog showed an error. 
+I did ignore this error and the re-compiled project did not show errors.
+
+A tighter integration of Grails is achieved by the http://www.grails.org/STS+Integration[SpringSource Tool Suite (STS)].
+

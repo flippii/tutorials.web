@@ -101,7 +101,7 @@ http://www.vogella.com/tutorials/ApacheMyFaces/article.html[Apache Myfaces Trini
 		 Method binding can be used to bind a JSF component, e.g. a
 			button to an method of a Java class.
 		
-			<tip> Expression Language statements either start with "${" or with
+			TIP:  Expression Language statements either start with "${" or with
 				"#{"
 				and end with "}". JSP EL expressions are using the ${...}
 				syntax.

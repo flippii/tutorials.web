@@ -1,38 +1,18 @@
-=  - Tutorial
+= Grails Development - Tutorial
 :linkcss:
 :sectnums:                                                          
 :experimental:
 :icons:
 :imagesdir: ./img
-Lars Vogel, (c) 2009, 2016 vogella GmbH
-Version 0.3, 29.08.2016
+Lars Vogel, (c) 2008, 2016 vogella GmbH
+Version 1.2, 29.10.2016
 :docinfodir: ../
-:vgwort: XXX
+:vgwort: Grails
 
 [abstract]
-
-=== Grails Development - Tutorial
-		<author>
-			<firstname>Lars</firstname>
-			<surname>Vogel</surname>
-		</author>
-		<copyright>
-			<year>2008 - 2014</year>
-			<holder>vogella GmbH</holder>
-		</copyright>
-		<pubdate>08.12.2014</pubdate>
-		<releaseinfo>
-			Version 1.1
-		</releaseinfo>
-		
-[abstract]
-	=== Grails Webapplication
-
-			 This article explains how to build a Grails application.
-				This
-				article is based on Java 1.6 and Grails 2.4.4.
-			
-  
+Grails Webapplication.
+This article explains how to build a Grails application.
+This article is based on Java 1.6 and Grails 2.4.4.
   
 include::../web/advertisement/afterTableOfContent.adoc[]
 include::010_overview.adoc[]
@@ -48,6 +28,4 @@ include::080_eclipse.adoc[]
 include::../support.adoc[]
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]
-include::006_resources.adoc[]
-
 

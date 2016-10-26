@@ -1,0 +1,14 @@
+[[groovy]]
+== Groovy
+	
+Groovy is (almost) a superset of Java, e.g., most valid Java
+constructs
+are also valid Groovy constructs. Groovy has several
+advanced features
+in addition to the standard Java features, e.g.,
+closures, native
+support for lists and maps, a shorter syntax and much
+more.
+	
+See http://www.vogella.com/tutorials/Groovy/article.html[Groovy tutorial] for an introduction into Groovy.
+	

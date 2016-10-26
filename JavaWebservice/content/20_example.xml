@@ -13,7 +13,7 @@ include::res/WiseQuoteServer.java[]
 		
 		
 			If you start your main program the service should be up and running.
-			<tip>Try to access http://localhost:9191/wisequotes?wsdl via a
+			TIP: Try to access http://localhost:9191/wisequotes?wsdl via a
 				browser. You should see the WSDL of your server.
 		
 
@@ -22,7 +22,7 @@ include::res/WiseQuoteServer.java[]
 			empty directory and call the wsimport command line tool which is part
 			of the JDK.
 		
-			<tip> the JDK/bin directory needs to be in your path to be able to
+			TIP:  the JDK/bin directory needs to be in your path to be able to
 				call wsimport.
 		
 		
@@ -50,7 +50,7 @@ image::webservice10.gif[]
 			The code demonstrates how to get the connection directly and how to
 			get the connection with specifying the URL.
 		
-			<tip> Specifying the URL is useful in case you what to use a
+			TIP:  Specifying the URL is useful in case you what to use a
 				TCP-monitor to trace the TCP data. In this case you would direct the
 				client to the TCP monitor which would re-direct the TCP data to the
 				server and vice versa.
