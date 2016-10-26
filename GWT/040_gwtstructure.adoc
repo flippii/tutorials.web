@@ -1,0 +1,36 @@
+[[gwtstructure]]
+== GWT Project Structure
+
+[[gwtstructure_overview]]
+=== Overview
+
+If you investigate your example from the last chapter you will
+see the following project structure.
+
+image::gwtstructure10.gif[]
+
+An GWT application consists of the following parts
+
+* Module descriptor: XML file which specifies mainly the entry point of the application. 
+It has the name of your module plus .gwt.xml
+
+* war: Under the folder "war" you find the HTML page which contains the GWT application. 
+Additional public resources, e.g. other HTML pages, images or css files should be stored here. 
+Here you find also the standard WEB-INF folder.
+
+* Source code: under your default package you find a package "client". 
+All Java code which is compiled for the client (Webbrowser) must be stored under client. 
+For the service you would use the package "server".
+
+[[gwtstructure_moduledescriptor]]
+=== Module Descriptor
+
+The main purpose of the Module descriptor in *.gwt.xml file is
+to define your entry-point. It also defines standard GWT css
+styles which you are using.
+
+[source,xml]
+----
+include::res/gwtstructure/De_vogella_gwt_helloworld.gwt.xml[]
+----
+

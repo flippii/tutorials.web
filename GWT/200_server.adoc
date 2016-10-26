@@ -1,0 +1,201 @@
+[[server]]
+== Client and Server Communication (RPC)
+
+[[server_overview]]
+=== Overview
+
+GWT provides its own remote procedure calls (RPC's) which allow
+the GWT client to call server-side methods. The implementation of GWT
+RPC is based on the servlet technology. GWT allows Java objects to be
+sent directly between the client and
+the server; which are
+automatically serialized by the framework. With
+GWT RPC the
+communication is
+almost
+transparent for
+the
+GWT client and
+always
+asynchronous so that the client does not block during the
+communication.  
+The server-side servlet is
+usually
+referred
+to as a "service" and
+the remote procedure
+call is
+referred to
+as "invoking a
+service." These
+object can then be
+used on
+the
+client
+(UI)
+side. 
+
+To create a GWT service you need to define the following:
+
+* An interface which extends RemoteService that lists the service methods.     
+* An implementation - implements the interface and extends the RemoteServiceServlet. 
+* Define an asynchronous interface to your service which will be used in the client code     
+
+[[server_project]]
+=== Create project and domain model
+
+Create a GWT project
+"de.vogella.gwt.helloserver" with the
+package
+"de.vogella.gwt.helloserver".
+Create
+the following class which represents the data model . This class
+implements
+"Serializable"
+because GWT requires that all classes that
+are involved
+in a server
+and client communication have to
+implement the
+interface
+"Serializable".
+
+[source,java]
+----
+include::res/server/MyUser.java[]
+----
+
+[[server_interfaces]]
+=== Interface
+
+The client server communication is based on an interface which
+defines the possible communication methods.
+Create the following interface. By extending the RemoteService
+interface the GWT compiler will understand that this interface
+defines an RPC interface. The annotation defines the URL for the
+service. This must match the entry we will later do in `web.xml`.
+
+[source,java]
+----
+include::res/server/MyUserService.java[]
+----
+
+TIP: This interface needs to be available on the client side,
+therefore it must be placed in the client package.
+
+GWT uses asynchronous communication therefore you also need to
+create the asynchronous version of this interface. The name of this
+interface must be the interface name concatenated with "Async".
+
+[source,java]
+----
+include::res/server/MyUserServiceAsync.java[]
+----
+
+TIP: The implementation of this asynchronous interface will be
+automatically
+created by the GWT compiler.
+
+[[server_service]]
+=== Create the server
+
+For the server implementation create a package "de.vogella.gwt.helloserver.server". 
+Create the following class which extends RemoteServiceServlet.
+
+[source,java]
+----
+include::res/server/MyUserServiceImpl.java[]
+----
+
+[[server_servlet]]
+=== Define servlet in web.xml
+
+To make GWT aware of this service change the web.xml file in
+war/WEB-INF to the following.:
+
+[source,xml]
+----
+include::res/server/web.xml[]
+----
+
+[[server_table]]
+=== UI component - Table
+
+Create the following two classes which will be used to display
+the data in a table. The implementation of "MyTable" is based on
+FlexTable. FlexTable allows the building of tables in GWT.
+
+[source,java]
+----
+include::res/server/table/DataSource.java[]
+----
+
+[source,java]
+----
+include::res/server/table/MyTable.java[]
+----
+
+[[server_callback]]
+=== Callback
+
+To receive a callback a class needs to be implemented which can
+then react on a failure or success in the communication. The
+interface AsyncCallback defines these two methods: "OnSuccess" and
+"OnFailure".
+
+TIP:  Keep in mind that the server communication is asynchronous. If
+you call your server your GWT application will continue and at some
+undefined point in time it will receive the data from the server.
+Make sure that you do not assume in your code that the call to the
+server is finished.
+
+Create the following class.
+
+[source,java]
+----
+include::res/server/MyUserCallback.java[]
+----
+
+This will simple print the received results to the command line.
+
+[[server_entrypoint]]
+=== Create your entry point
+
+Create the following class.
+
+[source,java]
+----
+include::res/server/HelloServer.java[]
+----
+
+Define your entry point in "De_vogella_gwt_helloserver.gwt.xml".
+
+[source,xml]
+----
+include::res/server/De_vogella_gwt_helloserver.gwt.xml[]
+----
+
+Change your "De_vogella_gwt_helloserver.html" page to the following.
+
+[source,html]
+----
+include::res/server/De_vogella_gwt_helloserver.html[]
+----
+
+Also change the "De_vogella_gwt_helloserver.css" to the following to make the table header look nicer. 
+
+[source,css]
+----
+include::res/server/De_vogella_gwt_helloserver.css[]
+----
+
+[[server_run]]
+=== Run
+
+Run your application. 
+If you click the button then a list of users on click should get loaded.
+
+image::server_result.gif[]
+
+The eclipse console shows the values of the users send to your Google Web application via the service.
+

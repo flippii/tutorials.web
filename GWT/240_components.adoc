@@ -1,0 +1,37 @@
+[[components]]
+== Build your own components
+
+GWT allows you to build your own components based on other
+widgets. To do this you extends
+com.google.gwt.user.client.ui.Composite. These customer components can
+be used as normal GWT components.
+Building components is simple, you just offer the API your
+component should publish and then you call with each widget the
+initWidget() method.
+For example you can create the following component which is a
+simple header label (I assume you can easily image a more complex
+example).
+
+[source,java]
+----
+include::res/component/Header.java[]
+----
+
+Adjust then the GWT module to use this component.
+
+[source,java]
+----
+include::res/component/HelloGwt.java[]
+----
+
+Adjust the css to make the title look nicer.
+
+[source,java]
+----
+include::res/component/HelloGwt.java[]
+----
+
+The result should look like the following.
+
+image::component10.gif[]
+

@@ -1,0 +1,11 @@
+[[debugging]]
+== Debugging GWT applications
+
+Debugging a GWT application in development mode is easy. In this case
+you can just debug the Java code. Put a breakpoint into your code
+and start the debugger via selecting your project, right-click
+-> debug as -> Web Application.
+
+You can then use standard Eclipse debugging capabilities. 
+Please see http://www.vogella.com/tutorials/EclipseDebugging/article.html[Eclipse Debugging] for details.
+

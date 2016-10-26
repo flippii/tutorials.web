@@ -1,0 +1,5 @@
+[[download]]
+== Download
+
+./download/graphicalcounter.zip[The graphics for the graphical counter example]
+

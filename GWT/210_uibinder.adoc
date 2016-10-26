@@ -1,0 +1,60 @@
+[[uibinder]]
+== UIBinder
+
+UIBinder allows to design GWT UI's declarative via XML. 
+Create a new GWT project "de.vogella.gwt.uibinder" with the package "de.vogella.gwt.uibinder". 
+To use UIBinder you also need to inherit from "com.google.gwt.uibinder.UiBinder" in your "gwt.xml" file.
+
+[source,xml]
+----
+include::res/uibinder/De_vogella_gwt_uibinder.gwt.xml[]
+----
+
+In your client package create the file "HelloWidgetWorld.ui.xml".
+
+[source,xml]
+----
+include::res/uibinder/HelloWidgetWorld.ui.xml[]
+----
+
+Create the following class which uses the xml file for building actions. 
+By convention the name of the xml must equal to the class name + "ui.xml". 
+
+[source,java]
+----
+include::res/uibinder/HelloWidgetWorld.java[]
+----
+
+Create also in the client package the file "MyHTMLTable.ui.xml".
+This creates a HTML Panel which allow us to layout the UI controls nicely. 
+
+[source,xml]
+----
+include::res/uibinder/MyHTMLTable.ui.xml[]
+----
+
+Create the corresponding "MyHTMLTable.java" file. 
+
+[source,java]
+----
+include::res/uibinder/MyHTMLTable.java[]
+----
+
+In your entry point you can now load the class as an composite.
+
+[source,java]
+----
+include::res/uibinder/De_vogella_gwt_uibinder.java[]
+----
+
+Change the `web.xml` to the following.
+
+[source,xml]
+----
+include::res/uibinder/web.xml[]
+----
+
+The result should look like the following. 
+
+image::uibinder10.gif[]
+

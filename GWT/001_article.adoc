@@ -1,41 +1,19 @@
-=  - Tutorial
+= GWT - Tutorial
 :linkcss:
 :sectnums:                                                          
 :experimental:
 :icons:
 :imagesdir: ./img
-Lars Vogel, (c) 2009, 2016 vogella GmbH
-Version 0.3, 06.07.2016
+Lars Vogel, (c) 2008, 2016 vogella GmbH
+Version 2.4, 26.10.2016
 :docinfodir: ../
-:vgwort: XXX
-
-=== GWT - Tutorial
-		<author>
-			<firstname>Lars</firstname>
-			<surname>Vogel</surname>
-		</author>
-		<copyright>
-			<year>2008 - 2011</year>
-			<holder>vogella GmbH</holder>
-		</copyright>
-		<pubdate>30.09.2011</pubdate>
-		<releaseinfo>
-			Version 2.3
-		</releaseinfo>
-
-		
+:vgwort: GWT
 
 [abstract]
-	=== GWT Tutorial
-			 This tutorial describes how to develop a Web application with
-				GWT and
-				the Google Plugin for Eclipse. This article assumes basic
-				Eclipse and Java
-				knowledge. The tutorial
-				was developed
-				using JDK 1.6,
-				GWT 2.3 and Eclipse 3.7.
-  
+GWT Tutorial.
+This tutorial describes how to develop a Web application with GWT and the Google Plugin for Eclipse. 
+This article assumes basic Eclipse and Java knowledge. 
+The tutorial was developed using JDK 1.6, GWT 2.3 and Eclipse 3.7.
   
 include::../web/advertisement/afterTableOfContent.adoc[]
 include::005_overview.adoc[]
@@ -50,11 +28,7 @@ include::210_uibinder.adoc[]
 include::../web/advertisement/inBetween03.adoc[]
 include::220_modules.adoc[]
 include::240_components.adoc[]
-
 include::../support.adoc[]
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]	
-
-
-
 

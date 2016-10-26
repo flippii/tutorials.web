@@ -17,4 +17,5 @@ include 'GoogleAppEngineJava'
 include 'GoogleCloudMessaging'
 include 'GoogleTechnologies'
 include 'Grails'
+include 'GWT'
 

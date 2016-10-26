@@ -1,0 +1,39 @@
+[[firstgwt]]
+== Create your first GWT project
+
+[[firstgwt_project]]
+=== Create project
+
+You can also create the GWT projects directory from the command
+line. Open a command shell (menu:Start[Run > cmd] on windows),switch to
+the GWT installation directory (cd c:\GWT) and run the following two
+commands.
+
+[source,text]
+----
+include::res/command/projectCreator[]
+----
+
+The final argument will be the full qualified class which will
+run the application.
+
+[source,text]
+----
+include::res/command/applicationCreator[]
+----
+
+[[firstgwt_import]]
+=== Import project
+
+The created files can be imported to Eclipse. Also a example
+runtime configuration for Eclipse is created.
+Select menu:File[Import > General > Existing Project into Workspace].
+
+image::helloworld10.gif[]
+
+[[firstgwt_run]]
+=== Run project
+
+Your project should have a launch configuration included.
+Select HelloGwt.launch, right-click on it and select Run as->HelloGwt
+

@@ -1,0 +1,72 @@
+[[overview]]
+== Overview
+[[overview_gwt]]
+=== Google Web Toolkit
+
+The Google Web Toolkit (GWT) is a toolkit to develop Ajax web
+application with Java. The programmer writes Java code and this code is
+translated into
+HTML and Javascript via the GWT compiler. 
+
+The
+compiler creates browser
+specific HTML and JavaScript to
+support
+all the
+major browsers
+correctly. GWT
+supports a standard
+set of UI widgets, has build in
+support for the browser back button
+and a JUnit based
+test framework.
+
+GWT provides two modes
+
+* Development Mode: allows to debug the Java code of your application directly via the standard Java debugger.
+* Web mode: the application is translated into HTML and Javascript code and can be deployed to a web server.
+
+[[overview_module]]
+=== Modules, Entry Points and HTML pages
+
+GWT applications are described as
+modules. A module
+"modulename" is
+described by a configuration file
+"modulename.gwt.xml". Each module
+can define one or more
+`Entry point`
+classes.
+An entry point is the starting point for a GWT
+application,
+similar to the main method in a standard Java program. 
+A Java class which is an entry point must implement the
+interface
+"com.google.gwt.core.client.EntryPoint" which defines the
+method
+onModuleLoad().
+
+The module is connected to a HTML page, which is called "host
+page". The code for a GWT web
+application executes within
+this HTML
+document.
+
+The HTML page can
+define "div" containers to which
+the GWT
+application
+can
+assign UI
+components or the GWT UI
+components are simply assigned to the 
+body tag of the HTML page.
+
+[[overview_css]]
+=== Using CSS
+
+The look and feel of a GWT application can be customized via
+CSS files. Each widget in GWT can be given a HTML "div" container and can therefore be individually styled by CSS. 
+You use the Java
+method setStyle(String s) for this.
+
