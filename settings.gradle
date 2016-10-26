@@ -21,4 +21,5 @@ include 'GWT'
 include 'GWTModules'
 include 'HTML'
 include 'JavaScript'
+include 'JavaServerFaces'
 

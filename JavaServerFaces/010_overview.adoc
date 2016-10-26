@@ -1,0 +1,123 @@
+[[jsf]]
+== JavaServer Faces - JSF
+
+[[jsf_overview]]
+=== What is JSF
+
+JavaServer Faces (JSF) is a UI component based Java Web
+application
+framework. JSF is serverbased, e.g. the JSF UI components
+and their
+state
+are represented on the server with a defined life cycle
+of
+the UI components. JSF  is part of
+the Java EE standard.
+
+A JSF application run in a
+standard web
+container, for example
+http://www.vogella.com/tutorials/ApacheTomcat/article.html[Tomcat] or
+http://www.vogella.com/tutorials/Jetty/article.html[Jetty].
+
+This articles provides an introduction to JSF using only standard JSF
+features.
+For the usage of special Apache Trinidad features please see
+http://www.vogella.com/tutorials/ApacheMyFaces/article.html[Apache Myfaces Trinidad with Eclipse - Tutorial].
+
+[[jsf_application]]
+=== A JSF application
+
+A JSF application consists of web pages with JSF UI components.
+A JSF application requires also some configuration files
+("faces-config.xml" and
+`web.xml`). 
+
+The faces-config.xml defines:
+
+* Managed Bean - the data elements of the JSF application (managed beans and backing beans) represent a Java class which will be created dynamically during runtime of the JSF application. 
+It can be defined for which scope the bean is valid (Session, Request, Application or none)
+
+* the navigation between web pages    
+
+* data validators - Used to check the validity of UI input
+
+* data converters -Used to translate between UI and model
+
+Managed beans are
+simple Java objects (POJO's) which are
+declared
+in
+"faces-config.xml"
+and can be used in an JSF application.
+For example
+you can define a
+Java object "Person". Once you define the
+object in
+faces-config.xml
+you can use the attributes of Person in your
+JSF UI
+components, e.g.
+by binding the value "firstName" of this object
+to an
+JSF input
+field.
+
+JSF uses the Unified Expression Language (EL) to bind UI
+components to object attributes or methods. 
+
+[[jsf_valuebinding]]
+=== Value and Method Binding
+
+In JSF you can access the values of a managed bean via
+value
+binding. For value binding the universal Expression
+Language (EL) is
+used (to access bean and / or methods). In JSF you
+do not need to
+specify the get() or set() method but just the
+variable name.
+Method binding can be used to bind a JSF component, e.g. a
+button to an method of a Java class.
+
+TIP:  Expression Language statements either start with "${" or with "#{" and end with "}". 
+JSP EL expressions are using the ${...} syntax.
+These EL expressions are immediately evaluated. 
+JSF EL expressions are of the type #{...}. 
+These are only evaluated when needed (and otherwise stored as strings).
+
+[[jsf_prerequisites]]
+=== Prerequisites to use JSF
+
+To use JSF you need:
+
+* JSF Implementation (in the form of the JSF jars)
+* The JSTL tags library
+* A Java runtime environment
+* A web-container to use JSF in (for example Tomcat)
+
+[[jsf_mainfeatures]]
+=== JSF Main features
+
+JSP has the following main features:
+
+* JSP is based on the Model-View-Controller concept
+* JSP has a stateful UI component model, e.g. each component is aware of its data
+* JSF separates the functionality of a component from the display of the component. 
+The renderer is responsible of displaying the component for a certain client. 
+This renderer can get exchanged. 
+The standard renderer for JSF components is the HTML renderer.
+* JSP support listeners on UI components
+* JSP support data validation, data binding and data conversion between the UI and the model
+
+[[jsf_jsp]]
+=== JSP and JSF
+
+In this tutorial the JSF application will be build based on
+JavaServer Pages (JSP's). JSTL tags are used to include JSF UI
+components into the
+JSP. This is standard in JSF 1.2. The JSF 2.0
+version is
+using
+Facelets. 
+
