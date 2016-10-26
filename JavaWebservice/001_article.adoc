@@ -1,0 +1,22 @@
+= Webservices with Java 1.6 - Tutorial
+:linkcss:
+:sectnums:                                                          
+:experimental:
+:icons:
+:imagesdir: ./img
+Lars Vogel, (c) 2008, 2016 vogella GmbH
+Version 0.2, 26.10.2016
+:docinfodir: ../
+:vgwort: JavaWebservice
+
+[abstract]
+This article describes how to create a simple SOAP webservice with standard Java 1.6.
+  
+include::../web/advertisement/afterTableOfContent.adoc[]
+include::10_overview.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
+include::20_example.adoc[]
+include::../support.adoc[]
+include::008_resourceslocal.adoc[]
+include::../copyright.adoc[]
+

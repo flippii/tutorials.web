@@ -7,7 +7,7 @@
 Lars Vogel, (c) 2009, 2016 vogella GmbH
 Version 0.3, 29.08.2016
 :docinfodir: ../
-:vgwort: XXX
+:vgwort: JavaWebCrawler
 
 [abstract]
 
