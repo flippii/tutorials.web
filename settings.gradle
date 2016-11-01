@@ -25,4 +25,4 @@ include 'JavaServerFaces'
 include 'JavaWebservice'
 include 'REST'
 include 'Vertx'
-
+include 'Angular'
