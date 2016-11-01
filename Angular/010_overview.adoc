@@ -1,3 +1,4 @@
-== Ruby 
+== Angular 
 
-Fill in here some content
+Framework for declaring expressive dynamic views in HTML
+
