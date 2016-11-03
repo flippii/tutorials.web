@@ -16,5 +16,5 @@ We will later use Eclipse to download and install the Apache MyFaces JSF impleme
 [[installation_jslt]]
 === JSLT library
 
-Download the JSLT library from https://jstl.dev.java.net/.
+Download the JSLT library from https://jstl.java.net/download.html.
 
