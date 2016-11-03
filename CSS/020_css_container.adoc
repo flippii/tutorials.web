@@ -3,11 +3,10 @@
 
 HTML allows to define sections via 'div' containers. 
 These 'div' containers can be used to style parts of the HTML document differently.
-For this purpose you can identify the div containers via id and class attributes.
+For this purpose you can identify the div containers via `id` or `class` attributes.
 		
-An id must be unique in the HTML document while the class attribute can be defined for several HTML elements. 
+While id and class generate the same output, an id must be unique in the HTML document while the class attribute can be defined for several HTML elements in a page. 
 CSS allows to style these elements via special selectors. 
-div can also be identified by an id and / or by a class and can container other block elements.
 		
 The following rule applies:
 
