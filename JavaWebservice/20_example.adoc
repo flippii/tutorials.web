@@ -14,8 +14,17 @@ include::res/WiseQuoteServer.java[]
 
 If you start your main program the service should be up and running.
 
-TIP: Try to access http://localhost:9191/wisequotes?wsdl via a browser. 
+[TIP] 
+====
+Try to access 
+
+....
+http://localhost:9191/wisequotes?wsdl 
+....
+
+via a browser. 
 You should see the WSDL of your server.
+====
 
 [[wsexample_clientcode]]
 Create now the client code. 

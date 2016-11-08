@@ -30,7 +30,10 @@ in the bin directory.
 The default port for Tomcat is 8080. After starting Tomcat
 on
 your local machine, you can validate if Tomcat is running the URL:
+
+....
 http://localhost:8080
+....
 
 This should show a web page similar to the following. 
 
@@ -40,7 +43,11 @@ image::tomcat_initialpage10.png[Tomcat initial page]
 === Admin console
 
 Tomcat provides a webbased adminstration console which can be
-started via the following link: http://localhost:8080/manager/html
+started via the following link: 
+
+....
+http://localhost:8080/manager/html
+....
 
 The available users can be found in the
 `tomcat-users.xml`

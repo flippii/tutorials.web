@@ -69,7 +69,13 @@ include::res/mail/EmailServlet.java[]
 ----
 
 To test your email functionality start your application and open
-the admin console on "http://localhost:8888/_ah/admin/". Select
+the admin console on 
+
+....
+http://localhost:8888/_ah/admin/"
+....
+
+Select
 Inbound Mail and maintain some test data. Make sure the To email
 address match the servlet mapping for the email address. 
 

@@ -64,14 +64,21 @@ include::res/firstgrails/grailsrun.txt[]
 This should start
 the Grails internal web container and you
 should
-receive the message
-"Server running. Browse to
-http://localhost:8080/com.vogella.grails.guestbook".
+receive the message:
+
+Server running. Browse to
+
+....
+http://localhost:8080/com.vogella.grails.guestbook
+....
+
 Open a browser
 and
 open the URL
 
+....
 http://localhost:8080/com.vogella.grails.guestbook
+....
 
 image::firstgrailsapplication20.png[]
 

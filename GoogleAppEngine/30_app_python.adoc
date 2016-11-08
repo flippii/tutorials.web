@@ -101,7 +101,11 @@ with the following command.
 include::res/first/start.txt[]
 ----
 
-Switch to a browser and access your local host via: http://localhost:8080/.
+Switch to a browser and access your local host via: 
+
+....
+http://localhost:8080/
+....
 
 TIP: You can edit your python source code and just refresh the browser to see the updates.
 

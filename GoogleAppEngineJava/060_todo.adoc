@@ -22,7 +22,12 @@ The created project can already run. Right-click on your application, select men
 
 image::gae20.gif[]
 
-This should start Jetty on http://localhost:8888/. 
+This should start Jetty on 
+
+....
+http://localhost:8888/
+....
+ 
 Open the url in the browser and you should the possibility to select your servlet and to start it. 
 If you select it you should see a "Hello, world" message.
 

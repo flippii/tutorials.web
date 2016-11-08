@@ -8,7 +8,11 @@ To start Jetty, switch on the command line to the installation directory and iss
 include::res/startjetty.txt[]
 ----
 
-This starts Jetty on http://localhost:8080/
+This starts Jetty on 
+
+....
+http://localhost:8080/
+....
 	
 image::jetty10.gif[]
 	

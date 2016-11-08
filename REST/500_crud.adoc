@@ -92,10 +92,18 @@ You should see the XML representation of your TODO items.
 image::todoserver10.gif[]
 
 To see the count of TODO items use
+
+....
 http://localhost:8080/com.vogella.jersey.todo/rest/todos/count
+....
+
 to see an existing TODO use
-"http://localhost:8080/com.vogella.jersey.todo/rest/todos/{id}", e.g.,
+
+....
+http://localhost:8080/com.vogella.jersey.todo/rest/todos/{id}", e.g.,
 http://localhost:8080/com.vogella.jersey.todo/rest/todos/1
+....
+
 to see
 the TODO with ID
 `1`

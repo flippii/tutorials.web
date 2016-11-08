@@ -142,7 +142,11 @@ include::res/firstgrails/grailsrun.txt[]
 ----
 
 Browse to
-http://localhost:8080/com.vogella.grails.guestbook.
+
+....
+http://localhost:8080/com.vogella.grails.guestbook
+....
+
 You should have a full CRUD (create, retrieve, update, delete)
 application available. To start the app, click on
 _UserController_

@@ -89,7 +89,10 @@ for details on how to run dynamic web applications.
 
 You should be able to access your resources under the following
 URL:
+
+....
 http://localhost:8080/com.vogella.jersey.first/rest/hello
+....
 
 image::jerseryfirstresult80.png[Result of the Jersey service]
 

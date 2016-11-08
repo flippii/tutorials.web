@@ -7,7 +7,13 @@ Later on different JavaScript frameworks like Rest and React will be used.
 
 === Change the root URI for the rest API
 
-Since the root URI, e.g., `http://localhost:8080/` of a web application should show an UI to the user rather then json or xml, the root URI for the rest API should be changed.
+Since the root URI, e.g., 
+
+....
+http://localhost:8080/
+....
+
+of a web application should show an UI to the user rather then json or xml, the root URI for the rest API should be changed.
 
 This can be done by using the `spring.data.rest.base-path` property in the _application.properties_.
 
@@ -46,5 +52,11 @@ include::res/js/RootUriController.java[]
 
 === Validate
 
-Start the Spring Application, open up the http://localhost:8080/ in a browser and see whether _Hello Spring!_ is shown.
+Start the Spring Application, open up the 
+
+....
+http://localhost:8080/
+....
+
+in a browser and see whether _Hello Spring!_ is shown.
 

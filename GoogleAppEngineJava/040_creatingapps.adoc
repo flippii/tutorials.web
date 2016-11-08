@@ -32,5 +32,9 @@ the App Engine. You also have a local admin console which allow
 you to
 see your local datastore, the task queue, inbound email and
 XMPP
-traffic. You find this local admin console on http://localhost:8888/_ah/admin/.
+traffic. You find this local admin console on 
+
+....
+http://localhost:8888/_ah/admin/
+....
 

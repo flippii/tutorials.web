@@ -31,7 +31,11 @@ The `TodoRepository` needs to have the `@RepositoryRestResource` annotation.
 include::res/rest/TodoRepositoryRest.java[]
 ----
 
-The `@RepositoryRestResource` annotation will create restful endpoints for `http://localhost:8080/todoes`.
+The `@RepositoryRestResource` annotation will create restful endpoints for 
+
+....
+http://localhost:8080/todoes
+....
 
 === Validate
 
@@ -67,7 +71,13 @@ Therefore the `@RepositoryRestResource` annotation can have additional parameter
 include::res/rest/TodoRepositoryRestPath.java[]
 ----
 
-And then also the `Application` class has to be slightly modified, so that the URLs are _"http://localhost:8080/tasks/1"_ and _"http://localhost:8080/tasks/2"_ now.
+And then also the `Application` class has to be slightly modified, so that the URLs are 
+
+....
+http://localhost:8080/tasks/1 and http://localhost:8080/tasks/2 
+....
+
+now.
 
 [source, java]
 ----
@@ -92,5 +102,13 @@ The output of this snippet should look like this:
 <201 Created,Todo [id=0, summary=New Todo, description=Todo added by rest API],{Server=[Apache-Coyote/1.1], Location=[http://localhost:8080/tasks/3], Content-Type=[application/json;charset=UTF-8], Transfer-Encoding=[chunked], Date=[Tue, 31 May 2016 16:48:47 GMT]}>
 ----
 
-TIP: The _Location_ in the output tells where to find the newly added `Todo`. This can be found by either using the `RestTemplate` again or by using curl: `curl http://localhost:8080/tasks/3`
+[TIP] 
+====
+The _Location_ in the output tells where to find the newly added `Todo`. 
+This can be found by either using the `RestTemplate` again or by using curl: 
+
+....
+curl http://localhost:8080/tasks/3
+....
+====
 
