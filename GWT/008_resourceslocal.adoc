@@ -4,7 +4,7 @@
 [[resources_gwt]]
 === GWT resources
 
-http://code.google.com/webtoolkit[GWT Homepage]
+http://www.gwtproject.org/[GWT Homepage]
 
 http://code.google.com/webtoolkit/doc/latest/RefWidgetGallery.html[GWT Widgets Overview]
 

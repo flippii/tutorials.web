@@ -1,7 +1,7 @@
 [[embeddingjetty]]
 == Embedding Jetty in an Eclipse RCP application
 
-Use use Jetty in an Eclipse RCP application, add all Jetty plug-ins and the `javax.servlet` plug-in as dependency to the _MANIFEST.MF_ and the product.
+Use Jetty in an Eclipse RCP application, add all Jetty plug-ins and the `javax.servlet` plug-in as dependency to the _MANIFEST.MF_ and the product.
 
 [source,java]
 ----
@@ -13,5 +13,5 @@ include:res/embedded/HelloHttpRequestHandler.java[]
 include:res/embedded/StartJettyHandler.java[]
 ----
 
-See https://www.eclipse.org/jetty/documentation/current/embedding-jetty.html for details.
+See https://wiki.eclipse.org/Jetty/Tutorial/Embedding_Jetty for details.
 

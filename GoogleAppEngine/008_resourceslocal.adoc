@@ -5,11 +5,11 @@
 
 http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html[Google App Engine Development with Java]
 
-http://code.google.com/intl/en/appengine[Google App Engine]
+https://cloud.google.com/appengine/docs[Google App Engine]
 
 http://www.python.org/[Python Homepage]
 
 http://docs.python.org/[Python Documentation]
 
-http://www.djangoproject.com/documentation/0.96/templates/[Django template language]
+https://docs.djangoproject.com/en/1.10/topics/templates/[Django template language]
 

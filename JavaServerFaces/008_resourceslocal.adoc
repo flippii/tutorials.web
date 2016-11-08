@@ -21,7 +21,5 @@ http://myfaces.apache.org/[Apache MyFaces]
 		
 http://www.jboss.org/jbossrichfaces/[JBoss Rich Faces]
 		
-http://www.oracle.com/technology/products/adf/adffaces/index.html[Oracle ADF Faces Rich Client Components (JSF implementation of Oracle)]
-		
 http://www.eclipse.org/webtools/jsf/dev_resource/JSFTutorial-RC3/JSFTools_tutorial.html[Introduction to building JSF with Eclipse]
 

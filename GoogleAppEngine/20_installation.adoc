@@ -1,13 +1,12 @@
 [[installation]]
 == Installation
 
-Download and install Python 2.5.2. This is the version that runs on
-the Google App Engine and should therefore be used http://www.python.org/download/releases/2.5.2/.
+Download and install Python 2.5.2. 
+This is the version that runs on the Google App Engine and should therefore be used http://www.python.org/download/releases/2.5.2/.
 
-Download the Python version of the Google App Engine from
-http://code.google.com/intl/en/appengine/downloads.html[Download Site for the GAE].
+Download the Python version of the Google App Engine from https://cloud.google.com/appengine/docs/python/download[Download Site for the GAE].
 
-The main page for the GAE is http://code.google.com/intl/en/appengine/.
+The main page for the GAE is https://cloud.google.com/appengine/downloads.
 
 On the main page you need to created an account if you have not yet done so.
 
