@@ -86,7 +86,12 @@ is inserted as parameter.
 [[crud_run]]
 === Run
 
-Run you web application in Eclipse and test the availability of your REST service under: http://localhost:8080/com.vogella.jersey.todo/rest/todos. 
+Run you web application in Eclipse and test the availability of your REST service under: 
+
+....
+http://localhost:8080/com.vogella.jersey.todo/rest/todos
+....
+
 You should see the XML representation of your TODO items.
 
 image::todoserver10.gif[]
