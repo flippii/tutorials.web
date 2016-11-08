@@ -82,11 +82,22 @@ upload a file via an HTTP request.
 Google App Engine supports the creation of several version of
 your application. In the Admin Console you can select which version
 should be active. Your active application "your-name" will be
-accessible via the URL http://your-name.appspot.com. Each version
+accessible via the URL 
+
+....
+http://your-name.appspot.com
+.... 
+
+Each version
 can also
 be accessed for example to test a new version. The version
 are
-accessable via http://versionnumber.latest.your-name.appspot.com
+accessable via 
+
+....
+http://versionnumber.latest.your-name.appspot.com
+....
+
 where version is for example "2" and "latest" is a fixed string.
 
 [[googleappengine_restrictions]]

@@ -1,37 +1,25 @@
 [[crud]]
 == CRUD RESTful webservice
 
-This section creates a CRUD (Create, Read, Update, Delete)
-restful web service. It will allow to maintain a list
-of TODOs in your
-web application via HTTP calls.
+This section creates a CRUD (Create, Read, Update, Delete) restful web service. 
+It will allow to maintain a list of TODOs in your web application via HTTP calls.
 
 [[crud_project]]
 === Project
 
-Create a new dynamic project called
-_com.vogella.jersey.todo_
-and add
-the Jersey libs. Change the
-`web.xml`
-file to the following.
+Create a new dynamic project called _com.vogella.jersey.todo_ and add the Jersey libs. 
+Change the `web.xml` file to the following.
 
 [source,xml]
 ----
 include::res/todo/web.xml[]
 ----
 
-Create the following data model and a
-http://www.vogella.com/tutorials/DesignPatternSingleton/article.html[Singleton]
-which serves as the data provider for the model. We use the
-implementation based on an enumeration. Please see the
-link for
-details. The
-`Todo`
-class is
-annotated with a JAXB annotation. See
-http://www.vogella.com/tutorials/JavaXML/article.html[Java and XML]
-to learn about JAXB.
+Create the following data model and a http://www.vogella.com/tutorials/DesignPatternSingleton/article.html[Singleton] which serves as the data provider for the model. 
+We use the implementation based on an enumeration. 
+Please see the link for details. 
+The `Todo` class is annotated with a JAXB annotation. 
+See http://www.vogella.com/tutorials/JavaXML/article.html[Java and XML] to learn about JAXB.
 
 [source,java]
 ----
@@ -46,16 +34,9 @@ include::res/todo/TodoDao.java[]
 [[crud_webpage]]
 === Create a simple HTML form
 
-The REST service can be used via HTML forms. The following HTML
-form
-will allow to post new data to the service. Create
-the following
-page
-called
-`create_todo.html`
-in the
-`WebContent`
-folder.
+The REST service can be used via HTML forms. 
+The following HTML form will allow to post new data to the service. 
+Create the following page called `create_todo.html` in the `WebContent` folder.
 
 [source,html]
 ----
@@ -77,16 +58,12 @@ include::res/todo/TodoResource.java[]
 include::res/todo/TodosResource.java[]
 ----
 
-This TodosResource uses the
-`@PathParam`
-annotation to define that the
-`id`
-is inserted as parameter.
+This TodosResource uses the `@PathParam` annotation to define that the `id` is inserted as parameter.
 
 [[crud_run]]
 === Run
 
-Run you web application in Eclipse and test the availability of your REST service under: 
+Run your web application in Eclipse and test the availability of your REST service under: 
 
 ....
 http://localhost:8080/com.vogella.jersey.todo/rest/todos
@@ -109,22 +86,17 @@ http://localhost:8080/com.vogella.jersey.todo/rest/todos/{id}", e.g.,
 http://localhost:8080/com.vogella.jersey.todo/rest/todos/1
 ....
 
-to see
-the TODO with ID
-`1`
-. We currently have only TODOs with
-the ids 1 and 2, all other requests will result in an HTTP error code.
+to see the TODO with ID `1`. 
+We currently have only TODOs with the ids 1 and 2, all other requests will result in an HTTP error code.
 
-Please note that with the browser you can only issue HTTP GET
-requests. The next chapter will use the Jersey
-client libraries to
-issue get, post and delete.
+Please note that with the browser you can only issue HTTP GET requests. 
+The next chapter will use the Jersey client libraries to issue get, post and delete.
 
 [[crud_client]]
 === Create a client
 
-To test your service can you create new class in your server project. This project has already all required libs in
-the classpath, so this is faster than creating a new project.
+To test your service can you create a new class in your server project. 
+This project has already all required libs in the classpath, so this is faster than creating a new project.
 
 Create the following class.
 
@@ -136,6 +108,5 @@ include::res/todo/Tester.java[]
 [[crud_html]]
 === Using the REST service via HTML page
 
-The above example contains a form which calls a post method of
-your rest service.
+The above example contains a form which calls a post method of your rest service.
 

@@ -143,6 +143,14 @@ include::res/first/deploy.txt[]
 ----
 
 Thats it. You should now be able to find your application at
-http://yourname.appspot.com/. For example this example can be found
-at http://myvogella.appspot.com/.
+
+....
+http://yourname.appspot.com/
+.... 
+
+For example this example can be found at 
+
+....
+http://myvogella.appspot.com/
+....
 

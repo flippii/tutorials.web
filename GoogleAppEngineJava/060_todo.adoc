@@ -160,11 +160,15 @@ You need to login with your Google account information.
 
 image::deploy10.gif[]
 
-After
-the upload completes you will find
-your application online
-under
-http://application-id.appspot.com, e.g.
-in my case
+After the upload completes you will find your application online under
+
+....
+http://application-id.appspot.com
+....
+
+e.g. in my case
+
+....
 http://vogellatodo.appspot.com.
+....
 
