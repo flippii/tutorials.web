@@ -1,4 +1,9 @@
-= JavaScript and Web development tutorials from vogella.com
+= JavaScript, HTML and Web development tutorials from vogella.com
+
+== Contributions
+
+We gladly and thankfully accept pull requests to improve the content of our tutorials. 
+See https://github.com/vogellacompany/com.vogella.tutorials.web/blob/master/CONTRIBUTING.adoc[Contributing to this repo] for the legal details.
 
 == How to build
 
@@ -19,6 +24,12 @@ In the root directory the following commands can be used to build different outp
 ./gradlew cA
 ----
 
+Alternativly the command can be changed to:
+
+./gradlew -t xx 
+
+this will triger an automatical run of the command once a change is saved in the adoc files.
+
 If these commands are run in the root directory all subprojects will be build.
 
 
@@ -26,16 +37,10 @@ TIP: Single subprojects can be build when navigating into a subproject and for e
 
 
 NOTE: On Windows OS `./gradlew.bat` must be used +
-See http://www.vogella.com/tutorials/CSS/article.html[CSS tutorial]
 
 == Create a new tutorial
 
 1. Create a new project(a sub-directory) in the root directory
 2. Add the new project to the _settings.gradle_ file (`include '{newProjectName}'`)
 3. Open new project in terminal and run `../gradlew cT` to run the `createTemplate` task
-
-== Publish HTML task for Jenkins
-
-Currently the jenkins build server is used to copy the HTML tutorials from an '/output' folder to the actual webserver,
-therefore the _publishHtml_ task can be used to create the HTML Tutorials and copy the HTML tutorials to a '/asciidocOutput' folder.
 
