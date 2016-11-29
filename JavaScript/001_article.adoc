@@ -1,10 +1,10 @@
 = Using JavaScript with Eclipse - Tutorial
 :linkcss:
-:sectnums:                                                          
+:sectnums:
 :experimental:
 :icons:
 :imagesdir: ./img
-Lars Vogel, (c) 2008, 2016 vogella GmbH
+Lars Vogel, Patrik Suzzi (c) 2008, 2016 vogella GmbH
 Version 1.2, 26.10.2016
 :docinfodir: ../
 :vgwort: JavaScript
@@ -20,8 +20,12 @@ include::020_programming.adoc[]
 include::040_javascripthtml.adoc[]
 include::../web/advertisement/inBetween01.adoc[]
 include::100_examples.adoc[]
+include::110_jsdtmodernjs.adoc[]
+include::130_jsdtfrontend.adoc[]
+include::150_jsdtfullstack.adoc[]
+include::170_jsdtjee.adoc[]
+include::190_jsdtcontribute.adoc[]
 include::200_typescript.adoc[]
 include::../support.adoc[]
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]
-

@@ -1,0 +1,12 @@
+[[jstjee]]
+== Modern JavaScript integration with JEE
+
+In this section, we'll see how to integrate modern JavaScript within a JEE application,
+and how to debug JavaScript and Java together within Eclipse.
+
+////
+* _JS frontend_: Angular + Bootstrap
+* _JEE Backend_: SpringBoot
+
+At the end of the section, we'll check also how we can Debug a JavaScript application
+////

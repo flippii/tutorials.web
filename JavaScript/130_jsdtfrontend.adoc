@@ -1,0 +1,10 @@
+[[jsfrontend]]
+== JavaScript Frontend Example
+
+In this example, we build an Angular single-page application, with Bootstrap and Fontawesome dependencies, installed via bower
+
+=== Install via Bower
+
+=== Npm install
+
+=== Node js launch

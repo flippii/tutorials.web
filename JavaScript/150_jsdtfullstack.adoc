@@ -1,0 +1,25 @@
+[[jsfullstack]]
+== JavaScript Fullstack Example
+
+In this example we will see how to use JSDT 2.0 to build and run a fullstack application, with
+
+* frontend: Angular/Bootstrap
+* Backend: NodeJS / Express / MongoDB
+
+Once built, we'll see how to debug this NodeJS Backend
+
+////
+
+=== Frontend
+
+=== Backend
+
+==== NodeJS
+
+==== Express Server
+
+==== MongoDB simple Read/Write
+
+=== Debug
+
+////

@@ -1,0 +1,20 @@
+[[jsdtcontribute]]
+== Contribute to JSDT
+
+This section explains how you can contribute to open source improving Eclipse JSDT 2.0 and above.
+
+=== Get Ooomph and build the IDE to contribute to JSDT
+
+Download and launch Oomph on your workstation, then switch to the advanced mode.
+
+Select the _Eclipse IDE for Committers_ as base product; click _Next_,
+and then select _JSDT_ as project to Provision.
+
+=== Find a bug and fix it
+
+You can find a list of JSDT open bugs using this
+link:https://bugs.eclipse.org/bugs/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&list_id=15408901&product=JSDT&query_format=advanced[Bugzilla query]
+
+////
+=== Push the code
+////
