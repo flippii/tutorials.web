@@ -5,18 +5,32 @@
 === Variables and data types
 
 The following example demonstrates how to declare and use variables in JavaScript.
+You may notice that there are several ways of declaring variables.
 
 [source, javascript]
 ----
-include::res/javascript/variables.html[]
+let mytext= "Hello, hello. Turn the radio on. Is there anybody out there...";
+
+/* declare variables t o do some math*/
+a=5; // global variable avoid this
+let b=1;
+let result = a-b;
+
+/* concatenate two strings*/
+let mytext1 ="I like spanish";
+let mytext2 =" because the melodie is nice.";
+document.writeln(mytext1+mytext2);
 ----
 
-You may notice that there are two ways of declaring variables.
 
-[source, javascript]
-----
-include::res/javascript/var.txt[]
-----
+[WARNING]
+====
+JavaScript allows to declare a variable without keyword.
+This creates global variables, which can lead to hard to determine bugs.
+You should avoid them.
+Also the  `var` keyword allows to define a variable but allow you to re-declare it, which can also let to suble bugs.
+The `let` keyword avoids this, by enforcing that a variable is only declared once.
+====
 	
 Variables defined without the keyword "var" are global variables.
 Variables defined with "var" are scoped according to their declaration, e.g., if you define a "var" in a function this variable is only valid in this function.
@@ -24,6 +38,26 @@ Variables defined with "var" are scoped according to their declaration, e.g., if
 It is good JavaScript practice to always use the `var` keyword.
 
 JavaScript has four basic types, Object and the primitive types Number, String, and Boolean.
+
+[[javascript_string]]
+=== String operations
+
+You can define string and concatenate them.
+The following example assumes you have two variables `user` and `validationError`.
+
+[source, javascript]
+----
+var message = "Invalide user action for " + user.firstName + " " + user.lastName + 
+  ". Operations ended with " + validationError;
+----
+
+Alternatively, can you also use the  backtick string literal to allow string substitution.
+
+[source, javascript]
+----
+var message = `Invalide user action for ${user.firstName} ${user.lastName}.  Operations ended with ${validationError}`;
+----
+
 
 [[javascript_arrays]]
 === Arrays

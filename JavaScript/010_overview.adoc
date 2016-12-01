@@ -1,8 +1,14 @@
-== What is JavaScript?
+== What is JavaScript (ECMAScript)?
 
-JavaScript is a scripting language which is primarily used within 
-http://www.vogella.com/tutorials/HTML/article.html[HTML] webpages.
-JavaScript is executed directly in the browser and all main browsers contain a compiler or interpreter for JavaScript. 
+
+
+JavaScript is a scripting language.
+JavaScript origins are C-based, with semicolons and curly braces.
+
+In earlier days JavaScript was primarily used within http://www.vogella.com/tutorials/HTML/article.html[HTML] webpages.
+All main browsers contain a compiler or interpreter for JavaScript. 
+Nowadays JavaScript is also used on the server, for example with `Node.js`.
+
 JavaScript is case sensitive. 
 JavaScript and Java are completely different programming languages even though they have a similar name.
 
