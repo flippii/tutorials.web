@@ -4,60 +4,22 @@
 [[xml_overview_s2a]]
 === XML Overview
 
-XML is the abbreviation for
-_Extensible Markup Language_
-and is an established data exchange format. XML
-was defined
-1998 by
-the World Wide Web Consortium (W3C).
+XML is the abbreviation for _Extensible Markup Language_ and is an established data exchange format. 
+XML was defined 1998 by the World Wide Web Consortium (W3C).
 
-An XML document consists of elements, each element has a
-start
-tag, content and an end tag. An XML document must have
-exactly
-one root
-element (i.e., one tag which encloses the
-remaining tags). XML
-differentiates between capital and non-capital letters.
+An XML document consists of elements, each element has a start tag, content and an end tag.
+An XML document must have exactly one root element (i.e., one tag which encloses the remaining tags). 
+XML differentiates between capital and non-capital letters.
 
-An XML file must be "well-formed".
-
-A _well-formed_ XML file must apply to the following conditions:
+An XML file must be _well-formed_.
+This means that it must apply to the following conditions:
 
 * An XML document always starts with a prolog (see below for an explanation of what a prolog is)
 * Every opening tag has a closing tag.
 * All tags are completely nested.
 
-An XML file is called
-_valid_
-if it is well-formed and if it is
-contains a link to an XML schema
-and
-is valid according to the schema.
+An _valid_ XML file is well-formed and must contain a link to an XML schema and be valid according to that schema.
 
-[[xml_comparisionwithotherformats]]
-=== Comparison of XML to other formats
-
-XML has the following characteristics which makes processing it via
-computer programs relatively easy compared to a binary or
-unstructured
-format:
-
-* XML is plain text
-* XML represents data without defining how the data should be displayed
-* XML can be transformed into other formats via XSL
-* XML can be easily processed via standard parsers
-* XML files are hierarchical
-
-On the other side is XML format is relatively verbose, e.g., if
-data is
-represented as XML the size of this data is relatively large
-compared to other formats. In the Internet JSON or binary formats are
-frequently used to
-replace XML if the data throughput is important.
-
-[[xml_overview_s2b]]
-=== XML Example
 
 The following is a valid, well-formed XML file.
 
@@ -66,21 +28,30 @@ The following is a valid, well-formed XML file.
 include::res/xmlintro/firstxmlfile.txt[]
 ----
 
+[[xml_comparisionwithotherformats]]
+=== Comparison of XML to other formats
+
+It is relatively easy to process an XML document, compared with a binary or unstructured format.
+This is because of the following characteristics:
+
+* XML is plain text
+* XML represents data without defining how the data should be displayed
+* XML can be transformed into other formats via XSL
+* XML can be easily processed via standard parsers
+* XML files are hierarchical
+
+The XML format is relatively verbose, i.e., if data is represented as XML the size of this data is relatively large compared to other formats.
+In the Internet JSON or binary formats are frequently used to replace XML if the data throughput is important.
+
+
 [[xml_overview_s2c]]
 === XML Elements
 
-An XML document always starts with a
-`prolog`
-which
-describes the XML file.
-This
-`prolog`
-can be minimal, e.g. <?xml version="1.0"?> or can contain other information, e.g. the encoding,
-e.g. <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>.
+An XML document always starts with a `prolog` which describes the XML file.
+This prolog can be minimal, e.g. `<?xml version="1.0"?>`.
+It can also contain other information, e.g. the encoding `<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>`.
 
-A tag which does not enclose any content is know as an
-"empty tag".
-For example: <flag/>
+A tag which does not enclose any content is know as an "empty tag", for example `<flag/>`.
 
 Comments in XML are defined as: <! COMMENT>.
 

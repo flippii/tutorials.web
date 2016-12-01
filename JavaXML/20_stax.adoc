@@ -4,10 +4,7 @@
 [[javastax_overview]]
 === Overview
 
-Streaming API for XML, called StaX, is an API for
-reading
-and
-writing XML Documents.
+Streaming API for XML, called StaX, is an API for reading and writing XML Documents.
 
 StaX is a Pull-Parsing model. Application can take the
 control
