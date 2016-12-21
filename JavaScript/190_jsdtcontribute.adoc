@@ -1,3 +1,7 @@
+:experimental:
+:icons:
+:imagesdir: ./img
+
 [[jsdtcontribute]]
 == Contribute to JSDT
 
@@ -7,8 +11,51 @@ This section explains how you can contribute to open source improving Eclipse JS
 
 Download and launch Oomph on your workstation, then switch to the advanced mode.
 
-Select the _Eclipse IDE for Committers_ as base product; click _Next_,
-and then select _JSDT_ as project to Provision.
+Select the _Eclipse IDE for Committers_ as base *Product* and click _Next_.
+
+image::oomph-select-product.png[]
+
+Select _JSDT_ as *Project* to Provision and click _Next_.
+
+image::oomph-select-project.png[]
+
+Then, check the Oomph installation variables, and edit them according to your needs.
+
+image::oomph-install-variables.png[]
+
+When done, click _Next_ and finalize the installation.
+
+When the installation is complete, the development IDE is launched automatically.
+
+At the first startup, you'll have to wait for the completion of the  startup tasks.
+Startup tasks include getting source from Git, updating Mylyn tasks,
+and also requesting additional authentication if needed.
+
+image::executing-startup-tasks.png[]
+
+When the startup tasks are done, click away the welcome window, and enter the IDE.
+Verify the source code is downloaded and available in different project sets.
+
+In the IDE, you can also see a list of Mylyn tasks for _JSDT Bugs_, and _Open reviews_.
+
+image::jsdt-development-ide-ready.png[]
+
+==== Launch JSDT
+
+In this section we'll run JSDT from source code using an existing launch configuration.
+Select from menu: _Run > Run Configuration.._ , and select the JSDT Launch Configuration.
+
+This launch configuration contains all the plug-ins needed to run JSDT,
+and also defines the VM arguments needed to hook Nashorn.
+
+image::jsdt-launch-configuration.png[]
+
+To verify the run configuration works, click *Run*, to launch Eclipse IDE with JSDT.
+Then create a JavaScript project and create a new npm init file inside the project.
+
+image::verify-jsdt-run-configuration.png[]
+
+Now you are able to run JSDT from the source code, and you can easily contribute to the project. 
 
 === Find a bug and fix it
 
