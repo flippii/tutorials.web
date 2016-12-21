@@ -11,7 +11,7 @@ Version 0.2, 26.10.2016
 
 [abstract]
 The Spring framework is a popular inversion of control container, which is mainly used to develop web applications.
-But is can also be used in usual clients and even for Android devices.
+But it can also be used in usual clients and even for Android devices.
 
 include::../web/advertisement/afterTableOfContent.adoc[]
 include::010_overview.adoc[]
