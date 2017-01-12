@@ -1,0 +1,12 @@
+<section id="Installation">
+	<title>Spring Installation</title>
+	<para>
+		Please see
+		<ulink
+			url="http://www.vogella.com/tutorials/SpringFramework/article.html#Installation"> Spring Installation</ulink>
+		.
+	</para>
+	<para> To use the Spring JDBC template you need to add spring-jdbc.jar
+		to your classpath (in addition to the standard jars described in the
+		above installation link).</para>
+</section>

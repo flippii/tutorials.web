@@ -1,0 +1,84 @@
+<section id="jdbc_usage">
+	<title>Using Spring JDBC template</title>
+	<para> The following example will demonstrate the usage of the JDBC
+		template. The example is based on derby.</para>
+	<section id="jdbc_usage_db">
+		<title>Create Database</title>
+		<para>
+			Create a small derby database under c:\temp\databases\test01 with the
+			table "Person". Please see
+			<ulink
+				url="http://www.vogella.com/tutorials/EclipseDataToolsPlatform/article.html"
+			> Handling Database with the Eclipse Data Tools Project</ulink>
+			for an explanation on how to do this with the Eclipse Data Tools
+			Project.
+		</para>
+		<para> Create the table Person with the following SQL statement.
+		</para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/createPersonTable.sql" />
+			</programlisting>
+		</para>
+	</section>
+	<section id="jdbc_usage_javaproject">
+		<title>Create Java Project and domain model</title>
+		<para> Create a new Java project "de.vogella.spring.jdbctemplate" and
+			include the minimal required jars into your classpath. Add also
+			derby.jar to the classpath.</para>
+		<para>Create the following domain model.</para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/Person.java" />
+			</programlisting>
+		</para>
+	</section>
+	<section id="jdbc_usage_daointerface">
+		<title>Create the Data Access Object (DAO)Interface</title>
+		<para> Although not required it is always a good idea to program
+			against an interface. Create the following DAO interface.</para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/IDao.java" />
+			</programlisting>
+		</para>
+	</section>
+	<section id="jdbc_usage_dao">
+		<title>Create the Dao with the JDBC Template</title>
+		<para> Now you can create the Dao using the JDBC Template function.
+		</para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/PersonResultSetExtractor.java" />
+			</programlisting>
+		</para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/PersonRowMapper.java" />
+			</programlisting>
+		</para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/DerbyDao.java" />
+			</programlisting>
+		</para>
+	</section>
+	<section id="jdbc_usage_testing">
+		<title>Main program (for testing)</title>
+		<para> Finally create the following test class for testing your Spring
+			Jdbc Template.</para>
+		<para>
+			<programlisting>
+				<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+					parse="text" href="../examples/Main.java" />
+			</programlisting>
+		</para>
+		<para> Run the main program in class Main to see the result.</para>
+	</section>
+</section>

@@ -1,0 +1,29 @@
+<section id="overview">
+	<title>Spring JDBC</title>
+	<para> Spring provides a simplification in handling database access
+		with the Spring JDBC Template.</para>
+	<para> The Spring JDBC Template has the following advantages compared
+		with standard JDBC.</para>
+	<para>
+		<itemizedlist>
+			<listitem>
+				<para>The Spring JDBC template allows to clean-up the resources
+					automatically, e.g. release the database connections.</para>
+			</listitem>
+			<listitem>
+				<para>The Spring JDBC template converts the standard JDBC
+					SQLExceptions into RuntimeExceptions. This allows the programmer to
+					react more flexible to the errors. The Spring JDBC template
+					converts also the vendor specific error messages into better
+					understandable error messages.</para>
+			</listitem>
+		</itemizedlist>
+	</para>
+	<para> The Spring JDBC template offers several ways to query the
+		database. queryForList() returns a list of HashMaps. The name of the
+		column is the key in the hashmap for the values in the table.</para>
+	<para> More convenient is the usage of ResultSetExtractor or RowMapper
+		which allows to translates the SQL result direct into an object
+		(ResultSetExtractor) or a list of objects (RowMapper). Both these
+		methods will be demonstrated in the coding.</para>
+</section>
