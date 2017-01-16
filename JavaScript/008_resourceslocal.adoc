@@ -6,3 +6,4 @@ https://www.eclipse.org/community/eclipse_newsletter/2016/may/[JavaScript Develo
 
 http://www.ibm.com/developerworks/web/library/wa-ecmascript6-neward-p1/index.html[JavaScript 6 Overview - Part1]
 http://www.ibm.com/developerworks/library/wa-ecmascript6-neward-p2/index.html[JavaScript 6 Overview - Part2]
+
