@@ -1,9 +1,8 @@
-
 {
- firstName:'Lars',
- lastName:'Vogel',
- address: {
- 	street:'Examplestr.',
- 	number: '31'
- }
+  "firstName": "Lars",
+  "lastName": "Vogel",
+  "address": {
+    "street": "Examplestr.",
+    "number": "31"
+  }
 }
