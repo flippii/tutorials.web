@@ -7,7 +7,7 @@
 Lars Vogel (c) 2016 vogella GmbH
 Version 0.1, 25.08.2016		
 :docinfodir: ../
-:vgwort: Artifactory
+:vgwort: Vaadin
 
 This article describes how to use the Vaadin framework to create web applications.
 			

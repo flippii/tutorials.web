@@ -16,7 +16,7 @@ You should also install Maven support into your IDE.
 See http://www.vogella.com/tutorials/EclipseMaven/article.html#install-the-maven-support-for-eclipse-m2e[Eclipse Maven installation description].
 
 
-=== Create new Vaadin project
+=== Exercise: Create new Vaadin project
 
 Use menu:File[New > Other...>Vaadin> Vaadin 7 Project (Maven)] to create a new project with Maven support.
 
@@ -37,9 +37,52 @@ You should be able to access if via http://localhost:8080/com.vogella.vaadin.fir
 You can find the document base for your application on your server configuration. 
 Double-click on it, this opens an editor.
 Select the _Modules_ tab and check the _Documentation Base_.
-
-
 ====
 
+image::first_vaadin_example.png[] 
 
 
+=== Exercise: Add page navigation
+
+Create the following class, which allow other classes to get a reference to the `Navigator` class.
+
+
+[source, java]
+----
+include::res/navigation/NavigatorHolder.java[]
+----
+
+Create two views, which can be used as navigation target.
+
+[source, java]
+----
+include::res/navigation/DetailView.java[]
+----
+
+[source, java]
+----
+include::res/navigation/MainView.java[]
+----
+
+Adjust your `MyUI` class to support navigation.
+
+[source, java]
+----
+include::res/navigation/MyUI.java[]
+----
+
+
+=== Session handling
+
+Via ` getUI().getSession()` you have access to the current session. 
+The `setAttribute()` allows to store values in key values in the session.
+
+[source, java]
+----
+include::res/session/MySessionData.java[]
+----
+
+[source, java]
+----
+include::res/session/DetailView.java[]
+----
