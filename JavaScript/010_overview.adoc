@@ -3,7 +3,7 @@
 
 
 JavaScript is a scripting language.
-JavaScript origins are C-based, with semicolons and curly braces.
+JavaScripts syntax is C-based, with semicolons and curly braces.
 
 In earlier days JavaScript was primarily used within http://www.vogella.com/tutorials/HTML/article.html[HTML] webpages.
 All main browsers contain a compiler or interpreter for JavaScript. 
@@ -35,7 +35,7 @@ image::javascriptwizard1.png[]
 
 image::javascriptwizard2.png[]
 
-Create a new HTML file with menu:View[File > New > > Other > Web > HTML File].
+Create a new HTML file with menu:File[New > > Other > Web > HTML File].
 
 image::javascriptwizard4.png[]
 
@@ -50,7 +50,7 @@ In this example the JavaScript is embedded into the HTML page.
 include::res/javascript/helloworld.html[]
 ----
 
-Afterwards open it via its context menu:Open View[Web Browser].
+Afterwards open it via its context menu:Open With[Web Browser].
 The commands within the script tags runs and "Hello, JavaScript!" is written to the webpage.
 
 image::javascriptwizard3.png[]

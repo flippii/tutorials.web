@@ -5,33 +5,33 @@
 <script type="text/javascript">
 
 function hideshow() {
-	
-	var allHTMLTags = new Array();
 
-	//Create Array of All HTML Tags
-	var allHTMLTags=document.getElementsByTagName("*");
+    var allHTMLTags = new Array();
 
-	//Loop through all tags using a for loop
-	for (i=0; i<allHTMLTags.length; i++) {
+    //Create Array of All HTML Tags
+    var allHTMLTags = document.getElementsByTagName("*");
 
-	//Get all tags with the specified class name.
-		if (allHTMLTags[i].className=="revhistory") {
-		
-	// hide or display the elements
-			if (allHTMLTags[i].style.display == "none") {
-				allHTMLTags[i].style.display = "";
-			} else {
-				allHTMLTags[i].style.display = "none";
-			}
-		}
-	}
+    //Loop through all tags using a for loop
+    for (i = 0; i < allHTMLTags.length; i++) {
+
+        //Get all tags with the specified class name.
+        if (allHTMLTags[i].className == "revhistory") {
+
+            // hide or display the elements
+            if (allHTMLTags[i].style.display == "none") {
+                allHTMLTags[i].style.display = "";
+            } else {
+                allHTMLTags[i].style.display = "none";
+            }
+        }
+    }
 }
 </script>
 
 </head>
 <body>
 
-<div class="revhistory"> This is the text which will be manipulated via JavaScript</div>
+<div class="revhistory">This is the text which will be manipulated via JavaScript</div>
 
 <input type="button" value="Show/ Hide"
 onclick="hideshow()">

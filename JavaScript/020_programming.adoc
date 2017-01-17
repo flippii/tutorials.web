@@ -12,32 +12,36 @@ You may notice that there are several ways of declaring variables.
 let mytext= "Hello, hello. Turn the radio on. Is there anybody out there...";
 
 /* declare variables t o do some math*/
-a=5; // global variable avoid this
-let b=1;
-let result = a-b;
+a = 5; // global variable avoid this
+let b = 1;
+let result = a - b;
 
 /* concatenate two strings*/
-let mytext1 ="I like spanish";
-let mytext2 =" because the melodie is nice.";
-document.writeln(mytext1+mytext2);
+let mytext1 = "I like Spanish";
+let mytext2 = " because the melody is nice.";
+document.writeln(mytext1 + mytext2);
 ----
 
 
 [WARNING]
 ====
-JavaScript allows to declare a variable without keyword.
+JavaScript allows you to declare a variable without a keyword.
 This creates global variables, which can lead to hard to determine bugs.
 You should avoid them.
-Also the  `var` keyword allows to define a variable but allow you to re-declare it, which can also let to suble bugs.
+Also the  `var` keyword allows to define a variable but allows you to re-declare it, which can also lead to suble bugs.
 The `let` keyword avoids this, by enforcing that a variable is only declared once.
+With the `const` keyword it is possible to enforce that a variable can not be reassigned.
+This doesn't mean that the variable is immutable, just that the reference can't change.
 ====
 	
-Variables defined without the keyword "var" are global variables.
-Variables defined with "var" are scoped according to their declaration, e.g., if you define a "var" in a function this variable is only valid in this function.
+Variables defined without the keyword `var` are global variables.
+Variables defined with `var` are scoped according to their declaration, e.g., if you define a `var` in a function this variable is only valid in the current function body.
+Variables defined with `let` and `const` are only valid in the current block.
 
-It is good JavaScript practice to always use the `var` keyword.
+It is good JavaScript practice to always use one of the keywords to avoid global variables.
 
-JavaScript has four basic types, Object and the primitive types Number, String, and Boolean.
+JavaScript has four basic types, _Object_ and the primitive types _Number_, _String_, and _Boolean_.
+While Objects are passed by reference, the primitive types are passed by value.
 
 [[javascript_string]]
 === String operations
@@ -51,7 +55,7 @@ var message = "Invalide user action for " + user.firstName + " " + user.lastName
   ". Operations ended with " + validationError;
 ----
 
-Alternatively, can you also use the  backtick string literal to allow string substitution.
+Alternatively, can you also use the backtick string literal to allow string interpolation.
 
 [source, javascript]
 ----
@@ -74,7 +78,7 @@ include::res/javascript/array.txt[]
 [[javascript_functions]]
 === Functions
 
-A function in JavaScript encapsulates reusable code and are represented as Objects. 
+A function in JavaScript encapsulates reusable code and is represented as an Object. 
 Functions can be directly called via other JavaScript code. 
 It is recommended that you put functions in the header of the HTML page. 
 Functions are declared via the function keyword. 
@@ -104,8 +108,8 @@ include::res/function/function.html[]
 [[javascript_events]]
 === HTML Events
 
-JavaScript can react to certain event on the page and be registered with webpage elements, e.g. buttons. 
-You can register a function to a event in the HTML page. 
+JavaScript can react to certain events on the page and be registered with webpage elements, e.g. buttons. 
+You can register a function to an event in the HTML page. 
 
 
 .Table Events in Javascript
@@ -113,15 +117,15 @@ You can register a function to a event in the HTML page.
 |Event |Description
 
 |Onload
-|Triggered then the user loads the page. The onload even can for example be used to check the visitors browser type.
+|Triggered when the user loads the page. The onload event can for example be used to check the visitors browser type.
 
 |onChange
 |Called whenever a field is changed. Can for example be used to validate an input field of a form.
 
 |onSubmit
-|Called then a user clicks on the submit button of a form.
+|Called when a user clicks on the submit button of a form.
 
 |OnMouseOver and OnMouseOut
-|Called then the mouse enters a certain element on the page or leaves it.
+|Called when the mouse enters a certain element on the page or leaves it.
 |===
 

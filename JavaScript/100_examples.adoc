@@ -29,7 +29,7 @@ include::res/javascript/meta.html[]
 The following is an example on checking input data of HTML forms and setting hidden parameters via Javascript. 
 In this case the URL is automatically determined and send to the service once submit is pressed.
 
-[source,html]
+[source, javascript]
 ----
 include::res/forms/feedback.js[]
 ----
