@@ -90,10 +90,24 @@ include::res/function/function1.html[]
 ----
 
 [[javascript_prototype]]
-=== Prototype in JavaScripts
+=== Prototypes in JavaScript
 
-JavaScript does not support classes and inheritance of classes like object orientated programming languages. 
-JavaScript is a prototype-based language, by this approach you can reuse functions by cloning existing objects.  
+JavaScripts Objects are not fundamentally class based like in object orientated programming languages.
+JavaScript is a prototype-based language, by this approach you can reuse functions by cloning existing objects.
+
+Here is a an example that shows object creation with inheritance in ECMA5.
+
+[source, javascript]
+----
+include::res/javascript/inheritance_ecma5.js[]
+----
+
+ECMA6 introduced a class syntax that can be used like in object oriented languages but is just syntactic sugar for the prototype based approach.
+
+[source, javascript]
+----
+include::res/javascript/inheritance_ecma6.js[]
+----
 
 [[javascript_buttons]]
 === Assigning functions to HTML buttons
