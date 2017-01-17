@@ -1,0 +1,3 @@
+== Vaadin
+
+https://github.com/vaadin/eclipse-plugin Eclipse Plug-in for Vaadin

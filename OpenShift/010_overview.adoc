@@ -14,3 +14,9 @@ It has powerful command line client tools and a web management console to launch
 You can request access to the OpenShift Online developer preview via the following URL:
 
 https://www.openshift.com/devpreview/register.html
+
+=== Getting started
+
+The following example is a great introduction into the first application hosted by OpenShift.
+
+https://docs.openshift.com/online/getting_started/basic_walkthrough.html

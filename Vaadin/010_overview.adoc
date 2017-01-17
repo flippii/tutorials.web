@@ -1,0 +1,45 @@
+== Vaadin 
+
+=== What is Vaadin?
+Vaadin is a server based framework to create web applications with Java.
+The application is cross-compiled into JavaScript/HTML with is used at runtime.
+Therefore Vaadin does not require any browser extension at runtime.
+
+=== Installation into Eclipse
+
+Open the update manager of Eclipse via menu:Help[Install New Software...].
+Enter the following URL into the _Work with:_ page: http://vaadin.com/eclipse
+
+Install all tools and restart Eclipse.
+
+You should also install Maven support into your IDE.
+See http://www.vogella.com/tutorials/EclipseMaven/article.html#install-the-maven-support-for-eclipse-m2e[Eclipse Maven installation description].
+
+
+=== Create new Vaadin project
+
+Use menu:File[New > Other...>Vaadin> Vaadin 7 Project (Maven)] to create a new project with Maven support.
+
+image::vaadin-wizard10.png[Vaadin project wizard page 1]
+
+image::vaadin-wizard20.png[Vaadin project wizard page 2]
+
+The generated `MyUI` class contains the user interface.
+It extends the `UI` class which describes a Vaadin application.
+The final application is registered via the static `VaadinServlet` class in the `MyUI` class.
+
+Start this project on the server.
+Eclipse deploys the project and start it. 
+You should be able to access if via http://localhost:8080/com.vogella.vaadin.first/
+
+[TIP]
+====
+You can find the document base for your application on your server configuration. 
+Double-click on it, this opens an editor.
+Select the _Modules_ tab and check the _Documentation Base_.
+
+
+====
+
+
+
