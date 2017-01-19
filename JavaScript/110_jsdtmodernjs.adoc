@@ -23,7 +23,7 @@ In this article, we'll introduce _Modern JavaScript_'s workflows, and tools, usi
 
 JSDT is the Eclipse Project supporting JavaScript development, also used as base by commercial tools like JBossTools, ZendStudio, etc.
 
-JSDT 1.x, shipped until Eclipse Mars.2, was good for _Classic_ client-side JavaScript, supporting https://en.wikipedia.org/wiki/ECMAScript[ECMAScript] 3.0 (*ES3*, 1999).
+JSDT 1.x, shipped until Eclipse Mars.2, was used for _Classic_ client-side JavaScript, supporting https://en.wikipedia.org/wiki/ECMAScript[ECMAScript] 3.0 (*ES3*, 1999).
 
 JSDT 2.x, shipped from Eclipse Neon on, is a total reboot of the tooling, to fill existing gaps with _Modern_ JavaScript, supporting:
 
@@ -33,15 +33,16 @@ JSDT 2.x, shipped from Eclipse Neon on, is a total reboot of the tooling, to fil
 
 ==== JSDT parser/compiler infrastructure
 
-JSDT changed several parse/compiler toolchains. Below you see a brief resume:
+JSDT changed several _parser/compiler_ toolchains. Below you see a brief resume:
 
-* JSDT 1.0, until Mars.2: supports ES3 using https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino[Rhino] (Mozilla Foundation), a Java-based parser/compiler for JavaScript.
-* JSDT 2.0, initial release: supports ES6 using http://esprima.org/[Esprima] (jQuery Foundation). As Esprima is written in JavaScript, this version of JSDT 2.0 needs to https://wiki.eclipse.org/JSDT/Equinox_hook_for_Nashorn[hook Nashorn], the Java8's JS interpreter.
-* JSDT 2.0, fromNeon.2 release: supports ES6 using https://developers.google.com/closure/compiler/[ClosureCompiler] (Google), a java-based parsing infrastructure for JavaScript.
+* *JSDT 1.0*, until Mars.2: supports ES3 using https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Rhino[Rhino] (Mozilla Foundation), a Java-based parser/compiler for JavaScript.
+* *JSDT 2.0*, _initial release_: supports ES6 using http://esprima.org/[Esprima] (jQuery Foundation). As Esprima is written in JavaScript, this version of JSDT 2.0 needs to https://wiki.eclipse.org/JSDT/Equinox_hook_for_Nashorn[hook Nashorn], the Java8's JS interpreter.
+* *JSDT 2.0*, _from Neon.2_ release: supports ES6 using https://developers.google.com/closure/compiler/[ClosureCompiler] (Google), a java-based parsing infrastructure for JavaScript.
 
-==== EcmaScript 6 (ES6)
+==== ECMAScript 6 (ES6)
 
-EcmaScript 6 (*ES6*, 2015) was the most recent JavaScript specification level when JSDT 2.0 was developed. *ES6* introduces new language features, such as Classes, default parameters, template literals, destructuring assignments (from Node.js), and much more.
+JSDT 2.0 supports ECMAScript 6 (*ES6*, 2015), the most recent spec. at development time. *ES6* introduces new language features, such as Classes, default parameters, template literals, destructuring assignments (from Node.js), and much more.
+
 
 [source, javascript]
 ----
@@ -70,33 +71,34 @@ var [line1, line2, line3] = file.split('\n')
 
 ==== Node.js and Tools
 
-Node.js is an increasingly popular JavaScript runtime, generally used with a variety of connected tools. JSDT 2.0 integrates four tools, split in two categories:
+Node.js is an increasingly popular JavaScript runtime, generally used with a variety of connected tools.
 
-_Package Managers_, to manage and install dependencies. All are using files with JSON syntax:
+JSDT 2.0 supports running and debugging Node.js applications, using commands available in the context menu.
 
-* *Npm* is most commonly used for installing _node modules_. Its nested dependency tree is generally heavy in size.
-* *Bower* is widely used when installing _frontend components_. Its "flat folder" structure avoids duplicate downloads and helps reducing page loads.
+JSDT 2.0 also integrates common Node.js tools, as:
+
+_Package Managers_, using JSON-based files to manage and install dependencies:
+
+* *Npm*: used for installing _node modules_. Its nested dependency tree is generally heavy in size.
+* *Bower*: for installing _frontend components_. Its "flat folder" structure avoids duplicate downloads and helps reducing page loads.
 
 _Task runners_, to automate operations:
 
-* *Grunt* is to configure separate independent tasks. It uses a json-based file to describe the tasks.
-* *Gulp* is an intuitive and fast task runner. The tasks are defined in a file with JavaScript syntax.
+* *Grunt*: to configure separate independent tasks. It uses a json-based file to describe the tasks.
+* *Gulp*: intuitive and fast task runner. The tasks are defined in a file with JavaScript syntax.
+
 
 ==== Chromium Debugging
 
-The Chrome dev tools was developed by Google, and then was released also under Eclipse EPL. The refactored code, is available in the JSDT repository, under the `org.eclipse.wst.jsdt.chromium`, which is used in JSDT to debug JavaScript applications.
+JSDT 2.0 uses Chromium as JavaScript debugger. The code, developed as part of Google https://developers.google.com/web/tools/chrome-devtools/[Chrome dev tools], is now EPL-licensed, and available in the JSDT repository, under the `org.eclipse.wst.jsdt.chromium` project.
 
 More information about the adoption of the Chromium Debugger in JSDT are available in the  https://wiki.eclipse.org/JSDT/Confcalls/Minutes_JSDT_Debugger[transcription of the JSDT Confcall about the Debugger].
 
 === Exercise: Install Node.js and tools
 
-JSDT 2.0 integrates Node.js and tools that are available on your system.
-With this exercise, we install nodejs and tools, so they are available via command line.
+To use JSDT 2.0 for the tutorials, install Node.js and tools on your system, then verify the installation is correct.
 
-To get started, https://nodejs.org/en/download/[download Node.js], and install it so that you can access it from command prompt.
-By default, when installing Node.js, you also install Npm.
-
-Now check that node and npm are installed in your system, using the commands below.
+https://nodejs.org/en/download/[Download] and install Node.js on your computer. The default installation should provide both `node` and `npm` commands. Verify the installation by checking the versions of the two commands.
 
 ----
 $ node -v
@@ -108,7 +110,7 @@ $ npm -v
 2.2.15
 ----
 
-Before adding other Node.js plugins, ensure your npm is up-to-date, by running the below command. Note that `-g` means globally, or _system-wide_.
+Before adding other Node.js plugins, ensure your `npm` is up-to-date, by running the below command. Note that `-g` means globally, or _system-wide_.
 
 ----
 $ npm update -g npm
@@ -116,6 +118,8 @@ $ npm update -g npm
 
 Now, install Bower, Gulp and Grunt using Npm, the Node.js package manager.
 Install the modules globally, with the *-g* flag, using the commands below.
+
+Note: in linux systems, you might need to use `sudo npm ...`
 
 ----
 $ npm install -g bower
@@ -141,20 +145,18 @@ grunt-cli v1.2.0
 [17:18:39] Local version 3.9.1
 ----
 
-=== Setup your IDE for using JSDT 2.0
+=== Get your IDE with JSDT 2.0
 
-Starting with Eclipse Neon,
-JSDT 2.0 is shipped either in Eclipse IDE _for Java EE Developers_, or _for JavaScript and Web Developers_,
-that you can get either via Oomph or from the https://eclipse.org/downloads/eclipse-packages/[EPP downloads page].
+JSDT 2.0 is available starting from Eclipse Neon, and is shipped either in Eclipse IDE _for Java EE Developers_, or _for JavaScript and Web Developers_.
 
 image::get-eclipse-ide-for-jee-or-javascript-developers.png[]
 
-In this tutorial we'll use the latest JSDT features, also integrated with JEE.
-Hence, we start downloading the latest version of the _Eclipse IDE for Java EE Developers_
-from the https://eclipse.org/downloads/index-developer.php[EPP download page for Developers page].
+In the tutorial, we will use the latest JSDT features integrated with Java EE and web development.
 
-When done, unzip and launch the IDE.
-Then, open the Console by pressing kbd:[Ctrl+Alt+T], and type `npm -v`.
+Download the latest version of the _Eclipse IDE for Java EE Developers_
+from the https://eclipse.org/downloads/eclipse-packages/[EPP download page], or from the https://eclipse.org/downloads/index-developer.php[EPP downloads for developers].
+
+When done, unzip and launch the IDE. Then, open the Console by pressing kbd:[Ctrl+Alt+T], and type `npm -v`.
 
 image::verify-npm-from-command-prompt.png[]
 
@@ -163,8 +165,8 @@ and we can proceed creating out first Node.js application with JSDT.
 
 === Run a Node.js Application
 
-and create a new _General Project_ named  `com.vogella.jsdt.test`.
-Then select the project, press kbd:[Ctrl+N], type "npm init" and select the entry to create a new npm Init file.
+Create a new _General Project_ named  `com.vogella.jsdt.test`.
+Select the project, press kbd:[Ctrl+N], type `npm init`, and select the entry to create a new npm Init file.
 
 image::new-npm-init-file.png[]
 
@@ -173,12 +175,14 @@ providing the main information for your Node.js module.
 
 image::new-npm-init-wizard_S.png[]
 
-When done the wizard generates the *package.json* file which, by convention, is the file describing a Node.js module information and packaging.
+When done, the wizard generates the *package.json*, which is the file describing the Node.js module packaging and information.
 
 image::generated-package-json.png[]
 
 In the _package.json_, we read `"main" : "index.js"`, which declares the main entry point for the module is *index.js* .
 For most modules, it makes the most sense having a main script and often not too much else.
+
+==== A simple Node.js application
 
 Create a new file named *index.js*, the main entry point for the application, and add the content you see below.
 
@@ -191,18 +195,18 @@ var open = require('open');
 open('http://www.vogella.com/tutorials');
 ----
 
-The program doesn't do much, beyond declaring a dependency to the module *open*,
-and using that module to open a browser passing a ginven URL.
+The program declares a dependency to the module *open*,
+and uses a function of that module to open a the system default browser passing a given URL.
 
-Now, test running the index.js with Node.js, by selecting the file, right clicking and choosing run as >  Node.js application
+Test the program running it with Node.js by selecting the file, right-clicking and choosing *Run as > Node.js application*.
 
 image::run-as-nodejs-application.png[]
 
-As a result, you will see a console error `Error: Cannot find module 'open'`,
-stating you're missing a module named "open".
+After running, we'll see a console error: `Error: Cannot find module 'open'`. This is because Node.js is missing a reference to the module named "open".
 
-To fix this issue, we first need to add the module among dependencies.
-Then we can run npm Install, to install the needed modules.
+==== Installing dependencies
+
+To fix this issue, we need to add the module to the package.json dependencies and then install the dependencies by downloading them locally.
 
 To add the missing dependency, edit manually the *package.json*,
 by adding a development-time dependency to the latest version ("*") of the module "open".
@@ -230,7 +234,7 @@ right click on *package.json* and select *Run As > npm Install*.
 
 image::run-as-npm-install.png[]
 
-As a result, you will see dependency downloaded under the *node_modules* folder.
+As a result, you will see all the needed dependencies downloaded under the *node_modules* folder.
 
 image::node-modules-downloaded.png[]
 

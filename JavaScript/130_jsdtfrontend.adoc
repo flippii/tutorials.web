@@ -1,10 +1,272 @@
+:experimental:
+:icons:
+:imagesdir: ./img
+
 [[jsfrontend]]
 == JavaScript Frontend Example
 
-In this example, we build an Angular single-page application, with Bootstrap and Fontawesome dependencies, installed via bower
+In this example, we'll build an *Angular.JS* single page application with _routing_ and _controllers_.
+The styling will be done with *Bootstrap* and *FontAwesome*.
+At the end, we'll use a *Node.js* _script_ to launch an *Express* _server_ and serve the application on _localhost_.
 
-=== Install via Bower
+=== Install frontend components with Bower
 
-=== Npm install
+Create a `bower.json` file, using the shortcut: kbd:[Ctrl] + kbd:[N] > _"Bower init"_.
+Add the dependencies we'll use in the project: *angular*, *angular-route*, *bootstrap* and *font-awesome*.
 
-=== Node js launch
+The bower file should look like the snippet below.
+
+[source, JSON]
+----
+include::res/jsdt.demo01/bower.json[]
+----
+
+JSDT integrates the Bower command in Eclipse, so you can launch it via context menu.
+
+To download and install all the frontend components,
+right-click on the `bower.json` file, and select *Run As.. > Bower Install*.
+
+So doing, all the needed components will be downloaded under the default folder: *bower_components*.
+
+image::bower-install-results.png[]
+
+=== Test frontend libraries
+
+We test the imported libraries with a simple HTML using the most important javascript and css.
+
+* In the <html> tag, use the `ng-app` directive
+* In <head>, reference js and css libs from bower_components
+* In <body>, test Bootstrap styling and Angular instructions.
+
+[source, HTML]
+----
+include::res/jsdt.demo01/index_01.html[]
+----
+
+You can test visually that Boostrap is loaded and Angular is working.
+The working web application, should look like the image below.
+
+image::jsdt.demo01-hello-world-01.png[]
+
+In this case you can verify that Boostrap is providing styles to the page,
+and putting a link::res/jsdt.demo01/html_128.png[square image] in a circle;
+while Angular can evaluate expressions like `{{'Hello,'+' world!'}}`.
+
+Below you can see a screenshot of what the page would look like in case Angular and Bootstrap are not loaded.
+
+image::jsdt.demo01-hello-world-01b-no-libs.png[]
+
+
+=== Angular Application
+
+Create a javascript file named `application.js`, which will contain the code for the Angular application, and paste the code below.
+
+[source, javascript]
+----
+include::res/jsdt.demo01/application_02.js[]
+----
+
+The first line creates an Angular application named *jsdtApp*, and declare it uses *ngRoute* as imported module.
+
+The second statement, defines a controller named *mainController*.
+When the controller is created, assigns a value to `$scope.message`,
+a scope variable that we will use later, to display a message.
+
+==== Use Angular Application in HTML
+
+Now we edit the HTML file use the Angular application.
+
+* In <html>, set the application name `ng-app="jsdtApp"`, as we defined in the module.
+* In <head>, include the angular application: *application.js*
+* In <body>, add the controller directive: `ng-controller="mainController"`
+* In <div id="main">, print the message from the controller: `$scope.message` .
+
+The HTML below represents a full working solution
+
+[source, HTML]
+----
+include::res/jsdt.demo01/index_02.html[]
+----
+
+Test visually the angular controller is working by observing the {{message}} is present.
+
+image::jsdt.demo01-hello-world-02.png[]
+
+=== Angular Routing
+
+Routing means loading dynamically multiple HTML views inside a SPA (Single Page Application).
+
+As an example, we'll use clickable links on the navigation bar, to change the main content.
+
+WARNING: Angular routing is not intended to work on local files. You should serve pages using a web server to avoid *Cross origin request* problems.
+
+==== Multiple HTML Views
+
+We start creating three views to display the contents: *about*, *contact*, and *home*.
+
+[source, HTML]
+----
+include::res/jsdt.demo01/pages/home.html[]
+----
+
+[source, HTML]
+----
+include::res/jsdt.demo01/pages/about.html[]
+----
+
+[source, HTML]
+----
+include::res/jsdt.demo01/pages/contact.html[]
+----
+
+Note that the views are different each other, but all are using a  `{{message}}` object.
+Also note the views are using css classes `bg-light`, `bg-dark` and `bg-orange`, to be defined later.
+
+==== Configure Routing and multiple Controllers
+
+As we already included the `angular-route.js` script in the HTML,
+we can add the dependency to the `ngRoute` module in the Angular.js application.
+
+Then, we edit the javascript file, using the the `$routeProvider`,
+to configure three routes, one for each content page we created.
+
+For each route we declare its *path*;
+we define the *templateUrl* to find the HTML view template;
+and we assign a *controller* to manage the view lifecycle.
+
+Then, we add three controllers to the app, one for each page.
+So doing we store page specific messages in the angular `$scope`.
+
+Note: controllers contains business logic for a view.
+You can learn more in the https://docs.angularjs.org/guide/controller[official documentation]
+
+Based on the above premises, we edit the javascript file,
+so that it looks like the snippet you can see below.
+
+[source, javascript]
+----
+include::res/jsdt.demo01/application_03.js[lines=4..43]
+----
+
+==== Enable Routing in HTML
+
+To enable routing we need to edit the main HTML file as follows:
+
+* Add navigation links to activate routing
+* Add the `ng-view` tag, to mark the area to be replaced by views
+
+Below you can see the updated HTML inside the `<body>` element.
+
+[source, HTML]
+----
+include::res/jsdt.demo01/index_03.html[lines=22..43]
+----
+
+==== Add style
+
+To complete the page, add some inline style,
+to give different colors at the content pages,
+and to animate the user selection on navigation bar.
+
+[source, HTML]
+----
+<head>
+  ...
+include::res/jsdt.demo01/index_03.html[lines=15..21]
+----
+
+
+==== Test Routing avoiding issues
+
+As anticipated, Angular Routing is not supposed to work on local files.
+Therefore, you can see empty areas, when loading an HTML file from the local filesystem.
+
+At the time I'm writing, Firefox is able to render the routing example as we expect.
+
+image::jsdt.demo01-routing-01-firefox.png[]
+
+But, Chrome doesn't work as Firefox, as its security model doesn't allow serving local files when routing.
+In this case, you can detect the error inspecting the page and looking at the console.
+
+image::jsdt.demo.01-hello-frontend-03-no-routing.png[]
+
+The real point of this section, is understanding that your frontend is not a simple local webpage.
+Instead, it is an application that should live in a webserver.
+
+To fix this, we'll use Node.js to launch a lightweight server and publish our SPA.
+So doing, you'll access the frontend at a web address like http://localhost:3222
+
+=== Node.js server on Localhost
+
+In this section, we'll see how to use Node.js to launch a local server to display our frontend.
+
+Create a *package.json* file with the content you see in the snippet below.
+
+[source, JSON]
+----
+include::res/jsdt.demo01/package.json[]
+----
+
+Note that we are importing two existing node modules:
+
+* *express*, providing a lightweight local server
+* *open*, providing a command to launch the default browser.
+
+Then, use the JSDT integrations to install the libraries.
+Right-click on the `package.json` and select *Run As.. > NPM Install*.
+
+image::run-as-npm-install-2.png[]
+
+This will install the needed dependencies under the `node_modules` folder.
+
+Then, create a javascript file called *launch-server.js* with the content below.
+
+[source, javascript]
+----
+include::res/jsdt.demo01/launch-server.js[]
+----
+
+As you can see, the code loads the modules, starts the local server, and opens the inex.html.
+Please, not this server is configured to support URL-rewrite, hence you can reload pages and re-use URLs like in common rest applications.
+
+Now, run the Node.js script to see the frontend application running on server.
+R-click 'launch-static-server.js' and select *Run As .. > Node.js Application*. This will launch node passing your script as parameter
+
+image::run-as-nodejs-application-2.png[]
+
+Now that the application is running on a local webserver, we can test it works as expected.
+Below you can see screenshots with the final result.
+
+image::jsdt.demo01-final-result-01-home.png[]
+
+image::jsdt.demo01-final-result-02-about.png[]
+
+image::jsdt.demo01-final-result-03-contact.png[]
+
+=== Tips for a Professional Single Page Application
+
+To have a more professional single-page applications, we should remove hashtags from webaddresses.
+
+To do so, first you should use the `$locationProvide.html5Mode`, as shown below.
+
+[source, javascript]
+----
+include::res/jsdt.demo01/application_04.js[lines=5..6]
+  // ..
+include::res/jsdt.demo01/application_04.js[lines=20..22]
+----
+
+Then we should edit the HTML, by removing hashtags in redirect URLs
+
+[source, HTML]
+----
+include::res/jsdt.demo01/index_04.html[lines=31..35]
+----
+
+Finally you can see that the URLs in your web applications are now looking more professional.
+
+image::jsdt.demo01-final-result-04-html5-url-rewrite.png[]
+
+=== Source Code
+
+You can find the source code for this tutorial at the following web address.
