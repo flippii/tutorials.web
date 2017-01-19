@@ -100,11 +100,13 @@ To use JSDT 2.0 for the tutorials, install Node.js and tools on your system, the
 
 https://nodejs.org/en/download/[Download] and install Node.js on your computer. The default installation should provide both `node` and `npm` commands. Verify the installation by checking the versions of the two commands.
 
+[source, terminal]
 ----
 $ node -v
 v4.4.5
 ----
 
+[source, terminal]
 ----
 $ npm -v
 2.2.15
@@ -112,6 +114,7 @@ $ npm -v
 
 Before adding other Node.js plugins, ensure your `npm` is up-to-date, by running the below command. Note that `-g` means globally, or _system-wide_.
 
+[source, terminal]
 ----
 $ npm update -g npm
 ----
@@ -121,15 +124,18 @@ Install the modules globally, with the *-g* flag, using the commands below.
 
 Note: in linux systems, you might need to use `sudo npm ...`
 
+[source, terminal]
 ----
 $ npm install -g bower
 ----
 
+[source, terminal]
 ----
 $ npm install -g grunt
 $ npm install -g grunt-cli
 ----
 
+[source, terminal]
 ----
 $ npm install -g gulp
 $ npm install -g gulp-cli
@@ -137,6 +143,7 @@ $ npm install -g gulp-cli
 
 When done, check the tools are available in your system, by checking their versions via command line.
 
+[source, terminal]
 ----
 $ bower -v && grunt -version && gulp -version
 1.7.9
@@ -156,7 +163,7 @@ In the tutorial, we will use the latest JSDT features integrated with Java EE an
 Download the latest version of the _Eclipse IDE for Java EE Developers_
 from the https://eclipse.org/downloads/eclipse-packages/[EPP download page], or from the https://eclipse.org/downloads/index-developer.php[EPP downloads for developers].
 
-When done, unzip and launch the IDE. Then, open the Console by pressing kbd:[Ctrl+Alt+T], and type `npm -v`.
+When done, unzip and launch the IDE. Then, open the Console by pressing kbd:[Ctrl+Alt+Shift+T], and type `npm -v`.
 
 image::verify-npm-from-command-prompt.png[]
 
