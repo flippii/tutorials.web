@@ -1,6 +1,5 @@
 == Installation and configuration of Eclipse WTP
 
-====
 Your Eclipse IDE might already have the WTP tooling installed, in this case skip this step.
 
 Use the Eclipse Update Manager to install the following features from the _Web, XML, Java EE Developmentand OSGi Enterprise Development_ category.
