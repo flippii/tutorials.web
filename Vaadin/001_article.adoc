@@ -5,7 +5,7 @@
 :icons:
 :imagesdir: ./img
 Lars Vogel (c) 2016 vogella GmbH
-Version 0.1, 25.08.2016		
+Version 0.1, 23.01.2017		
 :docinfodir: ../
 :vgwort: Vaadin
 
