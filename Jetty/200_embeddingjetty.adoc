@@ -3,14 +3,14 @@
 
 Use Jetty in an Eclipse RCP application, add all Jetty plug-ins and the `javax.servlet` plug-in as dependency to the _MANIFEST.MF_ and the product.
 
-[source,java]
+[source, java]
 ----
-include:res/embedded/HelloHttpRequestHandler.java[]
+include::res/embedding/HelloHttpRequestHandler.java[]
 ----
 
 [source,java]
 ----
-include:res/embedded/StartJettyHandler.java[]
+include::res/embedding/StartJettyHandler.java[]
 ----
 
 See https://wiki.eclipse.org/Jetty/Tutorial/Embedding_Jetty for details.

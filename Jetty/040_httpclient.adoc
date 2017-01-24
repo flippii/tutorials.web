@@ -2,9 +2,10 @@
 == Using the HttpClient
 
 The following code show a few examples of using the HttpClient of Jetty.
-		
-[source,java]
+
+[source, java]
 ----
 include::res/client/Using.java[]
 ----
+
 

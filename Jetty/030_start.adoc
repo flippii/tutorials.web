@@ -13,8 +13,8 @@ This starts Jetty on
 ....
 http://localhost:8080/
 ....
-	
+
 image::jetty10.gif[]
-	
+
 To stop Jetty press kbd:[Ctrl+C]. 
 

@@ -10,7 +10,7 @@ Version 0.8, 26.10.2016
 :vgwort: Jetty
 
 [abstract]
-This tutorial describes the usage of Maven for building Java applications.
+This tutorial describes the Eclipse Jetty Server.
 
 include::../web/advertisement/afterTableOfContent.adoc[]				
 include::010_overview.adoc[]
