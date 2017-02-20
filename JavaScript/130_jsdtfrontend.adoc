@@ -269,4 +269,5 @@ image::jsdt.demo01-final-result-04-html5-url-rewrite.png[]
 
 === Source Code
 
-You can find the source code for this tutorial at the following web address.
+You can find the source code for this tutorial in the
+https://github.com/vogellacompany/codeexamples-javascript/[https://github.com/vogellacompany/codeexamples-javascript] repository, under the https://github.com/vogellacompany/codeexamples-javascript/tree/master/com.vogella.jsdt.demo.neon01[com.vogella.jsdt.demo.neon01] directory.
