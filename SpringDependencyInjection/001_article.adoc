@@ -1,0 +1,29 @@
+= Dependency Injection with the Spring Framework - Tutorial
+:linkcss:
+:sectnums:                                                          
+:experimental:
+:icons:
+:imagesdir: ./img
+Lars Vogel (c) 2008 - 2017 vogella GmbH
+Version 0.4, 22.03.2017
+:docinfodir: ../
+:vgwort: SpringDependencyInjection
+
+[abstract]
+This article describes how to use dependency injection with the Spring Framework.
+It first describes dependency injection as a general principle, gives then an overview of Spring and explains the configuration of Spring with annotations and with XML.
+
+include::../web/advertisement/afterTableOfContent.adoc[]
+include::010_dependencyinjection.adoc[]
+include::020_springoverview.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
+include::040_installation.adoc[]
+include::050_datamodel.adoc[]
+include::../web/advertisement/inBetween02.adoc[]
+include::070_usageannotations.adoc[]
+include::080_usagexml.adoc[]
+include::200_summary.adoc[]
+include::../support.adoc[]
+include::008_resourceslocal.adoc[]
+include::../copyright.adoc[]
+

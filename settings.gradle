@@ -29,3 +29,5 @@ include 'Vertx'
 include 'Angular'
 include 'SpringJDBC'
 include 'Vaadin'
+include 'SpringDependencyInjection'
+
