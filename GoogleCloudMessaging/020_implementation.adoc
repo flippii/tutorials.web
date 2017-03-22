@@ -123,11 +123,9 @@ uses some persistence to store the registration IDs.
 [[c2dm_registermessage]]
 === Register Receiver for C2DM messages
 
-Similar to registration of the registration receiver you need
-to configure a message receiver. This could be the same or a
-different receiver then the registration receiver. The following
-shows
-an example of an separate message receiver.
+Similar to registration of the registration receiver you need to configure a message receiver. 
+This could be the same or a different receiver than the registration receiver. 
+The following shows an example of an separate message receiver.
 
 [source,java]
 ----

@@ -80,12 +80,11 @@ Create a new JSP page "Trainer.jsp" and change the code to the following:
 include::res/thirdjsf/Trainer.jsp[]
 ----
 
-From the previously examples you should be able to read most of
-the fields. What is new is that is use now the binding. Binding
-allows to bind certain UIControls to a managed bean. This way be bind
-the panel for the result to the controller. The controller can then
-set the rendered attribute of this UIControl depending on the user
-settings.
+From the previously examples you should be able to read most of the fields. 
+What is new is that is use now the binding. 
+Binding allows to bind certain UIControls to a managed bean. 
+This way be bind the panel for the result to the controller. 
+The controller can then set the rendered attribute of this UIControl depending on the user settings.
 
 [[thirdjsf_run]]
 === Run your webapplication

@@ -138,10 +138,8 @@ include::res/server/table/MyTable.java[]
 [[server_callback]]
 === Callback
 
-To receive a callback a class needs to be implemented which can
-then react on a failure or success in the communication. The
-interface AsyncCallback defines these two methods: "OnSuccess" and
-"OnFailure".
+To receive a callback a class needs to be implemented which can then react on a failure or success in the communication. 
+The interface AsyncCallback defines these two methods: "OnSuccess" and "OnFailure".
 
 TIP:  Keep in mind that the server communication is asynchronous. If
 you call your server your GWT application will continue and at some

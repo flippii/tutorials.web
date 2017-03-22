@@ -21,10 +21,8 @@ Grails created the default CSS style sheets under the
 directory `web-app/css/main.css`
 
 
-You can directly change the main.css to make your
-application look different. For example if the feedback
-field should be larger then the name field add then
-following to main.css.
+You can directly change the main.css to make your application look different. 
+For example if the feedback field should be larger than the name field add the following to main.css.
 
 [source,css]
 ----

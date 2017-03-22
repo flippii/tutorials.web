@@ -94,14 +94,7 @@ war
 and make the
 application available.
 
-Web applications may require external libraries. Typically, web
-application contain their own libraries but if you want to make
-certain libraries available for all applications you can put them
-into
-the
-folder
-"lib" and a subfolder below "lib". These libraries are
-then available
-for all web
-applications.
+Web applications may require external libraries. 
+Typically, web application contain their own libraries but if you want to make certain libraries available for all applications you can put them into the folder "lib" and a subfolder below "lib". 
+These libraries are then available for all web applications.
 

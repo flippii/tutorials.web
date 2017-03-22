@@ -13,7 +13,7 @@ Since the root URI, e.g.,
 http://localhost:8080/
 ....
 
-of a web application should show an UI to the user rather then json or xml, the root URI for the rest API should be changed.
+of a web application should show an UI to the user rather than json or xml, the root URI for the rest API should be changed.
 
 This can be done by using the `spring.data.rest.base-path` property in the _application.properties_.
 

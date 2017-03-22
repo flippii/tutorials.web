@@ -110,10 +110,9 @@ Congratulations. You should be able to use your JSF application.
 [[firstjsf_css]]
 === Layout via css
 
-JFP application can get styles via css files. To load a style
-sheet include the following in your JSP page in the header section.
-This then related to a mystyle.css file under your folder
-WebContent/css..
+JFP applications can get styled via css files. 
+To load a style sheet include the following in your JSP page in the header section.
+This is related to the mystyle.css file under your folder WebContent/css..
 
 [source,text]
 ----
