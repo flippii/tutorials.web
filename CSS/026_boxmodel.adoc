@@ -16,10 +16,10 @@ image::css-margins.png[Displaying the CSS margin settings]
 You can define the margins for a box individually or combine them into one statement.
 
 ----
-include::examples/box/margins1.css[]
+include::res/box/margins1.css[]
 ----
 ----
-include::examples/box/margins2.css[]
+include::res/box/margins2.css[]
 ----
 
 [[boxmodel_padding]]
@@ -28,10 +28,10 @@ include::examples/box/margins2.css[]
 Padding defines the inner distance of elements to the end of the box.
 
 ----
-include::examples/box/test.html[]
+include::res/box/test.html[]
 ----
 ----
-include::examples/box/styles.css[]
+include::res/box/styles.css[]
 ----
 
 The total size of the HTML box is defined by the initial size of the box, plus the margins and the padding and a border, if defined.

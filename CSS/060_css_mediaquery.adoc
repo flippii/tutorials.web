@@ -8,5 +8,5 @@ For example the following CSS defines a fixed position for a search box.
 If the screen has a maximum width of 750 or less different styling is used.
 
 ----
-include::examples/mediaquery/search.css[]
+include::res/mediaquery/search.css[]
 ----

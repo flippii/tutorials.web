@@ -4,7 +4,7 @@
 A CSS file can import other CSS files via the '@import' statement.
 It must be the first rule in the style sheet using the '@import' statement.
 
-include::examples/includes/include.css[]
+include::res/includes/include.css[]
 
 [NOTE]
 ====
@@ -14,6 +14,6 @@ If you want to import a css file from a html file it is better to use the follow
 
 and not
 
-include::examples/includes/include.css[]
+include::res/includes/include.css[]
 ====
 

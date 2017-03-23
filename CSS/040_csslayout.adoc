@@ -6,11 +6,11 @@ You can use HTML div container and CSS to layout your webpage.
 Your example the following webpage uses div container.
 
 ----
-include::examples/layout/index.html[]
+include::res/layout/index.html[]
 ----
 
 ----
-include::examples/layout/styleslayout.css[]
+include::res/layout/styleslayout.css[]
 ----
 
 This result in the following layout.

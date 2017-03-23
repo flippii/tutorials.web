@@ -10,14 +10,14 @@ A block element with this style will be removed from the normal flow of the HTML
 For example:
 
 ----
-include::examples/positioning/absolute.html[]
+include::res/positioning/absolute.html[]
 ----
 
 If you want to have a element always on a certain position you can use the fixed position and
 will not move even if you scroll down the HTML page. 
 
 ----
-include::examples/positioning/csspositioning.html[]
+include::res/positioning/csspositioning.html[]
 ----
 
-For more examples see http://www.w3schools.com/Css/css_positioning.asp[CSS positioning].
+For more res see http://www.w3schools.com/Css/css_positioning.asp[CSS positioning].

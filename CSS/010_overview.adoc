@@ -18,7 +18,7 @@ The CSS standard defines _selectors_ and _style rules_.
 The syntax is defined as follows:
 
 ----
-include::examples/first/selector.txt[]
+include::res/first/selector.txt[]
 ----
 
 A selector can be one of a predefined identifier(, e.g., H1), a class name (e.g. .myclass) or an identifier (e.g. #myuniqueid).
@@ -28,7 +28,7 @@ In CSS an identifier is supposed to be unique across all of the elements in a pa
 For example the following CSS file defines the size and color of the 'h1' tag.
 
 ----
-include::examples/first/selectorexample.txt[]
+include::res/first/selectorexample.txt[]
 ----
 
 [[cssintro_pseudoclasses]]
@@ -38,5 +38,5 @@ _CSS pseudo classes_ are used to qualify attributes of selectors.
 For example you can select an visited link in HTML and style is differently.
 
 ----
-include::examples/first/pseudoclassexample.txt[]
+include::res/first/pseudoclassexample.txt[]
 ----

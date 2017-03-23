@@ -6,7 +6,7 @@ Create a new directory and create the following file called 'styles.css'.
 
 [source]
 ----
-include::examples/first/styles.css[]
+include::res/first/styles.css[]
 ----
 
 In the same directory define the following HTML file. 
@@ -14,5 +14,5 @@ This file defines that it uses the 'styles.css' style sheet file from the same s
 
 [source]
 ----
-include::examples/first/exampletablecss.html[]
+include::res/first/exampletablecss.html[]
 ----

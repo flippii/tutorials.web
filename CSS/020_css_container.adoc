@@ -25,13 +25,13 @@ The following example demonstrate both usages. Create the file _stylesdiv.css_
 
 [source]
 ----
-include::examples/div/stylesdiv.css[]
+include::res/div/stylesdiv.css[]
 ----
 
 Create the following HTML file to use the style sheet.
 
 [source]
-include::examples/div/DivTest.html[]
+include::res/div/DivTest.html[]
 
 You can also select by position in the HTML document. 
 For example 'td a' only selects links which are within a table row.
@@ -40,4 +40,4 @@ You can also use other attributes for example the following will define certain 
 which the mouse hovers. 
 They will identify if you have a link already visited or if the mouse hovers over a link and will change the display of the link accordingly.
 
-include::examples/first/links.css[]
+include::res/first/links.css[]
