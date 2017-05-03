@@ -1,6 +1,5 @@
 = Android Cloud to Device Messaging (C2DM) - Tutorial
 :linkcss:
-:sectnums:                                                          
 :experimental:
 :icons:
 :imagesdir: ./img

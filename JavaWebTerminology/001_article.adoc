@@ -1,6 +1,5 @@
 = Introduction to Java Web development - Tutorial
 :linkcss:
-:sectnums:                                                          
 :experimental:
 :icons:
 :imagesdir: ./img

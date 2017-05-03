@@ -1,6 +1,5 @@
 = Cascading Style Sheets (CSS) - Tutorial
 :linkcss:
-:sectnums:                                                          
 :experimental:
 :icons:
 :imagesdir: ./img

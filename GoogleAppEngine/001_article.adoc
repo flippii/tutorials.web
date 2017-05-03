@@ -1,6 +1,5 @@
 = Google App Engine - Python Development (with Eclipse) - Tutorial
 :linkcss:
-:sectnums:                                                          
 :experimental:
 :icons:
 :imagesdir: ./img

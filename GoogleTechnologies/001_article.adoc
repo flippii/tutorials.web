@@ -1,6 +1,5 @@
 = Google Technologies - Overview - Tutorial
 :linkcss:
-:sectnums:                                                          
 :experimental:
 :icons:
 :imagesdir: ./img

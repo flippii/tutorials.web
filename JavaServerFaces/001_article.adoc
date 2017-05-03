@@ -1,6 +1,5 @@
 = JSF (JavaServer Faces) - Tutorial
 :linkcss:
-:sectnums:                                                          
 :experimental:
 :icons:
 :imagesdir: ./img

@@ -1,6 +1,5 @@
 = Google App Engine for Java - Tutorial
 :linkcss:
-:sectnums:                                                          
 :experimental:
 :icons:
 :imagesdir: ./img

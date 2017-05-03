@@ -1,6 +1,5 @@
 = REST with Java (JAX-RS) using Jersey - Tutorial
 :linkcss:
-:sectnums:                                                          
 :experimental:
 :icons:
 :imagesdir: ./img

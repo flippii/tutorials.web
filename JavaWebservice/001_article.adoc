@@ -1,6 +1,5 @@
 = Webservices with Java 1.6 - Tutorial
 :linkcss:
-:sectnums:                                                          
 :experimental:
 :icons:
 :imagesdir: ./img

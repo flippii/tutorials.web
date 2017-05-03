@@ -9,7 +9,7 @@ Provided interfaces for repositories are:
 
 image::spring-data-repositories.png[]
 
-.Table Spring Data JPA repositories
+.Spring Data JPA repositories
 [cols="45%, 55%"]
 |===
 |Type |Description
@@ -54,7 +54,7 @@ TIP: Besides that another query verb is `count`, which returns the count of a qu
 
 Also the method's return type is interchangeable, so the actual query is also determined by the return type.
 
-.Table Possible return types for query methods
+.Possible return types for query methods
 [cols="1,2",options="header"]
 |===
 |Type |Description

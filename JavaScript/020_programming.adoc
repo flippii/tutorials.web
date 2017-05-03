@@ -126,7 +126,7 @@ JavaScript can react to certain events on the page and be registered with webpag
 You can register a function to an event in the HTML page. 
 
 
-.Table Events in Javascript
+.Events in Javascript
 |===
 |Event |Description
 

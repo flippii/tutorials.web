@@ -1,6 +1,5 @@
 = Java web development with Eclipse WTP - Tutorial
 :linkcss:
-:sectnums:                                                          
 :experimental:
 :icons:
 :imagesdir: ./img

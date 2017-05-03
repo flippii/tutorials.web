@@ -1,6 +1,5 @@
 = GWT - Using external jars / Java Projects - Tutorial
 :linkcss:
-:sectnums:                                                          
 :experimental:
 :icons:
 :imagesdir: ./img
