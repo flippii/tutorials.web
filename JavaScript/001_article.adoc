@@ -1,6 +1,5 @@
 = Using JavaScript with Eclipse - Tutorial
 :linkcss:
-:sectnums:
 :experimental:
 :icons:
 :imagesdir: ./img
