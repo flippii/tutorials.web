@@ -3,77 +3,45 @@
 [[jaxrs_intro]]
 === JAX-RS
 
-Java defines REST support via the
-_Java Specification Request (JSR)_
-311. This specification is called
-JAX-RS (The Java API for
-RESTful
-Web
-Services).
-JAX-RS uses annotations
-to define the REST relevance of
-Java
-classes.
+Java defines REST support via the _Java Specification Request (JSR)_ 311.
+This specification is called JAX-RS (The Java API for RESTful Web Services).
+JAX-RS uses annotations to define the REST relevance of Java classes.
 
 [[jersey_intro]]
 === Jersey
 
-_Jersey_ is the reference implementation for the JSR 311 specification.
+The _Jersey_ implementation provides a library to implement Restful webservices in a Java servlet container.
+It is the reference implementation for the JSR 311 specification.
 
-The Jersey implementation provides a library to implement Restful webservices in a Java servlet container.
+Jersey provides a servlet implementation which scans predefined classes to identify RESTful resources.
+You use annotations in the class and methods to define their responsibility.
 
-On the server side Jersey provides a servlet implementation which
-scans predefined
-classes to identify RESTful resources.
-In your
-`web.xml`
-configuration file your register this servlet for your web
-application.
+The Jersey implementation also provides a client library to communicate with a RESTful webservice.
 
-The Jersey implementation also provides a client
-library to
-communicate with
-a RESTful webservice.
+[NOTE]
+====
+http://www.vogella.com/tutorials/Retrofit/article.html[Retrofit] is a very powerful REST client.
+====
 
-The base
-URL
-of this servlet is:
+The base URL of this servlet is:
 
 [source,text]
 ----
 include::res/path/path.txt[]
 ----
 
-This servlet analyzes the incoming HTTP request and
-selects
-the
-correct class and method to respond to this request. This
-selection
-is
-based on annotations in the class and methods.
+This servlet analyzes the incoming HTTP request.
+It selects the correct class and method to respond to this request.
 
-A REST web application consists, therefore, out of data classes
-(resources)
-and
-services. These two types are typically maintained in
-different
-packages as the Jersey servlet will be instructed via the
-`web.xml`
-to
-scan certain packages for data classes.
+A REST web application consists, therefore, out of data classes (resources) and services.
+These two types are typically maintained in different packages.
 
-JAX-RS
-supports the creation of XML and JSON via
-the Java
-Architecture for
-XML Binding (JAXB).
+JAX-RS supports the creation of XML and JSON via the Java Architecture for XML Binding (JAXB).
 
 [[restjersey_annotations]]
 === JAX-RS annotations
 
-The most important
-annotations in JAX-RS are listed in the following
-table.
+The most important annotations in JAX-RS are listed in the following table.
 
 .JAX-RS annotations
 |===

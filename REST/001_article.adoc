@@ -3,15 +3,16 @@
 :experimental:
 :icons:
 :imagesdir: ./img
-Lars Vogel, (c) 2009, 2016 vogella GmbH
-Version 2.6, 26.10.2016
+Lars Vogel, (c) 2009, 2017 vogella GmbH
+Version 2.7, 27.11.2017
 :docinfodir: ../
 :vgwort: REST
 
 [abstract]
 RESTful web services with Java (Jersey / JAX-RS).
-This tutorial explains how to develop RESTful web services in Java with the JAX-RS reference implementation Jersey.
-In this tutorial Eclipse 4.5 (Mars), Java 1.8, Tomcat 6.0 and JAX-RS 2.0 (with Jersey 2.11) is used.
+This tutorial explains how to develop RESTful web services in Java.
+It uses the JAX-RS reference implementation Jersey.
+In this tutorial Eclipse 4.7 (Oxygen), Java 1.8, Tomcat 6.0 and JAX-RS 2.0 (with Jersey 2.11) is used.
   
 include::../web/advertisement/afterTableOfContent.adoc[]
 include::010_overview.adoc[]
