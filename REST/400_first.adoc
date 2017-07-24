@@ -8,9 +8,7 @@ Create a new _Dynamic Web Project_ called _com.vogella.jersey.first_.
 
 image::jerseryfirst10.png[]
 
-Ensure that you create the
-`web.xml`
-deployment descriptor.
+Ensure that you create the `web.xml` deployment descriptor.
 
 image::jerseryfirst20.png[]
 

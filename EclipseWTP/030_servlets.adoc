@@ -1,10 +1,7 @@
 == Exercise: Create and run a servlet
 
-=== Target
-
 In this exercise you create a servlet which works as a webpage counter. 
-This servlet keeps track of the number of visitors of a webpage. 
-The servlet persists the number of visitors in a text file.
+It tracks the number of visitors of the webpage and persists the number in a text file.
 
 === Create web project
 

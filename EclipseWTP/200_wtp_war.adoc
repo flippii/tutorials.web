@@ -1,7 +1,6 @@
 == Web Archive - How to create a war file from Eclipse
 
-´The following describes how to create a Web Archive (WAR) from
-Eclipse.
+The following describes how to create a Web Archive (WAR) from Eclipse.
 
 Right-click on the project and select btn:[Export].
 
