@@ -2,11 +2,16 @@
 
 The Spring Framework is a very comprehensive framework.
 
-The fundamental functionality provided by the Spring Container is dependency injection. Spring provides a light-weight container, e.g. the Spring core container, for dependency injection (DI).
+Spring consists of several modules for different use cases.
+
+See https://docs.spring.io/spring/docs/current/spring-framework-reference/html/overview.html#overview-modules[Spring modules overview].
+
+The fundamental functionality provided by the Spring Container is dependency injection. 
+Spring provides a light-weight container, e.g. the Spring core container, for dependency injection (DI).
 
 This container lets you inject required objects into other objects. This results in a design in which the Java classes are not hardly coupled. The injection in Spring is either done via setter, field or constructor injection.
 
-These classes which are managed by Spring must conform to the JavaBean standard.
+These classes which are managed by Spring must conform to the Java bean standard.
 
 In the context of Spring classes are also referred to as beans or as spring beans.
 

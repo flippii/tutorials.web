@@ -3,20 +3,18 @@
 :experimental:
 :icons:
 :imagesdir: ./img
-(c) 2015, 2016 vogella GmbH
-Version 0.2, 26.10.2016
+(c) 2015, 2017 vogella GmbH
+Version 0.3, 12.06.2017
 :docinfodir: ../
 :vgwort: Spring
 
 [abstract]
-The Spring framework is a popular inversion of control container, which is mainly used to develop web applications.
-But it can also be used in usual clients and even for Android devices.
+The Spring framework is a popular framework to develop Java web applications.
+But it can also be used in desktop clients and even for Android applications.
 
 include::../web/advertisement/afterTableOfContent.adoc[]
 include::010_overview.adoc[]
-include::020_modules.adoc[]
 include::030_dependency_injection.adoc[]
-include::032_spring_di.adoc[]
 include::040_tooling.adoc[]
 include::../web/advertisement/inBetween01.adoc[]
 include::050_spring_data_jpa.adoc[]

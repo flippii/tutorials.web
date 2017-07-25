@@ -9,7 +9,7 @@ In this exercise rest.js, which is a minimalistic rest client for JavaScript, sh
 In rest.js several different interceptors and converter can be configured.
 
 For this example the hal+json mime type is used.
-
+https://github.com/vogellacompany/codeexamples-javaweb
 To configure a rest.js instance a _restclient.js_ script is created inside the _static_ directory.
 
 [source, javascript]
