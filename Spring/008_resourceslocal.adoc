@@ -2,6 +2,8 @@
 
 https://github.com/spring-projects[Spring on Github]
 
+https://docs.microsoft.com/en-us/azure/azure-toolkit-for-eclipse-publish-spring-boot-docker-app[Publish Spring Boot via Docker on Azure]
+
 https://spring.io/guides[Spring Guide]
 
 https://docs.spring.io/spring/docs/current/spring-framework-reference/html/overview.html[Spring Modules[
