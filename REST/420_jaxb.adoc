@@ -1,31 +1,29 @@
 [[jaxb]]
 == RESTful web services and JAXB
 
-JAX-RS supports the automatic creation of XML and JSON via JAXB. For
-an introduction into XML please see
-http://www.vogella.com/tutorials/JavaXML/article.html[Java and XML - Tutorial]
-. For an introduction into JAXB please see
-http://www.vogella.com/tutorials/JAXB/article.html[JAXB]
-. You can continue this tutorial without reading these tutorials, but
-they contain more background information.
+JAX-RS supports the automatic creation of XML and JSON via JAXB. 
+For an introduction into XML please see http://www.vogella.com/tutorials/JavaXML/article.html[Java and XML - Tutorial]. 
+For an introduction into JAXB please see http://www.vogella.com/tutorials/JAXB/article.html[JAXB]. 
+You can continue this tutorial without reading these tutorials, but they contain more background information.
 
 [[jaxb_project]]
-=== Create necessary classes
 
-Create a new
-_Dynamic Web Project_
-called
-_com.vogella.jersey.jaxb_
-. Ensure you create
-`web.xml`
-deployment descriptor.
+[[firstjersey_project]]
+=== Create new Gradle project
 
-=== Configure jersey usage
-
-See <<jerseyprojectsetup>> for the setup.
+Create a new Gradle project named _com.vogella.jersey.jaxb_ with _com.vogella.jersey.jaxb_ as the top-level package name and configure Eclipse WTP.
+You can follow <<projectsetup>> to get started.
+To enable JSON support, add the following dependency to your _build.gradle_ file.
+The second line automatically adds support for the media type `application/json`.
+ 
+[source,java]
+----
+compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.25.1'
+compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.25.1'
+----
 
 [[jaxb_domainmodel]]
-=== Create project
+=== Create Java classes
 
 Create your domain class.
 
@@ -34,32 +32,23 @@ Create your domain class.
 include::res/jaxb/Todo.java[]
 ----
 
-Create the following resource class. This class simply returns
-an
-instance of the
-`Todo`
-class.
+Create the following resource class. 
+This class simply returns an instance of the `Todo` class.
 
 [source,java]
 ----
 include::res/jaxb/TodoResource.java[]
 ----
 
-Change
-`web.xml`
-to the following.
+Change `web.xml` to the following.
 
 [source,xml]
 ----
 include::res/jaxb/web.xml[]
 ----
 
-Run you web application in Eclipse and validate that you can
-access
-your service. Your application should be
-available under the
-following
-URL.
+Run you web application in Eclipse and validate that you can access your service. 
+Your application should be available under the following URL.
 
 [source,text]
 ----
@@ -69,15 +58,17 @@ include::res/links/todo1.txt[]
 [[jaxb_client]]
 === Create a client
 
-Create a new Java project
-_de.vogella.jersey.jaxb.client_
-and add the
-Jersey JARs to the project and the project build path.
-Create the
-following test class.
+Create a new Java Gradle project with _com.vogella.jersey.jaxbclient_ as top-level package name and add the following dependencies to your build.gradle file to import the Jersey dependencies and enable JSON support.
+ 
+[source,text]
+----
+compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.25.1'
+compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.25.1'
+----
+
+Create the following test class.
 
 [source,java]
 ----
-include::res/jaxb/Test.java[]
+include::res/jaxb/TodoTest.java[]
 ----
-

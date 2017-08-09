@@ -1,2 +1,1 @@
-
-http://your_domain:port/display-name/url-pattern/path_from_rest_class
+http://your_domain:port/context-root/url-pattern/path_from_rest_class

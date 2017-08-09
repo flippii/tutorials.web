@@ -1,4 +1,4 @@
-package com.vogella.jersey.first;
+package com.vogella.jersey.first.client;
 
 import java.net.URI;
 
@@ -42,6 +42,6 @@ public class Test {
 	}
 
 	private static URI getBaseURI() {
-		return UriBuilder.fromUri("http://localhost:8080/com.vogella.jersey.first").build();
+		return UriBuilder.fromUri("http://localhost:8080/JerseyFirst").build();
 	}
 }

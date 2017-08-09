@@ -1,4 +1,4 @@
-package com.vogella.jersey.jaxb.model;
+package com.vogella.jersey.jaxb;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -7,24 +7,35 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/todo")
 public class TodoResource {
-	// This method is called if XMLis request
-	@GET
-	@Produces( { MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-	public Todo getXML() {
-		Todo todo = new Todo();
-		todo.setSummary("This is my first todo");
-		todo.setDescription("This is my first todo");
-		return todo;
-	}
-	
-	// This can be used to test the integration with the browser
-	@GET
-	@Produces( { MediaType.TEXT_XML })
-	public Todo getHTML() {
-		Todo todo = new Todo();
-		todo.setSummary("This is my first todo");
-		todo.setDescription("This is my first todo");
-		return todo;
-	}
+
+    // This method is called if XML is requested
+    @GET
+    @Produces({MediaType.APPLICATION_XML})
+    public Todo getXML() {
+        Todo todo = new Todo();
+        todo.setSummary("Application XML Todo Summary");
+        todo.setDescription("Application XML Todo Description");
+        return todo;
+    }
+
+    // This method is called if JSON is requested
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public Todo getJSON() {
+        Todo todo = new Todo();
+        todo.setSummary("Application JSON Todo Summary");
+        todo.setDescription("Application JSON Todo Description");
+        return todo;
+    }
+    
+    // This can be used to test the integration with the browser
+    @GET
+    @Produces({ MediaType.TEXT_XML })
+    public Todo getHTML() {
+        Todo todo = new Todo();
+        todo.setSummary("XML Todo Summary");
+        todo.setDescription("XML Todo Description");
+        return todo;
+    }
 
 }

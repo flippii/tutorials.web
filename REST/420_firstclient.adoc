@@ -1,16 +1,17 @@
 [[firstclient]]
 == Create a REST client
 
-Jersey contains a REST client library which can be used for
-testing or
-to build a real client in Java. The usage of this library is demonstrated in the following tutorial.
+Jersey contains a REST client library which can be used for testing or to build a real client in Java. 
+The usage of this library is demonstrated in the following tutorial.
 
-Create a new Java project
-_com.vogella.jersey.first.client_
-and add the
-Jersey JARs to the project and the project build path.
-Create the
-following test class.
+Create a new Java gradle project with _com.vogella.jersey.first.client_ as top-level package name and add following dependency to your build.gradle file to import the Jersey dependencies.
+ 
+[source,text]
+----
+compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.25.1'
+----
+
+Create the following test class.
 
 [source,java]
 ----

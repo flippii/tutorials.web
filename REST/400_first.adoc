@@ -2,22 +2,17 @@
 == Create your first RESTful Webservice
 
 [[firstjersey_project]]
-=== Create a new web project 
+=== Create a new Gradle project and configure jersey usage and Eclipse WTP
 
-Create a new _Dynamic Web Project_ called _com.vogella.jersey.first_.
+Create a new Gradle project named _com.vogella.jersey.first_ with _com.vogella.jersey.first_ as the top-level package name and configure Eclipse WTP.
+You can follow <<projectsetup>> to get started.
 
-image::jerseryfirst10.png[]
+To import the Jersey dependencies, add the following dependency to your build.gradle file.
 
-Ensure that you create the `web.xml` deployment descriptor.
-
-image::jerseryfirst20.png[]
-
-image::jerseryfirst30.png[]
-
-[[firstjersey_libraries]]
-=== Configure jersey usage
-
-See <<jerseyprojectsetup>> for the setup.
+[source,text]
+----
+compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.25.1'
+----
 
 [[firstjersey_class]]
 === Java Class
@@ -29,64 +24,36 @@ Create the following class.
 include::res/first/Hello.java[]
 ----
 
-This class
-register itself as a get
-resource via the
-`@GET`
-annotation.
-Via the
-`@Produces`
-annotation it
-defines that it delivers
-the
-_text_
-and the
-_HTML_
-MIME types. It also defines via the
-`@Path`
-annotation that its service
-is available under the
-`hello`
-URL.
+This class register itself as a get resource via the `@GET` annotation.
+Via the `@Produces` annotation it defines that it delivers the _text_ and the _HTML_ MIME types.
+It also defines via the `@Path` annotation that its service is available under the `hello` URL.
 
-The browser will always request the HTML MIME type. To see the
-text
-version, you can use tool like
-http://www.vogella.com/tutorials/Ubuntu/article.html#network_curl[curl].
+The browser will always request the HTML MIME type.
+To see the text version, you can use tool like http://www.vogella.com/tutorials/Ubuntu/article.html#network_curl[curl].
 
 [[first_servletdispatcher]]
 === Define Jersey Servlet dispatcher
 
-You need to register Jersey as the servlet dispatcher for REST
-requests. Open the file
-`web.xml`
-and modify it to the following.
+You need to register Jersey as the servlet dispatcher for REST requests.
+
+Open the file `web.xml` and modify it to the following.
 
 [source,xml]
 ----
 include::res/first/web.xml[]
 ----
 
-The
-parameter
-`jersey.config.server.provider.packages`
-defines in
-which
-package Jersey will look for the web service classes.
-This
-property must point to your resources
-classes. The URL pattern
-defines the part of the base URL your application will be placed.
+The parameter `jersey.config.server.provider.packages` defines in which package Jersey will look for the web service classes.
+This property must point to your resources classes.
+The URL pattern defines the part of the base URL your application will be placed.
 
 [[first_run]]
 === Run your rest service
 
-Run you web application in Eclipse. See
-http://www.vogella.com/tutorials/EclipseWTP/article.html[Eclipse WTP]
-for details on how to run dynamic web applications.
+To run your web application in Eclipse, make sure to run the gradle task `eclipseWtp` first.
+Afterwards, you should be able to run the application by menu:right click on the projects name[Run As > Run on Server] 
 
-You should be able to access your resources under the following
-URL:
+You should be able to access your resources under the following URL:
 
 ....
 http://localhost:8080/com.vogella.jersey.first/rest/hello
@@ -94,22 +61,21 @@ http://localhost:8080/com.vogella.jersey.first/rest/hello
 
 image::jerseryfirstresult80.png[Result of the Jersey service]
 
-This name
-is
-derived from the "display-name" defined in the
-`web.xml`
-file,
-augmented with the servlet-mapping URL-pattern and the
-`hello`
-`@Path`
-annotation from your class file.
-You
-should get
-the message "Hello
-Jersey".
+This URL is derived from the _context root_ value in the projects properties _Web Project Settings_ (by default, this is your application name), augmented with the servlet-mapping URL-pattern and the `hello` `@Path` annotation from your class file.
+You should get the message "Hello Jersey".
+
+As we are using Gradle, if you want to update the context root include the following in your build.gradle and update your web container (menu:right click on server[Publish] in the _Servers_ Eclipse View).
+
+[source,java]
+----
+eclipse {
+	wtp {
+    	component {
+      		contextPath = 'newName'
+    	}
+	}
+}
+----
 
 The browser requests the HTML representation of your resource.
-In the next chapter we are going to write a client
-which will read
-the XML representation.
-
+In the next chapter we are going to write a client which will read the XML representation.

@@ -1,44 +1,37 @@
-[[jerseyprojectsetup_gradle]]
-=== Required setup for Gradle with Eclipse web projects
+[[projectsetup]]
+== Required setup for Gradle and Eclipse web projects
 
-==== Prerequisites
+This section describes how to setup Eclipse WTP in a Gradle project.
+This is required for the following tutorials.
+
+=== Prerequisites
 
 Make sure that you followed the http://www.vogella.com/tutorials/EclipseWTP/article.html#installation-of-wtp[Eclipse WTP Tutorial] to install Eclipse WTP.
 
-Make also sure that you followed the http://www.vogella.com/tutorials/EclipseGradle/article.html[Eclipse Buildship Tutorial] to enable gradle support for Eclipse.
+Make also sure that you followed the http://www.vogella.com/tutorials/EclipseGradle/article.html[Eclipse Buildship Tutorial] to enable Gradle support for Eclipse.
 
-Follow the tutorial to create a blank gradle project with the name _com.vogella.jersey.first_ within Eclipse and add a new default package to _src/main/java_ with the name _com.vogella.jersey.first_.
+If you have not yet created a Gradle project, you can follow the Buildship tutorial to create one.
 
+=== Gradle setup
 
-==== Gradle setup
-
-Open the _build.gradle_ file and replace the line _apply plugin: 'java'_ with the following two lines:
+Open the _build.gradle_ file and add the following two lines. 
 
 [source,xml]
 ----
 include::res/gradle/build.gradle_plugins[]
 ----
 
-Since we want to create a web application, we want a _war_ file and not a _jar_ file (which would be created by gradle with the _Java_ plugin).
-
-The _eclipse-wtp_ plugin will later help you to generate the _Eclipse WTP_ project files.
-
-Next, add the following dependency to your _build.gradle_ to add the _Jersey_ implementation to your project:
-
-[source,xml]
-----
-include::res/gradle/build.gradle_dependency[]
-----
+Since we want to create a web application, we want a _war_ file (and not a _jar_ file which would be created by Gradle with the _Java_ plugin).
+The _eclipse-wtp_ plugin helps you to generate the _Eclipse WTP_ project files.
 
 Now, add a new folder with the name _WebContent_ to your projects root. 
-To do so menu:right click on the projects name[New > Folder]. 
-
+To do so, menu:right click on the projects name[New > Folder]. 
 Add another folder with the name _WEB-INF_ to your _WebContent_ folder.
 
 The next step is to add a xml file with the name _web.xml_ to the created _WEB-INF_ folder.
 To do so menu: right click on the created folder name[New > Other...] and select _XML file_.
 
-Your folder structure should now look like this:
+Your folder structure should now look something like this:
 
 image::projectstructure.png[]
 
@@ -49,9 +42,7 @@ Now the newly created folders with the _web.xml_ in it has to be added to the _b
 include::res/gradle/build.gradle_webapp[]
 ----
 
-
 Perform a right-click on the project and select menu:Gradle[Refresh Gradle Project...].
-
 This will add various new tasks to your _Gradle Tasks_ view.
 	
 image::taskview.png[]
