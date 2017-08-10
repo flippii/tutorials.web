@@ -42,6 +42,6 @@ public class Test {
 	}
 
 	private static URI getBaseURI() {
-		return UriBuilder.fromUri("http://localhost:8080/JerseyFirst").build();
+		return UriBuilder.fromUri("http://localhost:8080/com.vogella.jersey.first").build();
 	}
 }

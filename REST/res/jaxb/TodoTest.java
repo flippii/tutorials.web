@@ -37,7 +37,7 @@ public class TodoTest {
 
     private static URI getBaseURI() {
         return UriBuilder.fromUri(
-                "http://localhost:8080/JaxbFirst").build();
+                "http://localhost:8080/com.vogella.jersey.jaxb").build();
     }
 
 }
