@@ -1,16 +1,18 @@
 == What is JavaScript (ECMAScript)?
 
-
-
-JavaScript is a scripting language.
+JavaScript is a  case sensitive scripting language.
 JavaScripts syntax is C-based, with semicolons and curly braces.
 
-In earlier days JavaScript was primarily used within http://www.vogella.com/tutorials/HTML/article.html[HTML] webpages.
 All main browsers contain a compiler or interpreter for JavaScript. 
-Nowadays JavaScript is also used on the server, for example with `Node.js`.
+In earlier days JavaScript was primarily used within http://www.vogella.com/tutorials/HTML/article.html[HTML] webpages.
+Nowadays, JavaScript is also used on the server, for example with `Node.js`.
 
-JavaScript is case sensitive. 
+[NOTE]
+====
 JavaScript and Java are completely different programming languages even though they have a similar name.
+====
+
+=== JavaScript and webpages
 
 You can put JavaScript into an external file or directly into the HTML page. 
 If you put the JavaScript code into the HTML page you can either put it into the header or in the body of the HTML page. 
@@ -18,11 +20,14 @@ JavaScript which is embedded into an HTML page must be surrounded by `<script ty
 JavaScripts in the body is be executed while the page loads.
 JavaScripts in the header is be executed when other JavaScript functions in the HTML body call them. 
 
+
 [[eclipsejavascriptdownload]]
 == Getting Eclipse IDE for JavaScript and Web Developers
 
 Download the *Eclipse IDE for JavaScript and Web Developers* package from http://www.eclipse.org/downloads/index-developer.php.
 Unzip is and start the Eclipse IDE and select a directory to work in.
+
+
 
 [[firstjavascriptwitheclipse]]
 == Your first JavaScript project with Eclipse
