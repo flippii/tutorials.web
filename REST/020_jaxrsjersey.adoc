@@ -1,86 +1,30 @@
-[[restjersey]]
-== JAX-RS with Jersey
-[[jaxrs_intro]]
-=== JAX-RS
+[[jerseyprojectsetup]]
+== Installation of Jersey
 
-Java defines REST support via the _Java Specification Request (JSR)_ 311.
-This specification is called JAX-RS (The Java API for RESTful Web Services).
-JAX-RS uses annotations to define the REST relevance of Java classes.
+[[jerseyprojectsetup_gradle]]
+=== Use Gradle 
 
-[[jersey_intro]]
-=== Jersey
-
-The _Jersey_ implementation provides a library to implement Restful webservices in a Java servlet container.
-It is the reference implementation for the JSR 311 specification.
-
-Jersey provides a servlet implementation which scans predefined classes to identify RESTful resources.
-You use annotations in the class and methods to define their responsibility.
-
-The Jersey implementation also provides a client library to communicate with a RESTful webservice.
-
-[NOTE]
-====
-http://www.vogella.com/tutorials/Retrofit/article.html[Retrofit] is a very powerful REST client.
-====
-
-The base URL of this servlet is:
-
-[source,text]
+[source,xml]
 ----
-include::res/path/path.txt[]
+include::res/gradle/build.gradle_dependency[]
 ----
 
-This servlet analyzes the incoming HTTP request.
-It selects the correct class and method to respond to this request.
+[[jerseyprojectsetup_manual]]
+=== Manual setup of Jersey libraries in an Eclipse project
 
-A REST web application consists, therefore, out of data classes (resources) and services.
-These two types are typically maintained in different packages.
+Download the Jersey distribution as zip file from the https://jersey.java.net/download.html[Jersey download site].
 
-JAX-RS supports the creation of XML and JSON via the Java Architecture for XML Binding (JAXB).
+The zip contains the Jersey implementation JAR and its
+core
+dependencies. It does
+not provide
+dependencies for third
+party JARs
+beyond those for
+JSON support
+and JavaDoc.
 
-[[restjersey_annotations]]
-=== JAX-RS annotations
+Copy all JARs from your Jersey download into the `WEB-INF/lib` folder.
 
-The most important annotations in JAX-RS are listed in the following table.
-
-.JAX-RS annotations
-|===
-|Annotation |Description
-
-|@PATH(your_path)
-|Sets the path to base URL + /your_path. 
-The base URL is based on your application name (the context root), the servlet and the URL pattern from the `web.xml` configuration file.
-
-|@POST
-|Indicates that the following method will answer to an HTTP POST request.
-
-|@GET
-|Indicates that the following method will answer to an HTTP GET request.
-
-|@PUT
-|Indicates that the following method will answer to an HTTP PUT request.
-
-|@DELETE
-| Indicates that the following method will answer to an HTTP DELETE request.
-
-|@Produces(MediaType.TEXT_PLAIN[, more-types])
-|@Produces defines which MIME type is delivered by a method annotated with @GET. 
-In the example text ("text/plain") is produced. 
-Other examples would be "application/xml" or "application/json".
-
-|@Consumes(type[, more-types])
-|@Consumes defines which MIME type is consumed by this method.
-
-|@PathParam
-|Used to inject values from the URL into a method parameter.
-This way you inject, for example, the ID of a resource into the method to get the correct object.
-
-|===
-
-The complete path to a resource is based on the base URL and the @PATH annotation in your class.
-
-[source,text]
-----
-include::res/path/path1.txt[]
-----
+image::jerseryfirst40.png[]
 
