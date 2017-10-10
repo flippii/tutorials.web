@@ -3,7 +3,7 @@
 
 http://www.whatwg.org/specs/web-apps/current-work/[HTML5 Specification]
 
-http://html5rocks.com/
+https://developers.google.com/web/[Learn How to Develop the Next Generation of Applications for the Web]
 
 http://diveintohtml5.org[
 
