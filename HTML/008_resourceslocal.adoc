@@ -15,5 +15,5 @@ http://validator.w3.org[Website which allows to validate HTML pages]
 
 http://brokenlinkcheck.com/[Checker for broken links]
 
-http://www.css4you.de/[CSS Information (in german)]
+http://www.css4you.de/[CSS Information (in German)]
 
