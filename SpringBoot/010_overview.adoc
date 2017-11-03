@@ -1,0 +1,56 @@
+== Spring Boot
+
+`Spring Boot` is an opinionated framework built on top the `Spring Framework`.
+You can find out more about the Spring framework and its modules in our http://www.vogella.com/tutorials/Spring/article.html[Spring tutorial].
+
+While Spring is very powerful and gives you many choices it can also require a lot of manual configuration.
+Spring Boot aims to be highly productive by providing default configuration for most features while still giving you the ability to easily change the behavior according to your needs.
+
+Spring Boot is mostly used to create web application but can also be used for command line applications.
+A Spring Boot web application can be built to a stand-alone jar with an embedded web server that can be started with `java -jar`.
+Spring Boot makes it easy to integrate the various Spring modules into your application through starter POMs that contain all necessary dependencies, which get auto configured.
+
+== Example Spring Boot Application
+
+We will create our first Spring Boot application with the `Spring Tool Suite`, a powerful editor based on the Eclipse IDE.
+You can download it from its https://spring.io/tools/sts[Spring project website].
+
+Once you have started the Spring Tool Suite click on menu:File[New > Spring Starter Project] to open the project creation wizard.
+For the purpose of this example we'll choose a Gradle based project with the web starter dependency.
+
+image::spring_boot_sts_project_wizard1.png[Spring Boot Project wizard page 1] 
+
+image::spring_boot_sts_project_wizard2.png[Spring Boot Project wizard page 2] 
+
+Alternatively you can create your project directly with the https://start.spring.io/[online wizard] and import it into your favorite IDE.
+
+image::spring_boot_project_web_wizard.png[Spring Boot web wizard] 
+
+Open your project and create a new controller:
+
+[source, java]
+----
+package com.vogella.example;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class HelloWorldController {
+	
+    @RequestMapping("/")
+    @ResponseBody
+    String index() {
+        return "Hello, World!";
+    }
+
+}
+----
+
+Now start the class `DemoApplication` as a `Spring Boot App`.
+The embedded Tomcat server starts listening on port 8080.
+When you point your browser to `http://localhost:8080` you should see the welcome message:
+
+image::hello_world_message.png[hello_world_message.png] 
+
