@@ -1,0 +1,35 @@
+== Exercise - Configuring Spring Boot for web based applications
+
+=== Target
+
+In this exercise a Tool is created with which users can submit issues that they found with the site. 
+
+=== Configure
+
+First, there are a few dependencies that need to be added to the example project. 
+Such as: 
+
+Thymeleaf:: Thymeleaf is a powerful template processing engine for the Spring framework. 
+Spring Boot Devtools:: The Spring Boot Devtools provides an ensemble of very useful tools that enhance the development experience alot. Such as Automatic recompiling upon saving and much more.
+Data Rest:: coming soon
+
+Lombok:: anotation processing
+
+H2:: Database
+
+To add these dependecies to your project, just open the `build.gradle` file in the root folder of the project and add the following to the section 'dependencies'. Then `Right Click > Gradle > Refresh Gradle Project`. 
+
+
+[source, groovy]
+----
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+	runtime('org.springframework.boot:spring-boot-devtools')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.projectlombok:lombok:1.16.6')
+	runtime('com.h2database:h2')
+----
+
+=== Validate
+
+Start your application with `Right Click on your Project > Run As > Spring Boot App`. Since we have the `dev-tools` dependency added to project we can use it's `live-reload` functionality. This does not need any configuration and recompiles the application every time you save any file in the project. 
+

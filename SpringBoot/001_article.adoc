@@ -13,7 +13,13 @@ Version 0.1, 02.11.2017
 Spring Boot is a rapid application development platform built on top the popular Spring Framework.
 				
 include::010_overview.adoc[]
-include::020_testing.adoc[]
+include::011_exercise_issuereport_configure.adoc[]
+include::012_exercise_issuereport_controller.adoc[]
+include::013_exercise_issuereport_entityclass.adoc[]
+include::014_exercise_issuereport_templates.adoc[]
+include::015_exercise_issuereport_database.adoc[]
+include::016_exercise_issuereport_rest.adoc[]
+include::090_testing.adoc[]
 include::../web/advertisement/inBetween01.adoc[]
 include::../web/advertisement/inBetween02.adoc[]
 include::../support.adoc[]

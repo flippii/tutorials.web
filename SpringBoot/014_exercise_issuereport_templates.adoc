@@ -1,0 +1,210 @@
+== Exercise - Creating Templates using Thymeleaf
+
+-- THIS NEEDS A LITTLE REWORK. ITS KINDA LATE SO YEAH --
+
+Thymeleaf is a powerful template engine for the Spring framework. It lets you write clean HTML code while also using Java objects for data binding. You already added the Library to your project when you configured it in `3`.
+
+=== HTML Templates
+
+In the root folder of your project is another folder called `src/main/resources`. This contains all resources you need in your SpringBoot application. This is where we create our templates. Open the folder and create a new file called `issuereport_form.html` in it. For the sake of simplicity and since this is not an HTML course just copy the following code into the newly created file.
+
+[source, HTML]
+----
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Vogella Issuereport</title>
+	<link rel="stylesheet" href="./style.css" />
+	<meta charset="UTF-8" />
+	
+</head>
+<body>
+
+	<div class="container">
+		<form method="post" action="#">
+			<h3>Vogella Issuereport</h3>
+			<input type="text" placeholder="Email" />
+			<input type="text" placeholder="Url where the issue was found on" "/>
+			<textarea placeholder="Description of the issue" rows="5" ></textarea>
+			
+			<label for="private_id">Private?</label>
+			<input type="checkbox" name="private" id="private_id" />
+			
+			<label for="updates_id">Keep me posted</label>
+			<input type="checkbox" id="updates_id" name="updates" />
+			
+			<input type="submit" value="Submit"/> 
+		</form>
+	
+		<div class="result_message" >
+			<h3>Your report has been submitted.</h3>
+			<p>Find all issues <a href="/issues">here</a></p>
+		</div>
+	</div>
+</body>
+</html>
+
+----
+
+NOTE: In the `<html>` tag on top of the page you see `xmlns:th="https://www.thymeleaf.org"`. This is needed for all Thymeleaf templates so the engine can recognize it as a template.
+
+There is one more file that needs to be added to the templates folder. Again, create a new file in the templates folder, name it `issuereport_list` and paste the following snippet in. 
+
+[source, HTML]
+----
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Vogella Issuereport</title>
+	<link rel="stylesheet" href="./style.css" />
+	<meta charset="UTF-8" />
+	
+</head>
+<body>
+
+	<div class="container issue_list">
+		<h2>Issues</h2>
+		<br />
+		<table>
+			<tr>
+				<th>Url</th>
+				<th class="desc">Description</th>
+				<th>Done</th>
+				<th>Created</th>
+			</tr>
+		
+		</table>
+	
+	</div>
+</body>
+</html>
+----
+
+=== CSS 
+Create a new file in `static` folder of the `src/main/resources`. Name it `style.css`. In here you can paste the following CSS stylings.
+
+[source, CSS]
+----
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	padding: 100px 0;
+	text-align: center;	
+	
+}
+
+.container form{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	max-width: 350px;
+}
+
+.container form input[type="text"], .container form textarea{
+	width: 100%;
+	padding: 10px;
+	border-radius: 3px;
+	border: 1px solid #b8b8b8;
+	font-family: inherit;
+	margin-bottom: 20px;
+}
+
+.container h3{
+	margin-bottom: 20px;
+}
+
+
+.container form input[type="submit"]{
+	max-width: 250px;
+	margin: auto;
+	display: block;
+	width: 55%;
+	padding: 10px;
+	background: darkorange;
+	border: 1px solid #b8b8b8;
+	border-radius: 3px;
+	margin-top: 20px;
+	cursor: pointer;
+	
+}
+
+.issue_list table{
+	text-align: left;
+	border-collapse: collapse;
+	border: 1px #b8b8b8 solid;
+	margin: auto;
+}
+
+.issue_list .desc{
+	min-width: 500px;
+}
+
+.issue_list td, .issue_list th{
+	border-bottom: 1px #b8b8b8 solid;
+	border-top: 1px #b8b8b8 solid;
+	padding: 5px;
+}
+
+.issue_list tr{
+	height: 35px;
+	transition: background .25s;
+	
+}
+
+.issue_list tr:hover{
+	background: #eee;
+}
+
+.issue_list .status.done:after{
+	content: '✓';
+}
+----
+
+This will not change and you can close it after saving. It is also already embedded into the HTML templates. 
+
+=== Validate
+
+Reopen the `RouteController` and add `issuereport_form` into the constructor of the `ModelAndView` objects in the methods `getReport()` and `submitReport()`. Also add `issuereport_list` to the constructor of the ModelAndView objec in the `getIssues()` method.
+
+Your Controller should now look like this: 
+
+[source, java]
+----
+
+@Controller
+public class RouteController {
+
+	@GetMapping("/issuereport")
+	public ModelAndView getReport() {
+		ModelAndView modelAndView = new ModelAndView("issuereport_form");
+		return modelAndView;
+	}
+	
+	@PostMapping("/issuereport")
+	public ModelAndView submitReport(){
+		ModelAndView modelAndView = new ModelAndView("issuereport_form");
+		return modelAndView;
+	}
+	
+	@GetMapping("/issues")
+	public ModelAndView getIssues() {
+		ModelAndView modelAndView = new ModelAndView("issuereport_list");
+		return modelAndView;
+	}
+	
+}
+
+----
+
+Start your application with `Right Click on your project > Run as > Spring Boot App`. After that, navigate to http://localhost:8080/issuereport[localhost:8080/issuereport].
+
