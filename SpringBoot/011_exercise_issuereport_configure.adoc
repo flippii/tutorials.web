@@ -2,7 +2,7 @@
 
 === Target
 
-In this exercise a Tool is created with which users can submit issues that they found with the site. 
+In the following exercises a Tool is created with which users can submit issues that they found with the site. 
 
 === Configure
 
@@ -10,14 +10,14 @@ First, there are a few dependencies that need to be added to the example project
 Such as: 
 
 Thymeleaf:: Thymeleaf is a powerful template processing engine for the Spring framework. 
-Spring Boot Devtools:: The Spring Boot Devtools provides an ensemble of very useful tools that enhance the development experience alot. Such as Automatic recompiling upon saving and much more.
-Data Rest:: coming soon
+Spring Boot Devtools:: The Spring Boot Devtools provides an ensemble of very useful tools that enhance the development experience a lot. Such as Automatic recompiling upon saving and much more.
+Data JPA:: coming soon
 
-Lombok:: anotation processing
+Lombok:: annotation processing
 
 H2:: Database
 
-To add these dependecies to your project, just open the `build.gradle` file in the root folder of the project and add the following to the section 'dependencies'. Then `Right Click > Gradle > Refresh Gradle Project`. 
+To add these dependencies to your project, just open the `build.gradle` file in the root folder of the project and add the following to the section 'dependencies'. Then `Right Click > Gradle > Refresh Gradle Project`. 
 
 
 [source, groovy]

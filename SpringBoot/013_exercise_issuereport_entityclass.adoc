@@ -1,7 +1,9 @@
 == Exercise - Creating an entity data class
 
+=== Target
 In this exercise we will create a data class that contains all the relevant information, essentially representing a report from a user. 
 
+=== Setup
 Create a new class in the `com.vogella.example` package and name it `IssueReport`.
 
 Add the annotation `@Data` from the `lombok` package above the class declaration. 
