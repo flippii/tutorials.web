@@ -1,0 +1,155 @@
+== Testing Spring Boot Applications
+
+As long as you use constructor or setter injection you can write unit tests without any dependency on Spring.
+Either create the dependencies of the class under test with the `new` keyword or mock them.
+
+If you need to write integration tests you need Spring support to load a Spring ApplicationContext for your test.
+
+To add testing support to your Spring Boot application you can require `spring-boot-starter-test` in your build configuration.
+Besides testing support for Spring boot `spring-boot-starter-test` adds a handful of other useful libraries for your tests like JUnit, Mockito and AssertJ.
+
+== Rolling back database changes after tests
+
+If you want Spring to roll back your database changes after a test finishes you can add `@Transactional` to your test class.
+If you run a @SpringBootTest with either `RANDOM_PORT` or `DEFINED_PORT` your test will get executed in a different thread than the server.
+This means that every transaction initiated on the server won't be rolled back.
+Using `@Transactional` on a test class can hide errors because changes don't get actually flushed to the database.
+Another option is to manually reset/reload the database state after every test.
+This approach works but makes your tests hard to parallelize.
+
+== Test annotations
+
+Spring Boot provides several test annotations that allow you to decide which parts of the application should get loaded.
+To keep test startup times minimal you should only load what your test actually needs.
+For these annotations to work you have to add the `@RunWith(SpringRunner.class)` annotation to your test class.
+You can find an overview of all the auto-configurations that get loaded by a particular annotation in the https://docs.spring.io/spring-boot/docs/current/reference/html/test-auto-configuration.html[Spring Boot manual].
+
+=== @SpringBootTest
+
+The `@SpringBootTest` annotation searches upwards from the test package until it finds a `@SpringBootApplication` or `@SpringBootConfiguration`.
+The Spring team advises to place the Application class into the root package, which should ensure that your main configuration is found by your test.
+This means that your test will start with all Spring managed classes loaded.
+You can set the `webEnvironment` attribute if you want to change which ApplicationContext is created:
+
+* MOCK (default): loads a `WebApplicationContext` but mocks the servlet environment
+* RANDOM_PORT: loads an `EmbeddedWebApplicationContext` with servlet containers in their own thread, listening on a random port
+* DEFINED_PORT: loads an `EmbeddedWebApplicationContext` with servlet containers in their own thread, listening on their configured port
+* NONE: loads an `ApplicationContext` with no servlet environment
+
+To make calls to the server started by your test you can let Spring inject a `TestRestTemplate`:
+
+[source, java]
+----
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public class SpringIntegrationTest {
+
+	@Autowired
+	private TestRestTemplate restTemplate;
+	// ...
+}
+----
+
+=== @WebMvcTest
+
+WebMvcTests are used to test controller behavior without the overhead of starting a web server.
+In conjunction with mocks it is possible to test that routes are configured correctly without the overhead of executing the operations associated with the endpoints.
+A WebMvcTest configures a MockMvc instance that can be used to simulate network calls.
+
+[source, java]
+----
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+
+@RunWith(SpringRunner.class)
+@WebMvcTest(UserController.class)
+public class UserLoginIntegrationTest {
+    @Autowired
+    private MockMvc mvc;
+    @MockBean
+    private UserService userService;
+
+    @Test
+	public void loginTest() throws Exception {
+		mvc.perform(get("/login"))
+			.andExpect(status().isOk())
+			.andExpect(view().name("user/login"));
+	}
+}
+----
+
+If you want Spring to load additional classes you can specify an include filter:
+
+[source, java]
+----
+@WebMvcTest(value = UserController.class, includeFilters = { @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = UserService.class) })
+----
+
+=== @DataJpaTest
+
+DataJpaTests load `@Entity` and `@Repository` but not regular `@Component` classes.
+This makes it possible to test your JPA integration with minimal overhead.
+You can inject a TestEntityManager into your test, which is an EntityManager specifically designed for tests.
+If you want to have your JPA repositories configured in other tests you can use the `@AutoConfigureDataJpa` annotation.
+To use a different database connection than the one specified in your configuration you can use `@AutoConfigureTestDatabase`.
+
+[source, java]
+----
+@RunWith(SpringRunner.class)
+@DataJpaTest
+public class JpaDataIntegrationTest {
+
+	@Autowired
+	private UserRepository userRepository;
+	
+	// ...
+}
+----
+
+[[mocking]]
+== Mocking
+
+Spring Boot provides the `@MockBean` annotation that automatically creates a mock object.
+When this annotation is placed on a field this mock object is automatically injected into any class managed by Spring that requires it.
+
+[source, java]
+----
+@RunWith(SpringRunner.class)
+@WebMvcTest(UserController.class)
+public class UserTest {
+
+    @MockBean
+    private UserService userService;
+    @Autowired
+    private MockMvc mvc;
+    
+    @Test
+	public void loginTest() throws Exception {
+		when(userService.login(anyObject())).thenReturn(true);
+		mvc.perform(get("/login"))
+			.andExpect(status().isOk())
+			.andExpect(view().name("user/login"));
+	}
+}
+----
+
+== MockMvc
+
+`MockMvc` is a powerful tool that allows you to test controllers without starting an actual web server.
+In an `@WebMvcTest` MockMvc gets auto configured and can be injected into the test class with `@Autowired`.
+To auto configure MockMvc in a different test you can use the `@AutoConfigureMockMvc` annotation.
+Alternatively you can create it yourself:
+
+[source, java]
+----
+@Autowired
+private WebApplicationContext webApplicationContext;
+private MockMvc mvc;
+
+@Before
+public void setUp() throws Exception {
+	mvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
+}
+----
+

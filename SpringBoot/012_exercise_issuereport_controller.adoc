@@ -1,0 +1,98 @@
+== Exercise - Creating a RouteController
+
+Create a new package with the name `com.vogella.example.controller`. In here create a new Class named `RouteController`. This class will contain the methods responsible for handling incoming web requests.
+
+To tell Spring that this is a controller the class needs to have the `@Controller` annotation. Place it right on top of the class declaration.
+
+=== Creating controller methods
+In the class, create the following Methods:
+
+[source, java]
+----
+
+	@GetMapping("/issuereport")
+	@ResponseBody
+	public String getReport() {
+		return "get report";
+	}
+
+---- 
+
+This method later will return the base form template in which the user can submit the issue they found. It still returns `null`, the functionality will be added later. 
+
+NOTE: The `@GetMapping` annotation above the method signals the Spring Core that this method should only handle `GET` requests.
+
+Since this method should only be responsible for sending the required HTML files to the user, there should be another method: 
+
+[source, java]
+----
+
+	@PostMapping("/issuereport")
+	@ResponseBody
+	public String submitReport() {
+		return "post report";
+	}
+
+----
+
+This method will be responsible for handling the user input after they submitted the form. When the data is received and handled (e.g. added to the database), this method returns the same `issuereport` template from the first controller method. 
+
+NOTE: The `@PostMapping` annotation signals that this method should only handle `POST` requests and thus only gets called when a `POST` request is received.
+
+The next method will handle the HTML template for a list view in which all the requests can be viewed. 
+
+[source, java]
+----
+	@GetMapping("/issues")
+	@ResponseBody
+	public String getIssues() {
+		return "get list";
+	}
+
+
+----
+
+This method will return a template with a table in it with all reports that were submitted.
+
+NOTE: The `@ResponseBody` annotation will be removed in a later step. For now we need to output just the text to the HTML page. If we were to remove it now the framework would search for a template with the given name and since there is none would throw an error.
+
+=== Validate
+
+The `RouteController` should now look like this:
+
+[source, java]
+----
+package com.vogella.example.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class RouteController {
+
+	@GetMapping("/issuereport")
+	@ResponseBody
+	public String getReport() {
+		return "issuereport_form get";
+	}
+	
+	@PostMapping("/issuereport")
+	@ResponseBody
+	public String submitReport(){
+		return "issuereport_form post;
+	}
+	
+	@RequestMapping("/issues")
+	@ResponseBody
+	public String getIssues() {
+		return "issuereport_list get"
+	}
+	
+}
+
+----
+
+Since we use the dependency `dev-tools` of the SpringBoot framework the server already recompiled the code for us. We only need to refresh the page. If you navigate to http://localhost:8080/issuereport[localhost:8080/issuereport] you should see the text `issuereport_form get` being output to the page.
+

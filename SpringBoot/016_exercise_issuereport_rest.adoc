@@ -1,0 +1,1 @@
+== Exercise - Making the infomation available via REST
