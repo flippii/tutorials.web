@@ -9,7 +9,7 @@ Thymeleaf is a powerful template engine for the Spring framework. It lets you wr
 In the root folder of your project is another folder called `src/main/resources`. This contains all resources you need in your SpringBoot application. This is where we create our templates. Open the folder and create a new file called `issuereport_form.html` in it. This is the file that will be served on the route `/issuereport`. Create another file with the name `issuereport_list` in it. This file will be served on the `/issues` route. But to achieve this, we need to configure our controller to do so.
 
 === Serving HTML Templates
-Currently all our controller methods have the `@ResponseBody`. With this annotation the data sent to the browser is plain text. If we remove it, the Thymeleaf library will look for an HTMLTemplate with the name returned. 
+Currently all our controller methods have the `@ResponseBody` annotation. With this annotation the data sent to the browser is plain text. If we remove it, the Thymeleaf library will look for an HTMLTemplate with the name returned. 
 
 To configure Thymeleaf to do so we need to remove the `@ResponseBody` from all methods in the controller. We will also need to return the name of the template we want to serve on the given route. 
 Return the following strings in the methods respectively:
@@ -18,7 +18,7 @@ getReport():: `issuereport_form`
 submitReport():: `issuereport_form`
 getIssues():: `issurereport_list`
 
-Since we will want to pass data into the template we also need to add a `Model` to the methods parameters. 
+Since we will want to pass data into the template we also need to add a `Model` to the method parameters. 
 Add `Model model` to the controller methods parameters. These will be automatically injected upon calling the method. Since this is fully done by the Spring framework we don't have to worry about this. What we can do is set attributes in the model or change its values. But we will get back to that.
 
 The `RouteController` class should look like this:
@@ -46,7 +46,7 @@ The `RouteController` class should look like this:
 
 ----
 
-Now the application will look for templates with the names a controller method returns. 
+Now the Framework will look for the templates with the given name.
 
 === Binding objects to templates
 
@@ -67,9 +67,15 @@ Since we want the template to show some kind of feedback upon receiving the form
 Just add another attribute with the name of `submitted` and the value `true`.
 
 ==== Validate
-This method should now look like this:
+The methods should now look like this:
 [source, java]
 ----
+	@GetMapping("/issuereport")
+	public String getReport(Model model) {
+		model.addAttribute("issuereport", new IssueReport());
+		return "issuereport_form";
+	}
+
 	@PostMapping(value="/issuereport")
 	public String submitReport(@ModelAttribute IssueReport issueReport, Model model) {
 		IssueReport result = this.issueRepository.save(issueReport);
@@ -80,11 +86,9 @@ This method should now look like this:
 
 ----
 
-Since we don't have any data to pass to the list view of the reports, we will leave it as it is for now.
-
 === Using the Data
 
-To use the objects passed into the templates we need to use specific Thymeleaf HTML syntax. All properties and attributes in an HTML file will begin with `th:`.
+To use the objects passed into the templates we need to use specific Thymeleaf HTML syntax. All properties and attributes in an HTML file that are being used by Thymeleaf and are not standard HTML will begin with `th:`.
 
 We will start with the following basic HTML document with form in it:
 
@@ -271,6 +275,9 @@ Your HTMLTemplate with the name `issuereport_form.html` should look like this:
 </html>
 ----
 
-Reload the page on the route `/issuereport`. Fill in the fields with some values and press submit. It should take you to the same page but this time the message `Your report has been submitted.` should show up. 
+Reload the page on the route `/issuereport`. Fill in the fields with some values and press submit. It should take you to the same page but this time the view should show this:
+
+image::spring_boot_project_submission_modal.png[Spring Boot Project Submission Modal] 
+
 
 

@@ -1,2 +1,60 @@
 == Exercise - Embedding a database
 
+In this exercise you will learn how to use a Database to store the users issues and query them to show them on the list view.
+
+=== XXX
+
+We will use the dependency `h2` for this. You already added this to your project in `3`. This dependency automatically starts a database when you start your app if configured to do so. This is done via adding the following to the `application.properties`. 
+[source, properties]
+----
+# H2
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2
+# Datasource
+spring.datasource.url=jdbc:h2:file:~/test
+spring.datasource.username=sa
+spring.datasource.password=
+spring.datasource.continue-on-error=true
+spring.datasource.driver-class-name=org.h2.Driver
+
+----
+
+This configures the database for development use. 
+
+Now we only need to setup an `interface` to use this in our app. 
+
+Create a new package called `com.vogella.example.repositories`. In here create a new `interface` with the name `IssueRepository`. This `interface` should extend the `interface` 'CrudRepository<>' from the package `org.springframework.data.repository`. Pass in `IssueReport` as the first generic and `Long` as the second. This represents the object you are storing and the id it has inside the database.
+
+You `interface` should now look like this:
+
+[source, java]
+----
+public interface IssueRepository extends CrudRepository<IssueReport, Long>{
+	
+}
+----
+
+This alone would already be enough to fetch all the entries from the database, add new ones to it and do all kinds of basic operations. 
+
+But we also want to fetch all entries but the private ones for example to show them on our public list view. 
+This is done by adding a custom query string to the method. 
+Add this method to your `interface`
+
+[source, java]
+----
+	@Query(value = "SELECT * FROM issues WHERE marked_As_Private = false;", nativeQuery = true)
+	List<IssueReport> findAllButPrivate();
+----
+
+NOTE: The annotation `@Query` lets us add custom queries that are executed upon calling the method. The `nativeQuery` property just allows us to use a SQL like syntax.
+
+We also want to get all Issues reported by a the same email-address. This is also done with a custom method. But this we don't need a custom `@Query`. It's enough to call the method `findAllByXXX` while `XXX` is the field you want to select by. This is passed in as a parameter to the method.
+Add the following to you `interface` as well:
+[source, java]
+----
+	@Query(value = "SELECT * FROM issues WHERE marked_As_Private = false;", nativeQuery = true)
+	List<IssueReport> findAllButPrivate();
+----
+
+
+
