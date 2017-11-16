@@ -1,7 +1,5 @@
 == Exercise - Creating Templates using Thymeleaf
 
--- THIS NEEDS A LITTLE REWORK. ITS KINDA LATE SO YEAH --
-
 Thymeleaf is a powerful template engine for the Spring framework. It lets you write clean HTML code while also using Java objects for data binding. You already added the Library to your project when you configured it in `3`.
 
 === HTML Templates
@@ -86,7 +84,7 @@ The methods should now look like this:
 
 ----
 
-=== Using the Data
+=== Creating a template
 
 To use the objects passed into the templates we need to use specific Thymeleaf HTML syntax. All properties and attributes in an HTML file that are being used by Thymeleaf and are not standard HTML will begin with `th:`.
 
@@ -154,11 +152,51 @@ We also wanted to show some kind of confirmation modal upon submission. There al
 
 Remember that we passed in a boolean with the name `submitted` in the `submitReport(...)` method? This we will now use to determine if we should show the confirmation modal. 
 
-Add `th:if="${submitted}"` to the `<div class="result_message">`. It will now show if the object with the name `submitted` is there and not `false`. Otherwise it will just not render the whole element and all its childs. 
+Add `th:if="${submitted}"` to the `<div class="result_message">`. It will now show if the object with the name `submitted` is there and not `false`. Otherwise it will just not render the whole element and all its children.
+
+=== List view 
+
+Since we already discussed the basics of the general HTML handling with Thymeleaf this won't go as as deep. The following is the template for the list view. Paste it into the file `issuereport_list.html`. 
+
+[source, html]
+----
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Vogella Issuereport</title>
+	<link rel="stylesheet" href="./style.css" />
+	<meta charset="UTF-8" />
+</head>
+<body>
+	<div class="container issue_list">
+		<h2>Issues</h2>
+		<br />
+		<table>
+			<tr>
+				<th>Url</th>
+				<th class="desc">Description</th>
+				<th>Done</th>
+				<th>Created</th>
+			</tr>
+			<th:block th:each="issue : ${issues}">
+				<tr>
+					<td ><a th:href="@{${issue.url}}" th:text="${issue.url}"></a></td>
+					<td th:text="${issue.description}">...</td>
+					<td><span class="status" th:classappend="${issue.done} ? done : pending"></span></td>
+					<td th:text="${issue.created}">...</td>					
+				</tr>
+			</th:block>
+		</table>
+	</div>
+</body>
+</html>
+----
+  
+NOTE: `th:classappend` conditionally applies classes to an element if the expression passed to it is true or false.
 
 === Optional: Stylesheets
 
-If you want to have some styling for the page, this snippet styles it a bit. This is optional and does not change the behavior of the application in anyway. It is already linked to page via the `<link ...>` element in the `<head>` section.
+If you want to have some styling for the page, this snippet styles it a bit. This is optional and does not change the behavior of the application in any way. It is already linked to both pages via the `<link ...>` element in the `<head>` section.
 Create a new file in the `static` folder in `src/main/resources`. Name it `style.css` and copy the following snippet into it. Feel free to play around with it a little.
 
 [source, CSS]

@@ -52,9 +52,92 @@ We also want to get all Issues reported by a the same email-address. This is als
 Add the following to you `interface` as well:
 [source, java]
 ----
-	@Query(value = "SELECT * FROM issues WHERE marked_As_Private = false;", nativeQuery = true)
-	List<IssueReport> findAllButPrivate();
+	List<IssueReport> findAllByEmail(String email);
+----
+
+=== Using the repository
+
+Go back to your controller class and add a new field of the repository interface to the class. Use the `@Autowired` annotation to tell Spring to instantiate this field using its dependency injection mechanism.
+
+[source, java]
+----
+
+@Autowired
+IssueRepository issueRepository;
+
 ----
 
 
+==== Saving records to the database
+
+To save a record to the database simply use the method `save(...)` from the `IssueRepository` interface. Pass in the object you want to store. In this case this is the received form data on the path `/issuereport`. 
+
+[source, java]
+----
+	@PostMapping(value="/issuereport")
+	public String submitReport(@ModelAttribute IssueReport issueReport, Model model) {
+		IssueReport result = this.issueRepository.save(issueReport);
+		model.addAttribute("submitted", true);
+		model.addAttribute("issuereport", result);
+		return "issuereport_form";
+	}
+----
+
+This saves the given object to the database and then returns the freshly saved object. In this case there is not much of a difference but this may vary if you use auto generated values.
+
+==== Fetching all records from the database
+
+Normally this would be done using `findAll()`. But in this case we don't want to include records that are marked as private and for this we created the method `findAllButPrivate()`. 
+
+[source, java]
+----
+	@GetMapping("/issues")
+	public String getIssues(Model model) {
+		model.addAttribute("issues", this.issueRepository.findAllButPrivate());
+		return "issuereport_list";
+	}
+----
+
+=== Validate 
+
+Your `RouteController` should now look like this: 
+[source, java]
+----
+	@Autowired
+	IssueRepository issueRepository;
+	
+	@GetMapping("/issuereport")
+	public String getReport(Model model) {
+		model.addAttribute("issuereport", new IssueReport());
+		return "issuereport_form";
+	}
+	
+	@PostMapping(value="/issuereport")
+	public String submitReport(@ModelAttribute IssueReport issueReport, Model model) {
+		IssueReport result = this.issueRepository.save(issueReport);
+		model.addAttribute("submitted", true);
+		model.addAttribute("issuereport", result);
+		return "issuereport_form";
+	}
+	
+	@GetMapping("/issues")
+	public String getIssues(Model model) {
+		model.addAttribute("issues", this.issueRepository.findAllButPrivate());
+		return "issuereport_list";
+	}
+----
+
+The `IssueRepository` should look like this:
+[source, java]
+----
+public interface IssueRepository extends CrudRepository<IssueReport, Long>{
+	
+	List<IssueReport> findAllByEmail(String email);
+	
+	@Query(value = "SELECT * FROM issues WHERE marked_As_Private = false;", nativeQuery = true)
+	List<IssueReport> findAllButPrivate();
+}
+----
+
+Go ahead and reload the form and enter some data. Now click `submit` and go to the route http://localhost:8080/issues[`/issues`]. You should see the previously entered data.
 
