@@ -1,15 +1,28 @@
 == Exercise - Creating Templates using Thymeleaf
 
-Thymeleaf is a powerful template engine for the Spring framework. It lets you write clean HTML code while also using Java objects for data binding. You already added the Library to your project when you configured it in `3`.
+Thymeleaf is a powerful template engine for the Spring framework. 
+It lets you write clean HTML code while also using Java objects for data binding. 
+You already added the Library to your project when you configured it in <<web_apps>>.
 
 === HTML Templates
 
-In the root folder of your project is another folder called `src/main/resources`. This contains all resources you need in your SpringBoot application. This is where we create our templates. Open the folder and create a new file called `issuereport_form.html` in it. This is the file that will be served on the route `/issuereport`. Create another file with the name `issuereport_list` in it. This file will be served on the `/issues` route. But to achieve this, we need to configure our controller to do so.
+In the root folder of your project there is another folder called `src/main/resources`. 
+This contains all resources you need in your SpringBoot application. 
+This is where we create our templates. 
+Open the folder and create a new file called `issuereport_form.html` in it. 
+This is the file that will be served on the route `/issuereport`. 
+Create another file with the name `issuereport_list.html` in the same folder. 
+This file will be served on the `/issues` route. 
+But to achieve this, we need to configure our controller to do so.
 
 === Serving HTML Templates
-Currently all our controller methods have the `@ResponseBody` annotation. With this annotation the data sent to the browser is plain text. If we remove it, the Thymeleaf library will look for an HTMLTemplate with the name returned. 
 
-To configure Thymeleaf to do so we need to remove the `@ResponseBody` from all methods in the controller. We will also need to return the name of the template we want to serve on the given route. 
+Currently all our controller methods have the `@ResponseBody`. 
+With this annotation the data sent to the browser is plain text. 
+If we remove it, the Thymeleaf library will look for an HTML Template with the name returned. 
+
+To configure Thymeleaf we need to remove the `@ResponseBody` from all methods in the controller. 
+We will also need to return the name of the template we want to serve on the given route. 
 Return the following strings in the methods respectively:
 
 getReport():: `issuereport_form`

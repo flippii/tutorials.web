@@ -26,7 +26,7 @@ Alternatively you can create your project directly with the https://start.spring
 
 image::spring_boot_project_web_wizard.png[Spring Boot web wizard] 
 
-Open your project and create a new controller:
+Open your project and create a new controller class named `HelloWorldController.java` in the `com.vogella.example` package:
 
 [source, java]
 ----

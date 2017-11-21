@@ -1,8 +1,9 @@
+[[web_apps]]
 == Exercise - Configuring Spring Boot for web based applications
 
 === Target
 
-In the following exercises a Tool is created with which users can submit issues that they found with the site. 
+In the following exercises a issues tool is created. With this tool users can submit issues they found on a website.
 
 === Configure
 

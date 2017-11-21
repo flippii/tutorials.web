@@ -4,7 +4,7 @@
 :experimental:
 :icons:
 :imagesdir: ./img
-Fabian Pfaff, (c) 2017 vogella GmbH
+Fabian Pfaff, Jonas Hungershausen (c) 2017 vogella GmbH
 Version 0.1, 02.11.2017
 :docinfodir: ../
 :vgwort: SpringBoot
@@ -15,14 +15,14 @@ Spring Boot is a rapid application development platform built on top the popular
 include::010_overview.adoc[]
 include::011_exercise_issuereport_configure.adoc[]
 include::012_exercise_issuereport_controller.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
 include::013_exercise_issuereport_entityclass.adoc[]
 include::014_exercise_issuereport_templates.adoc[]
+include::../web/advertisement/inBetween02.adoc[]
 include::015_exercise_issuereport_database.adoc[]
 include::016_exercise_issuereport_admin.adoc[]
 include::017_exercise_issuereport_rest.adoc[]
 include::090_testing.adoc[]
-include::../web/advertisement/inBetween01.adoc[]
-include::../web/advertisement/inBetween02.adoc[]
 include::../support.adoc[]
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]	

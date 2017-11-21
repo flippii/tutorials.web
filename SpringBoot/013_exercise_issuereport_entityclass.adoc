@@ -1,16 +1,17 @@
 == Exercise - Creating an entity data class
 
 === Target
-In this exercise we will create a data class that contains all the relevant information, essentially representing a report from a user. 
+In this exercise we will create a data class that contains all the relevant information, essentially representing an issue report from a user. 
 
 === Setup
 Create a new class in the `com.vogella.example` package and name it `IssueReport`.
 
 Add the annotation `@Data` from the `lombok` package above the class declaration. 
 
-This will create `getter` and `setter` methods during compilation. This helps you write cleaner code as you don't have to declare them manually. 
+This will create `getter` and `setter` methods during compilation. 
+This helps you write cleaner code as you don't have to declare them manually. 
 
-TIP: If you wan't to use these methods before compilation you will need the `lombok` plugin. You can download it from https://projectlombok.org/download[projectlombok.org/download]. 
+TIP: If you want to use these methods before compilation you will need the `lombok` plugin. You can download it from https://projectlombok.org/download[projectlombok.org/download]. 
 
 Also add the `@Entity` annotation. This will tell the Spring framework that this is just a data class.
 
@@ -22,7 +23,6 @@ Add the following fields and a default constructor to the class:
 ----
 
 	private long id;
-	
 	private String email;
 	private String url;
 	private String description;
