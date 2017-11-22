@@ -188,8 +188,6 @@ This is done by adding the attribute `th:field="*{...}"` to the field while `...
 
 NOTE: `${...}` is the way to refer to objects that were passed to the template. `*{...}` is the syntax to refer to objects of these objects. 
 
--- JENNIFER: I dont understand the explanation of *{...}
-
 Add the following attributes to the `<input>` and `<textarea>` elements respectively.
 
 - JENNIFER: if I enter the th:field="*{...}" I get error messages.
