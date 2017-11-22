@@ -1,7 +1,7 @@
 == Exercise - Creating a RouteController
 
-Create a new package with the name `com.vogella.example.controller`. 
-In here create a new Class named `RouteController`. 
+In `src/main/java` create a new package with the name `com.vogella.example.controller`. 
+In here create a new java Class named `RouteController`. 
 This class will contain the methods responsible for handling incoming web requests.
 
 To tell Spring that this is a controller the class needs to have the `@Controller` annotation. 
@@ -21,20 +21,19 @@ public class RouteController {
 ----
 
 === Creating controller methods
-In the class, create the following Methods:
+In the `RouteController` class, create the following Methods:
 
 [source, java]
 ----
-
 	@GetMapping("/issuereport")
 	@ResponseBody
 	public String getReport() {
-		return "issuereport_form get";
+		return "issuereport_form";
 	}
-
 ---- 
 
-This method later will return the base form template in which the user can submit the issue they found. It still returns `null`, the functionality will be added later. 
+This method later will return the base form template in which the user can submit the issue they found. 
+It still returns `null`, the functionality will be added later. 
 
 NOTE: The `@GetMapping` annotation above the method signals the Spring Core that this method should only handle `GET` requests.
 
@@ -42,13 +41,11 @@ Since this method should only be responsible for sending the required HTML files
 
 [source, java]
 ----
-
 	@PostMapping("/issuereport")
 	@ResponseBody
 	public String submitReport() {
-		return "issuereport_form post";
+		return "issuereport_form";
 	}
-
 ----
 
 This method will be responsible for handling the user input after submitting the form. 
@@ -63,15 +60,15 @@ The next method will handle the HTML template for a list view in which all the r
 	@GetMapping("/issues")
 	@ResponseBody
 	public String getIssues() {
-		return "issuereport_list get";
+		return "issuereport_list";
 	}
-
-
 ----
 
 This method will return a template with a list of all reports that were submitted.
 
-NOTE: The `@ResponseBody` annotation will be removed in a later step. For now we need to output just the text to the HTML page. If we would remove it now the framework would search for a template with the given name and since there is none would throw an error.
+NOTE: The `@ResponseBody` annotation will be removed in a later step. 
+For now we need to output just the text to the HTML page. 
+If we would remove it now the framework would search for a template with the given name and since there is none would throw an error.
 
 === Validate
 
@@ -91,23 +88,23 @@ public class RouteController {
 	@GetMapping("/issuereport")
     @ResponseBody
     public String getReport() {
-        return "issuereport_form get";
+        return "issuereport_form";
     }
 	@PostMapping("/issuereport")
     @ResponseBody
     public String submitReport() {
-        return "issuereport_form post";
+        return "issuereport_form";
     }
 	@GetMapping("/issues")
     @ResponseBody
     public String getIssues() {
-        return "issuereport_list get";
+        return "issuereport_list";
     }
 }
 ----
 
 Since we use the dependency `dev-tools` of the SpringBoot framework the server already recompiled the code for us. 
 We only need to refresh the page. 
-If you navigate to http://localhost:8080/issuereport[localhost:8080/issuereport] you should see the text `get report`.
+If you navigate to http://localhost:8080/issuereport[localhost:8080/issuereport] you should see the text `issuereport_form`.
 
 

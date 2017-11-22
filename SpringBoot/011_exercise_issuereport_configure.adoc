@@ -3,7 +3,7 @@
 
 === Target
 
-In the following exercises a issues tool is created. With this tool users can submit issues they found on a website.
+In the following exercises a issue reporting tool is created. With this tool users can submit issues they found on a website.
 
 === Configure
 
