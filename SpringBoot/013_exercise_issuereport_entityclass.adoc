@@ -30,8 +30,14 @@ Add the following fields and a default constructor to the class:
 	public IssueReport() {}
 ----
 
-The fields `email`, `url`, `description`, `markedAsPrivate` and `updates` will be coming from the form the user submitted. 
-The rest will be generated on creation or when the report is updated.
+The values of the fields `email`, `url`, `description`, `markedAsPrivate` and `updates` will be coming from the form the user submitted. 
+The others will be generated on creation or when the report is updated.
+
+For better accessibility of the values it's good practice to use `getters` and `setters`.
+To automatically generate them `Right Click` in the source code window of the `IssueReport` class. Then select the `Source` sub-menu; from that menu selecting `Generate Getters and Setters` will cause a wizard window to appear. 
+Select the fields (in this case all) that you want `getters` and `setters` to be generated for. 
+Confirm with ok.
+
 
 === Validation
 

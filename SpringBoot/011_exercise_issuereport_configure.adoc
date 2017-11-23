@@ -13,7 +13,6 @@ Such as:
 Thymeleaf:: Thymeleaf is a powerful template processing engine for the Spring framework. 
 Spring Boot Devtools:: The Spring Boot Devtools provides an ensemble of very useful tools that enhance the development experience a lot. Such as Automatic recompiling upon saving and much more.
 Data JPA:: coming soon
-
 H2:: Database
 
 To add these dependencies to your project, just open the `build.gradle` file in the root folder of the project and add the following to the section 'dependencies'. Then `Right Click > Gradle > Refresh Gradle Project`. 
@@ -28,6 +27,44 @@ To add these dependencies to your project, just open the `build.gradle` file in 
 ----
 
 === Validate
+
+Your `build.gradle` should now look like this
+[souce, groovy]
+----
+buildscript {
+	ext {
+		springBootVersion = '1.5.8.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+group = 'com.vogella.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	runtime('org.springframework.boot:spring-boot-devtools')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	runtime('com.h2database:h2')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+----
 
 Start your application with `Right Click on your Project > Run As > Spring Boot App`. Since we have the `dev-tools` dependency added to project we can use it's `live-reload` functionality. This does not need any configuration and recompiles the application every time you save any file in the project. 
 
