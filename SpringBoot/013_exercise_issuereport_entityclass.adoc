@@ -6,17 +6,10 @@ In this exercise we will create a data class that contains all the relevant info
 === Setup
 Create a new class in the `com.vogella.example` package and name it `IssueReport`.
 
-Add the annotation `@Data` from the `lombok` package above the class declaration. 
-
-This will create `getter` and `setter` methods during compilation. 
-
 --JENNIFER: in my case the getter and setter where not created. What went wrong?
+--JONAS: I removed the lombok part of this tutorial. Its nice to have but not needed.
 
-This helps you write cleaner code as you don't have to declare them manually. 
-
-TIP: If you want to use these methods before compilation you will need the `lombok` plugin. You can download it from https://projectlombok.org/download[projectlombok.org/download]. 
-
-Also add the `@Entity` annotation. This will tell the Spring framework that this is just a data class.
+Add the `@Entity` annotation. This will tell the Spring framework that this is just a data class.
 
 === Adding fields to the entity data class
 
@@ -51,9 +44,7 @@ package com.vogella.example;
 import java.sql.Date;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import lombok.Data;
 
-@Data
 @Entity
 public class IssueReport {
 	@Id
