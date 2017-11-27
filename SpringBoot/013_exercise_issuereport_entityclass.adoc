@@ -10,6 +10,7 @@ Create a new class in the `com.vogella.example` package and name it `IssueReport
 --JONAS: I removed the lombok part of this tutorial. Its nice to have but not needed.
 
 Add the `@Entity` annotation. This will tell the Spring framework that this is just a data class.
+Also add the `@Table(name="issues")` annotation to the class. This later tells our database system to store the data in the table `issues`.
 
 === Adding fields to the entity data class
 
@@ -18,6 +19,7 @@ Add the following fields and a default constructor to the class:
 [source, java]
 ----
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private String email;
 	private String url;

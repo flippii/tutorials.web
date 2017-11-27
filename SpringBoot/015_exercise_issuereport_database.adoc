@@ -23,15 +23,22 @@ This configures the database for development use.
 
 Now we only need to setup an `interface` to use this in our app. 
 
-Create a new package called `com.vogella.example.repositories`. In here create a new `interface` with the name `IssueRepository`. This `interface` should extend the `interface` 'CrudRepository<>' from the package `org.springframework.data.repository`. Pass in `IssueReport` as the first generic and `Long` as the second. This represents the object you are storing and the id it has inside the database.
+Create a new package called `com.vogella.example.repositories`. In here create a new `interface` with the name `IssueRepository`. This `interface` should extend the `interface` `CrudRepository<>` from the package `org.springframework.data.repository`. Pass in `IssueReport` as the first generic and `Long` as the second. This represents the object you are storing and the id it has inside the database.
 
 You `interface` should now look like this:
 
 [source, java]
 ----
+package com.vogella.example.repositories;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.vogella.example.IssueReport;
+
 public interface IssueRepository extends CrudRepository<IssueReport, Long>{
-	
+
 }
+
 ----
 
 This alone would already be enough to fetch all the entries from the database, add new ones to it and do all kinds of basic operations. 
@@ -42,8 +49,20 @@ Add this method to your `interface`
 
 [source, java]
 ----
+package com.vogella.example.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import com.vogella.example.IssueReport;
+
+public interface IssueRepository extends CrudRepository<IssueReport, Long>{
 	@Query(value = "SELECT * FROM issues WHERE marked_As_Private = false;", nativeQuery = true)
 	List<IssueReport> findAllButPrivate();
+}
+
 ----
 
 NOTE: The annotation `@Query` lets us add custom queries that are executed upon calling the method. The `nativeQuery` property just allows us to use a SQL like syntax.
@@ -52,7 +71,22 @@ We also want to get all Issues reported by a the same email-address. This is als
 Add the following to you `interface` as well:
 [source, java]
 ----
+package com.vogella.example.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import com.vogella.example.IssueReport;
+
+public interface IssueRepository extends CrudRepository<IssueReport, Long>{
+	@Query(value = "SELECT * FROM issues WHERE marked_As_Private = false;", nativeQuery = true)
+	List<IssueReport> findAllButPrivate();
+	
 	List<IssueReport> findAllByEmail(String email);
+
+}
 ----
 
 === Using the repository
@@ -61,9 +95,46 @@ Go back to your controller class and add a new field of the repository interface
 
 [source, java]
 ----
+package com.vogella.example.controller;
 
-@Autowired
-IssueRepository issueRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.vogella.example.IssueReport;
+import com.vogella.example.repositories.IssueRepository;
+
+@Controller
+public class RouteController {
+
+	
+	@Autowired
+	IssueRepository issueRepository;
+	
+	@GetMapping("/issuereport")
+	public String getReport(Model model) {
+		model.addAttribute("issuereport", new IssueReport());
+		return "issuereport_form";
+	}
+
+	@PostMapping(value="/issuereport")
+    public String submitReport(@ModelAttribute IssueReport issueReport, Model model) {
+		
+		model.addAttribute("submitted", true);
+		model.addAttribute("issuereport", new IssueReport());
+		
+		return "issuereport_form";
+    }
+    
+    @GetMapping("/issues")
+    public String getIssues(Model model) {
+        return "issuereport_list";
+    }
+	
+}
 
 ----
 
@@ -74,13 +145,43 @@ To save a record to the database simply use the method `save(...)` from the `Iss
 
 [source, java]
 ----
+package com.vogella.example.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.vogella.example.IssueReport;
+import com.vogella.example.repositories.IssueRepository;
+
+@Controller
+public class RouteController {
+	@Autowired
+	IssueRepository issueRepository;
+	
+	@GetMapping("/issuereport")
+	public String getReport(Model model) {
+		model.addAttribute("issuereport", new IssueReport());
+		return "issuereport_form";
+	}
+
 	@PostMapping(value="/issuereport")
-	public String submitReport(@ModelAttribute IssueReport issueReport, Model model) {
+    public String submitReport(@ModelAttribute IssueReport issueReport, Model model) {
 		IssueReport result = this.issueRepository.save(issueReport);
 		model.addAttribute("submitted", true);
 		model.addAttribute("issuereport", result);
+		
 		return "issuereport_form";
-	}
+    }
+    
+    @GetMapping("/issues")
+    public String getIssues(Model model) {
+        return "issuereport_list";
+    }
+}
 ----
 
 This saves the given object to the database and then returns the freshly saved object. In this case there is not much of a difference but this may vary if you use auto generated values.
@@ -91,18 +192,20 @@ Normally this would be done using `findAll()`. But in this case we don't want to
 
 [source, java]
 ----
-	@GetMapping("/issues")
-	public String getIssues(Model model) {
-		model.addAttribute("issues", this.issueRepository.findAllButPrivate());
-		return "issuereport_list";
-	}
-----
+package com.vogella.example.controller;
 
-=== Validate 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
-Your `RouteController` should now look like this: 
-[source, java]
-----
+import com.vogella.example.IssueReport;
+import com.vogella.example.repositories.IssueRepository;
+
+@Controller
+public class RouteController {
 	@Autowired
 	IssueRepository issueRepository;
 	
@@ -111,31 +214,88 @@ Your `RouteController` should now look like this:
 		model.addAttribute("issuereport", new IssueReport());
 		return "issuereport_form";
 	}
-	
+
 	@PostMapping(value="/issuereport")
-	public String submitReport(@ModelAttribute IssueReport issueReport, Model model) {
+    public String submitReport(@ModelAttribute IssueReport issueReport, Model model) {
 		IssueReport result = this.issueRepository.save(issueReport);
 		model.addAttribute("submitted", true);
 		model.addAttribute("issuereport", result);
+		
+		return "issuereport_form";
+    }
+    
+    @GetMapping("/issues")
+    public String getIssues(Model model) {
+    	model.addAttribute("issues", this.issueRepository.findAllButPrivate());
+        return "issuereport_list";
+    }
+}
+
+----
+
+=== Validate 
+
+Your `RouteController` should now look like this: 
+[source, java]
+----
+package com.vogella.example.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.vogella.example.IssueReport;
+import com.vogella.example.repositories.IssueRepository;
+
+@Controller
+public class RouteController {
+	@Autowired
+	IssueRepository issueRepository;
+	
+	@GetMapping("/issuereport")
+	public String getReport(Model model) {
+		model.addAttribute("issuereport", new IssueReport());
 		return "issuereport_form";
 	}
-	
-	@GetMapping("/issues")
-	public String getIssues(Model model) {
-		model.addAttribute("issues", this.issueRepository.findAllButPrivate());
-		return "issuereport_list";
-	}
+
+	@PostMapping(value="/issuereport")
+    public String submitReport(@ModelAttribute IssueReport issueReport, Model model) {
+		IssueReport result = this.issueRepository.save(issueReport);
+		model.addAttribute("submitted", true);
+		model.addAttribute("issuereport", result);
+		
+		return "issuereport_form";
+    }
+    
+    @GetMapping("/issues")
+    public String getIssues(Model model) {
+    	model.addAttribute("issues", this.issueRepository.findAllButPrivate());
+        return "issuereport_list";
+    }
+}
+
 ----
 
 The `IssueRepository` should look like this:
 [source, java]
 ----
+package com.vogella.example.repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
+
+import com.vogella.example.IssueReport;
+
 public interface IssueRepository extends CrudRepository<IssueReport, Long>{
-	
-	List<IssueReport> findAllByEmail(String email);
-	
 	@Query(value = "SELECT * FROM issues WHERE marked_As_Private = false;", nativeQuery = true)
 	List<IssueReport> findAllButPrivate();
+	
+	List<IssueReport> findAllByEmail(String email);
 }
 ----
 
