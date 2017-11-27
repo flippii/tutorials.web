@@ -17,6 +17,7 @@ Add the following fields and a default constructor to the class:
 
 [source, java]
 ----
+	@Id
 	private long id;
 	private String email;
 	private String url;
