@@ -4,7 +4,10 @@ In this exercise you will learn how to use a Database to store the users issues 
 
 === XXX
 
-We will use the dependency `h2` for this. You already added this to your project in `3`. This dependency automatically starts a database when you start your app if configured to do so. This is done via adding the following to the `application.properties`. 
+We will use the dependency `h2` for this. You already added this to your project in <<web_apps>>. 
+This dependency automatically starts a database when you start your app if configured to do so. 
+To achieve this, add the following to the `application.properties`. 
+
 [source, properties]
 ----
 # H2
@@ -19,11 +22,18 @@ spring.datasource.driver-class-name=org.h2.Driver
 
 ----
 
-This configures the database for development use. 
+This configures the database for development use.
+ 
+JENNIFER: What do you mean with development use?
 
-Now we only need to setup an `interface` to use this in our app. 
+Now we only need to setup an `interface` to use this in our application. 
 
 Create a new package called `com.vogella.example.repositories`. In here create a new `interface` with the name `IssueRepository`. This `interface` should extend the `interface` `CrudRepository<>` from the package `org.springframework.data.repository`. Pass in `IssueReport` as the first generic and `Long` as the second. This represents the object you are storing and the id it has inside the database.
+Create a new package called `com.vogella.example.repositories`. 
+In here create a new `interface` with the name `IssueRepository`. 
+This `interface` should extend the `interface` 'CrudRepository<>' from the package `org.springframework.data.repository`. 
+Pass in `IssueReport` as the first parameter and `Long` as the second. 
+This represents the object you are storing and the id it has inside the database.
 
 You `interface` should now look like this:
 
@@ -36,14 +46,13 @@ import org.springframework.data.repository.CrudRepository;
 import com.vogella.example.IssueReport;
 
 public interface IssueRepository extends CrudRepository<IssueReport, Long>{
-
 }
 
 ----
 
-This alone would already be enough to fetch all the entries from the database, add new ones to it and do all kinds of basic operations. 
+This alone would already be enough to fetch all the entries from the database, add new entries and do all kind of basic operations. 
 
-But we also want to fetch all entries but the private ones for example to show them on our public list view. 
+But we want to fetch all entries which are not marked private and show them on the public list view.
 This is done by adding a custom query string to the method. 
 Add this method to your `interface`
 
@@ -61,11 +70,18 @@ import com.vogella.example.IssueReport;
 public interface IssueRepository extends CrudRepository<IssueReport, Long>{
 	@Query(value = "SELECT * FROM issues WHERE marked_As_Private = false;", nativeQuery = true)
 	List<IssueReport> findAllButPrivate();
-}
-
 ----
 
-NOTE: The annotation `@Query` lets us add custom queries that are executed upon calling the method. The `nativeQuery` property just allows us to use a SQL like syntax.
+JENNIFER: Shouldnt it be SELECT * FROM issues WHERE markedAsPrivate = false;?
+
+NOTE: The annotation `@Query` lets us add custom queries that are executed upon calling the method. 
+The `nativeQuery` property just allows us to use a SQL like syntax.
+
+We also want to get all Issues reported by the same email-address. 
+This is also done with a custom method. 
+But this we don't need a custom `@Query`. 
+It's enough to call the method `findAllByXXX` while `XXX` is the field you want to select by. 
+This is passed in as a parameter to the method.
 
 We also want to get all Issues reported by a the same email-address. This is also done with a custom method. But this we don't need a custom `@Query`. It's enough to call the method `findAllByXXX` while `XXX` is the field you want to select by. This is passed in as a parameter to the method.
 Add the following to you `interface` as well:
@@ -91,7 +107,8 @@ public interface IssueRepository extends CrudRepository<IssueReport, Long>{
 
 === Using the repository
 
-Go back to your controller class and add a new field of the repository interface to the class. Use the `@Autowired` annotation to tell Spring to instantiate this field using its dependency injection mechanism.
+Go back to your controller class `RouteController.java` and add a new field of the repository interface to the class. 
+Use the `@Autowired` annotation to tell Spring to instantiate this field using its dependency injection mechanism.
 
 [source, java]
 ----
@@ -141,7 +158,8 @@ public class RouteController {
 
 ==== Saving records to the database
 
-To save a record to the database simply use the method `save(...)` from the `IssueRepository` interface. Pass in the object you want to store. In this case this is the received form data on the path `/issuereport`. 
+To save a record to the database simply use the method `save(...)` from the `IssueRepository` interface and pass the object you want to store. 
+In this case this is the received data on the path `/issuereport`. 
 
 [source, java]
 ----
@@ -184,7 +202,8 @@ public class RouteController {
 }
 ----
 
-This saves the given object to the database and then returns the freshly saved object. In this case there is not much of a difference but this may vary if you use auto generated values.
+This saves the given object to the database and then returns the freshly saved object. 
+In this case there is not much of a difference but this may vary if you use auto generated values.
 
 ==== Fetching all records from the database
 
