@@ -1,0 +1,51 @@
+== How to create a user
+
+In order to create a user please go to the  https://learn.vogella.com/registration?[Learning Portal registration page], enter your personal data and the access key which was given to you by the vogella company. 
+If you haven’t got an access key please contact us per Email at info@vogella.com.
+
+== Log in
+Once you have registered go to the https://learn.vogella.com/login[Login page] and log in with your user and password. 
+In the case that you forgot your password, click on `Forgot your password?` on the login screen in order to reset your password.
+
+== Your courses
+After login to the learning portal you will see your courses. 
+Select one of them to start learning.
+
+== Structure of courses
+
+=== Study lessons and Exercises
+          
+Courses have multiple chapters, in each chapter you will find study lessons and exercises. 
+Study lessons are marked with a image:study.svg[study lesson] and exercises are are marked with a image:exercise.svg[exercise]. 
+
+First start reading the study lessons in order to learn all about the chapter. 
+After concluding the reading of the study lessons start doing the exercises. 
+We suggest to start with the exercises in numerical order.
+
+=== Course progress
+On the left side of the screen you can see your personal learning progress. 
+Each time you finish either a study lesson or an exercise mark them as finished with the image:checkbox.svg[finished] icon and the progress indicator will be updated accordingly. 
+It is also possible to set a filter on  the course in order to only see the unfinished study lessons and exercises.
+
+=== Mark study lessons and exercises
+If you want to mark a study lesson or an exercise for whatever reason, you can use the image:star.svg[marked] icon. 
+It is also possible to set a filter on the marked items.
+
+== Issues in the learning portal
+
+Should you find issues, inconsistencies or spelling errors in the exercises or study lessons, please report them. 
+The link to report an issue can be found in the exercise or study lesson site underneath the table of content. 
+Alternative you can go to menu:Contact us[Problems with the Learning Portal].
+
+== Help from vogella
+
+Should you need remote personal support for your course from the vogella experts, Please contact us under menu:Contact us.
+
+== How to purchase a new course
+
+If you would like to purchase a new course please contact us. 
+To add a new course log in to the learning portal then go to: menu:your user[Join course] in the menu bar.
+Now the new course will be added to the list of your courses.
+
+
+

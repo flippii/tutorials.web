@@ -1,0 +1,18 @@
+= How to work with the learning portal
+:toclevels: 4
+:toc-title:
+:toc: preamble
+:linkcss:
+:sectnums:      
+:show-link-uri:
+:experimental:
+:icons:
+:imagesdir: ./img
+(c) 2009, 2017 vogella GmbH
+Version 13, 29.11.2017
+
+[abstract]
+Getting started with the Learning Portal
+			
+include::010_overview.adoc[]
+

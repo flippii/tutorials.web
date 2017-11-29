@@ -30,4 +30,5 @@ include 'Angular'
 include 'SpringJDBC'
 include 'Vaadin'
 include 'SpringDependencyInjection'
+include '002_Learning_Portal'
 
