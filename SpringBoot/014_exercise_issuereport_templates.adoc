@@ -218,6 +218,10 @@ The result should look like this: `<div class="result_message" th:if="${submitte
 
 Now the class `result_message` will only be displayed if `submitted` is `true`.
 
+NOTE: The reason for this is that we hardcoded the `submitted` boolean ONLY to the `POST` request mapping.
+Thus it will only be added to the template if the `HTTP` method was `POST`. 
+So only if the form was submitted.
+
 JENNIFER: In our example it will always be displayed because we hard coded it to `true` in the `RouteController.java`.
 -- JONAS: Actually thats not how it's going to happen. It will be hard coded on the POST route. Which means only if the form was submitted.
 
