@@ -6,9 +6,6 @@ In this exercise we will create a data class that contains all the relevant info
 === Setup
 Create a new class in the `com.vogella.example` package and name it `IssueReport`.
 
---JENNIFER: in my case the getter and setter where not created. What went wrong?
---JONAS: I removed the lombok part of this tutorial. Its nice to have but not needed.
-
 Add the `@Entity` annotation. This will tell the Spring framework that this is just a data class.
 Also add the `@Table(name="issues")` annotation to the class. This later tells our database system to store the data in the table `issues`.
 
