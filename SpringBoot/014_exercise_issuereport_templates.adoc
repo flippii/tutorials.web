@@ -183,9 +183,8 @@ This is done by adding `th:object="${issuereport}"` to the `<form>` tag in `issu
 
 NOTE: `th:action` is the syntax for adding the action that should happen upon submission of the form.
 
--- JENNIFER: What about: th:action="@{/issuereport}" do we need it?
-
-NOTE: Remember that we set the name of the `IssueReport` object to `issuereport`? We refer to it now by using that name. The same can be done with any name and object.
+NOTE: Remember that we set the name of the `IssueReport` object to `issuereport`? We refer to it now by using that name. 
+The same can be done with any name and object.
 
 This alone will not tell Spring to auto-populate the fields in the object. 
 We need to specify in the `<input>` elements what field this should represent. 
@@ -194,8 +193,6 @@ This is done by adding the attribute `th:field="*{}"`.
 NOTE: `${}` is the way to refer to objects that were passed to the template. `*{}` is the syntax to refer to objects of these objects. 
 
 Add the following attributes to the `<input>` and `<textarea>` elements respectively.
-
-- JENNIFER: if I enter the th:field="*{...}" I get error messages.
 
 `<input type="text" placeholder="Email" id="email" th:field="*{email}"/>`
 
@@ -222,7 +219,7 @@ The result should look like this: `<div class="result_message" th:if="${submitte
 Now the class `result_message` will only be displayed if `submitted` is `true`.
 
 JENNIFER: In our example it will always be displayed because we hard coded it to `true` in the `RouteController.java`.
--- JONAS: Actually thats not how it's going to happen. It will be hardcoded on the POST route. Which means only if the form was submitted.
+-- JONAS: Actually thats not how it's going to happen. It will be hard coded on the POST route. Which means only if the form was submitted.
 
 The `issuereport_form.html` should now look like this:
 
@@ -391,13 +388,10 @@ body{
 Reload the page on the `http://localhost:8080/issuereport`. 
 The styling should have been applied.
 Enter some values in the fields and press submit. 
-Now the `result_message` div will also be showed.
-
-The route `/issues` will show an empty list. This is because we have nothing added there yet.
-
-JENNIFER: actually it is always been shown :-)
+Now the `result_message` `<div>` will also be showed.
 
 image::spring_boot_project_submission_modal.png[Spring Boot Project Submission Modal] 
 
+The route `/issues` will show an empty list. This is because we have nothing added there yet.
 
 
