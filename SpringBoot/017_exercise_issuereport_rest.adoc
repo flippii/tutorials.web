@@ -4,48 +4,82 @@ If you want to access your data from another application or make it available fo
 
 === Setup
 
-Create a new class named `ApiController`. You may create a new package for this or use the existing `com.vogella.example.controller` package. To tell Spring that this is a RestController and that the methods inside this controller should return JSON data, add the `@RestController` annotation to the class. 
+Create a new class named `ApiController`. 
+You may create a new package for this or use the existing `com.vogella.example.controller` package. 
+To tell Spring that this is a RestController and that the methods inside this controller should return JSON data, add the `@RestController` annotation to the class. 
 
 The setup for the routes is similar to normal routes. 
 Use the `@GetMapping` for `GET` requests. And `@PostMapping` for `POST` requests. 
-The difference is that this time you don't want templates to be rendered. So the return type for the methods should be whatever you want to return. E.g. `IssueReport` or even `List<IssueReport>`.
+The difference is that this time you don't want templates to be rendered. 
+So the return type for the methods should be whatever you want to return. E.g. `IssueReport` or even `List<IssueReport>`.
 
 [source, java]
 ----
-	@GetMapping("/api/issues")
+package com.vogella.example.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.vogella.issuereport.IssueReport;
+
+@RestController
+public class ApiController {
+	@GetMapping(value="/api/issues")
 	public List<IssueReport> getIssues() {
-	
+		return null;
 	}
 	
-	@GetMapping("/api/issues/{id}")
+	@GetMapping(value="/api/issues/{id}")
 	public IssueReport getIssue(@PathVariable(value="id") long id) {
-		
+		return null;
 	}
+}
 ----
 
-If you want to access a variable in the URL (in this case `id`) you do this by first declaring it a variable in the `@GetMapping` arguments (`{id}`). Than you require it as a method parameter with the `@PathVariable` annotation.
+If you want to access a variable in the URL (in this case `id`) you do this by first declaring it a variable in the `@GetMapping` arguments (`{id}`).
+Than you require it as a method parameter with the `@PathVariable` annotation.
 
-=== YXX
+=== Making the data available
 
 Accessing the data is pretty easy too. Just (re-)use the previously created `IssueRepository` and return the values from the methods in there.
 
 [source, java]
 ----
+package com.vogella.example.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.vogella.issuereport.IssueReport;
+import com.vogella.issuereport.repositories.IssueRepository;
+
+@RestController
+public class ApiController {
 	@Autowired
 	IssueRepository issueRepository;
 	
-	@GetMapping("/api/issues")
+	@GetMapping(value="/api/issues")
 	public List<IssueReport> getIssues() {
 		return this.issueRepository.findAllButPrivate();
 	}
 	
-	@GetMapping("/api/issues/{id}")
+	@GetMapping(value="/api/issues/{id}")
 	public IssueReport getIssue(@PathVariable(value="id") long id) {
 		return this.issueRepository.findOne(id);
 	}
+}
 ----
 
-Again the `IssueRepository` is automatically injected into the class. You can still use the custom query method `findAllButPrivate(...)`. 
+Again the `IssueRepository` is automatically injected into the class. 
+You can still use the custom query method `findAllButPrivate()`. 
 
-The method `findOne(long id)` queries only the object with the given Id. In this case we get it from the URL parameters and then we return the object queried or (in case nothing is found) nothing.
+The method `findOne(long id)` queries only the object with the given Id.
+In this case we get it from the URL parameters and then we return the object queried or (in case nothing is found) nothing.
 
