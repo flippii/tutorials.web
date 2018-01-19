@@ -26,7 +26,10 @@ Alternatively you can create your project directly with the https://start.spring
 
 image::spring_boot_project_web_wizard.png[Spring Boot web wizard] 
 
-Open your project and create a new controller class named `HelloWorldController.java` in the `com.vogella.example` package:
+Three folders were automatically created `src/main/java`, `src/main/resources` and `src/main/test. 
+`src/main/java` will be used to save all java source files, `src/main/resources` will be used for templates and any other files and `src/main/test` will be used for tests.
+
+Open your project and create a new controller class named `HelloWorldController.java` in the `com.vogella.example` package of the `src/main/java` folder:
 
 [source, java]
 ----

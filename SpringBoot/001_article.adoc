@@ -10,7 +10,7 @@ Version 0.1, 02.11.2017
 :vgwort: SpringBoot
 
 [abstract]
-Spring Boot is a rapid application development platform built on top the popular Spring Framework.
+Spring Boot is a rapid application development platform built on top of the popular Spring Framework.
 				
 include::010_overview.adoc[]
 include::011_exercise_issuereport_configure.adoc[]
