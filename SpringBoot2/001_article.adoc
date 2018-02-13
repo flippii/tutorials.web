@@ -1,0 +1,25 @@
+= Spring Boot 2.0 - Tutorial
+:linkcss:
+:sectnums:
+:experimental:
+:icons:
+:imagesdir: ./img
+(c) Simon Scholz - 2018 vogella GmbH
+Version 0.1, 13.02.2018
+:docinfodir: ../
+:vgwort: SpringBoot2
+
+[abstract]
+This tutorial is about SpringBoot 2.0.
+				
+include::010_overview.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
+include::100_exercise_create_spring_boot_project.adoc[]
+include::120_exercise_todo_model.adoc[]
+include::130_exercise_rest_controller.adoc[]
+include::../web/advertisement/inBetween02.adoc[]
+include::../support.adoc[]
+include::008_resourceslocal.adoc[]
+include::../copyright.adoc[]	
+
+

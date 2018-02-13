@@ -1,0 +1,34 @@
+== Exercise: Create a Todo domain model
+
+Create another package called _com.vogella.springboot2.domain_ and create a _Todo_ class inside it.
+
+[source, java]
+----
+package com.vogella.springboot2.domain;
+
+import java.util.Date;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class Todo {
+
+	private long id;
+	private String summary = "";
+	private String description = "";
+	private boolean done = false;
+	private Date dueDate = new Date();
+	
+	public Todo(long id) {
+		
+	}
+}
+----
+
+The _Todo_ class is a simple data class and the _@Data_ annotation of the Lombok library automatically generates getters and setters for the properties and _hashCode()_, _equals()_ and _toString()_ methods.
+
+If a certain constructor is implemented and a constructor with no arguments should still be available the _@NoArgsConstructor_ annotation can be used.
+
+

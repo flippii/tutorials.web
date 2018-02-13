@@ -1,0 +1,5 @@
+== SpringBoot 2.0
+
+The second major release of Spring Boot is based on new features coming with Version 5 of the Spring Framework.
+Since reactive functional programming has proven to be a great concept for asynchronous processing of code this is one of the main new features coming with Spring Boot 2.0
+

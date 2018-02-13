@@ -1,0 +1,95 @@
+== Exercise: Creating a reactive rest controller
+
+Create a package private _TodoRestController_ class inside a _com.vogella.springboot2.controller_ package.
+
+[source, java]
+----
+package com.vogella.springboot2.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.vogella.springboot2.domain.Todo;
+
+import reactor.core.publisher.Flux;
+
+@RestController #<1>
+class TodoRestController {
+
+	private Flux<Todo> todos; #<2>
+
+	public TodoRestController() {
+		todos = createTodoModel();
+	}
+
+	private Flux<Todo> createTodoModel() {
+		Todo todo = new Todo(1);
+		todo.setSummary("Learn Spring Boot 2.0");
+		
+		Todo todo2 = new Todo(2);
+		todo2.setSummary("Learn Reactor Framework");
+		
+		return Flux.just(todo, todo2);
+	}
+	
+	@GetMapping("/getTodos") #<3>
+	public Flux<Todo> getTodos() {
+		return todos;
+	}
+}
+----
+
+<1> The @RestController annotation tells Spring that this class is a rest controller, which will be instantiated by the Spring framework
+<2> Flux is a type of the Reactor Framework, which implements the reactive stream api like RxJava does.
+<3> The @GetMapping annotation tells Spring that the endpoint http://{yourdomain}/getTodos should invoke the _getTodos()_ method.
+
+Now start the application by right clicking the project and clicking on menu:Run as[Spring Boot App].
+
+image::./spring-start-console.png[] 
+
+Along with many more logging statements the previously created rest endpoint _/getTodos_ is mentioned.
+
+Now let's test the result when navigating to http://localhost:8080/getTodos.
+
+image::./restcontroller-json.png[] 
+
+What we can see here is that the result is shown as JSON. By default the _@RestController_ annotation handles this and if no specific mime type for the response is requested the result will be the object serialized as JSON. By default Spring uses the Jackson library the serialize and deserialize Java objects from and to JSON.
+
+== Optional: Change the default port of the web app
+
+By default Spring Boot uses port 8080, but this can be changed by using the _server.port_ property in the _application.properties_ file.
+
+image::./server-port-app-props.png[] 
+
+== Exercise: Passing parameters to the rest api
+
+Since the amount of Todos can potentially increase really fast it would be nice to have search capabilities so that clients do not have to receive the whole list of Todos all the time and do the search on the client side.
+
+[source, java]
+----
+@RestController
+class TodoRestController {
+
+
+	@GetMapping("/getTodos")
+	public Flux<Todo> getTodos(
+	@RequestParam(name = "limit", required = false, defaultValue = "-1") long limit) { #<1>
+		if(-1 == limit) {
+			return todos;
+		}
+		return todos.take(limit);
+	}
+
+	@GetMapping("/getTodoById")
+	public Flux<Todo> getTodoById(long id) { #<2>
+		return todos.filter(t -> id == t.getId());
+	}
+
+}
+
+----
+
+<1> @RequestParam can be used to request parameters and also apply default values, if the parameter is not required.
+
+<2> If the parameter is required a the name of the request parameter should be equal to method parameter's name, the @RequestParam annotation can be omitted.
+

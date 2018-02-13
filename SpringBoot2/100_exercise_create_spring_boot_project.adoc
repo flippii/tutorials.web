@@ -1,0 +1,25 @@
+== Exercise: Create a reactive Spring Boot project
+
+In the Spring Tool Suite just right click in the _Package Explorer_ and go to menu:New[Spring Starter Project]
+
+image::./create-spring-starter-project.png[] 
+
+Use the following settings in the project creation dialog:
+
+image::./spring-starter-project-wizard.png[] 
+
+When pressing btn:[Next] the desired dependencies can be specified.
+
+First select Spring Boot Version *2.0.0* and the following dependencies:
+
+* Lombok
+* MongoDB
+* Reactive MongoDB
+* Embedded MongoDB
+* Actuator
+* Reactive Web
+
+image::./spring-starter-dependencies.png[] 
+
+Then press btn:[Finish] so that the project will be generated.
+
