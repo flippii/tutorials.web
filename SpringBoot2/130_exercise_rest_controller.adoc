@@ -157,3 +157,6 @@ Todo no. 3 can be deleted, since we learned how to create rest controllers now.
 ----
 curl -X DELETE http://localhost:8080/deleteTodo/3
 ----
+
+After using this curl command the remaining Todos are returned without Todo no. 3.
+
