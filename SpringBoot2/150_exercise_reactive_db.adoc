@@ -1,4 +1,4 @@
-== Reactive database access with Spring Data
+== Exercise: Reactive database access with Spring Data
 
 Using reactive Reactor types like `Flux<T>` is really nice and powerful, but keeping the Todo data in-memory is not.
 
@@ -139,7 +139,7 @@ public class TodoService {
 
 For all other operations the `ReactiveCrudRepository` default methods, which return Reactor types, are used (`findAll`, `findById`, `save`, `deleteById`).
 
-== Implement custom query methods
+== Exercise: Implement custom query methods
 
 Basically everything can be done by using CRUD operations. In case a `Todo` should be found by looking for text in the summary the `findAll()` method can be used and the service can iterate over the `Flux<Todo>` in order to find appropriate `Todo` objects.
 
@@ -195,7 +195,7 @@ Flux<Todo> findByCategory(@Param("categoryName") String categoryName);
 ----
 ====
 
-== Using Example objects for queries
+== Exercise: Using Example objects for queries
 
 With the query method schema lots of properties of the `Todo` class can be combined for a query, but sometimes this can also be very verbose:
 

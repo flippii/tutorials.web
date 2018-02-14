@@ -1,4 +1,4 @@
-== Creating a service for the business logic
+== Exercise: Creating a service for the business logic
 
 Creating an initial model should not be part of the `TodoRestController` itself.
 A rest controller should simply specify the rest API and then delegate to a service, which handles the business logic in behind.
