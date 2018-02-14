@@ -98,8 +98,8 @@ class TodoRestController {
 	}
 
 	@GetMapping("/getTodoById")
-	public Flux<Todo> getTodoById(long id) { #<2>
-		return todos.filter(t -> id == t.getId());
+	public Mono<Todo> getTodoById(long id) {  #<2>
+		return Mono.from(todos.filter(t -> id == t.getId()));
 	}
 
 }
@@ -110,21 +110,22 @@ class TodoRestController {
 
 <2> If the parameter is required a the name of the request parameter should be equal to method parameter's name, the @RequestParam annotation can be omitted.
 
-== Posting data to the rest controller
+== Exercise: Posting data to the rest controller
 
 It is nice to receive data, but we also want to create new Todos.
 
 [source, java]
 ----
 @PostMapping("/newTodo") #<1>
-public Flux<Todo> newTodo(Todo todo) {
-	todos = todos.mergeWith(Flux.just(todo)); #<2>
-	return todos;
+public Mono<Todo> newTodo(@RequestBody Todo todo) {
+	Mono<Todo> todoMono = Mono.just(todo);
+	todos = todos.mergeWith(todoMono); #<2>
+	return todoMono;
 }
 ----
 
 <1> `@PostMapping` is used to specify that data has to be posted
-<2> The `mergeWith` method merges the existing Flux with the new one
+<2> The `mergeWith` method merges the existing Flux with the new `Mono<Todo>` containing the posted `Todo` object
 
 Curl or any rest client you like, e.g., https://addons.mozilla.org/de/firefox/addon/rester/[RESTer] for Firefox, can be used to post data to the rest endpoint.
 
@@ -133,18 +134,18 @@ Curl or any rest client you like, e.g., https://addons.mozilla.org/de/firefox/ad
 curl -d '{"id":4, "summary":"New custom Todo"}' -H "Content-Type: application/json" -X POST http://localhost:8080/newTodo
 ----
 
-This will return the whole list of Todos including the "New custom Todo".
+This will return the "New custom Todo" and show it on the command line.
 
-== Sending a delete request
+== Exercise: Sending a delete request
 
 Last but not least Todos should also be deleted by using the rest API.
 
 [source, java]
 ----
 @DeleteMapping("/deleteTodo/{id}") #<1>
-public Flux<Todo> deleteTodo(@PathVariable("id") int id) { #<2>
+public Mono<Void> deleteTodo(@PathVariable("id") int id) { #<2>
 	todos = todos.filter(todo -> todo.getId() != id);
-	return todos;
+	return todos.then();
 }
 ----
 
@@ -159,4 +160,6 @@ curl -X DELETE http://localhost:8080/deleteTodo/3
 ----
 
 After using this curl command the remaining Todos are returned without Todo no. 3.
+
+Call the http://localhost:8080/getTodos method again to check whether the deletion was successful.
 
