@@ -141,16 +141,19 @@ Last but not least Todos should also be deleted by using the rest API.
 
 [source, java]
 ----
-@DeleteMapping("/deleteTodo")
-public Flux<Todo> deleteTodo(int id) {
+@DeleteMapping("/deleteTodo/{id}") #<1>
+public Flux<Todo> deleteTodo(@PathVariable("id") int id) { #<2>
 	todos = todos.filter(todo -> todo.getId() != id);
 	return todos;
 }
 ----
 
+<1> `@DeleteMapping` can be used for delete rest operations and curly braces + name like _{id}_ can be used as alternative of using query parameters like ?id=3
+<2> `@PathVariable` specifies the path, which will be used for the {id} path variable
+
 Todo no. 3 can be deleted, since we learned how to create rest controllers now.
 
 [source, curl]
 ----
-curl -d id=3 -X DELETE http://localhost:8080/deleteTodo
+curl -X DELETE http://localhost:8080/deleteTodo/3
 ----
