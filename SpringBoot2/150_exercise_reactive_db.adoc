@@ -255,5 +255,17 @@ public Mono<Todo> findTodoByExample(Todo todo) {
 	Example<Todo> example = Example.of(todo, matcher);
 	return todoRepository.findOne(example);
 }
+
 ----
+
+When looking for exact matches no `ExampleMatcher` has to be configured.
+
+[source, java]
+----
+public Mono<Todo> findTodoByExampleSimple(Todo todo) {
+	Example<Todo> example = Example.of(todo);
+	return todoRepository.findOne(example);
+}
+----
+
 
