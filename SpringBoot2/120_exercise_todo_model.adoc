@@ -8,11 +8,14 @@ package com.vogella.springboot2.domain;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
+@Data #<1>
+@NoArgsConstructor #<2>
+@JsonIgnoreProperties(ignoreUnknown = true) #<3>
 public class Todo {
 
 	private long id;
@@ -22,13 +25,16 @@ public class Todo {
 	private Date dueDate = new Date();
 	
 	public Todo(long id) {
-		
+		this.id = id;
 	}
 }
+
 ----
 
-The _Todo_ class is a simple data class and the _@Data_ annotation of the Lombok library automatically generates getters and setters for the properties and _hashCode()_, _equals()_ and _toString()_ methods.
+<1> The _Todo_ class is a simple data class and the _@Data_ annotation of the Lombok library automatically generates getters and setters for the properties and _hashCode()_, _equals()_ and _toString()_ methods.
 
-If a certain constructor is implemented and a constructor with no arguments should still be available the _@NoArgsConstructor_ annotation can be used.
+<2> If a certain constructor is implemented and a constructor with no arguments should still be available the _@NoArgsConstructor_ annotation can be used.
+
+<3> The Todo is also supposed to be serialized and deserialized with JSON, Spring uses the Jackson library for this by default. @JsonIgnoreProperties(ignoreUnknown = true) specifies that properties, which are available in the JSON String, but not specified as class members will be ignored instead of raising an Exception.
 
 

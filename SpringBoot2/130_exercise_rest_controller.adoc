@@ -7,6 +7,7 @@ Create a package private _TodoRestController_ class inside a _com.vogella.spring
 package com.vogella.springboot2.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.vogella.springboot2.domain.Todo;
@@ -25,18 +26,26 @@ class TodoRestController {
 	private Flux<Todo> createTodoModel() {
 		Todo todo = new Todo(1);
 		todo.setSummary("Learn Spring Boot 2.0");
-		
+		todo.setDescription("Easily create modern reactive webapps with Spring Boot 2.0");
+
 		Todo todo2 = new Todo(2);
 		todo2.setSummary("Learn Reactor Framework");
+		todo2.setDescription("Use the power of the reactive io api with the Reactor Framework");
 		
-		return Flux.just(todo, todo2);
+		Todo todo3 = new Todo(3);
+		todo3.setSummary("Learn @RestController");
+		todo3.setDescription("Learn how to create @RestController and use rest endpoints");
+
+		return Flux.just(todo, todo2, todo3);
 	}
 	
 	@GetMapping("/getTodos") #<3>
 	public Flux<Todo> getTodos() {
 		return todos;
 	}
+
 }
+
 ----
 
 <1> The @RestController annotation tells Spring that this class is a rest controller, which will be instantiated by the Spring framework
@@ -61,6 +70,13 @@ By default Spring Boot uses port 8080, but this can be changed by using the _ser
 
 image::./server-port-app-props.png[] 
 
+Since this is an optional exercise, we should leave the port to be 8080.
+
+[source, properties]
+----
+server.port=8080
+----
+
 == Exercise: Passing parameters to the rest api
 
 Since the amount of Todos can potentially increase really fast it would be nice to have search capabilities so that clients do not have to receive the whole list of Todos all the time and do the search on the client side.
@@ -70,6 +86,7 @@ Since the amount of Todos can potentially increase really fast it would be nice 
 @RestController
 class TodoRestController {
 
+	// ... more code
 
 	@GetMapping("/getTodos")
 	public Flux<Todo> getTodos(
@@ -93,3 +110,47 @@ class TodoRestController {
 
 <2> If the parameter is required a the name of the request parameter should be equal to method parameter's name, the @RequestParam annotation can be omitted.
 
+== Posting data to the rest controller
+
+It is nice to receive data, but we also want to create new Todos.
+
+[source, java]
+----
+@PostMapping("/newTodo") #<1>
+public Flux<Todo> newTodo(Todo todo) {
+	todos = todos.mergeWith(Flux.just(todo)); #<2>
+	return todos;
+}
+----
+
+<1> `@PostMapping` is used to specify that data has to be posted
+<2> The `mergeWith` method merges the existing Flux with the new one
+
+Curl or any rest client you like, e.g., https://addons.mozilla.org/de/firefox/addon/rester/[RESTer] for Firefox, can be used to post data to the rest endpoint.
+
+[source, curl]
+----
+curl -d '{"id":4, "summary":"New custom Todo"}' -H "Content-Type: application/json" -X POST http://localhost:8080/newTodo
+----
+
+This will return the whole list of Todos including the "New custom Todo".
+
+== Sending a delete request
+
+Last but not least Todos should also be deleted by using the rest API.
+
+[source, java]
+----
+@DeleteMapping("/deleteTodo")
+public Flux<Todo> deleteTodo(int id) {
+	todos = todos.filter(todo -> todo.getId() != id);
+	return todos;
+}
+----
+
+Todo no. 3 can be deleted, since we learned how to create rest controllers now.
+
+[source, curl]
+----
+curl -d id=3 -X DELETE http://localhost:8080/deleteTodo
+----
