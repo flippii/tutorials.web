@@ -8,11 +8,18 @@ For Ubuntu you can install Tomcat via the following commands.
 
 [source,text]
 ----
-include::res/install/installtomcat[]
+sudo apt-get install tomcat8
+sudo apt-get install tomcat8-admin
+sudo apt-get install tomcat8-docs
+sudo apt-get install tomcat8-examples
+
 ----
 
 [[installation_windows]]
 === Windows
 
-Download the Windows installer for Tomcat7 from the http://tomcat.apache.org/[Apache Tomcat Homepage] and run the installer.
+Download the Windows installer for Tomcat8 from the http://tomcat.apache.org/[Apache Tomcat Homepage] and run the installer.
 
+=== Defining the default port
+
+To setup the default port to which Tomcat is listening, us

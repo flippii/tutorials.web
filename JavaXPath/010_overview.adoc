@@ -1,0 +1,30 @@
+[[javaxpath]]
+== XPath
+
+[[javaxpath_a]]
+=== Overview
+
+https://www.w3.org/TR/xpath/[XPath] (XML Path Language) is a standard syntax recommended by the W3C, it is a set of expressions for accessing information in an XML document.
+
+Java provides the `javax.xml.xpath` package which provides a XPath library.
+
+In this tutorial you learn how to  process a simple XML document with XPath and  extract  information from it.
+
+=== First example for using XPath
+
+Create a new Java project called `com.vogella.xml.xpathexample`.
+
+Create the following `person.xml` file in the main directory of the project.
+
+[source,xml]
+----
+include::res/xpath/person.xml[]
+----
+
+Create the following new Java class .
+
+[source,java]
+----
+include::res/xpath/QueryXML.java[]
+----
+

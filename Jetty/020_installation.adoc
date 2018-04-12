@@ -1,7 +1,7 @@
 [[installation_jetty]]
 == Installation
 
-Download Jetty from http://download.eclipse.org/jetty/ and extract the zip file somewhere to your filesystem.
+Download Jetty from https://www.eclipse.org/jetty/download.html and extract the zip file somewhere to your filesystem.
 
 This update site contains also a Eclipse p2 update site, in case you want to use Jetty in an OSGi environment.
 

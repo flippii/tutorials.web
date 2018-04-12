@@ -1,0 +1,97 @@
+=== Using name spaces
+
+To extract elements with name space, you can specfic the namespace.
+
+Example XML with name space
+
+[source, xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-10-19T10:41:53 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="jasper_report_template" pageWidth="595" pageHeight="842" columnWidth="510" leftMargin="50" rightMargin="35" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" resourceBundle="lars" uuid="320a2909-1558-428f-9577-51dff96e3395">
+	<parameter name="this is important" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><hansimglueck></defaultValueExpression>
+	</parameter>
+</jasperReport>
+----
+
+To extract he 'name' or the parameter you can use the following code.
+
+[source,java]
+----
+package com.vogella.xml.xpathexample;
+import java.io.IOException;
+import java.util.Iterator;
+
+import javax.xml.namespace.NamespaceContext;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpression;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+public class QueryForJasperReport {
+    public void query() throws ParserConfigurationException, SAXException,
+            IOException, XPathExpressionException {
+        // standard for reading an XML file
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        factory.setNamespaceAware(true);
+        DocumentBuilder builder;
+        
+        
+        builder = factory.newDocumentBuilder();
+        Document doc = builder.parse("jasper.jrxml");
+
+        // create an XPathFactory
+        XPathFactory xFactory = XPathFactory.newInstance();
+
+        // create an XPath object
+        XPath xpath = xFactory.newXPath();
+        // didn't work 
+        xpath.setNamespaceContext(new NamespaceContext() {
+            @Override
+            public Iterator getPrefixes(String arg0) {
+                return null;
+            }
+            @Override
+            public String getPrefix(String arg0) {
+                return null;
+            }
+            @Override
+            public String getNamespaceURI(String arg0) {
+                if ("test".equals(arg0)) {
+                    return "http://jasperreports.sourceforge.net/jasperreports";
+                }
+                return null;
+            }
+        });
+        XPathExpression expr  = xpath.compile("/test:jasperReport/test:parameter[@class='net.sf.jasperreports.engine.JasperReport']/@name");
+       
+        NodeList result = (NodeList) expr.evaluate(doc, XPathConstants.NODESET);
+
+        // cast the result to a DOM NodeList
+        NodeList nodes = (NodeList) result;
+        System.out.println("Number of nodes " + nodes.getLength());
+        for (int i=0; i<nodes.getLength();i++){
+            System.out.println(nodes.item(i).getNodeValue());
+        }
+
+    }
+
+    public static void main(String[] args) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException {
+        QueryForJasperReport process = new QueryForJasperReport();
+        process.query();
+    }
+}
+----
+
+
