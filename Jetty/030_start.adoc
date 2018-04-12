@@ -18,3 +18,10 @@ image::jetty10.gif[]
 
 To stop Jetty press kbd:[Ctrl+C]. 
 
+[NOTE]
+====
+To start Jetty as Windows service you can use https://commons.apache.org/proper/commons-daemon/procrun.html[Apache Procrun].
+====
+
+
+
