@@ -1,4 +1,4 @@
-= Java and XML - Tutorial
+= Using XPath with Java and XML - Tutorial
 :linkcss:
 :experimental:
 :icons:
@@ -6,18 +6,16 @@
 Lars Vogel, (c) 2008, 2016 vogella GmbH
 Version 2.2, 06.10.2016
 :docinfodir: ../
-:vgwort: JavaXML
+:vgwort: JavaXPath
 
 [abstract]
 Java and XML.
 This article gives an introduction into XML and its usage with Java. 
-The Java Streaming API for XML (Stax).
+The Java Streaming API for XML (Stax) and the Java XPath library are explained and demonstrated.
 	
 include::../web/advertisement/afterTableOfContent.adoc[]
-include::05_xml_overview.adoc[]
-include::10_javaxml.adoc[]
-include::../web/advertisement/inBetween01.adoc[]
-include::20_stax.adoc[]
+include::010_overview.adoc[]
+include::020_namespace.adoc[]
 include::../support.adoc[]
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]	

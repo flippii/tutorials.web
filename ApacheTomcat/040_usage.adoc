@@ -4,32 +4,28 @@
 [[tomcat_startubuntu]]
 === Start Tomcat on Ubuntu (Linux)
 
-In Ubuntu the
-_Tomcat_
-server
-is started automatically. To restart
-_Tomcat_
-use the following
-command.
+In Ubuntu the _Tomcat_ server is started automatically.
+To restart _Tomcat_ you can use the following command.
 
 [source,java]
 ----
-include::res/start/start.txt[]
+# Restart
+sudo /etc/init.d/tomcat8 restart
+
+# Stop 
+sudo /etc/init.d/tomcat8 stop
 ----
 
 [[tomcat_start]]
 === Start Tomcat on Windows
 
-To start Tomcat use
-`tomcat7.exe`
-in the bin directory.
+To start Tomcat use `tomcat8.exe` in the bin directory.
 
 [[tomcat_test]]
 === Test Tomcat
 
-The default port for Tomcat is 8080. After starting Tomcat
-on
-your local machine, you can validate if Tomcat is running the URL:
+The default port for Tomcat is 8080. 
+After starting Tomcat on your local machine, you can validate if Tomcat is running the URL:
 
 ....
 http://localhost:8080
@@ -42,26 +38,20 @@ image::tomcat_initialpage10.png[Tomcat initial page]
 [[tomcat_admin]]
 === Admin console
 
-Tomcat provides a webbased adminstration console which can be
-started via the following link: 
+Tomcat provides a webbased adminstration console which can be started via the following link: 
 
 ....
 http://localhost:8080/manager/html
 ....
 
-The available users can be found in the
-`tomcat-users.xml`
-file of the Tomcat configuration directory, i.e., the
-`/etc/tomcat/tomcat-users.xml`
-file under Ubuntu.
+The available users can be found in the `tomcat-users.xml` file. 
+This file is located  of the Tomcat configuration directory, i.e., the `/etc/tomcat/tomcat-users.xml` file under Ubuntu.
 
-On Ubuntu the user for the administrator console is not created
-automatically,
-you have to add the
-user entry manually to the
-`/etc/tomcat7/tomcat-users.xml`. 
-The following listing gives an example for a user. To get more
-information try to login and see the resulting error message. Once
+On Ubuntu the user for the administrator console is not created automatically.
+You have to add the user entry manually to the `/etc/tomcat/tomcat-users.xml`. 
+The following listing gives an example for a user. 
+To get more information try to login and see the resulting error message. 
+Once
 you entered a user and a password, restart the Tomcat server to
 ensure your new users is activated.
 
@@ -70,12 +60,7 @@ ensure your new users is activated.
 include::res/install/user.txt[]
 ----
 
-The default user for the Tomcat administration console under Windows
-is
-_admin_
-with the
-_admin_
-password.
+The default user for the Tomcat administration console under Windows is _admin_ with the _admin_ password.
 
 [[tomcat_deploy]]
 === Deployment
