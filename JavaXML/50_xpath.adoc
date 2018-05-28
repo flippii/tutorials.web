@@ -1,0 +1,32 @@
+[[javaxpath]]
+== XPath
+
+[[javaxpath_a]]
+=== Overview
+
+XPath (XML Path Language) is a language for selecting /
+searching nodes from an XML document.
+Java 5 introduced the javax.xml.xpath package which provides a XPath library.
+
+The following explains how to use XPath to query an XML document via Java.
+
+[[javaxpath_b]]
+=== Using XPath
+
+The following explains how to use XPath. 
+Create a new Java project called _UsingXPath_.
+
+Create the following xml file.
+
+[source,xml]
+----
+include::res/xpath/person.xml[]
+----
+
+Create a new package "myxml" and a new Java class "QueryXML".
+
+[source,java]
+----
+include::res/xpath/QueryXML.java[]
+----
+
