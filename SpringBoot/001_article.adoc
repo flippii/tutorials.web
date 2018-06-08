@@ -4,8 +4,8 @@
 :experimental:
 :icons:
 :imagesdir: ./img
-Fabian Pfaff, Jonas Hungershausen (c) 2017 vogella GmbH
-Version 0.1, 02.11.2017
+Fabian Pfaff, Jonas Hungershausen, Simon Scholz (c) 2017 - 2018 vogella GmbH
+Version 0.2, 08.06.2018
 :docinfodir: ../
 :vgwort: SpringBoot
 
@@ -18,10 +18,16 @@ include::012_exercise_issuereport_controller.adoc[]
 include::../web/advertisement/inBetween01.adoc[]
 include::013_exercise_issuereport_entityclass.adoc[]
 include::014_exercise_issuereport_templates.adoc[]
-include::../web/advertisement/inBetween02.adoc[]
 include::015_exercise_issuereport_database.adoc[]
 include::017_exercise_issuereport_rest.adoc[]
 include::090_testing.adoc[]
+include::../web/advertisement/inBetween02.adoc[]
+include::100_spring_boot2.adoc[]
+include::110_exercise_create_spring_boot_project.adoc[]
+include::120_exercise_todo_model.adoc[]
+include::130_exercise_rest_controller.adoc[]
+include::140_exercise_services.adoc[]
+include::150_exercise_reactive_db.adoc[]
 include::../support.adoc[]
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]	
