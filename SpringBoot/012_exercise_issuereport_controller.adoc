@@ -1,7 +1,7 @@
-== Exercise - Creating a RouteController
+== Exercise - Creating a  web @Controller
 
 In `src/main/java` create a new package with the name `com.vogella.example.controller`. 
-In here create a new java Class named `RouteController`. 
+In there create a new java Class named `IssueController`. 
 This class will contain the methods responsible for handling incoming web requests.
 
 To tell Spring that this is a controller the class needs to have the `@Controller` annotation. 
@@ -14,37 +14,37 @@ package com.vogella.example.controller;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class RouteController {
+public class IssueController {
 
 }
 
 ----
 
 === Creating controller methods
-In the `RouteController` class, create the following Methods:
+In the `IssueController` class, create the following Methods:
 
 [source, java]
 ----
 	@GetMapping("/issuereport")
 	@ResponseBody
 	public String getReport() {
-		return "issuereport_form";
+		return "issues/issuereport_form";
 	}
 ---- 
 
 This method later will return the base form template in which the user can submit the issue they found. 
-It still returns `null`, the functionality will be added later. 
+Right now it only returns a string, the functionality will be added later. 
 
 NOTE: The `@GetMapping` annotation above the method signals the Spring Core that this method should only handle `GET` requests.
 
-Since this method should only be responsible for sending the required HTML files to the user, there should be another method: 
+Since this method is only be responsible for sending the required HTML files to the user, there should be another method: 
 
 [source, java]
 ----
 	@PostMapping("/issuereport")
 	@ResponseBody
 	public String submitReport() {
-		return "issuereport_form";
+		return "issues/issuereport_form";
 	}
 ----
 
@@ -60,7 +60,7 @@ The next method will handle the HTML template for a list view in which all the r
 	@GetMapping("/issues")
 	@ResponseBody
 	public String getIssues() {
-		return "issuereport_list";
+		return "issues/issuereport_list";
 	}
 ----
 
@@ -72,7 +72,7 @@ If we would remove it now the framework would search for a template with the giv
 
 === Validate
 
-The `RouteController` should now look like this:
+The `IssueController` should now look like this:
 
 [source, java]
 ----
@@ -84,21 +84,21 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class RouteController {
+public class IssueController {
 	@GetMapping("/issuereport")
     @ResponseBody
     public String getReport() {
-        return "issuereport_form";
+        return "issues/issuereport_form";
     }
 	@PostMapping("/issuereport")
     @ResponseBody
     public String submitReport() {
-        return "issuereport_form";
+        return "issues/issuereport_form";
     }
 	@GetMapping("/issues")
     @ResponseBody
     public String getIssues() {
-        return "issuereport_list";
+        return "issues/issuereport_list";
     }
 }
 ----

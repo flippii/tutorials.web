@@ -15,7 +15,7 @@ Thymeleaf:: Thymeleaf is a powerful template processing engine for the Spring fr
 Spring Boot Devtools:: The Spring Boot Devtools provides an ensemble of very useful tools that enhance the development experience a lot. 
 Such as Automatic recompiling upon saving and much more.
 Spring Data JPA:: Spring Data JPA makes it easy to implement JPA based repositories and build Spring-powered applications that use data access technologies.
-H2:: H2 is a Java SQL database. It is very fast, embedded and very lightweight.
+H2:: H2 is a Java SQL database. It's a lightweight in-memory databse.
 
 To add these dependencies to your project, just open the `build.gradle` file in the root folder of the project and add the following to the section 'dependencies'. Then `Right Click > Gradle > Refresh Gradle Project`. 
 
@@ -31,7 +31,8 @@ To add these dependencies to your project, just open the `build.gradle` file in 
 === Validate
 
 Your `build.gradle` should now look like this
-[souce, groovy]
+
+[source, groovy]
 ----
 buildscript {
 	ext {
@@ -70,6 +71,6 @@ dependencies {
 
 Start your application with `Right Click on your Project > Run As > Spring Boot App`. 
 Since we have the `dev-tools` dependency added to the project we can use it's `live-reload` functionality. 
-This does not need any configuration and recompiles the application every time you save any file in the project. 
+Without any further configuration it reloads the application every time you save a file in the project. 
 
 

@@ -6,8 +6,10 @@ In this exercise we will create a data class that contains all the relevant info
 === Setup
 Create a new class in the `com.vogella.example` package and name it `IssueReport`.
 
-Add the `@Entity` annotation. This will tell the Spring framework that this is just a data class.
-Also add the `@Table(name="issues")` annotation to the class. This later tells our database system to store the data in the table `issues`.
+Add the `@Entity` annotation. 
+This tells our JPA provider Hibernate that this class should be mapped to the database.
+Also set the database table name with the `@Table(name = "issues")` annotation.
+By explicitly setting the table name you avoid the possibility of accidently breaking the database mapping by renaming the class later on.
 
 === Adding fields to the entity data class
 
@@ -33,9 +35,9 @@ Add the following fields and a default constructor to the class:
 The values of the fields `email`, `url`, `description`, `markedAsPrivate` and `updates` will be coming from the form the user submitted. 
 The others will be generated on creation or when the report is updated.
 
-For better accessibility of the values it's good practice to use `getters` and `setters`.
+To let Spring instanciate the `Issue` object from the submitted html form we have to implement `getters` and `setters`, as Spring expects a valid Java Bean and won't use reflection to set the fields.
 To automatically generate them `Right Click` in the source code window of the `IssueReport` class. Then select the `Source` sub-menu; from that menu selecting `Generate Getters and Setters` will cause a wizard window to appear. 
-Select the fields (in this case all) that you want `getters` and `setters` to be generated for. 
+Select the fields (in this case all of them) that you want `getters` and `setters` to be generated for. 
 Confirm with ok.
 
 

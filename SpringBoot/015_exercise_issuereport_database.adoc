@@ -1,38 +1,17 @@
 == Exercise - Embedding a database
 
-In this exercise you will learn how to use a Database to store the users issues and query them to show them on the list view.
+In this exercise you will learn how to use a database to store the users issues and query them to show them on the list view.
 
 === Setup
 
-We will use the dependency `h2` for this. You already added this to your project in <<web_apps>>. 
-This dependency automatically starts a database when you start your app if configured to do so. 
-To achieve this, add the following to the `application.properties`. 
+We will use the `h2` database for this. You already added this to your project in <<web_apps>>.
+Spring Boot automatically picks up and configures `h2` when it's on the classpath. 
 
-[source, properties]
-----
-# H2
-spring.h2.console.enabled=true
-spring.h2.console.path=/h2
-# Datasource
-spring.datasource.url=jdbc:h2:file:~/test
-spring.datasource.username=sa
-spring.datasource.password=
-spring.datasource.continue-on-error=true
-spring.datasource.driver-class-name=org.h2.Driver
-
-----
-
-This configures the database for development use.
- 
-NOTE: Development use means that this should not be used in production because there is no password set. If you want to use this in production you would need to set a password.
-
-JENNIFER: What do you mean with development use?
-
-Now we only need to setup an `interface` to use this in our application. 
+Now we only need to write a repository to interface with the db.
 
 Create a new package called `com.vogella.example.repositories`. 
 In here create a new `interface` with the name `IssueRepository`. 
-This `interface` should extend the `interface` 'CrudRepository<>' from the package `org.springframework.data.repository`. 
+This `interface` should extend the `interface` 'JpaRepository<>' from the package `org.springframework.data.jpa.repository`. 
 Pass in `IssueReport` as the first parameter and `Long` as the second. 
 This represents the object you are storing and the id it has inside the database.
 
@@ -42,19 +21,20 @@ Your `interface` should now look like this:
 ----
 package com.vogella.example.repositories;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.vogella.example.IssueReport;
 
-public interface IssueRepository extends CrudRepository<IssueReport, Long>{
+public interface IssueRepository extends JpaRepository<IssueReport, Long>{
 }
 
 ----
 
-This alone would already be enough to fetch all the entries from the database, add new entries and do all kind of basic operations. 
+This alone would already be enough to fetch all the entries from the database, add new entries and do all basic CRUD operations. 
+
 
 But we want to fetch all entries which are not marked private and show them on the public list view.
-This is done by adding a custom query string to the method. 
+This is done by adding a custom query string to a method.
 Add this method to your `interface`
 
 [source, java]
@@ -64,21 +44,16 @@ package com.vogella.example.repositories;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.vogella.example.IssueReport;
 
-public interface IssueRepository extends CrudRepository<IssueReport, Long>{
-	@Query(value = "SELECT * FROM issues WHERE marked_As_Private = false;", nativeQuery = true)
+public interface IssueRepository extends JpaRepository<IssueReport, Long>{
+	@Query(value = "SELECT i FROM Issues i WHERE markedAsPrivate = false")
 	List<IssueReport> findAllButPrivate();
 ----
 
-NOTE: The reason behind `marked_As_Private` not being `markedAsPrivate` as the corresponding field is called is that `h2` turns `markedAsPrivate` into the version with the underscores.
-
-JENNIFER: Shouldnt it be SELECT * FROM issues WHERE markedAsPrivate = false;?
-
-NOTE: The annotation `@Query` lets us add custom queries that are executed upon calling the method. 
-The `nativeQuery` property just allows us to use a SQL like syntax.
+NOTE: The annotation `@Query` lets us add custom JPQL queries that are executed upon calling the method. 
 
 We also want to get all Issues reported by the same email-address. 
 This is also done with a custom method. 
@@ -94,12 +69,12 @@ package com.vogella.example.repositories;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.vogella.example.IssueReport;
 
-public interface IssueRepository extends CrudRepository<IssueReport, Long>{
-	@Query(value = "SELECT * FROM issues WHERE marked_As_Private = false;", nativeQuery = true)
+public interface IssueRepository extends JpaRepository<IssueReport, Long>{
+	@Query(value = "SELECT i FROM Issues i WHERE markedAsPrivate = false")
 	List<IssueReport> findAllButPrivate();
 	
 	List<IssueReport> findAllByEmail(String email);
@@ -108,8 +83,8 @@ public interface IssueRepository extends CrudRepository<IssueReport, Long>{
 
 === Using the repository
 
-Go back to your controller class `RouteController.java` and add a new field of the repository interface to the class. 
-Use the `@Autowired` annotation to tell Spring to instantiate this field using its dependency injection mechanism.
+Go back to your controller class `IssueController.java` and add a new field of the repository interface to the class. 
+Since the @Controller is managed by Spring the `IssueRepository` will automatically be injected into the constructor.
 
 [source, java]
 ----
@@ -126,9 +101,12 @@ import com.vogella.example.IssueReport;
 import com.vogella.example.repositories.IssueRepository;
 
 @Controller
-public class RouteController {
-	@Autowired
+public class IssueController {
 	IssueRepository issueRepository;
+
+    public IssueController(IssueRepository issueRepositoy) {
+        this.issueRepository = issueRepository;
+    }
 	
 	@GetMapping("/issuereport")
 	public String getReport(Model model) {
@@ -171,9 +149,12 @@ import com.vogella.example.IssueReport;
 import com.vogella.example.repositories.IssueRepository;
 
 @Controller
-public class RouteController {
-	@Autowired
+public class IssueController {
 	IssueRepository issueRepository;
+
+    public IssueController(IssueRepository issueRepositoy) {
+        this.issueRepository = issueRepository;
+    }
 	
 	@GetMapping("/issuereport")
 	public String getReport(Model model) {
@@ -219,9 +200,12 @@ import com.vogella.example.IssueReport;
 import com.vogella.example.repositories.IssueRepository;
 
 @Controller
-public class RouteController {
-	@Autowired
+public class IssueController {
 	IssueRepository issueRepository;
+
+    public IssueController(IssueRepository issueRepositoy) {
+        this.issueRepository = issueRepository;
+    }
 	
 	@GetMapping("/issuereport")
 	public String getReport(Model model) {
@@ -248,7 +232,7 @@ public class RouteController {
 
 === Validate 
 
-Your `RouteController` should now look like this: 
+Your `IssueController` should now look like this: 
 [source, java]
 ----
 package com.vogella.example.controller;
@@ -264,9 +248,12 @@ import com.vogella.example.IssueReport;
 import com.vogella.example.repositories.IssueRepository;
 
 @Controller
-public class RouteController {
-	@Autowired
+public class IssueController {
 	IssueRepository issueRepository;
+
+    public IssueController(IssueRepository issueRepositoy) {
+        this.issueRepository = issueRepository;
+    }
 	
 	@GetMapping("/issuereport")
 	public String getReport(Model model) {
@@ -299,12 +286,12 @@ package com.vogella.example.repositories;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.vogella.example.IssueReport;
 
-public interface IssueRepository extends CrudRepository<IssueReport, Long>{
-	@Query(value = "SELECT * FROM issues WHERE marked_As_Private = false;", nativeQuery = true)
+public interface IssueRepository extends JpaRepository<IssueReport, Long>{
+	@Query(value = "SELECT i FROM Issues i WHERE markedAsPrivate = false")
 	List<IssueReport> findAllButPrivate();
 	
 	List<IssueReport> findAllByEmail(String email);

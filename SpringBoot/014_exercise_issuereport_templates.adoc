@@ -1,15 +1,15 @@
 == Exercise - Creating Templates using Thymeleaf
 
-Thymeleaf is a powerful template engine for the Spring framework. 
-It lets you write clean HTML code while also using Java objects for data binding. 
-You already added the Library to your project when you configured it in <<web_apps>>.
+Thymeleaf is a powerful template engine that can be used with the Spring framework. 
+It lets you write plain HTML code while also using Java objects for data binding. 
+You've already added the Library to your project when you configured it in <<web_apps>>.
 
 === HTML Templates
 
 In the root folder of your project there is another folder called `src/main/resources`. 
 This contains all resources you need in your SpringBoot application. 
 This is where we create our templates. 
-Open the folder and the package `templates` and create a new file called `issuereport_form.html` in it. 
+Create and open the folder `src/main/resources/templates/issues` and create a new file called `issuereport_form.html` in it. 
 This is the file that will be served on the route `/issuereport`. 
 Create another file with the name `issuereport_list.html` in the same folder. 
 This file will be served on the `/issues` route. 
@@ -17,8 +17,8 @@ But to achieve this, we need to configure our controller to do so.
 
 === Serving HTML Templates
 
-Currently all our controller methods have the `@ResponseBody`. 
-With this annotation the data sent to the browser is plain text. 
+Currently all our controller methods feature the `@ResponseBody` annotation. 
+With this annotation in place the String returned by our controller methods gets sent to the browser as plain text. 
 If we remove it, the Thymeleaf library will look for an HTML Template with the name returned. 
 
 Each route will then return the name of the template it should serve.
@@ -27,12 +27,14 @@ getReport():: `issuereport_form`
 submitReport():: `issuereport_form`
 getIssues():: `issurereport_list`
 
-Since we want to pass data into the template we also need to add a `Model` to the method parameters. 
-Add `Model model` to the controller methods parameters. These will be automatically injected upon calling the method.
-Since this is fully done by the Spring framework we don't have to worry about this.
-What we can do, is set attributes in the model or change its values. But we will get back to that later.
+NOTE: You specify the folder structure inside your `templates` folder separated by forward slashes. But it's important that the String doesn't start with a `/`. So this *won't* work: `/issues/issuerepor_form`.
 
-The `RouteController` class should look like this:
+Since we want to pass data into the template we also need to add a `Model` to the method parameters. 
+Add `Model model` to the controller methods parameters. These will be automatically injected when the endpoint is called.
+Since this is fully done by the Spring framework we don't have to worry about this.
+In the next step we'll add attributes to the `Model` object to make them available in the template.
+
+The `IssueController` class should look like this:
 
 [source, Java]
 ----
@@ -45,18 +47,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class RouteController {
+public class IssueController {
 	@GetMapping("/issuereport")
     public String getReport(Model model) {
-        return "issuereport_form";
+        return "issues/issuereport_form";
     }
 	@PostMapping("/issuereport")
     public String submitReport(Model model) {
-        return "issuereport_form";
+        return "issues/issuereport_form";
     }
 	@GetMapping("/issues")
     public String getIssues(Model model) {
-        return "issuereport_list";
+        return "issues/issuereport_list";
     }
 }
 ----
@@ -65,7 +67,7 @@ Now the Framework will look for the templates with the given name and serve them
 
 === Binding objects to templates
 
-Now we want to pass some data to the rendered page. 
+Now we want to pass some data to the template. 
 This is done by adding an object and optionally a name to the `Model` object passed in by the Spring framework. 
 Use the `addAttribute()` method to achieve this.
 The first parameter is the name, the second parameter is an object. 
@@ -77,9 +79,9 @@ Add `model.addAttribute("issuereport", new IssueReport());` to the method `getRe
 Repeat the same for the method `submitReport()`. 
 
 In the `submitReport()` method we also want to handle the data submitted via the form. 
-To do this we also need to add `@ModelAttribute IssueReport issueReport` to the method parameters. 
+To do this we also need to add `IssueReport issueReport` to the method parameters. 
 
-NOTE: This will also be automatically constructed and injected by the Spring framework. 
+NOTE: This will also be automatically constructed from the form data and injected by the Spring framework. 
 
 Since we want the template to show some kind of feedback upon receiving the form data, we should also add another attribute containing a boolean. 
 If it's set to `true` the template will show some kind of modal or confirming message. 
@@ -103,14 +105,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.vogella.example.IssueReport;
 
 @Controller
-public class RouteController {
+public class IssueController {
 	@GetMapping("/issuereport")
 	public String getReport(Model model) {
 		model.addAttribute("issuereport", new IssueReport());
 		return "issuereport_form";
 	}
 	@PostMapping(value="/issuereport")
-    public String submitReport(@ModelAttribute IssueReport issueReport, Model model) {
+    public String submitReport(IssueReport issueReport, Model model) {
 		model.addAttribute("issuereport", new IssueReport());
     	model.addAttribute("submitted", true);
        return "issuereport_form";
@@ -128,7 +130,7 @@ public class RouteController {
 
 To use the objects passed in, we need to use specific Thymeleaf HTML syntax in the templates. 
 All properties and attributes in an HTML file that are being used by Thymeleaf and are not standard HTML. 
-They will begin with the attribute `th:`.
+They will begin with the prefix `th:`.
 
 We will start with the following basic HTML document with a form in it. 
 Add the following coding to the `issuereport_form.html` file:
@@ -150,11 +152,14 @@ Add the following coding to the `issuereport_form.html` file:
 			<input type="text" placeholder="Url where the issue was found on" id="url"/>
 			<textarea placeholder="Description of the issue" rows="5" id="description"></textarea>
 			
-			<label for="private_id">Private?</label>
-			<input type="checkbox" name="private" id="private_id"/>
-			
-			<label for="updates_id">Keep me posted</label>
-			<input type="checkbox" id="updates_id" name="updates"/>
+			<label for="private_id">
+			   Private?
+			   <input type="checkbox" name="private" id="private_id"/>
+			</label>
+			<label for="updates_id">
+			    Keep me posted
+			    <input type="checkbox" id="updates_id" name="updates"/>
+			</label>
 			
 			<input type="submit" value="Submit"/> 
 		</form>
@@ -190,7 +195,7 @@ This alone will not tell Spring to auto-populate the fields in the object.
 We need to specify in the `<input>` elements what field this should represent. 
 This is done by adding the attribute `th:field="*{}"`.
 
-NOTE: `${}` is the way to refer to objects that were passed to the template. `*{}` is the syntax to refer to objects of these objects. 
+NOTE: `${}` is the way to refer to objects that were passed to the template, using SpEL. `*{}` is the syntax to refer to fields of the object bound to the form. 
 
 Add the following attributes to the `<input>` and `<textarea>` elements respectively.
 
@@ -222,9 +227,6 @@ NOTE: The reason for this is that we hardcoded the `submitted` boolean ONLY to t
 Thus it will only be added to the template if the `HTTP` method was `POST`. 
 So only if the form was submitted.
 
-JENNIFER: In our example it will always be displayed because we hard coded it to `true` in the `RouteController.java`.
--- JONAS: Actually thats not how it's going to happen. It will be hard coded on the POST route. Which means only if the form was submitted.
-
 The `issuereport_form.html` should now look like this:
 
 [source, HTML]
@@ -244,11 +246,15 @@ The `issuereport_form.html` should now look like this:
 			<input type="text" placeholder="Url where the issue was found on" id="url" th:field="*{url}" />
 			<textarea placeholder="Description of the issue" rows="5" id="description" th:field="*{description}" ></textarea>
 			
-			<label for="private_id">Private?</label>
-			<input type="checkbox" name="private" id="private_id" th:field="*{markedAsPrivate}" />
+			<label for="private_id">
+			    Private?
+			    <input type="checkbox" name="private" id="private_id" th:field="*{markedAsPrivate}" />
+			</label>
 			
-			<label for="updates_id">Keep me posted</label>
-			<input type="checkbox" id="updates_id" name="updates" th:field="*{updates}" />
+			<label for="updates_id">
+			    Keep me posted
+			    <input type="checkbox" id="updates_id" name="updates" th:field="*{updates}" />
+			</label>
 			
 			<input type="submit" value="Submit"/> 
 		</form>
@@ -304,7 +310,7 @@ Add the following coding to `issuereport_list.html`.
   
 NOTE: `th:classappend` conditionally adds classes to an element if the expression passed to it is true or false.
 
-NOTE: `th:each="issue : ${issues}" will loop over the issues list.
+NOTE: `th:each="issue : ${issues}` will loop over the issues list.
 
 === Optional: Stylesheets
 
@@ -392,7 +398,7 @@ body{
 Reload the page on the `http://localhost:8080/issuereport`. 
 The styling should have been applied.
 Enter some values in the fields and press submit. 
-Now the `result_message` `<div>` will also be showed.
+Now the `result_message` `<div>` will also be shown.
 
 image::spring_boot_project_submission_modal.png[Spring Boot Project Submission Modal] 
 

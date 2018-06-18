@@ -124,3 +124,4 @@ class TodoRestController {
 <1> Since the Spring framework instantiates the `TodoRestController` it is able to find the `TodoService`, which is demanded in the `TodoRestControllers` constructor. This works, because the `TodoService` class has the `@Service` annotation being applied.
 
 The `TodoService` will do more stuff in the upcoming chapters.
+
