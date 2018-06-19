@@ -23,9 +23,9 @@ If we remove it, the Thymeleaf library will look for an HTML Template with the n
 
 Each route will then return the name of the template it should serve.
 
-getReport():: `issuereport_form`
-submitReport():: `issuereport_form`
-getIssues():: `issurereport_list`
+getReport():: `issues/issuereport_form`
+submitReport():: `issues/issuereport_form`
+getIssues():: `issues/issurereport_list`
 
 NOTE: You specify the folder structure inside your `templates` folder separated by forward slashes. But it's important that the String doesn't start with a `/`. So this *won't* work: `/issues/issuerepor_form`.
 
@@ -99,27 +99,26 @@ package com.vogella.example.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.vogella.example.IssueReport;
+import com.vogella.example.entity.IssueReport;
 
 @Controller
 public class IssueController {
 	@GetMapping("/issuereport")
 	public String getReport(Model model) {
 		model.addAttribute("issuereport", new IssueReport());
-		return "issuereport_form";
+		return "issues/issuereport_form";
 	}
 	@PostMapping(value="/issuereport")
     public String submitReport(IssueReport issueReport, Model model) {
 		model.addAttribute("issuereport", new IssueReport());
     	model.addAttribute("submitted", true);
-       return "issuereport_form";
+       return "issues/issuereport_form";
     }
 	@GetMapping("/issues")
 	public String getIssues(Model model) {
-		return "issuereport_list";
+		return "issues/issuereport_list";
 	}
 }
 
@@ -175,7 +174,7 @@ Add the following coding to the `issuereport_form.html` file:
 
 This does not have any logic or data-binding in it, yet.
 
-NOTE: Without the attribute `xmlns:th="http://www.thymeleaf.org"` in the `<html>` tag, Spring would throw an exception. Because in this case Thymeleaf would not know that this document should be handled as an HTML Template. 
+NOTE: Without the attribute `xmlns:th="http://www.thymeleaf.org"` in the `<html>` tag, your editor might show warnings because he doesn't know the attributes prefixed with `th:`. 
 
 Now the file will be served on the route http://localhost:8080/issuereport[`/issuereport`]. 
 If you have the application still running you can navigate to the route or click the link.
