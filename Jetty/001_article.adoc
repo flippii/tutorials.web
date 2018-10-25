@@ -19,6 +19,6 @@ include::030_start.adoc[]
 include::../web/advertisement/inBetween01.adoc[]
 include::040_httpclient.adoc[]
 include::200_embeddingjetty.adoc[]
-include::../support.adoc[]
+
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]

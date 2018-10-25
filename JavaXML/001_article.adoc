@@ -18,7 +18,7 @@ include::05_xml_overview.adoc[]
 include::10_javaxml.adoc[]
 include::../web/advertisement/inBetween01.adoc[]
 include::20_stax.adoc[]
-include::../support.adoc[]
+
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]	
 

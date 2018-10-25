@@ -24,7 +24,7 @@ include::30_app_python.adoc[]
 include::40_eclipse.adoc[]
 include::../web/advertisement/inBetween02.adoc[]
 include::90_monitor.adoc[]
-include::../support.adoc[]
+
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]	
 

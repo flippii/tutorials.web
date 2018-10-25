@@ -36,7 +36,7 @@ include::010_forms.adoc[]
 include::../web/advertisement/inBetween01.adoc[]
 include::020_firstforms.adoc[]
 
-include::../support.adoc[]
+
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]	
 

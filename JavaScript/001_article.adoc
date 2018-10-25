@@ -26,6 +26,6 @@ include::150_jsdtfullstack.adoc[]
 include::170_jsdtjee.adoc[]
 include::190_jsdtcontribute.adoc[]
 include::200_typescript.adoc[]
-include::../support.adoc[]
+
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]

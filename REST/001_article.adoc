@@ -27,7 +27,7 @@ include::420_firstclient.adoc[]
 include::../web/advertisement/inBetween03.adoc[]
 include::420_jaxb.adoc[]
 include::500_crud.adoc[]
-include::../support.adoc[]
+
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]	
 

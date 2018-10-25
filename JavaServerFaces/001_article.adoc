@@ -24,7 +24,7 @@ include::../web/advertisement/inBetween02.adoc[]
 include::080_secondjsf.adoc[]
 include::090_thirdjsf.adoc[]
 include::100_todojsf.adoc[]
-include::../support.adoc[]
+
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]	
 

@@ -24,7 +24,7 @@ include::050_grailslayout.adoc[]
 include::060_grailscreatewar.adoc[]
 include::070_grailstest.adoc[]
 include::080_eclipse.adoc[]
-include::../support.adoc[]
+
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]
 

@@ -16,7 +16,7 @@ include::../web/advertisement/afterTableOfContent.adoc[]
 include::010_json.adoc[]
 include::020_jsonexample.adoc[]
 include::040_json_usageinjavascript.adoc[]
-include::../support.adoc[]
+
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]	
 

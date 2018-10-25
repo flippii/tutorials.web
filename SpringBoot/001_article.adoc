@@ -28,7 +28,7 @@ include::120_exercise_todo_model.adoc[]
 include::130_exercise_rest_controller.adoc[]
 include::140_exercise_services.adoc[]
 include::150_exercise_reactive_db.adoc[]
-include::../support.adoc[]
+
 include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]
 
