@@ -18,6 +18,7 @@ First select Spring Boot Version *2.0.0* and the following dependencies:
 * Embedded MongoDB
 * Actuator
 * Reactive Web
+* Rest Docs
 
 image::./spring-starter-dependencies.png[] 
 
