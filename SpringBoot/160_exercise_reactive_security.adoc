@@ -1,0 +1,32 @@
+== Exercise: Add Spring Security to the classpath
+
+To ensure that not everyone can read any todo the rest end point should be secured.
+
+To achieve this the `org.springframework.boot:spring-boot-starter-security` compile dependency has to be added.
+
+[source,groovy]
+----
+
+dependencies {
+
+	// more dependencies ...
+	
+	compile('org.springframework.boot:spring-boot-starter-security')
+}
+----
+
+Spring Boot automatically adds default security settings to the web application by adding this dependency.
+
+Again try to get all todos by navigating to http://localhost:8080/getTodos in the browser.
+
+Now you should be redirected to http://localhost:8080/login and being faced with a login page.
+
+image::spring-security-login.png[] 
+
+The default user is called _user_ and the password can be found in the console.
+
+[source,console]
+----
+Using generated security password: 64c68d82-0448-465b-8b97-a7002c612d25
+----
+
