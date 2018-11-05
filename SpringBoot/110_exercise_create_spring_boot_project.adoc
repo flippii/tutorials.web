@@ -23,3 +23,23 @@ image::./spring-starter-dependencies.png[]
 
 Then press btn:[Finish] so that the project will be generated.
 
+CAUTION:
+====
+Please avoid to add spring web mvc dependencies, otherwise webflux won´t work properly.
+
+If this cannot be avoided the reactive `WebApplicationType` has to be set explicitly:
+
+[source,java]
+----
+@SpringBootApplication
+public class Application {
+
+	public static void main(String[] args) {
+		SpringApplication springApplication = new SpringApplication(Application.class);
+		springApplication.setWebApplicationType(WebApplicationType.REACTIVE);
+		springApplication.run(args);
+	}
+}
+----
+
+====
