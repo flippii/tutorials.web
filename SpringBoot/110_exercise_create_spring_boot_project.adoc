@@ -25,7 +25,7 @@ Then press btn:[Finish] so that the project will be generated.
 
 CAUTION:
 ====
-Please avoid to add spring web mvc dependencies, otherwise webflux won´t work properly.
+Please avoid to add spring web mvc dependencies, otherwise webflux wonï¿½t work properly.
 
 If this cannot be avoided the reactive `WebApplicationType` has to be set explicitly:
 
