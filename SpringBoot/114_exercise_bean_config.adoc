@@ -1,0 +1,27 @@
+== Exercise: @Configuration and @Bean annotation
+
+A `@Configuration` class can be used to configure your beans programmatically.
+So now we create a class called `BeerConfig`, which is capable of creating beer instances/beans.
+
+[source,java]
+----
+package com.vogella.user.playground.di;
+
+@Configuration
+public class BeerConfig {
+	
+	@Bean
+	public Beer getBecks() {
+		return new Beer() {
+			@Override
+			public String getName() {
+				return "Becks";
+			}
+		};
+	}
+}
+----
+
+Now try to start the application and figure out what went wrong.
+
+Then add the `@Primary` annotation to whatever beer you like most and rerun the application, which should now print your primary beer.

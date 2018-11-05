@@ -1,0 +1,25 @@
+== Exercise: Getting all the beer
+
+What if you want to get all available instances of a certain class or interface?
+
+You can simply create a list and spring automatically gathers all beer passes it to the barkeeper.
+
+[source,java]
+----
+@Service
+public class BarKeeperService {
+
+	Logger LOG = LoggerFactory.getLogger(BarKeeperService.class);
+
+	private List<Beer> beer;
+
+	public BarKeeperService(List<Beer> beer) {
+		this.beer = beer;
+	}
+
+	public void logBeerName() {
+		beer.stream().map(Beer::getName).forEach(LOG::info);
+	}
+}
+----
+

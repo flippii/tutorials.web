@@ -1,0 +1,71 @@
+== Exercise: @Component and @Service annotations
+
+Create a _com.vogella.user.playground.di_ package inside the _com.vogella.user_ project.
+This package should contain an interface called `Beer`.
+
+[source,java]
+----
+package com.vogella.user.playground.di;
+
+public interface Beer {
+	String getName();
+}
+----
+
+Then create a class called `Flensburger`, which represents a beer instance.
+
+[source,java]
+----
+@Component
+public class Flensburger implements Beer {
+
+	@Override
+	public String getName() {
+		return "Flensburger";
+	}
+
+}
+----
+
+Now a beer instance can be injected into another class, which deserves a beer.
+
+Let´s say we have a service called `BarKeeperService`, which can do something with the beer.
+
+[source,java]
+----
+@Service
+public class BarKeeperService {
+
+	Logger LOG = LoggerFactory.getLogger(BarKeeperService.class);
+
+	private Beer beer;
+
+	public BarKeeperService(Beer beer) {
+		this.beer = beer;
+	}
+
+	public void logBeerName() {
+		LOG.info("Barkeeper serves " + beer.getName());
+	}
+}
+----
+
+Now go into the `Application` class and inject the `BarKeeperService` via method injection by using the `@Autowired` annotation.
+
+[source,java]
+----
+@SpringBootApplication
+public class Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+
+	@Autowired
+	public void setBeerService(BarKeeperService beerService) {
+		beerService.logBeerName();
+	}
+}
+----
+
+Now you can run the application and see _Barkeeper serves Flensburger_ in the logs.

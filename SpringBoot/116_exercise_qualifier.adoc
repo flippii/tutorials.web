@@ -1,0 +1,62 @@
+== Optional Exercise: `@Qualifier` annotation
+
+Different components or beans can also be qualified by using the `@Qualifier` annotation.
+
+[source,java]
+----
+@Component
+@Qualifier("Flensburger") #<1>
+public class Flensburger implements Beer {
+
+	@Override
+	public String getName() {
+		return "Flensburger";
+	}
+
+}
+----
+<1> Qualify the `Flensburger` class with the _Flensburger_ qualifier
+
+[source,java]
+----
+package com.vogella.user.playground.di;
+
+@Configuration
+public class BeerConfig {
+	
+	@Bean
+	@Qualifier("Becks") #<1>
+	public Beer getBecks() {
+		return new Beer() {
+			@Override
+			public String getName() {
+				return "Becks";
+			}
+		};
+	}
+}
+----
+<1> Qualify the becks beer bean with the _Becks_ qualifier.
+
+
+After the different beers have been qualified, a certain bean can be demanded by using the `@Qualifier` annotation as well.
+
+[source,java]
+----
+@Service
+public class BarKeeperService {
+
+	Logger LOG = LoggerFactory.getLogger(BarKeeperService.class);
+
+	private Beer beer;
+
+	public BarKeeperService(@Qualifier("Flensburger") Beer beer) {
+		this.beer = beer;
+	}
+
+	public void logBeerName() {
+		LOG.info("Barkeeper serves " + beer.getName());
+	}
+}
+----
+
