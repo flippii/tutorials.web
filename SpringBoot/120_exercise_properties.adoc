@@ -1,3 +1,38 @@
 == Exercise: Using the configuration class with property values
 
-Test
+`@Configuration` classes are often also used to configure certain beans,
+which for example can be done by reading values from property files or environment settings.
+
+In order to read certain properties the `@Value` annotation can be used.
+
+The _src/main/resources_ source folder contains an _application.properties_ file,
+which can be used to configure the spring application or custom property values can be added as well. 
+
+Now add the _beer.name_ property to the _application.properties_ file.
+
+[source,properties]
+----
+beer.name=Erdinger
+----
+
+Inside the `BeerConfig` class a `getBeerNameFromProperty` method, which reads the _beer.name_ property, is added.
+
+[source,java]
+----
+@Configuration
+public class BeerConfig {
+
+	// ... other beans
+
+	@Bean
+	public Beer getBeerNameFromProperty(@Value("${beer.name}") String beerName) {
+		return new Beer() {
+			@Override
+			public String getName() {
+				return beerName;
+			}
+		};
+	}
+}
+----
+

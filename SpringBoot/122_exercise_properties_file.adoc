@@ -1,0 +1,36 @@
+== Optional Exercise: Adding a dedicated properties file
+
+Create a new _beers.properties_ file in the _src/main/resources_ source folder and add the following property.
+
+
+[source, properties]
+----
+beer.names=Bitburger,Krombacher,Berliner Kindl
+----
+
+Now with a dedicated properties file the `@Configuration` has to point to this,
+because other property files are not automatically parsed like the _application.properties_ file.
+
+[source,java]
+----
+@Configuration
+@PropertySource("classpath:/beers.properties")
+public class BeerConfig {
+
+	// ... other beans
+
+	@Bean
+	public List<Beer> getBeerNamesFromProperty(@Value("${beer.names}") List<String> beerNames) {
+		return beerNames.stream().map(bN -> new Beer() {
+			
+			@Override
+			public String getName() {
+				return bN;
+			}
+		}).collect(Collectors.toList());
+	}
+}
+----
+
+Check out whether the list of beers is added to the BarKeeperService.
+
