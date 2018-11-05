@@ -29,7 +29,7 @@ public class Flensburger implements Beer {
 
 Now a beer instance can be injected into another class, which deserves a beer.
 
-Let�s say we have a service called `BarKeeperService`, which can do something with the beer.
+Let´s say we have a service called `BarKeeperService`, which can do something with the beer.
 
 [source,java]
 ----
@@ -69,3 +69,4 @@ public class Application {
 ----
 
 Now you can run the application and see _Barkeeper serves Flensburger_ in the logs.
+
