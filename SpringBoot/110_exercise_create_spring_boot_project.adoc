@@ -6,6 +6,8 @@ image::./create-spring-starter-project.png[]
 
 Use the following settings in the project creation dialog:
 
+The project is called _com.vogella.spring.di_ and we use Gradle as build system.
+
 image::./spring-starter-project-wizard.png[] 
 
 When pressing btn:[Next] the desired dependencies can be specified.
