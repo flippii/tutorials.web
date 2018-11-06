@@ -2,7 +2,7 @@
 
 What if you want to get all available instances of a certain class or interface?
 
-You can simply create a list and spring automatically gathers all beer passes it to the barkeeper.
+You can simply create a list and spring automatically gathers all beer beans and components and passes them to the barkeeper.
 
 [source,java]
 ----
