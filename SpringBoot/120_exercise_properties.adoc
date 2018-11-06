@@ -12,7 +12,7 @@ Now add the _beer.name_ property to the _application.properties_ file.
 
 [source,properties]
 ----
-beer.name=Erdinger
+beer.name=Carlsberg
 ----
 
 Inside the `BeerConfig` class a `getBeerNameFromProperty` method, which reads the _beer.name_ property, is added.
