@@ -5,7 +5,7 @@ This package should contain an interface called `Beer`.
 
 [source,java]
 ----
-package com.vogella.di;
+package com.vogella.playground;
 
 public interface Beer {
 	String getName();
