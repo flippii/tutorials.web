@@ -15,6 +15,16 @@ Now add the _beer.name_ property to the _application.properties_ file.
 beer.name=Carlsberg
 ----
 
+[Note]
+====
+The editor of the _application.properties_ file might complain about an unknown property, but it is just fine to add custom properties.
+Usually the _application.properties_ file is used to configure Spring properties. 
+
+image::unknown-property-warning.png[] 
+
+In the next optional exercise you can also use your own property file.
+====
+
 Inside the `BeerConfig` class a `getBeerNameFromProperty` method, which reads the _beer.name_ property, is added.
 
 [source,java]
