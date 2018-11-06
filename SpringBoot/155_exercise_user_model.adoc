@@ -1,12 +1,14 @@
-== Exercise: Create a Todo domain model
+== Exercise: Create a User domain model
 
-Create another package called _com.vogella.springboot2.domain_ and create a _Todo_ class inside it.
+Create another package called _com.vogella.spring.user.domain_ and create a _User_ class inside it.
 
 [source, java]
 ----
-package com.vogella.springboot2.domain;
+package com.vogella.spring.user.domain;
 
-import java.util.Date;
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -16,19 +18,18 @@ import lombok.NoArgsConstructor;
 @Data #<1>
 @NoArgsConstructor #<2>
 @JsonIgnoreProperties(ignoreUnknown = true) #<3>
-public class Todo {
+public class User {
 
 	private long id;
-	private String summary = "";
-	private String description = "";
-	private boolean done = false;
-	private Date dueDate = new Date();
+	private String userName = "";
+	private String password = "";
+	private List<String> roles = new ArrayList<>();
+	private Instant lastLogin = Instant.now();
 	
-	public Todo(long id) {
+	public User(long id) {
 		this.id = id;
 	}
 }
-
 ----
 
 <1> The _Todo_ class is a simple data class and the _@Data_ annotation of the Lombok library automatically generates getters and setters for the properties and _hashCode()_, _equals()_ and _toString()_ methods.

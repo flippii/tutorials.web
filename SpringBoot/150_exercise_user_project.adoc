@@ -1,0 +1,24 @@
+== Exercise: Create a User project
+
+In the Spring Tool Suite just right click in the _Package Explorer_ and go to menu:New[Spring Starter Project]
+
+image::./create-spring-starter-project.png[] 
+
+Use the following settings in the project creation dialog:
+
+The project is called _com.vogella.spring.user_ and we use Gradle as build system.
+
+image::./spring-user-project-wizard.png[] 
+
+When pressing btn:[Next] the desired dependencies can be specified.
+
+First select Spring Boot Version *2.1.0* and the following dependencies:
+
+* Lombok
+* Reactive MongoDB
+* Embedded MongoDB
+* Actuator
+* Reactive Web
+
+Then press btn:[Finish] so that the project will be generated.
+

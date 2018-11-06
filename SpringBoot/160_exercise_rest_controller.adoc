@@ -1,47 +1,47 @@
 == Exercise: Creating a reactive rest controller
 
-Create a package private _TodoRestController_ class inside a _com.vogella.springboot2.controller_ package.
+Create a package private _UserRestController_ class inside a _com.vogella.spring.user.controller_ package.
 
 [source, java]
 ----
-package com.vogella.springboot2.controller;
+package com.vogella.spring.user.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vogella.springboot2.domain.Todo;
+import com.vogella.spring.user.domain.User;
 
 import reactor.core.publisher.Flux;
 
 @RestController #<1>
-class TodoRestController {
+class UserRestController {
 
-	private Flux<Todo> todos; #<2>
+	private Flux<User> users; #<2>
 
-	public TodoRestController() {
-		todos = createTodoModel();
+	public UserRestController() {
+		users = createUserModel();
 	}
 
-	private Flux<Todo> createTodoModel() {
-		Todo todo = new Todo(1);
+	private Flux<User> createUserModel() {
+		User todo = new User(1);
 		todo.setSummary("Learn Spring Boot 2.0");
 		todo.setDescription("Easily create modern reactive webapps with Spring Boot 2.0");
 
-		Todo todo2 = new Todo(2);
+		User todo2 = new User(2);
 		todo2.setSummary("Learn Reactor Framework");
 		todo2.setDescription("Use the power of the reactive io api with the Reactor Framework");
 		
-		Todo todo3 = new Todo(3);
+		User todo3 = new User(3);
 		todo3.setSummary("Learn @RestController");
 		todo3.setDescription("Learn how to create @RestController and use rest endpoints");
 
 		return Flux.just(todo, todo2, todo3);
 	}
 	
-	@GetMapping("/getTodos") #<3>
-	public Flux<Todo> getTodos() {
-		return todos;
+	@GetMapping("/getUsers") #<3>
+	public Flux<User> getUsers() {
+		return users;
 	}
 
 }
@@ -50,15 +50,15 @@ class TodoRestController {
 
 <1> The @RestController annotation tells Spring that this class is a rest controller, which will be instantiated by the Spring framework
 <2> Flux is a type of the Reactor Framework, which implements the reactive stream api like RxJava does.
-<3> The @GetMapping annotation tells Spring that the endpoint http://{yourdomain}/getTodos should invoke the _getTodos()_ method.
+<3> The @GetMapping annotation tells Spring that the endpoint http://{yourdomain}/getUsers should invoke the _getUsers()_ method.
 
 Now start the application by right clicking the project and clicking on menu:Run as[Spring Boot App].
 
 image::./spring-start-console.png[] 
 
-Along with many more logging statements the previously created rest endpoint _/getTodos_ is mentioned.
+Along with many more logging statements the previously created rest endpoint _/getUsers_ is mentioned.
 
-Now let's test the result when navigating to http://localhost:8080/getTodos.
+Now let's test the result when navigating to http://localhost:8080/getUsers.
 
 image::./restcontroller-json.png[] 
 
@@ -79,27 +79,27 @@ server.port=8080
 
 == Exercise: Passing parameters to the rest api
 
-Since the amount of Todos can potentially increase really fast it would be nice to have search capabilities so that clients do not have to receive the whole list of Todos all the time and do the search on the client side.
+Since the amount of Users can potentially increase really fast it would be nice to have search capabilities so that clients do not have to receive the whole list of Users all the time and do the search on the client side.
 
 [source, java]
 ----
 @RestController
-class TodoRestController {
+class UserRestController {
 
 	// ... more code
 
-	@GetMapping("/getTodos")
-	public Flux<Todo> getTodos(
+	@GetMapping("/getUsers")
+	public Flux<User> getUsers(
 	@RequestParam(name = "limit", required = false, defaultValue = "-1") long limit) { #<1>
 		if(-1 == limit) {
-			return todos;
+			return users;
 		}
-		return todos.take(limit);
+		return users.take(limit);
 	}
 
-	@GetMapping("/getTodoById")
-	public Mono<Todo> getTodoById(long id) {  #<2>
-		return Mono.from(todos.filter(t -> id == t.getId()));
+	@GetMapping("/getUserById")
+	public Mono<User> getUserById(long id) {  #<2>
+		return Mono.from(users.filter(t -> id == t.getId()));
 	}
 
 }
@@ -112,54 +112,54 @@ class TodoRestController {
 
 == Exercise: Posting data to the rest controller
 
-It is nice to receive data, but we also want to create new Todos.
+It is nice to receive data, but we also want to create new Users.
 
 [source, java]
 ----
-@PostMapping("/newTodo") #<1>
-public Mono<Todo> newTodo(@RequestBody Todo todo) {
-	Mono<Todo> todoMono = Mono.just(todo);
-	todos = todos.mergeWith(todoMono); #<2>
+@PostMapping("/newUser") #<1>
+public Mono<User> newUser(@RequestBody User todo) {
+	Mono<User> todoMono = Mono.just(todo);
+	users = users.mergeWith(todoMono); #<2>
 	return todoMono;
 }
 ----
 
 <1> `@PostMapping` is used to specify that data has to be posted
-<2> The `mergeWith` method merges the existing Flux with the new `Mono<Todo>` containing the posted `Todo` object
+<2> The `mergeWith` method merges the existing Flux with the new `Mono<User>` containing the posted `User` object
 
 Curl or any rest client you like, e.g., https://addons.mozilla.org/de/firefox/addon/rester/[RESTer] for Firefox, can be used to post data to the rest endpoint.
 
 [source, curl]
 ----
-curl -d '{"id":4, "summary":"New custom Todo"}' -H "Content-Type: application/json" -X POST http://localhost:8080/newTodo
+curl -d '{"id":4, "summary":"New custom User"}' -H "Content-Type: application/json" -X POST http://localhost:8080/newUser
 ----
 
-This will return the "New custom Todo" and show it on the command line.
+This will return the "New custom User" and show it on the command line.
 
 == Exercise: Sending a delete request
 
-Last but not least Todos should also be deleted by using the rest API.
+Last but not least Users should also be deleted by using the rest API.
 
 [source, java]
 ----
-@DeleteMapping("/deleteTodo/{id}") #<1>
-public Mono<Void> deleteTodo(@PathVariable("id") int id) { #<2>
-	todos = todos.filter(todo -> todo.getId() != id);
-	return todos.then();
+@DeleteMapping("/deleteUser/{id}") #<1>
+public Mono<Void> deleteUser(@PathVariable("id") int id) { #<2>
+	users = users.filter(todo -> todo.getId() != id);
+	return users.then();
 }
 ----
 
 <1> `@DeleteMapping` can be used for delete rest operations and curly braces + name like _{id}_ can be used as alternative of using query parameters like ?id=3
 <2> `@PathVariable` specifies the path, which will be used for the {id} path variable
 
-Todo no. 3 can be deleted, since we learned how to create rest controllers now.
+User no. 3 can be deleted, since we learned how to create rest controllers now.
 
 [source, curl]
 ----
-curl -X DELETE http://localhost:8080/deleteTodo/3
+curl -X DELETE http://localhost:8080/deleteUser/3
 ----
 
-After using this curl command the remaining Todos are returned without Todo no. 3.
+After using this curl command the remaining Users are returned without User no. 3.
 
-Call the http://localhost:8080/getTodos method again to check whether the deletion was successful.
+Call the http://localhost:8080/getUsers method again to check whether the deletion was successful.
 
