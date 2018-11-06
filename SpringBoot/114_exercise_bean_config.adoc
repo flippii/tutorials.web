@@ -28,3 +28,14 @@ public class BeerConfig {
 Now try to start the application and figure out what went wrong.
 
 Then add the `@Primary` annotation to whatever beer you like most and rerun the application, which should now print your primary beer.
+
+TIP:
+====
+The `@Primary` annotation can be placed below or above `@Bean` or `@Component` depending on the place you need it.
+==== 
+
+NOTE: Do not forget to press kbd:[CTRL + SHIFT + O] to organize the import of the `org.springframework.context.annotation.Primary` annotation.
+
+
+
+

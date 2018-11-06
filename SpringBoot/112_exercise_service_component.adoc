@@ -60,7 +60,6 @@ public class BarKeeperService {
 		LOG.info(beer.getName());
 	}
 }
-
 ----
 
 Now go into the `Application` class and inject the `BarKeeperService` via method injection by using the `@Autowired` annotation.
