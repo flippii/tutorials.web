@@ -19,7 +19,7 @@ public class Flensburger implements Beer {
 
 [source,java]
 ----
-package com.vogella.user.playground.di;
+package com.vogella.di;
 
 @Configuration
 public class BeerConfig {
