@@ -5,7 +5,7 @@ So now we create a class called `BeerConfig`, which is capable of creating beer 
 
 [source,java]
 ----
-package com.vogella.playground;
+package com.vogella.playground.di;
 
 @Configuration
 public class BeerConfig {

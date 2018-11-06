@@ -1,11 +1,11 @@
 == Exercise: @Component and @Service annotations
 
-Create a _com.vogella.di_ package inside the _com.vogella.di project.
+Create a _com.vogella.playground.di_ package inside the _com.vogella.playground_ project.
 This package should contain an interface called `Beer`.
 
 [source,java]
 ----
-package com.vogella.playground;
+package com.vogella.playground.di;
 
 public interface Beer {
 	String getName();
