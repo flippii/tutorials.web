@@ -1,0 +1,37 @@
+== Optional Exercise: Using lombok to craft a beer
+
+Let´s create a `BeerImpl` class to make the creation of a beer instance easier and to avoid these anonymous inner classes.
+
+[source,java]
+----
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+public class BeerImpl implements Beer {
+
+	private String name;
+}
+----
+
+Lombok will automatically generate the `getName` method of the `Beer` interface. 
+
+Then the code of the former exercises can be even shorter.
+
+[source,java]
+----
+@Configuration
+@PropertySource("classpath:/beers.properties")
+public class BeerConfig {
+
+	// ... other beans
+
+	@Bean
+	public List<Beer> getBeerNamesFromProperty(@Value("${beer.names}") List<String> beerNames) {
+		return beerNames.stream().map(BeerImpl::new).collect(Collectors.toList());
+	}
+}
+----
+
+

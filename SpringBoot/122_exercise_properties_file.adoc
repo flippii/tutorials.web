@@ -32,5 +32,3 @@ public class BeerConfig {
 }
 ----
 
-Check out whether the list of beers is added to the BarKeeperService.
-
