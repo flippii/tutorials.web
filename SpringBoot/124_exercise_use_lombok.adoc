@@ -4,6 +4,8 @@ Let´s create a `BeerImpl` class to make the creation of a beer instance easier 
 
 [source,java]
 ----
+package com.vogella.spring.playground.di;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

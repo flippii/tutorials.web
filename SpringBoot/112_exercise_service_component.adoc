@@ -12,10 +12,15 @@ public interface Beer {
 }
 ----
 
-Then create a class called `Flensburger`, which represents a beer instance.
+Then create a class called `Flensburger`.
+The `@Component` annotation specifies that the Spring Framework can create an instance of this class once it is needed.
 
 [source,java]
 ----
+package com.vogella.spring.playground.di;
+
+import org.springframework.stereotype.Component;
+
 @Component
 public class Flensburger implements Beer {
 
@@ -30,9 +35,16 @@ public class Flensburger implements Beer {
 Now a beer instance can be injected into another class, which deserves a beer.
 
 Let´s say we have a service called `BarKeeperService`, which can do something with the beer.
+The `@Service` annotation does basically the same as the `@Component` annotation, but marks it as service.
 
 [source,java]
 ----
+package com.vogella.spring.playground.di;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+
 @Service
 public class BarKeeperService {
 
@@ -45,27 +57,37 @@ public class BarKeeperService {
 	}
 
 	public void logBeerName() {
-		LOG.info("Barkeeper serves " + beer.getName());
+		LOG.info(beer.getName());
 	}
 }
+
 ----
 
 Now go into the `Application` class and inject the `BarKeeperService` via method injection by using the `@Autowired` annotation.
 
 [source,java]
 ----
+package com.vogella.spring.playground;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.vogella.spring.playground.di.BarKeeperService;
+
 @SpringBootApplication
 public class Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
-
+	
 	@Autowired
 	public void setBeerService(BarKeeperService beerService) {
 		beerService.logBeerName();
 	}
 }
+
 ----
 
 Now you can run the application and see _Barkeeper serves Flensburger_ in the logs.

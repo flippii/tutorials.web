@@ -1,6 +1,7 @@
 == Optional Exercise: `@Qualifier` annotation
 
 Different components or beans can also be qualified by using the `@Qualifier` annotation.
+This approach is used to handle ambiguity of components of the same type, in case the `@Primary` approach is not sufficient.
 
 [source,java]
 ----

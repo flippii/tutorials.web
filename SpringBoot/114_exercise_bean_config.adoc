@@ -7,6 +7,9 @@ So now we create a class called `BeerConfig`, which is capable of creating beer 
 ----
 package com.vogella.playground.di;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
 @Configuration
 public class BeerConfig {
 	

@@ -8,11 +8,23 @@ Create a new _beers.properties_ file in the _src/main/resources_ source folder a
 beer.names=Bitburger,Krombacher,Berliner Kindl
 ----
 
-Now with a dedicated properties file the `@Configuration` has to point to this,
+Now with a dedicated properties file the `@Configuration` class has to point to this,
 because other property files are not automatically parsed like the _application.properties_ file.
+The `@PropertySource` annotation can be used to archieve this.
 
 [source,java]
 ----
+package com.vogella.spring.playground.di;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
 @Configuration
 @PropertySource("classpath:/beers.properties")
 public class BeerConfig {
