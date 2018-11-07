@@ -125,5 +125,3 @@ class UserRestController {
 
 <1> Since the Spring framework instantiates the `UserRestController` it is able to find the `UserService`, which is demanded in the `UserRestController` constructor. This works, because the `UserService` class has the `@Service` annotation being applied.
 
-The `UserService` will do more stuff in the upcoming chapters.
-
