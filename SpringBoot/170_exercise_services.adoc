@@ -3,7 +3,7 @@
 Creating an initial model should not be part of the `UserRestController` itself.
 A rest controller should simply specify the rest API and then delegate to a service, which handles the business logic in behind.
 
-Therefore a `UserService` class should be created in the _com.vogella.spring.user.service package.
+Therefore a `UserService` class should be created in the _com.vogella.spring.user.service_ package.
 
 [source, java]
 ----

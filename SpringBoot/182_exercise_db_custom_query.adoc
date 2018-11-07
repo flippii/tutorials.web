@@ -1,0 +1,56 @@
+== Exercise: Implement custom query methods
+
+Basically everything can be done by using CRUD operations. In case a `User` should be found by looking for text in the summary the `findAll()` method can be used and the service can iterate over the `Flux<User>` in order to find appropriate `User` objects.
+
+[source, java]
+----
+public static Flux<User> getByEmail(String email) {
+	Flux<User> findAll = UserRepository.findAll();
+	Flux<User> filteredFlux = findAll.filter(user -> user.getUserEmail().toLowerCase().contains(email.toLowerCase()));
+	return filteredFlux;
+}
+----
+
+But wait, is it really efficient to get all Todos and then filter them?
+
+Modern databases can do this way more efficient by for example using the SQL _LIKE_ statement. In general it is way better to delegate the query of certain elements to the database to gain more performance.
+
+Spring data provides way more possibilities than just using the CRUD operations, which are derived from the `ReactiveCrudRepository` interface.
+
+Inside the almost empty `TodoRepository` class custom method with a certain naming schema can be specified and Spring will take care of creating appropriate query out of them.
+
+So rather than filtering the Todos from the database on ourselves it can be done like this:
+
+[source, java]
+----
+package com.vogella.spring.user.data;
+
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+
+import com.vogella.spring.user.domain.User;
+
+import reactor.core.publisher.Flux;
+
+public interface UserRepository extends ReactiveCrudRepository<User, Long> {
+
+	Flux<User> findByEmailContainingIgnoreCase(String email);
+}
+----
+
+We leave it up to the reader to make use of the `findByEmailContainingIgnoreCase` in the `UserService` and then make use of it in the `TodoRestController` by providing a http://localhost:8080/search rest endpoint.
+
+The schema possibilities for writing such methods are huge, but out of scope in this exercise.
+
+[TIP]
+====
+You can also write real queries by using the `@Query` annotation.
+
+[source, java]
+----
+// Just pretend that a User has a category to see the @Query syntax
+
+@Query("from User a join a.category c where c.name=:categoryName")
+Flux<User> findByCategory(@Param("categoryName") String categoryName);
+----
+====
+

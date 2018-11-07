@@ -1,0 +1,72 @@
+== Exercise: Using Example objects for queries
+
+With the query method schema lots of properties of the `User` class can be combined for a query, but sometimes this can also be very verbose:
+
+[source, java]
+----
+// could be even worse...
+Flux<User> findByEmailContainingAndRolesContainingAllIgnoreCaseAndEnabledIsTrue(String email, String role);
+
+----
+
+It would be nicer to create an instance of a `User` and then pass it to a find method.
+
+[source, java]
+----
+User user = new User(1);
+User theUserWithIdEquals1 = userRepository.find(todo);
+----
+
+Unfortunately the `ReactiveCrudRepository` does not provide such a method.
+
+But this capability is proivded by the `ReactiveQueryByExampleExecutor<T>` class.
+
+image::./ReactiveQueryByExampleExecutor.png[] 
+
+[source, java]
+----
+package com.vogella.spring.user.data;
+
+import org.springframework.data.repository.query.ReactiveQueryByExampleExecutor;
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+
+import com.vogella.spring.user.domain.User;
+
+import reactor.core.publisher.Flux;
+
+public interface UserRepository extends ReactiveCrudRepository<User, Long>, ReactiveQueryByExampleExecutor<User> {
+
+	Flux<User> findByEmailContainingIgnoreCase(String email);
+
+	Flux<User> findByEmailContainingAndRolesContainingAllIgnoreCaseAndEnabledIsTrue(String email, String role);
+}
+----
+
+<1> By implementing the `ReactiveQueryByExampleExecutor<User>` interface the methods above an be used to query by using `Example` objects.
+
+So instead of using a `findByEmailContainingAndRolesContainingAllIgnoreCaseAndEnabledIsTrue` method an `Example` can be used to express the same:
+
+[source, java]
+----
+public Mono<Todo> findTodoByExample(User user) {
+	ExampleMatcher matcher = ExampleMatcher.matching().withIgnoreCase()
+			.withMatcher("email", GenericPropertyMatcher::contains)
+			.withMatcher("role", GenericPropertyMatcher::contains)
+			.withMatcher("enabled", GenericPropertyMatcher::exact);
+	Example<User> example = Example.of(user, matcher);
+	return userRepository.findOne(example);
+}
+
+----
+
+When looking for exact matches no `ExampleMatcher` has to be configured.
+
+[source, java]
+----
+public Mono<User> findTodoByExampleSimple(User user) {
+	Example<User> example = Example.of(user);
+	return userRepository.findOne(example);
+}
+----
+
+

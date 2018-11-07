@@ -38,6 +38,8 @@ include::155_exercise_user_model.adoc[]
 include::160_exercise_rest_controller.adoc[]
 include::170_exercise_services.adoc[]
 include::180_exercise_reactive_db.adoc[]
+include::182_exercise_db_custom_query.adoc[]
+include::184_exercise_db_example_query.adoc[]
 include::190_exercise_reactive_security.adoc[]
 
 include::008_resourceslocal.adoc[]

@@ -1,6 +1,6 @@
 == Exercise: Reactive database access with Spring Data
 
-Using reactive Reactor types like `Flux<T>` is really nice and powerful, but keeping the Todo data in-memory is not.
+Using reactive Reactor types like `Flux<T>` is really nice and powerful, but keeping the User data in-memory is not.
 
 In former chapters, where the project has been created MongoDB dependencies have already been selected.
 
@@ -11,261 +11,133 @@ MongoDB has the benefit that it comes with a reactive database driver, which oth
 
 But don't be scared, if you haven't used MongoDB yet, because there is a `compile('org.springframework.boot:spring-boot-starter-data-mongodb-reactive')` dependency in your _build.gradle_ file, which provides an abstraction layer around the database.
 
-In order to find, save and delete `Todo` objects in the mongo db a `TodoRepository` in the _com.vogella.springboot2.data_ package should be created.
+In order to find, save and delete `User` objects in the MongoDB a `UserRepository` in the _com.vogella.spring.user.data_ package should be created.
 
 [source, java]
 ----
-package com.vogella.springboot2.data;
+package com.vogella.spring.user.data;
 
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 
-import com.vogella.springboot2.domain.Todo;
+import com.vogella.spring.user.domain.User;
 
-public interface TodoRepository extends ReactiveCrudRepository<Todo, Long> {
+public interface UserRepository extends ReactiveCrudRepository<User, Long> {
 
 }
 ----
 
-Now Spring can create a `ReactiveCrudRepository` for `Todo` objects at runtime automatically, which provides (C)reate, (R)ead, (U)pdate and (D)elete capabilties.
+Now Spring can create a `ReactiveCrudRepository` for `User` objects at runtime automatically, which provides (C)reate, (R)ead, (U)pdate and (D)elete capabilties.
 
 [NOTE]
 ====
 The `ReactiveCrudRepository` class is similar to Spring Datas' `CrudRepository` class, but is able to return reactive asynchronous types rather than synchronous types.
 ====
 
-Now we have to enable MongoDB to work with `Todo` objects:
+Now we have to enable MongoDB to work with `User` objects:
 
 [source, java]
 ----
-package com.vogella.springboot2.domain;
+package com.vogella.spring.user.domain;
 
-import java.util.Date;
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Todo {
+public class User {
 
 	@Id #<1>
 	private long id;
-	private String summary = "";
-	private String description = "";
-	private boolean done = false;
-	private Date dueDate = new Date();
+	private String userName = "";
+	private String userEmail = "";
+	private String password = "";
+	private List<String> roles = new ArrayList<>();
+	private Instant lastLogin = Instant.now();
+	private boolean enabled;
 	
-	public Todo(long id) {
+	public User(long id) {
 		this.id = id;
 	}
-}
 
+}
 ----
 
 <1> @Id is used to specify the id of the object, which is supposed to be stored in the database
 
-Now the `TodoService` should be updated to store the data by using the `TodoRepository`.
+Now the `UserService` should be updated to store the data by using the `UserRepository`.
 
 [source, java]
 ----
-package com.vogella.springboot2.service;
+package com.vogella.spring.user.service;
 
+import java.time.Instant;
 import java.util.Arrays;
+import java.util.Collections;
 
 import org.springframework.stereotype.Service;
 
-import com.vogella.springboot2.data.TodoRepository;
-import com.vogella.springboot2.domain.Todo;
+import com.vogella.spring.user.data.UserRepository;
+import com.vogella.spring.user.domain.User;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
-public class TodoService {
+public class UserService {
 
-	private TodoRepository todoRepository;
+	private UserRepository userRepository;
 
-	public TodoService(TodoRepository todoRepository) { #<1>
-		this.todoRepository = todoRepository;
-		createTodoModel();
+	public UserService(UserRepository UserRepository) {
+		this.userRepository = UserRepository;
+		createUserModel();
 	}
 
-	private void createTodoModel() {
-		Todo todo = new Todo(1);
-		todo.setSummary("Learn Spring Boot 2.0");
-		todo.setDescription("Easily create modern reactive webapps with Spring Boot 2.0");
+	private void createUserModel() {
+		User user = new User(1, "Fabian Pfaff", "fabian.pfaff@vogella.com", "sdguidsdsghuds",
+				Collections.singletonList("ADMIN"), Instant.now(), true);
+		User user2 = new User(1, "Simon Scholz", "simon.scholz@vogella.com", "sdguidsdsghuds",
+				Collections.singletonList("ADMIN"), Instant.now(), false);
+		User user3 = new User(1, "Lars Vogel", "lars.vogel@vogella.com", "sdguidsdsghuds",
+				Collections.singletonList("USER"), Instant.now(), true);
 
-		Todo todo2 = new Todo(2);
-		todo2.setSummary("Learn Reactor Framework");
-		todo2.setDescription("Use the power of the reactive io api with the Reactor Framework");
-
-		Todo todo3 = new Todo(3);
-		todo3.setSummary("Learn @RestController");
-		todo3.setDescription("Learn how to create @RestController and use rest endpoints");
-
-		todoRepository.saveAll(Arrays.asList(todo, todo2, todo3)).subscribe(); #<2>
+		userRepository.saveAll(Arrays.asList(user, user2, user3)).subscribe();
 	}
 
-	public Flux<Todo> getTodos(long limit) {
+	public Flux<User> getUsers(long limit) {
 		if (-1 == limit) {
-			return todoRepository.findAll();
+			return userRepository.findAll();
 		}
-		return todoRepository.findAll().take(limit);
+		return userRepository.findAll().take(limit);
 	}
 
-	public Mono<Todo> getTodoById(long id) {
-		return todoRepository.findById(id);
+	public Mono<User> getUserById(long id) {
+		return userRepository.findById(id);
 	}
 
-	public Mono<Todo> newTodo(Todo todo) {
-		return todoRepository.save(todo);
+	public Mono<User> newUser(User User) {
+		return userRepository.save(User);
 	}
 
-	public Mono<Void> deleteTodo(long id) {
-		return todoRepository.deleteById(id);
+	public Mono<Void> deleteUser(long id) {
+		return userRepository.deleteById(id);
 	}
 }
-
 ----
 
-<1> Even tough the `TodoRepository` interface is not annotated with @Service, @Bean, @Component or something similar it is automatically injected. The Spring Framework creates an instance of the `TodoRepository` at runtime once it is requested by the `TodoService`, because the `TodoRepository` is derived from `ReactiveCrudRepository`.
+<1> Even tough the `UserRepository` interface is not annotated with @Service, @Bean, @Component or something similar it is automatically injected. The Spring Framework creates an instance of the `UserRepository` at runtime once it is requested by the `UserService`, because the `UserRepository` is derived from `ReactiveCrudRepository`.
 
-<2> For the initial model the 3 Todos from former chapters are now stored in the MongoDB.
+<2> For the initial model the 3 Users from former chapters are now stored in the MongoDB.
 
 For all other operations the `ReactiveCrudRepository` default methods, which return Reactor types, are used (`findAll`, `findById`, `save`, `deleteById`).
-
-== Exercise: Implement custom query methods
-
-Basically everything can be done by using CRUD operations. In case a `Todo` should be found by looking for text in the summary the `findAll()` method can be used and the service can iterate over the `Flux<Todo>` in order to find appropriate `Todo` objects.
-
-[source, java]
-----
-public Flux<Todo> getBySummary(String textInSummary) {
-		Flux<Todo> findAll = todoRepository.findAll();
-		Flux<Todo> filteredFlux = findAll.filter(todo -> todo.getSummary().toLowerCase().contains(textInSummary.toLowerCase()));
-		return filteredFlux;
-}
-----
-
-But wait, is it really efficient to get all Todos and then filter them?
-
-Modern databases can do this way more efficient by for example using the SQL _LIKE_ statement. In general it is way better to delegate the query of certain elements to the database to gain more performance.
-
-Spring data provides way more possibilities than just using the CRUD operations, which are derived from the `ReactiveCrudRepository` interface.
-
-Inside the almost empty `TodoRepository` class custom method with a certain naming schema can be specified and Spring will take care of creating appropriate query out of them.
-
-So rather than filtering the Todos from the database on ourselves it can be done like this:
-
-[source, java]
-----
-package com.vogella.springboot2.data;
-
-import org.springframework.data.repository.reactive.ReactiveCrudRepository;
-
-import com.vogella.springboot2.domain.Todo;
-
-import reactor.core.publisher.Flux;
-
-public interface TodoRepository extends ReactiveCrudRepository<Todo, Long> {
-
-	Flux<Todo> findBySummaryContainingIgnoreCase(String summary);
-}
-----
-
-We leave it up to the reader to make use of the `findBySummaryContainingIgnoreCase` in the `TodoService` and then make use of it in the `TodoRestController` by providing a http://localhost:8080/getBySummary rest endpoint.
-
-The schema possibilities for writing such methods are huge, but out of scope in this exercise.
-
-[TIP]
-====
-You can also write real queries by using the `@Query` annotation.
-
-[source, java]
-----
-// Just pretend that a Todo has a category to see the @Query syntax
-
-@Query("from Todos a join a.category c where c.name=:categoryName")
-Flux<Todo> findByCategory(@Param("categoryName") String categoryName);
-----
-====
-
-== Exercise: Using Example objects for queries
-
-With the query method schema lots of properties of the `Todo` class can be combined for a query, but sometimes this can also be very verbose:
-
-[source, java]
-----
-// could be even worse...
-Flux<Todo> findBySummaryContainingAndDescriptionContainingAllIgnoreCaseAndDoneIsTrue(String summary, String description);
-
-----
-
-It would be nicer to create an instance of a `Todo` and then pass it to a find method.
-
-[source, java]
-----
-Todo todo = new Todo(1);
-Todo theTodoWithIdEquals1 = todoRepository.find(todo);
-----
-
-Unfortunately the `ReactiveCrudRepository` does not provide such a method.
-
-But this capability is proivded by the `ReactiveQueryByExampleExecutor<T>` class.
-
-image::./ReactiveQueryByExampleExecutor.png[] 
-
-[source, java]
-----
-package com.vogella.springboot2.data;
-
-import org.springframework.data.repository.query.ReactiveQueryByExampleExecutor;
-import org.springframework.data.repository.reactive.ReactiveCrudRepository;
-
-import com.vogella.springboot2.domain.Todo;
-
-import reactor.core.publisher.Flux;
-
-public interface TodoRepository extends ReactiveCrudRepository<Todo, Long>, ReactiveQueryByExampleExecutor<Todo> { #<1>
-
-	Flux<Todo> findBySummaryContainingIgnoreCase(String textInSummary);
-
-	Flux<Todo> findBySummaryContainingAndDescriptionContainingAllIgnoreCaseAndDoneIsTrue(String summary, String description);
-	
-}
-
-----
-
-<1> By implementing the `ReactiveQueryByExampleExecutor<Todo>` interface the methods above an be used to query by using `Example` objects.
-
-So instead of using a `findBySummaryContainingAndDescriptionContainingAllIgnoreCaseAndDoneIsTrue` method an `Example` can be used to express the same:
-
-[source, java]
-----
-public Mono<Todo> findTodoByExample(Todo todo) {
-	ExampleMatcher matcher = ExampleMatcher.matching().withIgnoreCase()
-			.withMatcher("summary", GenericPropertyMatcher::contains)
-			.withMatcher("description", GenericPropertyMatcher::contains)
-			.withMatcher("done", GenericPropertyMatcher::exact);
-	Example<Todo> example = Example.of(todo, matcher);
-	return todoRepository.findOne(example);
-}
-
-----
-
-When looking for exact matches no `ExampleMatcher` has to be configured.
-
-[source, java]
-----
-public Mono<Todo> findTodoByExampleSimple(Todo todo) {
-	Example<Todo> example = Example.of(todo);
-	return todoRepository.findOne(example);
-}
-----
-
 
