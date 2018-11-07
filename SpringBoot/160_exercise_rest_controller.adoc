@@ -6,8 +6,11 @@ Create a package private _UserRestController_ class inside a _com.vogella.spring
 ----
 package com.vogella.spring.user.controller;
 
+import java.time.Instant;
+import java.util.Collections;
+
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.vogella.spring.user.domain.User;
@@ -15,42 +18,37 @@ import com.vogella.spring.user.domain.User;
 import reactor.core.publisher.Flux;
 
 @RestController #<1>
+@RequestMapping("/user") #<2>
 class UserRestController {
 
-	private Flux<User> users; #<2>
+	private Flux<User> users; #<3>
 
 	public UserRestController() {
 		users = createUserModel();
 	}
 
 	private Flux<User> createUserModel() {
-		User todo = new User(1);
-		todo.setSummary("Learn Spring Boot 2.0");
-		todo.setDescription("Easily create modern reactive webapps with Spring Boot 2.0");
+		User user = new User(1, "Fabian Pfaff", "fabian.pfaff@vogella.com", "sdguidsdsghuds",
+				Collections.singletonList("ADMIN"), Instant.now(), true);
+		User user2 = new User(1, "Simon Scholz", "simon.scholz@vogella.com", "sdguidsdsghuds",
+				Collections.singletonList("ADMIN"), Instant.now(), false);
+		User user3 = new User(1, "Lars Vogel", "lars.vogel@vogella.com", "sdguidsdsghuds",
+				Collections.singletonList("USER"), Instant.now(), true);
 
-		User todo2 = new User(2);
-		todo2.setSummary("Learn Reactor Framework");
-		todo2.setDescription("Use the power of the reactive io api with the Reactor Framework");
-		
-		User todo3 = new User(3);
-		todo3.setSummary("Learn @RestController");
-		todo3.setDescription("Learn how to create @RestController and use rest endpoints");
-
-		return Flux.just(todo, todo2, todo3);
+		return Flux.just(user, user2, user3);
 	}
-	
-	@GetMapping("/getUsers") #<3>
+
+	@GetMapping
 	public Flux<User> getUsers() {
 		return users;
 	}
-
 }
-
 ----
 
-<1> The @RestController annotation tells Spring that this class is a rest controller, which will be instantiated by the Spring framework
-<2> Flux is a type of the Reactor Framework, which implements the reactive stream api like RxJava does.
-<3> The @GetMapping annotation tells Spring that the endpoint http://{yourdomain}/getUsers should invoke the _getUsers()_ method.
+<1> The `@RestController` annotation tells Spring that this class is a rest controller, which will be instantiated by the Spring framework
+<2> The `@RequestMapping` annotation is used to point to a default prefix for the rest endpoints defined in this rest controller
+<3> `Flux<T>` is a type of the Reactor Framework, which implements the reactive stream api like RxJava does.
+<4> The @GetMapping annotation tells Spring that the endpoint http://{yourdomain}/user should invoke the _getUsers()_ method.
 
 Now start the application by right clicking the project and clicking on menu:Run as[Spring Boot App].
 
@@ -63,103 +61,4 @@ Now let's test the result when navigating to http://localhost:8080/getUsers.
 image::./restcontroller-json.png[] 
 
 What we can see here is that the result is shown as JSON. By default the _@RestController_ annotation handles this and if no specific mime type for the response is requested the result will be the object serialized as JSON. By default Spring uses the Jackson library the serialize and deserialize Java objects from and to JSON.
-
-== Optional: Change the default port of the web app
-
-By default Spring Boot uses port 8080, but this can be changed by using the _server.port_ property in the _application.properties_ file.
-
-image::./server-port-app-props.png[] 
-
-Since this is an optional exercise, we should leave the port to be 8080.
-
-[source, properties]
-----
-server.port=8080
-----
-
-== Exercise: Passing parameters to the rest api
-
-Since the amount of Users can potentially increase really fast it would be nice to have search capabilities so that clients do not have to receive the whole list of Users all the time and do the search on the client side.
-
-[source, java]
-----
-@RestController
-class UserRestController {
-
-	// ... more code
-
-	@GetMapping("/getUsers")
-	public Flux<User> getUsers(
-	@RequestParam(name = "limit", required = false, defaultValue = "-1") long limit) { #<1>
-		if(-1 == limit) {
-			return users;
-		}
-		return users.take(limit);
-	}
-
-	@GetMapping("/getUserById")
-	public Mono<User> getUserById(long id) {  #<2>
-		return Mono.from(users.filter(t -> id == t.getId()));
-	}
-
-}
-
-----
-
-<1> @RequestParam can be used to request parameters and also apply default values, if the parameter is not required.
-
-<2> If the parameter is required a the name of the request parameter should be equal to method parameter's name, the @RequestParam annotation can be omitted.
-
-== Exercise: Posting data to the rest controller
-
-It is nice to receive data, but we also want to create new Users.
-
-[source, java]
-----
-@PostMapping("/newUser") #<1>
-public Mono<User> newUser(@RequestBody User todo) {
-	Mono<User> todoMono = Mono.just(todo);
-	users = users.mergeWith(todoMono); #<2>
-	return todoMono;
-}
-----
-
-<1> `@PostMapping` is used to specify that data has to be posted
-<2> The `mergeWith` method merges the existing Flux with the new `Mono<User>` containing the posted `User` object
-
-Curl or any rest client you like, e.g., https://addons.mozilla.org/de/firefox/addon/rester/[RESTer] for Firefox, can be used to post data to the rest endpoint.
-
-[source, curl]
-----
-curl -d '{"id":4, "summary":"New custom User"}' -H "Content-Type: application/json" -X POST http://localhost:8080/newUser
-----
-
-This will return the "New custom User" and show it on the command line.
-
-== Exercise: Sending a delete request
-
-Last but not least Users should also be deleted by using the rest API.
-
-[source, java]
-----
-@DeleteMapping("/deleteUser/{id}") #<1>
-public Mono<Void> deleteUser(@PathVariable("id") int id) { #<2>
-	users = users.filter(todo -> todo.getId() != id);
-	return users.then();
-}
-----
-
-<1> `@DeleteMapping` can be used for delete rest operations and curly braces + name like _{id}_ can be used as alternative of using query parameters like ?id=3
-<2> `@PathVariable` specifies the path, which will be used for the {id} path variable
-
-User no. 3 can be deleted, since we learned how to create rest controllers now.
-
-[source, curl]
-----
-curl -X DELETE http://localhost:8080/deleteUser/3
-----
-
-After using this curl command the remaining Users are returned without User no. 3.
-
-Call the http://localhost:8080/getUsers method again to check whether the deletion was successful.
 
