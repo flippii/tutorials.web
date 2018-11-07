@@ -15,7 +15,7 @@ Now add the _beer.name_ property to the _application.properties_ file.
 beer.name=Carlsberg
 ----
 
-[Note]
+[NOTE]
 ====
 The editor of the _application.properties_ file might complain about an unknown property, but it is just fine to add custom properties.
 Usually the _application.properties_ file is used to configure Spring properties. 

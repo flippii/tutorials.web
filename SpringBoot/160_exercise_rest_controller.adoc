@@ -38,7 +38,7 @@ class UserRestController {
 		return Flux.just(user, user2, user3);
 	}
 
-	@GetMapping
+	@GetMapping #<4>
 	public Flux<User> getUsers() {
 		return users;
 	}
