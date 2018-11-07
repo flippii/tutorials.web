@@ -1,127 +1,129 @@
 == Exercise: Creating a service for the business logic
 
-Creating an initial model should not be part of the `TodoRestController` itself.
+Creating an initial model should not be part of the `UserRestController` itself.
 A rest controller should simply specify the rest API and then delegate to a service, which handles the business logic in behind.
 
-Therefore a `TodoService` class should be created in the com.vogella.springboot2.service package.
+Therefore a `UserService` class should be created in the _com.vogella.spring.user.service package.
 
 [source, java]
 ----
-package com.vogella.springboot2.service;
+package com.vogella.spring.user.service;
+
+import java.time.Instant;
+import java.util.Collections;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import com.vogella.springboot2.domain.Todo;
+import com.vogella.spring.user.domain.User;
 
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
-@Service #<1>
-public class TodoService {
+@Service
+public class UserService {
 
-	private Flux<Todo> todos;
+	private Flux<User> users;
 
-	public TodoService() {
-		todos = createTodoModel();
+	public UserService() {
+		users = createUserModel();
 	}
 
-	private Flux<Todo> createTodoModel() {
-		Todo todo = new Todo(1);
-		todo.setSummary("Learn Spring Boot 2.0");
-		todo.setDescription("Easily create modern reactive webapps with Spring Boot 2.0");
+	private Flux<User> createUserModel() {
+		User user = new User(1, "Fabian Pfaff", "fabian.pfaff@vogella.com", "sdguidsdsghuds",
+				Collections.singletonList("ADMIN"), Instant.now(), true);
+		User user2 = new User(1, "Simon Scholz", "simon.scholz@vogella.com", "sdguidsdsghuds",
+				Collections.singletonList("ADMIN"), Instant.now(), false);
+		User user3 = new User(1, "Lars Vogel", "lars.vogel@vogella.com", "sdguidsdsghuds",
+				Collections.singletonList("USER"), Instant.now(), true);
 
-		Todo todo2 = new Todo(2);
-		todo2.setSummary("Learn Reactor Framework");
-		todo2.setDescription("Use the power of the reactive io api with the Reactor Framework");
-
-		Todo todo3 = new Todo(3);
-		todo3.setSummary("Learn @RestController");
-		todo3.setDescription("Learn how to create @RestController and use rest endpoints");
-
-		return Flux.just(todo, todo2, todo3);
+		return Flux.just(user, user2, user3);
 	}
 
-	public Flux<Todo> getTodos(long limit) {
+	public Flux<User> getUsers(@RequestParam(name = "limit", required = false, defaultValue = "-1") long limit) {
 		if (-1 == limit) {
-			return todos;
+			return users;
 		}
-		return todos.take(limit);
+		return users.take(limit);
 	}
 
-	public Mono<Todo> getTodoById(long id) {
-		return Mono.from(todos.filter(t -> id == t.getId()));
+	public Mono<User> getUserById(@PathVariable("id") long id) {
+		return Mono.from(users.filter(user -> id == user.getId()));
 	}
 
-	public Mono<Todo> newTodo(Todo todo) {
-		Mono<Todo> todoMono = Mono.just(todo);
-		todos = todos.mergeWith(todoMono);
-		return todoMono;
+	public Mono<User> newUser(@RequestBody User user) {
+		Mono<User> userMono = Mono.just(user);
+		users = users.mergeWith(userMono);
+		return userMono;
 	}
 
-	public Mono<Void> deleteTodo(int id) {
-		todos = todos.filter(todo -> todo.getId() != id);
-		return todos.then();
+	public Mono<Void> deleteTodo(@PathVariable("id") int id) {
+		users = users.filter(user -> user.getId() != id);
+		return users.then();
 	}
 }
-
 ----
 
-<1> The @Service annotation specifies this `TodoService` as spring service, which will be created when it is demanded by other classes like the refactored `TodoRestController`.
+<1> The @Service annotation specifies this `UserService` as spring service, which will be created when it is demanded by other classes like the refactored `TodoRestController`.
 
 Basically we just moved everything into another class, but left out the rest controller specific annotations.
 
-Now the `TodoRestController` looks clearly arranged and just delegates the rest requests to the `TodoService`.
+Now the `UserRestController` looks clearly arranged and just delegates the rest requests to the `UserService`.
 
 [source, java]
 ----
-package com.vogella.springboot2.controller;
+package com.vogella.spring.user.controller;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vogella.springboot2.domain.Todo;
-import com.vogella.springboot2.service.TodoService;
+import com.vogella.spring.user.domain.User;
+import com.vogella.spring.user.service.UserService;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-class TodoRestController {
-	
-	private TodoService todoService;
+@RequestMapping("/user")
+class UserRestController {
 
-	public TodoRestController(TodoService todoService) { #<1>
-		this.todoService = todoService;
+	private UserService userService;
+
+	public UserRestController(UserService userService) {
+		this.userService = userService;
 	}
 
-	@GetMapping("/getTodos")
-	public Flux<Todo> getTodos(@RequestParam(name = "limit", required = false, defaultValue = "-1") long limit) {
-		return todoService.getTodos(limit);
+	@GetMapping
+	public Flux<User> getUsers(@RequestParam(name = "limit", required = false, defaultValue = "-1") long limit) {
+		return userService.getUsers(limit);
 	}
 
-	@GetMapping("/getTodoById")
-	public Mono<Todo> getTodoById(long id) {
-		return todoService.getTodoById(id);
+	@GetMapping("/{id}")
+	public Mono<User> getUserById(@PathVariable("id") long id) {
+		return userService.getUserById(id);
 	}
 
-	@PostMapping("/newTodo")
-	public Mono<Todo> newTodo(@RequestBody Todo todo) {
-		return todoService.newTodo(todo);
+	@PostMapping
+	public Mono<User> newUser(@RequestBody User user) {
+		return userService.newUser(user);
 	}
 
-	@DeleteMapping("/deleteTodo/{id}")
+	@DeleteMapping("/{id}")
 	public Mono<Void> deleteTodo(@PathVariable("id") int id) {
-		return todoService.deleteTodo(id);
+		return userService.deleteTodo(id);
 	}
 }
-
 ----
 
-<1> Since the Spring framework instantiates the `TodoRestController` it is able to find the `TodoService`, which is demanded in the `TodoRestControllers` constructor. This works, because the `TodoService` class has the `@Service` annotation being applied.
+<1> Since the Spring framework instantiates the `UserRestController` it is able to find the `UserService`, which is demanded in the `UserRestController` constructor. This works, because the `UserService` class has the `@Service` annotation being applied.
 
-The `TodoService` will do more stuff in the upcoming chapters.
+The `UserService` will do more stuff in the upcoming chapters.
 
