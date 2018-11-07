@@ -1,0 +1,53 @@
+== Exercise: Sending a delete request
+
+Last but not least Users should also be deleted by using the rest API.
+
+[source, java]
+----
+package com.vogella.spring.user.controller;
+
+import java.time.Instant;
+import java.util.Collections;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.vogella.spring.user.domain.User;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+@RestController
+@RequestMapping("/user")
+class UserRestController {
+
+	// more code ...
+	
+	@DeleteMapping("/{id}")
+	public Mono<Void> deleteTodo(@PathVariable("id") int id) {
+		users = users.filter(user -> user.getId() != id);
+		return users.then();
+	}
+}
+----
+
+<1> `@DeleteMapping` can be used for delete rest operations and curly braces + name like _{id}_ can be used as alternative of using query parameters like ?id=3
+<2> `@PathVariable` specifies the path, which will be used for the {id} path variable
+
+User no. 3 can be deleted, since we learned how to create new users now.
+
+[source, curl]
+----
+curl -X DELETE http://localhost:8080/deleteUser/3
+----
+
+After using this curl command the remaining Users are returned without User no. 3.
+
+Call the http://localhost:8080/getUsers method again to check whether the deletion was successful.
+

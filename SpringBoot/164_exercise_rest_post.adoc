@@ -1,0 +1,51 @@
+== Exercise: Posting data to the rest controller
+
+It is nice to receive data, but we also want to create new Users.
+
+[source, java]
+----
+package com.vogella.spring.user.controller;
+
+import java.time.Instant;
+import java.util.Collections;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.vogella.spring.user.domain.User;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+@RestController
+@RequestMapping("/user")
+class UserRestController {
+
+	// more code ...
+	
+	@PostMapping #<1>
+	public Mono<User> newUser(@RequestBody User user) {
+		Mono<User> userMono = Mono.just(user);
+		users = users.mergeWith(userMono); #<2>
+		return userMono;
+	}
+}
+----
+
+<1> `@PostMapping` is used to specify that data has to be posted
+<2> The `mergeWith` method merges the existing Flux with the new `Mono<User>` containing the posted `User` object
+
+Curl or any rest client you like, e.g., https://addons.mozilla.org/de/firefox/addon/rester/[RESTer] for Firefox, can be used to post data to the rest endpoint.
+
+[source, curl]
+----
+curl -d '{"id":4, "summary":"New custom User"}' -H "Content-Type: application/json" -X POST http://localhost:8080/newUser
+----
+
+This will return the "New custom User" and show it on the command line.
+
