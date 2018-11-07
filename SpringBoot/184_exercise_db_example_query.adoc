@@ -48,7 +48,7 @@ So instead of using a `findByEmailContainingAndRolesContainingAllIgnoreCaseAndEn
 
 [source, java]
 ----
-public Mono<Todo> findTodoByExample(User user) {
+public Mono<User> findUserByExample(User user) {
 	ExampleMatcher matcher = ExampleMatcher.matching().withIgnoreCase()
 			.withMatcher("email", GenericPropertyMatcher::contains)
 			.withMatcher("role", GenericPropertyMatcher::contains)
@@ -56,14 +56,13 @@ public Mono<Todo> findTodoByExample(User user) {
 	Example<User> example = Example.of(user, matcher);
 	return userRepository.findOne(example);
 }
-
 ----
 
 When looking for exact matches no `ExampleMatcher` has to be configured.
 
 [source, java]
 ----
-public Mono<User> findTodoByExampleSimple(User user) {
+public Mono<User> findUserByExampleExact(User user) {
 	Example<User> example = Example.of(user);
 	return userRepository.findOne(example);
 }
