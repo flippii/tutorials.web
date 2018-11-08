@@ -13,6 +13,6 @@ subprojects {
 	apply plugin: 'com.vogella.gradle.plugin'
 }
 
-task wrapper(type: Wrapper){
-	gradleVersion = '3.3'
+wrapper {
+	gradleVersion = '4.10.2'
 }
