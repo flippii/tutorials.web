@@ -1,17 +1,17 @@
 == Exercise - Making the information available via REST
 
 If you want to access your data from another application or make it available for the public your best and most secure way is a REST api.
-Luckily the SpringBoot framework has useful methods for this. 
+Luckily the SpringBoot framework has useful methods for this.
 
 === Setup
 
-Create a new class named `IssueRestController`. 
-You may create a new package for this or use the existing `com.vogella.example.controller` package. 
-To tell Spring that this is a RestController and that the methods inside this controller should return JSON data, add the `@RestController` annotation to the class. 
+Create a new class named `IssueRestController`.
+You may create a new package for this or use the existing `com.vogella.example.controller` package.
+To tell Spring that this is a RestController and that the methods inside this controller should return JSON data, add the `@RestController` annotation to the class.
 
-The setup for the routes is similar to normal routes. 
-Use the `@GetMapping` for `GET` requests. And `@PostMapping` for `POST` requests. 
-The difference is that this time you don't want templates to be rendered. 
+The setup for the routes is similar to normal routes.
+Use the `@GetMapping` for `GET` requests. And `@PostMapping` for `POST` requests.
+The difference is that this time you don't want templates to be rendered.
 So the return type for the methods should be whatever you want to return. E.g. `IssueReport` or even `List<IssueReport>`.
 
 [source, java]
@@ -22,26 +22,31 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vogella.issuereport.IssueReport;
+import com.vogella.example.entity.IssueReport;
 
 @RestController
+@RequestMapping("/api/issues")
 public class IssueRestController {
-	@GetMapping(value="/api/issues")
+	@GetMapping
 	public List<IssueReport> getIssues() {
 		return null;
 	}
-	
-	@GetMapping(value="/api/issues/{id}")
-	public IssueReport getIssue(@PathVariable(value="id") long id) {
+
+	@GetMapping("/{id}")
+	public IssueReport getIssue(@PathVariable("id") long id) {
 		return null;
 	}
 }
 ----
 
 If you want to access a variable in the URL (in this case `id`) you do this by first declaring it a variable in the `@GetMapping` arguments (`{id}`).
-Than you require it as a method parameter with the `@PathVariable` annotation.
+Then you tell Spring to inject it into your method by adding a parameter with the `@PathVariable` annotation.
+You might notice the `@RequestMapping` annotation we put above our class definition.
+Using this annotation at the class level allows us to extract the part of the path that is shared by all endpoints defined in the class.
+
 
 === Making the data available
 
@@ -53,39 +58,50 @@ Just (re-)use the previously created `IssueRepository` and return the values fro
 package com.vogella.example.controller;
 
 import java.util.List;
+import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vogella.issuereport.IssueReport;
-import com.vogella.issuereport.repositories.IssueRepository;
+import com.vogella.example.entity.IssueReport;
+import com.vogella.example.repositories.IssueRepository;
 
 @RestController
+@RequestMapping("/api/issues")
 public class IssueRestController {
-	IssueRepository issueRepository;
-	
-	public IssueRestController(IssueRespository issueRespositoy) {
-	    this.issueRepository = issueRespository;
-	}
-	
-	@GetMapping(value="/api/issues")
-	public List<IssueReport> getIssues() {
-		return this.issueRepository.findAllButPrivate();
-	}
-	
-	@GetMapping(value="/api/issues/{id}")
-	public IssueReport getIssue(@PathVariable(value="id") long id) {
-		return this.issueRepository.findOne(id);
-	}
+    private IssueRepository issueRepository;
+
+    public IssueRestController(IssueRepository issueRepository) {
+        this.issueRepository = issueRepository;
+    }
+
+    @GetMapping
+    public List<IssueReport> getIssues() {
+        return this.issueRepository.findAllButPrivate();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<IssueReport> getIssue(@PathVariable("id") Optional<IssueReport> issueReportOptional) {
+    	if (!issueReportOptional.isPresent() ) {
+    		return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    	}
+
+        return new ResponseEntity<>(issueReportOptional.get(), HttpStatus.OK);
+    }
 }
 ----
 
-Again the `IssueRepository` is automatically injected into the class. 
-You can still use the custom query method `findAllButPrivate()`. 
+Again the `IssueRepository` is automatically injected into the class.
+You can still use the custom query method `findAllButPrivate()`.
 
-The method `findOne(long id)` queries only the object with the given Id.
-In this case we get it from the URL parameters and then we return the object queried or (in case nothing is found) nothing.
+The `getIssue` method is a little more interesting.
+You might notice that we let Spring inject an `Optional<IssueReport>` into the method.
+This is done with the help of `DomainClassConverter$ToEntityConverter` which takes the id we specified with `@PathVariable` and tries to retrieve the respective entity from the database.
+If Spring couldn't find an entity with the given id we return an empty response with status code 404 in the guard clause.
+Otherwise the entity gets returned as JSON.
 
 

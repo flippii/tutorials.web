@@ -11,10 +11,10 @@ Besides testing support for Spring boot `spring-boot-starter-test` adds a handfu
 == Rolling back database changes after tests
 
 If you want Spring to roll back your database changes after a test finishes you can add `@Transactional` to your test class.
-If you run a @SpringBootTest with either `RANDOM_PORT` or `DEFINED_PORT` your test will get executed in a different thread than the server.
+If you run a `@SpringBootTest` with either `RANDOM_PORT` or `DEFINED_PORT` your test will get executed in a different thread than the server.
 This means that every transaction initiated on the server won't be rolled back.
 Using `@Transactional` on a test class can hide errors because changes don't get actually flushed to the database.
-Another option is to manually reset/reload the database state after every test.
+Another option is to force Spring to commit the transaction at the end of the test with `@Commit` and manually reset/reload the database state after every test.
 This approach works but makes your tests hard to parallelize.
 
 == Test annotations
@@ -90,7 +90,7 @@ If you want Spring to load additional classes you can specify an include filter:
 
 DataJpaTests load `@Entity` and `@Repository` but not regular `@Component` classes.
 This makes it possible to test your JPA integration with minimal overhead.
-You can inject a TestEntityManager into your test, which is an EntityManager specifically designed for tests.
+You can inject a `TestEntityManager` into your test, which is an `EntityManager` specifically designed for tests.
 If you want to have your JPA repositories configured in other tests you can use the `@AutoConfigureDataJpa` annotation.
 To use a different database connection than the one specified in your configuration you can use `@AutoConfigureTestDatabase`.
 
