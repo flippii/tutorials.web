@@ -1,0 +1,16 @@
+== Exercise: Change the default port of the web app
+
+By default Spring Boot uses port 8080, but this can be changed by using the _server.port_ property in the _application.properties_ file.
+
+For the upcoming exercises each project needs a distinct port.
+
+The port for the user project should be changed to _8081_.
+
+image::./server-port-app-props.png[] 
+
+[source, properties]
+----
+server.port=8081
+----
+
+	
