@@ -37,7 +37,7 @@ public interface UserRepository extends ReactiveCrudRepository<User, Long> {
 }
 ----
 
-We leave it up to the reader to make use of the `findByEmailContainingIgnoreCase` in the `UserService` and then make use of it in the `TodoRestController` by providing a http://localhost:8080/search rest endpoint.
+We leave it up to the reader to make use of the `findByEmailContainingIgnoreCase` in the `UserService` and then make use of it in the `UserRestController` by providing a http://localhost:8080/search rest endpoint.
 
 The schema possibilities for writing such methods are huge, but out of scope in this exercise.
 
