@@ -29,8 +29,8 @@ class UserRestController {
 
 	// more code ...
 	
-	@DeleteMapping("/{id}")
-	public Mono<Void> deleteTodo(@PathVariable("id") int id) {
+	@DeleteMapping("/{id}") <1>
+	public Mono<Void> deleteTodo(@PathVariable("id") int id) { <2>
 		users = users.filter(user -> user.getId() != id);
 		return users.then();
 	}

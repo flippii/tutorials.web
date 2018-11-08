@@ -1,0 +1,23 @@
+== Exercise: Spring Cloud Gateway project
+
+The user application has become bigger meanwhile, but we do not want to end up with a huge monolithic server application.
+
+Micro services have become more public and Spring Cloud helps to manage this architecture.
+
+First of all we'd like to create a new project called _com.vogella.spring.gateway_.
+
+This gateway project will be used as facade, which delegates to different micro services, e.g., the user project (_com.vogella.spring.user_).
+
+First of all the ports should be changed so that the gateway uses port 80 and the port of the user project should be changed to 8081.
+This can be archived by changing the _server.port_ property in the _application.properties_ file in both projects.
+
+WARNING: In case port 80 is already blocked on your machine you can choose a different port and target this instead.
+
+In order to route to other micro services from the gateway a `RouteLocator` bean has to be created.
+Therefore we create a `RouteConfig` class, which will be responsible of the `RouteLocator` creation.
+
+[source,java]
+----
+
+----
+

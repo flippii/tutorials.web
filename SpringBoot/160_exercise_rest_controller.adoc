@@ -17,11 +17,11 @@ import com.vogella.spring.user.domain.User;
 
 import reactor.core.publisher.Flux;
 
-@RestController #<1>
-@RequestMapping("/user") #<2>
-class UserRestController {
+@RestController <1>
+@RequestMapping("/user") <2>
+class UserRestController { <3>
 
-	private Flux<User> users; #<3>
+	private Flux<User> users; <4>
 
 	public UserRestController() {
 		users = createUserModel();
@@ -38,7 +38,7 @@ class UserRestController {
 		return Flux.just(user, user2, user3);
 	}
 
-	@GetMapping #<4>
+	@GetMapping <5>
 	public Flux<User> getUsers() {
 		return users;
 	}
@@ -47,8 +47,9 @@ class UserRestController {
 
 <1> The `@RestController` annotation tells Spring that this class is a rest controller, which will be instantiated by the Spring framework
 <2> The `@RequestMapping` annotation is used to point to a default prefix for the rest endpoints defined in this rest controller
-<3> `Flux<T>` is a type of the Reactor Framework, which implements the reactive stream api like RxJava does.
-<4> The @GetMapping annotation tells Spring that the endpoint http://{yourdomain}/user should invoke the _getUsers()_ method.
+<3> Rest controllers should be package private since they should only be created by the Spring framework and not by anyone else by accident
+<4> `Flux<T>` is a type of the Reactor Framework, which implements the reactive stream api like RxJava does.
+<5> The @GetMapping annotation tells Spring that the endpoint http://{yourdomain}/user should invoke the _getUsers()_ method.
 
 Now start the application by right clicking the project and clicking on menu:Run as[Spring Boot App].
 

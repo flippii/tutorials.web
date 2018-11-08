@@ -22,7 +22,7 @@ import com.vogella.spring.user.domain.User;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@Service
+@Service <1>
 public class UserService {
 
 	private Flux<User> users;
@@ -66,7 +66,7 @@ public class UserService {
 }
 ----
 
-<1> The @Service annotation specifies this `UserService` as spring service, which will be created when it is demanded by other classes like the refactored `TodoRestController`.
+<1> The @Service annotation specifies this `UserService` as spring service, which will be created when it is demanded by other classes like the refactored `UserRestController`.
 
 Basically we just moved everything into another class, but left out the rest controller specific annotations.
 
@@ -97,7 +97,7 @@ class UserRestController {
 
 	private UserService userService;
 
-	public UserRestController(UserService userService) {
+	public UserRestController(UserService userService) { <1>
 		this.userService = userService;
 	}
 
