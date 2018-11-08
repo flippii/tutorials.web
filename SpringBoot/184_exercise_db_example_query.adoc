@@ -46,6 +46,8 @@ public interface UserRepository extends ReactiveCrudRepository<User, Long>, Reac
 
 So instead of using a `findByEmailContainingAndRolesContainingAllIgnoreCaseAndEnabledIsTrue` method an `Example` can be used to express the same:
 
+Please add the following methods to the `UserService` class and add suitable methods to the `UserRestController`.
+
 [source, java]
 ----
 public Mono<User> findUserByExample(User user) {
