@@ -8,16 +8,107 @@ First of all we'd like to create a new project called _com.vogella.spring.gatewa
 
 This gateway project will be used as facade, which delegates to different micro services, e.g., the user project (_com.vogella.spring.user_).
 
-First of all the ports should be changed so that the gateway uses port 80 and the port of the user project should be changed to 8081.
+First of all the ports should be changed so that the gateway uses port 8080 and the port of the user project should have been changed to 8081.
 This can be archived by changing the _server.port_ property in the _application.properties_ file in both projects.
 
-WARNING: In case port 80 is already blocked on your machine you can choose a different port and target this instead.
+WARNING: In case port 8080 is already blocked on your machine you can choose a different port, e.g. 8090, and target this instead.
 
 In order to route to other micro services from the gateway a `RouteLocator` bean has to be created.
 Therefore we create a `RouteConfig` class, which will be responsible of the `RouteLocator` creation.
 
 [source,java]
 ----
+package com.vogella.spring.gateway;
+
+import org.springframework.cloud.gateway.route.RouteLocator;
+import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class RouteConfig {
+	@Bean
+	public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+		return builder.routes().route("users", r ->
+				r.path("/user/**")
+				.uri("http://localhost:8081"))
+				.build();
+	}
+}
+----
+
+[IMPORTANT]
+====
+Currently the _Greenwich.M1_ version is used and therefore the _build.gradle_ file of the gateway project has to be changed.
+
+To make it easy, please just override it for now with the following contents:
+
+[source,xml]
+----
+buildscript {
+	ext {
+		springBootVersion = '2.1.0.M3'
+	}
+	repositories {
+		mavenCentral()
+		maven { url "https://repo.spring.io/milestone" }
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.vogella'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+	maven { url "https://repo.spring.io/milestone" }
+}
+
+
+ext {
+	springCloudVersion = 'Greenwich.M1'
+}
+
+dependencies {
+	implementation('org.springframework.boot:spring-boot-starter-actuator')
+	implementation('org.springframework.boot:spring-boot-starter-webflux')
+	implementation('org.springframework.cloud:spring-cloud-starter')
+	implementation('org.springframework.cloud:spring-cloud-starter-gateway')
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	testImplementation('io.projectreactor:reactor-test')
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
 
 ----
+
+Afterwards refresh the Gradle dependencies by using the context menu while selecting the _com.vogella.spring.gateway_ project.
+
+menu:Gradle[Refresh Gradle Project]
+
+====
+
+Once this has been done the gateway server *and* the user server should be started.
+
+Now the gateway is able to delegate requests to the user server.
+
+You can try this by navigating to http://localhost:8080/user and should receive the users in json format.
+
+[NOTE]
+====
+You can also navigate to http://localhost:8081/user and should get the same result, but directly from the user server.
+====
+
 
