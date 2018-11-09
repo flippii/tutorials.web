@@ -81,8 +81,7 @@ reactor.core.publisher.Mono
 
 We want the endpoint to return a 404 not found response.
 
-`UserRestController.java`
-[source, java]
+[source, java, title="UserRestController.java"]
 ----
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 import static org.springframework.web.reactive.function.server.ServerResponse.ok;
