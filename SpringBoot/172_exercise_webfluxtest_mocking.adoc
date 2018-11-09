@@ -1,0 +1,36 @@
+== Exercise: Writing mocks for `@WebFluxTest` tests
+
+That we can test the UserController with a `@SpringBootTest` is nice, but we still want to be able to use `@WebFluxTests`
+To test controllers with collaborators we'll mock them out with Mockito.
+
+To define a mock object in a Spring test we can use the `@MockBean` annotation.
+Define the mocked UserService as a field in the test class and Spring will automatically pick it up and inject it at runtime:
+
+[source, java, title='UserRestControllerTest.java']
+----
+	@MockBean
+	private UserService userService;
+----
+
+Then adjust the tests.
+In the setup phase we define the desired mock behavior and then trigger the test call as before:
+
+[source, java, title='UserRestControllerTest.java'']
+----
+	@Test
+	public void getUserById_userIdFromInitialDataModel_returnsUser() throws Exception {
+		int id = 1;
+		String name = "Fabian Pfaff";
+		when(userService.findUserById(id)).thenReturn(Mono.just(User.builder().name(name).build()));
+
+		ResponseSpec rs = webTestClient.get().uri("/user/" + id).exchange();
+
+		rs.expectStatus().isOk().expectBody(User.class).consumeWith(result -> {
+			User user = result.getResponseBody();
+			assertThat(user).isNotNull();
+			assertThat(user.getName()).isEqualTo(name);
+		});
+	}
+----
+
+

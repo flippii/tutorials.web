@@ -1,0 +1,22 @@
+== Exercise: `@SpringBootTest`
+
+Execute the tests in `UserRestControllerTest` again.
+You'll find that they break because of the introduction of the `UserService`.
+The RestController now needs the UserService as an collaborator but since our test only loads the web slice for the UserRestController it's not available.
+
+One easy way to get around this it to transform the test into an intergration test that loads the full Spring application.
+This is slower but ensures that the UserService is available for injection.
+
+Create a new class called `UserRestControllerIntegrationTest` with the `@SpringBootTest` annotation and paste in the tests from `UserRestController`:
+
+[source, java]
+----
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class UserRestControllerIntegrationTest {
+       // test code copied from UserRestController..
+}
+----
+
+The tests should all pass then.
+
