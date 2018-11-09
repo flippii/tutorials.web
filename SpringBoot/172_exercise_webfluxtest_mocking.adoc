@@ -15,7 +15,7 @@ Define the mocked UserService as a field in the test class and Spring will autom
 Then adjust the tests.
 In the setup phase we define the desired mock behavior and then trigger the test call as before:
 
-[source, java, title='UserRestControllerTest.java'']
+[source, java, title='UserRestControllerTest.java']
 ----
 	@Test
 	public void getUserById_userIdFromInitialDataModel_returnsUser() throws Exception {
@@ -33,4 +33,40 @@ In the setup phase we define the desired mock behavior and then trigger the test
 	}
 ----
 
+For the test with the invalid id we return an empty result:
+
+[source, java, title='UserRestControllerTest.java']
+----
+	@Test
+	public void getUserById_invalidId_404() throws Exception {
+		long invalidId = -1;
+		when(userService.findUserById(invalidId)).thenReturn(Mono.empty());
+
+		ResponseSpec rs = webTestClient.get().uri("/user/" + invalidId).exchange();
+
+		rs.expectStatus().isNotFound();
+	}
+----
+
+The user creation only reads the id from the created user, so this is enough to make the test pass:
+
+[source, java, title='UserRestControllerTest.java']
+----
+	@Test
+	public void createUser_validUserInput_userCreated() throws Exception {
+		long id = 42;
+		when(userService.newUser(ArgumentMatchers.any())) <1>
+            .thenReturn(Mono.just(User.builder().id(id).build()));
+
+		ResponseSpec rs = webTestClient.post().uri("/user")
+				.body(BodyInserters.fromObject(
+						User.builder().name("Jonas Hungershausen").email("jonas.hungershausen@vogella.com").build()))
+				.exchange();
+
+		rs.expectStatus().isCreated().expectHeader().valueEquals("LOCATION", "/user/" + id); <2>
+	}
+----
+
+<1> `ArgumentMatchers.any()`  with ArgumentMatchers we can match on certain input patterns, in this case we match on any input
+<2> Since we mock the response we can expect the actual id and don't have to match with regex.
 
