@@ -33,8 +33,8 @@ public class UserRestControllerTest {
 <2> `@Autowired` since no other class should instanciate a test class we can use field injection
 <3>  `WebTestClient`  allows us to programatically make reactive REST calls in our tests
 
-`UserRestControllerTest.java`
-[source, java]
+
+[source, java, title="UserRestControllerTest.java"]
 ----
 	@Test
 	public void getUserById_userIdFromInitialDataModel_returnsUser() throws Exception {
@@ -58,8 +58,8 @@ Great, our code works like a charm.
 But our previous test only tests the happy path.
 Now we write a tests that tests what happens if the server receives an unknown id.
 
-`UserRestControllerTest.java`
-[source, java]
+
+[source, java, title="UserRestControllerTest.java"]
 ----
 	@Test
 	public void getUserById_invalidId_error() throws Exception {
