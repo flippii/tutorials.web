@@ -1,0 +1,54 @@
+== Exercise: Start Eureka server with Spring Cloud Cli
+
+In a previous exercise the spring cloud cli has been installed.
+
+By running `spring cloud --list` in the command line available cloud services can be found.
+
+Besides others _eureka_ is listed as well.
+
+In order to start it you can run `spring cloud eureka` in the command line.
+
+Once the eureka server has been started it prints the following to the command line:
+
+[source, console]
+----
+eureka: To see the dashboard open http://localhost:8761
+
+Type Ctrl-C to quit.
+----
+
+Now you can navigate to http://localhost:8761 with a browser and see the Eureka dashboard and the services, which have been discovered.
+
+You should now (re-)start the user server and then see the user service in the Eureka dashboard:
+
+image::eureka-server-dashboard.png[] 
+
+[NOTE]
+====
+In case you do not want to use the Spring Cloud CLI you can easily create a Eureka server own your own by creating a new Spring Boot project.
+Add the Netflix Eureka Server depenedency (_'org.springframework.cloud:spring-cloud-starter-eureka-server'_) and add the `@EnableEurekaServer` annotation to the application config.
+
+[source,java]
+----
+@SpringBootApplication
+@EnableEurekaServer
+public class Application {
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
+----
+
+And these would be the default _application.yml_ for the Eureka server:
+
+[source, yml]
+----
+server:
+  port: 8761
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+----
+
+====
