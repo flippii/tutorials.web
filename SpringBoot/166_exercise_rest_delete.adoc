@@ -28,9 +28,8 @@ import reactor.core.publisher.Mono;
 class UserRestController {
 
 	// more code ...
-	
 	@DeleteMapping("/{id}") <1>
-	public Mono<Void> deleteTodo(@PathVariable("id") int id) { <2>
+	public Mono<Void> deleteUser(@PathVariable("id") int id) { <2>
 		users = users.filter(user -> user.getId() != id);
 		return users.then();
 	}
@@ -44,10 +43,10 @@ User no. 3 can be deleted, since we learned how to create new users now.
 
 [source, curl]
 ----
-curl -X DELETE http://localhost:8080/deleteUser/3
+curl -X DELETE http://localhost:8080/user/3
 ----
 
 After using this curl command the remaining Users are returned without User no. 3.
 
-Call the http://localhost:8080/getUsers method again to check whether the deletion was successful.
+Call the http://localhost:8080/user method again to check whether the deletion was successful.
 
