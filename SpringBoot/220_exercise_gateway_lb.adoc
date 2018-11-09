@@ -1,0 +1,57 @@
+== Exercise: Let the gateway find services load balanced
+
+Now that we are able to add services to the Eureka server, we no longer want to address services via its physical address, but by service name.
+
+So instead of pointing to the user server by using _http://localhost:8081_ with the `RouteLocator` in the gateway project a different _uri_ can be used.
+
+[source,java]
+----
+package com.vogella.spring.gateway;
+
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.gateway.route.RouteLocator;
+import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@EnableDiscoveryClient <1>
+public class RouteConfig {
+	@Bean
+	public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+		return builder.routes()
+				.route("users", r -> r.path("/user/**")
+				.uri("lb://user")) <2>
+				.build();
+	}
+}
+
+----
+
+<1> The gateway itself has also to be registered to eureka to make it work properly
+<2> lb stands for load balanced
+
+Load balanced means that Eureka can now decide to which user service instance it passes the request, in case several user service instances are running.
+
+The _application.properties_ of the gateway project have to look like this:
+
+[source, properties]
+----
+server.port=8080
+spring.application.name=gateway <1>
+
+spring.cloud.gateway.discovery.locator.enabled=true <2>
+spring.cloud.gateway.discovery.locator.lower-case-service-id=true <3>
+----
+<1> Service name in the eureka registry
+<2> The discovery locator has to be enabled to make the `RouteLocator` work 
+<3> By default services are written with upper case letters and this setting allows lower case
+
+Now three server should be started: Eureka server with Spring Cloud Cli, Gateway server and the User server. 
+
+When navigating to the http://localhost:8080/user end point the same result as before should be returned as response.
+
+The big benefit is that it is now possible to start several user server on different ports and eureka will load balance the requests.
+
+image::eureka-server-dashboard-lb.png[] 
+
