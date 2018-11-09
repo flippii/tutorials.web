@@ -75,7 +75,7 @@ Our controller doesn't return the right http status in case he can't find the en
 Before we go ahead and adjust the controller, please add the following classes to your favorites in the Spring Tool Suite:
 ----
 org.springframework.web.reactive.function.BodyInserters
-org.springframework.web.reactive.function.server.ServerResponse
+org.springframework.http.ResponseEntity
 reactor.core.publisher.Mono
 ----
 
@@ -83,20 +83,12 @@ We want the endpoint to return a 404 not found response.
 
 [source, java, title="UserRestController.java"]
 ----
-import static org.springframework.http.HttpStatus.NOT_FOUND;
-import static org.springframework.web.reactive.function.server.ServerResponse.ok;
-import static reactor.core.publisher.Mono.error;
-import static reactor.core.publisher.Mono.from;
-import static reactor.core.publisher.Mono.just;
-
-import org.springframework.web.reactive.function.server.ServerResponse;
-
 	@GetMapping("/{id}")
-	public Mono<ServerResponse> getUserById(@PathVariable("id") long id) {
+	public Mono<ResponseEntity<User> getUserById(@PathVariable("id") long id) {
 		Mono<User> foundUser = from(users.filter(user -> id == user.getId()));
 		return foundUser
-				.flatMap(user -> ok().body(just(user), User.class))
-				.switchIfEmpty(error(new ResponseStatusException(NOT_FOUND)));
+                    .map(user -> ResponseEntity.ok(user))
+				    .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND)));
 	}
 ----
 

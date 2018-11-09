@@ -107,13 +107,16 @@ class UserRestController {
 	}
 
 	@GetMapping("/{id}")
-	public Mono<User> getUserById(@PathVariable("id") long id) {
-		return userService.getUserById(id);
+	public Mono<ResponseEntity<User>> getUserById(@PathVariable("id") long id) {
+		return userService.findUserById(id)
+				.map(user -> ResponseEntity.ok(user))
+				.switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND)));
 	}
 
 	@PostMapping
-	public Mono<User> newUser(@RequestBody User user) {
-		return userService.newUser(user);
+	public Mono<ResponseEntity<Object>> newUser(@RequestBody User user, ServerHttpRequest req) {
+		return userService.newUser(user)
+       				.map(u -> ResponseEntity.created(URI.create(req.getPath() + "/" + u.getId())).build());
 	}
 
 	@DeleteMapping("/{id}")
