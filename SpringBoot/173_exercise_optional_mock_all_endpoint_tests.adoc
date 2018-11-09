@@ -1,0 +1,7 @@
+== Optional Exercise: Write mocks for all endpoint tests
+
+If you've done the earlier optional exercise *Write tests for the rest of the endpoints* you still have some tests that fail because of the missing UserService.
+If you haven't completed the earlier exercise go ahead and do it now.
+
+Write mocks for all test methods you've implemented to make them pass again.
+

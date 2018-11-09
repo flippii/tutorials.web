@@ -1,0 +1,11 @@
+== Optional Exercise: Write tests for the rest of the endpoints
+
+
+Implement tests for the rest of the endpoints.
+Try to consider the happy path as well as the possible failures and invalid inputs.
+
+For example:
+
+* `POST /user/search` should return status 400 if the given json can't be mapped to user
+* `DELETE /user/{id}` should return status 404 if the id is not valid
+* `DELETE /user/{id}` should return status 204 if a user was successfully deleted
