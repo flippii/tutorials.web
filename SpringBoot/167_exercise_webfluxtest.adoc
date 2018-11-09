@@ -3,7 +3,13 @@
 Now that we have implemented all the behavior we want in the controller,
 we should really write some tests to make sure that it behaves correctly.
 
-First we implement the test setup:
+The tests reside in the folder `src/test/java`.
+Create a new package called `com.vogella.spring.user.controller` inside the test folder.
+This is the same package name we want to test is in, so we can access protected and package private methods in our tests.
+
+image::/home/fap/repos/com.vogella.tutorials.web/SpringBoot/img/create_test_UserRestController.png[]
+
+Then key in the test setup for a `@WebFluxTest`:
 
 [source, java]
 ----
