@@ -6,6 +6,12 @@ Micro services have become more public and Spring Cloud helps to manage this arc
 
 First of all we'd like to create a new project called _com.vogella.spring.gateway_.
 
+image::spring-gateway-project-wizard.png[] 
+
+Press btn:[Next] and add the following dependencies:
+
+image::gateway-dependencies.png[] 
+
 This gateway project will be used as facade, which delegates to different micro services, e.g., the user project (_com.vogella.spring.user_).
 
 First of all the ports should be changed so that the gateway uses port 8080 and the port of the user project should have been changed to 8081.
