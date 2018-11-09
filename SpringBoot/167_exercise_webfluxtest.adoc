@@ -1,0 +1,97 @@
+== Exercise: Testing the RestController
+
+Now that we have implemented all the behavior we want in the controller,
+we should really write some tests to make sure that it behaves correctly.
+
+First we implement the test setup:
+
+[source, java]
+----
+@RunWith(SpringRunner.class)
+@WebFluxTest(UserRestController.class) <1>
+public class UserRestControllerTest {
+
+	@Autowired <2>
+	private ApplicationContext context;
+	private WebTestClient webTestClient;
+
+	@Before
+	public void setUp() {
+		webTestClient = WebTestClient.bindToApplicationContext(context).configureClient().baseUrl("/").build(); <3>
+	}
+
+}
+----
+
+<1> `@WebFluxTest` starts a Spring application with only this Controller loaded, shortening the test startup time
+<2> `@Autowired` since no other class should instanciate a test class we can use field injection
+<3>  `WebTestClient`  allows us to programatically make reactive REST calls in our tests
+
+`UserRestControllerTest.java`
+[source, java]
+----
+	@Test
+	public void getUserById_userIdFromInitialDataModel_returnsUser() throws Exception {
+		ResponseSpec rs = webTestClient.get().uri("/user/1").exchange();
+
+		rs.expectStatus().isOk() <1>
+			.expectBody(User.class) <2>
+			.consumeWith(result -> { <3>
+				User user = result.getResponseBody();
+				assertThat(user).isNotNull();
+				assertThat(user.getName()).isEqualTo("Fabian Pfaff");
+			});
+	}
+----
+
+<1> `expectStatus`  http response status must be 200
+<2> `expectBodyList()`  the response body must be convertible to the `User` class
+<3> `consumeWith()`  accepts a consumer for the response, validations get placed inside the consumer
+
+Great, our code works like a charm.
+But our previous test only tests the happy path.
+Now we write a tests that tests what happens if the server receives an unknown id.
+
+`UserRestControllerTest.java`
+[source, java]
+----
+	@Test
+	public void getUserById_invalidId_error() throws Exception {
+		ResponseSpec rs = webTestClient.get().uri("/user/-1").exchange();
+
+		rs.expectStatus().isNotFound();
+	}
+----
+
+When you run this test you'll notice that it fails.
+Our controller doesn't return the right http status in case he can't find the entity.
+
+Before we go ahead and adjust the controller, please add the following classes to your favorites in the Spring Tool Suite:
+----
+org.springframework.web.reactive.function.BodyInserters
+org.springframework.web.reactive.function.server.ServerResponse
+reactor.core.publisher.Mono
+----
+
+We want the endpoint to return a 404 not found response.
+
+`UserRestController.java`
+[source, java]
+----
+import static org.springframework.http.HttpStatus.NOT_FOUND;
+import static org.springframework.web.reactive.function.server.ServerResponse.ok;
+import static reactor.core.publisher.Mono.error;
+import static reactor.core.publisher.Mono.from;
+import static reactor.core.publisher.Mono.just;
+
+import org.springframework.web.reactive.function.server.ServerResponse;
+
+	@GetMapping("/{id}")
+	public Mono<ServerResponse> getUserById(@PathVariable("id") long id) {
+		Mono<User> foundUser = from(users.filter(user -> id == user.getId()));
+		return foundUser
+				.flatMap(user -> ok().body(just(user), User.class))
+				.switchIfEmpty(error(new ResponseStatusException(NOT_FOUND)));
+	}
+----
+

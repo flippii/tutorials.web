@@ -1,0 +1,42 @@
+== Exercise: Testing user creation
+
+When a new resource is created we expect a well behaved REST api to responed with a 201 status code
+and let us know where to find the new resource.
+Spring does the latter via the _LOCATION_ header.
+Let's write a test that checks for this behavior.
+
+[source, java]
+----
+	@Test
+	public void createUser_validUserInput_userCreated() throws Exception {
+		ResponseSpec rs = webTestClient.post().uri("/user")
+				.body(BodyInserters.fromObject(
+						User.builder().name("Jonas Hungershausen").email("jonas.hungershausen@vogella.com").build())) <1>
+				.exchange();
+
+		rs.expectStatus().isCreated().expectHeader() <2>
+          .valueMatches("LOCATION", "^/user/\\d+"); <3>
+	}
+----
+
+<1> `BodyInserters` offers various methods to fill the request body
+<2> expecting the 201 response status
+<3> verifying that the http header contains the correct value
+
+
+Running this test should fail.
+Let's adjust the controller to returns the proper response.
+
+[source, java]
+----
+	@PostMapping
+	public Mono<ResponseEntity<Object>> newUser(@RequestBody Mono<User> userMono, ServerHttpRequest req) {
+		userMono = userMono.map(user -> {
+			user.setId(6);
+			return user;
+		});
+		users = users.mergeWith(userMono);
+		return userMono.map(u -> ResponseEntity.created(URI.create(req.getPath() + "/" + u.getId())).build());
+	}
+----
+
