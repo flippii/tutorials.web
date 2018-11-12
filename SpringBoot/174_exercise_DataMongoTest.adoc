@@ -43,3 +43,4 @@ public class UserMongoIntegrationTest {
 <4> inside the `consumeWith` block you can place all your assertions on the result
 
 NOTE: If you're writing an application using JPA then you'll have to use the `@DataJpaTest` annotation instead.
+

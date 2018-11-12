@@ -34,3 +34,4 @@ public class UserDataInitializer implements SmartInitializingSingleton {
 ----
 
 <1> `@Profile("!production")` this stops Spring from loading this bean when the "production" profile is activated
+
