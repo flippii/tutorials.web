@@ -1,0 +1,90 @@
+== Exercise: Using a Circuit Breaker
+
+Sometimes services are not available any more and you might want to provide a fallback.
+That is the point where circuit breaker come into play.
+
+A popular implementation is the Netflix Hystrix fault tolerance library.
+
+Imagine all user services are down and you still want to return a fallback from the gateway when the _/user_ end point is requested.
+
+First of all the `implementation('org.springframework.cloud:spring-cloud-starter-netflix-hystrix')`
+has to be added to the _build.gradle_ file of the _com.vogella.spring.gateway_ project.
+
+After the gradle dependencies have been refreshed, we can either add the `@EnableCircuitBreaker` annotation to a `@Configuration` class.
+
+[source,java]
+----
+@Configuration
+@EnableDiscoveryClient
+@EnableCircuitBreaker
+public class RouteConfig {
+
+	// ... more code ...
+}
+----
+
+or the `@SpringCloudApplication` annotation instead of the `@SpringBootApplication` annotation can be used.
+
+[source,java]
+----
+@SpringCloudApplication <1>
+public class Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+}
+----
+
+<1> `@SpringCloudApplication` applies both `@EnableDiscoveryClient` *and* `@EnableCircuitBreaker`
+
+
+Once the Hystrix circuit breaker has been enabled a filter for providing a hystrix fallback can be applied to the `RouteLocator`.
+
+[source,java]
+----
+@Configuration
+@EnableDiscoveryClient <1>
+@EnableCircuitBreaker <2>
+public class RouteConfig {
+	@Bean
+	public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+		return builder.routes()
+				.route("user",
+						r -> r.path("/user/**")
+								.filters(f -> f.hystrix(c -> c.setName("fallback") <3>
+										.setFallbackUri("forward:/fallback")))
+								.uri("lb://user"))
+				.build();
+	}
+}
+----
+<1> Can be omitted in case the `@SpringCloudApplication` annotation has been applied
+<2> Can be omitted in case the `@SpringCloudApplication` annotation has been applied
+<3> Set a fallback name and fallback uri, which will be used in case the _lb://user_ uri cannot be reached
+
+In order to make this _forward:/fallback_ work a rest controller, which acts as a fallback has to be created:
+
+[source,java]
+----
+package com.vogella.spring.gateway;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import reactor.core.publisher.Mono;
+
+@RestController
+class HystrixFallbackContoller {
+
+	@GetMapping("/fallback")
+	public Mono<ResponseEntity<String>> userFallback() {
+		return Mono.just(ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).build());
+	}
+}
+----
+
+A better fallback would be to return a default user or asking another service for users.
+
