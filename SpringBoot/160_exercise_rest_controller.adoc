@@ -53,11 +53,7 @@ class UserRestController { <3>
 
 Now start the application by right clicking the project and clicking on menu:Run as[Spring Boot App].
 
-image::./spring-start-console.png[] 
-
-Along with many more logging statements the previously created rest endpoint _/getUsers_ is mentioned.
-
-Now let's test the result when navigating to http://localhost:8080/getUsers.
+Now let's test the result when navigating to http://localhost:8080/user.
 
 image::./restcontroller-json.png[] 
 
