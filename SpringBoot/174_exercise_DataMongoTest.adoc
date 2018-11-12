@@ -1,0 +1,45 @@
+== Using `@DataMongoTest`
+
+`@DataMongoTest` starts a test with only the Spring persistence slice loaded.
+This means that all repositories are available for injection.
+
+Since `UserRepository#findAll()` returns a `Flux`` we'll use the `StepVerifier`.
+The `StepVerifier` is used to lazily define expectations about a reactive `Producer`.
+Only when `StepVerifier#verify()` is called the verification is actually started.
+
+
+[source, java]
+----
+@RunWith(SpringRunner.class)
+@DataMongoTest
+public class UserMongoIntegrationTest {
+
+	@Autowired
+	private UserRepository userRepository;
+
+	@Test
+	public void save_validUserInput_canBeFoundWithFindAll() throws Exception {
+		userRepository.save(User.builder().id(1).name("Lars Vogel").build())
+				.mergeWith(userRepository.save(User.builder().id(2).name("Simon Scholz").build()))
+				.blockLast();
+
+		Flux<User> users = userRepository.findAll();
+
+		StepVerifier.create(users) <1>
+			.recordWith(ArrayList::new) <2>
+			.expectNextCount(2) <3>
+			.consumeRecordedWith(userList -> { <4>
+					assertThat(userList).withFailMessage("Should contain user with name <%s>", "Simon Scholz")
+							.anyMatch(user -> user.getName().equals("Simon Scholz"));
+			}).expectComplete()
+			.verify();
+	}
+}
+----
+
+<1> `create()` prepare a StepVerifier for the Flux
+<2> `recordWith()` tells the verifier which Collection type to use when we later call `consumeRecordedWith`
+<3> verifies how many elements the Publisher pushes, equivalent to `assertThat(userList).hasSize(2);`
+<4> inside the `consumeWith` block you can place all your assertions on the result
+
+NOTE: If you're writing an application using JPA then you'll have to use the `@DataJpaTest` annotation instead.

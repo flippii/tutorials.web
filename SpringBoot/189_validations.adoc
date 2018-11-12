@@ -1,0 +1,44 @@
+== Validations with JSR-303
+
+So far the `UserController` accepts any input for a new user entity.
+To stop clients to create entities with invalid data we can add validations.
+Java provides a way to define validation rules by placing @annotations on fields.
+
+The user object must only be created when a valid email and password have been provided:
+
+[source, java]
+----
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
+public class User {
+
+	@Id
+	private long id;
+	private String name = "";
+	@NotEmpty
+	@Email
+	private String email = "";
+	@Size(min = 8, max = 254)
+	private String password = "";
+	private List<String> roles = new ArrayList<>();
+	private Instant lastLogin = Instant.now();
+	private boolean enabled;
+
+	// more code...
+}
+----
+
+To tell Spring that it should run the validations in the controller we have to add a `@Valid` annotation to the incoming data:
+
+[source, java]
+----
+	@PostMapping
+	public Mono<ResponseEntity<Object>> newUser(@RequestBody @Valid Mono<User> userMono, ServerHttpRequest req) {
+		return userMono.flatMap(user -> {
+			return userService.newUser(user)
+					.map(u -> ResponseEntity.created(URI.create(req.getPath() + "/" + u.getId())).build());
+		});
+	}
+----
