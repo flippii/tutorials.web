@@ -16,10 +16,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data #<1>
-@NoArgsConstructor #<2>
-@AllArgsConstructor
-@JsonIgnoreProperties(ignoreUnknown = true) #<3>
+@Data <1>
+@NoArgsConstructor <2>
+@AllArgsConstructor <3>
+@Builder <4>
+@JsonIgnoreProperties(ignoreUnknown = true) <5>
 public class User {
 
 	private long id;
@@ -37,9 +38,9 @@ public class User {
 ----
 
 <1> The _User_ class is a simple data class and the _@Data_ annotation of the Lombok library automatically generates getters and setters for the properties and _hashCode()_, _equals()_ and _toString()_ methods.
-
 <2> If a certain constructor is implemented and a constructor with no arguments should still be available the _@NoArgsConstructor_ annotation can be used.
-
-<3> The Todo is also supposed to be serialized and deserialized with JSON, Spring uses the Jackson library for this by default. @JsonIgnoreProperties(ignoreUnknown = true) specifies that properties, which are available in the JSON String, but not specified as class members will be ignored instead of raising an Exception.
+<3> This is a convenience annotation to provide a constructor with all available field automatically
+<4> This annotation automatically generates a Builder for a class. Usually used for classes with many field, that may have default values.
+<5> The Todo is also supposed to be serialized and deserialized with JSON, Spring uses the Jackson library for this by default. @JsonIgnoreProperties(ignoreUnknown = true) specifies that properties, which are available in the JSON String, but not specified as class members will be ignored instead of raising an Exception.
 
 
