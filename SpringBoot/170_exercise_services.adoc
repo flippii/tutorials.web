@@ -49,7 +49,7 @@ public class UserService {
 		return users.take(limit);
 	}
 
-	public Mono<User> getUserById(@PathVariable("id") long id) {
+	public Mono<User> findUserById(@PathVariable("id") long id) {
 		return Mono.from(users.filter(user -> id == user.getId()));
 	}
 
@@ -107,7 +107,7 @@ class UserRestController {
 	}
 
 	@GetMapping("/{id}")
-	public Mono<ResponseEntity<User>> getUserById(@PathVariable("id") long id) {
+	public Mono<ResponseEntity<User>> findUserById(@PathVariable("id") long id) {
 		return userService.findUserById(id)
 				.map(user -> ResponseEntity.ok(user))
 				.switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND)));
