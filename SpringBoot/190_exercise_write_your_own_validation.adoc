@@ -1,0 +1,69 @@
+== Exercise: Write your own custom validation
+
+So far we've used annotations provided by JSR-303, but now we'll create our own.
+The goal is to make sure that we only save roles for our users that the application knows about.
+
+[source, java, title="User.java"]
+----
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+import javax.validation.Constraint;
+
+@Target({ ElementType.FIELD }) <1>
+@Retention(RetentionPolicy.RUNTIME) <2>
+@Constraint(validatedBy = { ValidRolesValidator.class }) <3>
+@Documented <4>
+public @interface ValidRoles {
+
+	String message() default "Invalid role detected"; <5>
+
+	Class<?>[] groups() default {}; <6>
+
+	Class<?>[] payload() default {}; <7>
+}
+----
+
+<1> `@Target`  Where the annotation is allowed to be placed, we only allow fields
+<2> `@Retention`  Annotation needs to be around at runtime to be read with reflection
+<3> `@Constraint`  Marks the annotation as a validation and links to the validator
+<4> `@Documented`  become part of the Java doc of the target class
+<5> `message()` required field, message to show the user after failed validation
+<6> `groups()`  groups allow you to control when certain validations are run
+<7> `payloud()`  TODO
+
+The Validator has to implement `ConstraintValidator`` and gets the value of the field injected:
+
+[source, java, title="User.java"]
+----
+import java.util.Collection;
+import java.util.List;
+
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+
+import com.google.common.collect.Lists;
+
+public class ValidRolesValidator implements ConstraintValidator<ValidRoles, Collection<String>> {
+
+	private List<String> validRoles = Lists.newArrayList("ROLE_USER", "ROLE_ADMIN");
+
+	@Override
+	public boolean isValid(Collection<String> collection, ConstraintValidatorContext context) {
+		return collection.stream().allMatch(validRoles::contains);
+	}
+
+}
+----
+
+Finally we can add the annotation to the field in the `User` class and Spring will do the rest:
+
+[source, java, title="User.java"]
+----
+	@ValidRoles
+	private List<String> roles = new ArrayList<>();
+----
+
