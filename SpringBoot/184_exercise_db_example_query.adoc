@@ -14,7 +14,7 @@ It would be nicer to create an instance of a `User` and then pass it to a find m
 [source, java]
 ----
 User user = new User(1);
-User theUserWithIdEquals1 = userRepository.find(todo);
+User theUserWithIdEquals1 = userRepository.find(user);
 ----
 
 Unfortunately the `ReactiveCrudRepository` does not provide such a method.
