@@ -3,9 +3,9 @@
 Now that we have implemented all the behavior we want in the controller,
 we should really write some tests to make sure that it behaves correctly.
 
-The tests reside in the folder `src/test/java`.
+The tests reside in the `src/test/java` test folder.
 Create a new package called `com.vogella.spring.user.controller` inside the test folder.
-This is the same package name we want to test is in, so we can access protected and package private methods in our tests.
+The advantage of using the same package names as in the `src/main/java` folder is that you can access protected and package private methods in your tests.
 
 image::create_test_UserRestController.png[]
 
