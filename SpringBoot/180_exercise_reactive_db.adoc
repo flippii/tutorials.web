@@ -43,10 +43,6 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
-
 import org.springframework.data.annotation.Id;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -68,12 +64,9 @@ public class User {
 	@Builder.Default
 	private String name = "";
 
-	@NotEmpty
-	@Email
 	@Builder.Default
 	private String email = "";
 
-	@Size(min = 8, max = 254)
 	@Builder.Default
 	private String password = "";
 
