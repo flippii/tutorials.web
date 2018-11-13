@@ -59,7 +59,7 @@ public class UserService {
 		return userMono;
 	}
 
-	public Mono<Void> deleteTodo(@PathVariable("id") int id) {
+	public Mono<Void> deleteUser(@PathVariable("id") int id) {
 		users = users.filter(user -> user.getId() != id);
 		return users.then();
 	}
@@ -120,8 +120,8 @@ class UserRestController {
 	}
 
 	@DeleteMapping("/{id}")
-	public Mono<Void> deleteTodo(@PathVariable("id") int id) {
-		return userService.deleteTodo(id);
+	public Mono<Void> deleteUser(@PathVariable("id") int id) {
+		return userService.deleteUser(id);
 	}
 }
 ----
