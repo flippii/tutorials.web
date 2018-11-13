@@ -17,6 +17,12 @@ eureka: To see the dashboard open http://localhost:8761
 Type Ctrl-C to quit.
 ----
 
+[NOTE]
+====
+Starting the eureka server with Spring Cloud CLI may take awail.
+Just be patient or try to create a new Spring Boot project, which is described in the next NOTE of this exercise.
+====
+
 Now you can navigate to http://localhost:8761 with a browser and see the Eureka dashboard and the services, which have been discovered.
 
 You should now (re-)start the user server and then see the user service in the Eureka dashboard:
