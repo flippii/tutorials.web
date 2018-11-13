@@ -1,4 +1,4 @@
-== Extracting the db setup code
+== Extracting the database setup code
 
 Until now the database setup code resides in the `UserService`.
 During development this works well, but eventually we want more control over when this code is run.
@@ -34,4 +34,13 @@ public class UserDataInitializer implements SmartInitializingSingleton {
 ----
 
 <1> `@Profile("!production")` this stops Spring from loading this bean when the "production" profile is activated
+
+Profiles can be activated by specifying them in the _application.properties_ file inside the `src/main/resources/` folder.
+
+image::profile-production.png[] 
+
+[source, properties]
+----
+spring.profiles.active=production
+----
 
