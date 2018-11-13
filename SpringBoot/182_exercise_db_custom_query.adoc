@@ -11,15 +11,15 @@ public static Flux<User> getByEmail(String email) {
 }
 ----
 
-But wait, is it really efficient to get all Todos and then filter them?
+But wait, is it really efficient to get all Users and then filter them?
 
 Modern databases can do this way more efficient by for example using the SQL _LIKE_ statement. In general it is way better to delegate the query of certain elements to the database to gain more performance.
 
 Spring data provides way more possibilities than just using the CRUD operations, which are derived from the `ReactiveCrudRepository` interface.
 
-Inside the almost empty `TodoRepository` class custom method with a certain naming schema can be specified and Spring will take care of creating appropriate query out of them.
+Inside the almost empty `UserRepository` class custom method with a certain naming schema can be specified and Spring will take care of creating appropriate query out of them.
 
-So rather than filtering the Todos from the database on ourselves it can be done like this:
+So rather than filtering the Users from the database on ourselves it can be done like this:
 
 [source, java]
 ----

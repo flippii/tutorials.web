@@ -52,6 +52,6 @@ public class User {
 <2> If a certain constructor is implemented and a constructor with no arguments should still be available the _@NoArgsConstructor_ annotation can be used.
 <3> This is a convenience annotation to provide a constructor with all available field automatically
 <4> This annotation automatically generates a Builder for a class. Usually used for classes with many field, that may have default values.
-<5> The Todo is also supposed to be serialized and deserialized with JSON, Spring uses the Jackson library for this by default. @JsonIgnoreProperties(ignoreUnknown = true) specifies that properties, which are available in the JSON String, but not specified as class members will be ignored instead of raising an Exception.
+<5> The User is also supposed to be serialized and deserialized with JSON, Spring uses the Jackson library for this by default. @JsonIgnoreProperties(ignoreUnknown = true) specifies that properties, which are available in the JSON String, but not specified as class members will be ignored instead of raising an Exception.
 <6> The `@Builder.Default` annotation tells Lombok to apply these default values, if nothing else will be set during the creation of a User object 
 
