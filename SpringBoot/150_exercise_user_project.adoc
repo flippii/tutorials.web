@@ -19,6 +19,7 @@ First select Spring Boot Version *2.1.0* and the following dependencies:
 * Embedded MongoDB
 * Actuator
 * Reactive Web
+* DevTools
 
 Then press btn:[Finish] so that the project will be generated.
 
