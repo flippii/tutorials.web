@@ -44,3 +44,6 @@ image::profile-production.png[]
 spring.profiles.active=production
 ----
 
+Please startup the server without the production profile and with the production profile being activated.
+You can see the difference by navigating to http://localhost:8080/user for both scenarios. 
+
