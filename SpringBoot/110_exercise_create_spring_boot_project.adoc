@@ -25,7 +25,7 @@ image::./spring-starter-dependencies.png[]
 
 Then press btn:[Finish] so that the project will be generated.
 
-CAUTION:
+[CAUTION]
 ====
 Please avoid to add spring web mvc dependencies, otherwise webflux won´t work properly.
 
