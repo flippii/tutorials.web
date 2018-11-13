@@ -24,11 +24,22 @@ import lombok.NoArgsConstructor;
 public class User {
 
 	private long id;
+	
+	@Builder.Default <6>
 	private String name = "";
+	
+	@Builder.Default
 	private String email = "";
+	
+	@Builder.Default
 	private String password = "";
+	
+	@Builder.Default
 	private List<String> roles = new ArrayList<>();
+	
+	@Builder.Default
 	private Instant lastLogin = Instant.now();
+	
 	private boolean enabled;
 	
 	public User(long id) {
@@ -42,5 +53,5 @@ public class User {
 <3> This is a convenience annotation to provide a constructor with all available field automatically
 <4> This annotation automatically generates a Builder for a class. Usually used for classes with many field, that may have default values.
 <5> The Todo is also supposed to be serialized and deserialized with JSON, Spring uses the Jackson library for this by default. @JsonIgnoreProperties(ignoreUnknown = true) specifies that properties, which are available in the JSON String, but not specified as class members will be ignored instead of raising an Exception.
-
+<6> The `@Builder.Default` annotation tells Lombok to apply these default values, if nothing else will be set during the creation of a User object 
 
