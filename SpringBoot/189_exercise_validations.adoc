@@ -76,3 +76,21 @@ To tell Spring that it should run the validations in the controller we have to a
 	}
 ----
 
+Now try to create a user like we've done in a former exercise and see what happens:
+
+[source, curl]
+----
+curl -d '{"id":100, "name":"Spiderman"}' -H "Content-Type: application/json" -X POST http://localhost:8080/user
+----
+
+This time the response contains a 400 error code and complains about the invalid email and password field.
+
+Therefore the request has to be updated to include a valid email adress and password.
+
+[source, curl]
+----
+curl -d '{"id":100, "name":"Spiderman", "email":"me@spidey.com", "password":"WithGreatPowerComesGreatResponsibility"}' -H "Content-Type: application/json" -X POST http://localhost:8080/user
+----
+
+This time the _Spiderman_ user is successfully added to the list of users, which can be verified by navigating to http://localhost:8081/user.
+

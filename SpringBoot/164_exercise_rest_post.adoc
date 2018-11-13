@@ -44,7 +44,7 @@ Curl or any rest client you like, e.g., https://addons.mozilla.org/de/firefox/ad
 
 [source, curl]
 ----
-curl -d '{"id":4, "summary":"New custom User"}' -H "Content-Type: application/json" -X POST http://localhost:8080/user
+curl -d '{"id":100, "name":"Spiderman"}' -H "Content-Type: application/json" -X POST http://localhost:8080/user
 ----
 
 This will return the "New custom User" and show it on the command line.
