@@ -140,7 +140,7 @@ public class UserService {
 		return userRepository.findAll().take(limit);
 	}
 
-	public Mono<User> getUserById(long id) {
+	public Mono<User> findUserById(long id) {
 		return userRepository.findById(id);
 	}
 
