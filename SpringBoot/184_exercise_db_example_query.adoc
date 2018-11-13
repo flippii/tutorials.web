@@ -42,7 +42,7 @@ public interface UserRepository extends ReactiveCrudRepository<User, Long>, Reac
 }
 ----
 
-<1> By implementing the `ReactiveQueryByExampleExecutor<User>` interface the methods above an be used to query by using `Example` objects.
+<1> By implementing the `ReactiveQueryByExampleExecutor<User>` interface the methods above can be used to query by using `Example` objects.
 
 So instead of using a `findByEmailContainingAndRolesContainingAllIgnoreCaseAndEnabledIsTrue` method an `Example` can be used to express the same:
 
