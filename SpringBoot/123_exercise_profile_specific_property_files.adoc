@@ -1,0 +1,43 @@
+== Exercise: Profile specific property files
+
+In this exercise we explore how we can use Spring Profiles to have realize configuration.
+This can be used to provide different configuration for development and production environments.
+
+Add this to your default Spring properties file:
+
+[source, title=`src/main/resources/application.properties`]
+----
+# set default profile to dev
+spring.profiles.active=dev
+# set debug log level for the whole application
+logging.level.root=DEBUG
+----
+
+
+Starting the application now shows:
+
+----
+2017-09-15 13:47:48.308  INFO 15381 --- [  restartedMain] c.vogella.spring.Application  : The following profiles are active: dev
+// loads of log output..
+----
+
+Now create a properties file that only gets loaded when the production profile is active:
+
+[source, title=`src/main/resources/application-production.properties`]
+----
+# set warn log level for the whole application
+logging.level.root=WARN
+----
+
+Now create a runtime configuration for the production profile in the Spring Tool Suite.
+Navigate to menu:Run[Run Configurations..] and duplicate your Spring Boot Application run configuration:
+
+image::production_profile_run_configuration1.png[]
+
+In the tab _Arguments_ add this to the program arguments: `--spring.profiles.active=production``
+
+image::production_profile_run_configuration2.png[]
+
+When you hit run you should see almost no log output.
+
+
