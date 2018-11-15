@@ -1,0 +1,43 @@
+== Exercise: Spring Cloud Config Server
+
+Configuring several different micro services can be struggling,
+because by default the configuration resides inside the build jar file.
+Therefore the configurations are not easily available for system admins and
+you do not want to build a new jar file every time a configuration has to be changed.
+
+In order to centralize this configuration a Config Server can be created.
+Create a new project called _com.vogella.spring.config_.
+
+image::create-config-server.png[] 
+
+Press btn:[Next], add the _Config Server_ (org.springframework.cloud:spring-cloud-config-server) as dependency and press btn:[Finish].
+
+Add the `@EnableConfigServer` annotation to the `com.vogella.spring.config.Application` class.
+
+[source,java]
+----
+@SpringBootApplication
+@EnableConfigServer <1>
+public class Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+}
+----
+
+<1> Tells Spring that this Spring Boot application is a Config Server
+
+Now this Config Server needs to be configured in its _application.properties_ so that it points to a Git repository, where the configurations should reside.
+
+[source, properties, title="application.properties"]
+----
+server.port=8888 <1>
+spring.cloud.config.server.git.uri=https://github.com/vogellacompany/codeexamples-javaweb/ <2>
+spring.cloud.config.server.git.searchPaths=config <3>
+----
+
+<1> The default port for Config Server is usually port 8888. 
+<2> This property is used to point to a git repository, which contains configuration files
+<3> A _searchPath_ is used to point to subfolders (can also be a list)
+
