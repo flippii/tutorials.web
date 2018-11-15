@@ -40,3 +40,5 @@ Let's adjust the controller to returns the proper response.
 	}
 ----
 
+Now run the test again to verify the fix.
+

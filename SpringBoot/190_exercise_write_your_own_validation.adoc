@@ -12,6 +12,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
+import javax.validation.Payload
 
 @Target({ ElementType.FIELD }) <1>
 @Retention(RetentionPolicy.RUNTIME) <2>
@@ -23,7 +24,7 @@ public @interface ValidRoles {
 
 	Class<?>[] groups() default {}; <6>
 
-	Class<?>[] payload() default {}; <7>
+	Class<? extends Payload>[] payload() default {}; <7>
 }
 ----
 
@@ -33,7 +34,7 @@ public @interface ValidRoles {
 <4> `@Documented`  become part of the Java doc of the target class
 <5> `message()` required field, message to show the user after failed validation
 <6> `groups()`  groups allow you to control when certain validations are run
-<7> `payloud()`  TODO
+<7> `payloud()`  can be used to provide additional metadata, eg., severity level
 
 The Validator has to implement `ConstraintValidator`` and gets the value of the field injected:
 
