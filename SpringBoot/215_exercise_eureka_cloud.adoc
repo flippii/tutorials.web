@@ -1,0 +1,38 @@
+== Exercise: Create a Netflix Eureka server
+
+Create a new Spring project called _com.vogella.spring.eureka_.
+
+image::create-eureka-server.png[] 
+
+Add the Netflix Eureka Server depenedency (_'org.springframework.cloud:spring-cloud-starter-eureka-server'_) and add the `@EnableEurekaServer` annotation to the application config.
+
+[source,java]
+----
+@SpringBootApplication
+@EnableEurekaServer
+public class Application {
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
+----
+
+And these would be the default _application.yml_ for the Eureka server.
+
+[source, yml]
+----
+server:
+  port: 8761
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+----
+
+Now you can navigate to http://localhost:8761 with a browser and see the Eureka dashboard and the services, which have been discovered.
+
+You should now (re-)start the user server and then see the user service in the Eureka dashboard:
+
+image::eureka-server-dashboard.png[] 
+
+
