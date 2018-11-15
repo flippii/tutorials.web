@@ -14,7 +14,7 @@ Press btn:[Next], add the _Config Server_ (org.springframework.cloud:spring-clou
 
 Add the `@EnableConfigServer` annotation to the `com.vogella.spring.config.Application` class.
 
-[source,java]
+[source, java]
 ----
 @SpringBootApplication
 @EnableConfigServer <1>

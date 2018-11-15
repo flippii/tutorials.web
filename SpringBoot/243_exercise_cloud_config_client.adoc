@@ -1,0 +1,30 @@
+== Exercise: Spring Cloud Config client
+
+Different micro services, e.g., _com.vogella.spring.user_,
+should now get their configuration from the Config Server rather than holding their own configuration.
+
+The _application.properties_ file can be deleted from the _com.vogella.spring.user_ project.
+Instead of using the _application.properties_ a _bootstrap.properties_ now has to be added to the `src/main/resources` folder.
+
+[source, properties, title="bootstrap.properties"]
+----
+spring.application.name=user <1>
+spring.cloud.config.uri=http://localhost:8888 <2>
+management.security.enabled=false <3>
+----
+
+<1> Besides Eureka, also the Cloud Config Server makes use of this property to find the right config file in the git repo 
+<2> Tells this Config Server client where to find the Config Server
+<3> Disable security right now for convenience, but it will be added again later ;-)
+
+In order to enable the user project to talk to a Cloud Config Server the
+`implementation('org.springframework.cloud:spring-cloud-starter-config')` dependency has to be added to the _build.gradle_ file.
+
+IMPORTANT: Do not forget to refresh the Gradle project.
+
+Now start the Eureka Server, the Config Server and finally the user application.
+
+Look into the console log of the user application and validate that the remote properties in the git repo have been used.
+
+image::cloud-config-connection-console.png[] 
+
