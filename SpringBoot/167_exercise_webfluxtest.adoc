@@ -72,13 +72,6 @@ Now we write a tests that tests what happens if the server receives an unknown i
 When you run this test you'll notice that it fails.
 Our controller doesn't return the right http status in case he can't find the entity.
 
-Before we go ahead and adjust the controller, please make sure that you have added the following types to your favorites in the Spring Tool Suite Preferences:
-----
-org.springframework.web.reactive.function.BodyInserters
-org.springframework.http.ResponseEntity
-reactor.core.publisher.Mono
-----
-
 We want the endpoint to return a 404 not found response.
 
 [source, java, title="UserRestController.java"]
