@@ -22,7 +22,7 @@ In order to enable the user project to talk to a Cloud Config Server the
 
 IMPORTANT: Do not forget to refresh the Gradle project.
 
-Now start the Eureka Server, the Config Server and finally the user application.
+Now start the Eureka Server, the Config Server and finally the user server.
 
 Look into the console log of the user application and validate that the remote properties in the git repo have been used.
 
