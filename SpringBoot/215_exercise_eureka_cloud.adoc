@@ -4,7 +4,9 @@ Create a new Spring project called _com.vogella.spring.eureka_.
 
 image::create-eureka-server.png[] 
 
-Add the Netflix Eureka Server depenedency (_'org.springframework.cloud:spring-cloud-starter-eureka-server'_) and add the `@EnableEurekaServer` annotation to the application config.
+Press btn:[Next] and add the _Eureka Server_ dependency(_'org.springframework.cloud:spring-cloud-starter-eureka-server'_) and then press finish.
+
+When the project is created the `@EnableEurekaServer` annotation has to be added the application config.
 
 [source,java]
 ----
