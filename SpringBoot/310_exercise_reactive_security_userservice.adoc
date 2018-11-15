@@ -1,0 +1,203 @@
+== Exercise: Configure Spring Security with user repository
+
+Using a password from the console is not that secure and it would be better to use the users from the database to authenticate.
+
+We want to modify the `User` class by adding an additional constructor:
+
+[source,java]
+----
+public User(User user) { <1>
+	this.id = user.id;
+	this.name = user.name;
+	this.email = user.email;
+	this.password = user.password;
+	this.roles = user.roles;
+	this.lastLogin = user.lastLogin;
+	this.enabled = user.enabled;
+}
+----
+<1> Basically this is a copy constructor to create new `User` instances by copying the field values from an existing user object.
+
+In order to achieve this create a _com.vogella.spring.user.security_ package and create a _ServiceReactiveUserDetailsService_ class in this package.
+
+[source,java]
+----
+package com.vogella.spring.user.security;
+
+import java.util.Collection;
+import java.util.stream.Collectors;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.ReactiveUserDetailsService;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
+
+import com.vogella.spring.user.domain.User;
+import com.vogella.spring.user.service.UserService;
+
+import reactor.core.publisher.Mono;
+
+@Component
+public class ServiceReactiveUserDetailsService implements ReactiveUserDetailsService {
+
+	private UserService userService;
+
+	public ServiceReactiveUserDetailsService(UserService userService) {
+		this.userService = userService;
+	}
+
+	@Override
+	public Mono<UserDetails> findByUsername(String username) {
+		return userService
+			.findUserByEmail(username) <1>
+			.map(CustomUserDetails::new); <2>
+	}
+
+	static class CustomUserDetails extends User implements UserDetails {
+
+		private static final long serialVersionUID = -2466968593900571404L;
+
+		public CustomUserDetails(User user) {
+			super(user);
+		}
+
+		@Override
+		public Collection<? extends GrantedAuthority> getAuthorities() {
+			return getRoles() <3>
+				.stream()
+				.map(authority -> new SimpleGrantedAuthority(authority))
+				.collect(Collectors
+					.toList());
+		}
+
+		@Override
+		public String getUsername() {
+			return getEmail(); <4>
+		}
+
+		@Override
+		public boolean isAccountNonExpired() {
+			return true;
+		}
+
+		@Override
+		public boolean isAccountNonLocked() {
+			return true;
+		}
+
+		@Override
+		public boolean isCredentialsNonExpired() {
+			return true;
+		}
+	}
+}
+----
+<1> The email adress is supposed to be used for a login and therefore the email is queried
+<2> Make use of an adapter for the `UserDetails` interface so that `CustomUserDetails` can be returned in by the overridden `findByUsername` method.
+<3> Map the roles to be authorities
+<4> Use the Users email as unique user name
+
+For the other values we simply return true for now.
+The `UserDetails` class also has also an `isEnabled` and `getPassword`, which is already being implemented by the `User` class.
+
+This `ReactiveUserDetailsService` implementation will be claimed by Spring Security and used to authenticate users with the formlogin or basic auth header.
+
+We also want to use a proper password encoder for our users, which are created in the `UserDataInitializer` class.
+
+Therefore we create a `SecurityConfig` class in the _com.vogella.spring.user.security_ package.
+
+[source,java]
+----
+package com.vogella.spring.user.security;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurity;
+import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+@EnableWebFluxSecurity
+@EnableReactiveMethodSecurity
+public class SecurityConfig {
+
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return PasswordEncoderFactories
+			.createDelegatingPasswordEncoder();
+	}
+}
+----
+
+The `DelegatingPasswordEncoder` automatically uses the latest and greatest encryption algorithm and therefore is the best choice to be used as PasswordEncoder.
+
+Since a `PasswordEncoder` is now available as bean it can be injected into our `UserDataInitializer` class to encode the given passwords.
+
+[source,java]
+----
+package com.vogella.spring.user.initialize;
+
+import java.time.Instant;
+import java.util.Arrays;
+import java.util.Collections;
+
+import org.springframework.beans.factory.SmartInitializingSingleton;
+import org.springframework.context.annotation.Profile;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
+
+import com.vogella.spring.user.data.UserRepository;
+import com.vogella.spring.user.domain.User;
+
+@Profile("!production")
+@Component
+public class UserDataInitializer implements SmartInitializingSingleton {
+
+	private UserRepository userRepository;
+	private PasswordEncoder passwordEncoder;
+
+	public UserDataInitializer(UserRepository userRepository, PasswordEncoder passwordEncoder) { <1>
+		this.userRepository = userRepository;
+		this.passwordEncoder = passwordEncoder;
+	}
+
+	@Override
+	public void afterSingletonsInstantiated() {
+		User user = new User(1, "Fabian Pfaff", "fabian.pfaff@vogella.com", passwordEncoder <2>
+			.encode("fap"),
+				Collections
+					.singletonList("ROLE_ADMIN"),
+				Instant
+					.now(),
+				true);
+		User user2 = new User(2, "Simon Scholz", "simon.scholz@vogella.com", passwordEncoder
+			.encode("simon"),
+				Collections
+					.singletonList("ROLE_ADMIN"),
+				Instant
+					.now(),
+				false);
+		User user3 = new User(3, "Lars Vogel", "lars.vogel@vogella.com", passwordEncoder
+			.encode("vogella"),
+				Collections
+					.singletonList("ROLE_USER"),
+				Instant
+					.now(),
+				true);
+
+		userRepository.saveAll(Arrays.asList(user, user2, user3)).subscribe();
+	}
+
+}
+----
+<1> Inject the `PasswordEncoder`
+<2> Make use of the `PasswordEncoder` to encode the user passwords
+
+====
+Optional Exercise: We leave it to the reader to also make use of the `PasswordEncoder` in the `UserService` `newUser` method for new users.
+====
+
+To verify that now the users from the database are used try to navigate to http://localhost:8080/user and you'll be redirected to
+a login form, where you can type in _simon.scholz@vogella.com_ as user and _simon_ as password. (See `UserDataInitializer` for other names and passwords)
+
+And now you should be able to see the user json again.
