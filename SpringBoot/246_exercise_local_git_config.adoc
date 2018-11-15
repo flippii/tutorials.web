@@ -15,7 +15,7 @@ git add .
 git commit -m "Added user config"
 ----
 
-Now the Cloud Config Server can point to the local repository.
+Now the Cloud Config Server can point to the local repository by changing the _application.properties_ of the _com.vogella.spring.config_ project.
 
 [source, properties]
 ----
