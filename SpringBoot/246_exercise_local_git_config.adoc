@@ -1,0 +1,31 @@
+== Exercise: Local Git Repository with configurations
+
+Create your own local git repository and provide a _user.properties_ for the configuration in the git repository.
+
+[source, console]
+----
+mkdir config
+
+git init
+
+echo 'server.port=8081' > user.properties
+
+git add .
+
+git commit -m "Added user config"
+----
+
+Now the Cloud Config Server can point to the local repository.
+
+[source, properties]
+----
+server.port=8888
+spring.cloud.config.server.git.uri=file://${path-to-repo} <1>
+----
+
+<1> ${path-to-repo} has to be replaced by the actual path to the previously created repo
+
+Now again start the Eureka Server, the Config Server and finally the user server.
+
+Look into the console log of the user application and validate that the remote properties in the git repo have been used. 
+
