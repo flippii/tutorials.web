@@ -77,7 +77,7 @@ public class User {
 	private Instant lastLogin = Instant.now();
 
 	private boolean enabled;
-	
+
 	public User(long id) {
 		this.id = id;
 	}
