@@ -47,7 +47,9 @@ spring.cloud.gateway.discovery.locator.lower-case-service-id=true <3>
 <2> The discovery locator has to be enabled to make the `RouteLocator` work 
 <3> By default services are written with upper case letters and this setting allows lower case
 
-Now three server should be started: Eureka server with Spring Cloud Cli, Gateway server and the User server. 
+The `implementation('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')` dependency has to be added to the gateway as well in the _build.gradle_ as well.
+
+Now three server should be started: Eureka server, Gateway server and the User server. 
 
 When navigating to the http://localhost:8080/user end point the same result as before should be returned as response.
 
