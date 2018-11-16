@@ -76,6 +76,11 @@ We want the endpoint to return a 404 not found response.
 
 [source, java, title="UserRestController.java"]
 ----
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.server.ResponseStatusException;
+import reactor.core.publisher.Mono;
+
 	@GetMapping("/{id}")
 	public Mono<ResponseEntity<User>> getUserById(@PathVariable("id") long id) {
 		Mono<User> foundUser = from(users.filter(user -> id == user.getId()));
