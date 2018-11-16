@@ -83,7 +83,7 @@ import reactor.core.publisher.Mono;
 
 	@GetMapping("/{id}")
 	public Mono<ResponseEntity<User>> getUserById(@PathVariable("id") long id) {
-		Mono<User> foundUser = from(users.filter(user -> id == user.getId()));
+		Mono<User> foundUser = Mono.from(users.filter(user -> id == user.getId()));
 		return foundUser
                     .map(user -> ResponseEntity.ok(user))
 				    .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND)));
