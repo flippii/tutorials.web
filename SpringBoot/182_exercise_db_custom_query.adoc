@@ -5,7 +5,7 @@ Basically everything can be done by using CRUD operations. In case a `User` shou
 [source, java]
 ----
 public static Flux<User> getByEmail(String email) {
-	Flux<User> findAll = UserRepository.findAll();
+	Flux<User> findAll = userRepository.findAll();
 	Flux<User> filteredFlux = findAll.filter(user -> user.getUserEmail().toLowerCase().contains(email.toLowerCase()));
 	return filteredFlux;
 }
