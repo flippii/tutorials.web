@@ -1,0 +1,169 @@
+== Exercise: Generating RestDocs from Tests
+
+In this exercise we'll generate documentation for our REST api from test definitions.
+
+In the `com.vogella.spring.user` project, add the following to your `build.gradle` file in the right places:
+
+[source, groovy, title=build.gradle]
+----
+buildscript {
+	ext {
+		springBootVersion = '2.1.0.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+		jcenter()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath('org.asciidoctor:asciidoctor-gradle-plugin:1.5.9.2')
+	}
+}
+
+// ... other plugins
+apply plugin: 'org.asciidoctor.convert'
+
+ext {
+	// ...
+	snippetsDir = file('build/generated-snippets')
+}
+
+dependencies {
+	// ... other dependencies
+	asciidoctor('org.springframework.restdocs:spring-restdocs-asciidoctor')
+	testCompile('org.springframework.restdocs:spring-restdocs-webtestclient')
+}
+
+test {
+	outputs.dir snippetsDir
+}
+
+asciidoctor {
+	inputs.dir snippetsDir
+	dependsOn test
+}
+
+bootJar {
+	dependsOn asciidoctor
+	from ("${asciidoctor.outputDir}/html5") {
+		into 'static/docs'
+	}
+}
+----
+
+Then create a new test class:
+
+[source, java]
+----
+package com.vogella.spring.user.controller;
+
+import static org.springframework.restdocs.request.RequestDocumentation.parameterWithName;
+import static org.springframework.restdocs.request.RequestDocumentation.pathParameters;
+import static org.springframework.restdocs.webtestclient.WebTestClientRestDocumentation.document;
+import static org.springframework.restdocs.webtestclient.WebTestClientRestDocumentation.documentationConfiguration;
+
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
+import org.springframework.restdocs.JUnitRestDocumentation;
+import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.reactive.server.WebTestClient;
+import org.springframework.test.web.reactive.server.WebTestClient.ResponseSpec;
+
+import com.vogella.spring.user.domain.User;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class UserRestDocsControllerTest {
+
+	@Rule
+	public JUnitRestDocumentation restDocumentation = new JUnitRestDocumentation();
+
+	@Autowired
+	private ApplicationContext context;
+
+	private WebTestClient webTestClient;
+
+	@Before
+	public void setUp() {
+		this.webTestClient = WebTestClient.bindToApplicationContext(context).configureClient().baseUrl("/")
+				.filter(documentationConfiguration(restDocumentation)).build();
+	}
+
+	@Test
+	@WithMockUser
+	public void shouldReturnUser() throws Exception {
+		ResponseSpec rs = webTestClient.get().uri("/user/{id}", 1).exchange();
+
+		rs.expectStatus().isOk().expectBody(User.class)
+				.consumeWith(document("sample",
+						pathParameters(parameterWithName("id").description("The id of the User entity"))));
+	}
+}
+----
+
+
+Create a new folder in your project directory: "/src/docs/asciidoc".
+Then create an adoc template that includes the auto-generated snippets from the test:
+
+[source, adoc, title=/src/docs/asciidoc/index.adoc]
+----
+= Spring REST Docs with WebTestClient
+Simon Scholz (c) 2018 vogella GmbH;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+
+Application demonstrating how to use Spring REST Docs with Spring Framework's
+WebTestClient.
+
+cURL request:
+
+include::{snippets}/sample/curl-request.adoc[]
+
+HTTPie request:
+
+include::{snippets}/sample/httpie-request.adoc[]
+
+HTTP request:
+
+include::{snippets}/sample/http-request.adoc[]
+
+Request body:
+
+IMPORTANT: The following snippet is empty because it does not have any request body.
+
+include::{snippets}/sample/request-body.adoc[]
+
+HTTP response:
+
+include::{snippets}/sample/http-response.adoc[]
+
+Response body:
+
+include::{snippets}/sample/response-body.adoc[]
+
+Path Parameters:
+
+include::{snippets}/sample/path-parameters.adoc[]
+
+
+----
+
+WARNING: There are probably failing tests in your project. Deactivate all other test classes with `@Ignore` before proceeding.
+
+To trigger the build run
+
+----
+./gradlew bootJar
+----
+
+
+The generated snippets reside in `/build/generated-snippets/sample`.
+The documentation file generated from the `index.adoc` template can be found at `/build/asciidoc/html5/index.html`.
+
