@@ -111,7 +111,7 @@ public class UserRestDocsControllerTest {
 Create a new folder in your project directory: "/src/docs/asciidoc".
 Then create an adoc template that includes the auto-generated snippets from the test:
 
-[source, adoc, title=/src/docs/asciidoc/index.adoc]
+[source, adoc]
 ----
 = Spring REST Docs with WebTestClient
 Simon Scholz (c) 2018 vogella GmbH;
@@ -151,8 +151,6 @@ include::{snippets}/sample/response-body.adoc[]
 Path Parameters:
 
 include::{snippets}/sample/path-parameters.adoc[]
-
-
 ----
 
 WARNING: There are probably failing tests in your project. Deactivate all other test classes with `@Ignore` before proceeding.
