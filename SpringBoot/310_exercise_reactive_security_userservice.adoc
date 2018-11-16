@@ -4,7 +4,7 @@ Using a password from the console is not that secure and it would be better to u
 
 We want to modify the `User` class by adding an additional constructor:
 
-[source,java]
+[source,java,title="User.java"]
 ----
 public User(User user) { <1>
 	this.id = user.id;

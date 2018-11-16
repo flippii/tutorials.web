@@ -7,7 +7,7 @@ This can be done in several ways like further adjusting the `SecurityWebFilterCh
 
 We can say that any delete request can only the done by ADMIN users:
 
-[source,java]
+[source,java,title="SecurityConfig.java"]
 ----
 @Bean
 public SecurityWebFilterChain securitygWebFilterChain(ServerHttpSecurity http,
