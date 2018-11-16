@@ -10,8 +10,9 @@ To achieve this the `org.springframework.boot:spring-boot-starter-security` comp
 dependencies {
 
 	// more dependencies ...
-	
+
 	compile('org.springframework.boot:spring-boot-starter-security')
+	testImplementation('org.springframework.security:spring-security-test')
 }
 ----
 
