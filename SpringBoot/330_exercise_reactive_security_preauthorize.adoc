@@ -1,0 +1,110 @@
+== Exercise: Taking roles into account to constrain access
+
+We have specified that any request besides the _/auth_ request has to be authorized in the `SecurityConfig`.
+
+But so far we didn't take the different roles of the user into account.
+This can be done in several ways like further adjusting the `SecurityWebFilterChain` or using the `@PreAuthorize` annotation.
+
+We can say that any delete request can only the done by ADMIN users:
+
+[source,java]
+----
+@Bean
+public SecurityWebFilterChain securitygWebFilterChain(ServerHttpSecurity http,
+		ReactiveAuthenticationManager authenticationManager,
+		ServerSecurityContextRepository securityContextRepository) {
+	return http
+		.csrf()
+		.disable()
+		.formLogin()
+		.disable()
+		.httpBasic()
+		.disable()
+		.authenticationManager(authenticationManager)
+		.securityContextRepository(securityContextRepository)
+		.authorizeExchange()
+		.pathMatchers(HttpMethod.OPTIONS)
+		.permitAll()
+		.pathMatchers("/auth")
+		.permitAll()
+		.pathMatchers(HttpMethod.DELETE) <1>
+		.hasAuthority("ADMIN") <2>
+		.anyExchange()
+		.authenticated()
+		.and()
+		.build();
+
+}
+----
+
+<1> Specify for any delete request
+<2> authority has to be ADMIN
+
+The `pathMatchers` method is also overloaded and you can be more precise about this, but you can also make use of the `@PreAuthorize` annotation.
+This `@PreAuthorize` annotation can for example be added to the `deleteUser` method in the `UserService` class.
+
+[source,java]
+----
+package com.vogella.spring.user.service;
+
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
+import org.springframework.data.domain.ExampleMatcher.GenericPropertyMatcher;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Service;
+
+import com.vogella.spring.user.data.UserRepository;
+import com.vogella.spring.user.domain.User;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+@Service
+public class UserService {
+
+	private UserRepository userRepository;
+
+	public UserService(UserRepository UserRepository) {
+		this.userRepository = UserRepository;
+	}
+
+	public Flux<User> getUsers(long limit) {
+		if (-1 == limit) {
+			return userRepository.findAll();
+		}
+		return userRepository.findAll().take(limit);
+	}
+
+	public Mono<User> findUserById(long id) {
+		return userRepository.findById(id);
+	}
+
+	public Mono<User> findUserByEmail(String email) {
+		return userRepository.findByEmail(email);
+	}
+
+	public Mono<User> findUserByExample(User user) {
+		ExampleMatcher matcher = ExampleMatcher.matching().withIgnoreCase()
+				.withMatcher("email", GenericPropertyMatcher::contains)
+				.withMatcher("role", GenericPropertyMatcher::contains)
+				.withMatcher("enabled", GenericPropertyMatcher::exact);
+		Example<User> example = Example.of(user, matcher);
+		return userRepository.findOne(example);
+	}
+
+	public Mono<User> newUser(User User) {
+		return userRepository.save(User);
+	}
+
+	@PreAuthorize("hasAuthority('ADMIN')") <1>
+	public Mono<Void> deleteUser(long id) {
+		return userRepository.deleteById(id);
+	}
+
+}
+----
+
+<1> Before this method will be invoked the `@PreAuthorize` checks whether to logged in user has the _ADMIN_ authority.
+
+You can try this by logging in with different user, which have different roles/authorities.
+
