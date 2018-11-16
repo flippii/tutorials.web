@@ -21,6 +21,8 @@ public class Application {
 
 And these would be the default _application.yml_ for the Eureka server.
 
+NOTE: If you still have a _application.properties_ file you can rename it to  _application.yml_.
+
 [source, yml]
 ----
 server:
