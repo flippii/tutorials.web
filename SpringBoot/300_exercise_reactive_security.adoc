@@ -22,7 +22,7 @@ Again try to get all users by navigating to http://localhost:8080/user in the br
 
 Now you should be redirected to http://localhost:8080/login and being faced with a login page.
 
-image::spring-security-login.png[] 
+image::spring-security-login.png[]
 
 The default user is called _user_ and the password can be found in the console.
 
