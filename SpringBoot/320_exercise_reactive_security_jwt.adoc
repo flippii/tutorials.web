@@ -1,0 +1,384 @@
+== Exercise: Using JWT token for authentication
+
+Using a form login or http basic authentication has some drawbacks,
+because with http basic authentication the user credentials have to be sent together with each and every request.
+A form login is also not always suitable in case you're not using a browser to access the data.
+
+JWT tokens offer the possibility to exchange bearer tokens for each request, where authentication is necessary.
+
+To make use of this we need to be able to generate these tokens by using a `JWTUtil`.
+
+[source,java]
+----
+package com.vogella.spring.user.security;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import com.vogella.spring.user.domain.User;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+
+@Component
+public class JWTUtil {
+
+	@Value("${jwt.secret}")
+	private String secret;
+	
+	@Value("${jwt.expiration}")
+	private String expirationTime;
+	
+	public Claims getAllClaimsFromToken(String token) {
+		return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
+	}
+	
+	public String getUsernameFromToken(String token) {
+		return getAllClaimsFromToken(token).getSubject();
+	}
+	
+	public Date getExpirationDateFromToken(String token) {
+		return getAllClaimsFromToken(token).getExpiration();
+	}
+	
+	private Boolean isTokenExpired(String token) {
+		final Date expiration = getExpirationDateFromToken(token);
+		return expiration.before(new Date());
+	}
+	
+	public String generateToken(User user) {
+		Map<String, Object> claims = new HashMap<>();
+		claims.put("role", user.getRoles());
+		claims.put("enable", user.isEnabled());
+		return doGenerateToken(claims, user.getEmail());
+	}
+
+	private String doGenerateToken(Map<String, Object> claims, String username) {
+		Long expirationTimeLong = Long.parseLong(expirationTime); //in second
+		
+		final Date createdDate = new Date();
+		final Date expirationDate = new Date(createdDate.getTime() + expirationTimeLong * 1000);
+		return Jwts.builder()
+				.setClaims(claims)
+				.setSubject(username)
+				.setIssuedAt(createdDate)
+				.setExpiration(expirationDate)
+				.signWith(SignatureAlgorithm.HS512, secret)
+				.compact();
+	}
+	
+	public Boolean validateToken(String token) {
+		return !isTokenExpired(token);
+	}
+}
+----
+
+NOTE: To learn more about JWT tokens you can get further information on https://jwt.io/
+
+The `JWTUtil` class makes use of the _jwt.secret_ and _jwt.expiration_ properties, which we'll add to the _bootstrap.properties_ file for now.
+
+The next thing to do is to create a rest end point to obtain a JWT token, which can be used for authorization.
+
+Create an `AuthRequest`, `AuthResponse` and a `AuthRestController` class inside the _com.vogella.spring.user.controller_ package.
+
+[source,java]
+----
+package com.vogella.spring.user.controller;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class AuthRequest {
+	private String email;
+	private String password;
+}
+----
+
+[source,java]
+----
+package com.vogella.spring.user.controller;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class AuthResponse {
+	private String token;
+}
+----
+
+
+[source,java]
+----
+package com.vogella.spring.user.controller;
+
+import java.security.Principal;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.ReactiveUserDetailsService;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.vogella.spring.user.domain.User;
+import com.vogella.spring.user.security.JWTUtil;
+
+import reactor.core.publisher.Mono;
+
+@RestController
+public class AuthRestController {
+
+	@Autowired
+	private JWTUtil jwtUtil;
+
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+
+	@Autowired
+	private ReactiveUserDetailsService userDetailsService;
+
+	@PostMapping("/auth")
+	public Mono<ResponseEntity<AuthResponse>> auth(@RequestBody AuthRequest ar) {
+		return userDetailsService
+			.findByUsername(ar
+				.getEmail())
+			.map((userDetails) -> {
+				if (passwordEncoder
+					.matches(ar
+						.getPassword(),
+							userDetails
+								.getPassword())) {
+					return ResponseEntity
+						.ok(new AuthResponse(jwtUtil
+							.generateToken((User) userDetails)));
+				} else {
+					return ResponseEntity
+						.status(HttpStatus.UNAUTHORIZED)
+						.build();
+				}
+			});
+	}
+}
+----
+
+With this _/auth_ end point a JWT token can be obtained in case the sent `AuthRequest` has correct credentials.
+
+Try to obtain a JWT token by using curl or your favorite rest client:
+
+
+[source, console]
+----
+curl -d '{"email":"simon.scholz@vogella.com", "password":"simon"}' -H "Content-Type: application/json" -X POST http://localhost:8080/auth
+----
+
+Something similar to this should be returned:
+
+[source, console]
+----
+{
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsYXJzLnZvZ2VsQHZvZ2VsbGEuY29tIiwicm9sZSI6WyJST0xFX1VTRVIiXSwiZW5hYmxlIjp0cnVlLCJleHAiOjE1NDIzNTQ0MTIsImlhdCI6MTU0MjMyNTYxMn0.zBVx_-Npp3y6_6EqIpEVWy4EtQoCo01Ii8lSsI1w3X2imIUkrylTOgabgbNo8HgSunMwCujz1d5uIZ6JuGycQw"
+}
+---- 
+
+Now that you got a valid JWT token the server side has to validate this token and secure the application in case the token is not valid.
+
+In order to achieve that several classes have to be created:
+
+[source,java]
+----
+package com.vogella.spring.user.security;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.ReactiveAuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.stereotype.Component;
+
+import io.jsonwebtoken.Claims;
+import reactor.core.publisher.Mono;
+
+@Component
+public class AuthenticationManager implements ReactiveAuthenticationManager {
+
+	@Autowired
+	private JWTUtil jwtUtil;
+
+	@Override
+	public Mono<Authentication> authenticate(Authentication authentication) {
+		String authToken = authentication.getCredentials().toString();
+
+		String username;
+		try {
+			username = jwtUtil.getUsernameFromToken(authToken);
+		} catch (Exception e) {
+			username = null;
+		}
+		if (username != null && jwtUtil.validateToken(authToken)) {
+			Claims claims = jwtUtil.getAllClaimsFromToken(authToken);
+			List<String> roles = claims.get("role", List.class);
+			UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(username, null, roles
+					.stream().map(authority -> new SimpleGrantedAuthority(authority)).collect(Collectors.toList()));
+			return Mono.just(auth);
+		} else {
+			return Mono.empty();
+		}
+	}
+}
+----
+
+[source,java]
+----
+package com.vogella.spring.user.security;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.security.authentication.ReactiveAuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextImpl;
+import org.springframework.security.web.server.context.ServerSecurityContextRepository;
+import org.springframework.stereotype.Component;
+import org.springframework.web.server.ServerWebExchange;
+
+import reactor.core.publisher.Mono;
+
+@Component
+public class SecurityContextRepository implements ServerSecurityContextRepository{
+	
+	@Autowired
+	private ReactiveAuthenticationManager authenticationManager;
+
+	@Override
+	public Mono<Void> save(ServerWebExchange swe, SecurityContext sc) {
+		throw new UnsupportedOperationException("Not supported yet.");
+	}
+
+	@Override
+	public Mono<SecurityContext> load(ServerWebExchange swe) {
+		ServerHttpRequest request = swe.getRequest();
+		String authHeader = request.getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
+
+		if (authHeader != null && authHeader.startsWith("Bearer ")) {
+			String authToken = authHeader.substring(7);
+			Authentication auth = new UsernamePasswordAuthenticationToken(authToken, authToken);
+			return this.authenticationManager.authenticate(auth).map((authentication) -> {
+				return new SecurityContextImpl(authentication);
+			});
+		} else {
+			return Mono.empty();
+		}
+	}
+}
+----
+
+[source,java]
+----
+package com.vogella.spring.user.security;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.reactive.config.CorsRegistry;
+import org.springframework.web.reactive.config.WebFluxConfigurer;
+
+@Configuration
+public class CORSFilter implements WebFluxConfigurer {
+
+	@Override
+	public void addCorsMappings(CorsRegistry registry) {
+		registry.addMapping("/**").allowedOrigins("*").allowedMethods("*").allowedHeaders("*");
+	}
+}
+----
+
+After these classes have been created we also want to add a custom `SecurityWebFilterChain` bean inside the `SecurityConfig` class:
+
+[source,java]
+----
+package com.vogella.spring.user.security;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.authentication.ReactiveAuthenticationManager;
+import org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurity;
+import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
+import org.springframework.security.config.web.server.ServerHttpSecurity;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.server.SecurityWebFilterChain;
+import org.springframework.security.web.server.context.ServerSecurityContextRepository;
+
+@EnableWebFluxSecurity
+@EnableReactiveMethodSecurity
+public class SecurityConfig {
+
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return PasswordEncoderFactories
+			.createDelegatingPasswordEncoder();
+	}
+
+	@Bean
+	public SecurityWebFilterChain securitygWebFilterChain(ServerHttpSecurity http, <1>
+			ReactiveAuthenticationManager authenticationManager,
+			ServerSecurityContextRepository securityContextRepository) {
+		return http
+			.csrf()
+			.disable()
+			.formLogin()
+			.disable()
+			.httpBasic()
+			.disable()
+			.authenticationManager(authenticationManager)
+			.securityContextRepository(securityContextRepository)
+			.authorizeExchange()
+			.pathMatchers(HttpMethod.OPTIONS)
+			.permitAll()
+			.pathMatchers("/auth")
+			.permitAll()
+			.anyExchange()
+			.authenticated()
+			.and()
+			.build();
+
+	}
+}
+----
+
+<1> This is the new method, the rest of the class except of the imports stays the same
+
+With this `SecurityWebFilterChain` you now need to pass the JWT token as authentication header to the server.
+
+[source, console]
+----
+curl -H "Authorization: Bearer <your-token>" -H "Content-Type: application/json" -X GET http://localhost:8080/user <1>
+----
+<1> _<your-token>_ must be replaced by your actual token, which you obtained from the _/auth_ rest end point.
+
+
