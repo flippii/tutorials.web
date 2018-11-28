@@ -8,7 +8,7 @@ You can continue this tutorial without reading these tutorials, but they contain
 
 [[jaxb_project]]
 
-[[firstjersey_project]]
+[[firstjersey_project_gradle]]
 === Create new Gradle project
 
 Create a new Gradle project named _com.vogella.jersey.jaxb_ with _com.vogella.jersey.jaxb_ as the top-level package name and configure Eclipse WTP.
