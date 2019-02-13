@@ -1,0 +1,8 @@
+== SpringBootAdmin
+
+SpringBootAdmin is a deployable web application that lets you monitor any Spring (Boot) application in realtime.
+A SpringBoot application can register itself with a central server.
+This server provides a UI that can be secured and shows many different metrics.
+
+In this tutorial you will learn how to deploy a SpringBootAdmin (also refered to as SBA) application and connect clients to it.
+

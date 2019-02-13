@@ -1,0 +1,22 @@
+= SpringBootAdmin - Tutorial
+:linkcss:
+:sectnums:
+:experimental:
+:icons:
+:imagesdir: ./img
+(c) 2019 vogella GmbH
+Version 0.1, 13.02.2019
+:docinfodir: ../
+:vgwort: SpringBootAdmin
+
+[abstract]
+This tutorial shows how to setup and use SpringBootAdmin.
+
+include::010_overview.adoc[]
+include::020_setup.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
+include::../web/advertisement/inBetween02.adoc[]
+include::008_resourceslocal.adoc[]
+include::../copyright.adoc[]	
+
+
