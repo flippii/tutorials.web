@@ -184,3 +184,5 @@ When navigating to http://localhost:9999/#login the following result should be s
 
 image::login-result.png[] 
 
+NOTE: Don't be confused that the `TextInput` will have the value _undefinded_ when it loses the focus, we'll cover that later.
+
