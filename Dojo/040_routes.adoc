@@ -1,0 +1,94 @@
+== Routes in dojo
+
+When you click on the _PROFILE_ link the URL changes to _http://localhost:9999/\#profile_,
+which means that the _#_ anchor is used to route between different pages of the SPA.
+
+The routes themselves are specified in the _routes.ts_ file, which looks like this:
+
+[source, javascript]
+----
+export default [
+	{
+		path: 'home', <1>
+		outlet: 'home', <2>
+		defaultRoute: true <3>
+	},
+	{
+		path: 'about',
+		outlet: 'about'
+	},
+	{
+		path: 'profile',
+		outlet: 'profile'
+	}
+];
+----
+
+<1> The path, which is used after the _#_
+<2> An outlet is a container, which is rendered on demand. By demand the _#{path}_ route is meant. 
+<3> Specify a default route when navigating to the _index.html_.
+
+These routes are applied in the _main.ts_ file, which itself is the main entry point of the SPA.
+
+[source, javascript]
+----
+import renderer from '@dojo/framework/widget-core/vdom';
+import Registry from '@dojo/framework/widget-core/Registry';
+import { w } from '@dojo/framework/widget-core/d';
+import { registerRouterInjector } from '@dojo/framework/routing/RouterInjector';
+import { registerThemeInjector } from '@dojo/framework/widget-core/mixins/Themed';
+import dojo from '@dojo/themes/dojo';
+import '@dojo/themes/dojo/index.css';
+
+import routes from './routes'; <1>
+import App from './App'; <2>
+
+const registry = new Registry(); <3>
+registerRouterInjector(routes, registry); <4>
+registerThemeInjector(dojo, registry); <5>
+
+const r = renderer(() => w(App, {})); <6>
+r.mount({ registry });
+----
+
+<1> Import the routes
+<2> Import the application widget in order to mount it with a renderer
+<3> Create the Registry, which manages application state and objects
+<4> Register the routes for the SPA
+<5> Enable themes for the widgets
+<6> Render the _App_ widget and mount it
+
+Now that a router has been created and is known by the registry (4) let's have a look at the _App_ widget, which is rendered.
+
+[source, javascript]
+----
+import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
+import { v, w } from '@dojo/framework/widget-core/d';
+import Outlet from '@dojo/framework/routing/Outlet';
+
+import Menu from './widgets/Menu';
+import Home from './widgets/Home';
+import About from './widgets/About';
+import Profile from './widgets/Profile';
+
+import * as css from './App.m.css';
+
+export default class App extends WidgetBase { <1>
+	protected render() {
+		return v('div', { classes: [css.root] }, [ <2>
+			w(Menu, {}), <3>
+			v('div', [
+				w(Outlet, { key: 'home', id: 'home', renderer: () => w(Home, {}) }), <4>
+				w(Outlet, { key: 'about', id: 'about', renderer: () => w(About, {}) }),
+				w(Outlet, { key: 'profile', id: 'profile', renderer: () => w(Profile, { username: 'Dojo User' }) })
+			])
+		]);
+	}
+}
+----
+
+<1> Dojo widgets are usually derived from `WidgetBase`, where the render method should be overridden
+<2> The imported v method is used to render usual HTML nodes, e.g., <div> elements
+<3> The imported w method is used to render widgets
+<4> Outlets are also widgets, which will be rendered on route changes
+
