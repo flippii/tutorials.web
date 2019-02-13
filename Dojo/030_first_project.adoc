@@ -18,5 +18,21 @@ image::dojo-cli-create-app.png[]
 
 NOTE: This is based on Dojo 5 and may look different in future versions.
 
+The app can be built by running:
 
+[source, console]
+----
+dojo build --mode dev --watch --serve <1>
+
+// or ...
+
+dojo build <2>
+----
+
+<1> Starts a local server (http://localhost:9999/), which tracks file changes and rebuilds automatically. 
+<2> Builds a distribution of the app in the _user-app/output/dist_ folder, which can be deployed on a real server or be run without server.
+
+image::dojo-first-app.png[] 
+
+In the following chapters the source code of the _user-app_ single page webapplication will be explained.
 
