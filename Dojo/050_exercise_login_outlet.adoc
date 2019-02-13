@@ -1,0 +1,183 @@
+== Exercise - Adding a Login Outlet
+
+Create a _Login.ts_ file inside the widgets folder of the project.
+
+[source, javascript]
+----
+import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
+import { v, w } from '@dojo/framework/widget-core/d';
+import Button from '@dojo/widgets/button';
+import TextInput from '@dojo/widgets/text-input';
+
+export default class Login extends WidgetBase {
+
+    private _onSubmit(event: Event) { <1>
+        event.preventDefault();
+    }
+
+    private _onEmailInput(email:  string) {
+	}
+
+	private _onPasswordInput(password: string) {
+	}
+
+	protected render() {
+        return v('div', { }, [
+                v('form', {
+                    onsubmit: this._onSubmit <2>
+                }, [
+                    v('fieldset', { }, [
+                        w(TextInput, {
+                            key: 'email',
+                            label: 'Email',
+                            placeholder: 'Email',
+                            type: 'email',
+                            required: true,
+                            onInput: this._onEmailInput <3>
+                        }),
+                        w(TextInput, {
+                            key: 'password',
+                            label: 'Password',
+                            placeholder: 'Password',
+                            type: 'password',
+                            required: true,
+                            onInput: this._onPasswordInput <4>
+                        }),
+                        w(Button, { }, [ 'Login' ]) <5>
+                    ]),
+                ])
+        ]);
+	}
+}
+----
+
+<1> Specify action listener for the form and its widgets
+<2> Register _onSubmit listener for the form submit event
+<3> Update _onEmailInput when modifying the text in the `TextInput` widget
+<4> Update _onPasswordInput when modifying the text in the `TextInput` widget
+<5> The `Button` widget has no action listener applied, but is part of the form and therefore trigger the submit of the form on click
+
+Now a login route can be added to the _routes.ts_ file:
+
+[source, javascript]
+----
+export default [
+	{
+		path: 'home',
+		outlet: 'home',
+		defaultRoute: true
+	},
+	{
+		path: 'about',
+		outlet: 'about'
+	},
+	{
+		path: 'profile',
+		outlet: 'profile'
+	},
+	{
+		path: 'login', <1>
+		outlet: 'login'
+	}
+];
+----
+
+<1> New login route
+
+Now that the _login_ route is known by the router an `Outlet` in the _App.ts_ file can be added.
+
+[source, javascript]
+----
+import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
+import { v, w } from '@dojo/framework/widget-core/d';
+import Outlet from '@dojo/framework/routing/Outlet';
+
+import Menu from './widgets/Menu';
+import Home from './widgets/Home';
+import About from './widgets/About';
+import Profile from './widgets/Profile';
+
+import * as css from './App.m.css';
+import Login from './widgets/Login'; <1>
+
+export default class App extends WidgetBase {
+	protected render() {
+		return v('div', { classes: [css.root] }, [
+			w(Menu, {}),
+			v('div', [
+				w(Outlet, { key: 'home', id: 'home', renderer: () => w(Home, {}) }),
+				w(Outlet, { key: 'about', id: 'about', renderer: () => w(About, {}) }),
+				w(Outlet, { key: 'profile', id: 'profile', renderer: () => w(Profile, { username: 'Dojo User' }) }),
+				w(Outlet, { key: 'login', id: 'login', renderer: () => w(Login, { }) }) <2>
+			])
+		]);
+	}
+}
+
+----
+
+<1> The `Login` class has to be imported for usage in the `App` class
+<2> Add an `Outlet`, which renders the `Login` widget
+
+Now the only thing, which is left to do is to add a `Link` in the `Menu` widget, so navigating to the login page is easy.
+
+[source, javascript]
+----
+import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
+import { w } from '@dojo/framework/widget-core/d';
+import Link from '@dojo/framework/routing/ActiveLink';
+import Toolbar from '@dojo/widgets/toolbar';
+
+import * as css from './styles/Menu.m.css';
+
+export default class Menu extends WidgetBase {
+	protected render() {
+		return w(Toolbar, { heading: 'My Dojo App!', collapseWidth: 600 }, [
+			w(
+				Link,
+				{
+					to: 'home',
+					classes: [css.link],
+					activeClasses: [css.selected]
+				},
+				['Home']
+			),
+			w(
+				Link,
+				{
+					to: 'about',
+					classes: [css.link],
+					activeClasses: [css.selected]
+				},
+				['About']
+			),
+			w(
+				Link,
+				{
+					to: 'profile',
+					classes: [css.link],
+					activeClasses: [css.selected]
+				},
+				['Profile']
+			),
+			w(
+				Link,
+				{
+					to: 'login', <1>
+					classes: [css.link],
+					activeClasses: [css.selected]
+				},
+				['login']
+			)
+		]);
+	}
+}
+----
+
+<1> Point to the login route 
+
+Now the dojo application can be built by using `dojo build --mode dev --watch --serve`.
+When navigating to http://localhost:9999/#login the following result should be shown:
+
+image::login-result.png[] 
+

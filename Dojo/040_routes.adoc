@@ -92,3 +92,49 @@ export default class App extends WidgetBase { <1>
 <3> The imported w method is used to render widgets
 <4> Outlets are also widgets, which will be rendered on route changes
 
+The `Menu` widget (3), which is defined in _./widgets/Menu.ts_, contains `Link` widgets.
+The `Link` widgets have a _to_ property, which point to a certain route in order to render a specific outlet.
+
+[source, javascript]
+----
+import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
+import { w } from '@dojo/framework/widget-core/d';
+import Link from '@dojo/framework/routing/ActiveLink';
+import Toolbar from '@dojo/widgets/toolbar';
+
+import * as css from './styles/Menu.m.css';
+
+export default class Menu extends WidgetBase {
+	protected render() {
+		return w(Toolbar, { heading: 'My Dojo App!', collapseWidth: 600 }, [
+			w(
+				Link,
+				{
+					to: 'home',
+					classes: [css.link],
+					activeClasses: [css.selected]
+				},
+				['Home']
+			),
+			w(
+				Link,
+				{
+					to: 'about',
+					classes: [css.link],
+					activeClasses: [css.selected]
+				},
+				['About']
+			),
+			w(
+				Link,
+				{
+					to: 'profile',
+					classes: [css.link],
+					activeClasses: [css.selected]
+				},
+				['Profile']
+			)
+		]);
+	}
+}
+----
