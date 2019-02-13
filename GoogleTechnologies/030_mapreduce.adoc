@@ -1,5 +1,5 @@
 [[mapreduce]]
 == MapReduce
 	
-Please see http://www.vogella.com/tutorials/MapReduce/article.html[MapReduce].
+Please see https://www.vogella.com/tutorials/MapReduce/article.html[MapReduce].
 	

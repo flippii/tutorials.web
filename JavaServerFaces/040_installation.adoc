@@ -5,7 +5,7 @@
 === Eclipse
 
 For JSP development you need the Eclipse WTP and an installed Tomcat.
-See http://www.vogella.com/tutorials/EclipseWTP/article.html[Installation of Eclipse WTP and Tomcat].
+See https://www.vogella.com/tutorials/EclipseWTP/article.html[Installation of Eclipse WTP and Tomcat].
 
 [[installation_jsf]]
 === JSF library

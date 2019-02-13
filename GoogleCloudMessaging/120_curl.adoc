@@ -4,7 +4,7 @@
 If you run a Linux system you can easily test the service on the
 command line. You can request your authentication key
 via
-http://www.vogella.com/tutorials/Ubuntu/article.html#network_curl[curl]
+https://www.vogella.com/tutorials/Ubuntu/article.html#network_curl[curl]
 on the command line. From the response get the part after "Auth=".
 
 [source,text]

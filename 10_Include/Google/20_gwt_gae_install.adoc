@@ -5,7 +5,7 @@ Google offers an Eclipse plug-in that provides support for the development with 
 	
 Google lists the currently supported version in its https://developers.google.com/eclipse/docs/download[Google Plug-in for Eclipse page].
 	
-Use http://www.vogella.com/tutorials/Eclipse/article.html#updatemanager[Eclipse update manager] to install the tools in the version for your Eclipse IDE. 
+Use https://www.vogella.com/tutorials/Eclipse/article.html#updatemanager[Eclipse update manager] to install the tools in the version for your Eclipse IDE. 
 For example the update site for the Eclipse 4.4. version is the following URL: https://dl.google.com/eclipse/plugin/4.4.
 	
 The installation will also setup the GWT and App Engine SDK into your Eclipse preferences. 

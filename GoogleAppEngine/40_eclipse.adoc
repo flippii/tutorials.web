@@ -7,7 +7,7 @@ You can also use Eclipse for developing GAE applications via the PyDev plugin.
 === Eclipse and Pydev
 
 Please see
-http://www.vogella.com/tutorials/Python/article.html[Python Development with Eclipse]
+https://www.vogella.com/tutorials/Python/article.html[Python Development with Eclipse]
 to learn how to install and use Eclipse and Pydev. The remaining
 focuses on the additional setup to use the GAE.
 
@@ -15,7 +15,7 @@ focuses on the additional setup to use the GAE.
 === Project
 
 Create a Python project called "de.vogella.gae.python.todo". See
-http://www.vogella.com/tutorials/Python/article.html[Python Development with Eclipse]
+https://www.vogella.com/tutorials/Python/article.html[Python Development with Eclipse]
 for how to create a new Pydev / Python project in Eclipse.
 
 Use Python version 2.5. Remember that the GAE does currently

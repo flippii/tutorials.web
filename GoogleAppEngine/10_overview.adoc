@@ -19,5 +19,5 @@ Currently a user can create a maximum of 10 application on the
 Google App Engine.
 
 TIP: In case you want to use Eclipse only for standard Python development'(not for the Google App Engine) please see
-http://www.vogella.com/tutorials/Python/article.html[Python Development with Eclipse].
+https://www.vogella.com/tutorials/Python/article.html[Python Development with Eclipse].
 

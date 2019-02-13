@@ -8,13 +8,13 @@ To achieve this just add '?version=1.1' at the end of the css file name when ref
 
 So instead of calling a css file like this:
 ----
-http://www.vogella.com/css/companyfooter.css
+https://www.vogella.com/css/companyfooter.css
 ---- 
 
 you should replace it with
 
 ----
-http://www.vogella.com/css/companyfooter.css?version=1.1
+https://www.vogella.com/css/companyfooter.css?version=1.1
 ---- 
 
 The wording after the '?' has no relevance and can be chosen freely. 

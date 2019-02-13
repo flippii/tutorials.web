@@ -2,7 +2,7 @@
 == Using Eclipse for Grails development
 
 The following requires that Eclipse is installed with the Groovy plug-in. 
-Please see http://www.vogella.com/tutorials/Groovy/article.html[Groovy Eclipse Plugin] for more information.
+Please see https://www.vogella.com/tutorials/Groovy/article.html[Groovy Eclipse Plugin] for more information.
 
 After running `grails create-app`
 you may notice the `.project`

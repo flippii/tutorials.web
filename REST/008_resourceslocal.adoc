@@ -5,5 +5,5 @@ http://jersey.java.net/[Jersey Homepage]
 	
 http://jcp.org/aboutJava/communityprocess/final/jsr311/index.html[JSR 311]
 	
-http://www.vogella.com/tutorials/JAXB/article.html[JAXB tutorial]
+https://www.vogella.com/tutorials/JAXB/article.html[JAXB tutorial]
 

@@ -39,7 +39,7 @@ placed between the <body> </body> tags, the <head> </head> tag contains general 
 === CSS
 
 HTML by ifself does not define a lot of display options. You use
-http://www.vogella.com/tutorials/CSS/article.html[CSS]
+https://www.vogella.com/tutorials/CSS/article.html[CSS]
 to define how HTML element should be displayed.
 
 [[overview_structure]]
@@ -57,7 +57,7 @@ The following displays an example which uses these new
 elements. Most
 browser will not change the display based on them but
 you can use
-http://www.vogella.com/tutorials/CSS/article.html[CSS]
+https://www.vogella.com/tutorials/CSS/article.html[CSS]
 to select these elements and style them accordingly.
 
 [source,html]

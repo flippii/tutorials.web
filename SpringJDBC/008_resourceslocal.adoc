@@ -8,5 +8,5 @@ include::../10_Include/sourcejava.adoc[]
 		
 http://www.springframework.org/[Homepage of the Spring Framework]
 
-http://www.vogella.com/tutorials/SpringDependencyInjection/article.html[Introduction to Spring Dependency Injection]
+https://www.vogella.com/tutorials/SpringDependencyInjection/article.html[Introduction to Spring Dependency Injection]
 

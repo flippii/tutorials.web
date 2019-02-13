@@ -17,7 +17,7 @@ image::todo10.gif[]
 
 The source of this example is stored in project
 "de.vogella.gae.python.todo" and can be browsed on
-http://www.vogella.com/code.html[www.vogella.com source code].
+https://www.vogella.com/code.html[www.vogella.com source code].
 
 [[app_python_dir]]
 === Directory

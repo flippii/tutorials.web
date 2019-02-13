@@ -19,10 +19,10 @@ Both DOM and Sax are older APIs and I recommend not using them anymore.
 Stax (Streaming API for XML) is an API for reading and writing XML Documents. 
 It was introduced in Java 6.0 and is considered superior to SAX and DOM.
 
-http://www.vogella.com/tutorials/JAXB/article.html[Java Architecture for XML Binding (JAXB)] is a Java standard that allows to convert Java objects to XML and vice versa.
+https://www.vogella.com/tutorials/JAXB/article.html[Java Architecture for XML Binding (JAXB)] is a Java standard that allows to convert Java objects to XML and vice versa.
 JAXB defines a programmer API for reading and writing Java objects to from XML documents.
 It also defines a service provider which allows the selection of the JAXB implementation. 
 JAXB applies a lot of defaults thus making reading and writing of XML via Java very easy.
 
-The following explains the Stax interface; for an introduction to JAXB, please see http://www.vogella.com/tutorials/JAXB/article.html[JAXB tutorial].
+The following explains the Stax interface; for an introduction to JAXB, please see https://www.vogella.com/tutorials/JAXB/article.html[JAXB tutorial].
 

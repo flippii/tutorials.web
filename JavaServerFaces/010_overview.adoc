@@ -17,13 +17,13 @@ the Java EE standard.
 A JSF application run in a
 standard web
 container, for example
-http://www.vogella.com/tutorials/ApacheTomcat/article.html[Tomcat] or
-http://www.vogella.com/tutorials/Jetty/article.html[Jetty].
+https://www.vogella.com/tutorials/ApacheTomcat/article.html[Tomcat] or
+https://www.vogella.com/tutorials/Jetty/article.html[Jetty].
 
 This articles provides an introduction to JSF using only standard JSF
 features.
 For the usage of special Apache Trinidad features please see
-http://www.vogella.com/tutorials/ApacheMyFaces/article.html[Apache Myfaces Trinidad with Eclipse - Tutorial].
+https://www.vogella.com/tutorials/ApacheMyFaces/article.html[Apache Myfaces Trinidad with Eclipse - Tutorial].
 
 [[jsf_application]]
 === A JSF application

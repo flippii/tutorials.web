@@ -11,7 +11,7 @@ Select menu:File[New > Web Application Project].
 Enter the name "de.vogella.gwt.helloworld" for your project and the java package.
 Only select "Use Google Web
 Toolkit", as we will not use the
-http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html[Google App Engine] in this tutorial.
+https://www.vogella.com/tutorials/GoogleAppEngineJava/article.html[Google App Engine] in this tutorial.
 
 image::gwt10.gif[]
 

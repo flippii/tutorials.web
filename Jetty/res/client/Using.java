@@ -12,7 +12,7 @@ ContentResponse response = httpClient
 
 // Issue a post request
 ContentResponse response = httpClient
-.POST("http://www.vogella.com/entity/1")
+.POST("https://www.vogella.com/entity/1")
 .param("p", "value")
 .send()
 .get(5, TimeUnit.SECONDS);

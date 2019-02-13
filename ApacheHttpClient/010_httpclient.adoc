@@ -1,6 +1,6 @@
 == Before you start
 
-I recommend using http://www.vogella.com/tutorials/JavaLibrary-OkHttp/article.html[OkHttp] instead of HttpClient for new applications.
+I recommend using https://www.vogella.com/tutorials/JavaLibrary-OkHttp/article.html[OkHttp] instead of HttpClient for new applications.
 OkHttp is extremely efficient and has a great API.
 This tutorial is still here, so provide information about HttpClient for existing users.
 

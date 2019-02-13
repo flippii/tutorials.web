@@ -2,8 +2,8 @@
 == RESTful web services and JAXB
 
 JAX-RS supports the automatic creation of XML and JSON via JAXB. 
-For an introduction into XML please see http://www.vogella.com/tutorials/JavaXML/article.html[Java and XML - Tutorial]. 
-For an introduction into JAXB please see http://www.vogella.com/tutorials/JAXB/article.html[JAXB]. 
+For an introduction into XML please see https://www.vogella.com/tutorials/JavaXML/article.html[Java and XML - Tutorial]. 
+For an introduction into JAXB please see https://www.vogella.com/tutorials/JAXB/article.html[JAXB]. 
 You can continue this tutorial without reading these tutorials, but they contain more background information.
 
 [[jaxb_project]]

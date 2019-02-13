@@ -3,7 +3,7 @@
 [[links]]
 === Links
 
-http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html[Google App Engine Development with Java]
+https://www.vogella.com/tutorials/GoogleAppEngineJava/article.html[Google App Engine Development with Java]
 
 https://cloud.google.com/appengine/docs[Google App Engine]
 

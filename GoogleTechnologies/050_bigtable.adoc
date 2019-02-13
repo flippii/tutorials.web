@@ -2,5 +2,5 @@
 == Bigtable
 	
 Please see
-http://www.vogella.com/tutorials/Bigtable/article.html[Bigtable].
+https://www.vogella.com/tutorials/Bigtable/article.html[Bigtable].
 	

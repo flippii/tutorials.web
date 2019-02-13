@@ -10,5 +10,5 @@ closures, native
 support for lists and maps, a shorter syntax and much
 more.
 	
-See http://www.vogella.com/tutorials/Groovy/article.html[Groovy tutorial] for an introduction into Groovy.
+See https://www.vogella.com/tutorials/Groovy/article.html[Groovy tutorial] for an introduction into Groovy.
 	

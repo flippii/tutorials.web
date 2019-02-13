@@ -14,7 +14,7 @@ include::res/server/readServer.html[]
 ----
 
 TIP: This example may not be running on a local file system.
-If you do not see something try to replace the URL http://www.vogella.com/tutorials/AjaxwithDojo/download/includeTextFile.txt with a path to a local file. 
+If you do not see something try to replace the URL https://www.vogella.com/tutorials/AjaxwithDojo/download/includeTextFile.txt with a path to a local file. 
 This should then also work with a local running HTML page.
 
 Start the HTML. The Dojo javascript will access the text file in the background and update the webpage with the information once the text file is read.

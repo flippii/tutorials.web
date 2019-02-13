@@ -199,7 +199,7 @@ Create a new file named *index.js*, the main entry point for the application, an
 var open = require('open');
 
 // open with default browser
-open('http://www.vogella.com/tutorials');
+open('https://www.vogella.com/tutorials');
 ----
 
 The program declares a dependency to the module *open*,

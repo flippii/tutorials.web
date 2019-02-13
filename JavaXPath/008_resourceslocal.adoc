@@ -4,7 +4,7 @@
 [[resources_xml]]
 === Links and Literature
 
-http://www.vogella.com/tutorials/RSSFeed/article.html[Read and write RSS feeds via Java (Stax)]
+https://www.vogella.com/tutorials/RSSFeed/article.html[Read and write RSS feeds via Java (Stax)]
 
 http://java.sun.com/developer/technicalArticles/WebServices/jaxb/[JAXB Overview]
 

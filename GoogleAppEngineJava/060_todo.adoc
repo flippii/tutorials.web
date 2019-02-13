@@ -5,8 +5,8 @@
 === Overview
 
 In the following exercise zou create a web app for a task management system using servlets and JSP's. 
-The persistence will be handled by http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html[JPA]. 
-For an introduction into servlet please see http://www.vogella.com/tutorials/EclipseWTP/article.html[Servlet and JSP development - Tutorial].
+The persistence will be handled by https://www.vogella.com/tutorials/JavaPersistenceAPI/article.html[JPA]. 
+For an introduction into servlet please see https://www.vogella.com/tutorials/EclipseWTP/article.html[Servlet and JSP development - Tutorial].
 
 image::todo.png[]
 
@@ -37,7 +37,7 @@ image::gae25.gif[]
 === Create your model
 
 Create the following class which will be our model. 
-The http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html[JPA] metadata is already added.
+The https://www.vogella.com/tutorials/JavaPersistenceAPI/article.html[JPA] metadata is already added.
 
 [source,java]
 ----
@@ -134,7 +134,7 @@ image::todo.png[]
 To deploy your application to the GAE you need to maintain your
 application ID in the file "web/WEB-INF/appengine-web.xml". In the
 tag "application" maintain the application you have created in
-http://www.vogella.com/tutorials/GoogleAppEngineJava/article.html#register[GAE/J Registration]. 
+https://www.vogella.com/tutorials/GoogleAppEngineJava/article.html#register[GAE/J Registration]. 
 In my example I use the application "vogellatodo".
 
 [source,xml]

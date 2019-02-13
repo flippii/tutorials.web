@@ -6,9 +6,9 @@ This is required for the following tutorials.
 
 === Prerequisites
 
-Make sure that you followed the http://www.vogella.com/tutorials/EclipseWTP/article.html#installation-of-wtp[Eclipse WTP Tutorial] to install Eclipse WTP.
+Make sure that you followed the https://www.vogella.com/tutorials/EclipseWTP/article.html#installation-of-wtp[Eclipse WTP Tutorial] to install Eclipse WTP.
 
-Make also sure that you followed the http://www.vogella.com/tutorials/EclipseGradle/article.html[Eclipse Buildship Tutorial] to enable Gradle support for Eclipse.
+Make also sure that you followed the https://www.vogella.com/tutorials/EclipseGradle/article.html[Eclipse Buildship Tutorial] to enable Gradle support for Eclipse.
 
 If you have not yet created a Gradle project, you can follow the Buildship tutorial to create one.
 

@@ -7,5 +7,5 @@ and start the debugger via selecting your project, right-click
 -> debug as -> Web Application.
 
 You can then use standard Eclipse debugging capabilities. 
-Please see http://www.vogella.com/tutorials/EclipseDebugging/article.html[Eclipse Debugging] for details.
+Please see https://www.vogella.com/tutorials/EclipseDebugging/article.html[Eclipse Debugging] for details.
 

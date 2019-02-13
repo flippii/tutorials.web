@@ -104,5 +104,5 @@ include::res/staxwrite/TestWrite.java[]
 ----
 
 For another (more complex) example of using Stax, please see
-http://www.vogella.com/tutorials/RSSFeed/article.html[Reading and creating RSS feeds via Java (with Stax)].
+https://www.vogella.com/tutorials/RSSFeed/article.html[Reading and creating RSS feeds via Java (with Stax)].
 

@@ -29,7 +29,7 @@ Via the `@Produces` annotation it defines that it delivers the _text_ and the _H
 It also defines via the `@Path` annotation that its service is available under the `hello` URL.
 
 The browser will always request the HTML MIME type.
-To see the text version, you can use tool like http://www.vogella.com/tutorials/Ubuntu/article.html#network_curl[curl].
+To see the text version, you can use tool like https://www.vogella.com/tutorials/Ubuntu/article.html#network_curl[curl].
 
 [[first_servletdispatcher]]
 === Define Jersey Servlet dispatcher

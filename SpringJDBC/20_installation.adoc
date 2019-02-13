@@ -1,7 +1,7 @@
 [[Installation]]
 == Spring Installation
 
-Please see http://www.vogella.com/tutorials/SpringFramework/article.html#Installation[Spring Installation].
+Please see https://www.vogella.com/tutorials/SpringFramework/article.html#Installation[Spring Installation].
 
 To use the Spring JDBC template you need to add spring-jdbc.jar to your classpath (in addition to the standard jars described in the above installation link).
 

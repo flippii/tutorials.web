@@ -4,7 +4,7 @@ JavaScript is a  case sensitive scripting language.
 JavaScripts syntax is C-based, with semicolons and curly braces.
 
 All main browsers contain a compiler or interpreter for JavaScript. 
-In earlier days JavaScript was primarily used within http://www.vogella.com/tutorials/HTML/article.html[HTML] webpages.
+In earlier days JavaScript was primarily used within https://www.vogella.com/tutorials/HTML/article.html[HTML] webpages.
 Nowadays, JavaScript is also used on the server, for example with `Node.js`.
 
 [NOTE]

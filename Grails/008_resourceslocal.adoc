@@ -7,11 +7,11 @@ http://groovy.codehaus.org[Groovy Homepage]
 
 http://www.grails.org/Tutorials[List of Grails tutorials]
 
-http://www.vogella.com/tutorials/Groovy/article.html[Groovy tutorials]
+https://www.vogella.com/tutorials/Groovy/article.html[Groovy tutorials]
 
 http://www.grails.org/Tutorials[List of Grails tutorials]
 
-http://www.vogella.com/tutorials/Jetty/article.html[Tutorial about the Jetty webserver]
+https://www.vogella.com/tutorials/Jetty/article.html[Tutorial about the Jetty webserver]
 
-http://www.vogella.com/tutorials/ApacheTomcat/article.html[Tutorial about the Apache Tomcat webserver]
+https://www.vogella.com/tutorials/ApacheTomcat/article.html[Tutorial about the Apache Tomcat webserver]
 

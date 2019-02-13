@@ -15,5 +15,5 @@ For details on the XMLHttpRequest please see the resource section of this articl
 === Introduction to JavaScript
 		
 This article assume some familiarity with JavaScript. 
-Please see http://www.vogella.com/tutorials/JavaScript/article.html[Javascript - Tutorial] for a introduction into JavaScript.
+Please see https://www.vogella.com/tutorials/JavaScript/article.html[Javascript - Tutorial] for a introduction into JavaScript.
 

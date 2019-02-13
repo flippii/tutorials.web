@@ -13,7 +13,7 @@ Enter the following URL into the _Work with:_ page: http://vaadin.com/eclipse
 Install all tools and restart Eclipse.
 
 You should also install Maven support into your IDE.
-See http://www.vogella.com/tutorials/EclipseMaven/article.html#install-the-maven-support-for-eclipse-m2e[Eclipse Maven installation description].
+See https://www.vogella.com/tutorials/EclipseMaven/article.html#install-the-maven-support-for-eclipse-m2e[Eclipse Maven installation description].
 
 
 === Exercise: Create new Vaadin project

@@ -8,7 +8,7 @@ The example is based on derby.
 === Create Database
 		
 Create a small derby database under c:\temp\databases\test01 with the table "Person". 
-Please see http://www.vogella.com/tutorials/EclipseDataToolsPlatform/article.html[Handling Database with the Eclipse Data Tools Project] for an explanation on how to do this with the Eclipse Data Tools Project.
+Please see https://www.vogella.com/tutorials/EclipseDataToolsPlatform/article.html[Handling Database with the Eclipse Data Tools Project] for an explanation on how to do this with the Eclipse Data Tools Project.
 		
 Create the table Person with the following SQL statement.
 		

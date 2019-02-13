@@ -9,7 +9,7 @@ computing infrastructure called
 http://appengine.google.com/[Google App Engine]
 (App Engine) for creating and
 running
-http://www.vogella.com/tutorials/EclipseWTP/article.html[web applications].
+https://www.vogella.com/tutorials/EclipseWTP/article.html[web applications].
 
 App Engine
 allows the dynamic allocation of system
@@ -20,15 +20,15 @@ actual demand.
 Currently
 App Engine
 supports
-http://www.vogella.com/tutorials/GoogleAppEngine/article.html[Python]
+https://www.vogella.com/tutorials/GoogleAppEngine/article.html[Python]
 and Java based applications. This includes
 Java
 Virtual Machine
 (JVM)
 based
 languages, e.g.
-http://www.vogella.com/tutorials/Groovy/article.html[Groovy] or
-http://www.vogella.com/tutorials/Scala/article.html[Scala]. 
+https://www.vogella.com/tutorials/Groovy/article.html[Groovy] or
+https://www.vogella.com/tutorials/Scala/article.html[Scala]. 
 This article will cover the App Engine for Java (GAE/J)).
 
 [[googleappengine_standards]]
@@ -50,7 +50,7 @@ Java standard API.
 === AppEngine technologies
 
 App Engine uses the
-http://www.vogella.com/tutorials/Jetty/article.html[Jetty]
+https://www.vogella.com/tutorials/Jetty/article.html[Jetty]
 servlet container to host
 applications and
 supports the Java Servlet
@@ -58,13 +58,13 @@ API in version 2.4. It
 provides access to
 databases via Java Data
 Objects (JDO) and the
-http://www.vogella.com/tutorials/JavaPersistenceAPI/article.html[Java Persistence API (JPA)]. 
+https://www.vogella.com/tutorials/JavaPersistenceAPI/article.html[Java Persistence API (JPA)]. 
 In the background App Engine uses
-http://www.vogella.com/tutorials/GoogleTechnologies/article.html#bigtable Google Bigtable]
+https://www.vogella.com/tutorials/GoogleTechnologies/article.html#bigtable Google Bigtable]
 as the distributed storage system for persisting application data.
 
 Google provides
-http://www.vogella.com/tutorials/GoogleTechnologies/article.html#memcache Memcache]
+https://www.vogella.com/tutorials/GoogleTechnologies/article.html#memcache Memcache]
 as a caching mechanism. Developers who want to code against the
 standard Java API can use the JCache implementation (based on JSR 107).
 
@@ -111,7 +111,7 @@ and most AWT classes
 are not
 supported. 
 
-You cannot use http://www.vogella.com/tutorials/JavaConcurrency/article.html[Threads] or frameworks which uses Threads. You
+You cannot use https://www.vogella.com/tutorials/JavaConcurrency/article.html[Threads] or frameworks which uses Threads. You
 can also not write to the filesystem and only read files which are
 part of your application. Certain "java.lang.System" actions, e.g. gc()
 or exit() will do nothing. You can not call JNI code. Reflection
