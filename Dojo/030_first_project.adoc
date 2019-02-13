@@ -34,5 +34,5 @@ dojo build <2>
 
 image::dojo-first-app.png[] 
 
-In the following chapters the source code of the _user-app_ single page webapplication will be explained.
+In the following chapters the source code of the _user-app_ single page web application will be explained.
 
