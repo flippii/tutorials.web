@@ -1,0 +1,22 @@
+== First Dojo Project
+
+To be able to generate a single page application _@dojo/cli-create-app_ has to be installed:
+
+[source, console]
+----
+npm install -g @dojo/cli-create-app
+----
+
+To create the actual project run:
+
+[source, console]
+----
+dojo create app --name user-app
+----
+
+image::dojo-cli-create-app.png[] 
+
+NOTE: This is based on Dojo 5 and may look different in future versions.
+
+
+

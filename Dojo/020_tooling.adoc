@@ -1,0 +1,24 @@
+== Tooling for Dojo
+
+Any editor can be used for writing TypeScript code. For example:
+
+* https://marketplace.eclipse.org/content/eclipse-wild-web-developer-web-development-eclipse-ide[Eclipse Wild Web Developer for the Eclipse IDE]
+* https://code.visualstudio.com/[Visual Studio Code]
+
+Once the right editor has been chosen Node JS, NPM and the https://github.com/dojo/cli[Dojo CLI] should be installed.
+
+For Node JS a version manager called nvm can be used:
+
+[source, console]
+----
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+nvm install node
+----
+
+Now Node JS and NPM should be installed and the dojo CLI can be installed globally like this:
+
+[source, console]
+----
+npm install -g @dojo/cli
+----
+

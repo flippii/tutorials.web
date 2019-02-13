@@ -1,0 +1,11 @@
+== Dojo IO
+
+[, Dojo IO]
+""
+Dojo is a progressive framework for modern web applications built with TypeScript.
+""
+
+Dojo has a virtual DOM, many https://github.com/dojo/widgets[custom widgets] and is pretty much self contained.
+It does not lack any features the other big JS/TS frameworks offer,
+but its main strength compared to the others is that its designed to support i18n and accessibility.
+

@@ -1,0 +1,8 @@
+== Dojo resources
+
+https://dojo.io
+
+https://github.com/dojo/framework
+
+https://learn-dojo.com/
+

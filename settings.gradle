@@ -32,5 +32,5 @@ include 'Vaadin'
 include 'SpringDependencyInjection'
 include '002_Learning_Portal'
 include 'SpringBoot2'
-
+include 'Dojo'
 
