@@ -1,4 +1,4 @@
-rootProject.name = 'com.vogella.tutorials.web'
+rootProject.name = 'tutorials.web'
 
 include 'CSS'
 include 'JavaScript'
