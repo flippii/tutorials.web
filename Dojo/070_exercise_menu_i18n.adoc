@@ -1,4 +1,112 @@
-== Exercise - Translations (i18n) for the Menu widget
+== Exercise - Translations (i18n) for the Login widget
+
+One of Dojo's strengths is that it comes with i18n support out of the box.
+So let's translate the `Login` widget into German.
+
+For i18n create a _nls_ folder inside the _src/widgets_ folder.
+Inside the _nls_ folder create a _de_ (German) folder.
+
+Now create the follwing files:
+
+* _/src/widgets/nls/de/login.ts_
+* _/src/widgets/nls/login.ts_
+
+._/src/widgets/nls/de/login.ts_
+[source, javascript]
+----
+const messages = {
+	email: 'E-Mail',
+    password: 'Passwort',
+    login : 'Anmelden'
+};
+export default messages;
+----
+
+._/src/nls/login.ts_
+[source, javascript]
+----
+import de from './de/login';
+
+export default {
+	locales: {
+		de: () => de
+	},
+	messages: {
+        email: 'Email',
+        password: 'Password',
+        login : 'Login'
+	}
+};
+----
+
+To make use of the messages values the `Login` widget has to be modified to extend `I18nMixin`, which decorates `WidgetBase`.
+
+[source, javascript]
+----
+import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
+import { v, w } from '@dojo/framework/widget-core/d';
+import Button from '@dojo/widgets/button';
+import TextInput from '@dojo/widgets/text-input';
+import I18nMixin from '@dojo/framework/widget-core/mixins/I18n'; <1>
+import messageBundle from './nls/login'; <2>
 
 
+import * as css from './styles/Login.m.css';
+
+export default class Login extends I18nMixin(WidgetBase) { <3>
+
+    private _onSubmit(event: Event) {
+        event.preventDefault();
+    }
+
+    private _onEmailInput(email:  string) {
+	}
+
+	private _onPasswordInput(password: string) {
+	}
+
+	protected render() {
+        const { messages } = this.localizeBundle(messageBundle); <4>
+
+        return v('div', { classes: css.root }, [
+                v('form', {
+                    onsubmit: this._onSubmit
+                }, [
+                    v('fieldset', { }, [
+                        w(TextInput, {
+                            key: 'email',
+                            label: messages.email, <5>
+                            placeholder: 'Email',
+                            type: 'email',
+                            required: true,
+                            onInput: this._onEmailInput
+                        }),
+                        w(TextInput, {
+                            key: 'password',
+                            label: messages.password, <6>
+                            placeholder: 'Password',
+                            type: 'password',
+                            required: true,
+                            onInput: this._onPasswordInput
+                        }),
+                        w(Button, { }, [ messages.login ]) <7>
+                    ]),
+                ])
+        ]);
+	}
+}
+----
+
+<1> Import the `I18nMixin` class
+<2> Get the messageBundle from the _nls_ folder
+<3> Extend `I18nMixin`, which wraps/decorates `WidgetBase`
+<4> The `I18nMixin` class comes with a `localizeBundle` method, which is capable of loading our messageBundle.
+<5> Make use of the messages of the messageBundle (messages.email)
+<6> Make use of the messages of the messageBundle (messages.password)
+<7> Make use of the messages of the messageBundle (messages.login)
+
+Dojo now automatically determines your locale and makes use of the correct messages.
+
+Some web pages also provide buttons to switch the locale at runtime.
+This can also be done by using the `switchLocale` method from `@dojo/framework/i18n/i18n`.
 
