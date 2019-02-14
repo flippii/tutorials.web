@@ -1,3 +1,99 @@
 == Exercise - Styling the Login widget
 
+Right now the `Login` widgets has 100% width, which does not look that well.
+That's the point where CSS styling will help.
+
+As you can see in the _src/widgets/styles_ folder every generated widget has a *.m.css and a corresponding *.m.css.d.ts file.
+For the `Login` widget this has not been done yet.
+
+So let's create a _Login.m.css_ file with the following contents:
+
+[source, css]
+----
+.root {
+	margin-top: 40px;
+    text-align: center;
+    border: 0px;
+}
+
+.root fieldset,
+.root label {
+	display: inline-block;
+	text-align: left;
+}
+
+.root button {
+	margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+}
+----
+
+Now the CSS has to be imported and applied as CSS class for the root div in the `Login` widget.
+
+[source, javascript]
+----
+import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
+import { v, w } from '@dojo/framework/widget-core/d';
+import Button from '@dojo/widgets/button';
+import TextInput from '@dojo/widgets/text-input';
+
+import * as css from './styles/Login.m.css'; <1>
+
+export default class Login extends WidgetBase {
+
+    private _onSubmit(event: Event) {
+        event.preventDefault();
+    }
+
+    private _onEmailInput(email:  string) {
+	}
+
+	private _onPasswordInput(password: string) {
+	}
+
+	protected render() {
+        return v('div', { classes: css.root }, [ <2>
+                v('form', {
+                    onsubmit: this._onSubmit
+                }, [
+                    v('fieldset', { }, [
+                        w(TextInput, {
+                            key: 'email',
+                            label: 'Email',
+                            placeholder: 'Email',
+                            type: 'email',
+                            required: true,
+                            onInput: this._onEmailInput
+                        }),
+                        w(TextInput, {
+                            key: 'password',
+                            label: 'Password',
+                            placeholder: 'Password',
+                            type: 'password',
+                            required: true,
+                            onInput: this._onPasswordInput
+                        }),
+                        w(Button, { }, [ 'Login' ])
+                    ]),
+                ])
+        ]);
+	}
+}
+----
+
+<1> Import the _./styles/Login.m.css_ CSS so that it can be applied
+<2> Apply the CSS by using the `classes:` property
+
+Until now the TypeScript compiler will show some errors that the CSS cannot be imported.
+That happens because the _Login.m.css.d.ts_ is not generated yet.
+
+By running `dojo build` on the command line will generate the _Login.m.css.d.ts_,
+but the build unfortunately fails the first time and a second build is necessary to make the build run successfully.
+
+The result should now look like this:
+
+image::login-result-styled.png[] 
+
+NOTE: Further details about styling and theming can be found in the https://dojo.io/tutorials/007_theming/[Dojo Theming tutorial].
 
