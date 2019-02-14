@@ -89,7 +89,7 @@ The result should look similar to this:
 
 image::switch-locale-before.png[] 
 
-... and like this after pressing the _Switch locale_ button:
+and like this after pressing the _Switch locale_ button:
 
 image::switch-locale-after.png[] 
 

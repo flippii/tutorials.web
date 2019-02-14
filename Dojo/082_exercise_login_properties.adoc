@@ -1,0 +1,134 @@
+== Exercise - Define LoginProperties
+
+Now we want to come back to the issue that the `TextInput` widgets will have an _undefined_ value when losing the focus.
+
+The `Login` widget is not supposed to do the login process itself, but it should delegate it to another component.
+
+Therefore a `LoginProperties` interface is created, which specifies the needs of the `Login` widget.
+Pretty much like the `Profile` widget does.
+
+.Login.ts
+[source, javascript]
+----
+export interface LoginProperties {
+    email: string; <1>
+	password: string; <2>
+	inProgress?: boolean; <3>
+    errors: string[]; <4>
+	onEmailInput: (email: string) => void; <5>
+	onPasswordInput: (email: string) => void; <6>
+	onLogin: (login: object) => void; <7>
+}
+----
+
+<1> Get the email string for the email `TextInput` widget.
+<2> Get the password string for the password `TextInput` widget.
+<3> Progress boolean to disable the login `Button` once the login is in progress 
+<4> Array of errors in case the login fails
+<5> Method to be called on email input
+<6> Method to be called on password input
+<7> Method to be called when the login form is submitted
+
+Now the private methods of the `Login` widget can really do something by using the `LoginProperties`.
+
+.Login.ts
+[source, javascript]
+----
+import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
+import { v, w } from '@dojo/framework/widget-core/d';
+import Button from '@dojo/widgets/button';
+import TextInput from '@dojo/widgets/text-input';
+import I18nMixin from '@dojo/framework/widget-core/mixins/I18n';
+import i18n, { switchLocale, systemLocale } from '@dojo/framework/i18n/i18n';
+import messageBundle from './nls/login';
+
+import * as css from './styles/Login.m.css';
+
+export interface LoginProperties {
+    email: string;
+	password: string;
+	inProgress?: boolean;
+    errors: string[];
+	onEmailInput: (email: string) => void;
+	onPasswordInput: (email: string) => void;
+	onLogin: (login: object) => void;
+}
+
+export default class Login extends I18nMixin(WidgetBase)<LoginProperties> { <1>
+
+    private _onSubmit(event: Event) {
+        event.preventDefault();
+        this.properties.onLogin({}); <2>
+    }
+
+    private _onEmailInput(email: string) {
+        this.properties.onEmailInput(email); <3>
+	}
+
+	private _onPasswordInput(password: string) {
+        this.properties.onPasswordInput(password); <4>
+    }
+    
+    private _switchLocale() {
+        if(i18n.locale !== 'de') {
+            switchLocale('de');
+        } else {
+            switchLocale(systemLocale);
+        }
+        this.invalidate();
+    }
+
+	protected render() {
+        const { messages } = this.localizeBundle(messageBundle);
+        const { email, password, inProgress = false } = this.properties;
+
+        return v('div', { classes: css.root }, [
+                v('form', {
+                    onsubmit: this._onSubmit
+                }, [
+                    v('fieldset', { }, [
+                        w(TextInput, {
+                            key: 'email',
+                            label: messages.email,
+                            placeholder: 'Email',
+                            type: 'email',
+                            required: true,
+                            value: email, <5>
+                            onInput: this._onEmailInput
+                        }),
+                        w(TextInput, {
+                            key: 'password',
+                            label: messages.password,
+                            placeholder: 'Password',
+                            type: 'password',
+                            required: true,
+                            value: password, <6>
+                            onInput: this._onPasswordInput
+                        }),
+                        w(Button, { 
+                            disabled: inProgress <7>
+                        }, [ messages.login ])
+                    ]),
+                ]),
+                w(Button, {
+                    onClick: this._switchLocale
+                }, ['Switch locale'])
+        ]);
+	}
+}
+----
+
+<1> Add `LoginProperties` as generic type for the `Login` widget
+<2> Call the `onLogin` method when the form is submitted
+<3> Call the `onEmailInput` method when the email input changes 
+<4> Call the `onPasswordInput` method when the password input changes
+<5> Get the email value from the properties
+<6> Get the password value from the properties
+<7> Disable the login button when the login process is running
+
+Now that the `LoginProperties` are defined as generic type of the `Login` widget,
+the `App` class will complain that all these properties have to be passed to the `Login` widget.
+Just like it is done for the `Profile` widget. 
+In order to avoid that the `App` class is polluted with its child widgets' states and methods Dojo provides a concept of Containers,
+which are in charge to manage all that for a certain widget.
+
