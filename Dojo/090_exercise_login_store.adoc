@@ -1,3 +1,7 @@
 == Exercise - Using the Dojo Store
 
+In order to avoid that the `App` class is polluted with its child widgets' states and methods Dojo provides a concept of Containers,
+which are in charge to manage all that for a certain widget.
+
+
 

@@ -14,20 +14,18 @@ export interface LoginProperties {
     email: string; <1>
 	password: string; <2>
 	inProgress?: boolean; <3>
-    errors: string[]; <4>
-	onEmailInput: (email: string) => void; <5>
-	onPasswordInput: (email: string) => void; <6>
-	onLogin: (login: object) => void; <7>
+	onEmailInput: (email: string) => void; <4>
+	onPasswordInput: (password: string) => void; <5>
+	onLogin: (login: object) => void; <6>
 }
 ----
 
 <1> Get the email string for the email `TextInput` widget.
 <2> Get the password string for the password `TextInput` widget.
 <3> Progress boolean to disable the login `Button` once the login is in progress 
-<4> Array of errors in case the login fails
-<5> Method to be called on email input
-<6> Method to be called on password input
-<7> Method to be called when the login form is submitted
+<4> Method to be called on email input
+<5> Method to be called on password input
+<6> Method to be called when the login form is submitted
 
 Now the private methods of the `Login` widget can really do something by using the `LoginProperties`.
 
@@ -48,9 +46,8 @@ export interface LoginProperties {
     email: string;
 	password: string;
 	inProgress?: boolean;
-    errors: string[];
 	onEmailInput: (email: string) => void;
-	onPasswordInput: (email: string) => void;
+	onPasswordInput: (password: string) => void;
 	onLogin: (login: object) => void;
 }
 
@@ -128,7 +125,65 @@ export default class Login extends I18nMixin(WidgetBase)<LoginProperties> { <1>
 
 Now that the `LoginProperties` are defined as generic type of the `Login` widget,
 the `App` class will complain that all these properties have to be passed to the `Login` widget.
-Just like it is done for the `Profile` widget. 
-In order to avoid that the `App` class is polluted with its child widgets' states and methods Dojo provides a concept of Containers,
-which are in charge to manage all that for a certain widget.
+Just like it is done for the `Profile` widget.
+
+For now we'll create all these properties in the `App` class, but later we're going to externalize this.
+
+[source, javascript]
+----
+import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
+import { v, w } from '@dojo/framework/widget-core/d';
+import Outlet from '@dojo/framework/routing/Outlet';
+import I18nMixin from '@dojo/framework/widget-core/mixins/I18n';
+
+import Menu from './widgets/Menu';
+import Home from './widgets/Home';
+import About from './widgets/About';
+import Profile from './widgets/Profile';
+
+import * as css from './App.m.css';
+import { LoginProperties } from './widgets/Login';
+import Login from './widgets/Login';
+
+export default class App extends I18nMixin(WidgetBase) {
+
+	private getLoginProperties() : LoginProperties {
+		let _email = "simon.scholz@vogella.com" <1>
+		let _password = "super secret"
+		let _inProgress = false;
+		return {
+			email: _email, <2>
+			password: _password,
+			inProgress: _inProgress,
+			onEmailInput: (email: string) => {_email = email}, <3>
+			onPasswordInput: (password: string) => {_password = password}, <4>
+			onLogin: (login: object) => { <5>
+				_inProgress = true;
+				console.log("Do login");
+			}
+		};
+	}
+
+	protected render() {
+		return v('div', { classes: [css.root] }, [
+			w(Menu, {}),
+			v('div', [
+				w(Outlet, { key: 'home', id: 'home', renderer: () => w(Home, {}) }),
+				w(Outlet, { key: 'about', id: 'about', renderer: () => w(About, {}) }),
+				w(Outlet, { key: 'profile', id: 'profile', renderer: () => w(Profile, { username: 'Simon Scholz' }) }),
+				w(Outlet, { key: 'login', id: 'login', renderer: () => w(Login, this.getLoginProperties()) })
+			])
+		]);
+	}
+}
+----
+
+<1> Set default values for email, password and inProgress
+<2> Apply email, password and inProgress for the actual `LoginProperties`
+<3> Save the email value in the _email variable
+<4> Save the password value in the _password variable
+<5> Run the login operation, which currently only logs _Do login_ to the console and the _inProgress_ to `true`
+
+Now the `TextInput` widgets of the `Login` widget should not have `undefined` as value any more and
+when the login button is clicked the console of the browser should output _Do login_.
 
