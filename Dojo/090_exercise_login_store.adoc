@@ -3,5 +3,9 @@
 In order to avoid that the `App` class is polluted with its child widgets' states and methods Dojo provides a concept of Containers,
 which are in charge to manage all that for a certain widget.
 
+In this tutorial we skip the easy state management approaches for small applications and directly dive into Dojo Stores.
+
+NOTE: _State management_ for smaller applications is covered by the official Dojo tutorials. https://dojo.io/tutorials/1010_containers_and_injecting_state/
+
 
 
