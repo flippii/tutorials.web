@@ -10,3 +10,5 @@ https://dojo.github.io/examples/widget-showcase/
 
 https://codesandbox.io/s/7zl3wqrxp6[Dojo Grid Examples]
 
+https://www.typescriptlang.org/docs/home.html
+
