@@ -1,0 +1,50 @@
+== Widget Properties
+
+Now we want to come back to the issue that the `TextInput` widgets will have an _undefined_ value when losing the focus.
+
+The `Login` widget is not supposed to do the login process itself, but it should delegate it to another component.
+
+Dojo widgets can specify properties as generic type for `WidgetBase` and its decorators.
+
+An example can be seen in the existing `Profile` widget: 
+
+[source, javascript]
+----
+import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
+import { v } from '@dojo/framework/widget-core/d';
+
+import * as css from './styles/Profile.m.css';
+
+export interface ProfileProperties { <1>
+	username: string;
+}
+
+export default class Profile extends WidgetBase<ProfileProperties> { <2>
+	protected render() {
+		const { username } = this.properties; <3>
+		return v('h1', { classes: [css.root] }, [`Welcome ${username}!`]); <4>
+	}
+}
+----
+
+<1> Interface for properties of the widget in order to configure the widget
+<2> Specify the interface as generic type for `WidgetBase`, so that users of the widget are forced to pass the necessary property object
+<3> Get certain values from the property interface, e.g., username.
+<4> Render the property value, e.g., username.
+
+You can change the _App.ts_ file to manipulate the username property, which is passed to the `Profile` widget.
+
+.App.ts
+[source, javascript]
+----
+	// original code
+	w(Outlet, { key: 'profile', id: 'profile', renderer: () => w(Profile, { username: 'Dojo User' }) }),
+	
+	// changed username to 'Simon Scholz'
+	w(Outlet, { key: 'profile', id: 'profile', renderer: () => w(Profile, { username: 'Simon Scholz' }) }),
+----
+
+When rebuilding the app the `Profile` widget will show the following:
+
+image::profile-properties.png[] 
+
