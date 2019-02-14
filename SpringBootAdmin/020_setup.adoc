@@ -12,7 +12,7 @@ For this tutorial we will use the https://spring.io/tools[Spring Tools].
 Start by creating a new spring boot project.
 You can use https://start.spring.io/ as a quick start.
 
-For this project we will use gradle, java and spring boot 2.1.2.
+For this project we will use Gradle, java and spring boot 2.1.2.
 
 Choose `com.vogella` as the *group* name.
 The *artifact* should be called `spring-boot-admin`.
@@ -20,12 +20,12 @@ The *artifact* should be called `spring-boot-admin`.
 SpringBootAdmin is capable of using both servlets and the reactor library. 
 Choose one and add it to the dependencies.
 
-Your selection should now look similiar to this:
+Your selection should now look similar to this:
 
 image::start_spring_io.png[Spring initializr]
 
 Download the generated project via btn:[Generate Project].
-Import the project into Spring Tools as a gradle project.
+Import the project into Spring Tools as a Gradle project.
 
 Add the SpringBootAdmin dependency to `build.gradle`.
 
@@ -53,7 +53,7 @@ public class SpringBootAdminApplication {
 }
 ----
 
-TIP: If you get any compilation errors double check if gradle actually refreshed the project by checking the gradle console output.
+TIP: If you get any compilation errors double check if Gradle actually refreshed the project by checking the Gradle console output.
 
 Lastly is it advisable to change the port of the server.
 The standard port for spring boot servers is 8080. 
@@ -81,7 +81,7 @@ implementation group: 'de.codecentric', name: 'spring-boot-admin-starter-client'
 
 Again, refresh the project by clicking menu:Gradle[Refresh Gradle Project].
 
-To configure where the monitoring server lives add the follwing to your `application.properties`:
+To configure where the monitoring server lives add the following to your `application.properties`:
 
 [source, properties]
 ----
