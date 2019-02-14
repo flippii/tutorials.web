@@ -1,0 +1,2 @@
+== Exercise - Switching the locale at runtime
+
