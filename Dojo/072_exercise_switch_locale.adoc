@@ -1,2 +1,98 @@
 == Exercise - Switching the locale at runtime
 
+The locale can be switched by using the `switchLocale` method from `@dojo/framework/i18n/i18n`.
+
+In order to archive this we'll add another `Button`, which will call this method `onClick`.
+
+[source, javascript]
+----
+import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
+import { v, w } from '@dojo/framework/widget-core/d';
+import Button from '@dojo/widgets/button';
+import TextInput from '@dojo/widgets/text-input';
+import I18nMixin from '@dojo/framework/widget-core/mixins/I18n';
+import i18n, { switchLocale, systemLocale } from '@dojo/framework/i18n/i18n'; <1>
+import messageBundle from './nls/login';
+
+import * as css from './styles/Login.m.css';
+
+export default class Login extends I18nMixin(WidgetBase) {
+
+    private _onSubmit(event: Event) {
+        event.preventDefault();
+    }
+
+    private _onEmailInput(email:  string) {
+	}
+
+	private _onPasswordInput(password: string) {
+    }
+    
+    private _switchLocale() {
+        if(i18n.locale !== 'de') { <2>
+            switchLocale('de'); <3>
+        } else {
+            switchLocale(systemLocale); <4>
+        }
+        this.invalidate(); <5>
+    }
+
+	protected render() {
+        const { messages } = this.localizeBundle(messageBundle);
+
+        return v('div', { classes: css.root }, [
+                v('form', {
+                    onsubmit: this._onSubmit
+                }, [
+                    v('fieldset', { }, [
+                        w(TextInput, {
+                            key: 'email',
+                            label: messages.email,
+                            placeholder: 'Email',
+                            type: 'email',
+                            required: true,
+                            onInput: this._onEmailInput
+                        }),
+                        w(TextInput, {
+                            key: 'password',
+                            label: messages.password,
+                            placeholder: 'Password',
+                            type: 'password',
+                            required: true,
+                            onInput: this._onPasswordInput
+                        }),
+                        w(Button, { }, [ messages.login ])
+                    ]),
+                ]),
+                w(Button, {
+                    onClick: this._switchLocale <6>
+                }, ['Switch locale'])
+        ]);
+	}
+}
+----
+
+<1> Import necessary objects and methods
+<2> `i18n.locale` will return the currently set locale
+<3> Switch to _de_ locale if it is not the current `i18n.locale`
+<4> Switch to the default system locale else wise
+<5> Redraw the widget in order to update the locale messages
+<6> `Button`, which calls the `_switchLocale` method.
+
+[IMPORTANT]
+====
+If your default system locale is already _de_ the `_switchLocale` method won't work properly.
+In that case you could replace _de_ with _en_ or something else.
+====
+
+The result should look similar to this:
+
+image::switch-locale-before.png[] 
+
+... and like this after pressing the _Switch locale_ button:
+
+image::switch-locale-after.png[] 
+
+The task to add the _Switch locale_ `Button` label to the messages class to translate the `Button` as well
+and also properly styling it with CSS is left for the reader.
+

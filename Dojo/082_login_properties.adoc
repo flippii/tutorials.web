@@ -1,0 +1,7 @@
+== Exercise - Define LoginProperties
+
+Now we want to come back to the issue that the `TextInput` widgets will have an _undefined_ value when losing the focus.
+
+The `Login` widget is not supposed to do the login process itself, but it should delegate it to another component.
+
+

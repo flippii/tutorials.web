@@ -1,9 +1,5 @@
 == Widget Properties
 
-Now we want to come back to the issue that the `TextInput` widgets will have an _undefined_ value when losing the focus.
-
-The `Login` widget is not supposed to do the login process itself, but it should delegate it to another component.
-
 Dojo widgets can specify properties as generic type for `WidgetBase` and its decorators.
 
 An example can be seen in the existing `Profile` widget: 
