@@ -2,6 +2,7 @@
 
 Create a _Login.ts_ file inside the widgets folder of the project.
 
+./src/widgets/Login.ts
 [source, javascript]
 ----
 import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
@@ -62,6 +63,7 @@ export default class Login extends WidgetBase {
 
 Now a login route can be added to the _routes.ts_ file:
 
+./src/routes.ts
 [source, javascript]
 ----
 export default [
@@ -89,6 +91,7 @@ export default [
 
 Now that the _login_ route is known by the router an `Outlet` in the _App.ts_ file can be added.
 
+./src/App.ts
 [source, javascript]
 ----
 import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
@@ -124,6 +127,7 @@ export default class App extends WidgetBase {
 
 Now the only thing, which is left to do is to add a `Link` in the `Menu` widget, so navigating to the login page is easy.
 
+./src/widgets/Menu.ts
 [source, javascript]
 ----
 import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
