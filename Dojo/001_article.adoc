@@ -28,5 +28,6 @@ include::082_exercise_login_properties.adoc[]
 include::090_exercise_login_store.adoc[]
 include::100_exercise_fetch.adoc[]
 include::140_exercise_grid.adoc[]
+include::008_resourceslocal.adoc[]
 include::../copyright.adoc[]
 
