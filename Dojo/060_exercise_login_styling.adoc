@@ -8,6 +8,7 @@ For the `Login` widget this has not been done yet.
 
 So let's create a _Login.m.css_ file with the following contents:
 
+.src/widgets/styles/Login.m.css
 [source, css]
 ----
 .root {
@@ -31,6 +32,7 @@ So let's create a _Login.m.css_ file with the following contents:
 
 Now the CSS has to be imported and applied as CSS class for the root div in the `Login` widget.
 
+./src/widgets/Login.ts
 [source, javascript]
 ----
 import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
