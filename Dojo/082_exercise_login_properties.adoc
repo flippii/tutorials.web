@@ -7,7 +7,7 @@ The `Login` widget is not supposed to do the login process itself, but it should
 Therefore a `LoginProperties` interface is created, which specifies the needs of the `Login` widget.
 Pretty much like the `Profile` widget does.
 
-.Login.ts
+./src/widgets/Login.ts
 [source, javascript]
 ----
 export interface LoginProperties {
@@ -29,7 +29,7 @@ export interface LoginProperties {
 
 Now the private methods of the `Login` widget can really do something by using the `LoginProperties`.
 
-.Login.ts
+./src/widgets/Login.ts
 [source, javascript]
 ----
 import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
@@ -129,6 +129,7 @@ Just like it is done for the `Profile` widget.
 
 For now we'll create all these properties in the `App` class, but later we're going to externalize this.
 
+./src/App.ts
 [source, javascript]
 ----
 import WidgetBase from '@dojo/framework/widget-core/WidgetBase';

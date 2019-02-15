@@ -4,6 +4,7 @@ Dojo widgets can specify properties as generic type for `WidgetBase` and its dec
 
 An example can be seen in the existing `Profile` widget: 
 
+./src/widgets/Profile.ts
 [source, javascript]
 ----
 import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
@@ -30,7 +31,7 @@ export default class Profile extends WidgetBase<ProfileProperties> { <2>
 
 You can change the _App.ts_ file to manipulate the username property, which is passed to the `Profile` widget.
 
-.App.ts
+./src/App.ts
 [source, javascript]
 ----
 	// original code

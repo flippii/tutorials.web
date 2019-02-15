@@ -4,6 +4,7 @@ The locale can be switched by using the `switchLocale` method from `@dojo/framew
 
 In order to archive this we'll add another `Button`, which will call this method `onClick`.
 
+./src/widgets/Login.ts
 [source, javascript]
 ----
 import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
