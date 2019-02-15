@@ -5,6 +5,7 @@ which means that the _#_ anchor is used to route between different pages of the 
 
 The routes themselves are specified in the _routes.ts_ file, which looks like this:
 
+./src/routes.ts
 [source, javascript]
 ----
 export default [
@@ -30,6 +31,7 @@ export default [
 
 These routes are applied in the _main.ts_ file, which itself is the main entry point of the SPA.
 
+./src/main.ts
 [source, javascript]
 ----
 import renderer from '@dojo/framework/widget-core/vdom';
@@ -60,6 +62,7 @@ r.mount({ registry });
 
 Now that a router has been created and is known by the registry (4) let's have a look at the _App_ widget, which is rendered.
 
+./src/App.ts
 [source, javascript]
 ----
 import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
@@ -95,6 +98,7 @@ export default class App extends WidgetBase { <1>
 The `Menu` widget (3), which is defined in _./widgets/Menu.ts_, contains `Link` widgets.
 The `Link` widgets have a _to_ property, which point to a certain route in order to render a specific outlet.
 
+./src/widgets/Menu.ts
 [source, javascript]
 ----
 import WidgetBase from '@dojo/framework/widget-core/WidgetBase';
