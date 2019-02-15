@@ -1,0 +1,115 @@
+== Security
+
+To show meaningful data SpringBootAdmin needs access to sensitive metric endpoints.
+Currently, these are not secured and _could_ be accessed by anyone.
+
+To prevent this we can use SpringSecurity.
+This is a project developed by the Spring developers that provides the ability to fine tune any web related security setting.
+
+=== Setup
+
+To truly secure your monitoring setup it is advisable to add the SpringSecurity dependency to both the server and the clients.
+
+==== Server
+
+First we will focus on securing the server application.
+Add the following dependency to your `build.gradle`.
+
+.build.gradle
+[source, groovy]
+----
+implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.1.2.RELEASE'
+----
+
+NOTE: Make sure that your SpringBoot version matches the version of the `spring-boot-starter-security`
+
+Refresh your Gradle project to fetch the new dependencies.
+
+Create a new class `WebSecurityConfig` in the same package your `SpringBootAdminApplication` is in.
+Use the following configuration:
+
+.WebSecurityConfig.java
+[source, java]
+----
+@Configuration
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+
+		http
+			.formLogin()
+			.loginPage("/login")
+			.permitAll();
+		http
+			.logout().logoutUrl("/logout").permitAll();
+		http.csrf()
+			.ignoringAntMatchers("/actuator/**", "/instances/**", "/logout");
+		http
+			.authorizeRequests()
+			.antMatchers("/**/*.css", "/assets/**", "/third-party/**", "/logout", "/login")
+			.permitAll();
+		http
+			.authorizeRequests()
+			.anyRequest()
+			.authenticated();
+		http.httpBasic(); // Activate Http basic Auth for the server
+	}
+}
+----
+
+This will configure your application to have a login page.
+It will also prevent unauthenticated users from accessing any sensitive data.
+
+You will also need to add an initial user to access the pages.
+
+Add the following to `application.properties`:
+
+.application.properties
+[source, properties]
+----
+spring.security.user.name=admin
+spring.security.user.password=test
+----
+
+TIP: For projects that use version control (like git) it is advisable to set passwords with environment variables.
+
+==== Clients
+
+If you start your client application now it will fail to register.
+This is because the clients need to provide authentication to the server as well.
+
+We can provide these credentials in the `application.properties` file:
+
+.application.properties
+[source, properties]
+----
+spring.boot.admin.client.username=admin
+spring.boot.admin.client.password=test
+----
+These credentials are the same you configured during the server setup.
+
+Your application should now register itself successfully.
+
+image:SBA_init.png[SpringBootAdmin applications page]
+
+=== Other configuration
+
+==== Management Server Port
+
+It can be useful to run the management endpoints on a different port than the client application.
+This can be done via the `management.server.port` property:
+
+.application.properties
+[source, properties]
+----
+management.server.port=8081
+----
+
+Now you could manually deny access to the management port if the server and the client run on the same server.
+
+==== Path of Actuator
+
+If you want to hide the actuator from discovery you can change the default management path.
+Use the property `management.endpoints.web.base-path` for this.
+

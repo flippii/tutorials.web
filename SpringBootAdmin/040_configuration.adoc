@@ -1,0 +1,49 @@
+== Configuration
+
+The following section explains useful configuration options.
+
+=== Server
+
+As the server is essentially a SpringBoot app you _could_ do most of the standard SpringBoot configuration.
+However it is recommended to just do the very basic security as anything other would require you to rebuild the SpringBootAdmin server.
+
+There are some customization options you can use:
+
+==== Branding
+
+Change the page title: `spring.boot.admin.ui.title=SpringBootAdmin`
+
+Navigation bar branding: `spring.boot.admin.ui.brand=SpringBootAdmin`.
+You can also use custom HTML here (such as an image).
+
+==== Context Path
+
+Running the application under another path requires setting the `spring.boot.admin.context-path` property.
+
+==== Status Life Time
+
+Some systems restart frequently and they are intended to be down a few seconds.
+If you only want to be notified once a service is down for more than 10 seconds (the default) set the `spring.boot.admin.monitor.status-lifetime` property.
+
+=== Client
+
+==== Name
+
+Change the name of the application that is displayed in the servers dashboard:
+
+.application.properties
+[source, properties]
+----
+spring.boot.admin.client.instance.name=spring-boot-application
+----
+
+==== Enable/Disable the Client
+
+Disable the client (useful if you don't want it to run in the development profile):
+
+.application.properties
+[source, properties]
+----
+spring.boot.admin.client.enabled=false
+----
+

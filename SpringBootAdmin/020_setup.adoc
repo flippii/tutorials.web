@@ -3,62 +3,69 @@
 The core functionality of SpringBootAdmin consists of a client and a server library.
 Both have to be imported into separate applications.
 
-It's advisable to use a standalone application as the server that only serves the purpose of SpringBootAdmin and nothing else.
+It's advisable to use a standalone application as the server only serves the purpose of SpringBootAdmin and nothing else.
 
-For this tutorial we will use the https://spring.io/tools[Spring Tools].
+This tutorial will use the https://spring.io/tools[Spring Tools].
 
 === Server
 
 Start by creating a new spring boot project.
 You can use https://start.spring.io/ as a quick start.
 
-For this project we will use Gradle, java and spring boot 2.1.2.
+This example project uses Gradle, Java 8+ and SpringBoot 2.1.2.
 
-Choose `com.vogella` as the *group* name.
+Chose `com.vogella` as the *group* name.
 The *artifact* should be called `spring-boot-admin`.
 
-SpringBootAdmin is capable of using both servlets and the reactor library. 
-Choose one and add it to the dependencies.
+SpringBootAdmin is capable of using both _servlets_ and the _reactor_ library. 
+Chose one and add it to the dependencies.
 
 Your selection should now look similar to this:
 
 image::start_spring_io.png[Spring initializr]
 
-Download the generated project via btn:[Generate Project].
-Import the project into Spring Tools as a Gradle project.
+Download the generated project via btn:[Generate Project] and import it into Spring Tools as a Gradle project.
 
 Add the SpringBootAdmin dependency to `build.gradle`.
 
+.build.gradle
 [source, groovy]
 ----
 implementation group: 'de.codecentric', name: 'spring-boot-admin-starter-server', version: '2.1.2'
 ----
 
-Refresh the project via right click on the project: menu:Gradle[Refresh Gradle Project].
+Refresh the project with a right click on the project: menu:Gradle[Refresh Gradle Project].
 
-Now we need to configure the application to start as a SpringBootAdmin server.
-To do this open `SpringBootAdminApplication.java` and add the following annotations to the class:
+Configure the application to start as a SpringBootAdmin server.
+This is as simple as adding the annotation `@EnableAdminServer` to `SpringBootAdminApplication.java`.
 
+.SpringBootAdminApplication.java
 [source, java]
 ----
+package com.vogella.springbootadmin;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import de.codecentric.boot.admin.server.config.EnableAdminServer;
+
 @EnableAdminServer
-@EnableAutoConfiguration
-@Configuration
+@SpringBootApplication
 public class SpringBootAdminApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootAdminApplication.class, args);
 	}
-
 }
+
 ----
 
 TIP: If you get any compilation errors double check if Gradle actually refreshed the project by checking the Gradle console output.
 
 Lastly is it advisable to change the port of the server.
-The standard port for spring boot servers is 8080. 
-Change the port in the `application.properties` in `src/main/resources`:
+The standard port for spring boot servers is 8080.
+To avoid collision with any other SpringBoot application change the port in `application.properties` in `src/main/resources`:
 
+.application.properties
 [source, properties]
 ----
 server.port=9999
@@ -70,19 +77,24 @@ You can leave this running as you will register the client application in the ne
 
 === Clients
 
-Any spring boot application can be a SpringBootAdmin client.
+Any SpringBoot application can be a SpringBootAdmin client.
 
 Add the following dependency to the `build.gradle` file of the project you want to monitor:
 
+.build.gradle
 [source, groovy]
 ----
 implementation group: 'de.codecentric', name: 'spring-boot-admin-starter-client', version: '2.1.2'
 ----
 
+NOTE: Keep in mind that there are version constraints by SpringBootAdmin.
+The version of the client dependency should match the version of the server.
+
 Again, refresh the project by clicking menu:Gradle[Refresh Gradle Project].
 
-To configure where the monitoring server lives add the following to your `application.properties`:
+To configure where the client can reach the monitoring server add the following to your `application.properties`:
 
+.application.properties
 [source, properties]
 ----
 spring.boot.admin.client.url=http://localhost:9999
@@ -90,7 +102,8 @@ management.endpoints.web.exposure.include=*
 ----
 
 This tells the client where to register and that every management endpoint should be open for monitoring.
-We change the last part later as this is not very secure and should not be in any production system.
+
+TIP: You should carefully consider which monitoring endpoints you want to expose as they can expose sensitive data.
 
 Now start the client (and the server if it's not already running).
 
@@ -99,5 +112,7 @@ You should see something like this:
 
 image:SBA_init.png[SpringBootAdmin applications page]
 
-You will see all your registered applications here.
+All registered applications should show up here.
+
+TIP: If you don't see the application, check for errors in the clients console output.
 

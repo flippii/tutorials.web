@@ -1,0 +1,53 @@
+// Todo: Add descriptions for other channels
+== Notifications
+
+SpringBootAdmin supports sending out notifications to different platforms.
+These include email, Slack, HipChat, Discord, MSTeams, LetsChat, Opsgenie, Telegram and PagerDuty.
+
+By default SpringBootAdmin will send out notifications upon state changes (e.g. a client is down) once a channel is configured.
+
+=== Email
+
+NOTE: You will need access to an email server
+
+The email sending is done via the SpringBoot email starter package.
+Add the dependency to your `build.gradle` file and refresh your gradle after that:
+
+.build.gradle
+[source, groovy]
+----
+implementation 'org.springframework.boot:spring-boot-starter-mail'
+----
+
+This will add all the necessary libraries to your project.
+
+Now you need to configure a `JavaMailSender`.
+SpringBoot can do this for your from properties.
+You just need to set the mail servers host and port:
+
+.application.properties
+[source, properties]
+----
+spring.mail.host=localhost
+spring.mail.port= 6784
+----
+
+Change these values to your setup.
+
+NOTE: Some mail servers require authentication.
+These can be set via the `spring.mail.username` and `spring.mail.password` properties.
+For more information see https://docs.spring.io/spring/docs/5.1.5.RELEASE/spring-framework-reference/integration.html#mail and https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-email.html.
+
+Now provide the recipients email addresses:
+
+.application.properties
+[source, properties]
+----
+spring.boot.admin.notify.mail.to=webmaster@vogella.com,status@vogella.com
+----
+
+This can be a comma separated list of multiple addresses or just one address.
+
+Restart your *server* and wait for it to fully come back online.
+Than shut down your client application to check if the *server* sent out an email.
+
