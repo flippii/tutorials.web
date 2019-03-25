@@ -1,0 +1,56 @@
+[[archetypes]]
+== Archetypes
+
+Archetypes are templates that get used when you create a new content page with the `hugo new` command.
+
+This is the default archetype that gets created by the `hugo new site` command:
+
+[source, markdown, title='archetypes/default.md']
+----
+---
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+draft: true
+---
+
+----
+
+=== Archetype lookup
+
+During archetype lookup Hugo will prefer a section specific archetype over the default archetype for the specified markup language.
+After considering the archetypes from your site, hugo will look for archetypes provided by the theme you use.
+
+Lookup order for `hugo new posts/hello-world.adoc`:
+
+1. archetypes/posts.adoc
+2. archetypes/default.adoc
+3. themes/<theme-in-use>/archetypes/posts.adoc
+4. themes/<theme-in-use>/archetypes/default.adoc
+
+=== Directories as archetype
+
+If you have page specific images and resources you might not want to put your pages in the top level directory of the section,
+but instead have a sub-directory per page.
+You can define a whole directory as an archetype like this:
+
+----
+archetypes
+├── default.adoc
+└── posts-dir
+    ├── res
+    │   └── example.java
+    ├── img
+    │   └── logo.png
+    ├── 008_resources.adoc
+    └── index.adoc
+----
+
+You would use this archetype by issuing the following command.
+
+[source, terminal]
+----
+hugo new --kind posts-dir posts/hello-world
+----
+
+The .Site variable will be made available in all content files (*.adoc in our example).
+

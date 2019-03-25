@@ -1,0 +1,8 @@
+== Resources
+
+- https://gohugo.io/documentation/[Hugo Documentation]
+
+- https://www.youtube.com/watch?v=qtIqKaDlqXo&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3[Mike Danes video tutorial series (former Gieraffe Academy)]
+
+- https://regisphilibert.com/tags/hugo/[Regis Philiberts blog on hugo]
+

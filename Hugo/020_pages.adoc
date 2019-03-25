@@ -1,0 +1,57 @@
+== Pages
+
+Every content file that gets converted by hugo is called a page.
+Each page has a `Kind` attribute that determines which layout file is used for rendering.
+Hugo differentiates between single or regular pages and list pages.
+On all pages the variables of the current page can be accessed via the `.`.
+Eg., `.Title` will print the title of the current page.
+
+.Table Page Kinds
+|===
+|Kind |Description |Example content location
+
+|home
+|Your home page
+|/index.html
+
+|page
+|A single regular page
+|/posts/first_post.adoc or /posts/first_post/index.md
+
+|section
+|A page listing regular pages belonging to this section
+|/posts/
+
+|taxonomy
+|Lists regular pages for a given taxonomy
+|/category/eclipse
+
+|taxonomyTerm
+|List of all terms for a given taxonomy
+|/category
+
+|===
+
+
+.Table Example Conversions
+|===
+|Content |Output |Kind
+
+|/posts/some_post.adoc or /posts/some_post/index.adoc
+|/public/posts/some_post/index.html
+|page
+
+|/posts/some_post/article.adoc
+|/public/posts/some_post/article/index.html
+|page
+
+|/posts (no explicit list page) or /posts/_index.adoc
+|/public/posts/some_post/article/index.html
+|section
+
+|/posts/eclipse/_index.adoc (subsections always need an explicit _index file
+|/public/posts/eclipse/index.html
+|section
+
+|===
+

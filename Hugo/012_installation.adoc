@@ -1,0 +1,32 @@
+== Installation
+
+The latest version of hugo can be downloaded from the https://github.com/gohugoio/hugo/releases[GitHub Releases page].
+Download the artifact for your operating system and follow the instructions.
+
+NOTE: If you want to have sass/scss support you have to download the "extended" version.
+
+Depending on your operating system you can also install hugo via a package manager, although this might not install the latest version.
+
+[source, terminal]
+----
+# Debian / Ubuntu, this will install the extended version
+sudo apt install hugo
+# Arch
+sudo pacman -Syu hugo
+# Fedora
+sudo dnf install hugo
+# Snap (Linux)
+snap install hugo --channel=extended
+# Homebrew (macOS)
+brew install hugo
+# chocolatey (Windows)
+choco install hugo -confirm
+----
+
+You can verify that the installation was successful by executing the hugo version command.
+
+[source, terminal]
+----
+hugo version
+----
+

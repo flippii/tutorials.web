@@ -1,0 +1,9 @@
+== Hugo
+
+
+Hugo is an open source static site generator, written in Go.
+It stands out through it's fast build time and large community.
+
+Content can be written in various markup languages and is transpiled to static files.
+
+

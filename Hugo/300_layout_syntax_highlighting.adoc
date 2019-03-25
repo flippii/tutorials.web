@@ -1,0 +1,18 @@
+== Go Template syntax highlighting for layout files
+
+While the layout files for hugo have to end with `.html`, they are actually Go templates instead of static html files.
+Sadly, many editors will determine which syntax highlighting to use for a file by the file ending.
+
+A workaround for this is to have files ending with the `.gohtml` suffix and reference them from the `.html` files.
+
+----
+layouts
+├── home.gohtml
+└── home.html
+----
+
+[title='home.html']
+----
+{{ template "home.gohtml" . }}
+----
+

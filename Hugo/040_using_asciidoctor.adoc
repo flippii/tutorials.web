@@ -1,0 +1,52 @@
+== Using asciidoctor for content files
+
+Hugo allows you to use the asciidoc markup language for content files.
+Currently there is no native go converter for the format, so hugo will try to externally call `asciidoctor`.
+If you want hugo to convert `.adoc` files, make sure to https://www.vogella.com/tutorials/AsciiDoc/article.html#conversion-with-asciidoctor[install asciidoctor].
+
+=== Using an the external semantic HTML5 backend with asciidoctor
+
+Hugo integrates asciidoctor by externally calling the `asciidoctor` executable.
+Since there is currently no way to pass extra arguments to this call we have to replace the `asciidoctor` binary with an intermediary shell script.
+
+First install the `asciidoctor-html5s` gem.
+
+[source, terminal]
+----
+gem install asciidoctor-html5s
+----
+
+Then find out where your asciidoctor executable is located.
+
+[source, terminal]
+----
+which asciidoctor
+/usr/local/bin/asciidoctor
+----
+
+Rename the file.
+
+[source, terminal]
+----
+mv /usr/local/bin/asciidoctor /usr/local/bin/asciidoctor_actual
+----
+
+Create a new executable somewhere in your `$Path`.
+Make sure that it is high enough up in your path to get picked first.
+
+[title=/home/<your_user>/.local/bin/asciidoctor]
+----
+#!/usr/bin/env bash
+
+/usr/bin/asciidoctor_actual -r asciidoctor-html5s -b html5s "$@"
+----
+
+Make it executable:
+
+[source, terminal]
+----
+chmod +x /home/<your_user>/.local/bin/asciidoctor
+----
+
+Now hugo will call the intermediary script, referencing the `html5s` backend, when converting asciidoc files.
+

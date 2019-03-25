@@ -1,0 +1,26 @@
+= Hugo Static Site Generator - Tutorial
+:toc:
+:linkcss:
+:sectnums:
+:experimental:
+:icons:
+:imagesdir: ./img
+Fabian Pfaff (c) 2019 vogella GmbH
+Version 0.1, 15.02.2019
+:docinfodir: ../
+:vgwort: Hugo
+
+[abstract]
+This tutorial contains information about the static site generator Hugo.
+
+include::010_overview.adoc[]
+include::012_installation.adoc[]
+include::../web/advertisement/inBetween01.adoc[]
+include::020_pages.adoc[]
+include::022_archetypes.adoc[]
+include::040_using_asciidoctor.adoc[]
+include::200_exercise_template.adoc[]
+include::../web/advertisement/inBetween02.adoc[]
+include::300_layout_syntax_highlighting.adoc[]
+include::008_resourceslocal.adoc[]
+include::../copyright.adoc[]

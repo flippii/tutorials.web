@@ -1,0 +1,119 @@
+== Exercise: Building a hugo blog using a template
+
+First create a new hugo site.
+
+[source, terminal]
+----
+hugo new site exercise_blog
+----
+
+Then download a theme and configure the site to use it.
+The default approach is to integrate the theme as a git submodule:
+
+[source, terminal]
+----
+cd exercise_blog
+git init
+git submodule add https://github.com/halogenica/beautifulhugo.git themes/beautifulhugo
+----
+
+=== Using a theme
+
+Change the config to use the theme.
+You can also change the title of the page.
+
+[source, toml, title='config.toml']
+----
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "A simple blog"
+theme = "beautifulhugo"
+----
+
+For all the possible configuration options check the https://github.com/halogenica/beautifulhugo/blob/master/README.md[README] of the theme.
+
+When you start the local dev server you should see something like this.
+
+image::exercise_simple_blog.png[] 
+
+=== Adding content
+
+beautifulhugo defines a https://github.com/halogenica/beautifulhugo/blob/c07daadde82a3b8f2de9c058d7e279aee3d982e6/archetypes/default.md[default archetype] that we can use for our content.
+Because the `hugo new site` command also creates a default <<archetypes,archetype>> for our site we first have to remove it.
+Then hugo will use the default archetype coming from the theme.
+
+[source, terminal]
+----
+rm archetypes/default.md
+----
+
+==== Adding a blog post
+
+Now add a blog post.
+Notice that we put our blog post under the section `post`, because that's where the theme https://github.com/halogenica/beautifulhugo/blob/c07daadde82a3b8f2de9c058d7e279aee3d982e6/layouts/index.html#L12[expects them] to be to show up on the main page.
+
+[source, terminal]
+----
+hugo new post/introduction-to-the-blog.md
+----
+
+Add some text to the file.
+
+[title='/content/post/introduction-to-the-blog.md']
+----
+---
+title: "Introduction to the Blog"
+author: ""
+type: ""
+date: 2019-02-23T10:30:01+01:00
+subtitle: ""
+image: ""
+tags: []
+---
+
+Hello from vogella
+----
+
+==== Adding an about page
+
+Now create the about page by keying the following into your terminal.
+
+[source, terminal]
+----
+hugo new page/about.adoc
+----
+
+Then edit the file to your preference.
+
+[source, adoc]
+----
+---
+title: "About"
+date: 2019-02-22T11:08:21+01:00
+subtitle: "Some information about this site"
+---
+
+This is an example page.
+----
+
+To make it show up in the site navigation you have to add it to the menu in the config file.
+
+[source, toml, title='config.toml']
+----
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "A simple blog"
+theme = "beautifulhugo"
+
+[[menu.main]]
+    name = "About"
+    url = "page/about/"
+----
+
+image::exercise_blog_final.png[exercise_blog_final.png] 
+
+
+=== More customization
+
+The `beautifulhugo` theme provides an https://github.com/halogenica/beautifulhugo/tree/c07daadde82a3b8f2de9c058d7e279aee3d982e6/exampleSite[example site] that you can study to find out more about the customization options it offers.
+
