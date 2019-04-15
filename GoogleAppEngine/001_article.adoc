@@ -1,10 +1,9 @@
 = Google App Engine - Python Development (with Eclipse) - Tutorial
-:linkcss:
-:experimental:
-:icons:
-:imagesdir: ./img
+include::../10_Include/settings.adoc[]
+
 Lars Vogel, (c) 2008, 2016 vogella GmbH
 Version 1.2, 25.10.2016
+
 :docinfodir: ../
 :vgwort: GoogleAppEngine
 
