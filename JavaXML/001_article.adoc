@@ -1,8 +1,5 @@
 = Java and XML - Tutorial
-:linkcss:
-:experimental:
-:icons:
-:imagesdir: ./img
+include::../10_Include/settings.adoc[]
 Lars Vogel, (c) 2008, 2018 vogella GmbH
 Version 2.3, 22.02.2018
 :docinfodir: ../

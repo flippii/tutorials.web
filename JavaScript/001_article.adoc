@@ -1,8 +1,5 @@
 = Using JavaScript with Eclipse - Tutorial
-:linkcss:
-:experimental:
-:icons:
-:imagesdir: ./img
+include::../10_Include/settings.adoc[]
 Lars Vogel, Patrik Suzzi (c) 2008, 2017 vogella GmbH
 Version 1.3, 25.07.201
 :docinfodir: ../

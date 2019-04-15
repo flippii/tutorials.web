@@ -1,9 +1,5 @@
 = Vaadin - Tutorial
-:linkcss:
-:sectnums:                                                          
-:experimental:
-:icons:
-:imagesdir: ./img
+include::../10_Include/settings.adoc[]
 Lars Vogel (c) 2016 vogella GmbH
 Version 0.1, 23.01.2017		
 :docinfodir: ../

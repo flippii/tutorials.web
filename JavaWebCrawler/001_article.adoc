@@ -1,8 +1,5 @@
-=  - Tutorial
-:linkcss:
-:experimental:
-:icons:
-:imagesdir: ./img
+= Java Web Crawler - Tutorial
+include::../10_Include/settings.adoc[]
 Lars Vogel, (c) 2009, 2016 vogella GmbH
 Version 0.3, 29.08.2016
 :docinfodir: ../

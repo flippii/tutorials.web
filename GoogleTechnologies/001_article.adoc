@@ -1,8 +1,5 @@
 = Google Technologies - Overview - Tutorial
-:linkcss:
-:experimental:
-:icons:
-:imagesdir: ./img
+include::../10_Include/settings.adoc[]
 Lars Vogel, (c) 2009, 2016 vogella GmbH
 Version 0.8, 29.10.2016
 :docinfodir: ../

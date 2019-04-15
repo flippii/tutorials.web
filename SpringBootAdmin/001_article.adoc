@@ -1,10 +1,5 @@
 = SpringBootAdmin - Tutorial
-:linkcss:
-:toc:
-:sectnums:
-:experimental:
-:icons:
-:imagesdir: ./img
+include::../10_Include/settings.adoc[]
 (c) 2019 vogella GmbH
 Version 1.0, 13.02.2019
 :docinfodir: ../

@@ -1,8 +1,5 @@
 = Google App Engine for Java - Tutorial
-:linkcss:
-:experimental:
-:icons:
-:imagesdir: ./img
+include::../10_Include/settings.adoc[]
 Lars Vogel, (c) 2009, 2016 vogella GmbH
 Version 2.8, 25.10.2016
 :docinfodir: ../

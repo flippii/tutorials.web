@@ -1,10 +1,5 @@
 = Dojo IO - Tutorial
-:toc:
-:linkcss:
-:sectnums:
-:experimental:
-:icons:
-:imagesdir: ./img
+include::../10_Include/settings.adoc[]
 Simon Scholz (c) 2019 vogella GmbH
 Version 0.1, 13.02.2019
 :docinfodir: ../

@@ -1,8 +1,5 @@
 = REST with Java (JAX-RS) using Jersey - Tutorial
-:linkcss:
-:experimental:
-:icons:
-:imagesdir: ./img
+include::../10_Include/settings.adoc[]
 Lars Vogel, (c) 2009, 2017 vogella GmbH
 Version 2.7, 27.11.2017
 :docinfodir: ../

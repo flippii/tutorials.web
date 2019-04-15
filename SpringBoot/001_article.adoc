@@ -1,9 +1,5 @@
 = Spring Boot - Tutorial
-:linkcss:
-:sectnums:
-:experimental:
-:icons:
-:imagesdir: ./img
+include::../10_Include/settings.adoc[]
 Fabian Pfaff, Jonas Hungershausen, Simon Scholz (c) 2017 - 2018 vogella GmbH
 Version 0.2, 08.06.2018
 :docinfodir: ../

@@ -1,8 +1,5 @@
 = Spring - Tutorial
-:linkcss:
-:experimental:
-:icons:
-:imagesdir: ./img
+include::../10_Include/settings.adoc[]
 (c) 2015, 2017 vogella GmbH
 Version 0.3, 12.06.2017
 :docinfodir: ../

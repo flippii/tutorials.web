@@ -1,8 +1,5 @@
 = GWT - Using external jars / Java Projects - Tutorial
-:linkcss:
-:experimental:
-:icons:
-:imagesdir: ./img
+include::../10_Include/settings.adoc[]
 Lars Vogel, (c) 2008, 2016 vogella GmbH
 Version 2.0, 26.10.2016
 :docinfodir: ../
