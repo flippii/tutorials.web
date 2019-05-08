@@ -21,14 +21,14 @@ image::first-di-spring-project.png[]
 
 Add a new +ITodo.java+ interface, which should be available as bean in the Spring DI container.
 
-[source, Java]
+[source, java]
 ----
 include::res/di/ITodo.java[]
 ----
 
 The implementation of the `ITodo` interface should look like this:
 
-[source, Java]
+[source, java]
 ----
 include::res/di/Todo.java[]
 ----
@@ -48,7 +48,7 @@ This `Config` class let's spring automatically scan the whole _com.vogella_ pack
 
 Change the +Application.java+ class to the following:
 
-[source, Java]
+[source, java]
 ----
 include::res/di/Application.java[]
 ----

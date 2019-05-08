@@ -36,7 +36,7 @@ In the next step we'll add attributes to the `Model` object to make them availab
 
 The `IssueController` class should look like this:
 
-[source, Java]
+[source, java]
 ----
 package com.vogella.example.controller;
 

@@ -20,7 +20,7 @@ include::res/di/ConfigExplicit.java[]
 
 Now run the `Application` class again and try to fix the error.
 
-[source, Java]
+[source, java]
 ----
 Exception in thread "main" org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type [com.vogella.ITodo] is defined: expected single matching bean but found 2: todo,getTodo
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:366)
